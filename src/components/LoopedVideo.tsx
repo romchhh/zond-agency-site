@@ -29,44 +29,48 @@ export default function LoopedVideo({
     video.setAttribute("webkit-playsinline", "");
 
     const tryPlay = () => {
-      if (document.hidden || !video.paused) return;
+      if (document.hidden) return;
       void video.play().catch(() => {});
     };
 
-    tryPlay();
-
-    const onReady = () => tryPlay();
-    video.addEventListener("canplay", onReady);
-    video.addEventListener("loadeddata", onReady);
+    const tryPause = () => {
+      if (!video.paused) video.pause();
+    };
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           tryPlay();
+        } else {
+          tryPause();
         }
       },
       {
-        threshold: 0.01,
-        rootMargin: priority ? "50% 0px" : "0px",
+        threshold: [0, 0.2, 0.5],
+        rootMargin: priority ? "40px 0px" : "0px",
       },
     );
+
     observer.observe(video);
 
     const onVisible = () => {
-      if (!document.hidden) tryPlay();
+      if (document.hidden) {
+        tryPause();
+        return;
+      }
+      const rect = video.getBoundingClientRect();
+      const visible =
+        rect.top < window.innerHeight && rect.bottom > 0 && rect.height > 0;
+      if (visible) tryPlay();
     };
 
     document.addEventListener("visibilitychange", onVisible);
     window.addEventListener("pageshow", onVisible);
-    window.addEventListener("focus", onVisible);
 
     return () => {
-      video.removeEventListener("canplay", onReady);
-      video.removeEventListener("loadeddata", onReady);
       observer.disconnect();
       document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("pageshow", onVisible);
-      window.removeEventListener("focus", onVisible);
     };
   }, [src, priority]);
 
@@ -75,7 +79,6 @@ export default function LoopedVideo({
       ref={videoRef}
       className={className}
       src={src}
-      autoPlay
       muted
       loop
       playsInline

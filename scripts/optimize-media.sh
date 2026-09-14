@@ -17,16 +17,4 @@ if [[ -f "$ASSETS/MockupReview 1x1.mp4" ]]; then
     "$ASSETS/mockup-review-poster.jpg"
 fi
 
-for gif in digital-residence ahmad-tea; do
-  if [[ -f "$ASSETS/$gif.gif" ]]; then
-    ffmpeg -y -i "$ASSETS/$gif.gif" -an -movflags +faststart -pix_fmt yuv420p \
-      -c:v libx264 -crf 28 "$ASSETS/$gif.mp4"
-  fi
-done
-
-if [[ -f "$ASSETS/6a8b03887a661f9cf0d7fa7b_6628f20206b9b93aa2a62c2a_Altep2.gif" ]]; then
-  ffmpeg -y -i "$ASSETS/6a8b03887a661f9cf0d7fa7b_6628f20206b9b93aa2a62c2a_Altep2.gif" \
-    -an -movflags +faststart -pix_fmt yuv420p -c:v libx264 -crf 28 "$ASSETS/altep.mp4"
-fi
-
 echo "Media optimization complete."

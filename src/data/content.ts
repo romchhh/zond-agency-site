@@ -44,12 +44,12 @@ export const projects: Project[] = [
   {
     title: "Digital Residence",
     description: "Технологічна резиденція нового покоління",
-    image: "/assets/digital-residence.mp4",
+    image: "/assets/digital-residence.gif",
   },
   {
     title: "AHMAD TEA",
     description: "Британський преміальний чай",
-    image: "/assets/ahmad-tea.mp4",
+    image: "/assets/ahmad-tea.gif",
   },
   {
     title: "Terminal Borivaje",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     title: "ALTEP",
     description: "Виробник твердопаливних котлів",
-    image: "/assets/altep.mp4",
+    image: "/assets/altep.gif",
   },
   {
     title: "Пакування",
@@ -76,18 +76,18 @@ export const projects: Project[] = [
 ];
 
 export const services: Service[] = [
-  { index: "01", title: "Стратегія бренду", description: "Аналіз цілей і можливостей.", image: "/assets/service-strategy.jpg" },
-  { index: "02", title: "Позиціонування", description: "Унікальна роль бренду на ринку.", image: "/assets/service-positioning.jpg" },
-  { index: "03", title: "Неймінг", description: "Назва, що запам’ятовується.", image: "/assets/service-naming.jpg" },
-  { index: "04", title: "Логотип", description: "Лаконічний візуальний знак.", image: "/assets/service-logo.jpg" },
-  { index: "05", title: "Айдентика", description: "Цілісна візуальна система.", image: "/assets/service-identity.jpg" },
-  { index: "06", title: "Брендбук", description: "Правила використання бренду.", image: "/assets/service-brandbook.jpg" },
-  { index: "07", title: "Слоган і комунікація", description: "Єдиний тон і меседжі.", image: "/assets/service-communication.jpg" },
-  { index: "08", title: "Персонаж бренду", description: "Унікальний герой за потреби.", image: "/assets/service-character.jpg" },
-  { index: "09", title: "Упаковка", description: "Дизайн, який продає.", image: "/assets/service-packaging.jpg" },
-  { index: "10", title: "Графічний дизайн", description: "Візуальні рішення для носіїв.", image: "/assets/service-graphic.jpg" },
-  { index: "11", title: "Веб-дизайн", description: "Сучасні сайти.", image: "/assets/service-web.jpg" },
-  { index: "12", title: "SMM", description: "Контент, що працює.", image: "/assets/service-smm.jpg" },
+  { index: "01", title: "Стратегія бренду", description: "Аналіз цілей і можливостей.", image: "/services/strategy.png" },
+  { index: "02", title: "Позиціонування", description: "Унікальна роль бренду на ринку.", image: "/services/positioning.png" },
+  { index: "03", title: "Неймінг", description: "Назва, що запам’ятовується.", image: "/services/smm.png" },
+  { index: "04", title: "Логотип", description: "Лаконічний візуальний знак.", image: "/services/character.png" },
+  { index: "05", title: "Айдентика", description: "Цілісна візуальна система.", image: "/services/naming.png" },
+  { index: "06", title: "Брендбук", description: "Правила використання бренду.", image: "/services/brandbook.png" },
+  { index: "07", title: "Слоган і комунікація", description: "Єдиний тон і меседжі.", image: "/services/graphic.png" },
+  { index: "08", title: "Персонаж бренду", description: "Унікальний герой за потреби.", image: "/services/communication.png" },
+  { index: "09", title: "Упаковка", description: "Дизайн, який продає.", image: "/services/packaging.png" },
+  { index: "10", title: "Графічний дизайн", description: "Візуальні рішення для носіїв.", image: "/services/identity.png" },
+  { index: "11", title: "Веб-дизайн", description: "Сучасні сайти.", image: "/services/logo.png" },
+  { index: "12", title: "SMM", description: "Контент, що працює.", image: "/services/web.png" },
 ];
 
 export const team: TeamMember[] = [

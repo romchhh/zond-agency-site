@@ -3,6 +3,7 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 const navLinks = [
   { href: "#services", label: "Послуги" },
@@ -13,15 +14,59 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const scrollY = window.scrollY;
+    const { style } = document.body;
+
+    style.overflow = "hidden";
+    style.touchAction = "none";
+
     return () => {
-      document.body.style.overflow = "";
+      style.overflow = "";
+      style.touchAction = "";
+      window.scrollTo(0, scrollY);
     };
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+
+  const mobileMenu = (
+    <div
+      id="mobile-menu"
+      className={`mobile-menu${menuOpen ? " is-open" : ""}`}
+      aria-hidden={!menuOpen}
+    >
+      <div className="mobile-menu-inner">
+        <div className="mobile-menu-center">
+          <nav className="mobile-menu-nav" aria-label="Мобільна навігація">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href + link.label}
+                href={link.href}
+                onClick={closeMenu}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+        <Link className="mobile-menu-cta" href="#contact" onClick={closeMenu}>
+          <span>Консультація</span>
+          <span className="mobile-menu-cta-icon" aria-hidden="true">
+            ↗
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
 
   return (
     <header className={`header${menuOpen ? " is-menu-open" : ""}`}>
@@ -59,45 +104,22 @@ export default function Header() {
               aria-label={menuOpen ? "Закрити меню" : "Відкрити меню"}
             >
               {menuOpen ? (
-                <span className="menu-toggle-close" aria-hidden="true">×</span>
+                <span className="menu-toggle-close" aria-hidden="true">
+                  ×
+                </span>
               ) : (
-                <span className="menu-toggle-label">[menu]</span>
+                <span className="menu-toggle-icon" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </span>
               )}
             </button>
           </div>
         </div>
       </div>
 
-      <div
-        id="mobile-menu"
-        className={`mobile-menu${menuOpen ? " is-open" : ""}`}
-        aria-hidden={!menuOpen}
-      >
-        <div className="mobile-menu-inner">
-          <div className="mobile-menu-center">
-            <nav className="mobile-menu-nav" aria-label="Мобільна навігація">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href + link.label}
-                  href={link.href}
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-            <LanguageSwitcher variant="menu" />
-          </div>
-          <Link
-            className="mobile-menu-cta"
-            href="#contact"
-            onClick={closeMenu}
-          >
-            <span>Консультація</span>
-            <span className="mobile-menu-cta-icon" aria-hidden="true">↗</span>
-          </Link>
-        </div>
-      </div>
+      {mounted ? createPortal(mobileMenu, document.body) : null}
     </header>
   );
 }

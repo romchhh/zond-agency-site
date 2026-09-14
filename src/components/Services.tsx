@@ -29,7 +29,6 @@ export default function Services() {
               <div className="service-index">{service.index}</div>
               <div className="service-copy">
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
               </div>
             </article>
           ))}

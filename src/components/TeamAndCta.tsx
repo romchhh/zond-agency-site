@@ -14,10 +14,11 @@ export default function TeamAndCta() {
             Дивитися всю команду →
           </a>
         </div>
-        <div className="services-grid">
+
+        <div className="team-grid">
           {team.map((member) => (
-            <article className="service-card" key={member.name}>
-              <div className="service-visual">
+            <article className="team-card" key={member.name}>
+              <div className="team-card-photo">
                 {member.image ? (
                   <MediaImage
                     src={member.image}
@@ -25,7 +26,7 @@ export default function TeamAndCta() {
                     sizes={imageSizes.team}
                   />
                 ) : (
-                  <div className="service-visual-placeholder" aria-hidden="true">
+                  <div className="team-card-placeholder" aria-hidden="true">
                     {member.name
                       .split(" ")
                       .map((part) => part[0])
@@ -33,7 +34,7 @@ export default function TeamAndCta() {
                   </div>
                 )}
               </div>
-              <div className="service-copy">
+              <div className="team-card-copy">
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>
               </div>
@@ -59,7 +60,9 @@ export default function TeamAndCta() {
             </div>
             <a className="cta-btn" href="mailto:hello@zond.agency">
               <span>Консультація</span>
-              <span className="cta-btn-icon" aria-hidden="true">↗</span>
+              <span className="cta-btn-icon" aria-hidden="true">
+                ↗
+              </span>
             </a>
           </div>
         </section>

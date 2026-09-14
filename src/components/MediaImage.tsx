@@ -6,6 +6,7 @@ type MediaImageProps = {
   sizes: string;
   priority?: boolean;
   className?: string;
+  unoptimized?: boolean;
 };
 
 export default function MediaImage({
@@ -14,6 +15,7 @@ export default function MediaImage({
   sizes,
   priority = false,
   className,
+  unoptimized = false,
 }: MediaImageProps) {
   return (
     <Image
@@ -24,6 +26,7 @@ export default function MediaImage({
       quality={80}
       priority={priority}
       className={className}
+      unoptimized={unoptimized}
     />
   );
 }

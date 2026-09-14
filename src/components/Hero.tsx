@@ -26,6 +26,7 @@ export default function Hero() {
                   alt=""
                   aria-hidden="true"
                 />
+                <span>і багато іншого</span>
               </div>
               <p>
                 Брендинг агенція, яка створює впізнавані продукти. Наші
@@ -35,31 +36,13 @@ export default function Hero() {
           </div>
 
           <div className="hero-right">
-            <div className="hero-right-top">
-              <div className="hero-works">ZOND WORKS</div>
-              <div className="hero-pillars">
-                <span>СТРАТЕГІЯ</span>
-                <span>КРЕАТИВ</span>
-                <span>РЕЗУЛЬТАТ</span>
-              </div>
-            </div>
-
-            <div className="hero-frame">
-              <LoopedVideo
-                className="hero-frame-video"
-                src={media.heroMockup}
-                poster={media.heroMockupPoster}
-                ariaLabel="ZOND Works"
-                priority
-              />
-            </div>
-
-            <div className="hero-right-bottom">
-              <div className="hero-tagline">
-                БІЛЬШЕ МОЖЛИВОСТЕЙ ДЛЯ ВАШОГО БІЗНЕСУ
-              </div>
-              <div className="hero-slogan">BRANDS MATTER</div>
-            </div>
+            <LoopedVideo
+              className="hero-right-video"
+              src={media.heroMockup}
+              poster={media.heroMockupPoster}
+              ariaLabel="ZOND Works"
+              priority
+            />
           </div>
         </div>
       </div>
