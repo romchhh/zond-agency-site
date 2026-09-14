@@ -42,12 +42,15 @@ export default function Hero() {
             </div>
 
             <div className="hero-frame">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/hero-art.jpg"
-                alt="ZOND Works"
-                fetchPriority="high"
-                decoding="async"
+              <video
+                className="hero-frame-video"
+                src="/assets/MockupReview%201x1.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                disablePictureInPicture
+                aria-label="ZOND Works"
               />
             </div>
 
