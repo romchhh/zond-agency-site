@@ -47,8 +47,8 @@ export default function Header() {
               <span className="is-active">UA</span>
               <span>RU</span>
             </div>
-            <Link className="cta-top" href="#contact">
-              <span>Консультація</span>
+            <Link className="cta-top" href="#contact" aria-label="Консультація">
+              <span className="cta-top-text">Консультація</span>
               <span className="cta-top-icon" aria-hidden="true">
                 ↗
               </span>
