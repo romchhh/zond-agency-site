@@ -1,5 +1,6 @@
 "use client";
 
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -42,11 +43,7 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <div className="langs">
-              <span>ENG</span>
-              <span className="is-active">UA</span>
-              <span>RU</span>
-            </div>
+            <LanguageSwitcher />
             <Link className="cta-top" href="#contact" aria-label="Консультація">
               <span className="cta-top-text">Консультація</span>
               <span className="cta-top-icon" aria-hidden="true">
@@ -89,11 +86,7 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <div className="mobile-menu-langs">
-              <span>ENG</span>
-              <span className="is-active">UA</span>
-              <span>RU</span>
-            </div>
+            <LanguageSwitcher variant="menu" />
           </div>
           <Link
             className="mobile-menu-cta"
