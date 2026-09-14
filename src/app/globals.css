@@ -1503,14 +1503,6 @@ ul {
     min-height: auto;
   }
 
-  .hero-right {
-    order: -1;
-  }
-
-  .hero-left {
-    min-height: 0;
-  }
-
   .hero {
     position: relative;
     top: auto;
