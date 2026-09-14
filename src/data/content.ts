@@ -1,11 +1,7 @@
-export type ProjectLayout = "featured" | "half" | "third" | "cta";
-
 export interface Project {
   title: string;
   description: string;
-  image?: string;
-  layout: ProjectLayout;
-  href?: string;
+  image: string;
 }
 
 export interface Service {
@@ -49,40 +45,34 @@ export const projects: Project[] = [
     title: "Digital Residence",
     description: "Технологічна резиденція нового покоління",
     image: "/assets/digital-residence.gif",
-    layout: "featured",
   },
   {
     title: "AHMAD TEA",
     description: "Британський преміальний чай",
     image: "/assets/ahmad-tea.gif",
-    layout: "half",
   },
   {
     title: "Terminal Borivaje",
     description: "Зерноперевантажувальний термінал",
     image:
       "/assets/6a8b0344d04c77b87616bfde_67635052448c4986e836a3cf_1-80.jpg",
-    layout: "half",
   },
   {
     title: "ALTEP",
     description: "Виробник твердопаливних котлів",
     image:
       "/assets/6a8b03887a661f9cf0d7fa7b_6628f20206b9b93aa2a62c2a_Altep2.gif",
-    layout: "third",
   },
   {
     title: "Пакування",
     description: "Добірка дизайну пакувань",
     image:
       "/assets/6a8b039f1afc26dfabc60f6a_66ab5efafe185b233eaddfe2_IMG_6170.png",
-    layout: "third",
   },
   {
-    title: "Ваш ідеальний проєкт",
-    description: "Брендинг, Графіка, Ілюстрація тощо",
-    layout: "cta",
-    href: "#contact",
+    title: "ZOND Works",
+    description: "Брендинг і візуальна ідентичність агенції",
+    image: "/assets/hero-art.jpg",
   },
 ];
 

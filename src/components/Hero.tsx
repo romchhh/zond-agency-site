@@ -23,7 +23,6 @@ export default function Hero() {
                   alt=""
                   aria-hidden="true"
                 />
-                <span>і багато іншого</span>
               </div>
               <p>
                 Брендинг агенція, яка створює впізнавані продукти. Наші
