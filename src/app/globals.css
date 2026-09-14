@@ -721,7 +721,12 @@ ul {
   background: var(--bg);
   border-radius: 32px 32px 0 0;
   box-shadow: 0 -28px 80px rgba(0, 0, 0, 0.08);
-  pointer-events: none;
+}
+
+@media (min-width: 1101px) {
+  .hero-video {
+    pointer-events: none;
+  }
 }
 
 .hero-video::before {
@@ -739,6 +744,7 @@ ul {
 }
 
 .hero-video-frame {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
@@ -756,10 +762,64 @@ ul {
   border: 0;
 }
 
-.hero-video-placeholder {
+.hero-video-trigger {
+  position: absolute;
+  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #141414 0%, #2a2a2a 100%);
+  padding: 0;
+  border: 0;
+  background: #0b0b0b;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+  transition: opacity 0.2s ease, transform 0.35s ease;
+}
+
+.hero-video-trigger:hover .hero-video-thumb,
+.hero-video-trigger:focus-visible .hero-video-thumb {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.hero-video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.96);
+  color: #111;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-video-play-btn svg {
+  width: 28px;
+  height: 28px;
+  margin-left: 3px;
+}
+
+.hero-video-trigger:hover .hero-video-play-btn,
+.hero-video-trigger:focus-visible .hero-video-play-btn {
+  transform: translate(-50%, -50%) scale(1.06);
+  background: #fff;
+}
+
+.hero-video-trigger:active .hero-video-play-btn {
+  transform: translate(-50%, -50%) scale(0.96);
 }
 
 /* ——— About / History ——— */
@@ -1653,7 +1713,33 @@ ul {
   }
 
   .hero-frame {
-    width: 78%;
+    width: 100%;
+    max-width: none;
+    margin: 6px 0 14px;
+    border-width: 6px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-frame-video {
+    pointer-events: auto;
+  }
+
+  .hero-right {
+    padding: 22px 14px 20px;
+  }
+
+  .hero-right-top {
+    margin-bottom: 4px;
+  }
+
+  .hero-video-play-btn {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero-video-play-btn svg {
+    width: 24px;
+    height: 24px;
   }
 
   .hero-slogan {
