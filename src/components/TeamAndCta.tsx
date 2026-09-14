@@ -1,4 +1,6 @@
+import MediaImage from "@/components/MediaImage";
 import { team } from "@/data/content";
+import { imageSizes, media } from "@/lib/media";
 
 export default function TeamAndCta() {
   return (
@@ -17,12 +19,10 @@ export default function TeamAndCta() {
             <article className="service-card" key={member.name}>
               <div className="service-visual">
                 {member.image ? (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
+                  <MediaImage
                     src={member.image}
                     alt={`${member.name}, команда ZOND Agency`}
-                    loading="lazy"
-                    decoding="async"
+                    sizes={imageSizes.team}
                   />
                 ) : (
                   <div className="service-visual-placeholder" aria-hidden="true">
@@ -42,13 +42,11 @@ export default function TeamAndCta() {
         </div>
 
         <section className="cta-panel" id="contact">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <MediaImage
             className="cta-bg"
-            src="/assets/cta-bg.png"
+            src={media.ctaBg}
             alt=""
-            loading="lazy"
-            decoding="async"
+            sizes={imageSizes.cta}
           />
           <div className="cta-overlay" aria-hidden="true" />
           <div className="cta-content">

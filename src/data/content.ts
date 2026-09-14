@@ -44,12 +44,12 @@ export const projects: Project[] = [
   {
     title: "Digital Residence",
     description: "Технологічна резиденція нового покоління",
-    image: "/assets/digital-residence.gif",
+    image: "/assets/digital-residence.mp4",
   },
   {
     title: "AHMAD TEA",
     description: "Британський преміальний чай",
-    image: "/assets/ahmad-tea.gif",
+    image: "/assets/ahmad-tea.mp4",
   },
   {
     title: "Terminal Borivaje",
@@ -60,8 +60,7 @@ export const projects: Project[] = [
   {
     title: "ALTEP",
     description: "Виробник твердопаливних котлів",
-    image:
-      "/assets/6a8b03887a661f9cf0d7fa7b_6628f20206b9b93aa2a62c2a_Altep2.gif",
+    image: "/assets/altep.mp4",
   },
   {
     title: "Пакування",

@@ -756,6 +756,12 @@ ul {
   border: 0;
 }
 
+.hero-video-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #141414 0%, #2a2a2a 100%);
+}
+
 /* ——— About / History ——— */
 .about-section {
   padding-top: 0;
@@ -956,6 +962,7 @@ ul {
 }
 
 .project-img {
+  position: relative;
   margin-top: auto;
   border-radius: 22px;
   overflow: hidden;
@@ -963,12 +970,24 @@ ul {
   aspect-ratio: 16 / 10;
 }
 
-.project-img img {
+.project-img img,
+.project-media {
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-img img {
+.project-card:hover .project-img img,
+.project-card:hover .project-media {
   transform: scale(1.05);
+}
+
+.project-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  user-select: none;
 }
 
 .projects-all-btn {
@@ -1422,6 +1441,14 @@ ul {
 
   .hero-grid {
     min-height: auto;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-left {
+    min-height: 0;
   }
 
   .hero {

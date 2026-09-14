@@ -1,4 +1,6 @@
+import MediaImage from "@/components/MediaImage";
 import { services } from "@/data/content";
+import { imageSizes } from "@/lib/media";
 
 export default function Services() {
   return (
@@ -18,12 +20,10 @@ export default function Services() {
           {services.map((service) => (
             <article className="service-card" key={service.index}>
               <div className="service-visual">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <MediaImage
                   src={service.image}
                   alt={service.title}
-                  loading="lazy"
-                  decoding="async"
+                  sizes={imageSizes.service}
                 />
               </div>
               <div className="service-index">{service.index}</div>

@@ -1,4 +1,11 @@
+import LoopedVideo from "@/components/LoopedVideo";
+import MediaImage from "@/components/MediaImage";
 import { projects } from "@/data/content";
+import { imageSizes } from "@/lib/media";
+
+function isVideoAsset(src: string) {
+  return src.endsWith(".mp4") || src.endsWith(".webm");
+}
 
 export default function Projects() {
   return (
@@ -18,13 +25,19 @@ export default function Projects() {
                 <p>{project.description}</p>
               </div>
               <div className="project-img">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  loading="lazy"
-                  decoding="async"
-                />
+                {isVideoAsset(project.image) ? (
+                  <LoopedVideo
+                    className="project-media"
+                    src={project.image}
+                    ariaLabel={project.title}
+                  />
+                ) : (
+                  <MediaImage
+                    src={project.image}
+                    alt={project.title}
+                    sizes={imageSizes.project}
+                  />
+                )}
               </div>
             </article>
           ))}

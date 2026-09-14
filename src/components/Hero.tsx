@@ -1,3 +1,6 @@
+import LoopedVideo from "@/components/LoopedVideo";
+import { media } from "@/lib/media";
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -19,7 +22,7 @@ export default function Hero() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="hero-more-icon"
-                  src="/assets/6502b1be202da9cf0acab684_more_icon.svg"
+                  src={media.moreIcon}
                   alt=""
                   aria-hidden="true"
                 />
@@ -42,15 +45,12 @@ export default function Hero() {
             </div>
 
             <div className="hero-frame">
-              <video
+              <LoopedVideo
                 className="hero-frame-video"
-                src="/assets/MockupReview%201x1.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                disablePictureInPicture
-                aria-label="ZOND Works"
+                src={media.heroMockup}
+                poster={media.heroMockupPoster}
+                ariaLabel="ZOND Works"
+                priority
               />
             </div>
 

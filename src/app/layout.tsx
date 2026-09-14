@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import JsonLd from "@/components/JsonLd";
+import { media } from "@/lib/media";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/assets/hero-art.jpg",
+        url: media.ogImage,
         width: 1200,
         height: 630,
         alt: "ZOND Agency — брендинг та дизайн",
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/assets/hero-art.jpg"],
+    images: [media.ogImage],
   },
   robots: {
     index: true,
@@ -58,9 +59,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/assets/651683d433d9510e36720e72_logo-black.svg",
-    shortcut: "/assets/651683d433d9510e36720e72_logo-black.svg",
-    apple: "/assets/651683d433d9510e36720e72_logo-black.svg",
+    icon: media.logo,
+    shortcut: media.logo,
+    apple: media.logo,
   },
   other: {
     "llms-txt": `${siteUrl}/llms.txt`,
@@ -90,6 +91,19 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          href={media.heroMockupPoster}
+          as="image"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          href={media.heroMockup}
+          as="video"
+          type="video/mp4"
+        />
+        <link rel="preload" href={media.logo} as="image" type="image/svg+xml" />
       </head>
       <body>
         <JsonLd />
