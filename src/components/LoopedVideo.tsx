@@ -77,7 +77,6 @@ export default function LoopedVideo({
       src={src}
       autoPlay
       muted
-      defaultMuted
       loop
       playsInline
       disablePictureInPicture
