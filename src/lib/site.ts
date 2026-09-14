@@ -1,3 +1,5 @@
+const DEFAULT_SITE_URL = "https://zond.agency";
+
 export const siteConfig = {
   name: "ZOND Agency",
   title: "ZOND — Branding Agency",
@@ -24,7 +26,28 @@ export const siteConfig = {
   ],
 };
 
+function normalizeSiteUrl(raw: string | undefined): string {
+  const value = raw?.trim();
+  if (!value) return DEFAULT_SITE_URL;
+
+  const withProtocol = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+
+  try {
+    const url = new URL(withProtocol);
+    return url.origin;
+  } catch {
+    return DEFAULT_SITE_URL;
+  }
+}
+
 export function getSiteUrl(): string {
-  const url = process.env.NEXT_PUBLIC_SITE_URL ?? "https://zond.agency";
-  return url.replace(/\/$/, "");
+  const fromEnv = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
+  if (fromEnv !== DEFAULT_SITE_URL) return fromEnv;
+
+  const vercelUrl = process.env.VERCEL_URL?.trim();
+  if (vercelUrl) {
+    return normalizeSiteUrl(`https://${vercelUrl}`);
+  }
+
+  return DEFAULT_SITE_URL;
 }
