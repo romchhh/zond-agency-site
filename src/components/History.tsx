@@ -1,27 +1,25 @@
 import StatCounter from "@/components/StatCounter";
-import { clients, stats } from "@/data/content";
-
+import { clients } from "@/i18n/clients";
+import type { Dictionary } from "@/i18n/dictionary";
 const marqueeClients = [...clients, ...clients];
 
-export default function History() {
+type HistoryProps = {
+  dictionary: Dictionary;
+};
+
+export default function History({ dictionary }: HistoryProps) {
+  const { mission, a11y } = dictionary;
+
   return (
     <section className="section about-section">
       <div className="wrap">
         <div className="history-grid">
           <div className="history-main">
-            <h2 className="section-title">Історія та переваги</h2>
-            <p className="history-copy">
-              ZOND — це команда стратегів, дизайнерів і креативних мислителів,
-              яка з 2019 року створює бренди, що підсилюють ваш бізнес. Ми
-              віримо, що сильний бренд — це більше, ніж красивий візуал. Це
-              стратегічна перевага, яка відкриває нові горизонти.
-            </p>
-            <a className="link-accent" href="#">
-              Більше про нас <span aria-hidden="true">→</span>
-            </a>
+            <h2 className="section-title">{mission.title}</h2>
+            <p className="history-copy">{mission.description}</p>
           </div>
           <div className="history-stats">
-            {stats.map((stat) => (
+            {mission.stats.map((stat) => (
               <div className="stat" key={stat.value}>
                 <StatCounter value={stat.value} />
                 <span>
@@ -39,10 +37,10 @@ export default function History() {
 
         <div className="clients-block">
           <div className="clients-head">
-            <p className="clients-trust">нам довіряють</p>
+            <p className="clients-trust">{mission.clientsTrust}</p>
           </div>
 
-          <div className="clients-marquee" aria-label="Наші клієнти">
+          <div className="clients-marquee" aria-label={a11y.clients}>
             <div className="clients-track">
               {marqueeClients.map((client, index) => (
                 <div

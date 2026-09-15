@@ -1,87 +1,19 @@
-import type { Metadata, Viewport } from "next";
-import JsonLd from "@/components/JsonLd";
+import { headers } from "next/headers";
+import { defaultLocale, isLocale, localeMeta } from "@/i18n/config";
 import { media } from "@/lib/media";
-import { getSiteUrl, siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = getSiteUrl();
-
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
-  applicationName: siteConfig.name,
-  authors: [{ name: siteConfig.name, url: siteUrl }],
-  creator: siteConfig.name,
-  publisher: siteConfig.name,
-  category: "Branding",
-  alternates: {
-    canonical: "/",
-    languages: {
-      uk: "/",
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: siteConfig.locale,
-    url: siteUrl,
-    siteName: siteConfig.name,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [
-      {
-        url: media.ogImage,
-        width: 1200,
-        height: 630,
-        alt: "ZOND Agency — брендинг та дизайн",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [media.ogImage],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
-  icons: {
-    icon: media.logo,
-    shortcut: media.logo,
-    apple: media.logo,
-  },
-  other: {
-    "llms-txt": `${siteUrl}/llms.txt`,
-  },
-};
-
-export const viewport: Viewport = {
-  themeColor: "#ff7100",
-  colorScheme: "light",
-  width: "device-width",
-  initialScale: 1,
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = await headers();
+  const localeHeader = headersList.get("x-locale");
+  const locale = localeHeader && isLocale(localeHeader) ? localeHeader : defaultLocale;
+
   return (
-    <html lang={siteConfig.language}>
+    <html lang={localeMeta[locale].htmlLang}>
       <head>
         <link rel="llms-txt" href="/llms.txt" />
         <link
@@ -105,10 +37,7 @@ export default function RootLayout({
         />
         <link rel="preload" href={media.logo} as="image" type="image/svg+xml" />
       </head>
-      <body>
-        <JsonLd />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

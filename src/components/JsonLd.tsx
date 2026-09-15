@@ -1,7 +1,17 @@
-import { siteConfig, getSiteUrl } from "@/lib/site";
+import type { Dictionary } from "@/i18n/dictionary";
+import { localeMeta, type Locale } from "@/i18n/config";
+import { getLocalizedUrl } from "@/i18n/routing";
+import { getSiteUrl, siteConfig } from "@/lib/site";
 
-export default function JsonLd() {
+type JsonLdProps = {
+  locale: Locale;
+  dictionary: Dictionary;
+};
+
+export default function JsonLd({ locale, dictionary }: JsonLdProps) {
   const siteUrl = getSiteUrl();
+  const pageUrl = getLocalizedUrl(siteUrl, locale);
+  const { htmlLang } = localeMeta[locale];
 
   const organization = {
     "@context": "https://schema.org",
@@ -11,17 +21,17 @@ export default function JsonLd() {
     email: siteConfig.email,
     telephone: siteConfig.phone,
     sameAs: [siteConfig.instagram],
-    description: siteConfig.description,
+    description: dictionary.meta.description,
     logo: `${siteUrl}/assets/651683d433d9510e36720e72_logo-black.svg`,
   };
 
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: siteConfig.title,
-    url: siteUrl,
-    inLanguage: siteConfig.language,
-    description: siteConfig.description,
+    name: dictionary.meta.title,
+    url: pageUrl,
+    inLanguage: htmlLang,
+    description: dictionary.meta.description,
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -32,15 +42,28 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: siteConfig.name,
-    url: siteUrl,
+    url: pageUrl,
     image: `${siteUrl}/assets/hero-art.jpg`,
-    description: siteConfig.description,
+    description: dictionary.meta.description,
     email: siteConfig.email,
     telephone: siteConfig.phone,
     areaServed: "Worldwide",
     address: {
       "@type": "PostalAddress",
       addressCountry: "UA",
+    },
+  };
+
+  const webPage = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: dictionary.meta.title,
+    url: pageUrl,
+    inLanguage: htmlLang,
+    description: dictionary.meta.description,
+    isPartOf: {
+      "@type": "WebSite",
+      url: siteUrl,
     },
   };
 
@@ -57,6 +80,10 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalService) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPage) }}
       />
     </>
   );

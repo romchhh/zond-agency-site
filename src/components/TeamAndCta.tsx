@@ -1,28 +1,31 @@
 import MediaImage from "@/components/MediaImage";
-import { team } from "@/data/content";
+import type { Dictionary } from "@/i18n/dictionary";
 import { imageSizes, media } from "@/lib/media";
 
-export default function TeamAndCta() {
+type TeamAndCtaProps = {
+  dictionary: Dictionary;
+};
+
+export default function TeamAndCta({ dictionary }: TeamAndCtaProps) {
+  const { team, cta, a11y } = dictionary;
+
   return (
     <section className="section" id="team">
       <div className="wrap">
         <div className="section-head">
           <div>
-            <h2 className="section-title">Люди, які створюють сенси</h2>
+            <h2 className="section-title">{team.title}</h2>
           </div>
-          <a className="link-accent" href="#">
-            Дивитися всю команду →
-          </a>
         </div>
 
         <div className="team-grid">
-          {team.map((member) => (
+          {team.items.map((member) => (
             <article className="team-card" key={member.name}>
               <div className="team-card-photo">
                 {member.image ? (
                   <MediaImage
                     src={member.image}
-                    alt={`${member.name}, команда ZOND Agency`}
+                    alt={`${member.name}, ${a11y.teamMember}`}
                     sizes={imageSizes.team}
                   />
                 ) : (
@@ -52,14 +55,11 @@ export default function TeamAndCta() {
           <div className="cta-overlay" aria-hidden="true" />
           <div className="cta-content">
             <div className="cta-text">
-              <h3>Обговоримо ваш проєкт?</h3>
-              <p>
-                Розкажіть про ваш бізнес. І ми запропонуємо рішення, яке
-                працює саме для вас.
-              </p>
+              <h3>{cta.title}</h3>
+              <p>{cta.description}</p>
             </div>
             <a className="cta-btn" href="mailto:hello@zond.agency">
-              <span>Консультація</span>
+              <span>{cta.button}</span>
               <span className="cta-btn-icon" aria-hidden="true">
                 ↗
               </span>

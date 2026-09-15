@@ -1,14 +1,22 @@
 import MediaImage from "@/components/MediaImage";
-import { projects } from "@/data/content";
+import VisionBlock from "@/components/VisionBlock";
+import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import { imageSizes } from "@/lib/media";
 
-export default function Projects() {
+type ProjectsProps = {
+  dictionary: Dictionary;
+  projects: ProjectItem[];
+};
+
+export default function Projects({ dictionary, projects }: ProjectsProps) {
+  const { projects: copy } = dictionary;
+
   return (
     <section className="section" id="projects">
       <div className="wrap">
         <div className="section-head">
           <div>
-            <h2 className="section-title">Бренди, які надихають</h2>
+            <h2 className="section-title">{copy.title}</h2>
           </div>
         </div>
 
@@ -31,8 +39,10 @@ export default function Projects() {
           ))}
         </div>
 
+        <VisionBlock dictionary={dictionary} />
+
         <a className="projects-all-btn" href="#">
-          <span>Всі проєкти</span>
+          <span>{copy.allProjects}</span>
           <span className="projects-all-btn-icon" aria-hidden="true">
             ↗
           </span>

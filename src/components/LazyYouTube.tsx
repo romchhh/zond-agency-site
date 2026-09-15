@@ -6,20 +6,28 @@ type LazyYouTubeProps = {
   videoId: string;
   title: string;
   start?: number;
+  className?: string;
+  playLabel?: string;
 };
 
 export default function LazyYouTube({
   videoId,
   title,
   start = 0,
+  className,
+  playLabel,
 }: LazyYouTubeProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const thumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
   const embedSrc = `https://www.youtube.com/embed/${videoId}?start=${start}&autoplay=1&playsinline=1&rel=0`;
 
+  const frameClass = ["hero-video-frame", className, isPlaying ? "is-playing" : ""]
+    .filter(Boolean)
+    .join(" ");
+
   if (isPlaying) {
     return (
-      <div className="hero-video-frame is-playing">
+      <div className={frameClass}>
         <iframe
           src={embedSrc}
           title={title}
@@ -32,12 +40,12 @@ export default function LazyYouTube({
   }
 
   return (
-    <div className="hero-video-frame">
+    <div className={frameClass}>
       <button
         type="button"
         className="hero-video-trigger"
         onClick={() => setIsPlaying(true)}
-        aria-label={`Відтворити: ${title}`}
+        aria-label={playLabel ?? title}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

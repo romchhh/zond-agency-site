@@ -34,10 +34,10 @@ export const clients: Client[] = [
 ];
 
 export const stats = [
-  { value: "6+", label: "років\nна ринку" },
-  { value: "100+", label: "реалізованих\nпроєктів" },
-  { value: "50+", label: "брендів\nу 12 країнах" },
-  { value: "98%", label: "клієнтів\nрекомендують нас" },
+  { value: "5+", label: "років\nна ринку" },
+  { value: "300+", label: "реалізованих\nпроєктів" },
+  { value: "30+", label: "ніш\nу 8 країнах" },
+  { value: "95%", label: "клієнтів\nрекомендують нас" },
 ];
 
 export const projects: Project[] = [

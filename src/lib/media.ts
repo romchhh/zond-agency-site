@@ -9,7 +9,7 @@ export const media = {
 
 export const imageSizes = {
   service: "(max-width: 700px) 50vw, 33vw",
-  project: "(max-width: 700px) 50vw, 50vw",
-  team: "(max-width: 700px) 50vw, 33vw",
+  project: "(max-width: 700px) 100vw, 50vw",
+  team: "(max-width: 700px) 100vw, 33vw",
   cta: "100vw",
 } as const;

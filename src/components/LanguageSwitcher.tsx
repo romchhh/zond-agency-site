@@ -1,23 +1,33 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-
-const languages = [
-  { code: "ENG", label: "English" },
-  { code: "UA", label: "Українська" },
-  { code: "RU", label: "Русский" },
-];
+import { localeMeta, locales, type Locale } from "@/i18n/config";
+import { getLocalePath } from "@/i18n/routing";
 
 type LanguageSwitcherProps = {
+  locale: Locale;
+  label: string;
+  languagesLabel: string;
   variant?: "header" | "menu";
 };
 
 export default function LanguageSwitcher({
+  locale,
+  label,
+  languagesLabel,
   variant = "header",
 }: LanguageSwitcherProps) {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("UA");
+  const [hash, setHash] = useState("");
   const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const syncHash = () => setHash(window.location.hash);
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -49,7 +59,7 @@ export default function LanguageSwitcher({
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        aria-label="Вибір мови"
+        aria-label={label}
       >
         <svg
           className="lang-switcher-icon"
@@ -65,7 +75,7 @@ export default function LanguageSwitcher({
             strokeLinecap="round"
           />
         </svg>
-        <span className="lang-switcher-current">{active}</span>
+        <span className="lang-switcher-current">{localeMeta[locale].code}</span>
         <svg
           className="lang-switcher-chevron"
           viewBox="0 0 24 24"
@@ -82,22 +92,20 @@ export default function LanguageSwitcher({
         </svg>
       </button>
 
-      <div className="lang-switcher-dropdown" role="listbox" aria-label="Мови">
-        {languages.map((language) => (
-          <button
-            key={language.code}
-            type="button"
+      <div className="lang-switcher-dropdown" role="listbox" aria-label={languagesLabel}>
+        {locales.map((item) => (
+          <Link
+            key={item}
+            href={`${getLocalePath(item)}${hash}`}
             role="option"
-            aria-selected={active === language.code}
-            className={active === language.code ? "is-active" : undefined}
-            onClick={() => {
-              setActive(language.code);
-              setOpen(false);
-            }}
+            aria-selected={locale === item}
+            className={locale === item ? "is-active" : undefined}
+            onClick={() => setOpen(false)}
+            hrefLang={localeMeta[item].hreflang}
           >
-            <span className="lang-switcher-code">{language.code}</span>
-            <span className="lang-switcher-label">{language.label}</span>
-          </button>
+            <span className="lang-switcher-code">{localeMeta[item].code}</span>
+            <span className="lang-switcher-label">{localeMeta[item].label}</span>
+          </Link>
         ))}
       </div>
     </div>

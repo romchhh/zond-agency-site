@@ -1,21 +1,23 @@
 import LoopedVideo from "@/components/LoopedVideo";
+import type { Dictionary } from "@/i18n/dictionary";
 import { media } from "@/lib/media";
 
-export default function Hero() {
+type HeroProps = {
+  dictionary: Dictionary;
+};
+
+export default function Hero({ dictionary }: HeroProps) {
+  const { hero } = dictionary;
+
   return (
     <section className="hero">
       <div className="wrap">
         <div className="hero-grid">
           <div className="hero-left">
             <ul className="hero-services">
-              <li>Брендинг</li>
-              <li>Інфлюенс маркетинг</li>
-              <li>Графічний дизайн</li>
-              <li>SMM</li>
-              <li>Ілюстрація</li>
-              <li>Пакування</li>
-              <li>Брендбук</li>
-              <li>Логотип</li>
+              {hero.services.map((service) => (
+                <li key={service}>{service}</li>
+              ))}
             </ul>
             <div className="hero-bottom">
               <div className="hero-more">
@@ -26,12 +28,9 @@ export default function Hero() {
                   alt=""
                   aria-hidden="true"
                 />
-                <span>і багато іншого</span>
+                <span>{hero.more}</span>
               </div>
-              <p>
-                Брендинг агенція, яка створює впізнавані продукти. Наші
-                переваги — швидкість та сучасність.
-              </p>
+              <p>{hero.description}</p>
             </div>
           </div>
 
@@ -40,7 +39,7 @@ export default function Hero() {
               className="hero-right-video"
               src={media.heroMockup}
               poster={media.heroMockupPoster}
-              ariaLabel="ZOND Works"
+              ariaLabel={hero.videoLabel}
               priority
             />
           </div>
