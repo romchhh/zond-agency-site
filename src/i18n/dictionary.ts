@@ -51,7 +51,7 @@ export type Dictionary = {
   hero: {
     services: string[];
     more: string;
-    description: string;
+    slogan: string;
     videoLabel: string;
   };
   mission: {
@@ -67,6 +67,7 @@ export type Dictionary = {
   vision: {
     title: string;
     description: string;
+    highlight: string;
     videoTitle: string;
   };
   services: {

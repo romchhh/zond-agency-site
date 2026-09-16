@@ -52,14 +52,12 @@ const ru: Dictionary = {
       "Логотип",
     ],
     more: "и многое другое",
-    description:
-      "Брендинговое агентство, которое создаёт узнаваемые продукты. Наши преимущества — скорость и современность.",
+    slogan: "Сначала вы создаёте бренд, а потом он работает на вас ❤️",
     videoLabel: "ZOND Works",
   },
   mission: {
     title: "Mission possible",
-    description:
-      "Наша миссия — усиливать продукты через силу бренда. Мы объединяем стратегию, дизайн и креативное мышление, чтобы превращать идеи в сильные бренды.",
+    description: "Наша миссия — развивать продукты через силу бренда.",
     stats: [
       { value: "5+", label: "лет\nна рынке" },
       { value: "300+", label: "реализованных\nпроектов" },
@@ -75,24 +73,26 @@ const ru: Dictionary = {
   vision: {
     title: "Vision",
     description:
-      "ZOND — это команда маркетологов, дизайнеров и креативных мыслителей, которая с 2021 года создаёт бренды и коммуникации. Сильный бренд — это больше, чем красивый визуал, это стратегическое преимущество, которое открывает новые горизонты!",
+      "ZOND — это команда маркетологов, дизайнеров и креативных мыслителей, которая с 2021 года создаёт бренды и коммуникации.",
+    highlight:
+      "Сильный бренд — это больше, чем красивый визуал, это стратегическое преимущество, которое открывает новые горизонты!",
     videoTitle: "ZOND — видео",
   },
   services: {
     title: "Комплексные решения для вашего бренда",
     items: [
-      { index: "01", title: "Стратегия бренда", description: "Анализ целей и возможностей.", image: "/services/strategy.png" },
-      { index: "02", title: "Позиционирование", description: "Уникальная роль бренда на рынке.", image: "/services/positioning.png" },
-      { index: "03", title: "Нейминг", description: "Название, которое запоминается.", image: "/services/smm.png" },
-      { index: "04", title: "Логотип", description: "Лаконичный визуальный знак.", image: "/services/character.png" },
-      { index: "05", title: "Айдентика", description: "Целостная визуальная система.", image: "/services/naming.png" },
-      { index: "06", title: "Брендбук", description: "Правила использования бренда.", image: "/services/brandbook.png" },
-      { index: "07", title: "Слоган и коммуникация", description: "Единый тон и сообщения.", image: "/services/graphic.png" },
-      { index: "08", title: "Персонаж бренда", description: "Уникальный герой при необходимости.", image: "/services/communication.png" },
-      { index: "09", title: "Упаковка", description: "Дизайн, который продаёт.", image: "/services/packaging.png" },
-      { index: "10", title: "Графический дизайн", description: "Визуальные решения для носителей.", image: "/services/identity.png" },
-      { index: "11", title: "Веб-дизайн", description: "Современные сайты.", image: "/services/logo.png" },
-      { index: "12", title: "SMM", description: "Контент, который работает.", image: "/services/web.png" },
+      { index: "01", title: "Стратегия бренда", description: "Анализ целей и возможностей.", image: "/services/strategy.jpg" },
+      { index: "02", title: "Позиционирование", description: "Уникальная роль бренда на рынке.", image: "/services/positioning.jpg" },
+      { index: "03", title: "Нейминг", description: "Название, которое запоминается.", image: "/services/naming.jpg" },
+      { index: "04", title: "Логотип", description: "Лаконичный визуальный знак.", image: "/services/logo.jpg" },
+      { index: "05", title: "Айдентика", description: "Целостная визуальная система.", image: "/services/identity.jpg" },
+      { index: "06", title: "Брендбук", description: "Правила использования бренда.", image: "/services/brandbook.jpg" },
+      { index: "07", title: "Слоган и коммуникация", description: "Единый тон и сообщения.", image: "/services/communication.jpg" },
+      { index: "08", title: "Персонаж бренда", description: "Уникальный герой при необходимости.", image: "/services/character.jpg" },
+      { index: "09", title: "Упаковка", description: "Дизайн, который продаёт.", image: "/services/packaging.jpg" },
+      { index: "10", title: "Графический дизайн", description: "Визуальные решения для носителей.", image: "/services/graphic.jpg" },
+      { index: "11", title: "Веб-дизайн", description: "Современные сайты.", image: "/services/web.jpg" },
+      { index: "12", title: "SMM", description: "Контент, который работает.", image: "/services/smm.jpg" },
     ],
   },
   team: {

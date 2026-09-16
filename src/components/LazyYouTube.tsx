@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 type LazyYouTubeProps = {
   videoId: string;
@@ -8,7 +8,17 @@ type LazyYouTubeProps = {
   start?: number;
   className?: string;
   playLabel?: string;
+  poster?: string;
 };
+
+function getYouTubeThumbnails(videoId: string) {
+  return [
+    `https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp`,
+    `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/sddefault.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+  ];
+}
 
 export default function LazyYouTube({
   videoId,
@@ -16,10 +26,20 @@ export default function LazyYouTube({
   start = 0,
   className,
   playLabel,
+  poster,
 }: LazyYouTubeProps) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const thumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+  const thumbnails = useMemo(
+    () => (poster ? [poster, ...getYouTubeThumbnails(videoId)] : getYouTubeThumbnails(videoId)),
+    [poster, videoId],
+  );
+  const [thumbnailIndex, setThumbnailIndex] = useState(0);
+  const thumbnail = thumbnails[thumbnailIndex];
   const embedSrc = `https://www.youtube.com/embed/${videoId}?start=${start}&autoplay=1&playsinline=1&rel=0`;
+
+  const handleThumbnailError = useCallback(() => {
+    setThumbnailIndex((index) => (index < thumbnails.length - 1 ? index + 1 : index));
+  }, [thumbnails.length]);
 
   const frameClass = ["hero-video-frame", className, isPlaying ? "is-playing" : ""]
     .filter(Boolean)
@@ -54,6 +74,7 @@ export default function LazyYouTube({
           alt=""
           loading="lazy"
           decoding="async"
+          onError={handleThumbnailError}
         />
         <span className="hero-video-play-btn" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor">

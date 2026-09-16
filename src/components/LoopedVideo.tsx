@@ -37,11 +37,19 @@ export default function LoopedVideo({
       if (!video.paused) video.pause();
     };
 
+    const onReady = () => tryPlay();
+
+    if (priority) {
+      tryPlay();
+      video.addEventListener("loadeddata", onReady);
+      video.addEventListener("canplay", onReady);
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           tryPlay();
-        } else {
+        } else if (!priority) {
           tryPause();
         }
       },
@@ -68,6 +76,8 @@ export default function LoopedVideo({
     window.addEventListener("pageshow", onVisible);
 
     return () => {
+      video.removeEventListener("loadeddata", onReady);
+      video.removeEventListener("canplay", onReady);
       observer.disconnect();
       document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("pageshow", onVisible);
@@ -80,6 +90,7 @@ export default function LoopedVideo({
       className={className}
       src={src}
       muted
+      autoPlay={priority}
       loop
       playsInline
       disablePictureInPicture

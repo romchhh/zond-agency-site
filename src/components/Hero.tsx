@@ -30,7 +30,7 @@ export default function Hero({ dictionary }: HeroProps) {
                 />
                 <span>{hero.more}</span>
               </div>
-              <p>{hero.description}</p>
+              <p className="hero-slogan">{hero.slogan}</p>
             </div>
           </div>
 

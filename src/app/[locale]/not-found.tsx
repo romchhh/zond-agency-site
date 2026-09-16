@@ -1,16 +1,13 @@
 import NotFoundView from "@/components/NotFoundView";
-import { notFound } from "next/navigation";
-import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { resolveRequestLocale } from "@/i18n/resolve-locale";
 
 export default async function LocaleNotFound({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params?: Promise<{ locale?: string }>;
 }) {
-  const { locale } = await params;
-  if (!isLocale(locale)) notFound();
-
+  const locale = await resolveRequestLocale(params);
   const dictionary = await getDictionary(locale);
 
   return <NotFoundView locale={locale} dictionary={dictionary} />;

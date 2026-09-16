@@ -76,18 +76,18 @@ export const projects: Project[] = [
 ];
 
 export const services: Service[] = [
-  { index: "01", title: "Стратегія бренду", description: "Аналіз цілей і можливостей.", image: "/services/strategy.png" },
-  { index: "02", title: "Позиціонування", description: "Унікальна роль бренду на ринку.", image: "/services/positioning.png" },
-  { index: "03", title: "Неймінг", description: "Назва, що запам’ятовується.", image: "/services/smm.png" },
-  { index: "04", title: "Логотип", description: "Лаконічний візуальний знак.", image: "/services/character.png" },
-  { index: "05", title: "Айдентика", description: "Цілісна візуальна система.", image: "/services/naming.png" },
-  { index: "06", title: "Брендбук", description: "Правила використання бренду.", image: "/services/brandbook.png" },
-  { index: "07", title: "Слоган і комунікація", description: "Єдиний тон і меседжі.", image: "/services/graphic.png" },
-  { index: "08", title: "Персонаж бренду", description: "Унікальний герой за потреби.", image: "/services/communication.png" },
-  { index: "09", title: "Упаковка", description: "Дизайн, який продає.", image: "/services/packaging.png" },
-  { index: "10", title: "Графічний дизайн", description: "Візуальні рішення для носіїв.", image: "/services/identity.png" },
-  { index: "11", title: "Веб-дизайн", description: "Сучасні сайти.", image: "/services/logo.png" },
-  { index: "12", title: "SMM", description: "Контент, що працює.", image: "/services/web.png" },
+  { index: "01", title: "Стратегія бренду", description: "Аналіз цілей і можливостей.", image: "/services/strategy.jpg" },
+  { index: "02", title: "Позиціонування", description: "Унікальна роль бренду на ринку.", image: "/services/positioning.jpg" },
+  { index: "03", title: "Неймінг", description: "Назва, що запам’ятовується.", image: "/services/naming.jpg" },
+  { index: "04", title: "Логотип", description: "Лаконічний візуальний знак.", image: "/services/logo.jpg" },
+  { index: "05", title: "Айдентика", description: "Цілісна візуальна система.", image: "/services/identity.jpg" },
+  { index: "06", title: "Брендбук", description: "Правила використання бренду.", image: "/services/brandbook.jpg" },
+  { index: "07", title: "Слоган і комунікація", description: "Єдиний тон і меседжі.", image: "/services/communication.jpg" },
+  { index: "08", title: "Персонаж бренду", description: "Унікальний герой за потреби.", image: "/services/character.jpg" },
+  { index: "09", title: "Упаковка", description: "Дизайн, який продає.", image: "/services/packaging.jpg" },
+  { index: "10", title: "Графічний дизайн", description: "Візуальні рішення для носіїв.", image: "/services/graphic.jpg" },
+  { index: "11", title: "Веб-дизайн", description: "Сучасні сайти.", image: "/services/web.jpg" },
+  { index: "12", title: "SMM", description: "Контент, що працює.", image: "/services/smm.jpg" },
 ];
 
 export const team: TeamMember[] = [

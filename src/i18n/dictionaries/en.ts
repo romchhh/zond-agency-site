@@ -52,14 +52,12 @@ const en: Dictionary = {
       "Logo",
     ],
     more: "and much more",
-    description:
-      "A branding agency that creates recognizable products. Our strengths are speed and modernity.",
+    slogan: "First you create a brand, then it works for you ❤️",
     videoLabel: "ZOND Works",
   },
   mission: {
     title: "Mission possible",
-    description:
-      "Our mission is to strengthen products through the power of brand. We combine strategy, design, and creative thinking to turn ideas into strong brands.",
+    description: "Our mission is to grow products through the power of brand.",
     stats: [
       { value: "5+", label: "years\non the market" },
       { value: "300+", label: "completed\nprojects" },
@@ -75,24 +73,26 @@ const en: Dictionary = {
   vision: {
     title: "Vision",
     description:
-      "ZOND is a team of marketers, designers, and creative thinkers that has been building brands and communications since 2021. A strong brand is more than beautiful visuals — it is a strategic advantage that opens new horizons.",
+      "ZOND is a team of marketers, designers, and creative thinkers that has been building brands and communications since 2021.",
+    highlight:
+      "A strong brand is more than beautiful visuals — it is a strategic advantage that opens new horizons.",
     videoTitle: "ZOND — video",
   },
   services: {
     title: "Comprehensive solutions for your brand",
     items: [
-      { index: "01", title: "Brand strategy", description: "Goals and opportunity analysis.", image: "/services/strategy.png" },
-      { index: "02", title: "Positioning", description: "A unique role for your brand.", image: "/services/positioning.png" },
-      { index: "03", title: "Naming", description: "A name people remember.", image: "/services/smm.png" },
-      { index: "04", title: "Logo", description: "A concise visual mark.", image: "/services/character.png" },
-      { index: "05", title: "Identity", description: "A cohesive visual system.", image: "/services/naming.png" },
-      { index: "06", title: "Brand book", description: "Rules for using the brand.", image: "/services/brandbook.png" },
-      { index: "07", title: "Slogan & communication", description: "Unified tone and messaging.", image: "/services/graphic.png" },
-      { index: "08", title: "Brand character", description: "A unique hero when needed.", image: "/services/communication.png" },
-      { index: "09", title: "Packaging", description: "Design that sells.", image: "/services/packaging.png" },
-      { index: "10", title: "Graphic design", description: "Visual solutions for media.", image: "/services/identity.png" },
-      { index: "11", title: "Web design", description: "Modern websites.", image: "/services/logo.png" },
-      { index: "12", title: "SMM", description: "Content that works.", image: "/services/web.png" },
+      { index: "01", title: "Brand strategy", description: "Goals and opportunity analysis.", image: "/services/strategy.jpg" },
+      { index: "02", title: "Positioning", description: "A unique role for your brand.", image: "/services/positioning.jpg" },
+      { index: "03", title: "Naming", description: "A name people remember.", image: "/services/naming.jpg" },
+      { index: "04", title: "Logo", description: "A concise visual mark.", image: "/services/logo.jpg" },
+      { index: "05", title: "Identity", description: "A cohesive visual system.", image: "/services/identity.jpg" },
+      { index: "06", title: "Brand book", description: "Rules for using the brand.", image: "/services/brandbook.jpg" },
+      { index: "07", title: "Slogan & communication", description: "Unified tone and messaging.", image: "/services/communication.jpg" },
+      { index: "08", title: "Brand character", description: "A unique hero when needed.", image: "/services/character.jpg" },
+      { index: "09", title: "Packaging", description: "Design that sells.", image: "/services/packaging.jpg" },
+      { index: "10", title: "Graphic design", description: "Visual solutions for media.", image: "/services/graphic.jpg" },
+      { index: "11", title: "Web design", description: "Modern websites.", image: "/services/web.jpg" },
+      { index: "12", title: "SMM", description: "Content that works.", image: "/services/smm.jpg" },
     ],
   },
   team: {

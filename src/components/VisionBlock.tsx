@@ -25,6 +25,7 @@ export default function VisionBlock({ dictionary }: VisionBlockProps) {
           <div className="project-copy">
             <h3>{vision.title}</h3>
             <p>{vision.description}</p>
+            <p>{vision.highlight}</p>
           </div>
         </div>
       </article>
