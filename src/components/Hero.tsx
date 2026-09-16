@@ -38,7 +38,6 @@ export default function Hero({ dictionary }: HeroProps) {
             <LoopedVideo
               className="hero-right-video"
               src={media.heroMockup}
-              poster={media.heroMockupPoster}
               ariaLabel={hero.videoLabel}
               priority
             />

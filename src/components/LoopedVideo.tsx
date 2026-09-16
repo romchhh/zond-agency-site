@@ -39,10 +39,15 @@ export default function LoopedVideo({
 
     const onReady = () => tryPlay();
 
+    const onPlaying = () => {
+      video.removeAttribute("poster");
+    };
+
     if (priority) {
       tryPlay();
       video.addEventListener("loadeddata", onReady);
       video.addEventListener("canplay", onReady);
+      video.addEventListener("playing", onPlaying);
     }
 
     const observer = new IntersectionObserver(
@@ -78,6 +83,7 @@ export default function LoopedVideo({
     return () => {
       video.removeEventListener("loadeddata", onReady);
       video.removeEventListener("canplay", onReady);
+      video.removeEventListener("playing", onPlaying);
       observer.disconnect();
       document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("pageshow", onVisible);
