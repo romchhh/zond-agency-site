@@ -25,12 +25,23 @@ export default function LoopedVideo({
 
     video.muted = true;
     video.defaultMuted = true;
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "");
+    video.volume = 0;
+    video.playsInline = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("playsinline", "true");
+    video.setAttribute("webkit-playsinline", "true");
+    video.setAttribute("x5-playsinline", "true");
+    video.setAttribute("x5-video-player-type", "h5");
+    video.setAttribute("x5-video-player-fullscreen", "false");
+    video.removeAttribute("controls");
 
     const tryPlay = () => {
       if (document.hidden) return;
-      void video.play().catch(() => {});
+      video.muted = true;
+      video.defaultMuted = true;
+      const playPromise = video.play();
+      if (playPromise) void playPromise.catch(() => {});
     };
 
     const tryPause = () => {
@@ -38,29 +49,30 @@ export default function LoopedVideo({
     };
 
     const onReady = () => tryPlay();
-
     const onPlaying = () => {
       video.removeAttribute("poster");
     };
 
     if (priority) {
       tryPlay();
+      video.addEventListener("loadedmetadata", onReady);
       video.addEventListener("loadeddata", onReady);
       video.addEventListener("canplay", onReady);
+      video.addEventListener("canplaythrough", onReady);
       video.addEventListener("playing", onPlaying);
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
           tryPlay();
         } else if (!priority) {
           tryPause();
         }
       },
       {
-        threshold: [0, 0.2, 0.5],
-        rootMargin: priority ? "40px 0px" : "0px",
+        threshold: [0, 0.1, 0.25, 0.5],
+        rootMargin: priority ? "80px 0px" : "0px",
       },
     );
 
@@ -71,22 +83,33 @@ export default function LoopedVideo({
         tryPause();
         return;
       }
-      const rect = video.getBoundingClientRect();
-      const visible =
-        rect.top < window.innerHeight && rect.bottom > 0 && rect.height > 0;
-      if (visible) tryPlay();
+      tryPlay();
     };
+
+    const unlockPlayback = () => tryPlay();
 
     document.addEventListener("visibilitychange", onVisible);
     window.addEventListener("pageshow", onVisible);
+    window.addEventListener("focus", onVisible);
+    document.addEventListener("touchstart", unlockPlayback, { passive: true });
+    document.addEventListener("touchend", unlockPlayback, { passive: true });
+    document.addEventListener("scroll", unlockPlayback, { passive: true });
+    document.addEventListener("click", unlockPlayback);
 
     return () => {
+      video.removeEventListener("loadedmetadata", onReady);
       video.removeEventListener("loadeddata", onReady);
       video.removeEventListener("canplay", onReady);
+      video.removeEventListener("canplaythrough", onReady);
       video.removeEventListener("playing", onPlaying);
       observer.disconnect();
       document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("pageshow", onVisible);
+      window.removeEventListener("focus", onVisible);
+      document.removeEventListener("touchstart", unlockPlayback);
+      document.removeEventListener("touchend", unlockPlayback);
+      document.removeEventListener("scroll", unlockPlayback);
+      document.removeEventListener("click", unlockPlayback);
     };
   }, [src, priority]);
 
@@ -100,6 +123,9 @@ export default function LoopedVideo({
       loop
       playsInline
       disablePictureInPicture
+      disableRemotePlayback
+      controls={false}
+      controlsList="nodownload nofullscreen noremoteplayback"
       preload={priority ? "auto" : "metadata"}
       poster={poster}
       aria-label={ariaLabel}

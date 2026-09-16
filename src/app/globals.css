@@ -671,16 +671,23 @@ ul {
   object-fit: cover;
   object-position: center;
   user-select: none;
+  pointer-events: none;
   -webkit-tap-highlight-color: transparent;
-}
-
-.hero-right-video::-webkit-media-controls {
-  display: none !important;
-}
-
-.hero-right-video::-webkit-media-controls-start-playback-button {
-  display: none !important;
   -webkit-appearance: none;
+}
+
+.hero-right-video::-webkit-media-controls,
+.hero-right-video::-webkit-media-controls-enclosure,
+.hero-right-video::-webkit-media-controls-panel,
+.hero-right-video::-webkit-media-controls-play-button,
+.hero-right-video::-webkit-media-controls-start-playback-button,
+.hero-right-video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  -webkit-appearance: none;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* ——— Vision / YouTube ——— */
