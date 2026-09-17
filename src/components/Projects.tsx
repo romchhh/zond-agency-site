@@ -1,3 +1,4 @@
+import ClientsBlock from "@/components/ClientsBlock";
 import MediaImage from "@/components/MediaImage";
 import VisionBlock from "@/components/VisionBlock";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
@@ -40,6 +41,8 @@ export default function Projects({ dictionary, projects }: ProjectsProps) {
         </div>
 
         <VisionBlock dictionary={dictionary} />
+
+        <ClientsBlock dictionary={dictionary} />
 
         <a className="projects-all-btn" href="#">
           <span>{copy.allProjects}</span>
