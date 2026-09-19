@@ -31,6 +31,22 @@ export const heroServiceSlugs: ServiceSlug[] = [
   "logo",
 ];
 
+/** Slugs for the 12 homepage /services grid cards, by index order. */
+export const servicesGridSlugs: Array<ServiceSlug | null> = [
+  "branding",
+  "branding",
+  "branding",
+  "logo",
+  "identity",
+  "brandbook",
+  "branding",
+  "branding",
+  "packaging",
+  "graphics",
+  null,
+  "smm",
+];
+
 export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
   uk: {
     branding: "Брендинг",
@@ -217,5 +233,26 @@ export const serviceMeta: Record<
       title: "Ребрендинг — ZOND",
       description: "Ребрендинг от агентства ZOND.",
     },
+  },
+};
+
+export const servicesIndexMeta: Record<
+  Locale,
+  { title: string; description: string }
+> = {
+  uk: {
+    title: "Послуги — ZOND",
+    description:
+      "Комплексні рішення для вашого бренду: стратегія, позиціонування, неймінг, логотип, айдентика, брендбук, упаковка, веб-дизайн і SMM.",
+  },
+  en: {
+    title: "Services — ZOND",
+    description:
+      "Complete brand solutions: strategy, positioning, naming, logo, identity, brand book, packaging, web design, and SMM.",
+  },
+  ru: {
+    title: "Услуги — ZOND",
+    description:
+      "Комплексные решения для вашего бренда: стратегия, позиционирование, нейминг, логотип, айдентика, брендбук, упаковка, веб-дизайн и SMM.",
   },
 };

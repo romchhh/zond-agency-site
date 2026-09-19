@@ -98,12 +98,14 @@ const uk: Dictionary = {
   team: {
     title: "Люди, які створюють сенси",
     items: [
-      { name: "Алекс Крутих", role: "Засновник", image: "/assets/team/oleksandr-krutykh.webp" },
-      { name: "Марія Супряга", role: "Дизайнер", image: "/assets/team/maria-supriaha.jpg" },
-      { name: "Єлизавета Полуніна", role: "Арт-директор", image: "/assets/team/elyzaveta-polunina.jpg" },
-      { name: "Дмитро Кавелашвілі", role: "Аккаунт", image: "/assets/team/dmytro-kavelashvili.webp" },
-      { name: "Марія Дубова", role: "SMM", image: "/assets/team/maria-dubova.jpg" },
-      { name: "Наталія Машталяр", role: "SMM", image: "/assets/team/natalia-mashtaliar.jpg" },
+      { name: "Олександр Крутих", role: "CEO", image: "/assets/team/oleksandr-krutykh.jpg" },
+      { name: "Жасмін Мустафа", role: "SMM", image: "/assets/team/zhasmin-mustafa.jpg" },
+      { name: "Марія Саніна", role: "Дизайнер", image: "/assets/team/maria-sanina.jpg" },
+      { name: "Марія Супряга", role: "Арт-директор", image: "/assets/team/maria-supriaha.jpg" },
+      { name: "Анастасія Грищенко", role: "SMM", image: "/assets/team/anastasiia-hryshchenko.jpg" },
+      { name: "Наталія Машталер", role: "SMM", image: "/assets/team/natalia-mashtaler.jpg" },
+      { name: "Віталій Заєць", role: "Project management", image: "/assets/team/vitalii-zaiets.jpg" },
+      { name: "Софія Писанчишин", role: "Sales manager", image: "/assets/team/sofia-pysanchyshyn.jpg" },
     ],
   },
   cta: {

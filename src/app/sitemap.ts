@@ -28,6 +28,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
+  const serviceIndexEntries = locales.map((locale) => ({
+    url: getLocalizedUrl(siteUrl, locale, "/services"),
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.95,
+    alternates: {
+      languages: getAlternateLanguages(siteUrl, "/services"),
+    },
+  }));
+
   const serviceEntries = locales.flatMap((locale) =>
     serviceSlugs.map((slug) => {
       const pathname = `/services/${slug}`;
@@ -44,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const sections = ["services", "projects", "team", "contact"] as const;
+  const sections = ["projects", "team", "contact"] as const;
 
   const hashEntries = locales.flatMap((locale) => {
     const baseUrl = getLocalizedUrl(siteUrl, locale);
@@ -57,5 +67,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   });
 
-  return [...localeEntries, ...homeAliases, ...serviceEntries, ...hashEntries];
+  return [
+    ...localeEntries,
+    ...homeAliases,
+    ...serviceIndexEntries,
+    ...serviceEntries,
+    ...hashEntries,
+  ];
 }

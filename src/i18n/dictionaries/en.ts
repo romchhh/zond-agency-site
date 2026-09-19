@@ -98,12 +98,14 @@ const en: Dictionary = {
   team: {
     title: "People who create meaning",
     items: [
-      { name: "Oleksandr Krutykh", role: "Founder", image: "/assets/team/oleksandr-krutykh.webp" },
-      { name: "Maria Supriaha", role: "Designer", image: "/assets/team/maria-supriaha.jpg" },
-      { name: "Yelyzaveta Polunina", role: "Art director", image: "/assets/team/elyzaveta-polunina.jpg" },
-      { name: "Dmytro Kavelashvili", role: "Account manager", image: "/assets/team/dmytro-kavelashvili.webp" },
-      { name: "Maria Dubova", role: "SMM", image: "/assets/team/maria-dubova.jpg" },
-      { name: "Natalia Mashtaliar", role: "SMM", image: "/assets/team/natalia-mashtaliar.jpg" },
+      { name: "Oleksandr Krutykh", role: "CEO", image: "/assets/team/oleksandr-krutykh.jpg" },
+      { name: "Zhasmin Mustafa", role: "SMM", image: "/assets/team/zhasmin-mustafa.jpg" },
+      { name: "Maria Sanina", role: "Designer", image: "/assets/team/maria-sanina.jpg" },
+      { name: "Maria Supriaha", role: "Art director", image: "/assets/team/maria-supriaha.jpg" },
+      { name: "Anastasiia Hryshchenko", role: "SMM", image: "/assets/team/anastasiia-hryshchenko.jpg" },
+      { name: "Natalia Mashtaler", role: "SMM", image: "/assets/team/natalia-mashtaler.jpg" },
+      { name: "Vitalii Zaiets", role: "Project management", image: "/assets/team/vitalii-zaiets.jpg" },
+      { name: "Sofia Pysanchyshyn", role: "Sales manager", image: "/assets/team/sofia-pysanchyshyn.jpg" },
     ],
   },
   cta: {

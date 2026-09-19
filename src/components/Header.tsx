@@ -19,7 +19,7 @@ export default function Header({ locale, dictionary }: HeaderProps) {
   const homePath = getLocalePath(locale);
 
   const navLinks = [
-    { href: `${homePath}#services`, label: dictionary.nav.services },
+    { href: getLocalePath(locale, "/services"), label: dictionary.nav.services },
     { href: `${homePath}#projects`, label: dictionary.nav.projects },
     { href: "#", label: dictionary.nav.blog },
     { href: `${homePath}#contact`, label: dictionary.nav.contact },

@@ -25,7 +25,7 @@ export default function Footer({ dictionary, locale = "uk" }: FooterProps) {
                 />
               </div>
               <nav className="footer-nav">
-                <a href={`${homePath}#services`}>{nav.services}</a>
+                <a href={getLocalePath(locale, "/services")}>{nav.services}</a>
                 <a href={`${homePath}#projects`}>{nav.projects}</a>
                 <a href="#">{nav.blog}</a>
                 <a href={`${homePath}#contact`}>{nav.contact}</a>

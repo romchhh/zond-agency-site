@@ -38,7 +38,7 @@ export default function NotFoundView({ locale, dictionary }: NotFoundViewProps) 
                 </Link>
                 <Link
                   className="not-found-btn not-found-btn--ghost"
-                  href={`${homePath}#services`}
+                  href={getLocalePath(locale, "/services")}
                 >
                   {notFound.ourServices}
                 </Link>

@@ -52,8 +52,15 @@ export function createServiceMetadata(
   slug: string,
   meta: { title: string; description: string },
 ): Metadata {
+  return createPathMetadata(locale, `/services/${slug}`, meta);
+}
+
+export function createPathMetadata(
+  locale: Locale,
+  pathname: string,
+  meta: { title: string; description: string },
+): Metadata {
   const siteUrl = getSiteUrl();
-  const pathname = `/services/${slug}`;
   const pageUrl = getLocalizedUrl(siteUrl, locale, pathname);
   const { ogLocale } = localeMeta[locale];
 
