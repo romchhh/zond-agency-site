@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { localeMeta, locales, type Locale } from "@/i18n/config";
 import { getLocalePath } from "@/i18n/routing";
@@ -20,6 +21,7 @@ export default function LanguageSwitcher({
 }: LanguageSwitcherProps) {
   const [open, setOpen] = useState(false);
   const [hash, setHash] = useState("");
+  const pathname = usePathname() || "/";
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -96,7 +98,7 @@ export default function LanguageSwitcher({
         {locales.map((item) => (
           <Link
             key={item}
-            href={`${getLocalePath(item)}${hash}`}
+            href={`${getLocalePath(item, pathname)}${hash}`}
             role="option"
             aria-selected={locale === item}
             className={locale === item ? "is-active" : undefined}

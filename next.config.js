@@ -23,7 +23,11 @@ const nextConfig = {
         headers: [{ key: "Cache-Control", value: oneYearImmutable }],
       },
       {
-        source: "/services/:path*",
+        source: "/services/:path*.:ext(jpg|jpeg|png|webp|gif|avif)",
+        headers: [{ key: "Cache-Control", value: oneYearImmutable }],
+      },
+      {
+        source: "/branding/:path*",
         headers: [{ key: "Cache-Control", value: oneYearImmutable }],
       },
       {

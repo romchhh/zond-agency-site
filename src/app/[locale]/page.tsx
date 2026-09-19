@@ -26,7 +26,7 @@ export default async function HomePage({
       <Header locale={locale} dictionary={dictionary} />
       <main>
         <div className="hero-stage">
-          <Hero dictionary={dictionary} />
+          <Hero locale={locale} dictionary={dictionary} />
           <History dictionary={dictionary} />
         </div>
         <Projects dictionary={dictionary} projects={projects} />

@@ -1,13 +1,14 @@
+import CtaPanel from "@/components/CtaPanel";
 import MediaImage from "@/components/MediaImage";
 import type { Dictionary } from "@/i18n/dictionary";
-import { imageSizes, media } from "@/lib/media";
+import { imageSizes } from "@/lib/media";
 
 type TeamAndCtaProps = {
   dictionary: Dictionary;
 };
 
 export default function TeamAndCta({ dictionary }: TeamAndCtaProps) {
-  const { team, cta, a11y } = dictionary;
+  const { team, a11y } = dictionary;
 
   return (
     <section className="section" id="team">
@@ -45,27 +46,7 @@ export default function TeamAndCta({ dictionary }: TeamAndCtaProps) {
           ))}
         </div>
 
-        <section className="cta-panel" id="contact">
-          <MediaImage
-            className="cta-bg"
-            src={media.ctaBg}
-            alt=""
-            sizes={imageSizes.cta}
-          />
-          <div className="cta-overlay" aria-hidden="true" />
-          <div className="cta-content">
-            <div className="cta-text">
-              <h3>{cta.title}</h3>
-              <p>{cta.description}</p>
-            </div>
-            <a className="cta-btn" href="mailto:hello@zond.agency">
-              <span>{cta.button}</span>
-              <span className="cta-btn-icon" aria-hidden="true">
-                ↗
-              </span>
-            </a>
-          </div>
-        </section>
+        <CtaPanel dictionary={dictionary} />
       </div>
     </section>
   );

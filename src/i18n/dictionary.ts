@@ -7,6 +7,7 @@ export type ProjectItem = {
   title: string;
   description: string;
   image: string;
+  href?: string;
 };
 
 export type ServiceItem = {

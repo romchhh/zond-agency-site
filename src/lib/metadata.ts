@@ -46,3 +46,45 @@ export function createPageMetadata(
     },
   };
 }
+
+export function createServiceMetadata(
+  locale: Locale,
+  slug: string,
+  meta: { title: string; description: string },
+): Metadata {
+  const siteUrl = getSiteUrl();
+  const pathname = `/services/${slug}`;
+  const pageUrl = getLocalizedUrl(siteUrl, locale, pathname);
+  const { ogLocale } = localeMeta[locale];
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: {
+      canonical: pageUrl,
+      languages: getAlternateLanguages(siteUrl, pathname),
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      title: meta.title,
+      description: meta.description,
+      images: [
+        {
+          url: media.ogImage,
+          width: 1200,
+          height: 630,
+          alt: meta.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: [media.ogImage],
+    },
+  };
+}

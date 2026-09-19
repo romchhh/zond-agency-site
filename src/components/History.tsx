@@ -1,4 +1,4 @@
-import StatCounter from "@/components/StatCounter";
+import StatsRow from "@/components/StatsRow";
 import type { Dictionary } from "@/i18n/dictionary";
 
 type HistoryProps = {
@@ -16,21 +16,7 @@ export default function History({ dictionary }: HistoryProps) {
             <h2 className="section-title">{mission.title}</h2>
             <p className="history-copy">{mission.description}</p>
           </div>
-          <div className="history-stats">
-            {mission.stats.map((stat) => (
-              <div className="stat" key={stat.value}>
-                <StatCounter value={stat.value} />
-                <span>
-                  {stat.label.split("\n").map((line, i) => (
-                    <span key={i}>
-                      {line}
-                      {i === 0 && <br />}
-                    </span>
-                  ))}
-                </span>
-              </div>
-            ))}
-          </div>
+          <StatsRow stats={mission.stats} />
         </div>
       </div>
     </section>

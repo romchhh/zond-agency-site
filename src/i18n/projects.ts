@@ -10,6 +10,15 @@ const projectImages = [
   "/assets/hero-art.jpg",
 ];
 
+const projectHrefs = [
+  "/projects/digital-residence",
+  "/projects/ahmad-tea",
+  "/projects/terminal-borivaje",
+  "/projects/altep",
+  "/projects/packaging",
+  undefined,
+];
+
 const projectCopy: Record<
   Locale,
   Array<Pick<ProjectItem, "title" | "description">>
@@ -44,5 +53,6 @@ export function getProjects(locale: Locale): ProjectItem[] {
   return projectCopy[locale].map((project, index) => ({
     ...project,
     image: projectImages[index],
+    href: projectHrefs[index],
   }));
 }

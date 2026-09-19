@@ -1,8 +1,7 @@
 import ClientsBlock from "@/components/ClientsBlock";
-import MediaImage from "@/components/MediaImage";
+import ProjectCard from "@/components/ProjectCard";
 import VisionBlock from "@/components/VisionBlock";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
-import { imageSizes } from "@/lib/media";
 
 type ProjectsProps = {
   dictionary: Dictionary;
@@ -23,20 +22,7 @@ export default function Projects({ dictionary, projects }: ProjectsProps) {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.title}>
-              <div className="project-copy">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-              <div className="project-img">
-                <MediaImage
-                  src={project.image}
-                  alt={project.title}
-                  sizes={imageSizes.project}
-                  unoptimized={project.image.endsWith(".gif")}
-                />
-              </div>
-            </article>
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
 

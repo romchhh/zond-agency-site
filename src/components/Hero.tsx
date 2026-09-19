@@ -1,12 +1,17 @@
 import LoopedVideo from "@/components/LoopedVideo";
 import type { Dictionary } from "@/i18n/dictionary";
+import type { Locale } from "@/i18n/config";
+import { getLocalePath } from "@/i18n/routing";
+import { heroServiceSlugs } from "@/i18n/services";
 import { media } from "@/lib/media";
+import Link from "next/link";
 
 type HeroProps = {
+  locale: Locale;
   dictionary: Dictionary;
 };
 
-export default function Hero({ dictionary }: HeroProps) {
+export default function Hero({ locale, dictionary }: HeroProps) {
   const { hero } = dictionary;
 
   return (
@@ -15,9 +20,21 @@ export default function Hero({ dictionary }: HeroProps) {
         <div className="hero-grid">
           <div className="hero-left">
             <ul className="hero-services">
-              {hero.services.map((service) => (
-                <li key={service}>{service}</li>
-              ))}
+              {hero.services.map((service, index) => {
+                const slug = heroServiceSlugs[index];
+
+                return (
+                  <li key={service}>
+                    {slug ? (
+                      <Link href={getLocalePath(locale, `/services/${slug}`)}>
+                        {service}
+                      </Link>
+                    ) : (
+                      service
+                    )}
+                  </li>
+                );
+              })}
             </ul>
             <div className="hero-bottom">
               <div className="hero-more">

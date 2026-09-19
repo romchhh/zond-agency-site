@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
-import { getLocalizedUrl } from "@/i18n/routing";
+import { getAlternateLanguages, getLocalizedUrl } from "@/i18n/routing";
+import { serviceSlugs } from "@/i18n/services";
 import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,14 +14,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 1,
     alternates: {
-      languages: {
-        uk: siteUrl,
-        en: `${siteUrl}/en`,
-        ru: `${siteUrl}/ru`,
-        "x-default": siteUrl,
-      },
+      languages: getAlternateLanguages(siteUrl),
     },
   }));
+
+  const homeAliases = locales.map((locale) => ({
+    url: getLocalizedUrl(siteUrl, locale, "/home", { keepHomeAlias: true }),
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 1,
+    alternates: {
+      languages: getAlternateLanguages(siteUrl, "/home", { keepHomeAlias: true }),
+    },
+  }));
+
+  const serviceEntries = locales.flatMap((locale) =>
+    serviceSlugs.map((slug) => {
+      const pathname = `/services/${slug}`;
+
+      return {
+        url: getLocalizedUrl(siteUrl, locale, pathname),
+        lastModified,
+        changeFrequency: "monthly" as const,
+        priority: slug === "branding" ? 0.9 : 0.7,
+        alternates: {
+          languages: getAlternateLanguages(siteUrl, pathname),
+        },
+      };
+    }),
+  );
 
   const sections = ["services", "projects", "team", "contact"] as const;
 
@@ -35,5 +57,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   });
 
-  return [...localeEntries, ...hashEntries];
+  return [...localeEntries, ...homeAliases, ...serviceEntries, ...hashEntries];
 }
