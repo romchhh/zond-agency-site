@@ -29,7 +29,7 @@ export default async function HomePage({
           <Hero locale={locale} dictionary={dictionary} />
           <History dictionary={dictionary} />
         </div>
-        <Projects dictionary={dictionary} projects={projects} />
+        <Projects locale={locale} dictionary={dictionary} projects={projects} />
         <Services locale={locale} dictionary={dictionary} />
         <TeamAndCta dictionary={dictionary} />
       </main>

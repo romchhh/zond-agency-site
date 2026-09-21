@@ -8,3 +8,5 @@ out
 .vercel
 .turbo
 *.tsbuildinfo
+:memory:.ses
+*.ses

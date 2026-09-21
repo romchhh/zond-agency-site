@@ -1,3 +1,4 @@
+import ConsultationCta from "@/components/ConsultationCta";
 import CtaPanel from "@/components/CtaPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -27,7 +28,7 @@ export default function BrandingPage({
       <main className="sp">
         <div className="sp-stage">
         <section className="sp-hero">
-          <div className="wrap">
+          <div className="wrap wrap--flush">
             <div className="sp-hero-grid">
               <div className="sp-hero-copy">
                 <p className="sp-eyebrow">{copy.eyebrow}</p>
@@ -40,12 +41,14 @@ export default function BrandingPage({
                   ))}
                   <span className="sp-h1-accent">{copy.titleAccent}</span>
                 </h1>
-                <p className="sp-lead">{copy.lead}</p>
-                <p className="sp-sub">{copy.sub}</p>
-                <a className="sp-btn" href="#contact">
+                <div className="sp-hero-text">
+                  <p className="sp-lead">{copy.lead}</p>
+                  <p className="sp-sub">{copy.sub}</p>
+                </div>
+                <ConsultationCta className="sp-btn">
                   <span>{copy.cta}</span>
                   <span className="sp-btn-icon" aria-hidden="true">↗</span>
-                </a>
+                </ConsultationCta>
               </div>
               <figure className="sp-hero-photo">
                 <MediaImage

@@ -1,14 +1,18 @@
 import ClientsBlock from "@/components/ClientsBlock";
 import ProjectCard from "@/components/ProjectCard";
 import VisionBlock from "@/components/VisionBlock";
+import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
+import { getLocalePath } from "@/i18n/routing";
+import Link from "next/link";
 
 type ProjectsProps = {
+  locale: Locale;
   dictionary: Dictionary;
   projects: ProjectItem[];
 };
 
-export default function Projects({ dictionary, projects }: ProjectsProps) {
+export default function Projects({ locale, dictionary, projects }: ProjectsProps) {
   const { projects: copy } = dictionary;
 
   return (
@@ -30,12 +34,12 @@ export default function Projects({ dictionary, projects }: ProjectsProps) {
 
         <ClientsBlock dictionary={dictionary} />
 
-        <a className="projects-all-btn" href="#">
+        <Link className="projects-all-btn" href={getLocalePath(locale, "/cases")}>
           <span>{copy.allProjects}</span>
           <span className="projects-all-btn-icon" aria-hidden="true">
             ↗
           </span>
-        </a>
+        </Link>
       </div>
     </section>
   );

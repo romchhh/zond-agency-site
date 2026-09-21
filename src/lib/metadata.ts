@@ -59,10 +59,12 @@ export function createPathMetadata(
   locale: Locale,
   pathname: string,
   meta: { title: string; description: string },
+  image?: string,
 ): Metadata {
   const siteUrl = getSiteUrl();
   const pageUrl = getLocalizedUrl(siteUrl, locale, pathname);
   const { ogLocale } = localeMeta[locale];
+  const ogImage = image || media.ogImage;
 
   return {
     title: meta.title,
@@ -72,7 +74,7 @@ export function createPathMetadata(
       languages: getAlternateLanguages(siteUrl, pathname),
     },
     openGraph: {
-      type: "website",
+      type: "article",
       locale: ogLocale,
       url: pageUrl,
       siteName: siteConfig.name,
@@ -80,7 +82,7 @@ export function createPathMetadata(
       description: meta.description,
       images: [
         {
-          url: media.ogImage,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: meta.title,
@@ -91,7 +93,7 @@ export function createPathMetadata(
       card: "summary_large_image",
       title: meta.title,
       description: meta.description,
-      images: [media.ogImage],
+      images: [ogImage],
     },
   };
 }

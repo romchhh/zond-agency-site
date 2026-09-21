@@ -8,7 +8,6 @@ type FooterProps = {
 };
 
 export default function Footer({ dictionary, locale = "uk" }: FooterProps) {
-  const homePath = getLocalePath(locale);
   const { nav, footer } = dictionary;
 
   return (
@@ -26,9 +25,9 @@ export default function Footer({ dictionary, locale = "uk" }: FooterProps) {
               </div>
               <nav className="footer-nav">
                 <a href={getLocalePath(locale, "/services")}>{nav.services}</a>
-                <a href={`${homePath}#projects`}>{nav.projects}</a>
-                <a href="#">{nav.blog}</a>
-                <a href={`${homePath}#contact`}>{nav.contact}</a>
+                <a href={getLocalePath(locale, "/cases")}>{nav.projects}</a>
+                <a href={getLocalePath(locale, "/blog")}>{nav.blog}</a>
+                <a href={getLocalePath(locale, "/contact")}>{nav.contact}</a>
               </nav>
             </div>
 

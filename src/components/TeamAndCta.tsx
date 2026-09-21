@@ -7,6 +7,26 @@ type TeamAndCtaProps = {
   dictionary: Dictionary;
 };
 
+function MailIcon() {
+  return (
+    <svg
+      className="team-join-icon"
+      viewBox="0 0 24 24"
+      width="22"
+      height="22"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 7 9-7" />
+    </svg>
+  );
+}
+
 export default function TeamAndCta({ dictionary }: TeamAndCtaProps) {
   const { team, a11y } = dictionary;
 
@@ -44,6 +64,20 @@ export default function TeamAndCta({ dictionary }: TeamAndCtaProps) {
               </div>
             </article>
           ))}
+
+          <a
+            className="team-card team-join-card"
+            href="mailto:ask@zond.agency?subject=ZOND%20Team"
+            aria-label={`${team.joinTitle}. ${team.joinHint}`}
+          >
+            <div className="team-join-panel">
+              <span className="team-join-title">{team.joinTitle}</span>
+              <span className="team-join-mail">
+                <MailIcon />
+                <span>ask@zond.agency</span>
+              </span>
+            </div>
+          </a>
         </div>
 
         <CtaPanel dictionary={dictionary} />

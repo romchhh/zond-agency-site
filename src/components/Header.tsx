@@ -1,5 +1,6 @@
 "use client";
 
+import ConsultationCta from "@/components/ConsultationCta";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
@@ -20,9 +21,9 @@ export default function Header({ locale, dictionary }: HeaderProps) {
 
   const navLinks = [
     { href: getLocalePath(locale, "/services"), label: dictionary.nav.services },
-    { href: `${homePath}#projects`, label: dictionary.nav.projects },
-    { href: "#", label: dictionary.nav.blog },
-    { href: `${homePath}#contact`, label: dictionary.nav.contact },
+    { href: getLocalePath(locale, "/cases"), label: dictionary.nav.projects },
+    { href: getLocalePath(locale, "/blog"), label: dictionary.nav.blog },
+    { href: getLocalePath(locale, "/contact"), label: dictionary.nav.contact },
   ];
 
   useEffect(() => {
@@ -67,16 +68,12 @@ export default function Header({ locale, dictionary }: HeaderProps) {
             ))}
           </nav>
         </div>
-        <Link
-          className="mobile-menu-cta"
-          href={`${homePath}#contact`}
-          onClick={closeMenu}
-        >
+        <ConsultationCta className="mobile-menu-cta" onClick={closeMenu}>
           <span>{dictionary.a11y.consultation}</span>
           <span className="mobile-menu-cta-icon" aria-hidden="true">
             ↗
           </span>
-        </Link>
+        </ConsultationCta>
       </div>
     </div>
   );
@@ -106,16 +103,15 @@ export default function Header({ locale, dictionary }: HeaderProps) {
               label={dictionary.a11y.language}
               languagesLabel={dictionary.a11y.languages}
             />
-            <Link
+            <ConsultationCta
               className="cta-top"
-              href={`${homePath}#contact`}
               aria-label={dictionary.a11y.consultation}
             >
               <span className="cta-top-text">{dictionary.a11y.consultation}</span>
               <span className="cta-top-icon" aria-hidden="true">
                 ↗
               </span>
-            </Link>
+            </ConsultationCta>
             <button
               type="button"
               className={`menu-toggle${menuOpen ? " is-open" : ""}`}

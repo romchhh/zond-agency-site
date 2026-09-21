@@ -20,7 +20,7 @@ export default function JsonLd({ locale, dictionary }: JsonLdProps) {
     url: siteUrl,
     email: siteConfig.email,
     telephone: siteConfig.phone,
-    sameAs: [siteConfig.instagram],
+    sameAs: [siteConfig.instagram, siteConfig.telegramBot],
     description: dictionary.meta.description,
     logo: `${siteUrl}/assets/651683d433d9510e36720e72_logo-black.svg`,
   };

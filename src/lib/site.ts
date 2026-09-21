@@ -9,6 +9,7 @@ export const siteConfig = {
   language: "uk",
   email: "hello@zond.agency",
   phone: "+380961234567",
+  telegramBot: "https://t.me/ZOND_Agency_Bot",
   instagram: "https://www.instagram.com/zond.agency/",
   keywords: [
     "брендинг",

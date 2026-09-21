@@ -78,11 +78,33 @@ export type Dictionary = {
   team: {
     title: string;
     items: TeamItem[];
+    joinTitle: string;
+    joinHint: string;
   };
   cta: {
     title: string;
     description: string;
     button: string;
+  };
+  consultationForm: {
+    title: string;
+    description: string;
+    nameLabel: string;
+    namePlaceholder: string;
+    contactLabel: string;
+    contactPlaceholder: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    submit: string;
+    close: string;
+    successTitle: string;
+    successDescription: string;
+    telegramCta: string;
+    errors: {
+      name: string;
+      contact: string;
+      email: string;
+    };
   };
   footer: {
     rights: string;
@@ -93,5 +115,34 @@ export type Dictionary = {
     backHome: string;
     viewCases: string;
     ourServices: string;
+  };
+  blog: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    readMore: string;
+    backToBlog: string;
+    home: string;
+    articlesCount: string;
+    relatedPosts: string;
+  };
+  cases: {
+    title: string;
+    lead: string;
+    backToCases: string;
+    relatedCases: string;
+  };
+  contactPage: {
+    title: string;
+    lead: string;
+    channelsTitle: string;
+    channelsLead: string;
+    emailLabel: string;
+    phoneLabel: string;
+    telegramLabel: string;
+    telegramValue: string;
+    telegramDescription: string;
+    instagramLabel: string;
+    instagramValue: string;
   };
 };

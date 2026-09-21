@@ -1,7 +1,9 @@
+"use client";
+
+import ConsultationCta from "@/components/ConsultationCta";
 import MediaImage from "@/components/MediaImage";
 import type { Dictionary } from "@/i18n/dictionary";
 import { imageSizes, media } from "@/lib/media";
-import { siteConfig } from "@/lib/site";
 
 type CtaPanelProps = {
   dictionary: Dictionary;
@@ -24,12 +26,12 @@ export default function CtaPanel({ dictionary }: CtaPanelProps) {
           <h3>{cta.title}</h3>
           <p>{cta.description}</p>
         </div>
-        <a className="cta-btn" href={`mailto:${siteConfig.email}`}>
+        <ConsultationCta className="cta-btn">
           <span>{cta.button}</span>
           <span className="cta-btn-icon" aria-hidden="true">
             ↗
           </span>
-        </a>
+        </ConsultationCta>
       </div>
     </section>
   );

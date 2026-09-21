@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
 import { getAlternateLanguages, getLocalizedUrl } from "@/i18n/routing";
+import { getBlogSlugs } from "@/i18n/blog";
+import { getCaseSlugs } from "@/i18n/cases";
 import { serviceSlugs } from "@/i18n/services";
 import { getSiteUrl } from "@/lib/site";
 
@@ -54,6 +56,68 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
+  const blogIndexEntries = locales.map((locale) => ({
+    url: getLocalizedUrl(siteUrl, locale, "/blog"),
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+    alternates: {
+      languages: getAlternateLanguages(siteUrl, "/blog"),
+    },
+  }));
+
+  const blogEntries = locales.flatMap((locale) =>
+    getBlogSlugs(locale).map((slug) => {
+      const pathname = `/blog/${slug}`;
+
+      return {
+        url: getLocalizedUrl(siteUrl, locale, pathname),
+        lastModified,
+        changeFrequency: "monthly" as const,
+        priority: 0.75,
+        alternates: {
+          languages: getAlternateLanguages(siteUrl, pathname),
+        },
+      };
+    }),
+  );
+
+  const contactEntries = locales.map((locale) => ({
+    url: getLocalizedUrl(siteUrl, locale, "/contact"),
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+    alternates: {
+      languages: getAlternateLanguages(siteUrl, "/contact"),
+    },
+  }));
+
+  const casesIndexEntries = locales.map((locale) => ({
+    url: getLocalizedUrl(siteUrl, locale, "/cases"),
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+    alternates: {
+      languages: getAlternateLanguages(siteUrl, "/cases"),
+    },
+  }));
+
+  const caseEntries = locales.flatMap((locale) =>
+    getCaseSlugs(locale).map((slug) => {
+      const pathname = `/cases/${slug}`;
+
+      return {
+        url: getLocalizedUrl(siteUrl, locale, pathname),
+        lastModified,
+        changeFrequency: "monthly" as const,
+        priority: 0.85,
+        alternates: {
+          languages: getAlternateLanguages(siteUrl, pathname),
+        },
+      };
+    }),
+  );
+
   const sections = ["projects", "team", "contact"] as const;
 
   const hashEntries = locales.flatMap((locale) => {
@@ -72,6 +136,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...homeAliases,
     ...serviceIndexEntries,
     ...serviceEntries,
+    ...blogIndexEntries,
+    ...blogEntries,
+    ...contactEntries,
+    ...casesIndexEntries,
+    ...caseEntries,
     ...hashEntries,
   ];
 }

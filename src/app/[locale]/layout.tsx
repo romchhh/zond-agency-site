@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import ConsultationProvider from "@/components/ConsultationProvider";
 import JsonLd from "@/components/JsonLd";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -65,9 +66,9 @@ export default async function LocaleLayout({
   const dictionary = await getDictionary(locale);
 
   return (
-    <>
+    <ConsultationProvider dictionary={dictionary}>
       <JsonLd locale={locale} dictionary={dictionary} />
       {children}
-    </>
+    </ConsultationProvider>
   );
 }
