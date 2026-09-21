@@ -2465,11 +2465,21 @@ a.service-card {
 
 .sp-hero-photo {
   position: relative;
+  display: block;
+  width: 100%;
   min-height: 480px;
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: #ddd;
+}
+
+.sp-hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sp-hero-photo figcaption {
@@ -2901,6 +2911,11 @@ a.service-card {
     grid-template-columns: 1fr 1fr;
   }
 
+  .sp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
   .sp-gallery {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -2910,7 +2925,8 @@ a.service-card {
   }
 
   .sp-hero-photo {
-    min-height: 420px;
+    min-height: 360px;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -2955,8 +2971,18 @@ a.service-card {
   }
 
   .sp-hero-photo {
-    min-height: 0;
+    display: block;
+    width: 100%;
+    min-height: 240px;
     aspect-ratio: 4 / 3;
+  }
+
+  .sp-hero-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .sp-h1 {
