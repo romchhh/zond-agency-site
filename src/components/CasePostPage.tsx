@@ -8,12 +8,14 @@ import MediaImage from "@/components/MediaImage";
 import type { CaseItem } from "@/i18n/cases";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
-import { getLocalePath } from "@/i18n/routing";
+import { getCaseDetailPath, getCaseIndexPath } from "@/i18n/routing";
 import {
   buildCaseVisualBlocks,
   collectCaseVisualImages,
   getCaseVisualDefaults,
+  getLiveCaseUrl,
 } from "@/lib/case-visual";
+import { caseThemeStyle, resolveCaseTheme } from "@/lib/case-theme";
 import {
   caseMediaSrc,
   ensureCaseBodyMedia,
@@ -40,7 +42,7 @@ export default function CasePostPage({
   relatedCases,
 }: CasePostPageProps) {
   const copy = dictionary.cases;
-  const casesPath = getLocalePath(locale, "/cases");
+  const casesPath = getCaseIndexPath(locale);
   const preparedBody = ensureCaseBodyMedia(caseItem.body, caseItem.media ?? []);
   const { hero, body } = extractCaseHeroMedia(preparedBody);
   const blocks = buildCaseVisualBlocks(caseItem, body, locale, hero?.src ?? null);
@@ -52,11 +54,16 @@ export default function CasePostPage({
   );
   const galleryImages = collectCaseVisualImages(hero?.src ?? null, blocks);
   const heroCaption = caseItem.slug === "home-hub" ? "Home Hub — концепція фасаду шоуруму" : caseItem.title;
+  const theme = resolveCaseTheme(caseItem);
 
   return (
     <>
       <Header locale={locale} dictionary={dictionary} />
-      <main className="sp case-visual-page visual balanced">
+      <main
+        className="sp case-visual-page visual balanced"
+        data-case={caseItem.slug}
+        style={caseThemeStyle(theme)}
+      >
         <ArticleGalleryProvider images={galleryImages}>
           <div className="wrap container">
             <section className="hero">
@@ -89,7 +96,14 @@ export default function CasePostPage({
               ) : null}
             </section>
 
-            <CaseVisualBody blocks={blocks} imageOffset={hero ? 1 : 0} />
+            <CaseVisualBody
+              blocks={blocks}
+              imageOffset={hero ? 1 : 0}
+              caseTitle={caseItem.title}
+              caseSlug={caseItem.slug}
+              openCaseLabel={defaults.openCase}
+              openCaseHref={getLiveCaseUrl(caseItem.slug, locale)}
+            />
 
             <div className="case-visual-back">
               <Link href={casesPath} className="sp-btn">
@@ -110,7 +124,7 @@ export default function CasePostPage({
                   {relatedCases.slice(0, 2).map((related, index) => (
                     <Link
                       key={related.slug}
-                      href={getLocalePath(locale, `/cases/${related.slug}`)}
+                      href={getCaseDetailPath(locale, related.slug)}
                       className="project-card"
                     >
                       <div className="project-direction">

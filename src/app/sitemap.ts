@@ -1,9 +1,19 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
-import { getAlternateLanguages, getLocalizedUrl } from "@/i18n/routing";
 import { getBlogSlugs } from "@/i18n/blog";
 import { getCaseSlugs } from "@/i18n/cases";
 import { serviceSlugs } from "@/i18n/services";
+import {
+  getAlternateLanguages,
+  getBlogDetailPath,
+  getBlogIndexPath,
+  getCaseDetailPath,
+  getCaseIndexPath,
+  getLocalizedUrl,
+  getPolicyPath,
+  getServiceDetailPath,
+  getServiceIndexPath,
+} from "@/i18n/routing";
 import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -30,19 +40,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  const serviceIndexEntries = locales.map((locale) => ({
-    url: getLocalizedUrl(siteUrl, locale, "/services"),
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.95,
-    alternates: {
-      languages: getAlternateLanguages(siteUrl, "/services"),
-    },
-  }));
+  const serviceIndexEntries = locales.map((locale) => {
+    const pathname = getServiceIndexPath(locale);
+
+    return {
+      url: getLocalizedUrl(siteUrl, locale, pathname),
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+      alternates: {
+        languages: getAlternateLanguages(siteUrl, pathname),
+      },
+    };
+  });
 
   const serviceEntries = locales.flatMap((locale) =>
     serviceSlugs.map((slug) => {
-      const pathname = `/services/${slug}`;
+      const pathname = getServiceDetailPath(locale, slug);
 
       return {
         url: getLocalizedUrl(siteUrl, locale, pathname),
@@ -56,19 +70,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const blogIndexEntries = locales.map((locale) => ({
-    url: getLocalizedUrl(siteUrl, locale, "/blog"),
-    lastModified,
-    changeFrequency: "weekly" as const,
-    priority: 0.85,
-    alternates: {
-      languages: getAlternateLanguages(siteUrl, "/blog"),
-    },
-  }));
+  const blogIndexEntries = locales.map((locale) => {
+    const pathname = getBlogIndexPath(locale);
+
+    return {
+      url: getLocalizedUrl(siteUrl, locale, pathname),
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+      alternates: {
+        languages: getAlternateLanguages(siteUrl, pathname),
+      },
+    };
+  });
 
   const blogEntries = locales.flatMap((locale) =>
     getBlogSlugs(locale).map((slug) => {
-      const pathname = `/blog/${slug}`;
+      const pathname = getBlogDetailPath(locale, slug);
 
       return {
         url: getLocalizedUrl(siteUrl, locale, pathname),
@@ -92,19 +110,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  const casesIndexEntries = locales.map((locale) => ({
-    url: getLocalizedUrl(siteUrl, locale, "/cases"),
-    lastModified,
-    changeFrequency: "weekly" as const,
-    priority: 0.9,
-    alternates: {
-      languages: getAlternateLanguages(siteUrl, "/cases"),
-    },
-  }));
+  const casesIndexEntries = locales.map((locale) => {
+    const pathname = getCaseIndexPath(locale);
+
+    return {
+      url: getLocalizedUrl(siteUrl, locale, pathname),
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+      alternates: {
+        languages: getAlternateLanguages(siteUrl, pathname),
+      },
+    };
+  });
 
   const caseEntries = locales.flatMap((locale) =>
     getCaseSlugs(locale).map((slug) => {
-      const pathname = `/cases/${slug}`;
+      const pathname = getCaseDetailPath(locale, slug);
 
       return {
         url: getLocalizedUrl(siteUrl, locale, pathname),
@@ -117,6 +139,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       };
     }),
   );
+
+  const policyEntries = (["uk", "ru"] as const).map((locale) => {
+    const pathname = getPolicyPath(locale);
+
+    return {
+      url: getLocalizedUrl(siteUrl, locale, pathname),
+      lastModified,
+      changeFrequency: "yearly" as const,
+      priority: 0.4,
+      alternates: {
+        languages: getAlternateLanguages(siteUrl, pathname),
+      },
+    };
+  });
 
   const sections = ["projects", "team", "contact"] as const;
 
@@ -141,6 +177,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...contactEntries,
     ...casesIndexEntries,
     ...caseEntries,
+    ...policyEntries,
     ...hashEntries,
   ];
 }

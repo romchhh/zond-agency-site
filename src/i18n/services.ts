@@ -104,36 +104,44 @@ export const serviceMeta: Record<
       description: "Комплексний маркетинг для бренду від агенції ZOND.",
     },
     graphics: {
-      title: "Графічний дизайн — ZOND",
-      description: "Графічний дизайн для брендів від агенції ZOND.",
+      title: "Графічний дизайн для бізнесу — поліграфія та реклама | ZOND",
+      description:
+        "Графічний дизайн: поліграфія, зовнішня реклама, презентації, технічний дизайн і підготовка до друку. Робимо бренд впізнаваним на кожному носії. Студія ZOND.",
     },
     smm: {
-      title: "SMM — ZOND",
-      description: "SMM і контент для брендів від агенції ZOND.",
+      title: "SMM-просування — соціальні мережі для бізнесу | ZOND",
+      description:
+        "SMM-просування: стратегія, контент, Tone of Voice, управління репутацією та візуальний стиль у Facebook, Instagram, Telegram і YouTube. Студія ZOND.",
     },
     illustration: {
-      title: "Ілюстрація — ZOND",
-      description: "Ілюстрація для брендів від агенції ZOND.",
+      title:
+        "Створити комерційну ілюстрацію на замовлення - Ціна ілюстратора | ZOND",
+      description:
+        "Стокові картинки забувають одразу. Комерційна ілюстрація на замовлення. Персонажі, комікси й графіка для упаковки, сайту й реклами. Студія ZOND.",
     },
     packaging: {
-      title: "Дизайн пакування — ZOND",
-      description: "Дизайн пакування від агенції ZOND.",
+      title: "Дизайн пакування та етикетки — ZOND",
+      description:
+        "Дизайн упаковки та етикетки: концепція, 3D-мокапи, адаптації для SKU та макети, готові до друку. Створюємо упаковки, які привертають увагу й продають на полиці.",
     },
     "influence-marketing": {
-      title: "Інфлюенс маркетинг — ZOND",
-      description: "Інфлюенс маркетинг від агенції ZOND.",
+      title: "Інфлюенс маркетинг — реклама у блогерів в Україні | ZOND",
+      description:
+        "Інфлюенс маркетинг: підбір блогерів, кампанії в Instagram, TikTok, YouTube і Telegram, аналітика результатів. Реклама у блогерів під ваш бюджет. Студія ZOND.",
     },
     identity: {
       title: "Айдентика — ZOND",
       description: "Розробка айдентики від агенції ZOND.",
     },
     logo: {
-      title: "Дизайн логотипу — ZOND",
-      description: "Розробка логотипу від агенції ZOND.",
+      title: "Дизайн логотипів — розробка логотипа для компанії — ZOND",
+      description:
+        "Розробка логотипа для компанії: авторський дизайн, палітра кольорів, logobook і пакет файлів. Створюємо логотипи, які легко впізнати й складно забути.",
     },
     brandbook: {
-      title: "Брендбук — ZOND",
-      description: "Розробка брендбуку від агенції ZOND.",
+      title: "Брендбук — розробка брендбуку — ZOND",
+      description:
+        "Розробка брендбуку: правила логотипа, кольорів, шрифтів, графіки та носіїв. Створюємо брендбуки, які зберігають цілісність бренду в кожній точці контакту.",
     },
     rebranding: {
       title: "Ребрендинг — ZOND",
@@ -151,36 +159,43 @@ export const serviceMeta: Record<
       description: "Full-cycle marketing for brands by ZOND Agency.",
     },
     graphics: {
-      title: "Graphic design — ZOND",
-      description: "Graphic design for brands by ZOND Agency.",
+      title: "Graphic design for business — print and advertising | ZOND",
+      description:
+        "Graphic design: print, outdoor advertising, presentations, technical design, and print preparation. Make the brand recognizable on every medium. ZOND studio.",
     },
     smm: {
-      title: "SMM — ZOND",
-      description: "SMM and content for brands by ZOND Agency.",
+      title: "SMM promotion — social media for business | ZOND",
+      description:
+        "SMM promotion: strategy, content, Tone of Voice, reputation management, and visual style on Facebook, Instagram, Telegram, and YouTube. ZOND studio.",
     },
     illustration: {
-      title: "Illustration — ZOND",
-      description: "Illustration for brands by ZOND Agency.",
+      title: "Custom commercial illustration - Illustrator price | ZOND",
+      description:
+        "Stock images are forgotten instantly. Custom commercial illustration: characters, comics, and graphics for packaging, websites, and ads. ZOND studio.",
     },
     packaging: {
-      title: "Packaging design — ZOND",
-      description: "Packaging design by ZOND Agency.",
+      title: "Packaging and label design — ZOND",
+      description:
+        "Packaging and label design: concept, 3D mockups, SKU adaptations, and print-ready layouts. Packaging that attracts attention and sells on the shelf.",
     },
     "influence-marketing": {
-      title: "Influence marketing — ZOND",
-      description: "Influence marketing by ZOND Agency.",
+      title: "Influence marketing — blogger advertising in Ukraine | ZOND",
+      description:
+        "Influence marketing: influencer selection, campaigns on Instagram, TikTok, YouTube, and Telegram, result analytics. Blogger ads for your budget. ZOND studio.",
     },
     identity: {
       title: "Brand identity — ZOND",
       description: "Brand identity design by ZOND Agency.",
     },
     logo: {
-      title: "Logo design — ZOND",
-      description: "Logo design by ZOND Agency.",
+      title: "Logo design — business logo development — ZOND",
+      description:
+        "Business logo development: original design, color palette, logobook, and file package. Logos that are easy to recognize and hard to forget.",
     },
     brandbook: {
-      title: "Brand book — ZOND",
-      description: "Brand book development by ZOND Agency.",
+      title: "Brand book — brand book development — ZOND",
+      description:
+        "Brand book development: logo, color, typography, graphics, and media rules. Brand books that preserve consistency at every touchpoint.",
     },
     rebranding: {
       title: "Rebranding — ZOND",
@@ -198,36 +213,43 @@ export const serviceMeta: Record<
       description: "Комплексный маркетинг для бренда от агентства ZOND.",
     },
     graphics: {
-      title: "Графический дизайн — ZOND",
-      description: "Графический дизайн для брендов от агентства ZOND.",
+      title: "Графический дизайн для бизнеса — полиграфия и реклама | ZOND",
+      description:
+        "Графический дизайн: полиграфия, наружная реклама, презентации, технический дизайн и подготовка к печати. Делаем бренд узнаваемым на каждом носителе. Студия ZOND.",
     },
     smm: {
-      title: "SMM — ZOND",
-      description: "SMM и контент для брендов от агентства ZOND.",
+      title: "SMM-продвижение — социальные сети для бизнеса | ZOND",
+      description:
+        "SMM-продвижение: стратегия, контент, Tone of Voice, управление репутацией и визуальный стиль в Facebook, Instagram, Telegram и YouTube. Студия ZOND.",
     },
     illustration: {
-      title: "Иллюстрация — ZOND",
-      description: "Иллюстрация для брендов от агентства ZOND.",
+      title: "Создать коммерческую иллюстрацию на заказ - Цена иллюстратора | ZOND",
+      description:
+        "Стоковые картинки забывают сразу. Коммерческая иллюстрация на заказ. Персонажи, комиксы и графика для упаковки, сайта и рекламы. Студия ZOND.",
     },
     packaging: {
-      title: "Дизайн упаковки — ZOND",
-      description: "Дизайн упаковки от агентства ZOND.",
+      title: "Дизайн упаковки и этикетки — ZOND",
+      description:
+        "Дизайн упаковки и этикетки: концепция, 3D-мокапы, адаптации для SKU и макеты, готовые к печати. Создаём упаковки, которые привлекают внимание и продают на полке.",
     },
     "influence-marketing": {
-      title: "Инфлюенс маркетинг — ZOND",
-      description: "Инфлюенс маркетинг от агентства ZOND.",
+      title: "Инфлюенс маркетинг — реклама у блогеров в Украине | ZOND",
+      description:
+        "Инфлюенс маркетинг: подбор блогеров, кампании в Instagram, TikTok, YouTube и Telegram, аналитика результатов. Реклама у блогеров под ваш бюджет. Студия ZOND.",
     },
     identity: {
       title: "Айдентика — ZOND",
       description: "Разработка айдентики от агентства ZOND.",
     },
     logo: {
-      title: "Дизайн логотипа — ZOND",
-      description: "Разработка логотипа от агентства ZOND.",
+      title: "Дизайн логотипов — разработка логотипа для компании — ZOND",
+      description:
+        "Разработка логотипа для компании: авторский дизайн, палитра цветов, logobook и пакет файлов. Создаём логотипы, которые легко узнать и сложно забыть.",
     },
     brandbook: {
-      title: "Брендбук — ZOND",
-      description: "Разработка брендбука от агентства ZOND.",
+      title: "Брендбук — разработка брендбука — ZOND",
+      description:
+        "Разработка брендбука: правила логотипа, цветов, шрифтов, графики и носителей. Создаём брендбуки, сохраняющие целостность бренда в каждой точке контакта.",
     },
     rebranding: {
       title: "Ребрендинг — ZOND",
@@ -241,18 +263,18 @@ export const servicesIndexMeta: Record<
   { title: string; description: string }
 > = {
   uk: {
-    title: "Послуги — ZOND",
+    title: "Наші послуги | Студія графічного дизайну ZOND",
     description:
-      "Комплексні рішення для вашого бренду: стратегія, позиціонування, неймінг, логотип, айдентика, брендбук, упаковка, веб-дизайн і SMM.",
+      "Послуги дизайн-студії ZOND: брендинг, логотип, айдентика, брендбук, ребрендинг, SMM, упаковка, графіка, ілюстрація та маркетинг 360.",
   },
   en: {
-    title: "Services — ZOND",
+    title: "Our services | ZOND graphic design studio",
     description:
-      "Complete brand solutions: strategy, positioning, naming, logo, identity, brand book, packaging, web design, and SMM.",
+      "ZOND design studio services: branding, logo, identity, brand book, rebranding, SMM, packaging, graphics, illustration, and marketing 360.",
   },
   ru: {
-    title: "Услуги — ZOND",
+    title: "Наши услуги | Студия графического дизайна ZOND",
     description:
-      "Комплексные решения для вашего бренда: стратегия, позиционирование, нейминг, логотип, айдентика, брендбук, упаковка, веб-дизайн и SMM.",
+      "Услуги дизайн-студии ZOND: брендинг, логотип, айдентика, брендбук, ребрендинг, SMM, упаковка, графика, иллюстрация и маркетинг 360.",
   },
 };

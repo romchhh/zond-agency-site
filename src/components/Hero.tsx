@@ -1,7 +1,7 @@
 import LoopedVideo from "@/components/LoopedVideo";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
-import { getLocalePath } from "@/i18n/routing";
+import { getServiceDetailPath } from "@/i18n/routing";
 import { heroServiceSlugs } from "@/i18n/services";
 import { media } from "@/lib/media";
 import Link from "next/link";
@@ -26,7 +26,7 @@ export default function Hero({ locale, dictionary }: HeroProps) {
                 return (
                   <li key={service}>
                     {slug ? (
-                      <Link href={getLocalePath(locale, `/services/${slug}`)}>
+                      <Link href={getServiceDetailPath(locale, slug)}>
                         {service}
                       </Link>
                     ) : (

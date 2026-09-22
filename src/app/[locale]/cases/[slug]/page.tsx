@@ -2,7 +2,7 @@ import CasePostPage from "@/components/CasePostPage";
 import { getCase, getCaseSlugs, getRelatedCases, isCaseSlug } from "@/i18n/cases";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { createPathMetadata } from "@/lib/metadata";
+import { createCaseMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -22,9 +22,9 @@ export async function generateMetadata({
   const caseItem = getCase(locale, slug);
   if (!caseItem) return {};
 
-  return createPathMetadata(
+  return createCaseMetadata(
     locale,
-    `/cases/${slug}`,
+    slug,
     {
       title: `${caseItem.title} — ZOND`,
       description: caseItem.description,

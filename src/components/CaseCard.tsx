@@ -1,7 +1,7 @@
 import MediaImage from "@/components/MediaImage";
 import type { CaseItem } from "@/i18n/cases";
 import type { Locale } from "@/i18n/config";
-import { getLocalePath } from "@/i18n/routing";
+import { getCaseDetailPath } from "@/i18n/routing";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ function isAnimated(src: string) {
 }
 
 export default function CaseCard({ locale, caseItem }: CaseCardProps) {
-  const href = getLocalePath(locale, `/cases/${caseItem.slug}`);
+  const href = getCaseDetailPath(locale, caseItem.slug);
 
   return (
     <Link href={href} className="project-card project-card-link">

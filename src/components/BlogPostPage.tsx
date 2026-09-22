@@ -8,7 +8,7 @@ import PostDetailLayout from "@/components/PostDetailLayout";
 import type { BlogPost } from "@/i18n/blog";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
-import { getLocalePath } from "@/i18n/routing";
+import { getBlogDetailPath, getBlogIndexPath } from "@/i18n/routing";
 import { extractArticleImagePaths } from "@/lib/article-blocks";
 import {
   blogMediaSrc,
@@ -31,7 +31,7 @@ export default function BlogPostPage({
   relatedPosts,
 }: BlogPostPageProps) {
   const copy = dictionary.blog;
-  const blogPath = getLocalePath(locale, "/blog");
+  const blogPath = getBlogIndexPath(locale);
   const { hero, body } = extractBlogHeroMedia(post.cover, post.body);
   const galleryImages = extractArticleImagePaths(body).map((path) => blogMediaSrc(path));
 

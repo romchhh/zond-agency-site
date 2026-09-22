@@ -7,6 +7,10 @@ import type { CaseVisualBlock, CaseVisualDeliverable, CaseVisualGalleryLayout } 
 type CaseVisualBodyProps = {
   blocks: CaseVisualBlock[];
   imageOffset: number;
+  caseTitle: string;
+  caseSlug: string;
+  openCaseLabel: string;
+  openCaseHref: string;
 };
 
 function isAnimated(src: string): boolean {
@@ -132,19 +136,20 @@ function CaseVisualMedia({
   );
 }
 
-function ActionTiles({ items }: { items: CaseVisualDeliverable[] }) {
-  const icons = [
-    <svg key="1" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 3L2 10l14 7 14-7zM2 17l14 7 14-7M2 24l14 7 14-7" /></svg>,
-    <svg key="2" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M28 16a12 12 0 1 1-12-12M16 9a7 7 0 1 0 7 7M16 16L29 3M23 3h6v6" /></svg>,
-    <svg key="3" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4h9v9H4zM19 4h9v9h-9zM4 19h9v9H4zM19 19h9v9h-9z" /></svg>,
-  ];
+function caseMonogram(title: string): string {
+  const words = title.replace(/[«»"“”]/g, "").trim().split(/\s+/).filter(Boolean);
+  if (words.length >= 2) {
+    return `${words[0][0] ?? ""}${words[1][0] ?? ""}`.toUpperCase();
+  }
+  return title.slice(0, 2).toUpperCase();
+}
 
+function ActionTiles({ items }: { items: CaseVisualDeliverable[] }) {
   return (
     <div className="action-tiles">
       {items.map((item, index) => (
         <article key={`${item.title}-${index}`}>
           <span className="tile-number">{String(index + 1).padStart(2, "0")}</span>
-          {icons[index] ?? icons[2]}
           <h3>
             {splitTitle(item.title).map((line, lineIndex, lines) => (
               <span key={lineIndex}>
@@ -206,7 +211,25 @@ const RULE_ICONS = [
   <svg key="media" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8Q10 3 3 6v21q7-3 13 2 6-5 13-2V6q-7-3-13 2v21" /></svg>,
 ];
 
-function renderBlock(block: CaseVisualBlock, imageOffset: number) {
+function OpenCaseButton({ label, href }: { label: string; href: string }) {
+  return (
+    <a className="open-case" href={href} target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M14 5c3-3 7-3 7-3s0 4-3 7l-7 7-5-5 8-6Z" />
+        <circle cx="16" cy="7" r="1.5" />
+        <path d="m7 10-4 1-1 5 5-1m7-2-1 7-5 2 1-5M6 18l-3 3m2-5-3 2" />
+      </svg>
+      <span>{label}</span>
+      <span className="out-arrow" aria-hidden="true">↗</span>
+    </a>
+  );
+}
+
+function renderBlock(
+  block: CaseVisualBlock,
+  imageOffset: number,
+  context: { caseTitle: string; caseSlug: string; openCaseLabel: string; openCaseHref: string },
+) {
   switch (block.type) {
     case "section":
       return (
@@ -289,21 +312,24 @@ function renderBlock(block: CaseVisualBlock, imageOffset: number) {
 
     case "facts":
       return (
-        <dl key={`facts-${block.items.map((item) => item.label).join("-")}`} className="project-facts">
-          {block.items.map((item) => (
-            <div key={item.label} className={item.accent ? "country-fact" : undefined}>
-              <dt>{item.label}</dt>
-              <dd>
-                {item.accent ? (
-                  <CountryFlag code={resolveCountryCode(item.value, item.countryCode)} />
-                ) : item.label.toLowerCase().includes("ніш") || item.label.toLowerCase().includes("ниш") || item.label.toLowerCase() === "niche" ? (
-                  <svg className="niche-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true"><path d="M5 9l11-6 11 6v14l-11 6-11-6V9zM5 9l11 6 11-6M16 15v14M11 6l11 6" /></svg>
-                ) : null}
-                <span>{item.value}</span>
-              </dd>
-            </div>
-          ))}
-        </dl>
+        <div key={`facts-${block.items.map((item) => item.label).join("-")}`} className="facts-row">
+          <dl className="project-facts">
+            {block.items.map((item) => (
+              <div key={item.label} className={item.accent ? "country-fact" : undefined}>
+                <dt>{item.label}</dt>
+                <dd>
+                  {item.accent ? (
+                    <CountryFlag code={resolveCountryCode(item.value, item.countryCode)} />
+                  ) : item.label.toLowerCase().includes("ніш") || item.label.toLowerCase().includes("ниш") || item.label.toLowerCase() === "niche" ? (
+                    <svg className="niche-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true"><path d="M5 9l11-6 11 6v14l-11 6-11-6V9zM5 9l11 6 11-6M16 15v14M11 6l11 6" /></svg>
+                  ) : null}
+                  <span>{item.value}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <OpenCaseButton label={context.openCaseLabel} href={context.openCaseHref} />
+        </div>
       );
 
     case "gallery":
@@ -324,20 +350,15 @@ function renderBlock(block: CaseVisualBlock, imageOffset: number) {
         <div key={`manifesto-${block.label}`} className="manifesto">
           <span>{block.label}</span>
           <p>
-            {splitTitle(block.text).map((line, index, lines) => {
-              const parts = line.split(/(деталей\.?|details\.?|деталей)/i);
-              return (
-                <span key={index}>
-                  {parts.map((part, partIndex) =>
-                    /деталей|details/i.test(part) ? <em key={partIndex}>{part}</em> : part,
-                  )}
-                  {index < lines.length - 1 ? <br /> : null}
-                </span>
-              );
-            })}
+            {splitTitle(block.text).map((line, index, lines) => (
+              <span key={index}>
+                {index === lines.length - 1 && lines.length > 1 ? <em>{line}</em> : line}
+                {index < lines.length - 1 ? <br /> : null}
+              </span>
+            ))}
           </p>
           {block.footer ? <span className="manifesto-bottom">{block.footer}</span> : null}
-          <div className="portal" aria-hidden="true" />
+          {context.caseSlug === "home-hub" ? <div className="portal" aria-hidden="true" /> : null}
         </div>
       );
 
@@ -398,7 +419,7 @@ function renderBlock(block: CaseVisualBlock, imageOffset: number) {
               ))}
             </blockquote>
             <figcaption>
-              <span className="review-monogram" aria-hidden="true">hh</span>
+              <span className="review-monogram" aria-hidden="true">{caseMonogram(context.caseTitle)}</span>
               <div>
                 <strong>{block.author}</strong>
                 <span>{block.role}</span>
@@ -414,13 +435,25 @@ function renderBlock(block: CaseVisualBlock, imageOffset: number) {
   }
 }
 
-export default function CaseVisualBody({ blocks, imageOffset }: CaseVisualBodyProps) {
+export default function CaseVisualBody({
+  blocks,
+  imageOffset,
+  caseTitle,
+  caseSlug,
+  openCaseLabel,
+  openCaseHref,
+}: CaseVisualBodyProps) {
   let galleryOffset = imageOffset;
 
   return (
     <>
       {blocks.map((block) => {
-        const node = renderBlock(block, galleryOffset);
+        const node = renderBlock(block, galleryOffset, {
+          caseTitle,
+          caseSlug,
+          openCaseLabel,
+          openCaseHref,
+        });
         if (block.type === "gallery") {
           galleryOffset += block.images.length;
         }

@@ -7,6 +7,7 @@ import type {
   CaseVisualImage,
 } from "@/i18n/cases/types";
 import type { Locale } from "@/i18n/config";
+import { getCaseDetailPath } from "@/i18n/routing";
 import { isDeliverablesBlock, normalizeArticleContent } from "@/lib/article-blocks";
 import { caseMediaSrc } from "@/lib/case-content";
 
@@ -87,6 +88,7 @@ type LocaleCopy = {
   defaultTag: string;
   tileDescriptions: string[];
   bannerTags: string[];
+  openCase: string;
   ideaStrip: (title: string) => string;
   manifestoFooter: (title: string) => string;
   manifestoText: (title: string, lead: string) => string;
@@ -108,11 +110,11 @@ const COPY: Record<Locale, LocaleCopy> = {
     manifestoLabel: "ЦЕНТРАЛЬНА ІДЕЯ",
     bannerKicker: "АЙДЕНТИКА В ДІЇ",
     bannerTitle: "Від ідеї.\nДо реалізації.",
-    bookKicker: "БРЕНДБУК",
-    bookTitle: "Правила, що тримають\nбренд разом.",
+    bookKicker: "СКЛАД РОБОТИ",
+    bookTitle: "Від знака\nдо цілісної системи.",
     bookNote: "Візуальна модель брендбуку: 6 напрямів правил.",
     rules: ["Логотип", "Палітра", "Типографіка", "Фотостиль", "Композиція", "Носії"],
-    quoteKicker: "ВІДГУК",
+    quoteKicker: "ВІДГУК КЛІЄНТА",
     quoteHeading: "Відгук клієнта.",
     quoteBadge: "Демонстраційний відгук",
     quoteRole: "Місце для імені та посади клієнта",
@@ -124,6 +126,7 @@ const COPY: Record<Locale, LocaleCopy> = {
     factNiche: "Ніша",
     factProduct: "Продукт",
     defaultTag: "Брендинг",
+    openCase: "відкрити кейс",
     tileDescriptions: [
       "Спільна візуальна мова для всіх точок контакту.",
       "Чітка ієрархія та увага до продукту.",
@@ -161,11 +164,11 @@ const COPY: Record<Locale, LocaleCopy> = {
     manifestoLabel: "ЦЕНТРАЛЬНАЯ ИДЕЯ",
     bannerKicker: "АЙДЕНТИКА В ДЕЙСТВИИ",
     bannerTitle: "От идеи.\nК реализации.",
-    bookKicker: "БРЕНДБУК",
-    bookTitle: "Правила, которые держат\nбренд вместе.",
+    bookKicker: "СОСТАВ РАБОТЫ",
+    bookTitle: "От знака\nк целостной системе.",
     bookNote: "Визуальная модель брендбука: 6 направлений правил.",
     rules: ["Логотип", "Палитра", "Типографика", "Фотостиль", "Композиция", "Носители"],
-    quoteKicker: "ОТЗЫВ",
+    quoteKicker: "ОТЗЫВ КЛИЕНТА",
     quoteHeading: "Отзыв клиента.",
     quoteBadge: "Демонстрационный отзыв",
     quoteRole: "Место для имени и должности клиента",
@@ -177,6 +180,7 @@ const COPY: Record<Locale, LocaleCopy> = {
     factNiche: "Ниша",
     factProduct: "Продукт",
     defaultTag: "Брендинг",
+    openCase: "открыть кейс",
     tileDescriptions: [
       "Единый визуальный язык для всех точек контакта.",
       "Чёткая иерархия и внимание к продукту.",
@@ -214,11 +218,11 @@ const COPY: Record<Locale, LocaleCopy> = {
     manifestoLabel: "CORE IDEA",
     bannerKicker: "IDENTITY IN ACTION",
     bannerTitle: "From idea.\nTo execution.",
-    bookKicker: "BRAND BOOK",
-    bookTitle: "Rules that hold\nthe brand together.",
+    bookKicker: "SCOPE OF WORK",
+    bookTitle: "From the mark\nto a complete system.",
     bookNote: "Visual brand book model: 6 rule directions.",
     rules: ["Logo", "Palette", "Typography", "Photo style", "Composition", "Touchpoints"],
-    quoteKicker: "TESTIMONIAL",
+    quoteKicker: "CLIENT FEEDBACK",
     quoteHeading: "Client feedback.",
     quoteBadge: "Demo testimonial",
     quoteRole: "Placeholder for client name and role",
@@ -230,6 +234,7 @@ const COPY: Record<Locale, LocaleCopy> = {
     factNiche: "Niche",
     factProduct: "Product",
     defaultTag: "Branding",
+    openCase: "open case",
     tileDescriptions: [
       "A shared visual language across all touchpoints.",
       "Clear hierarchy and focus on the product.",
@@ -638,7 +643,6 @@ function sectionBlock(
 }
 
 function chunkGalleryLayout(count: number): CaseVisualGalleryLayout {
-  if (count >= 3) return "triple";
   if (count === 2) return "pair";
   return "wide";
 }
@@ -656,10 +660,7 @@ function chunkGalleries(images: string[]): CaseVisualBlock[] {
   const pool = [...images];
 
   while (pool.length) {
-    const remaining = pool.length;
-    let take = 1;
-    if (remaining >= 3) take = 3;
-    else if (remaining === 2) take = 2;
+    const take = pool.length >= 2 ? 2 : 1;
     blocks.push(galleryFromImages(takeImages(pool, take), chunkGalleryLayout(take)));
   }
 
@@ -683,10 +684,6 @@ function buildDeliverableTiles(
   }));
 }
 
-function hasBrandbookSignals(text: string): boolean {
-  return /брендбук|brand.?book|brandbook/i.test(text);
-}
-
 function buildHubLayout(caseItem: CaseItem, content: CaseContent, locale: Locale): CaseVisualBlock[] {
   const copy = COPY[locale];
   const blocks: CaseVisualBlock[] = [];
@@ -707,10 +704,8 @@ function buildHubLayout(caseItem: CaseItem, content: CaseContent, locale: Locale
   );
   blocks.push(factsBlock(inferFacts(caseItem, content, locale)));
 
-  if (images.length >= 3) {
-    blocks.push(galleryFromImages(takeImages(images, 3), "triple"));
-  } else if (images.length) {
-    blocks.push(...chunkGalleries(images.splice(0, images.length)));
+  if (images.length) {
+    blocks.push(...chunkGalleries(images.splice(0, Math.min(images.length, 2))));
   }
 
   const deliverableLines =
@@ -752,43 +747,15 @@ function buildHubLayout(caseItem: CaseItem, content: CaseContent, locale: Locale
     blocks.push(galleryFromImages(takeImages(images, 2), "pair"));
   }
 
-  blocks.push({
-    type: "palette",
-    colors: [...DEFAULT_CASE_PALETTE],
-  });
+  const bookRules =
+    content.deliverables.length >= 3 ? content.deliverables.slice(0, 6) : copy.rules;
 
-  const allText = [caseItem.description, ...content.deliverables, ...content.tasks].join(" ");
-  if (hasBrandbookSignals(allText) && images.length >= 3) {
-    blocks.push(
-      sectionBlock("06", copy.bookKicker, copy.bookTitle, [copy.solutionLead(caseItem.title)], {
-        variant: "book",
-        rules: copy.rules,
-        conceptNote: copy.bookNote,
-      }),
-    );
-    if (images.length >= 1) {
-      blocks.push(galleryFromImages(takeImages(images, 1), "wide"));
-    }
-    if (images.length >= 2) {
-      blocks.push(galleryFromImages(takeImages(images, 2), "pair"));
-    }
-  }
-
-  if (images.length >= 3) {
-    blocks.push(galleryFromImages(takeImages(images, 3), "triple"));
-  }
-  if (images.length >= 2) {
-    blocks.push(galleryFromImages(takeImages(images, 2), "pair"));
-  }
-
-  if (images.length >= 2) {
-    blocks.push({
-      type: "banner",
-      kicker: copy.bannerKicker,
-      title: copy.bannerTitle,
-      tags: copy.bannerTags,
-    });
-  }
+  blocks.push(
+    sectionBlock("06", copy.bookKicker, copy.bookTitle, [], {
+      variant: "book",
+      rules: bookRules,
+    }),
+  );
 
   if (images.length) {
     blocks.push(...chunkGalleries(images.splice(0, images.length)));
@@ -859,5 +826,10 @@ export function getCaseVisualDefaults(
   return {
     tagline: tagline ?? firstSentence,
     serviceTag: serviceTag ?? copy.defaultTag,
+    openCase: copy.openCase,
   };
+}
+
+export function getLiveCaseUrl(slug: string, locale: Locale): string {
+  return `https://www.zond.agency${getCaseDetailPath(locale, slug)}`;
 }

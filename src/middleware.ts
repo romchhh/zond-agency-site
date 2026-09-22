@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { defaultLocale, isLocale, locales, type Locale } from "@/i18n/config";
+import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
+import { resolveLegacyRewrite } from "@/i18n/routing";
 
 function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) {
   const requestHeaders = new Headers(request.headers);
@@ -25,6 +26,11 @@ export function middleware(request: NextRequest) {
   if (pathname === "/uk" || pathname.startsWith("/uk/")) {
     const nextPath = pathname.replace(/^\/uk/, "") || "/";
     return NextResponse.redirect(new URL(nextPath, request.url));
+  }
+
+  const legacyRewrite = resolveLegacyRewrite(pathname);
+  if (legacyRewrite) {
+    return withLocale(request, legacyRewrite.locale, legacyRewrite.internalPath);
   }
 
   const segments = pathname.split("/");

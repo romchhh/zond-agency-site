@@ -2,6 +2,7 @@ import BlogPostPage from "@/components/BlogPostPage";
 import { getBlogPost, getBlogSlugs, getRelatedBlogPosts, isBlogSlug } from "@/i18n/blog";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { getBlogDetailPath } from "@/i18n/routing";
 import { createPathMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
@@ -24,7 +25,7 @@ export async function generateMetadata({
 
   return createPathMetadata(
     locale,
-    `/blog/${slug}`,
+    getBlogDetailPath(locale, slug),
     {
       title: `${post.title} — ZOND`,
       description: post.description,

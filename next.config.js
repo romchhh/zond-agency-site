@@ -1,3 +1,5 @@
+const { buildLegacyRedirects } = require("./legacy-redirects.cjs");
+
 const oneYearImmutable = "public, max-age=31536000, immutable";
 
 /** @type {import('next').NextConfig} */
@@ -11,6 +13,9 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 365,
     deviceSizes: [384, 640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+  async redirects() {
+    return buildLegacyRedirects();
   },
   async headers() {
     return [

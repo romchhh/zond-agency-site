@@ -5,6 +5,14 @@ export type CaseVisualImage = {
 
 export type CaseVisualGalleryLayout = "wide" | "pair" | "triple";
 
+export type CaseVisualTheme = {
+  accent: string;
+  accentInk?: string;
+  manifestoBg?: string;
+  manifestoFg?: string;
+  manifestoEm?: string;
+};
+
 export type CaseVisualFact = {
   label: string;
   value: string;
@@ -80,5 +88,6 @@ export type CaseItem = {
   body: string;
   tagline?: string;
   serviceTag?: string;
+  theme?: CaseVisualTheme;
   blocks?: CaseVisualBlock[];
 };

@@ -1,4 +1,11 @@
+import BrandbookPage from "@/components/BrandbookPage";
 import BrandingPage from "@/components/BrandingPage";
+import GraphicsPage from "@/components/GraphicsPage";
+import IllustrationPage from "@/components/IllustrationPage";
+import InfluenceMarketingPage from "@/components/InfluenceMarketingPage";
+import LogoPage from "@/components/LogoPage";
+import PackagingPage from "@/components/PackagingPage";
+import SmmPage from "@/components/SmmPage";
 import ServiceTitlePage from "@/components/ServiceTitlePage";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -44,6 +51,76 @@ export default async function ServicePage({
   if (slug === "branding") {
     return (
       <BrandingPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "logo") {
+    return (
+      <LogoPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "brandbook") {
+    return (
+      <BrandbookPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "packaging") {
+    return (
+      <PackagingPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "illustration") {
+    return (
+      <IllustrationPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "smm") {
+    return (
+      <SmmPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "graphics") {
+    return (
+      <GraphicsPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "influence-marketing") {
+    return (
+      <InfluenceMarketingPage
         locale={locale}
         dictionary={dictionary}
         projects={getProjects(locale)}

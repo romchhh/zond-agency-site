@@ -1,0 +1,386 @@
+import type { Locale } from "@/i18n/config";
+import type { ServicePageContent } from "@/i18n/logo";
+
+const uk: ServicePageContent = {
+  eyebrow: "Послуги / Пакування",
+  title: "Дизайн пакування",
+  titleAccent: "Дизайн упаковки та етикетки",
+  lead:
+    "Розробляємо упаковки та етикетки, які привертають увагу, розповідають про продукт і викликають бажання покласти його до кошика.",
+  sub: "",
+  cta: "Обговорити проєкт",
+  heroAlt: "Дизайн упаковки та етикетки",
+  heroCaption: "Від ідеї — до упаковки, яка продає на полиці.",
+  metricsTitle: "Наші результати в цифрах",
+  stats: [
+    { value: "6", label: "років\nу дизайні" },
+    { value: "6", label: "експертів\nу команді" },
+    { value: "50+", label: "упаковок\nстворено" },
+    { value: "30+", label: "ніш\nпідкорено" },
+    { value: "55", label: "брендів\nу портфоліо" },
+  ],
+  audienceTitle: "Коли час замовити дизайн етикетки та упаковки?",
+  audienceItems: [
+    { index: "01", title: "Запускаєте новий продукт" },
+    { index: "02", title: "Виходите на новий ринок" },
+    { index: "03", title: "Плануєте ребрендинг" },
+    { index: "04", title: "Програєте конкурентам на полиці" },
+  ],
+  includesTitle: "Після співпраці з ZOND ви отримаєте",
+  includes: [
+    "Затверджену концепцію дизайну пакування та етикетки",
+    "Адаптацію дизайну для різних смаків та об'ємів",
+    "3D-візуалізацію продукту на мокапах",
+    "Специфікацію кольорів, шрифтів і графічних елементів",
+    "Підготовлені відповідно до вимог друкарні макети",
+    "Пакет вихідних файлів у векторних і растрових форматах",
+    "Майнові права на затверджений дизайн",
+  ],
+  casesTitle: "Наші кейси з розробки дизайну пакування",
+  processTitle: "Як ми створюємо пакування, що продає",
+  process: [
+    {
+      index: "01",
+      title: "Занурюємося в продукт",
+      description: "Вивчаємо його особливості та переваги, а також обговорюємо ваші побажання.",
+      duration: "1 день",
+    },
+    {
+      index: "02",
+      title: "Досліджуємо ринок",
+      description: "Аналізуємо конкурентів, тренди в ніші та потреби майбутніх покупців.",
+      duration: "1 день",
+    },
+    {
+      index: "03",
+      title: "Створюємо концепцію",
+      description: "Розробляємо концепції, які розкажуть про продукт і привернуть до нього увагу.",
+      duration: "2–3 дні",
+    },
+    {
+      index: "04",
+      title: "Візуалізуємо результат",
+      description: "Створюємо мокапи, щоб ви побачили упаковку ще до її запуску у виробництво.",
+      duration: "1 день",
+    },
+    {
+      index: "05",
+      title: "Фіналізуємо дизайн",
+      description: "Доопрацьовуємо обрану концепцію та затверджуємо фінальний макет.",
+      duration: "1–2 дні",
+    },
+    {
+      index: "06",
+      title: "Готуємо до друку",
+      description: "Готуємо макети та передаємо готові до друку вихідні файли.",
+      duration: "1 день",
+    },
+  ],
+  teamTitle: "Хто веде проєкт",
+  whyTitle: "Чому варто обрати ZOND",
+  whyItems: [
+    {
+      title: "Створюємо не дизайн, а перевагу",
+      description:
+        "Наша упаковка привертає увагу, викликає довіру та перетворює інтерес покупця на продажі.",
+    },
+    {
+      title: "Показуємо не образ, а суть продукту",
+      description:
+        "За допомогою дизайну розкриваємо його особливості, характер і цінність без зайвих слів.",
+    },
+    {
+      title: "Думаємо не як дизайнери, а як покупці",
+      description: "Будуємо візуальні акценти так, щоб продукт виділявся й запам'ятовувався.",
+    },
+    {
+      title: "Створюємо не шаблон, а індивідуальне рішення",
+      description: "Кожен дизайн народжується з розуміння вашого бренду та цільової аудиторії.",
+    },
+  ],
+  compareTitle: "Чому ZOND, а не генератор чи фриланс?",
+  compareColumns: ["Критерій", "ZOND", "Фриланс", "Генератор (AI)"],
+  compareRows: [
+    {
+      criterion: "Команда",
+      zond: "Артдиректор, дизайнер, prepress-фахівець",
+      freelance: "Один спеціаліст",
+      generator: "Алгоритм",
+    },
+    {
+      criterion: "Основа рішення",
+      zond: "Аналіз продукту, ринку та ЦА",
+      freelance: "Особистий досвід виконавця",
+      generator: "Запит (промпт)",
+    },
+    {
+      criterion: "Опрацювання концепції",
+      zond: "Стратегія, логіка й креатив",
+      freelance: "Залежить від виконавця",
+      generator: "Шаблонна генерація",
+    },
+    {
+      criterion: "Результат",
+      zond: "Концепція, 3D-мокапи, готові до друку файли",
+      freelance: "Залежить від досвіду",
+      generator: "Концепт для доопрацювання",
+    },
+  ],
+  reviewsTitle: "Відгуки",
+  reviewsNote: "Демонстраційні тексти для макета. Не є реальними відгуками клієнтів.",
+  reviews: [
+    {
+      label: "Приклад відгуку 01",
+      quote:
+        "Потрібна була упаковка, яка виділялася на полиці серед конкурентів. Отримали кілька сильних концепцій і зрозумілу логіку, чому саме цей варіант працює найкраще.",
+      name: "Ім'я клієнта · Компанія",
+      role: "Дизайн упаковки",
+    },
+    {
+      label: "Приклад відгуку 02",
+      quote:
+        "Важливо було побачити продукт на мокапах ще до друку. 3D-візуалізація допомогла швидко затвердити фінальний варіант і уникнути помилок на виробництві.",
+      name: "Ім'я клієнта · Компанія",
+      role: "3D-мокапи та макети",
+    },
+    {
+      label: "Приклад відгуку 03",
+      quote:
+        "Макети передали в друкарню без додаткових правок. Усе враховано: кольори, вильоти, розміри та адаптації для різних об'ємів.",
+      name: "Ім'я клієнта · Компанія",
+      role: "Підготовка до друку",
+    },
+  ],
+  formTitle: "Покупець побачить упаковку раніше, ніж оцінить продукт",
+  formDescription:
+    "Заповніть форму нижче, і ми перетворимо її на інструмент, який працюватиме на впізнаваність і продажі.",
+  faqTitle: "FAQ",
+  faq: [
+    {
+      question: "Що таке дизайн упаковки?",
+      answer:
+        "Це розробка зовнішнього вигляду й інформаційної структури упаковки. Правильно оформлене пакування допомагає бренду виділитися серед конкурентів, розповісти про переваги свого продукту, сформувати про нього позитивне враження та заохотити людей покласти його до кошика.",
+    },
+    {
+      question: "Хто займається дизайном упаковки?",
+      answer:
+        "Над дизайном упаковки працює команда фахівців, до якої входять бренд-дизайнер, артдиректор, маркетолог і prepress-спеціаліст.",
+    },
+    {
+      question: "Які навички потрібні дизайнеру упаковки?",
+      answer:
+        "Дизайнер упаковки має добре володіти композицією, типографікою та колористикою, а також розуміти принципи брендингу й маркетингу. Окрім цього, він має дивитися на дизайн очима покупця, тобто розуміти, що привертає увагу, як люди зчитують інформацію та що впливає на вибір товару. Також фахівець повинен знати технології друку, особливості пакувальних матеріалів і вимоги до підготовки макетів для виробництва.",
+    },
+    {
+      question: "В яких програмах створюють дизайн упаковки?",
+      answer:
+        "Найчастіше дизайн пакування створюють в Adobe Illustrator, Adobe Photoshop, Adobe InDesign та CorelDRAW. Для розгорток і 3D-візуалізації використовують ArtiosCAD, Blender, Cinema 4D та інші програми.",
+    },
+    {
+      question: "Які завдання вирішує дизайн упаковки?",
+      answer:
+        "Якісний дизайн упаковки допомагає виділити продукт серед конкурентів, сформувати про нього правильне перше враження, підкреслити його переваги, підвищити впізнаваність бренду та мотивувати покупця обрати саме цей товар.",
+    },
+    {
+      question: "Які етапи включає розробка дизайну упаковки?",
+      answer:
+        "Розробка дизайну упаковки починається з вивчення продукту, аналізу конкурентів і цільової аудиторії. Далі створюється кілька дизайн-концепцій, які презентуються замовнику. Після вибору найкращого варіанта він доопрацьовується, перевіряється на мокапах і, за потреби, коригується. На завершальному етапі відбувається підготовка макетів до друку з урахуванням усіх технічних вимог та передача готових вихідних файлів замовнику.",
+    },
+    {
+      question: "Які принципи ефективного дизайну упаковки?",
+      answer:
+        "Ефективна упаковка має зрозуміло розповідати про продукт, привертати до нього увагу, а також викликати довіру та позитивні емоції. Водночас вона повинна відповідати позиціюванню бренду й залишатися впізнаваною серед інших товарів у категорії. Якщо покупець швидко помічає продукт на полиці і хоче взяти його до рук, упаковка виконує своє головне завдання.",
+    },
+    {
+      question: "Скільки коштує дизайн упаковки?",
+      answer:
+        "У ZOND ціна розробки дизайну упаковки розраховується індивідуально. Вона залежить від типу пакування, кількості дизайн-концепцій, обсягу правок, а також термінів реалізації проєкту.",
+    },
+  ],
+  relatedTitle: "Суміжні послуги",
+  related: [
+    { title: "Брендинг", slug: "branding" },
+    { title: "Ілюстрація", slug: "illustration" },
+    { title: "Айдентика", slug: "identity" },
+  ],
+};
+
+const en: ServicePageContent = {
+  ...uk,
+  eyebrow: "Services / Packaging",
+  title: "Packaging design",
+  titleAccent: "Packaging and label design",
+  lead:
+    "We develop packaging and labels that attract attention, tell the product story, and make people want to put it in the cart.",
+  cta: "Discuss the project",
+  heroAlt: "Packaging and label design",
+  heroCaption: "From idea to packaging that sells on the shelf.",
+  metricsTitle: "Our results in numbers",
+  stats: [
+    { value: "6", label: "years\nin design" },
+    { value: "6", label: "experts\non the team" },
+    { value: "50+", label: "packaging designs\ncreated" },
+    { value: "30+", label: "niches\ncovered" },
+    { value: "55", label: "brands\nin portfolio" },
+  ],
+  audienceTitle: "When is it time to order label and packaging design?",
+  audienceItems: [
+    { index: "01", title: "Launching a new product" },
+    { index: "02", title: "Entering a new market" },
+    { index: "03", title: "Planning a rebrand" },
+    { index: "04", title: "Losing to competitors on the shelf" },
+  ],
+  includesTitle: "After working with ZOND you will receive",
+  includes: [
+    "Approved packaging and label design concept",
+    "Design adaptation for different flavors and volumes",
+    "3D product visualization on mockups",
+    "Specification of colors, fonts, and graphic elements",
+    "Print-ready layouts prepared to printer requirements",
+    "Output file package in vector and raster formats",
+    "Intellectual property rights to the approved design",
+  ],
+  casesTitle: "Our packaging design cases",
+  processTitle: "How we create packaging that sells",
+  process: [
+    { index: "01", title: "Product immersion", description: "We study its features and benefits and discuss your wishes.", duration: "1 day" },
+    { index: "02", title: "Market research", description: "We analyze competitors, niche trends, and future buyer needs.", duration: "1 day" },
+    { index: "03", title: "Concept creation", description: "We develop concepts that tell the product story and attract attention.", duration: "2–3 days" },
+    { index: "04", title: "Result visualization", description: "We create mockups so you see the packaging before production.", duration: "1 day" },
+    { index: "05", title: "Design finalization", description: "We refine the chosen concept and approve the final layout.", duration: "1–2 days" },
+    { index: "06", title: "Print preparation", description: "We prepare layouts and deliver print-ready output files.", duration: "1 day" },
+  ],
+  teamTitle: "Who leads the project",
+  whyTitle: "Why choose ZOND",
+  whyItems: [
+    { title: "We create advantage, not just design", description: "Our packaging attracts attention, builds trust, and turns buyer interest into sales." },
+    { title: "We show the product essence", description: "Through design we reveal its features, character, and value without extra words." },
+    { title: "We think like buyers", description: "We build visual accents so the product stands out and is remembered." },
+    { title: "We create custom solutions", description: "Every design is born from understanding your brand and target audience." },
+  ],
+  compareTitle: "Why ZOND, not a generator or freelancer?",
+  compareColumns: ["Criterion", "ZOND", "Freelance", "Generator (AI)"],
+  compareRows: [
+    { criterion: "Team", zond: "Art director, designer, prepress specialist", freelance: "One specialist", generator: "Algorithm" },
+    { criterion: "Basis of the solution", zond: "Product, market, and audience analysis", freelance: "Executor's personal experience", generator: "Prompt" },
+    { criterion: "Concept development", zond: "Strategy, logic, and creativity", freelance: "Depends on the executor", generator: "Template generation" },
+    { criterion: "Result", zond: "Concept, 3D mockups, print-ready files", freelance: "Depends on experience", generator: "Concept for further refinement" },
+  ],
+  reviewsTitle: "Reviews",
+  reviewsNote: "Sample texts for the layout. These are not real client reviews.",
+  reviews: [
+    { label: "Sample review 01", quote: "We needed packaging that stood out on the shelf among competitors. We received several strong concepts and a clear rationale for why this option works best.", name: "Client name · Company", role: "Packaging design" },
+    { label: "Sample review 02", quote: "It was important to see the product on mockups before printing. 3D visualization helped approve the final version quickly and avoid production mistakes.", name: "Client name · Company", role: "3D mockups and layouts" },
+    { label: "Sample review 03", quote: "Layouts were delivered to the printer without additional revisions. Everything was accounted for: colors, bleed, sizes, and adaptations for different volumes.", name: "Client name · Company", role: "Print preparation" },
+  ],
+  formTitle: "The buyer will see the packaging before they evaluate the product",
+  formDescription: "Fill out the form below and we will turn it into a tool that works for recognition and sales.",
+  faqTitle: "FAQ",
+  faq: [
+    { question: "What is packaging design?", answer: "It is the development of the external appearance and information structure of packaging. Well-designed packaging helps a brand stand out, communicate product benefits, create a positive impression, and encourage purchase." },
+    { question: "Who works on packaging design?", answer: "A team of specialists including a brand designer, art director, marketer, and prepress specialist." },
+    { question: "What skills does a packaging designer need?", answer: "Strong composition, typography, and color skills, plus understanding of branding, marketing, buyer psychology, print technologies, packaging materials, and production layout requirements." },
+    { question: "What software is used for packaging design?", answer: "Most often Adobe Illustrator, Photoshop, InDesign, and CorelDRAW. For dielines and 3D visualization: ArtiosCAD, Blender, Cinema 4D, and others." },
+    { question: "What problems does packaging design solve?", answer: "It helps the product stand out, create the right first impression, highlight benefits, increase brand recognition, and motivate purchase." },
+    { question: "What stages does packaging design development include?", answer: "Product study, competitor and audience analysis, concept development and presentation, refinement and mockup testing, then print-ready layout preparation and file delivery." },
+    { question: "What are the principles of effective packaging design?", answer: "Effective packaging clearly communicates the product, attracts attention, builds trust and positive emotions, matches brand positioning, and remains recognizable in its category." },
+    { question: "How much does packaging design cost?", answer: "At ZOND, pricing is individual and depends on packaging type, number of concepts, revision scope, and project timeline." },
+  ],
+  relatedTitle: "Related services",
+  related: [
+    { title: "Branding", slug: "branding" },
+    { title: "Illustration", slug: "illustration" },
+    { title: "Identity", slug: "identity" },
+  ],
+};
+
+const ru: ServicePageContent = {
+  ...uk,
+  eyebrow: "Услуги / Упаковка",
+  title: "Дизайн упаковки",
+  titleAccent: "Дизайн упаковки и этикетки",
+  lead:
+    "Разрабатываем упаковки и этикетки, которые привлекают внимание, рассказывают о продукте и вызывают желание положить его в корзину.",
+  cta: "Обсудить проект",
+  heroAlt: "Дизайн упаковки и этикетки",
+  heroCaption: "От идеи — к упаковке, которая продаёт на полке.",
+  metricsTitle: "Наши результаты в цифрах",
+  stats: [
+    { value: "6", label: "лет\nв дизайне" },
+    { value: "6", label: "экспертов\nв команде" },
+    { value: "50+", label: "упаковок\nсоздано" },
+    { value: "30+", label: "ниш\nпокорено" },
+    { value: "55", label: "брендов\nв портфолио" },
+  ],
+  audienceTitle: "Когда пора заказать дизайн этикетки и упаковки?",
+  audienceItems: [
+    { index: "01", title: "Запускаете новый продукт" },
+    { index: "02", title: "Выходите на новый рынок" },
+    { index: "03", title: "Планируете ребрендинг" },
+    { index: "04", title: "Проигрываете конкурентам на полке" },
+  ],
+  includesTitle: "После сотрудничества с ZOND вы получите",
+  includes: [
+    "Утверждённую концепцию дизайна упаковки и этикетки",
+    "Адаптацию дизайна для разных вкусов и объёмов",
+    "3D-визуализацию продукта на мокапах",
+    "Спецификацию цветов, шрифтов и графических элементов",
+    "Подготовленные согласно требованиям типографии макеты",
+    "Пакет выходных файлов в векторных и растровых форматах",
+    "Имущественные права на утверждённый дизайн",
+  ],
+  casesTitle: "Наши кейсы по разработке дизайна упаковки",
+  processTitle: "Как мы создаём упаковку, которая продаёт",
+  process: [
+    { index: "01", title: "Погружаемся в продукт", description: "Изучаем его особенности и преимущества, а также обсуждаем ваши пожелания.", duration: "1 день" },
+    { index: "02", title: "Исследуем рынок", description: "Анализируем конкурентов, тренды в нише и потребности будущих покупателей.", duration: "1 день" },
+    { index: "03", title: "Создаём концепцию", description: "Разрабатываем концепции, которые расскажут о продукте и привлекут к нему внимание.", duration: "2–3 дня" },
+    { index: "04", title: "Визуализируем результат", description: "Создаём мокапы, чтобы вы увидели упаковку ещё до запуска в производство.", duration: "1 день" },
+    { index: "05", title: "Финализируем дизайн", description: "Дорабатываем выбранную концепцию и утверждаем финальный макет.", duration: "1–2 дня" },
+    { index: "06", title: "Готовим к печати", description: "Готовим макеты и передаём готовые к печати выходные файлы.", duration: "1 день" },
+  ],
+  teamTitle: "Кто ведёт проект",
+  whyTitle: "Почему стоит выбрать ZOND",
+  whyItems: [
+    { title: "Создаём не дизайн, а преимущество", description: "Наша упаковка привлекает внимание, вызывает доверие и превращает интерес покупателя в продажи." },
+    { title: "Показываем не образ, а суть продукта", description: "С помощью дизайна раскрываем его особенности, характер и ценность без лишних слов." },
+    { title: "Думаем не как дизайнеры, а как покупатели", description: "Строим визуальные акценты так, чтобы продукт выделялся и запоминался." },
+    { title: "Создаём не шаблон, а индивидуальное решение", description: "Каждый дизайн рождается из понимания вашего бренда и целевой аудитории." },
+  ],
+  compareTitle: "Почему ZOND, а не генератор или фриланс?",
+  compareColumns: ["Критерий", "ZOND", "Фриланс", "Генератор (AI)"],
+  compareRows: [
+    { criterion: "Команда", zond: "Арт-директор, дизайнер, prepress-специалист", freelance: "Один специалист", generator: "Алгоритм" },
+    { criterion: "Основа решения", zond: "Анализ продукта, рынка и ЦА", freelance: "Личный опыт исполнителя", generator: "Запрос (промпт)" },
+    { criterion: "Проработка концепции", zond: "Стратегия, логика и креатив", freelance: "Зависит от исполнителя", generator: "Шаблонная генерация" },
+    { criterion: "Результат", zond: "Концепция, 3D-мокапы, готовые к печати файлы", freelance: "Зависит от опыта", generator: "Концепт для доработки" },
+  ],
+  reviewsTitle: "Отзывы",
+  reviewsNote: "Демонстрационные тексты для макета. Не являются реальными отзывами клиентов.",
+  reviews: [
+    { label: "Пример отзыва 01", quote: "Нужна была упаковка, которая выделялась на полке среди конкурентов. Получили несколько сильных концепций и понятную логику, почему именно этот вариант работает лучше всего.", name: "Имя клиента · Компания", role: "Дизайн упаковки" },
+    { label: "Пример отзыва 02", quote: "Важно было увидеть продукт на мокапах ещё до печати. 3D-визуализация помогла быстро утвердить финальный вариант и избежать ошибок на производстве.", name: "Имя клиента · Компания", role: "3D-мокапы и макеты" },
+    { label: "Пример отзыва 03", quote: "Макеты передали в типографию без дополнительных правок. Всё учтено: цвета, вылеты, размеры и адаптации для разных объёмов.", name: "Имя клиента · Компания", role: "Подготовка к печати" },
+  ],
+  formTitle: "Покупатель увидит упаковку раньше, чем оценит продукт",
+  formDescription: "Заполните форму ниже, и мы превратим её в инструмент, который будет работать на узнаваемость и продажи.",
+  faqTitle: "FAQ",
+  faq: [
+    { question: "Что такое дизайн упаковки?", answer: "Это разработка внешнего вида и информационной структуры упаковки. Правильно оформленная упаковка помогает бренду выделиться среди конкурентов, рассказать о преимуществах продукта, сформировать положительное впечатление и побудить к покупке." },
+    { question: "Кто занимается дизайном упаковки?", answer: "Над дизайном упаковки работает команда специалистов: бренд-дизайнер, арт-директор, маркетолог и prepress-специалист." },
+    { question: "Какие навыки нужны дизайнеру упаковки?", answer: "Хорошее владение композицией, типографикой и колористикой, понимание брендинга и маркетинга, взгляд глазами покупателя, знание технологий печати, особенностей материалов и требований к макетам." },
+    { question: "В каких программах создают дизайн упаковки?", answer: "Чаще всего Adobe Illustrator, Photoshop, InDesign и CorelDRAW. Для развёрток и 3D-визуализации — ArtiosCAD, Blender, Cinema 4D и другие." },
+    { question: "Какие задачи решает дизайн упаковки?", answer: "Помогает выделить продукт, сформировать правильное первое впечатление, подчеркнуть преимущества, повысить узнаваемость бренда и мотивировать покупателя." },
+    { question: "Какие этапы включает разработка дизайна упаковки?", answer: "Изучение продукта, анализ конкурентов и аудитории, создание концепций, доработка и проверка на мокапах, подготовка макетов к печати и передача файлов." },
+    { question: "Какие принципы эффективного дизайна упаковки?", answer: "Эффективная упаковка понятно рассказывает о продукте, привлекает внимание, вызывает доверие и эмоции, соответствует позиционированию бренда и остаётся узнаваемой в категории." },
+    { question: "Сколько стоит дизайн упаковки?", answer: "В ZOND цена рассчитывается индивидуально и зависит от типа упаковки, количества концепций, объёма правок и сроков реализации проекта." },
+  ],
+  relatedTitle: "Смежные услуги",
+  related: [
+    { title: "Брендинг", slug: "branding" },
+    { title: "Иллюстрация", slug: "illustration" },
+    { title: "Айдентика", slug: "identity" },
+  ],
+};
+
+export const packagingPage: Record<Locale, ServicePageContent> = { uk, en, ru };

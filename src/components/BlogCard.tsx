@@ -1,7 +1,7 @@
 import MediaImage from "@/components/MediaImage";
 import type { BlogPost } from "@/i18n/blog";
 import type { Locale } from "@/i18n/config";
-import { getLocalePath } from "@/i18n/routing";
+import { getBlogDetailPath } from "@/i18n/routing";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ type BlogCardProps = {
 };
 
 export default function BlogCard({ locale, post }: BlogCardProps) {
-  const href = getLocalePath(locale, `/blog/${post.slug}`);
+  const href = getBlogDetailPath(locale, post.slug);
 
   return (
     <Link href={href} className="project-card project-card-link">

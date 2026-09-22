@@ -1,7 +1,7 @@
 import MediaImage from "@/components/MediaImage";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
-import { getLocalePath } from "@/i18n/routing";
+import { getServiceDetailPath } from "@/i18n/routing";
 import { servicesGridSlugs } from "@/i18n/services";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
@@ -44,7 +44,7 @@ export default function Services({ locale, dictionary }: ServicesProps) {
                 <Link
                   className="service-card"
                   key={service.index}
-                  href={getLocalePath(locale, `/services/${slug}`)}
+                  href={getServiceDetailPath(locale, slug)}
                 >
                   {content}
                 </Link>

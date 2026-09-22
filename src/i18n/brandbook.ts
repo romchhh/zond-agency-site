@@ -1,0 +1,381 @@
+import type { Locale } from "@/i18n/config";
+import type { ServicePageContent } from "@/i18n/logo";
+
+const uk: ServicePageContent = {
+  eyebrow: "Послуги / Брендбук",
+  title: "Брендбук",
+  titleAccent: "Розробка брендбуку",
+  lead:
+    "Розробляємо брендбуки, які об'єднують правила бренду в єдину систему та зберігають його цілісність у кожній точці контакту з клієнтом.",
+  sub: "",
+  cta: "Обговорити проєкт",
+  heroAlt: "Розробка брендбуку",
+  heroCaption: "Від хаосу візуалу — до чіткої системи бренду.",
+  metricsTitle: "Факти про ZOND",
+  stats: [
+    { value: "6", label: "років\nу дизайні" },
+    { value: "6", label: "експертів\nу команді" },
+    { value: "50+", label: "брендбуків\nстворено" },
+    { value: "30+", label: "ніш\nдосліджено" },
+    { value: "55", label: "брендів\nу портфоліо" },
+  ],
+  audienceTitle: "Кому не обійтися без брендбуку?",
+  audienceItems: [
+    { index: "01", title: "Тим, хто запускає новий бізнес" },
+    { index: "02", title: "Тим, у кого хаос у візуалі" },
+    { index: "03", title: "Тим, хто масштабує бізнес" },
+    { index: "04", title: "Тим, хто працює з підрядниками" },
+  ],
+  includesTitle: "Що всередині брендбуку?",
+  includes: [
+    "Правила використання логотипа",
+    "Правила роботи з фірмовими кольорами",
+    "Система шрифтів і типографіки",
+    "Правила використання графічних елементів",
+    "Правила оформлення ключових носіїв",
+    "Готові шаблони або макети носіїв",
+    "Упорядкований комплект робочих файлів",
+  ],
+  casesTitle: "Наші кейси з розробки брендбуків",
+  processTitle: "Як ми впорядковуємо бренд",
+  process: [
+    {
+      index: "01",
+      title: "Занурюємося в бренд",
+      description: "Вивчаємо бізнес, його цілі та наявну айдентику.",
+      duration: "1 день",
+    },
+    {
+      index: "02",
+      title: "Досліджуємо нішу",
+      description: "Аналізуємо конкурентів, тренди ринку та потреби аудиторії.",
+      duration: "2–3 дні",
+    },
+    {
+      index: "03",
+      title: "Упорядковуємо систему",
+      description: "Усуваємо суперечності та допрацьовуємо відсутні елементи айдентики.",
+      duration: "2–5 днів",
+    },
+    {
+      index: "04",
+      title: "Фіксуємо правила",
+      description:
+        "Прописуємо, як використовувати логотип, кольори, шрифти, графіку й інші елементи бренду.",
+      duration: "3–7 днів",
+    },
+    {
+      index: "05",
+      title: "Тестуємо",
+      description: "Перевіряємо брендбук на різних носіях і в різних контекстах.",
+      duration: "1–2 дні",
+    },
+    {
+      index: "06",
+      title: "Готуємо бренд до запуску",
+      description:
+        "Презентуємо брендбук, передаємо файли та пояснюємо, як користуватися системою.",
+      duration: "1–2 дні",
+    },
+  ],
+  teamTitle: "Хто веде проєкт",
+  whyTitle: "Чому варто обрати ZOND",
+  whyItems: [
+    {
+      title: "Створюємо сильну айдентику",
+      description:
+        "Формуємо стиль, який передає характер бренду, вирізняє його серед конкурентів та запам'ятовується.",
+    },
+    {
+      title: "Розробляємо робочий інструмент",
+      description:
+        "Ви отримуєте брендбук, яким команда реально користується, а не залишає припадати пилом у папці.",
+    },
+    {
+      title: "Говоримо простою мовою",
+      description:
+        "Пишемо документ так, щоб у ньому легко розібрався і маркетолог, і менеджер, і підрядник.",
+    },
+    {
+      title: "Не працюємо за шаблонами",
+      description: "Кожен брендбук будується навколо вашого бізнесу, а не готової структури.",
+    },
+  ],
+  compareTitle: "Чому ZOND, а не генератор чи фриланс?",
+  compareColumns: ["Критерій", "ZOND", "Фриланс", "Генератор (AI)"],
+  compareRows: [
+    {
+      criterion: "Команда",
+      zond: "Артдиректор, бренд-дизайнер, стратег",
+      freelance: "Одна людина",
+      generator: "Алгоритм",
+    },
+    {
+      criterion: "Основа рішення",
+      zond: "Дослідження ринку та ДНК бренду",
+      freelance: "Бачення виконавця",
+      generator: "Промпт",
+    },
+    {
+      criterion: "Результат",
+      zond: "Чітка бренд-система з правилами",
+      freelance: "Набір пояснень без єдиного стандарту",
+      generator: "Випадкові інструкції без сенсу",
+    },
+  ],
+  reviewsTitle: "Відгуки",
+  reviewsNote: "Демонстраційні тексти для макета. Не є реальними відгуками клієнтів.",
+  reviews: [
+    {
+      label: "Приклад відгуку 01",
+      quote:
+        "Потрібно було навести лад у візуалі бренду. Брендбук допоміг команді та підрядникам працювати за єдиними правилами без постійних уточнень.",
+      name: "Ім'я клієнта · Компанія",
+      role: "Брендбук та система",
+    },
+    {
+      label: "Приклад відгуку 02",
+      quote:
+        "Документ написаний зрозумілою мовою — не лише для дизайнерів. Тепер простіше готувати нові матеріали та контролювати якість.",
+      name: "Ім'я клієнта · Компанія",
+      role: "Правила та шаблони",
+    },
+    {
+      label: "Приклад відгуку 03",
+      quote:
+        "Процес був структурованим: від аналізу до фінальної передачі файлів. Отримали робочий інструмент, а не формальний PDF.",
+      name: "Ім'я клієнта · Компанія",
+      role: "Розробка брендбуку",
+    },
+  ],
+  formTitle: "Саме час перетворити бренд на систему",
+  formDescription:
+    "Заповніть форму, і ми розробимо брендбук, завдяки якому кожен, хто працює з вашим брендом, діятиме за єдиними правилами.",
+  faqTitle: "FAQ",
+  faq: [
+    {
+      question: "Що таке брендбук і навіщо він потрібен бізнесу?",
+      answer:
+        "Брендбук — це документ, у якому зібрані правила використання логотипа, кольорів, шрифтів, графіки та інших елементів бренду. Він допомагає зберігати єдиний стиль у всіх точках контакту з клієнтом незалежно від того, хто працює над створенням реклами, сайту, поліграфії чи контенту.",
+    },
+    {
+      question: "Які основні розділи та елементи має включати брендбук?",
+      answer:
+        "До брендбуку входять правила використання логотипа, фірмової палітри, шрифтів, графічних елементів та інших елементів айдентики.",
+    },
+    {
+      question: "Які етапи включає процес розробки брендбуку?",
+      answer:
+        "Розробка брендбуку починається з аналізу бізнесу, ринку та цільової аудиторії. Далі створюється або допрацьовується айдентика та описуються правила її використання. Після цього брендбук тестується та готується до передачі замовнику.",
+    },
+    {
+      question: "Скільки коштує розробка брендбуку і від чого залежить ціна?",
+      answer:
+        "Ціна розробки брендбуку в Києві в ZOND залежить від глибини ринкових досліджень, кількості творчих концепцій, числа елементів фірмового стилю, раундів правок, а також термінів реалізації проєкту.",
+    },
+    {
+      question: "Коли компанії потрібен брендбук, а коли його розробка не є необхідною?",
+      answer:
+        "Брендбук обов'язково потрібен, коли компанія масштабується, виходить на нові ринки, оновлює стиль або залучає нових підрядників. Без нього можна обійтися стартапам на етапі перевірки гіпотез та компаніям із незмінним локальним продуктом.",
+    },
+    {
+      question: "Які типові помилки виникають при створенні брендбуку і як їх уникнути?",
+      answer:
+        "Найпоширеніші помилки під час створення брендбуку — копіювання чужих рішень, перевантаження документа зайвою інформацією або, навпаки, відсутність чітких правил використання айдентики. Якісний брендбук має бути зрозумілим, практичним і створеним під реальні завдання конкретного бізнесу.",
+    },
+    {
+      question: "Чим відрізняється брендбук від логобука, гайдбука чи фірмового стилю?",
+      answer:
+        "Логобук описує правила використання логотипа. Гайдбук, або бренд-гайд, — це документ із правилами використання фірмового стилю компанії. Фірмовий стиль — це сукупність візуальних елементів бренду. Брендбук об'єднує все це в одному документі.",
+    },
+    {
+      question: "Як забезпечити ефективне використання брендбуку після його створення?",
+      answer:
+        "Після створення брендбук має стати основним документом для всіх, хто працює з брендом. Важливо використовувати його під час створення реклами, сайту, поліграфії, презентацій, упаковки та будь-яких інших матеріалів.",
+    },
+  ],
+  relatedTitle: "Суміжні послуги",
+  related: [
+    { title: "Брендинг", slug: "branding" },
+    { title: "Логотип", slug: "logo" },
+    { title: "Айдентика", slug: "identity" },
+  ],
+};
+
+const en: ServicePageContent = {
+  ...uk,
+  eyebrow: "Services / Brand book",
+  title: "Brand book",
+  titleAccent: "Brand book development",
+  lead:
+    "We develop brand books that unite brand rules into a single system and preserve consistency at every customer touchpoint.",
+  cta: "Discuss the project",
+  heroAlt: "Brand book development",
+  heroCaption: "From visual chaos to a clear brand system.",
+  metricsTitle: "Facts about ZOND",
+  stats: [
+    { value: "6", label: "years\nin design" },
+    { value: "6", label: "experts\non the team" },
+    { value: "50+", label: "brand books\ncreated" },
+    { value: "30+", label: "niches\nresearched" },
+    { value: "55", label: "brands\nin portfolio" },
+  ],
+  audienceTitle: "Who needs a brand book?",
+  audienceItems: [
+    { index: "01", title: "Those launching a new business" },
+    { index: "02", title: "Those with visual chaos" },
+    { index: "03", title: "Those scaling the business" },
+    { index: "04", title: "Those working with vendors" },
+  ],
+  includesTitle: "What is inside a brand book?",
+  includes: [
+    "Logo usage rules",
+    "Brand color guidelines",
+    "Typography system",
+    "Graphic element usage rules",
+    "Key media layout rules",
+    "Ready templates or media layouts",
+    "Organized working file package",
+  ],
+  casesTitle: "Our brand book cases",
+  processTitle: "How we organize a brand",
+  process: [
+    { index: "01", title: "Brand immersion", description: "We study the business, its goals, and existing identity.", duration: "1 day" },
+    { index: "02", title: "Niche research", description: "We analyze competitors, market trends, and audience needs.", duration: "2–3 days" },
+    { index: "03", title: "System organization", description: "We resolve contradictions and refine missing identity elements.", duration: "2–5 days" },
+    { index: "04", title: "Rules documentation", description: "We define how to use the logo, colors, fonts, graphics, and other brand elements.", duration: "3–7 days" },
+    { index: "05", title: "Testing", description: "We test the brand book across different media and contexts.", duration: "1–2 days" },
+    { index: "06", title: "Launch preparation", description: "We present the brand book, deliver files, and explain how to use the system.", duration: "1–2 days" },
+  ],
+  teamTitle: "Who leads the project",
+  whyTitle: "Why choose ZOND",
+  whyItems: [
+    { title: "We build strong identity", description: "We shape a style that conveys brand character, stands out among competitors, and is memorable." },
+    { title: "We create a working tool", description: "You get a brand book your team actually uses, not a document that gathers dust." },
+    { title: "We speak plainly", description: "We write so marketers, managers, and vendors can all understand it easily." },
+    { title: "We avoid templates", description: "Every brand book is built around your business, not a ready-made structure." },
+  ],
+  compareTitle: "Why ZOND, not a generator or freelancer?",
+  compareColumns: ["Criterion", "ZOND", "Freelance", "Generator (AI)"],
+  compareRows: [
+    { criterion: "Team", zond: "Art director, brand designer, strategist", freelance: "One person", generator: "Algorithm" },
+    { criterion: "Basis of the solution", zond: "Market research and brand DNA", freelance: "Executor's vision", generator: "Prompt" },
+    { criterion: "Result", zond: "Clear brand system with rules", freelance: "Explanations without a single standard", generator: "Random instructions without meaning" },
+  ],
+  reviewsTitle: "Reviews",
+  reviewsNote: "Sample texts for the layout. These are not real client reviews.",
+  reviews: [
+    { label: "Sample review 01", quote: "We needed to bring order to our brand visuals. The brand book helped the team and vendors work by unified rules without constant clarifications.", name: "Client name · Company", role: "Brand book and system" },
+    { label: "Sample review 02", quote: "The document is written in clear language — not just for designers. It is now easier to prepare new materials and control quality.", name: "Client name · Company", role: "Rules and templates" },
+    { label: "Sample review 03", quote: "The process was structured: from analysis to final file delivery. We received a working tool, not a formal PDF.", name: "Client name · Company", role: "Brand book development" },
+  ],
+  formTitle: "It's time to turn your brand into a system",
+  formDescription: "Fill out the form and we will develop a brand book so everyone working with your brand follows the same rules.",
+  faqTitle: "FAQ",
+  faq: [
+    { question: "What is a brand book and why does a business need it?", answer: "A brand book is a document that collects rules for using the logo, colors, fonts, graphics, and other brand elements. It helps maintain a consistent style across all customer touchpoints." },
+    { question: "What main sections and elements should a brand book include?", answer: "A brand book includes rules for using the logo, brand palette, fonts, graphic elements, and other identity components." },
+    { question: "What stages does brand book development include?", answer: "Development starts with business, market, and audience analysis. Then identity is created or refined and usage rules are documented. Finally, the brand book is tested and delivered." },
+    { question: "How much does brand book development cost and what affects the price?", answer: "The price depends on research depth, number of concepts, scope of identity elements, revision rounds, and project timeline." },
+    { question: "When does a company need a brand book and when is it not necessary?", answer: "A brand book is essential when scaling, entering new markets, updating style, or onboarding vendors. Startups testing hypotheses may not need one yet." },
+    { question: "What typical mistakes occur when creating a brand book?", answer: "Common mistakes include copying others' solutions, overloading the document, or lacking clear usage rules. A quality brand book should be clear, practical, and tailored to real business tasks." },
+    { question: "How does a brand book differ from a logobook, guidebook, or corporate style?", answer: "A logobook covers logo rules. A guidebook covers corporate style usage. Corporate style is the set of visual elements. A brand book unites all of this in one document." },
+    { question: "How to ensure effective use of a brand book after creation?", answer: "After creation, the brand book should become the main document for everyone working with the brand — for advertising, websites, print, presentations, packaging, and other materials." },
+  ],
+  relatedTitle: "Related services",
+  related: [
+    { title: "Branding", slug: "branding" },
+    { title: "Logo", slug: "logo" },
+    { title: "Identity", slug: "identity" },
+  ],
+};
+
+const ru: ServicePageContent = {
+  ...uk,
+  eyebrow: "Услуги / Брендбук",
+  title: "Брендбук",
+  titleAccent: "Разработка брендбука",
+  lead:
+    "Разрабатываем брендбуки, которые объединяют правила бренда в единую систему и сохраняют его целостность в каждой точке контакта с клиентом.",
+  cta: "Обсудить проект",
+  heroAlt: "Разработка брендбука",
+  heroCaption: "От хаоса в визуале — к чёткой системе бренда.",
+  metricsTitle: "Факты о ZOND",
+  stats: [
+    { value: "6", label: "лет\nв дизайне" },
+    { value: "6", label: "экспертов\nв команде" },
+    { value: "50+", label: "брендбуков\nсоздано" },
+    { value: "30+", label: "ниш\nисследовано" },
+    { value: "55", label: "брендов\nв портфолио" },
+  ],
+  audienceTitle: "Кому не обойтись без брендбука?",
+  audienceItems: [
+    { index: "01", title: "Тем, кто запускает новый бизнес" },
+    { index: "02", title: "Тем, у кого хаос в визуале" },
+    { index: "03", title: "Тем, кто масштабирует бизнес" },
+    { index: "04", title: "Тем, кто работает с подрядчиками" },
+  ],
+  includesTitle: "Что внутри брендбука?",
+  includes: [
+    "Правила использования логотипа",
+    "Правила работы с фирменными цветами",
+    "Система шрифтов и типографики",
+    "Правила использования графических элементов",
+    "Правила оформления ключевых носителей",
+    "Готовые шаблоны или макеты носителей",
+    "Упорядоченный комплект рабочих файлов",
+  ],
+  casesTitle: "Наши кейсы по разработке брендбуков",
+  processTitle: "Как мы упорядочиваем бренд",
+  process: [
+    { index: "01", title: "Погружаемся в бренд", description: "Изучаем бизнес, его цели и имеющуюся айдентику.", duration: "1 день" },
+    { index: "02", title: "Исследуем нишу", description: "Анализируем конкурентов, тренды рынка и потребности аудитории.", duration: "2–3 дня" },
+    { index: "03", title: "Упорядочиваем систему", description: "Устраняем противоречия и дорабатываем отсутствующие элементы айдентики.", duration: "2–5 дней" },
+    { index: "04", title: "Фиксируем правила", description: "Прописываем, как использовать логотип, цвета, шрифты, графику и другие элементы бренда.", duration: "3–7 дней" },
+    { index: "05", title: "Тестируем", description: "Проверяем брендбук на разных носителях и в разных контекстах.", duration: "1–2 дня" },
+    { index: "06", title: "Готовим бренд к запуску", description: "Презентуем брендбук, передаём файлы и объясняем, как пользоваться системой.", duration: "1–2 дня" },
+  ],
+  teamTitle: "Кто ведёт проект",
+  whyTitle: "Почему стоит выбрать ZOND",
+  whyItems: [
+    { title: "Создаём сильную айдентику", description: "Формируем стиль, который передаёт характер бренда, выделяет его среди конкурентов и запоминается." },
+    { title: "Разрабатываем рабочий инструмент", description: "Вы получаете брендбук, которым команда реально пользуется, а не оставляет пылиться в папке." },
+    { title: "Говорим простым языком", description: "Пишем документ так, чтобы в нём легко разобрались и маркетолог, и менеджер, и подрядчик." },
+    { title: "Не работаем по шаблонам", description: "Каждый брендбук строится вокруг вашего бизнеса, а не готовой структуры." },
+  ],
+  compareTitle: "Почему ZOND, а не генератор или фриланс?",
+  compareColumns: ["Критерий", "ZOND", "Фриланс", "Генератор (AI)"],
+  compareRows: [
+    { criterion: "Команда", zond: "Арт-директор, бренд-дизайнер, стратег", freelance: "Одна человек", generator: "Алгоритм" },
+    { criterion: "Основа решения", zond: "Исследование рынка и ДНК бренда", freelance: "Видение исполнителя", generator: "Промпт" },
+    { criterion: "Результат", zond: "Чёткая бренд-система с правилами", freelance: "Набор пояснений без единого стандарта", generator: "Случайные инструкции без смысла" },
+  ],
+  reviewsTitle: "Отзывы",
+  reviewsNote: "Демонстрационные тексты для макета. Не являются реальными отзывами клиентов.",
+  reviews: [
+    { label: "Пример отзыва 01", quote: "Нужно было навести порядок в визуале бренда. Брендбук помог команде и подрядчикам работать по единым правилам без постоянных уточнений.", name: "Имя клиента · Компания", role: "Брендбук и система" },
+    { label: "Пример отзыва 02", quote: "Документ написан понятным языком — не только для дизайнеров. Теперь проще готовить новые материалы и контролировать качество.", name: "Имя клиента · Компания", role: "Правила и шаблоны" },
+    { label: "Пример отзыва 03", quote: "Процесс был структурированным: от анализа до финальной передачи файлов. Получили рабочий инструмент, а не формальный PDF.", name: "Имя клиента · Компания", role: "Разработка брендбука" },
+  ],
+  formTitle: "Самое время превратить бренд в систему",
+  formDescription: "Заполните форму, и мы разработаем брендбук, благодаря которому каждый, кто работает с вашим брендом, будет действовать по единым правилам.",
+  faqTitle: "FAQ",
+  faq: [
+    { question: "Что такое брендбук и зачем он нужен бизнесу?", answer: "Брендбук — это документ, в котором собраны правила использования логотипа, цветов, шрифтов, графики и других элементов бренда. Он помогает сохранять единый стиль во всех точках контакта с клиентом." },
+    { question: "Какие основные разделы и элементы должен включать брендбук?", answer: "В брендбук входят правила использования логотипа, фирменной палитры, шрифтов, графических элементов и других элементов айдентики." },
+    { question: "Какие этапы включает процесс разработки брендбука?", answer: "Разработка начинается с анализа бизнеса, рынка и целевой аудитории. Далее создаётся или дорабатывается айдентика и описываются правила её использования. После этого брендбук тестируется и готовится к передаче заказчику." },
+    { question: "Сколько стоит разработка брендбука и от чего зависит цена?", answer: "Цена зависит от глубины рыночных исследований, количества творческих концепций, числа элементов фирменного стиля, раундов правок и сроков реализации проекта." },
+    { question: "Когда компании нужен брендбук, а когда его разработка не обязательна?", answer: "Брендбук необходим при масштабировании, выходе на новые рынки, обновлении стиля или привлечении подрядчиков. Без него можно обойтись стартапам на этапе проверки гипотез." },
+    { question: "Какие типичные ошибки возникают при создании брендбука?", answer: "Частые ошибки — копирование чужих решений, перегрузка документа лишней информацией или отсутствие чётких правил. Качественный брендбук должен быть понятным, практичным и созданным под реальные задачи бизнеса." },
+    { question: "Чем отличается брендбук от логобука, гайдбука или фирменного стиля?", answer: "Логобук описывает правила использования логотипа. Гайдбук — правила фирменного стиля. Фирменный стиль — совокупность визуальных элементов. Брендбук объединяет всё это в одном документе." },
+    { question: "Как обеспечить эффективное использование брендбука после создания?", answer: "После создания брендбук должен стать основным документом для всех, кто работает с брендом — при создании рекламы, сайта, полиграфии, презентаций, упаковки и других материалов." },
+  ],
+  relatedTitle: "Смежные услуги",
+  related: [
+    { title: "Брендинг", slug: "branding" },
+    { title: "Логотип", slug: "logo" },
+    { title: "Айдентика", slug: "identity" },
+  ],
+};
+
+export const brandbookPage: Record<Locale, ServicePageContent> = { uk, en, ru };

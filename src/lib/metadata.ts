@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { localeMeta, type Locale } from "@/i18n/config";
-import { getAlternateLanguages, getLocalizedUrl } from "@/i18n/routing";
+import {
+  getAlternateLanguages,
+  getCaseDetailPath,
+  getLocalizedUrl,
+  getServiceDetailPath,
+} from "@/i18n/routing";
 import type { Dictionary } from "@/i18n/dictionary";
 import { media } from "@/lib/media";
 import { getSiteUrl, siteConfig } from "@/lib/site";
@@ -52,7 +57,16 @@ export function createServiceMetadata(
   slug: string,
   meta: { title: string; description: string },
 ): Metadata {
-  return createPathMetadata(locale, `/services/${slug}`, meta);
+  return createPathMetadata(locale, getServiceDetailPath(locale, slug), meta);
+}
+
+export function createCaseMetadata(
+  locale: Locale,
+  slug: string,
+  meta: { title: string; description: string },
+  image?: string,
+): Metadata {
+  return createPathMetadata(locale, getCaseDetailPath(locale, slug), meta, image);
 }
 
 export function createPathMetadata(
