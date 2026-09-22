@@ -2,7 +2,7 @@ import CtaPanel from "@/components/CtaPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ServicesAbout from "@/components/ServicesAbout";
-import ServicesIndex from "@/components/ServicesIndex";
+import Services from "@/components/Services";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { servicesIndexMeta } from "@/i18n/services";
@@ -38,7 +38,7 @@ export default async function ServicesIndexPage({
     <>
       <Header locale={locale} dictionary={dictionary} />
       <main className="sp">
-        <ServicesIndex locale={locale} />
+        <Services locale={locale} dictionary={dictionary} />
         <ServicesAbout locale={locale} />
         <section className="sp-cta">
           <div className="wrap">

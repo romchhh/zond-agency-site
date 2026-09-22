@@ -2,16 +2,18 @@
 
 import MediaImage from "@/components/MediaImage";
 import Image from "next/image";
+import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
 import {
   createContext,
   useCallback,
   useContext,
   useEffect,
-  useRef,
   useState,
   type ReactNode,
 } from "react";
 import { createPortal } from "react-dom";
+
+const SCROLL_LOCK_CLASS = "lightbox-open";
 
 type ArticleGalleryContextValue = {
   openAt: (index: number) => void;
@@ -34,29 +36,6 @@ function isUnoptimizedMedia(src: string): boolean {
   return src.endsWith(".gif");
 }
 
-function lockPageScroll() {
-  const scrollY = window.scrollY;
-  document.documentElement.classList.add("lightbox-open");
-  document.body.classList.add("lightbox-open");
-  document.body.style.position = "fixed";
-  document.body.style.top = `-${scrollY}px`;
-  document.body.style.left = "0";
-  document.body.style.right = "0";
-  document.body.style.width = "100%";
-  return scrollY;
-}
-
-function unlockPageScroll(scrollY: number) {
-  document.documentElement.classList.remove("lightbox-open");
-  document.body.classList.remove("lightbox-open");
-  document.body.style.position = "";
-  document.body.style.top = "";
-  document.body.style.left = "";
-  document.body.style.right = "";
-  document.body.style.width = "";
-  window.scrollTo(0, scrollY);
-}
-
 type ArticleGalleryProviderProps = {
   images: string[];
   children: ReactNode;
@@ -65,8 +44,6 @@ type ArticleGalleryProviderProps = {
 export function ArticleGalleryProvider({ images, children }: ArticleGalleryProviderProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
-  const scrollLockRef = useRef(0);
-
   const openAt = useCallback((index: number) => {
     if (index < 0 || index >= images.length) return;
     setActiveIndex(index);
@@ -86,7 +63,7 @@ export function ArticleGalleryProvider({ images, children }: ArticleGalleryProvi
   useEffect(() => {
     if (activeIndex === null) return;
 
-    scrollLockRef.current = lockPageScroll();
+    lockBodyScroll(SCROLL_LOCK_CLASS);
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") close();
@@ -98,7 +75,7 @@ export function ArticleGalleryProvider({ images, children }: ArticleGalleryProvi
 
     return () => {
       window.removeEventListener("keydown", onKeyDown);
-      unlockPageScroll(scrollLockRef.current);
+      unlockBodyScroll(SCROLL_LOCK_CLASS);
     };
   }, [activeIndex, close, goTo]);
 

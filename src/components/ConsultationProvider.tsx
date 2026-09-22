@@ -7,18 +7,20 @@ import {
   maskContactInput,
   maskEmailInput,
 } from "@/lib/input-masks";
+import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
 import { siteConfig } from "@/lib/site";
 import {
   createContext,
   useCallback,
   useContext,
   useEffect,
-  useRef,
   useState,
   type FormEvent,
   type ReactNode,
 } from "react";
 import { createPortal } from "react-dom";
+
+const SCROLL_LOCK_CLASS = "consultation-open";
 
 type ConsultationContextValue = {
   openConsultation: () => void;
@@ -40,29 +42,6 @@ type ConsultationProviderProps = {
   children: ReactNode;
 };
 
-function lockScroll() {
-  const scrollY = window.scrollY;
-  document.documentElement.classList.add("consultation-open");
-  document.body.classList.add("consultation-open");
-  document.body.style.position = "fixed";
-  document.body.style.top = `-${scrollY}px`;
-  document.body.style.left = "0";
-  document.body.style.right = "0";
-  document.body.style.width = "100%";
-  return scrollY;
-}
-
-function unlockScroll(scrollY: number) {
-  document.documentElement.classList.remove("consultation-open");
-  document.body.classList.remove("consultation-open");
-  document.body.style.position = "";
-  document.body.style.top = "";
-  document.body.style.left = "";
-  document.body.style.right = "";
-  document.body.style.width = "";
-  window.scrollTo(0, scrollY);
-}
-
 export default function ConsultationProvider({
   dictionary,
   children,
@@ -79,8 +58,6 @@ export default function ConsultationProvider({
     contact?: string;
     email?: string;
   }>({});
-  const scrollLockRef = useRef(0);
-
   const resetForm = useCallback(() => {
     setName("");
     setContact("");
@@ -105,7 +82,7 @@ export default function ConsultationProvider({
   useEffect(() => {
     if (!open) return;
 
-    scrollLockRef.current = lockScroll();
+    lockBodyScroll(SCROLL_LOCK_CLASS);
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") closeConsultation();
@@ -115,7 +92,7 @@ export default function ConsultationProvider({
 
     return () => {
       window.removeEventListener("keydown", onKeyDown);
-      unlockScroll(scrollLockRef.current);
+      unlockBodyScroll(SCROLL_LOCK_CLASS);
     };
   }, [closeConsultation, open]);
 

@@ -4035,6 +4035,7 @@ html.lightbox-open,
 body.lightbox-open {
   overflow: hidden;
   overscroll-behavior: none;
+  touch-action: none;
 }
 
 body.lightbox-open .header {
@@ -4433,6 +4434,7 @@ html.consultation-open,
 body.consultation-open {
   overflow: hidden;
   overscroll-behavior: none;
+  touch-action: none;
 }
 
 body.consultation-open .header {

@@ -33,7 +33,6 @@ export default function Header({ locale, dictionary }: HeaderProps) {
   useEffect(() => {
     if (!menuOpen) return;
 
-    const scrollY = window.scrollY;
     const { style } = document.body;
 
     style.overflow = "hidden";
@@ -42,7 +41,6 @@ export default function Header({ locale, dictionary }: HeaderProps) {
     return () => {
       style.overflow = "";
       style.touchAction = "";
-      window.scrollTo(0, scrollY);
     };
   }, [menuOpen]);
 
