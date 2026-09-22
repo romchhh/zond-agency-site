@@ -131,6 +131,10 @@ export type Dictionary = {
     lead: string;
     backToCases: string;
     relatedCases: string;
+    moreCasesKicker: string;
+    moreCasesTitle: string;
+    prevCase: string;
+    nextCase: string;
   };
   contactPage: {
     title: string;

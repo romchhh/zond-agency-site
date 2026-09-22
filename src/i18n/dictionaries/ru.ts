@@ -178,6 +178,10 @@ const ru: Dictionary = {
     lead: "Наши реализованные проекты дизайн-студии ZOND.",
     backToCases: "Вернуться к проектам",
     relatedCases: "Другие проекты",
+    moreCasesKicker: "ПРОДОЛЖАЕМ ЗНАКОМСТВО",
+    moreCasesTitle: "Ещё больше характера.",
+    prevCase: "← Предыдущий кейс",
+    nextCase: "Следующий кейс →",
   },
 };
 

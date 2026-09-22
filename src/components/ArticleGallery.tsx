@@ -19,6 +19,14 @@ type ArticleGalleryContextValue = {
 
 const ArticleGalleryContext = createContext<ArticleGalleryContextValue | null>(null);
 
+export function useArticleGallery() {
+  const context = useContext(ArticleGalleryContext);
+  if (!context) {
+    throw new Error("useArticleGallery must be used within ArticleGalleryProvider");
+  }
+  return context;
+}
+
 const GALLERY_IMAGE_SIZES =
   "(max-width: 380px) 100vw, (max-width: 700px) 50vw, (max-width: 1100px) 50vw, 25vw";
 

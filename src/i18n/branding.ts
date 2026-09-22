@@ -10,16 +10,10 @@ export type BrandingPageContent = {
   heroCaption: string;
   heroAlt: string;
   metricsTitle: string;
-  aboutEyebrow: string;
-  aboutTitle: string;
-  about: string[];
   includesEyebrow: string;
   includesTitle: string;
-  gallery: Array<{ src: string; alt: string; caption: string }>;
-  items: Array<{ index: string; title: string; description: string }>;
-  casesEyebrow: string;
+  items: Array<{ index: string; title: string; description: string; image: string; alt: string }>;
   casesTitle: string;
-  casesCopy: string[];
   reviewsEyebrow: string;
   reviewsTitle: string;
   reviewsNote: string;
@@ -39,10 +33,6 @@ export type BrandingPageContent = {
   needEyebrow: string;
   needTitle: string;
   needs: Array<{ index: string; title: string; description: string }>;
-  whyEyebrow: string;
-  whyTitle: string;
-  why: Array<{ title: string; description: string }>;
-  peopleAlt: string[];
   receiveEyebrow: string;
   receiveTitle: string;
   receive: string[];
@@ -54,12 +44,38 @@ export type BrandingPageContent = {
   finalCopy: string;
 };
 
-const gallery = [
-  { src: "/branding/logo-sketches.png", altKey: "sketches" },
-  { src: "/branding/color-palette.png", altKey: "palette" },
-  { src: "/branding/brand-stationery.png", altKey: "stationery" },
-  { src: "/branding/brand-guidelines.png", altKey: "guidelines" },
+const brandingIncludeImages = {
+  workshop: "/branding/branding-workshop.png",
+  sketches: "/branding/logo-sketches.png",
+  palette: "/branding/color-palette.png",
+  stationery: "/branding/brand-stationery.png",
+  guidelines: "/branding/brand-guidelines.png",
+} as const;
+
+const brandingIncludeImageOrder = [
+  brandingIncludeImages.workshop,
+  brandingIncludeImages.palette,
+  brandingIncludeImages.sketches,
+  brandingIncludeImages.sketches,
+  brandingIncludeImages.stationery,
+  brandingIncludeImages.guidelines,
+  brandingIncludeImages.stationery,
+  brandingIncludeImages.guidelines,
 ] as const;
+
+type IncludeItemInput = {
+  index: string;
+  title: string;
+  description: string;
+  alt: string;
+};
+
+function withBrandingImages(items: IncludeItemInput[]) {
+  return items.map((item, index) => ({
+    ...item,
+    image: brandingIncludeImageOrder[index] ?? brandingIncludeImages.workshop,
+  }));
+}
 
 const products = [
   { src: "/branding/product-skincare.png", key: "skincare" },
@@ -86,37 +102,19 @@ const uk: BrandingPageContent = {
   heroCaption: "Від першої ідеї — до цілісної системи.",
   heroAlt: "Робота над візуальною системою бренду: ескізи, палітра та друковані носії",
   metricsTitle: "Наші переваги в цифрах",
-  aboutEyebrow: "Про брендинг",
-  aboutTitle: "Створюємо не просто логотип. Створюємо бренд.",
-  about: [
-    "Сильний бренд — це система, у якій стратегія, позиціонування, назва, візуальний стиль і комунікація працюють як одне ціле.",
-    "У ZOND ми починаємо не з дизайну, а з розуміння бізнесу, продукту, аудиторії та конкурентного середовища.",
-    "Так з’являється бренд, який не просто виглядає актуально, а має власний характер, зрозумілу ідею та впізнаваний образ.",
-  ],
   includesEyebrow: "Що входить",
   includesTitle: "Що входить у розробку бренду",
-  gallery: [
-    { src: gallery[0].src, alt: "Ескізи логотипу", caption: "Пошук форми" },
-    { src: gallery[1].src, alt: "Підбір кольорів бренду", caption: "Колір і типографіка" },
-    { src: gallery[2].src, alt: "Фірмові друковані носії", caption: "Айдентика в деталях" },
-    { src: gallery[3].src, alt: "Розворот брендбуку", caption: "Правила бренду" },
-  ],
-  items: [
-    { index: "01", title: "Стратегія бренду", description: "Досліджуємо ринок, конкурентів, аудиторію та бізнес-контекст. Визначаємо основу, на якій буде будуватися бренд." },
-    { index: "02", title: "Позиціонування", description: "Формуємо ключову ідею бренду, його цінність для аудиторії, характер та відмінності від конкурентів." },
-    { index: "03", title: "Неймінг", description: "Створюємо назву, яка відповідає позиціонуванню, легко сприймається та може розвиватися разом із бізнесом." },
-    { index: "04", title: "Логотип", description: "Розробляємо візуальний знак, який відображає характер бренду та залишається актуальним незалежно від короткострокових дизайн-трендів." },
-    { index: "05", title: "Айдентика", description: "Створюємо систему візуальних елементів: кольори, типографіку, графіку, композиційні принципи, фотостиль та інші носії бренду." },
-    { index: "06", title: "Брендбук", description: "Систематизуємо правила використання бренду, щоб його комунікація залишалася цілісною у digital, print, рекламі, соцмережах та інших каналах." },
-    { index: "07", title: "Слоган і комунікація", description: "Формуємо повідомлення та принципи комунікації, які допомагають бренду говорити з аудиторією послідовно й упізнавано." },
-    { index: "08", title: "Персонаж бренду", description: "За потреби створюємо бренд-персонажа, який додає комунікації емоційності та допомагає вибудовувати сильніший зв’язок з аудиторією." },
-  ],
-  casesEyebrow: "Реальні результати",
-  casesTitle: "Брендинг, який працює в реальному бізнесі",
-  casesCopy: [
-    "Для нас бренд — не презентація, яка закінчується на логотипі.",
-    "Ми створюємо систему, яку можна масштабувати на сайт, соціальні мережі, упаковку, рекламу, простір, друковані матеріали та нові продукти.",
-  ],
+  items: withBrandingImages([
+    { index: "01", title: "Стратегія бренду", description: "Досліджуємо ринок, конкурентів, аудиторію та бізнес-контекст. Визначаємо основу, на якій буде будуватися бренд.", alt: "Стратегія бренду" },
+    { index: "02", title: "Позиціонування", description: "Формуємо ключову ідею бренду, його цінність для аудиторії, характер та відмінності від конкурентів.", alt: "Позиціонування бренду" },
+    { index: "03", title: "Неймінг", description: "Створюємо назву, яка відповідає позиціонуванню, легко сприймається та може розвиватися разом із бізнесом.", alt: "Неймінг бренду" },
+    { index: "04", title: "Логотип", description: "Розробляємо візуальний знак, який відображає характер бренду та залишається актуальним незалежно від короткострокових дизайн-трендів.", alt: "Розробка логотипу" },
+    { index: "05", title: "Айдентика", description: "Створюємо систему візуальних елементів: кольори, типографіку, графіку, композиційні принципи, фотостиль та інші носії бренду.", alt: "Візуальна айдентика" },
+    { index: "06", title: "Брендбук", description: "Систематизуємо правила використання бренду, щоб його комунікація залишалася цілісною у digital, print, рекламі, соцмережах та інших каналах.", alt: "Брендбук" },
+    { index: "07", title: "Слоган і комунікація", description: "Формуємо повідомлення та принципи комунікації, які допомагають бренду говорити з аудиторією послідовно й упізнавано.", alt: "Слоган і комунікація бренду" },
+    { index: "08", title: "Персонаж бренду", description: "За потреби створюємо бренд-персонажа, який додає комунікації емоційності та допомагає вибудовувати сильніший зв’язок з аудиторією.", alt: "Персонаж бренду" },
+  ]),
+  casesTitle: "Реалізовані кейси",
   reviewsEyebrow: "Досвід співпраці",
   reviewsTitle: "Відгуки клієнтів",
   reviewsNote: "Демонстраційні тексти для макета. Не є реальними відгуками клієнтів.",
@@ -154,19 +152,6 @@ const uk: BrandingPageContent = {
     { index: "02", title: "Ребрендинг", description: "Оновлюємо бренд, якщо старий образ більше не відповідає бізнесу, продукту або аудиторії." },
     { index: "03", title: "Запуск нового продукту", description: "Створюємо окрему айдентику, sub-brand або новий бренд у межах існуючого бізнесу." },
     { index: "04", title: "Масштабування", description: "Систематизуємо бренд перед виходом на нові ринки, запуском нових напрямів або активним ростом компанії." },
-  ],
-  whyEyebrow: "Чому ZOND",
-  whyTitle: "Чому ZOND",
-  why: [
-    { title: "Стратегія + дизайн", description: "Поєднуємо маркетингове мислення та сильну візуальну складову." },
-    { title: "Повний цикл", description: "Від дослідження та позиціонування до айдентики, брендбуку і запуску." },
-    { title: "Не працюємо за шаблоном", description: "Рішення створюються навколо конкретного бізнесу, продукту та його аудиторії." },
-    { title: "Бренд, який можна масштабувати", description: "Одразу думаємо про те, як система працюватиме на сайті, у рекламі, соцмережах, упаковці, просторі та інших носіях." },
-  ],
-  peopleAlt: [
-    "Усміхнені колеги обговорюють дизайн",
-    "Підприємиця тримає пакування продукту",
-    "Колеги радіють спільному результату",
   ],
   receiveEyebrow: "Результат",
   receiveTitle: "Що ви отримуєте",
@@ -207,37 +192,19 @@ const en: BrandingPageContent = {
   heroCaption: "From the first idea to a complete system.",
   heroAlt: "Work on a brand visual system: sketches, palette, and printed media",
   metricsTitle: "Our advantages in numbers",
-  aboutEyebrow: "About branding",
-  aboutTitle: "We don’t just make a logo. We build a brand.",
-  about: [
-    "A strong brand is a system where strategy, positioning, name, visual style, and communication work as one.",
-    "At ZOND we start not with design, but with an understanding of the business, product, audience, and competitive landscape.",
-    "That’s how a brand appears that doesn’t just look current, but has its own character, a clear idea, and a recognizable image.",
-  ],
   includesEyebrow: "What’s included",
   includesTitle: "What’s included in brand development",
-  gallery: [
-    { src: gallery[0].src, alt: "Logo sketches", caption: "Form exploration" },
-    { src: gallery[1].src, alt: "Brand color palette", caption: "Color and typography" },
-    { src: gallery[2].src, alt: "Brand stationery", caption: "Identity in detail" },
-    { src: gallery[3].src, alt: "Brand book spread", caption: "Brand rules" },
-  ],
-  items: [
-    { index: "01", title: "Brand strategy", description: "We research the market, competitors, audience, and business context to define the foundation of the brand." },
-    { index: "02", title: "Positioning", description: "We shape the core idea, value for the audience, character, and differences from competitors." },
-    { index: "03", title: "Naming", description: "We create a name that matches the positioning, is easy to perceive, and can grow with the business." },
-    { index: "04", title: "Logo", description: "We design a visual mark that reflects the brand character and stays relevant beyond short-term trends." },
-    { index: "05", title: "Identity", description: "We build a visual system: colors, typography, graphics, composition, photo style, and other brand media." },
-    { index: "06", title: "Brand book", description: "We systematize brand usage rules so communication stays consistent across digital, print, ads, and social." },
-    { index: "07", title: "Slogan and communication", description: "We form messages and communication principles that help the brand speak consistently and recognizably." },
-    { index: "08", title: "Brand character", description: "When needed, we create a brand character that adds emotion and a stronger connection with the audience." },
-  ],
-  casesEyebrow: "Real results",
-  casesTitle: "Branding that works in real business",
-  casesCopy: [
-    "For us a brand is not a presentation that ends with a logo.",
-    "We create a system that can scale to a website, social media, packaging, advertising, space, print, and new products.",
-  ],
+  items: withBrandingImages([
+    { index: "01", title: "Brand strategy", description: "We research the market, competitors, audience, and business context to define the foundation of the brand.", alt: "Brand strategy" },
+    { index: "02", title: "Positioning", description: "We shape the core idea, value for the audience, character, and differences from competitors.", alt: "Brand positioning" },
+    { index: "03", title: "Naming", description: "We create a name that matches the positioning, is easy to perceive, and can grow with the business.", alt: "Brand naming" },
+    { index: "04", title: "Logo", description: "We design a visual mark that reflects the brand character and stays relevant beyond short-term trends.", alt: "Logo design" },
+    { index: "05", title: "Identity", description: "We build a visual system: colors, typography, graphics, composition, photo style, and other brand media.", alt: "Visual identity" },
+    { index: "06", title: "Brand book", description: "We systematize brand usage rules so communication stays consistent across digital, print, ads, and social.", alt: "Brand book" },
+    { index: "07", title: "Slogan and communication", description: "We form messages and communication principles that help the brand speak consistently and recognizably.", alt: "Slogan and communication" },
+    { index: "08", title: "Brand character", description: "When needed, we create a brand character that adds emotion and a stronger connection with the audience.", alt: "Brand character" },
+  ]),
+  casesTitle: "Completed cases",
   reviewsEyebrow: "Collaboration",
   reviewsTitle: "Client reviews",
   reviewsNote: "Sample texts for the layout. These are not real client reviews.",
@@ -275,19 +242,6 @@ const en: BrandingPageContent = {
     { index: "02", title: "Rebranding", description: "We update the brand when the old image no longer matches the business, product, or audience." },
     { index: "03", title: "Launching a new product", description: "We create a separate identity, sub-brand, or a new brand within an existing business." },
     { index: "04", title: "Scaling", description: "We systematize the brand before entering new markets, launching new directions, or active growth." },
-  ],
-  whyEyebrow: "Why ZOND",
-  whyTitle: "Why ZOND",
-  why: [
-    { title: "Strategy + design", description: "We combine marketing thinking with a strong visual layer." },
-    { title: "Full cycle", description: "From research and positioning to identity, brand book, and launch." },
-    { title: "No templates", description: "Solutions are built around a specific business, product, and audience." },
-    { title: "A brand you can scale", description: "We think from the start about how the system will work on the website, in ads, social, packaging, space, and other media." },
-  ],
-  peopleAlt: [
-    "Colleagues discussing design",
-    "Founder holding product packaging",
-    "Team celebrating a shared result",
   ],
   receiveEyebrow: "Result",
   receiveTitle: "What you get",
@@ -328,37 +282,19 @@ const ru: BrandingPageContent = {
   heroCaption: "От первой идеи — к целостной системе.",
   heroAlt: "Работа над визуальной системой бренда: эскизы, палитра и печатные носители",
   metricsTitle: "Наши преимущества в цифрах",
-  aboutEyebrow: "О брендинге",
-  aboutTitle: "Создаём не просто логотип. Создаём бренд.",
-  about: [
-    "Сильный бренд — это система, в которой стратегия, позиционирование, название, визуальный стиль и коммуникация работают как одно целое.",
-    "В ZOND мы начинаем не с дизайна, а с понимания бизнеса, продукта, аудитории и конкурентной среды.",
-    "Так появляется бренд, который не просто выглядит актуально, а имеет собственный характер, понятную идею и узнаваемый образ.",
-  ],
   includesEyebrow: "Что входит",
   includesTitle: "Что входит в разработку бренда",
-  gallery: [
-    { src: gallery[0].src, alt: "Эскизы логотипа", caption: "Поиск формы" },
-    { src: gallery[1].src, alt: "Подбор цветов бренда", caption: "Цвет и типографика" },
-    { src: gallery[2].src, alt: "Фирменные печатные носители", caption: "Айдентика в деталях" },
-    { src: gallery[3].src, alt: "Разворот брендбука", caption: "Правила бренда" },
-  ],
-  items: [
-    { index: "01", title: "Стратегия бренда", description: "Исследуем рынок, конкурентов, аудиторию и бизнес-контекст. Определяем основу, на которой будет строиться бренд." },
-    { index: "02", title: "Позиционирование", description: "Формируем ключевую идею бренда, его ценность для аудитории, характер и отличия от конкурентов." },
-    { index: "03", title: "Нейминг", description: "Создаём название, которое соответствует позиционированию, легко воспринимается и может развиваться вместе с бизнесом." },
-    { index: "04", title: "Логотип", description: "Разрабатываем визуальный знак, который отражает характер бренда и остаётся актуальным вне краткосрочных трендов." },
-    { index: "05", title: "Айдентика", description: "Создаём систему визуальных элементов: цвета, типографику, графику, композиционные принципы, фотостиль и другие носители бренда." },
-    { index: "06", title: "Брендбук", description: "Систематизируем правила использования бренда, чтобы коммуникация оставалась целостной в digital, print, рекламе и соцсетях." },
-    { index: "07", title: "Слоган и коммуникация", description: "Формируем сообщения и принципы коммуникации, которые помогают бренду говорить с аудиторией последовательно и узнаваемо." },
-    { index: "08", title: "Персонаж бренда", description: "При необходимости создаём бренд-персонажа, который добавляет коммуникации эмоциональности и помогает выстраивать более сильную связь с аудиторией." },
-  ],
-  casesEyebrow: "Реальные результаты",
-  casesTitle: "Брендинг, который работает в реальном бизнесе",
-  casesCopy: [
-    "Для нас бренд — не презентация, которая заканчивается на логотипе.",
-    "Мы создаём систему, которую можно масштабировать на сайт, социальные сети, упаковку, рекламу, пространство, печатные материалы и новые продукты.",
-  ],
+  items: withBrandingImages([
+    { index: "01", title: "Стратегия бренда", description: "Исследуем рынок, конкурентов, аудиторию и бизнес-контекст. Определяем основу, на которой будет строиться бренд.", alt: "Стратегия бренда" },
+    { index: "02", title: "Позиционирование", description: "Формируем ключевую идею бренда, его ценность для аудитории, характер и отличия от конкурентов.", alt: "Позиционирование бренда" },
+    { index: "03", title: "Нейминг", description: "Создаём название, которое соответствует позиционированию, легко воспринимается и может развиваться вместе с бизнесом.", alt: "Нейминг бренда" },
+    { index: "04", title: "Логотип", description: "Разрабатываем визуальный знак, который отражает характер бренда и остаётся актуальным вне краткосрочных трендов.", alt: "Разработка логотипа" },
+    { index: "05", title: "Айдентика", description: "Создаём систему визуальных элементов: цвета, типографику, графику, композиционные принципы, фотостиль и другие носители бренда.", alt: "Визуальная айдентика" },
+    { index: "06", title: "Брендбук", description: "Систематизируем правила использования бренда, чтобы коммуникация оставалась целостной в digital, print, рекламе и соцсетях.", alt: "Брендбук" },
+    { index: "07", title: "Слоган и коммуникация", description: "Формируем сообщения и принципы коммуникации, которые помогают бренду говорить с аудиторией последовательно и узнаваемо.", alt: "Слоган и коммуникация бренда" },
+    { index: "08", title: "Персонаж бренда", description: "При необходимости создаём бренд-персонажа, который добавляет коммуникации эмоциональности и помогает выстраивать более сильную связь с аудиторией.", alt: "Персонаж бренда" },
+  ]),
+  casesTitle: "Реализованные кейсы",
   reviewsEyebrow: "Опыт сотрудничества",
   reviewsTitle: "Отзывы клиентов",
   reviewsNote: "Демонстрационные тексты для макета. Не являются реальными отзывами клиентов.",
@@ -396,19 +332,6 @@ const ru: BrandingPageContent = {
     { index: "02", title: "Ребрендинг", description: "Обновляем бренд, если старый образ больше не соответствует бизнесу, продукту или аудитории." },
     { index: "03", title: "Запуск нового продукта", description: "Создаём отдельную айдентику, sub-brand или новый бренд в рамках существующего бизнеса." },
     { index: "04", title: "Масштабирование", description: "Систематизируем бренд перед выходом на новые рынки, запуском новых направлений или активным ростом компании." },
-  ],
-  whyEyebrow: "Почему ZOND",
-  whyTitle: "Почему ZOND",
-  why: [
-    { title: "Стратегия + дизайн", description: "Соединяем маркетинговое мышление и сильную визуальную составляющую." },
-    { title: "Полный цикл", description: "От исследования и позиционирования до айдентики, брендбука и запуска." },
-    { title: "Не работаем по шаблону", description: "Решения создаются вокруг конкретного бизнеса, продукта и его аудитории." },
-    { title: "Бренд, который можно масштабировать", description: "Сразу думаем о том, как система будет работать на сайте, в рекламе, соцсетях, упаковке, пространстве и других носителях." },
-  ],
-  peopleAlt: [
-    "Коллеги обсуждают дизайн",
-    "Предпринимательница держит упаковку продукта",
-    "Команда радуется общему результату",
   ],
   receiveEyebrow: "Результат",
   receiveTitle: "Что вы получаете",

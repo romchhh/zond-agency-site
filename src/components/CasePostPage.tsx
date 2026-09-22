@@ -1,15 +1,19 @@
 import { ArticleGalleryProvider } from "@/components/ArticleGallery";
-import CaseCard from "@/components/CaseCard";
-import CaseMarkdown from "@/components/CaseMarkdown";
+import CaseVisualBody from "@/components/CaseVisualBody";
 import CtaPanel from "@/components/CtaPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import PostDetailLayout from "@/components/PostDetailLayout";
+import CaseVisualHero from "@/components/CaseVisualHero";
+import MediaImage from "@/components/MediaImage";
 import type { CaseItem } from "@/i18n/cases";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalePath } from "@/i18n/routing";
-import { extractArticleImagePaths } from "@/lib/article-blocks";
+import {
+  buildCaseVisualBlocks,
+  collectCaseVisualImages,
+  getCaseVisualDefaults,
+} from "@/lib/case-visual";
 import {
   caseMediaSrc,
   ensureCaseBodyMedia,
@@ -25,6 +29,10 @@ type CasePostPageProps = {
   relatedCases: CaseItem[];
 };
 
+function splitLines(value: string): string[] {
+  return value.split("\n").filter(Boolean);
+}
+
 export default function CasePostPage({
   locale,
   dictionary,
@@ -33,60 +41,112 @@ export default function CasePostPage({
 }: CasePostPageProps) {
   const copy = dictionary.cases;
   const casesPath = getLocalePath(locale, "/cases");
-  const { hero, body } = extractCaseHeroMedia(
-    ensureCaseBodyMedia(caseItem.body, caseItem.media ?? []),
+  const preparedBody = ensureCaseBodyMedia(caseItem.body, caseItem.media ?? []);
+  const { hero, body } = extractCaseHeroMedia(preparedBody);
+  const blocks = buildCaseVisualBlocks(caseItem, body, locale, hero?.src ?? null);
+  const defaults = getCaseVisualDefaults(
+    locale,
+    caseItem.description,
+    caseItem.tagline,
+    caseItem.serviceTag,
   );
-  const galleryImages = extractArticleImagePaths(body).map((path) => caseMediaSrc(path));
+  const galleryImages = collectCaseVisualImages(hero?.src ?? null, blocks);
+  const heroCaption = caseItem.slug === "home-hub" ? "Home Hub — концепція фасаду шоуруму" : caseItem.title;
 
   return (
     <>
       <Header locale={locale} dictionary={dictionary} />
-      <main className="sp case-post-page">
-        <PostDetailLayout
-          breadcrumbs={[
-            { label: copy.title, href: casesPath },
-            { label: caseItem.title },
-          ]}
-          title={caseItem.title}
-          description={caseItem.description}
-          hero={hero}
-          heroAlt={caseItem.title}
-          heroUnoptimized={hero ? isAnimatedCaseMedia(hero.src) : false}
-          footer={
-            <section className="sp-cta">
-              <div className="wrap">
-                <CtaPanel dictionary={dictionary} />
+      <main className="sp case-visual-page visual balanced">
+        <ArticleGalleryProvider images={galleryImages}>
+          <div className="wrap container">
+            <section className="hero">
+              <nav className="breadcrumbs sp-eyebrow" aria-label="Breadcrumb">
+                <Link href={casesPath}>{copy.title}</Link>
+                <span aria-hidden="true"> / </span>
+                <span>{caseItem.title}</span>
+              </nav>
+
+              <div className="hero-heading">
+                <h1>
+                  {caseItem.title}
+                  <span className="orange" aria-hidden="true">↗</span>
+                </h1>
+                <div className="hero-intro">
+                  <p>
+                    {splitLines(defaults.tagline).map((line, index, lines) => (
+                      <span key={index}>
+                        {line}
+                        {index < lines.length - 1 ? <br /> : null}
+                      </span>
+                    ))}
+                  </p>
+                  <span className="hero-tag">{defaults.serviceTag}</span>
+                </div>
               </div>
+
+              {hero ? (
+                <CaseVisualHero hero={hero} title={caseItem.title} caption={heroCaption} />
+              ) : null}
             </section>
-          }
-        >
-          <section className="sp-section case-post-body">
-            <ArticleGalleryProvider images={galleryImages}>
-              <CaseMarkdown content={body} />
-            </ArticleGalleryProvider>
-            <div className="wrap">
-              <div className="case-post-back">
-                <Link href={casesPath} className="sp-btn">
-                  <span>{copy.backToCases}</span>
-                  <span className="sp-btn-icon" aria-hidden="true">↗</span>
-                </Link>
-              </div>
+
+            <CaseVisualBody blocks={blocks} imageOffset={hero ? 1 : 0} />
+
+            <div className="case-visual-back">
+              <Link href={casesPath} className="sp-btn">
+                <span>{copy.backToCases}</span>
+                <span className="sp-btn-icon" aria-hidden="true">↗</span>
+              </Link>
             </div>
-          </section>
+          </div>
 
           {relatedCases.length > 0 ? (
-            <section className="case-related">
-              <div className="wrap">
-                <h2 className="sp-h2 case-related-title">{copy.relatedCases}</h2>
-                <div className="projects-grid case-related-grid">
-                  {relatedCases.map((related) => (
-                    <CaseCard key={related.slug} locale={locale} caseItem={related} />
+            <section className="more-cases">
+              <div className="wrap container">
+                <div className="more-heading">
+                  <span className="kicker">{copy.moreCasesKicker}</span>
+                  <h2>{copy.moreCasesTitle}</h2>
+                </div>
+                <div className="case-navigation">
+                  {relatedCases.slice(0, 2).map((related, index) => (
+                    <Link
+                      key={related.slug}
+                      href={getLocalePath(locale, `/cases/${related.slug}`)}
+                      className="project-card"
+                    >
+                      <div className="project-direction">
+                        <span>
+                          {index === 0 ? copy.prevCase : copy.nextCase}
+                        </span>
+                        <span>{String(index + 1).padStart(2, "0")}</span>
+                      </div>
+                      {related.cover ? (
+                        <div className="project-image">
+                          <MediaImage
+                            src={related.cover}
+                            alt={related.title}
+                            sizes="(max-width: 700px) 100vw, 50vw"
+                            unoptimized={isAnimatedCaseMedia(related.cover)}
+                          />
+                        </div>
+                      ) : null}
+                      <div className="project-title">
+                        <h3>{related.title}</h3>
+                        <span aria-hidden="true">↗</span>
+                      </div>
+                      {related.description ? <p>{related.description}</p> : null}
+                    </Link>
                   ))}
                 </div>
               </div>
             </section>
           ) : null}
-        </PostDetailLayout>
+
+          <section className="sp-cta">
+            <div className="wrap">
+              <CtaPanel dictionary={dictionary} />
+            </div>
+          </section>
+        </ArticleGalleryProvider>
       </main>
       <Footer locale={locale} dictionary={dictionary} />
     </>

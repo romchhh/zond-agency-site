@@ -5,9 +5,32 @@ import Header from "@/components/Header";
 import MediaImage from "@/components/MediaImage";
 import ProjectCard from "@/components/ProjectCard";
 import StatsRow from "@/components/StatsRow";
-import { brandingPage, brandingPeople } from "@/i18n/branding";
+import { brandingPage } from "@/i18n/branding";
+import { getBrandingSeo, type BrandingSeoBlock } from "@/i18n/branding-seo";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
+import { imageSizes } from "@/lib/media";
+
+function renderSeoBlock(block: BrandingSeoBlock, index: number) {
+  switch (block.kind) {
+    case "p":
+      return <p key={`p-${index}`}>{block.text}</p>;
+    case "term":
+      return (
+        <p key={`term-${index}`} className="sp-seo-term">
+          <strong>{block.label}</strong> {block.text}
+        </p>
+      );
+    case "ul":
+      return (
+        <ul key={`ul-${index}`} className="sp-seo-list">
+          {block.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      );
+  }
+}
 
 type BrandingPageProps = {
   locale: Locale;
@@ -21,6 +44,7 @@ export default function BrandingPage({
   projects,
 }: BrandingPageProps) {
   const copy = brandingPage[locale];
+  const seo = getBrandingSeo(locale);
 
   return (
     <>
@@ -73,40 +97,36 @@ export default function BrandingPage({
           </div>
         </section>
 
-        <section className="sp-section">
-          <div className="wrap">
-            <div className="sp-split">
-              <div>
-                <h2 className="sp-h2">{copy.aboutTitle}</h2>
-              </div>
-              <div className="sp-body">
-                {copy.about.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="sp-section" id="services">
+        <section className="sp-section" id="branding-includes">
           <div className="wrap">
             <div className="sp-section-head">
               <h2 className="sp-h2">{copy.includesTitle}</h2>
             </div>
-            <div className="sp-gallery">
-              {copy.gallery.map((item) => (
-                <figure key={item.src}>
-                  <div className="sp-gallery-img">
-                    <MediaImage src={item.src} alt={item.alt} sizes="25vw" />
+            <div className="services-grid services-grid--cols-4">
+              {copy.items.map((item) => (
+                <article className="service-card" key={item.index}>
+                  <div className="service-visual">
+                    <MediaImage
+                      src={item.image}
+                      alt={item.alt}
+                      sizes={imageSizes.service}
+                    />
                   </div>
-                  <figcaption>{item.caption}</figcaption>
-                </figure>
+                  <div className="service-index">{item.index}</div>
+                  <div className="service-copy">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </article>
               ))}
             </div>
-            <div className="sp-items">
-              {copy.items.map((item) => (
-                <article className="sp-item" key={item.index}>
-                  <div className="sp-item-num">{item.index}</div>
+            <div className="sp-section-head sp-needs-head">
+              <h2 className="sp-h2">{copy.needTitle}</h2>
+            </div>
+            <div className="sp-needs">
+              {copy.needs.map((item) => (
+                <article className="sp-need" key={item.index}>
+                  <div className="sp-need-no">{item.index}</div>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </article>
@@ -117,20 +137,13 @@ export default function BrandingPage({
 
         <section className="sp-section" id="cases">
           <div className="wrap">
-            <div className="sp-split sp-cases-intro">
-              <div>
-                <h2 className="sp-h2">{copy.casesTitle}</h2>
-              </div>
-              <div className="sp-body">
-                {copy.casesCopy.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
+            <div className="sp-section-head">
+              <h2 className="sp-h2">{copy.casesTitle}</h2>
             </div>
           </div>
           <div className="wrap wrap--flush">
             <div className="projects-grid">
-              {projects.map((project) => (
+              {projects.slice(0, 4).map((project) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
             </div>
@@ -179,7 +192,7 @@ export default function BrandingPage({
               {copy.products.map((item) => (
                 <figure key={item.src}>
                   <div className="sp-product-img">
-                    <MediaImage src={item.src} alt={item.alt} sizes="33vw" />
+                    <MediaImage src={item.src} alt={item.alt} sizes="(max-width: 700px) 100vw, 33vw" />
                   </div>
                   <figcaption>{item.caption}</figcaption>
                 </figure>
@@ -198,7 +211,6 @@ export default function BrandingPage({
                 <article className="sp-step" key={step.index}>
                   <div className="sp-step-num">{step.index}</div>
                   <h3>{step.title}</h3>
-                  <p>{step.description}</p>
                 </article>
               ))}
             </div>
@@ -207,47 +219,17 @@ export default function BrandingPage({
 
         <section className="sp-section">
           <div className="wrap">
-            <div className="sp-section-head">
-              <h2 className="sp-h2">{copy.needTitle}</h2>
-            </div>
-            <div className="sp-needs">
-              {copy.needs.map((item) => (
-                <article className="sp-need" key={item.index}>
-                  <div className="sp-need-no">{item.index}</div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="sp-section">
-          <div className="wrap">
-            <div className="sp-section-head">
-              <h2 className="sp-h2">{copy.whyTitle}</h2>
-            </div>
-            <div className="sp-why">
-              {copy.why.map((item) => (
-                <article className="sp-why-item" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </article>
-              ))}
-            </div>
-            <div className="sp-people" aria-label={dictionary.a11y.teamMember}>
-              {brandingPeople.map((src, index) => (
-                <figure key={src}>
-                  <div className="sp-people-img">
-                    <MediaImage
-                      src={src}
-                      alt={copy.peopleAlt[index]}
-                      sizes="33vw"
-                    />
-                  </div>
-                </figure>
-              ))}
-            </div>
+            <details className="sp-seo-spoiler">
+              <summary>{seo.spoilerLabel}</summary>
+              <div className="sp-seo-content sp-body">
+                {seo.sections.map((section) => (
+                  <section key={section.title} className="sp-seo-section">
+                    <h3>{section.title}</h3>
+                    {section.blocks.map((block, index) => renderSeoBlock(block, index))}
+                  </section>
+                ))}
+              </div>
+            </details>
           </div>
         </section>
 

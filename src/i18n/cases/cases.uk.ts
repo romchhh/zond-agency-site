@@ -1,6 +1,18 @@
+import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
 import type { CaseItem } from "./types";
 
 const cases: CaseItem[] = [
+  {
+    slug: homeHubShared.slug,
+    title: homeHubCopy.uk.title,
+    description: homeHubCopy.uk.description,
+    cover: homeHubShared.cover,
+    media: homeHubShared.media,
+    tagline: homeHubCopy.uk.tagline,
+    serviceTag: homeHubCopy.uk.serviceTag,
+    body: homeHubShared.body,
+    blocks: getHomeHubBlocks("uk"),
+  },
   {
     "slug": "carbit",
     "title": "Carbit",

@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import { defaultLocale, isLocale, localeMeta } from "@/i18n/config";
 import { media } from "@/lib/media";
 import "./globals.css";
+import "./case-visual-balanced.css";
 
 export default async function RootLayout({
   children,

@@ -178,6 +178,10 @@ const uk: Dictionary = {
     lead: "Наші реалізовані проєкти дизайн-студії ZOND.",
     backToCases: "Повернутися до проєктів",
     relatedCases: "Інші проєкти",
+    moreCasesKicker: "ПРОДОВЖУЄМО ЗНАЙОМСТВО",
+    moreCasesTitle: "Ще більше характеру.",
+    prevCase: "← Попередній кейс",
+    nextCase: "Наступний кейс →",
   },
 };
 

@@ -178,6 +178,10 @@ const en: Dictionary = {
     lead: "Completed projects by ZOND design studio.",
     backToCases: "Back to projects",
     relatedCases: "More projects",
+    moreCasesKicker: "KEEP EXPLORING",
+    moreCasesTitle: "More character to discover.",
+    prevCase: "← Previous case",
+    nextCase: "Next case →",
   },
 };
 
