@@ -52,16 +52,16 @@ export default function CasePostPage({
     caseItem.tagline,
     caseItem.serviceTag,
   );
-  const heroCaption =
-    caseItem.slug === "home-hub"
-      ? "Home Hub — концепція фасаду шоуруму"
-      : caseItem.slug === "carbit"
-        ? "Carbit — анімована айдентика"
-        : caseItem.slug === "nove-misto"
-          ? "Нове місто — айдентика в русі"
-          : caseItem.slug === "kyiv-tourism-department"
-            ? "Київ — місто кожного / міська кампанія"
-            : caseItem.title;
+  const heroCaptions: Record<string, string> = {
+    "home-hub": "Home Hub — концепція фасаду шоуруму",
+    carbit: "Carbit — анімована айдентика",
+    "nove-misto": "Нове місто — айдентика в русі",
+    "kyiv-tourism-department": "Київ — місто кожного / міська кампанія",
+    "ahmad-tea": "AHMAD TEA — комунікаційна стратегія",
+    "digital-residence": "Digital Residence — технологічна резиденція",
+    kavlora: "KAVLORA — айдентика виробника",
+  };
+  const heroCaption = heroCaptions[caseItem.slug] ?? caseItem.title;
   const galleryImages = collectCaseVisualImages(hero?.src ?? null, blocks);
   const theme = resolveCaseTheme(caseItem);
   const taglineLines = splitLines(defaults.tagline);
@@ -70,6 +70,9 @@ export default function CasePostPage({
 
   return (
     <>
+      {galleryImages.map((src) => (
+        <link key={src} rel="preload" as="image" href={src} />
+      ))}
       <Header locale={locale} dictionary={dictionary} />
       <main
         className="sp case-visual-page visual balanced"

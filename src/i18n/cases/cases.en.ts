@@ -1,8 +1,12 @@
+import { ahmadTeaCopy, ahmadTeaShared, getAhmadTeaBlocks } from "./ahmad-tea";
 import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
+import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
+import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
 import type { CaseItem } from "./types";
+
 
 const cases: CaseItem[] = [
   {
@@ -50,88 +54,37 @@ const cases: CaseItem[] = [
     blocks: getKyivTourismBlocks("en"),
   },
   {
-    "slug": "digital-residence",
-    "title": "Digital Residence",
-    "description": "We developed the logo, identity, and brand book for Digital Residence in Azerbaijan. Also a 3D logo, print materials, and corporate merch.",
-    "cover": "/assets/cases/digital-residence/01_cover_digital_2.gif",
-    "media": [
-      "media/digital-residence/01_cover_digital_2.gif",
-      "media/digital-residence/02_1.webp",
-      "media/digital-residence/03_2.webp",
-      "media/digital-residence/04_3.webp",
-      "media/digital-residence/05_4_1.webp",
-      "media/digital-residence/06_5_1.webp",
-      "media/digital-residence/07_6.webp",
-      "media/digital-residence/08_7.webp",
-      "media/digital-residence/09_8.webp",
-      "media/digital-residence/10_9.webp",
-      "media/digital-residence/11_10.webp",
-      "media/digital-residence/13_12.webp",
-      "media/digital-residence/12_11.webp",
-      "media/digital-residence/14_13.webp",
-      "media/digital-residence/15_14.webp",
-      "media/digital-residence/16_15.webp",
-      "media/digital-residence/17_книжка.jpeg",
-      "media/digital-residence/18_17.webp",
-      "media/digital-residence/19_18.webp"
-    ],
-    "body": "[IMG: media/digital-residence/02_1.webp]\n\n### Client\n\nDigital Residence is a next-generation technological residence located within Sea Breeze (Azerbaijan). The project brings together residential apartments, business spaces, and a community for IT, creative, and investment audiences. The brand concept is based on the integration of architecture, innovation, and modern lifestyle into a single, thoughtfully designed system.\n\n### Goals\n\nOur task was to create not just a logo, but a complete digital identity and brand book for a premium-class project with international ambitions. The brand needed to work seamlessly across digital environments, architectural spaces, and printed materials, while remaining recognizable both in the local Azerbaijani market and on a global level.\n\n### Developed\n\nLogo & brand mark\n\nVisual identity\n\nFull brand book\n\n3D logo\n\nPrint materials\n\nAdvertising materials\n\nMerchandise & corporate products\n\n[IMG: media/digital-residence/03_2.webp]\n\n[IMG: media/digital-residence/04_3.webp]\n\n[IMG: media/digital-residence/05_4_1.webp]\n\n[IMG: media/digital-residence/06_5_1.webp]\n\n[IMG: media/digital-residence/05_4_1.webp]\n\n[IMG: media/digital-residence/06_5_1.webp]\n\n[IMG: media/digital-residence/07_6.webp]\n\n[IMG: media/digital-residence/08_7.webp]\n\n[IMG: media/digital-residence/09_8.webp]\n\n[IMG: media/digital-residence/10_9.webp]\n\n[IMG: media/digital-residence/11_10.webp]\n\n[IMG: media/digital-residence/07_6.webp]\n\n[IMG: media/digital-residence/08_7.webp]\n\n[IMG: media/digital-residence/09_8.webp]\n\n[IMG: media/digital-residence/10_9.webp]\n\n[IMG: media/digital-residence/11_10.webp]\n\n[IMG: media/digital-residence/13_12.webp]\n\n[IMG: media/digital-residence/12_11.webp]\n\n[IMG: media/digital-residence/14_13.webp]\n\n[IMG: media/digital-residence/15_14.webp]\n\n[IMG: media/digital-residence/16_15.webp]\n\n[IMG: media/digital-residence/17_книжка.jpeg]\n\n[IMG: media/digital-residence/18_17.webp]\n\n[IMG: media/digital-residence/19_18.webp]"
+    slug: digitalResidenceShared.slug,
+    title: digitalResidenceCopy.en.title,
+    description: digitalResidenceCopy.en.description,
+    cover: digitalResidenceShared.cover,
+    media: digitalResidenceShared.media,
+    tagline: digitalResidenceCopy.en.tagline,
+    serviceTag: digitalResidenceCopy.en.serviceTag,
+    body: digitalResidenceShared.body,
+    blocks: getDigitalResidenceBlocks("en"),
   },
   {
-    "slug": "ahmad-tea",
-    "title": "AHMAD TEA",
-    "description": "We developed a communication strategy for AHMAD TEA: market research, tone of voice, audience analysis, and influencer marketing.",
-    "cover": "/assets/cases/ahmad-tea/01_cover_Ахмад_гіф_1_1.gif",
-    "media": [
-      "media/ahmad-tea/01_cover_Ахмад_гіф_1_1.gif",
-      "media/ahmad-tea/02_ezgif-2800181ef4a1bef3_2.gif",
-      "media/ahmad-tea/03_1.webp",
-      "media/ahmad-tea/04_2.webp",
-      "media/ahmad-tea/05_3.webp",
-      "media/ahmad-tea/06_4.webp",
-      "media/ahmad-tea/07_5.webp",
-      "media/ahmad-tea/08_17_2.webp",
-      "media/ahmad-tea/09_6_1.webp",
-      "media/ahmad-tea/10_7_2.webp",
-      "media/ahmad-tea/11_9_2.webp",
-      "media/ahmad-tea/12_10_1.webp",
-      "media/ahmad-tea/13_13_1.webp",
-      "media/ahmad-tea/14_11_1.webp",
-      "media/ahmad-tea/15_12_2.webp",
-      "media/ahmad-tea/16_8_2.webp",
-      "media/ahmad-tea/17_15_3.webp",
-      "media/ahmad-tea/18_14_2.webp",
-      "media/ahmad-tea/19_16_2.webp",
-      "media/ahmad-tea/20_18_2.webp"
-    ],
-    "body": "[IMG: media/ahmad-tea/02_ezgif-2800181ef4a1bef3_2.gif]\n\n### Client\n\nAhmad Tea is an international premium tea brand from the UK with a long heritage and strong global reputation. The brand combines traditional English tea culture with a modern approach, focusing on quality, aesthetics, and emotional experience. Its goal is to stay relevant for new generations while preserving authenticity and recognition.\n\n### Goals\n\nOur goal was to rethink the brand’s communication for the modern market while maintaining its heritage and premium feel. We conducted deep audience research to understand behaviors, barriers, and triggers, and built a strong communication platform. We also developed creative directions for campaigns and identified effective promotion channels.\n\n### Developed\n\nMarket research\n\nTone of voice\n\nAudience analysis\n\nCreative strategy\n\nSWOT & competitors\n\nVisual direction\n\nCommunication strategy\n\nInfluencers\n\n[IMG: media/ahmad-tea/03_1.webp]\n\n[IMG: media/ahmad-tea/04_2.webp]\n\n[IMG: media/ahmad-tea/05_3.webp]\n\n[IMG: media/ahmad-tea/06_4.webp]\n\n[IMG: media/ahmad-tea/07_5.webp]\n\n[IMG: media/ahmad-tea/06_4.webp]\n\n[IMG: media/ahmad-tea/07_5.webp]\n\n[IMG: media/ahmad-tea/08_17_2.webp]\n\n[IMG: media/ahmad-tea/09_6_1.webp]\n\n[IMG: media/ahmad-tea/10_7_2.webp]\n\n[IMG: media/ahmad-tea/11_9_2.webp]\n\n[IMG: media/ahmad-tea/12_10_1.webp]\n\n[IMG: media/ahmad-tea/13_13_1.webp]\n\n[IMG: media/ahmad-tea/08_17_2.webp]\n\n[IMG: media/ahmad-tea/09_6_1.webp]\n\n[IMG: media/ahmad-tea/10_7_2.webp]\n\n[IMG: media/ahmad-tea/11_9_2.webp]\n\n[IMG: media/ahmad-tea/14_11_1.webp]\n\n[IMG: media/ahmad-tea/15_12_2.webp]\n\n[IMG: media/ahmad-tea/16_8_2.webp]\n\n[IMG: media/ahmad-tea/17_15_3.webp]\n\n[IMG: media/ahmad-tea/18_14_2.webp]\n\n[IMG: media/ahmad-tea/19_16_2.webp]\n\n[IMG: media/ahmad-tea/20_18_2.webp]"
+    slug: ahmadTeaShared.slug,
+    title: ahmadTeaCopy.en.title,
+    description: ahmadTeaCopy.en.description,
+    cover: ahmadTeaShared.cover,
+    media: ahmadTeaShared.media,
+    tagline: ahmadTeaCopy.en.tagline,
+    serviceTag: ahmadTeaCopy.en.serviceTag,
+    body: ahmadTeaShared.body,
+    blocks: getAhmadTeaBlocks("en"),
   },
   {
-    "slug": "kavlora",
-    "title": "KAVLORA",
-    "description": "We developed the logo and visual identity for KAVLORA — a woodworking manufacturer. Also branded merch and print materials.",
-    "cover": "/assets/cases/kavlora/01_cover_Kavlora1.gif",
-    "media": [
-      "media/kavlora/01_cover_Kavlora1.gif",
-      "media/kavlora/02_gif.gif",
-      "media/kavlora/03_13_11zon_2.webp",
-      "media/kavlora/04_3_11zon_6.webp",
-      "media/kavlora/05_2_11zon_6.webp",
-      "media/kavlora/06_4_2.webp",
-      "media/kavlora/07_5_2.webp",
-      "media/kavlora/08_14_11zon_1.webp",
-      "media/kavlora/09_11_11zon_1.webp",
-      "media/kavlora/10_12_11zon_1.webp",
-      "media/kavlora/11_9_11zon_3.webp",
-      "media/kavlora/12_10_11zon_1.webp",
-      "media/kavlora/13_1_11zon_4.webp",
-      "media/kavlora/14_6_11zon_1.webp",
-      "media/kavlora/15_18_11zon_3.webp",
-      "media/kavlora/16_8_11zon_2.webp",
-      "media/kavlora/17_17_11zon_2.webp",
-      "media/kavlora/18_7_11zon_1.webp"
-    ],
-    "body": "[IMG: media/kavlora/02_gif.gif]\n\n### Client\n\nIn the woodworking industry, material quality, precision, and trust in the manufacturer play a crucial role. The modern market requires not only a functional product but also a recognizable brand that conveys craftsmanship, reliability, and aesthetics.\n\n### Goals\n\nMarket research and analysis. We began by studying the competitive landscape and positioning of woodworking companies to identify the optimal niche for Kavlora in the mid-market segment. Visual identity development. At this stage, we created the logo, selected a color palette, and developed a typography system that emphasizes natural materials, wood texture, and a modern production approach. Implementation and support. We adapted the identity across all key touchpoints—from print materials to outdoor advertising and merchandise—ensuring brand consistency. As a result, Kavlora gained a recognizable image that builds trust and strengthens its market position.\n\n### Developed\n\nLogo\n\nVisual identity\n\nBrandbook\n\nPromotional and corporate merchandise\n\nAdvertising materials\n\nPrint materials\n\n[IMG: media/kavlora/03_13_11zon_2.webp]\n\n[IMG: media/kavlora/04_3_11zon_6.webp]\n\n[IMG: media/kavlora/05_2_11zon_6.webp]\n\n[IMG: media/kavlora/06_4_2.webp]\n\n[IMG: media/kavlora/07_5_2.webp]\n\n[IMG: media/kavlora/06_4_2.webp]\n\n[IMG: media/kavlora/07_5_2.webp]\n\n[IMG: media/kavlora/08_14_11zon_1.webp]\n\n[IMG: media/kavlora/09_11_11zon_1.webp]\n\n[IMG: media/kavlora/10_12_11zon_1.webp]\n\n[IMG: media/kavlora/11_9_11zon_3.webp]\n\n[IMG: media/kavlora/12_10_11zon_1.webp]\n\n[IMG: media/kavlora/13_1_11zon_4.webp]\n\n[IMG: media/kavlora/08_14_11zon_1.webp]\n\n[IMG: media/kavlora/09_11_11zon_1.webp]\n\n[IMG: media/kavlora/10_12_11zon_1.webp]\n\n[IMG: media/kavlora/14_6_11zon_1.webp]\n\n[IMG: media/kavlora/15_18_11zon_3.webp]\n\n[IMG: media/kavlora/16_8_11zon_2.webp]\n\n[IMG: media/kavlora/17_17_11zon_2.webp]\n\n[IMG: media/kavlora/18_7_11zon_1.webp]"
+    slug: kavloraShared.slug,
+    title: kavloraCopy.en.title,
+    description: kavloraCopy.en.description,
+    cover: kavloraShared.cover,
+    media: kavloraShared.media,
+    tagline: kavloraCopy.en.tagline,
+    serviceTag: kavloraCopy.en.serviceTag,
+    body: kavloraShared.body,
+    blocks: getKavloraBlocks("en"),
   },
   {
     "slug": "altep",

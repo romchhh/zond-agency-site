@@ -2,9 +2,7 @@
 
 import { useArticleGallery } from "@/components/ArticleGallery";
 import LoopedVideo from "@/components/LoopedVideo";
-import MediaImage from "@/components/MediaImage";
 import type { CaseHeroMedia } from "@/lib/case-content";
-import { isAnimatedCaseMedia } from "@/lib/case-content";
 
 type CaseVisualHeroProps = {
   hero: CaseHeroMedia;
@@ -31,12 +29,14 @@ export default function CaseVisualHero({ hero, title, caption }: CaseVisualHeroP
             priority
           />
         ) : (
-          <MediaImage
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
             src={hero.src}
             alt={caption}
-            sizes="100vw"
-            priority
-            unoptimized={isAnimatedCaseMedia(hero.src)}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            draggable={false}
           />
         )}
       </button>

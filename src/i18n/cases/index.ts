@@ -10,10 +10,13 @@ const casesByLocale: Record<Locale, CaseItem[]> = {
   en: casesEn,
 };
 
+/** Temporarily hidden from listings, homepage, and case routes. */
+const HIDDEN_CASE_SLUGS = new Set(["home-hub"]);
+
 export type { CaseItem } from "./types";
 
 export function getCases(locale: Locale): CaseItem[] {
-  return casesByLocale[locale];
+  return casesByLocale[locale].filter((item) => !HIDDEN_CASE_SLUGS.has(item.slug));
 }
 
 export function getCase(locale: Locale, slug: string): CaseItem | undefined {

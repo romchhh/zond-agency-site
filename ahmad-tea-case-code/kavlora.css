@@ -1,0 +1,31 @@
+.kavlora .breadcrumbs{padding-right:0}.kavlora .hero .media img,.kavlora .media.wide img,.kavlora .pair .media img{aspect-ratio:auto;height:auto;object-fit:contain}.kavlora .gallery{align-items:start}.kavlora .media{margin-top:22px}.kavlora .gallery .media{margin-top:0}.kavlora .manifesto{background:#142f27;color:white}.kavlora .manifesto em,.kavlora .orange{color:#d7a186}.kavlora .project-facts .country-fact{background:#d7a186;border-color:#d7a186}.kavlora .country-fact dt{color:#342518}.kavlora .project-facts{grid-template-columns:1fr 1fr 1.35fr}.kavlora .project-facts dd{font-size:28px}.kavlora .quote-card{border-left-color:#d7a186}.kavlora .quote-mark{color:#27614c}.kavlora .review-monogram{background:#d7a186}.kavlora .action-tiles article{min-height:215px}.kavlora .hero-tag{white-space:nowrap}.kavlora .rule-grid>div{border-left:3px solid #d7a186}.kavlora .manifesto p{font-size:clamp(40px,5vw,72px)}@media(max-width:700px){.kavlora .project-facts{grid-template-columns:1fr}.kavlora .project-facts dd{font-size:27px}.kavlora .manifesto p{font-size:39px}.kavlora .hero-tag{font-size:12px}.kavlora .pair{grid-template-columns:1fr 1fr}.kavlora .hero-intro{gap:10px}.kavlora .hero-intro p{font-size:23px}.kavlora .media figcaption{font-size:13px}}.kavlora .hero h1{font-size:clamp(52px,7.7vw,110px)}.kavlora .facts-row{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:14px;margin-bottom:32px}.kavlora .project-facts{margin:0;grid-template-columns:1fr 1fr 1.35fr;gap:14px}.kavlora .project-facts>div{padding:24px 20px;min-width:0}.kavlora .project-facts dd{font-size:clamp(20px,1.9vw,27px)}.kavlora .country-fact{color:#171717}.kavlora .open-case{display:flex;align-items:center;justify-content:center;gap:12px;padding:24px 18px;background:#ff7100;color:#171717;border-radius:16px;text-decoration:none;font-size:20px;line-height:1.2;transition:background .2s,transform .2s}.kavlora .open-case svg{width:30px;height:30px;flex:none}.kavlora .open-case .out-arrow{align-self:flex-start}.kavlora .open-case:hover{background:#ff8a2c;transform:translateY(-3px)}.kavlora .open-case:focus-visible{outline:3px solid #171717;outline-offset:4px}.kavlora .manifesto em{color:#edc1a9}.kavlora .hero-tag{font-size:14px}@media(max-width:1050px){.kavlora .facts-row{grid-template-columns:1fr}.kavlora .open-case{justify-self:end;min-height:76px;min-width:230px}}@media(max-width:700px){.kavlora .project-facts{grid-template-columns:1fr}.kavlora .open-case{justify-self:stretch}.kavlora .pair{grid-template-columns:1fr}.kavlora .project-facts dd{font-size:26px}.kavlora .facts-row{gap:14px}}@media(prefers-reduced-motion:reduce){.kavlora .open-case{transition:none}}
+/* Compact task cards with readable copy. */
+.kavlora .action-tiles article {
+  min-height: 112px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  column-gap: 12px;
+  align-content: center;
+}
+.kavlora .action-tiles .tile-number { grid-column: 1; grid-row: 1; align-self: center; font-size: 14px; }
+.kavlora .action-tiles h3 { grid-column: 2; margin: 0 0 7px; font-size: 24px; }
+.kavlora .action-tiles .tile-copy { grid-column: 2; margin: 0; font-size: 16px; line-height: 1.4; }
+/* Mobile: one photograph per row, matching the page gutters and corners. */
+@media (max-width: 767px) {
+  .kavlora .container { padding-inline: 18px; }
+  .kavlora .gallery,
+  .kavlora .case-navigation { grid-template-columns: minmax(0, 1fr); }
+  .kavlora .gallery { width: 100%; margin-inline: 0; gap: 24px; }
+  .kavlora .media.wide,
+  .kavlora .project-image { width: 100%; margin-inline: 0; }
+  .kavlora .image-button,
+  .kavlora .project-image { border-radius: 17px; overflow: hidden; }
+  .kavlora .media img { width: 100%; height: auto; aspect-ratio: auto; }
+  .kavlora .media figcaption { padding-inline: 0; }
+  .kavlora .action-tiles { grid-template-columns: 1fr; gap: 12px; }
+  .kavlora .action-tiles article { min-height: 104px; padding: 14px 18px; }
+  .kavlora .action-tiles h3 { font-size: 24px; margin: 0 0 6px; }
+}
+
+.kavlora .manifesto{background:#142f27}.kavlora .hero h1{font-size:clamp(54px,9vw,130px)}.kavlora .project-facts dd{font-size:clamp(19px,1.7vw,26px)}.kavlora .project-facts .country-fact{color:#142f27}@media(max-width:700px){.kavlora .hero h1{font-size:clamp(52px,14vw,90px)}.kavlora .project-facts dd{font-size:26px}}

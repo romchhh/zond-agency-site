@@ -1,0 +1,33 @@
+.ahmad .breadcrumbs{padding-right:0}.ahmad .hero .media img,.ahmad .media.wide img,.ahmad .pair .media img{aspect-ratio:auto;height:auto;object-fit:contain}.ahmad .gallery{align-items:start}.ahmad .media{margin-top:22px}.ahmad .gallery .media{margin-top:0}.ahmad .manifesto{background:#163a28;color:white}.ahmad .manifesto em,.ahmad .orange{color:#afbd87}.ahmad .project-facts .country-fact{background:#afbd87;border-color:#afbd87}.ahmad .country-fact dt{color:#342518}.ahmad .project-facts{grid-template-columns:1fr 1fr 1.35fr}.ahmad .project-facts dd{font-size:28px}.ahmad .quote-card{border-left-color:#afbd87}.ahmad .quote-mark{color:#54743f}.ahmad .review-monogram{background:#afbd87}.ahmad .action-tiles article{min-height:215px}.ahmad .hero-tag{white-space:nowrap}.ahmad .rule-grid>div{border-left:3px solid #afbd87}.ahmad .manifesto p{font-size:clamp(40px,5vw,72px)}@media(max-width:700px){.ahmad .project-facts{grid-template-columns:1fr}.ahmad .project-facts dd{font-size:27px}.ahmad .manifesto p{font-size:39px}.ahmad .hero-tag{font-size:12px}.ahmad .pair{grid-template-columns:1fr 1fr}.ahmad .hero-intro{gap:10px}.ahmad .hero-intro p{font-size:23px}.ahmad .media figcaption{font-size:13px}}.ahmad .hero h1{font-size:clamp(52px,7.7vw,110px)}.ahmad .facts-row{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:14px;margin-bottom:32px}.ahmad .project-facts{margin:0;grid-template-columns:1fr 1fr 1.35fr;gap:14px}.ahmad .project-facts>div{padding:24px 20px;min-width:0}.ahmad .project-facts dd{font-size:clamp(20px,1.9vw,27px)}.ahmad .country-fact{color:#171717}.ahmad .open-case{display:flex;align-items:center;justify-content:center;gap:12px;padding:24px 18px;background:#ff7100;color:#171717;border-radius:16px;text-decoration:none;font-size:20px;line-height:1.2;transition:background .2s,transform .2s}.ahmad .open-case svg{width:30px;height:30px;flex:none}.ahmad .open-case .out-arrow{align-self:flex-start}.ahmad .open-case:hover{background:#ff8a2c;transform:translateY(-3px)}.ahmad .open-case:focus-visible{outline:3px solid #171717;outline-offset:4px}.ahmad .manifesto em{color:#e4d2a6}.ahmad .hero-tag{font-size:14px}@media(max-width:1050px){.ahmad .facts-row{grid-template-columns:1fr}.ahmad .open-case{justify-self:end;min-height:76px;min-width:230px}}@media(max-width:700px){.ahmad .project-facts{grid-template-columns:1fr}.ahmad .open-case{justify-self:stretch}.ahmad .pair{grid-template-columns:1fr}.ahmad .project-facts dd{font-size:26px}.ahmad .facts-row{gap:14px}}@media(prefers-reduced-motion:reduce){.ahmad .open-case{transition:none}}
+/* Compact task cards with readable copy. */
+.ahmad .action-tiles article {
+  min-height: 112px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  column-gap: 12px;
+  align-content: center;
+}
+.ahmad .action-tiles .tile-number { grid-column: 1; grid-row: 1; align-self: center; font-size: 14px; }
+.ahmad .action-tiles h3 { grid-column: 2; margin: 0 0 7px; font-size: 24px; }
+.ahmad .action-tiles .tile-copy { grid-column: 2; margin: 0; font-size: 16px; line-height: 1.4; }
+/* Mobile: one photograph per row, matching the page gutters and corners. */
+@media (max-width: 767px) {
+  .ahmad .container { padding-inline: 18px; }
+  .ahmad .gallery,
+  .ahmad .case-navigation { grid-template-columns: minmax(0, 1fr); }
+  .ahmad .gallery { width: 100%; margin-inline: 0; gap: 24px; }
+  .ahmad .media.wide,
+  .ahmad .project-image { width: 100%; margin-inline: 0; }
+  .ahmad .image-button,
+  .ahmad .project-image { border-radius: 17px; overflow: hidden; }
+  .ahmad .media img { width: 100%; height: auto; aspect-ratio: auto; }
+  .ahmad .media figcaption { padding-inline: 0; }
+  .ahmad .action-tiles { grid-template-columns: 1fr; gap: 12px; }
+  .ahmad .action-tiles article { min-height: 104px; padding: 14px 18px; }
+  .ahmad .action-tiles h3 { font-size: 24px; margin: 0 0 6px; }
+}
+
+.ahmad .manifesto{background:#163a28}.ahmad .hero h1{font-size:clamp(54px,9vw,130px)}.ahmad .project-facts dd{font-size:clamp(19px,1.7vw,26px)}.ahmad .project-facts .country-fact{color:#163a28}@media(max-width:700px){.ahmad .hero h1{font-size:clamp(52px,14vw,90px)}.ahmad .project-facts dd{font-size:26px}}
+
+.ahmad .manifesto{background:#163a28}.ahmad .project-facts .country-fact{color:#163a28}.ahmad .country-fact dt{color:#31523a}.ahmad .hero h1{font-size:clamp(54px,9vw,132px)}.ahmad .project-facts dd{font-size:clamp(19px,1.75vw,25px)}.ahmad .rule-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:900px){.ahmad .rule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.ahmad .hero h1{font-size:clamp(52px,12vw,85px)}.ahmad .project-facts dd{font-size:25px}.ahmad .rule-grid{grid-template-columns:1fr 1fr}}

@@ -1,7 +1,6 @@
 "use client";
 
 import { useArticleGallery } from "@/components/ArticleGallery";
-import MediaImage from "@/components/MediaImage";
 import type { CaseVisualBlock, CaseVisualDeliverable, CaseVisualGalleryLayout } from "@/i18n/cases/types";
 
 type CaseVisualBodyProps = {
@@ -12,10 +11,6 @@ type CaseVisualBodyProps = {
   openCaseLabel: string;
   openCaseHref: string;
 };
-
-function isAnimated(src: string): boolean {
-  return src.endsWith(".gif");
-}
 
 function splitTitle(title: string): string[] {
   return title.split("\n").filter(Boolean);
@@ -124,11 +119,15 @@ function CaseVisualMedia({
         aria-label={caption ? `Збільшити: ${caption}` : "Збільшити зображення"}
         onClick={() => gallery.openAt(imageIndex)}
       >
-        <MediaImage
+        {/* Native img: case CSS needs intrinsic height; Next/Image fill + lazy caused scroll lag and pop-in. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={src}
           alt={caption ?? ""}
-          sizes={wide ? "100vw" : "(max-width: 700px) 100vw, 50vw"}
-          unoptimized={isAnimated(src)}
+          loading="eager"
+          decoding="async"
+          fetchPriority={imageIndex < 3 ? "high" : "auto"}
+          draggable={false}
         />
       </button>
       {caption ? <figcaption>{caption}</figcaption> : null}

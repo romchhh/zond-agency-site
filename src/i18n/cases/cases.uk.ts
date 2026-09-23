@@ -1,8 +1,12 @@
+import { ahmadTeaCopy, ahmadTeaShared, getAhmadTeaBlocks } from "./ahmad-tea";
 import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
+import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
+import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
 import type { CaseItem } from "./types";
+
 
 const cases: CaseItem[] = [
   {
@@ -50,88 +54,37 @@ const cases: CaseItem[] = [
     blocks: getKyivTourismBlocks("uk"),
   },
   {
-    "slug": "digital-residence",
-    "title": "Digital Residence",
-    "description": "Розробили логотип, айдентику та брендбук для Digital Residence в Азербайджані. Також 3D-логотип, поліграфія та корпоративна продукція.",
-    "cover": "/assets/cases/digital-residence/01_cover_digital_2.gif",
-    "media": [
-      "media/digital-residence/01_cover_digital_2.gif",
-      "media/digital-residence/02_1.webp",
-      "media/digital-residence/03_2.webp",
-      "media/digital-residence/04_3.webp",
-      "media/digital-residence/05_4_1.webp",
-      "media/digital-residence/06_5_1.webp",
-      "media/digital-residence/07_6.webp",
-      "media/digital-residence/08_7.webp",
-      "media/digital-residence/09_8.webp",
-      "media/digital-residence/10_9.webp",
-      "media/digital-residence/11_10.webp",
-      "media/digital-residence/12_11.webp",
-      "media/digital-residence/13_12.webp",
-      "media/digital-residence/14_13.webp",
-      "media/digital-residence/15_14.webp",
-      "media/digital-residence/16_15.webp",
-      "media/digital-residence/17_книжка.jpeg",
-      "media/digital-residence/18_17.webp",
-      "media/digital-residence/19_18.webp"
-    ],
-    "body": "[IMG: media/digital-residence/02_1.webp]\n\n### Клієнт\n\nDigital Residence — це технологічна резиденція нового покоління в межах Sea Breeze (Азербайджан). Проєкт поєднує житлові апартаменти, бізнес-простори та ком’юніті для IT-, креативної та інвестиційної аудиторії. Концепція бренду базується на інтеграції архітектури, інновацій та сучасного способу життя в єдину, продуману систему.\n\n### Задачі\n\nНашим завданням було створити не просто логотип, а повноцінну цифрову айдентику та брендбук для проєкту преміум-класу з міжнародними амбіціями. Бренд мав однаково органічно працювати в digital-середовищі, архітектурному просторі та друкованих носіях, залишаючись впізнаваним як на локальному ринку Азербайджану, так і на глобальному рівні.\n\n### Розробили\n\nЛоготип і знак бренду\n\nВізуальну ідентичність\n\nПовний брендбук\n\n3D-логотип\n\nПоліграфічні матеріали\n\nРекламні носії\n\nСувенірну та корпоративну продукцію\n\n[IMG: media/digital-residence/03_2.webp]\n\n[IMG: media/digital-residence/04_3.webp]\n\n[IMG: media/digital-residence/05_4_1.webp]\n\n[IMG: media/digital-residence/06_5_1.webp]\n\n[IMG: media/digital-residence/05_4_1.webp]\n\n[IMG: media/digital-residence/06_5_1.webp]\n\n## Результат:\n\nУ результаті проєкт отримав цілісний і впізнаваний бренд із виразним діджитальним характером та відчуттям футуристичної глибини. Візуальна мова бренду передає інноваційність, інтелект і спрямованість у майбутнє, залишаючись стриманою та преміальною. Знак бренду побудований на архітектурній логіці та має форму трикутника — символу структури, стабільності й конструктивного підходу. Колірна система логотипу відображає ключові матеріали будівництва комплексу: метал, скло та бетон, підкреслюючи зв’язок айдентики з реальною архітектурою об’єкта та формуючи сучасний, технологічний образ Digital Residence.\n\n[IMG: media/digital-residence/07_6.webp]\n\n[IMG: media/digital-residence/08_7.webp]\n\n[IMG: media/digital-residence/09_8.webp]\n\n[IMG: media/digital-residence/07_6.webp]\n\n[IMG: media/digital-residence/08_7.webp]\n\n[IMG: media/digital-residence/09_8.webp]\n\n[IMG: media/digital-residence/10_9.webp]\n\n[IMG: media/digital-residence/10_9.webp]\n\n[IMG: media/digital-residence/11_10.webp]\n\n[IMG: media/digital-residence/12_11.webp]\n\n[IMG: media/digital-residence/13_12.webp]\n\n[IMG: media/digital-residence/14_13.webp]\n\n[IMG: media/digital-residence/15_14.webp]\n\n[IMG: media/digital-residence/16_15.webp]\n\n[IMG: media/digital-residence/17_книжка.jpeg]\n\n[IMG: media/digital-residence/17_книжка.jpeg]\n\n[IMG: media/digital-residence/18_17.webp]\n\n[IMG: media/digital-residence/19_18.webp]"
+    slug: digitalResidenceShared.slug,
+    title: digitalResidenceCopy.uk.title,
+    description: digitalResidenceCopy.uk.description,
+    cover: digitalResidenceShared.cover,
+    media: digitalResidenceShared.media,
+    tagline: digitalResidenceCopy.uk.tagline,
+    serviceTag: digitalResidenceCopy.uk.serviceTag,
+    body: digitalResidenceShared.body,
+    blocks: getDigitalResidenceBlocks("uk"),
   },
   {
-    "slug": "kavlora",
-    "title": "KAVLORA",
-    "description": "Розробили логотип і візуальну ідентичність для KAVLORA — виробника деревообробної продукції. Також сувенірка та поліграфія.",
-    "cover": "/assets/cases/kavlora/01_cover_Kavlora1.gif",
-    "media": [
-      "media/kavlora/01_cover_Kavlora1.gif",
-      "media/kavlora/02_gif.gif",
-      "media/kavlora/03_13_11zon_2.webp",
-      "media/kavlora/04_3_11zon_6.webp",
-      "media/kavlora/05_2_11zon_6.webp",
-      "media/kavlora/06_4_2.webp",
-      "media/kavlora/07_5_2.webp",
-      "media/kavlora/08_14_11zon_1.webp",
-      "media/kavlora/09_11_11zon_1.webp",
-      "media/kavlora/10_12_11zon_1.webp",
-      "media/kavlora/11_9_11zon_3.webp",
-      "media/kavlora/12_10_11zon_1.webp",
-      "media/kavlora/13_1_11zon_4.webp",
-      "media/kavlora/14_6_11zon_1.webp",
-      "media/kavlora/15_18_11zon_3.webp",
-      "media/kavlora/16_8_11zon_2.webp",
-      "media/kavlora/17_17_11zon_2.webp",
-      "media/kavlora/18_7_11zon_1.webp"
-    ],
-    "body": "[IMG: media/kavlora/02_gif.gif]\n\n### Клієнт\n\nУ сфері деревообробки важливу роль відіграють якість матеріалів, точність виконання та довіра до виробника. Сучасний ринок вимагає не лише функціонального продукту, а й впізнаваного бренду, який передає цінності майстерності, надій\n\n### Задачі\n\nДослідження та аналіз ринку. Ми розпочали з вивчення конкурентного середовища та позиціонування деревообробних підприємств, щоб визначити оптимальну нішу для бренду Kavlora у середньому сегменті. Розробка візуальної ідентичності. На цьому етапі було створено логотип, підібрано кольорову палітру та шрифтову систему, що підкреслюють натуральність, фактуру дерева та сучасний підхід до виробництва. Впровадження та підтримка. Ми адаптували айдентику на всі ключові носії — від поліграфії до зовнішньої реклами та мерчу, забезпечивши цілісність бренду на всіх точках контакту. У результаті Kavlora отримала впізнаваний образ, який формує довіру та підсилює позиції на ринку деревообробки.\n\n### Розробили\n\nЛоготип\n\nВізуальну ідентичність\n\nСувенірну та корпоративну продукцію\n\nРекламні носії\n\nПоліграфічні матеріали\n\n[IMG: media/kavlora/03_13_11zon_2.webp]\n\n[IMG: media/kavlora/04_3_11zon_6.webp]\n\n[IMG: media/kavlora/05_2_11zon_6.webp]\n\n[IMG: media/kavlora/06_4_2.webp]\n\n[IMG: media/kavlora/07_5_2.webp]\n\n[IMG: media/kavlora/06_4_2.webp]\n\n[IMG: media/kavlora/07_5_2.webp]\n\n## Логотип — візуальна основа бренду Kavlora\n\nЛоготип для деревообробного цеху має передавати баланс між ремісничою майстерністю та сучасним виробництвом. Для Kavlora ми створили знак, який відображає структуру дерева, точність обробки та надійність. Лаконічна форма та вивірена геометрія формують відчуття стабільності, а природна кольорова гама підсилює асоціації з матеріалом. Такий підхід дозволяє бренду виглядати актуально та професійно в конкурентному середовищі.\n\n[IMG: media/kavlora/08_14_11zon_1.webp]\n\n[IMG: media/kavlora/09_11_11zon_1.webp]\n\n[IMG: media/kavlora/10_12_11zon_1.webp]\n\n[IMG: media/kavlora/08_14_11zon_1.webp]\n\n[IMG: media/kavlora/09_11_11zon_1.webp]\n\n[IMG: media/kavlora/10_12_11zon_1.webp]\n\nСтворення брендингу для деревообробного бізнесу\n\nБрендинг у цій сфері — це не лише про естетику, а про довіру до якості продукту. Ми розробили комплексну айдентику для Kavlora, яка включає логотип, кольори, шрифти та графічні елементи, що легко масштабуються на різні носії. Візуальна система була впроваджена у веб-банери, візитку, фірмовий бланк, вивіску, а також брендований одяг — кепки та футболки. Цілісний підхід до брендингу дозволяє Kavlora виглядати послідовно та професійно, підвищує впізнаваність і створює сильний образ надійного виробника у середньому сегменті.\n\n[IMG: media/kavlora/11_9_11zon_3.webp]\n\n[IMG: media/kavlora/12_10_11zon_1.webp]\n\n[IMG: media/kavlora/13_1_11zon_4.webp]\n\n[IMG: media/kavlora/14_6_11zon_1.webp]\n\n[IMG: media/kavlora/15_18_11zon_3.webp]\n\n[IMG: media/kavlora/16_8_11zon_2.webp]\n\n[IMG: media/kavlora/17_17_11zon_2.webp]\n\n[IMG: media/kavlora/18_7_11zon_1.webp]\n\n[IMG: media/kavlora/18_7_11zon_1.webp]"
+    slug: kavloraShared.slug,
+    title: kavloraCopy.uk.title,
+    description: kavloraCopy.uk.description,
+    cover: kavloraShared.cover,
+    media: kavloraShared.media,
+    tagline: kavloraCopy.uk.tagline,
+    serviceTag: kavloraCopy.uk.serviceTag,
+    body: kavloraShared.body,
+    blocks: getKavloraBlocks("uk"),
   },
   {
-    "slug": "ahmad-tea",
-    "title": "AHMAD TEA",
-    "description": "Розробили комунікаційну стратегію для AHMAD TEA: дослідження ринку, tone of voice, аналіз аудиторії та інфлюенс-маркетинг.",
-    "cover": "/assets/cases/ahmad-tea/01_cover_Ахмад_гіф_1_1.gif",
-    "media": [
-      "media/ahmad-tea/01_cover_Ахмад_гіф_1_1.gif",
-      "media/ahmad-tea/02_ezgif-2800181ef4a1bef3_2.gif",
-      "media/ahmad-tea/03_1.webp",
-      "media/ahmad-tea/04_2.webp",
-      "media/ahmad-tea/05_3.webp",
-      "media/ahmad-tea/06_4.webp",
-      "media/ahmad-tea/07_5.webp",
-      "media/ahmad-tea/08_17_2.webp",
-      "media/ahmad-tea/09_6_1.webp",
-      "media/ahmad-tea/10_7_2.webp",
-      "media/ahmad-tea/11_9_2.webp",
-      "media/ahmad-tea/12_10_1.webp",
-      "media/ahmad-tea/13_13_1.webp",
-      "media/ahmad-tea/14_11_1.webp",
-      "media/ahmad-tea/15_12_2.webp",
-      "media/ahmad-tea/16_8_2.webp",
-      "media/ahmad-tea/17_15_3.webp",
-      "media/ahmad-tea/18_14_2.webp",
-      "media/ahmad-tea/19_16_2.webp",
-      "media/ahmad-tea/20_18_2.webp"
-    ],
-    "body": "[IMG: media/ahmad-tea/02_ezgif-2800181ef4a1bef3_2.gif]\n\n### Клієнт\n\nAhmad Tea — це міжнародний британський бренд преміального чаю з багаторічною історією та сильною репутацією у світі. Бренд поєднує традиції англійського чаювання з сучасним підходом до продукту, орієнтуючись на якість, естетику та емоційний досвід споживання. Основна мета — залишатися релевантним для нових поколінь споживачів, зберігаючи при цьому свою автентичність і впізнаваність.\n\n### Задачі\n\nНашим завданням було переосмислити комунікацію бренду на сучасному ринку, зберігши його спадщину та преміальність. Важливо було глибоко дослідити аудиторію, її поведінкові патерни, бар’єри та тригери, щоб сформувати актуальну комунікаційну платформу. Також стояло завдання знайти нові креативні підходи для рекламних кампаній і визначити ефективні канали просування.\n\n### Розробили\n\nДослідження ринку\n\nTone of voice\n\nАналіз аудиторії\n\nКреативна стратегія\n\nSWOT та конкуренти\n\nВізуальний напрям\n\nКомунікаційна стратегія\n\nІнфлюенсери\n\n[IMG: media/ahmad-tea/03_1.webp]\n\n[IMG: media/ahmad-tea/04_2.webp]\n\n[IMG: media/ahmad-tea/05_3.webp]\n\n[IMG: media/ahmad-tea/06_4.webp]\n\n[IMG: media/ahmad-tea/07_5.webp]\n\n[IMG: media/ahmad-tea/06_4.webp]\n\n[IMG: media/ahmad-tea/07_5.webp]\n\n## Результат:\n\nУ результаті бренд отримав цілісну комунікаційну систему, що поєднує традиції та сучасність. Було сформовано чітке позиціонування, яке дозволяє ефективно працювати як із лояльною аудиторією, так і з новими сегментами. Оновлені меседжі підсилюють емоційний зв’язок із брендом, а стратегія створює основу для масштабування рекламних кампаній та посилення впізнаваності.\n\n[IMG: media/ahmad-tea/08_17_2.webp]\n\n[IMG: media/ahmad-tea/09_6_1.webp]\n\n[IMG: media/ahmad-tea/10_7_2.webp]\n\n[IMG: media/ahmad-tea/08_17_2.webp]\n\n[IMG: media/ahmad-tea/09_6_1.webp]\n\n[IMG: media/ahmad-tea/10_7_2.webp]\n\n[IMG: media/ahmad-tea/11_9_2.webp]\n\n[IMG: media/ahmad-tea/11_9_2.webp]\n\n[IMG: media/ahmad-tea/12_10_1.webp]\n\n[IMG: media/ahmad-tea/13_13_1.webp]\n\n[IMG: media/ahmad-tea/14_11_1.webp]\n\n[IMG: media/ahmad-tea/15_12_2.webp]\n\n[IMG: media/ahmad-tea/16_8_2.webp]\n\n[IMG: media/ahmad-tea/17_15_3.webp]\n\n[IMG: media/ahmad-tea/18_14_2.webp]\n\n[IMG: media/ahmad-tea/19_16_2.webp]\n\n[IMG: media/ahmad-tea/20_18_2.webp]"
+    slug: ahmadTeaShared.slug,
+    title: ahmadTeaCopy.uk.title,
+    description: ahmadTeaCopy.uk.description,
+    cover: ahmadTeaShared.cover,
+    media: ahmadTeaShared.media,
+    tagline: ahmadTeaCopy.uk.tagline,
+    serviceTag: ahmadTeaCopy.uk.serviceTag,
+    body: ahmadTeaShared.body,
+    blocks: getAhmadTeaBlocks("uk"),
   },
   {
     "slug": "bit-school",
