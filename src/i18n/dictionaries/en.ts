@@ -182,6 +182,16 @@ const en: Dictionary = {
     moreCasesTitle: "More character to discover.",
     prevCase: "← Previous case",
     nextCase: "Next case →",
+    filterAria: "Filter projects by discipline",
+    filters: {
+      all: "All",
+      branding: "Branding",
+      packaging: "Packaging",
+      smm: "SMM",
+      strategy: "Strategy",
+      web: "Web",
+      graphic: "Graphic design",
+    },
   },
 };
 

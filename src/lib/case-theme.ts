@@ -32,9 +32,11 @@ const CASE_THEMES: Record<string, CaseVisualTheme> = {
     manifestoEm: "#ff8a3b",
   },
   "kyiv-tourism-department": {
-    accent: "#f0c14a",
-    accentInk: "#3d2f0c",
-    manifestoBg: "#1c2433",
+    accent: "#ff7100",
+    accentInk: "#342518",
+    manifestoBg: "#192c42",
+    manifestoFg: "#ffffff",
+    manifestoEm: "#ff8a3b",
   },
   "digital-residence": {
     accent: "#3ec3d6",

@@ -18,7 +18,7 @@ export default function LogoPage({ locale, dictionary, projects }: LogoPageProps
       projects={projects}
       copy={logoPage[locale]}
       seo={getLogoSeo(locale)}
-      heroImage="/branding/logo-sketches.png"
+      heroImage="/branding/include-naming.png"
     />
   );
 }

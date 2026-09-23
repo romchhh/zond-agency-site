@@ -135,6 +135,16 @@ export type Dictionary = {
     moreCasesTitle: string;
     prevCase: string;
     nextCase: string;
+    filterAria: string;
+    filters: {
+      all: string;
+      branding: string;
+      packaging: string;
+      smm: string;
+      strategy: string;
+      web: string;
+      graphic: string;
+    };
   };
   contactPage: {
     title: string;

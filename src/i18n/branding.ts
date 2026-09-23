@@ -44,23 +44,15 @@ export type BrandingPageContent = {
   finalCopy: string;
 };
 
-const brandingIncludeImages = {
-  workshop: "/branding/branding-workshop.png",
-  sketches: "/branding/logo-sketches.png",
-  palette: "/branding/color-palette.png",
-  stationery: "/branding/brand-stationery.png",
-  guidelines: "/branding/brand-guidelines.png",
-} as const;
-
 const brandingIncludeImageOrder = [
-  brandingIncludeImages.workshop,
-  brandingIncludeImages.palette,
-  brandingIncludeImages.sketches,
-  brandingIncludeImages.sketches,
-  brandingIncludeImages.stationery,
-  brandingIncludeImages.guidelines,
-  brandingIncludeImages.stationery,
-  brandingIncludeImages.guidelines,
+  "/branding/include-strategy.png",
+  "/branding/include-positioning.png",
+  "/branding/include-naming.png",
+  "/branding/include-logo.png",
+  "/branding/include-identity.jpg",
+  "/branding/include-brandbook.jpg",
+  "/branding/include-communication.jpg",
+  "/branding/include-character.jpg",
 ] as const;
 
 type IncludeItemInput = {
@@ -73,23 +65,17 @@ type IncludeItemInput = {
 function withBrandingImages(items: IncludeItemInput[]) {
   return items.map((item, index) => ({
     ...item,
-    image: brandingIncludeImageOrder[index] ?? brandingIncludeImages.workshop,
+    image: brandingIncludeImageOrder[index] ?? brandingIncludeImageOrder[0],
   }));
 }
 
 const products = [
-  { src: "/branding/product-skincare.png", key: "skincare" },
-  { src: "/branding/product-coffee.png", key: "coffee" },
-  { src: "/branding/product-tea.png", key: "tea" },
-  { src: "/branding/product-drinks.png", key: "drinks" },
-  { src: "/branding/product-retail.png", key: "retail" },
-  { src: "/branding/product-stationery.png", key: "stationery" },
-] as const;
-
-const people = [
-  "/branding/people-creative.png",
-  "/branding/people-founder.png",
-  "/branding/people-team.png",
+  { src: "/branding/product-mug.jpg", key: "mug" },
+  { src: "/branding/product-stickers.jpg", key: "stickers" },
+  { src: "/branding/product-social.jpg", key: "social" },
+  { src: "/branding/product-cap.jpg", key: "cap" },
+  { src: "/branding/product-packaging.jpg", key: "packaging" },
+  { src: "/branding/product-outdoor.jpg", key: "outdoor" },
 ] as const;
 
 const uk: BrandingPageContent = {
@@ -100,7 +86,7 @@ const uk: BrandingPageContent = {
   sub: "Від дослідження ринку та стратегії до неймінгу, логотипу, фірмового стилю й брендбуку.",
   cta: "Обговорити проєкт",
   heroCaption: "Від першої ідеї — до цілісної системи.",
-  heroAlt: "Робота над візуальною системою бренду: ескізи, палітра та друковані носії",
+  heroAlt: "Робота над айдентикою бренду: візитівка, палітра кольорів і друковані носії",
   metricsTitle: "Наші переваги в цифрах",
   includesEyebrow: "Що входить",
   includesTitle: "Що входить у розробку бренду",
@@ -128,12 +114,12 @@ const uk: BrandingPageContent = {
   productTitle: "Від айдентики — до продукту.",
   productNote: "Ілюстративні концепти пакування та брендованих носіїв.",
   products: [
-    { src: products[0].src, alt: "Косметичні туби, флакон і баночка у світлому пакуванні", caption: "Косметика" },
-    { src: products[1].src, alt: "Пакет кави та стакан із фірмовим оформленням", caption: "Кава" },
-    { src: products[2].src, alt: "Мінімалістичне пакування чаю", caption: "Чай" },
-    { src: products[3].src, alt: "Скляні пляшки напоїв із лаконічними етикетками", caption: "Напої" },
-    { src: products[4].src, alt: "Пакет, коробка та бирка у єдиному стилі", caption: "Ритейл" },
-    { src: products[5].src, alt: "Блокнот, ручка та візитівки", caption: "Брендовані носії" },
+    { src: products[0].src, alt: "Брендована керамічна кружка з логотипом", caption: "Брендовані носії" },
+    { src: products[1].src, alt: "Наліпки та мерч на ноутбуці", caption: "Мерч" },
+    { src: products[2].src, alt: "Оформлення сторінки бренду в соцмережах", caption: "Соцмережі" },
+    { src: products[3].src, alt: "Брендований кепка з вишитим логотипом", caption: "Одяг" },
+    { src: products[4].src, alt: "Пакування з фірмовою стрічкою та логотипом", caption: "Пакування" },
+    { src: products[5].src, alt: "Зовнішня реклама з айдентикою бренду", caption: "Outdoor" },
   ],
   processEyebrow: "Процес",
   processTitle: "Як ми створюємо бренд",
@@ -190,7 +176,7 @@ const en: BrandingPageContent = {
   sub: "From market research and strategy to naming, logo, visual identity, and a brand book.",
   cta: "Discuss the project",
   heroCaption: "From the first idea to a complete system.",
-  heroAlt: "Work on a brand visual system: sketches, palette, and printed media",
+  heroAlt: "Brand identity work: business card, color palette, and printed media",
   metricsTitle: "Our advantages in numbers",
   includesEyebrow: "What’s included",
   includesTitle: "What’s included in brand development",
@@ -218,12 +204,12 @@ const en: BrandingPageContent = {
   productTitle: "From identity to product.",
   productNote: "Illustrative concepts of packaging and branded media.",
   products: [
-    { src: products[0].src, alt: "Cosmetic tubes, bottle, and jar in light packaging", caption: "Skincare" },
-    { src: products[1].src, alt: "Coffee bag and cup with branded design", caption: "Coffee" },
-    { src: products[2].src, alt: "Minimal tea packaging", caption: "Tea" },
-    { src: products[3].src, alt: "Glass drink bottles with concise labels", caption: "Drinks" },
-    { src: products[4].src, alt: "Bag, box, and tag in one style", caption: "Retail" },
-    { src: products[5].src, alt: "Notebook, pen, and business cards", caption: "Branded media" },
+    { src: products[0].src, alt: "Branded ceramic mug with logo", caption: "Branded media" },
+    { src: products[1].src, alt: "Stickers and merch on a laptop", caption: "Merch" },
+    { src: products[2].src, alt: "Brand page design on social media", caption: "Social" },
+    { src: products[3].src, alt: "Branded cap with embroidered logo", caption: "Apparel" },
+    { src: products[4].src, alt: "Packaging with branded tape and logo", caption: "Packaging" },
+    { src: products[5].src, alt: "Outdoor advertising with brand identity", caption: "Outdoor" },
   ],
   processEyebrow: "Process",
   processTitle: "How we create a brand",
@@ -280,7 +266,7 @@ const ru: BrandingPageContent = {
   sub: "От исследования рынка и стратегии до нейминга, логотипа, фирменного стиля и брендбука.",
   cta: "Обсудить проект",
   heroCaption: "От первой идеи — к целостной системе.",
-  heroAlt: "Работа над визуальной системой бренда: эскизы, палитра и печатные носители",
+  heroAlt: "Работа над айдентикой бренда: визитка, палитра цветов и печатные носители",
   metricsTitle: "Наши преимущества в цифрах",
   includesEyebrow: "Что входит",
   includesTitle: "Что входит в разработку бренда",
@@ -308,12 +294,12 @@ const ru: BrandingPageContent = {
   productTitle: "От айдентики — к продукту.",
   productNote: "Иллюстративные концепты упаковки и брендированных носителей.",
   products: [
-    { src: products[0].src, alt: "Косметические тубы, флакон и баночка в светлой упаковке", caption: "Косметика" },
-    { src: products[1].src, alt: "Пакет кофе и стакан с фирменным оформлением", caption: "Кофе" },
-    { src: products[2].src, alt: "Минималистичная упаковка чая", caption: "Чай" },
-    { src: products[3].src, alt: "Стеклянные бутылки напитков с лаконичными этикетками", caption: "Напитки" },
-    { src: products[4].src, alt: "Пакет, коробка и бирка в едином стиле", caption: "Ритейл" },
-    { src: products[5].src, alt: "Блокнот, ручка и визитки", caption: "Брендированные носители" },
+    { src: products[0].src, alt: "Брендированная керамическая кружка с логотипом", caption: "Брендированные носители" },
+    { src: products[1].src, alt: "Наклейки и мерч на ноутбуке", caption: "Мерч" },
+    { src: products[2].src, alt: "Оформление страницы бренда в соцсетях", caption: "Соцсети" },
+    { src: products[3].src, alt: "Брендированная кепка с вышитым логотипом", caption: "Одежда" },
+    { src: products[4].src, alt: "Упаковка с фирменной лентой и логотипом", caption: "Упаковка" },
+    { src: products[5].src, alt: "Наружная реклама с айдентикой бренда", caption: "Outdoor" },
   ],
   processEyebrow: "Процесс",
   processTitle: "Как мы создаём бренд",
@@ -362,5 +348,3 @@ const ru: BrandingPageContent = {
 };
 
 export const brandingPage: Record<Locale, BrandingPageContent> = { uk, en, ru };
-
-export const brandingPeople = people;

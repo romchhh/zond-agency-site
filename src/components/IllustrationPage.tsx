@@ -22,7 +22,7 @@ export default function IllustrationPage({
       projects={projects}
       copy={illustrationPage[locale]}
       seo={getIllustrationSeo(locale)}
-      heroImage="/branding/people-creative.png"
+      heroImage="/branding/include-identity.jpg"
       casesCount={3}
     />
   );

@@ -182,6 +182,16 @@ const ru: Dictionary = {
     moreCasesTitle: "Ещё больше характера.",
     prevCase: "← Предыдущий кейс",
     nextCase: "Следующий кейс →",
+    filterAria: "Фильтр проектов по направлению",
+    filters: {
+      all: "Все",
+      branding: "Брендинг",
+      packaging: "Упаковка",
+      smm: "SMM",
+      strategy: "Стратегия",
+      web: "Веб",
+      graphic: "Графдиз",
+    },
   },
 };
 

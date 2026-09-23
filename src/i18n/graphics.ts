@@ -42,7 +42,7 @@ const uk: ServicePageContent = {
       title: "Дизайн поліграфії",
       description:
         "Каталоги, буклети, листівки, фірмові бланки — з правильною підготовкою до друку, розмірами та оздобленням.",
-      image: "/branding/brand-stationery.png",
+      image: "/branding/hero.png",
       alt: "Дизайн поліграфії",
     },
     {
@@ -290,7 +290,7 @@ const en: ServicePageContent = {
       title: "Print design",
       description:
         "Catalogs, booklets, flyers, letterheads — with correct print preparation, sizes, and finishing.",
-      image: "/branding/brand-stationery.png",
+      image: "/branding/hero.png",
       alt: "Print design",
     },
     {
@@ -421,7 +421,7 @@ const ru: ServicePageContent = {
       title: "Дизайн полиграфии",
       description:
         "Каталоги, буклеты, листовки, фирменные бланки — с правильной подготовкой к печати, размерами и отделкой.",
-      image: "/branding/brand-stationery.png",
+      image: "/branding/hero.png",
       alt: "Дизайн полиграфии",
     },
     {

@@ -182,6 +182,16 @@ const uk: Dictionary = {
     moreCasesTitle: "Ще більше характеру.",
     prevCase: "← Попередній кейс",
     nextCase: "Наступний кейс →",
+    filterAria: "Фільтр проєктів за напрямом",
+    filters: {
+      all: "Всі",
+      branding: "Брендинг",
+      packaging: "Паковання",
+      smm: "SMM",
+      strategy: "Стратегія",
+      web: "Веб",
+      graphic: "Графдіз",
+    },
   },
 };
 

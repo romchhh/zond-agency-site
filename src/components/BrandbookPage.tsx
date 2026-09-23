@@ -22,7 +22,7 @@ export default function BrandbookPage({
       projects={projects}
       copy={brandbookPage[locale]}
       seo={getBrandbookSeo(locale)}
-      heroImage="/branding/brand-guidelines.png"
+      heroImage="/branding/include-brandbook.jpg"
     />
   );
 }

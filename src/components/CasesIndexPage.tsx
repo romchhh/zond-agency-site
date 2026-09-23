@@ -1,4 +1,4 @@
-import CaseCard from "@/components/CaseCard";
+import CasesFilterGrid from "@/components/CasesFilterGrid";
 import CtaPanel from "@/components/CtaPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -35,11 +35,7 @@ export default function CasesIndexPage({
 
         <section className="cases-grid-section">
           <div className="wrap wrap--flush">
-            <div className="projects-grid" id="cases">
-              {cases.map((caseItem) => (
-                <CaseCard key={caseItem.slug} locale={locale} caseItem={caseItem} />
-              ))}
-            </div>
+            <CasesFilterGrid locale={locale} dictionary={dictionary} cases={cases} />
           </div>
         </section>
 

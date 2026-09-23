@@ -202,14 +202,45 @@ function CaseVisualGallery({
   );
 }
 
-const RULE_ICONS = [
-  <svg key="logo" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 28V4h18v24" /></svg>,
-  <svg key="palette" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 5h20v22H6zM6 16h20M16 5v22" /></svg>,
-  <svg key="type" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 6h24M16 6v22M10 28h12" /></svg>,
-  <svg key="photo" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 6h24v22H4zM4 24l8-9 6 6 4-4 6 7M21 11h1" /></svg>,
-  <svg key="grid" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4h9v9H4zM19 4h9v9h-9zM4 19h9v9H4zM19 19h9v9h-9z" /></svg>,
-  <svg key="media" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8Q10 3 3 6v21q7-3 13 2 6-5 13-2V6q-7-3-13 2v21" /></svg>,
-];
+function NicheIcon({ value }: { value: string }) {
+  const normalized = value.toLowerCase();
+  if (normalized.includes("autotech") || normalized.includes("авто")) {
+    return (
+      <svg className="niche-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+        <circle cx="14" cy="14" r="9" />
+        <path d="m21 21 8 8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (
+    normalized.includes("туризм") ||
+    normalized.includes("tourism") ||
+    normalized.includes("місто") ||
+    normalized.includes("город") ||
+    normalized.includes("city")
+  ) {
+    return (
+      <svg className="niche-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true">
+        <path d="M5 28V10l11-6v24M16 13l11 4v11M2 28h28M9 12v3m0 4v3m12-2v3" />
+      </svg>
+    );
+  }
+
+  if (normalized.includes("нерухом") || normalized.includes("real estate") || normalized.includes("недвиж")) {
+    return (
+      <svg className="niche-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true">
+        <path d="M5 28V10l11-6v24M16 13l11 4v11M2 28h28M9 12v3m0 4v3m12-2v3" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className="niche-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 9l11-6 11 6v14l-11 6-11-6V9zM5 9l11 6 11-6M16 15v14" />
+    </svg>
+  );
+}
 
 function OpenCaseButton({ label, href }: { label: string; href: string }) {
   return (
@@ -239,7 +270,6 @@ function renderBlock(
         >
           {block.variant === "book" ? (
             <div className="book-heading">
-              <strong>{block.index}</strong>
               <div>
                 <span className="kicker">{block.kicker}</span>
                 <h2>
@@ -297,9 +327,8 @@ function renderBlock(
           {block.rules?.length ? (
             <>
               <div className="rule-grid">
-                {block.rules.map((rule, index) => (
+                {block.rules.map((rule) => (
                   <div key={rule}>
-                    {RULE_ICONS[index] ?? RULE_ICONS[0]}
                     <span>{rule}</span>
                   </div>
                 ))}
@@ -321,7 +350,7 @@ function renderBlock(
                   {item.accent ? (
                     <CountryFlag code={resolveCountryCode(item.value, item.countryCode)} />
                   ) : item.label.toLowerCase().includes("ніш") || item.label.toLowerCase().includes("ниш") || item.label.toLowerCase() === "niche" ? (
-                    <svg className="niche-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true"><path d="M5 9l11-6 11 6v14l-11 6-11-6V9zM5 9l11 6 11-6M16 15v14M11 6l11 6" /></svg>
+                    <NicheIcon value={item.value} />
                   ) : null}
                   <span>{item.value}</span>
                 </dd>

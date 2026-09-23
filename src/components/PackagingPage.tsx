@@ -22,7 +22,7 @@ export default function PackagingPage({
       projects={projects}
       copy={packagingPage[locale]}
       seo={getPackagingSeo(locale)}
-      heroImage="/branding/product-skincare.png"
+      heroImage="/branding/product-packaging.jpg"
     />
   );
 }

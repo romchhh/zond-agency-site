@@ -8,20 +8,21 @@ import Link from "next/link";
 type CaseCardProps = {
   locale: Locale;
   caseItem: CaseItem;
+  compact?: boolean;
 };
 
 function isAnimated(src: string) {
   return src.endsWith(".gif") || src.endsWith(".webp");
 }
 
-export default function CaseCard({ locale, caseItem }: CaseCardProps) {
+export default function CaseCard({ locale, caseItem, compact = false }: CaseCardProps) {
   const href = getCaseDetailPath(locale, caseItem.slug);
 
   return (
     <Link href={href} className="project-card project-card-link">
       <div className="project-copy">
         <h3>{caseItem.title}</h3>
-        {caseItem.description ? <p>{caseItem.description}</p> : null}
+        {!compact && caseItem.description ? <p>{caseItem.description}</p> : null}
       </div>
       {caseItem.cover ? (
         <div className="project-img">

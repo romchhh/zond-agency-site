@@ -52,8 +52,17 @@ export default function CasePostPage({
     caseItem.tagline,
     caseItem.serviceTag,
   );
+  const heroCaption =
+    caseItem.slug === "home-hub"
+      ? "Home Hub — концепція фасаду шоуруму"
+      : caseItem.slug === "carbit"
+        ? "Carbit — анімована айдентика"
+        : caseItem.slug === "nove-misto"
+          ? "Нове місто — айдентика в русі"
+          : caseItem.slug === "kyiv-tourism-department"
+            ? "Київ — місто кожного / міська кампанія"
+            : caseItem.title;
   const galleryImages = collectCaseVisualImages(hero?.src ?? null, blocks);
-  const heroCaption = caseItem.slug === "home-hub" ? "Home Hub — концепція фасаду шоуруму" : caseItem.title;
   const theme = resolveCaseTheme(caseItem);
 
   return (

@@ -266,6 +266,43 @@ function isCoverPath(path: string): boolean {
   return COVER_RE.test(path);
 }
 
+function isCoverSrc(src: string): boolean {
+  const filename = src.split("/").pop() ?? src;
+  return isCoverPath(filename);
+}
+
+function normalizeGalleryLayout(imageCount: number): CaseVisualGalleryLayout {
+  if (imageCount >= 3) return "triple";
+  if (imageCount === 2) return "pair";
+  return "wide";
+}
+
+function dedupeCaseVisualBlocks(
+  blocks: CaseVisualBlock[],
+  excludeSrc: Array<string | null | undefined>,
+): CaseVisualBlock[] {
+  const exclude = new Set(excludeSrc.filter((src): src is string => Boolean(src)));
+  const deduped: CaseVisualBlock[] = [];
+
+  for (const block of blocks) {
+    if (block.type !== "gallery") {
+      deduped.push(block);
+      continue;
+    }
+
+    const images = block.images.filter((image) => !exclude.has(image.src));
+    if (!images.length) continue;
+
+    deduped.push({
+      ...block,
+      layout: normalizeGalleryLayout(images.length),
+      images,
+    });
+  }
+
+  return deduped;
+}
+
 function matchSectionKey(title: string): string | null {
   const normalized = title.trim();
   for (const [key, patterns] of Object.entries(SECTION_PATTERNS)) {
@@ -396,7 +433,9 @@ function extractCaseContent(body: string, caseItem: CaseItem): CaseContent {
     }
 
     if (token.type === "image") {
-      content.images.push(caseMediaSrc(token.path));
+      if (!isCoverPath(token.path)) {
+        content.images.push(caseMediaSrc(token.path));
+      }
       continue;
     }
 
@@ -718,19 +757,16 @@ function buildHubLayout(caseItem: CaseItem, content: CaseContent, locale: Locale
         ];
 
   blocks.push(
-    sectionBlock("02", copy.tasksKicker, copy.tasksTitle, content.tasks.slice(0, 2), {
-      deliverables: buildDeliverableTiles(deliverableLines, locale),
-    }),
+    sectionBlock("02", copy.tasksKicker, copy.tasksTitle, content.tasks.slice(0, 2)),
   );
+  blocks.push({ type: "deliverables", items: buildDeliverableTiles(deliverableLines, locale) });
 
   if (images.length >= 2) {
     blocks.push(galleryFromImages(takeImages(images, 2), "pair"));
   }
 
   blocks.push(
-    sectionBlock("03", copy.solutionKicker, copy.solutionTitle, [solutionExtra], {
-      ideaStrip: copy.ideaStrip(caseItem.title),
-    }),
+    sectionBlock("03", copy.solutionKicker, copy.solutionTitle, [solutionExtra]),
   );
 
   blocks.push({
@@ -751,7 +787,7 @@ function buildHubLayout(caseItem: CaseItem, content: CaseContent, locale: Locale
     content.deliverables.length >= 3 ? content.deliverables.slice(0, 6) : copy.rules;
 
   blocks.push(
-    sectionBlock("06", copy.bookKicker, copy.bookTitle, [], {
+    sectionBlock("", copy.bookKicker, copy.bookTitle, [], {
       variant: "book",
       rules: bookRules,
     }),
@@ -788,14 +824,22 @@ export function buildCaseVisualBlocks(
   locale: Locale,
   heroSrc: string | null,
 ): CaseVisualBlock[] {
-  if (caseItem.blocks) return caseItem.blocks;
+  const content = caseItem.blocks ? null : extractCaseContent(body, caseItem);
 
-  const content = extractCaseContent(body, caseItem);
-  if (heroSrc) {
-    content.images = content.images.filter((src) => src !== heroSrc);
+  if (content) {
+    content.images = content.images.filter(
+      (src) => src !== heroSrc && src !== caseItem.cover && !isCoverSrc(src),
+    );
   }
 
-  return buildHubLayout(caseItem, content, locale);
+  const blocks = caseItem.blocks ?? buildHubLayout(caseItem, content!, locale);
+  const excludeSrc = [
+    heroSrc,
+    caseItem.cover,
+    ...(content?.images.filter(isCoverSrc) ?? []),
+  ];
+
+  return dedupeCaseVisualBlocks(blocks, excludeSrc);
 }
 
 export function collectCaseVisualImages(
