@@ -9,8 +9,11 @@
   color: #171717;
 }
 
-.case-visual-page.visual.balanced .container {
+.case-visual-page.visual.balanced .container,
+.case-visual-page.visual.balanced .sp-cta > .wrap {
+  width: 100%;
   max-width: 1500px;
+  margin-inline: auto;
 }
 
 /* Override homepage .hero (sticky full-viewport) */
