@@ -185,6 +185,11 @@
   margin-bottom: 25px;
 }
 
+.case-visual-page.visual.balanced .big-heading > div {
+  flex: 1;
+  min-width: 0;
+}
+
 .case-visual-page.visual.balanced .section-index {
   min-width: 72px;
   padding-top: 4px;
@@ -827,22 +832,36 @@
   }
 
   .case-visual-page.visual.balanced .big-heading {
-    gap: 16px;
+    gap: 12px;
     margin-bottom: 23px;
   }
 
   .case-visual-page.visual.balanced .section-index {
-    min-width: 43px;
-    font-size: 33px;
+    flex: 0 0 auto;
+    min-width: 36px;
+    padding-top: 5px;
+    font-size: 30px;
   }
 
   .case-visual-page.visual.balanced .kicker {
     font-size: 12px;
   }
 
-  .case-visual-page.visual.balanced h2,
+  .case-visual-page.visual.balanced .big-heading h2,
+  .case-visual-page.visual.balanced .book-heading h2 {
+    font-size: clamp(27px, 6.8vw, 31px);
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+  }
+
   .case-visual-page.visual.balanced .touchpoint-banner h2 {
-    font-size: 33px;
+    font-size: clamp(28px, 7vw, 32px);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+  }
+
+  .case-visual-page.visual.balanced .more-heading h2 {
+    font-size: 30px;
   }
 
   .case-visual-page.visual.balanced .case-copy {
@@ -963,10 +982,6 @@
     font-size: 75px;
   }
 
-  .case-visual-page.visual.balanced .book-heading h2 {
-    font-size: 29px;
-  }
-
   .case-visual-page.visual.balanced .rule-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
@@ -991,10 +1006,6 @@
     padding: 27px 24px;
   }
 
-  .case-visual-page.visual.balanced .touchpoint-banner h2 {
-    font-size: 36px;
-  }
-
   .case-visual-page.visual.balanced .touchpoint-tags span {
     padding: 10px 16px;
     font-size: 15px;
@@ -1008,10 +1019,6 @@
   .case-visual-page.visual.balanced .quote-card blockquote {
     font-size: 21px;
     line-height: 1.55;
-  }
-
-  .case-visual-page.visual.balanced .more-heading h2 {
-    font-size: 34px;
   }
 
   .case-visual-page.visual.balanced .case-navigation {
@@ -1090,8 +1097,13 @@
     font-size: 73px;
   }
 
+  .case-visual-page.visual.balanced .big-heading h2,
   .case-visual-page.visual.balanced .book-heading h2 {
-    font-size: 27px;
+    font-size: clamp(25px, 6.5vw, 29px);
+  }
+
+  .case-visual-page.visual.balanced .touchpoint-banner h2 {
+    font-size: clamp(26px, 6.8vw, 30px);
   }
 }
 
