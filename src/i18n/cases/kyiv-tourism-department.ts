@@ -4,24 +4,23 @@ import type { Locale } from "@/i18n/config";
 const m = (file: string) => `/assets/cases/kyiv-tourism-department/${file}`;
 
 const kyivTourismMedia = [
-  "media/kyiv-tourism-department/hero.gif",
-  "media/kyiv-tourism-department/kyiv-2.webp",
-  "media/kyiv-tourism-department/kyiv-3.webp",
-  "media/kyiv-tourism-department/kyiv-4.webp",
-  "media/kyiv-tourism-department/kyiv-5.webp",
-  "media/kyiv-tourism-department/kyiv-6.webp",
-  "media/kyiv-tourism-department/kyiv-7.webp",
-  "media/kyiv-tourism-department/kyiv-8.webp",
-  "media/kyiv-tourism-department/kyiv-9.webp",
-  "media/kyiv-tourism-department/kyiv-10.webp",
-  "media/kyiv-tourism-department/kyiv-11.webp",
-  "media/kyiv-tourism-department/kyiv-12.webp",
-  "media/kyiv-tourism-department/kyiv-13.webp",
-  "media/kyiv-tourism-department/kyiv-14.webp",
-  "media/kyiv-tourism-department/kyiv-15.webp",
-  "media/kyiv-tourism-department/kyiv-16.webp",
-  "media/kyiv-tourism-department/kyiv-17.webp",
-  "media/kyiv-tourism-department/kyiv-18.webp",
+  "media/kyiv-tourism-department/hero.jpg",
+  "media/kyiv-tourism-department/01.webp",
+  "media/kyiv-tourism-department/02.jpg",
+  "media/kyiv-tourism-department/03.webp",
+  "media/kyiv-tourism-department/04.webp",
+  "media/kyiv-tourism-department/05.jpg",
+  "media/kyiv-tourism-department/06.webp",
+  "media/kyiv-tourism-department/07.webp",
+  "media/kyiv-tourism-department/08.jpg",
+  "media/kyiv-tourism-department/09.webp",
+  "media/kyiv-tourism-department/10.webp",
+  "media/kyiv-tourism-department/11.jpg",
+  "media/kyiv-tourism-department/12.jpg",
+  "media/kyiv-tourism-department/13.webp",
+  "media/kyiv-tourism-department/14.webp",
+  "media/kyiv-tourism-department/15.webp",
+  "media/kyiv-tourism-department/16.jpg",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -47,8 +46,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kyiv-2.webp"), caption: "Листівки з малюнками Києва" },
-      { src: m("kyiv-3.webp"), caption: "Шрифти кампанії" },
+      { src: m("01.webp"), caption: "Листівки з малюнками Києва" },
+      { src: m("02.jpg"), caption: "Шрифти кампанії" },
     ],
   },
   {
@@ -73,8 +72,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kyiv-4.webp"), caption: "Місто у деталях" },
-      { src: m("kyiv-5.webp"), caption: "Сітілайт у міському просторі" },
+      { src: m("03.webp"), caption: "Місто у деталях" },
+      { src: m("04.webp"), caption: "Сітілайт у міському просторі" },
     ],
   },
   {
@@ -96,14 +95,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("kyiv-6.webp"), caption: "Кампанія на білборді" }],
+    images: [{ src: m("05.jpg"), caption: "Кампанія на білборді" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kyiv-7.webp"), caption: "Комунікація в метро" },
-      { src: m("kyiv-8.webp"), caption: "Друковані матеріали" },
+      { src: m("06.webp"), caption: "Комунікація в метро" },
+      { src: m("07.webp"), caption: "Друковані матеріали" },
     ],
   },
   {
@@ -126,41 +125,38 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kyiv-9.webp"), caption: "Вуличні банери" },
-      { src: m("kyiv-10.webp"), caption: "Листівка кампанії" },
+      { src: m("08.jpg"), caption: "Вуличні банери" },
+      { src: m("09.webp"), caption: "Листівка кампанії" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kyiv-11.webp"), caption: "Малюнки, що об’єднують" },
-      { src: m("kyiv-12.webp"), caption: "Міська реклама" },
+      { src: m("10.webp"), caption: "Малюнки, що об’єднують" },
+      { src: m("11.jpg"), caption: "Міська реклама" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kyiv-13.webp"), caption: "Київ із характером" },
-      { src: m("kyiv-14.webp"), caption: "Вертикальний рекламний носій" },
+      { src: m("12.jpg"), caption: "Київ із характером" },
+      { src: m("13.webp"), caption: "Вертикальний рекламний носій" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kyiv-15.webp"), caption: "Київ очима дітей" },
-      { src: m("kyiv-16.webp"), caption: "Вуличний сітілайт" },
+      { src: m("14.webp"), caption: "Київ очима дітей" },
+      { src: m("15.webp"), caption: "Вуличний сітілайт" },
     ],
   },
   {
     type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("kyiv-17.webp"), caption: "Листівка на тлі міста" },
-      { src: m("kyiv-18.webp"), caption: "Інформаційний носій із QR-кодом" },
-    ],
+    layout: "wide",
+    images: [{ src: m("16.jpg"), caption: "Кампанія в міському просторі" }],
   },
   {
     type: "section",
@@ -416,11 +412,11 @@ export function getKyivTourismBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const kyivTourismShared = {
   slug: "kyiv-tourism-department",
-  cover: m("hero.gif"),
+  cover: m("cover.jpg"),
   media: kyivTourismMedia,
   tagline: "Місто, у якому\nє місце тобі.",
   serviceTag: "Соціальна кампанія",
-  body: `[IMG: media/kyiv-tourism-department/hero.gif]`,
+  body: `[IMG: media/kyiv-tourism-department/hero.jpg]`,
 };
 
 export const kyivTourismCopy: Record<

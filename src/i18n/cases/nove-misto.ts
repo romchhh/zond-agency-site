@@ -4,26 +4,23 @@ import type { Locale } from "@/i18n/config";
 const m = (file: string) => `/assets/cases/nove-misto/${file}`;
 
 const noveMistoMedia = [
-  "media/nove-misto/01_cover_нм_1_1.gif",
-  "media/nove-misto/02_гифка5.gif",
-  "media/nove-misto/03_1_11zon_1.jpg",
-  "media/nove-misto/04_2_11zon_3.webp",
-  "media/nove-misto/05_3_11zon_2.webp",
-  "media/nove-misto/06_4_11zon_9.webp",
-  "media/nove-misto/07_5_11zon_1_9.webp",
-  "media/nove-misto/08_6_11zon_1_2.webp",
-  "media/nove-misto/09_7_11zon_1_2.jpg",
-  "media/nove-misto/10_8_11zon_1_2.webp",
-  "media/nove-misto/11_9_11zon_3.webp",
-  "media/nove-misto/12_10_11zon_8.jpg",
-  "media/nove-misto/13_11_11zon_5.jpg",
-  "media/nove-misto/14_12_11zon_5.jpg",
-  "media/nove-misto/15_13_11zon_7.jpg",
-  "media/nove-misto/16_16_11zon_6.webp",
-  "media/nove-misto/17_17_11zon_11.jpg",
-  "media/nove-misto/18_18_11zon_5.webp",
-  "media/nove-misto/19_15_11zon_9.jpg",
-  "media/nove-misto/20_14_11zon_6.jpg",
+  "media/nove-misto/cover.gif",
+  "media/nove-misto/hero.jpg",
+  "media/nove-misto/01.jpg",
+  "media/nove-misto/02.webp",
+  "media/nove-misto/03.webp",
+  "media/nove-misto/04.webp",
+  "media/nove-misto/05.webp",
+  "media/nove-misto/06.jpg",
+  "media/nove-misto/07.jpg",
+  "media/nove-misto/08.jpg",
+  "media/nove-misto/09.jpg",
+  "media/nove-misto/10.webp",
+  "media/nove-misto/11.webp",
+  "media/nove-misto/12.jpg",
+  "media/nove-misto/13.jpg",
+  "media/nove-misto/14.jpg",
+  "media/nove-misto/15.jpg",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -49,8 +46,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("03_1_11zon_1.jpg"), caption: "Зовнішня реклама" },
-      { src: m("04_2_11zon_3.webp"), caption: "Логотип у просторі" },
+      { src: m("01.jpg"), caption: "Зовнішня реклама" },
+      { src: m("02.webp"), caption: "Логотип у просторі" },
     ],
   },
   {
@@ -75,8 +72,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("06_4_11zon_9.webp"), caption: "Фірмовий шопер" },
-      { src: m("07_5_11zon_1_9.webp"), caption: "Брендована каска" },
+      { src: m("03.webp"), caption: "Фірмовий шопер" },
+      { src: m("04.webp"), caption: "Брендована каска" },
     ],
   },
   {
@@ -98,14 +95,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("11_9_11zon_3.webp"), caption: "Кольори та матеріали" }],
+    images: [{ src: m("05.webp"), caption: "Кольори та матеріали" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("05_3_11zon_2.webp"), caption: "Типографіка бренду" },
-      { src: m("09_7_11zon_1_2.jpg"), caption: "Вивіска" },
+      { src: m("06.jpg"), caption: "Вивіска" },
+      { src: m("07.jpg"), caption: "Рекламні постери" },
     ],
   },
   {
@@ -128,51 +125,33 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("14_12_11zon_5.jpg"), caption: "Брендбук" },
-      { src: m("17_17_11zon_11.jpg"), caption: "Ділова документація" },
+      { src: m("08.jpg"), caption: "Брендбук" },
+      { src: m("09.jpg"), caption: "Ділова документація" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("15_13_11zon_7.jpg"), caption: "Візитівки" },
-      { src: m("12_10_11zon_8.jpg"), caption: "Рекламні постери" },
+      { src: m("10.webp"), caption: "Фірмова чашка" },
+      { src: m("11.webp"), caption: "Фірмова пляшка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("08_6_11zon_1_2.webp"), caption: "Корпоративний одяг" },
-      { src: m("13_11_11zon_5.jpg"), caption: "Футболка" },
+      { src: m("12.jpg"), caption: "Корпоративний одяг" },
+      { src: m("13.jpg"), caption: "Футболка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("10_8_11zon_1_2.webp"), caption: "Фірмова чашка" },
-      { src: m("18_18_11zon_5.webp"), caption: "Фірмова пляшка" },
+      { src: m("14.jpg"), caption: "Одяг команди" },
+      { src: m("15.jpg"), caption: "Друковані матеріали" },
     ],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("16_16_11zon_6.webp"), caption: "Кепка" },
-      { src: m("19_15_11zon_9.jpg"), caption: "Одяг команди" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "wide",
-    images: [{ src: m("20_14_11zon_6.jpg"), caption: "Друковані матеріали" }],
-  },
-  {
-    type: "gallery",
-    layout: "wide",
-    images: [{ src: m("01_cover_нм_1_1.gif"), caption: "Нове місто — характер бренду" }],
   },
   {
     type: "section",
@@ -408,11 +387,11 @@ export function getNoveMistoBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const noveMistoShared = {
   slug: "nove-misto",
-  cover: m("01_cover_нм_1_1.gif"),
+  cover: m("cover.gif"),
   media: noveMistoMedia,
   tagline: "Архітектура бренду.\nХарактер простору.",
   serviceTag: "Брендинг + брендбук",
-  body: `[IMG: media/nove-misto/02_гифка5.gif]`,
+  body: `[IMG: media/nove-misto/hero.jpg]`,
 };
 
 export const noveMistoCopy: Record<

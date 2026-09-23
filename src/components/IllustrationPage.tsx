@@ -23,7 +23,6 @@ export default function IllustrationPage({
       copy={illustrationPage[locale]}
       seo={getIllustrationSeo(locale)}
       heroImage="/branding/include-identity.jpg"
-      casesCount={3}
     />
   );
 }

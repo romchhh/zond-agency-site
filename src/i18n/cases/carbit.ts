@@ -4,26 +4,25 @@ import type { Locale } from "@/i18n/config";
 const m = (file: string) => `/assets/cases/carbit/${file}`;
 
 const carbitMedia = [
-  "media/carbit/motion.gif",
-  "media/carbit/hero.gif",
-  "media/carbit/carbit-1.webp",
-  "media/carbit/carbit-2.webp",
-  "media/carbit/carbit-3.webp",
-  "media/carbit/carbit-4.webp",
-  "media/carbit/carbit-5.webp",
-  "media/carbit/carbit-6.webp",
-  "media/carbit/carbit-7.webp",
-  "media/carbit/carbit-8.webp",
-  "media/carbit/carbit-9.webp",
-  "media/carbit/carbit-10.webp",
-  "media/carbit/carbit-11.webp",
-  "media/carbit/carbit-12.webp",
-  "media/carbit/carbit-13.webp",
-  "media/carbit/carbit-14.webp",
-  "media/carbit/carbit-15.webp",
-  "media/carbit/carbit-16.webp",
-  "media/carbit/carbit-17.webp",
-  "media/carbit/carbit-18.webp",
+  "media/carbit/hero.jpg",
+  "media/carbit/01.jpg",
+  "media/carbit/02.webp",
+  "media/carbit/03.jpg",
+  "media/carbit/04.webp",
+  "media/carbit/05.webp",
+  "media/carbit/06.jpg",
+  "media/carbit/07.jpg",
+  "media/carbit/08.webp",
+  "media/carbit/09.jpg",
+  "media/carbit/10.jpg",
+  "media/carbit/11.webp",
+  "media/carbit/12.webp",
+  "media/carbit/13.webp",
+  "media/carbit/14.jpg",
+  "media/carbit/15.webp",
+  "media/carbit/16.webp",
+  "media/carbit/17.webp",
+  "media/carbit/18.jpg",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -49,8 +48,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-1.webp"), caption: "Carbit у мобільному середовищі" },
-      { src: m("carbit-2.webp"), caption: "Логотип і автомобільний характер бренду" },
+      { src: m("01.jpg"), caption: "Carbit у мобільному середовищі" },
+      { src: m("02.webp"), caption: "Логотип і автомобільний характер бренду" },
     ],
   },
   {
@@ -75,8 +74,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-3.webp"), caption: "Рекламна комунікація" },
-      { src: m("carbit-8.webp"), caption: "Презентація на планшеті" },
+      { src: m("03.jpg"), caption: "Рекламна комунікація" },
+      { src: m("04.webp"), caption: "Презентація на планшеті" },
     ],
   },
   {
@@ -98,14 +97,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("carbit-9.webp"), caption: "Кольорова система та варіанти знака" }],
+    images: [{ src: m("05.webp"), caption: "Кольорова система та варіанти знака" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-6.webp"), caption: "Мобільна комунікація" },
-      { src: m("carbit-13.webp"), caption: "Вебматеріали Carbit" },
+      { src: m("06.jpg"), caption: "Мобільна комунікація" },
+      { src: m("07.jpg"), caption: "Вебматеріали Carbit" },
     ],
   },
   {
@@ -128,51 +127,46 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-5.webp"), caption: "Презентація бренду в просторі" },
-      { src: m("carbit-10.webp"), caption: "Оформлення соціальних мереж" },
+      { src: m("08.webp"), caption: "Презентація бренду в просторі" },
+      { src: m("09.jpg"), caption: "Оформлення соціальних мереж" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-11.webp"), caption: "Зовнішня реклама" },
-      { src: m("carbit-15.webp"), caption: "Рекламна конструкція" },
+      { src: m("10.jpg"), caption: "Зовнішня реклама" },
+      { src: m("11.webp"), caption: "Рекламна конструкція" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-4.webp"), caption: "Фірмовий брелок" },
-      { src: m("carbit-12.webp"), caption: "Фірмова пляшка" },
+      { src: m("12.webp"), caption: "Фірмовий брелок" },
+      { src: m("13.webp"), caption: "Фірмова пляшка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-7.webp"), caption: "Футболка команди" },
-      { src: m("carbit-14.webp"), caption: "Брендований одяг" },
+      { src: m("14.jpg"), caption: "Футболка команди" },
+      { src: m("15.webp"), caption: "Брендований одяг" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("carbit-16.webp"), caption: "Кепка зі знаком Carbit" },
-      { src: m("carbit-18.webp"), caption: "Фірмовий рушник" },
+      { src: m("16.webp"), caption: "Кепка зі знаком Carbit" },
+      { src: m("17.webp"), caption: "Фірмовий рушник" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("carbit-17.webp"), caption: "Автомобільне оголошення" }],
-  },
-  {
-    type: "gallery",
-    layout: "wide",
-    images: [{ src: m("motion.gif"), caption: "Carbit — знак у русі" }],
+    images: [{ src: m("18.jpg"), caption: "Автомобільне оголошення" }],
   },
   {
     type: "section",
@@ -420,11 +414,11 @@ export function getCarbitBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const carbitShared = {
   slug: "carbit",
-  cover: m("motion.gif"),
+  cover: m("cover.gif"),
   media: carbitMedia,
   tagline: "Бренд, що рухає\nпошук уперед.",
   serviceTag: "Брендинг + айдентика",
-  body: `[IMG: media/carbit/hero.gif]`,
+  body: `[IMG: media/carbit/hero.jpg]`,
 };
 
 export const carbitCopy: Record<

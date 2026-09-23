@@ -4,25 +4,24 @@ import type { Locale } from "@/i18n/config";
 const m = (file: string) => `/assets/cases/ahmad-tea/${file}`;
 
 const ahmadTeaMedia = [
-  "media/ahmad-tea/hero.gif",
-  "media/ahmad-tea/ahmad-2.webp",
-  "media/ahmad-tea/ahmad-3.webp",
-  "media/ahmad-tea/ahmad-4.webp",
-  "media/ahmad-tea/ahmad-5.webp",
-  "media/ahmad-tea/ahmad-6.webp",
-  "media/ahmad-tea/ahmad-7.webp",
-  "media/ahmad-tea/ahmad-8.webp",
-  "media/ahmad-tea/ahmad-9.webp",
-  "media/ahmad-tea/ahmad-10.webp",
-  "media/ahmad-tea/ahmad-11.webp",
-  "media/ahmad-tea/ahmad-12.webp",
-  "media/ahmad-tea/ahmad-13.webp",
-  "media/ahmad-tea/ahmad-14.webp",
-  "media/ahmad-tea/ahmad-15.webp",
-  "media/ahmad-tea/ahmad-16.webp",
-  "media/ahmad-tea/ahmad-17.webp",
-  "media/ahmad-tea/ahmad-18.webp",
-  "media/ahmad-tea/ahmad-19.webp",
+  "media/ahmad-tea/hero.jpg",
+  "media/ahmad-tea/01.jpg",
+  "media/ahmad-tea/02.jpg",
+  "media/ahmad-tea/03.jpg",
+  "media/ahmad-tea/04.jpg",
+  "media/ahmad-tea/05.jpg",
+  "media/ahmad-tea/06.jpg",
+  "media/ahmad-tea/07.jpg",
+  "media/ahmad-tea/08.jpg",
+  "media/ahmad-tea/09.jpg",
+  "media/ahmad-tea/10.webp",
+  "media/ahmad-tea/11.webp",
+  "media/ahmad-tea/12.jpg",
+  "media/ahmad-tea/13.jpg",
+  "media/ahmad-tea/14.jpg",
+  "media/ahmad-tea/15.jpg",
+  "media/ahmad-tea/16.jpg",
+  "media/ahmad-tea/17.jpg",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -48,8 +47,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("ahmad-2.webp"), caption: "Рекламна концепція на міському носії" },
-      { src: m("ahmad-3.webp"), caption: "Завдання й результати стратегії" },
+      { src: m("01.jpg"), caption: "Рекламна концепція на міському носії" },
+      { src: m("02.jpg"), caption: "Завдання й результати стратегії" },
     ],
   },
   {
@@ -72,10 +71,15 @@ const blocksUk: CaseVisualBlock[] = [
   },
   {
     type: "gallery",
+    layout: "wide",
+    images: [{ src: m("03.jpg"), caption: "Візуальний напрям кампанії" }],
+  },
+  {
+    type: "gallery",
     layout: "pair",
     images: [
-      { src: m("ahmad-4.webp"), caption: "Візуальний напрям кампанії" },
-      { src: m("ahmad-5.webp"), caption: "Чай із фруктовими нотами" },
+      { src: m("04.jpg"), caption: "Чай із фруктовими нотами" },
+      { src: m("05.jpg"), caption: "Продукт у природному середовищі" },
     ],
   },
   {
@@ -97,16 +101,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [
-      { src: m("ahmad-6.webp"), caption: "Продукт у природному середовищі" },
-    ],
+    images: [{ src: m("06.jpg"), caption: "Комунікація для цифрових каналів" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("ahmad-7.webp"), caption: "Комунікація для цифрових каналів" },
-      { src: m("ahmad-8.webp"), caption: "Фотоісторія для бренду" },
+      { src: m("07.jpg"), caption: "Фотоісторія для бренду" },
+      { src: m("08.jpg"), caption: "Чаювання вдома" },
     ],
   },
   {
@@ -115,8 +117,7 @@ const blocksUk: CaseVisualBlock[] = [
     variant: "book",
     kicker: "СКЛАД РОБОТИ",
     title: "Одна стратегія.\nРізні точки контакту.",
-    paragraphs: [
-    ],
+    paragraphs: [],
     rules: [
       "Дослідження ринку",
       "Аналіз аудиторії",
@@ -130,50 +131,42 @@ const blocksUk: CaseVisualBlock[] = [
   },
   {
     type: "gallery",
+    layout: "wide",
+    images: [{ src: m("09.jpg"), caption: "Комунікаційні повідомлення" }],
+  },
+  {
+    type: "gallery",
     layout: "pair",
     images: [
-      { src: m("ahmad-9.webp"), caption: "Чаювання вдома" },
-      { src: m("ahmad-10.webp"), caption: "Комунікаційні повідомлення" },
+      { src: m("10.webp"), caption: "Міський рекламний носій" },
+      { src: m("11.webp"), caption: "Фотоісторія на фірмовому матеріалі" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("ahmad-11.webp"), caption: "Сімейна історія у міському просторі" },
-      { src: m("ahmad-12.webp"), caption: "Серія рекламних матеріалів" },
+      { src: m("12.jpg"), caption: "Сімейна історія у міському просторі" },
+      { src: m("13.jpg"), caption: "Серія рекламних матеріалів" },
     ],
+  },
+  {
+    type: "gallery",
+    layout: "wide",
+    images: [{ src: m("14.jpg"), caption: "Сітілайт із героями кампанії" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("ahmad-13.webp"), caption: "Сітілайт із героями кампанії" },
-      { src: m("ahmad-14.webp"), caption: "Креативна концепція на носіях" },
+      { src: m("15.jpg"), caption: "Креативна концепція на носіях" },
+      { src: m("16.jpg"), caption: "Сюжет із друзями" },
     ],
   },
   {
     type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("ahmad-15.webp"), caption: "Сюжет із друзями" },
-      { src: m("ahmad-16.webp"), caption: "Зовнішня реклама AHMAD TEA" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("ahmad-17.webp"), caption: "Цифровий сюжет для нової аудиторії" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("ahmad-18.webp"), caption: "Міський рекламний носій" },
-      { src: m("ahmad-19.webp"), caption: "Фотоісторія на фірмовому матеріалі" },
-    ],
+    layout: "wide",
+    images: [{ src: m("17.jpg"), caption: "Зовнішня реклама AHMAD TEA" }],
   },
   {
     type: "section",
@@ -212,9 +205,9 @@ export function getAhmadTeaBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const ahmadTeaShared = {
   slug: "ahmad-tea",
-  cover: m("01_cover_Ахмад_гіф_1_1.gif"),
+  cover: m("cover.gif"),
   media: ahmadTeaMedia,
-  body: `[IMG: media/ahmad-tea/hero.gif]`,
+  body: `[IMG: media/ahmad-tea/hero.jpg]`,
 };
 
 export const ahmadTeaCopy: Record<

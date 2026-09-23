@@ -83,6 +83,8 @@ export type CaseItem = {
   slug: string;
   title: string;
   description: string;
+  /** Short niche label for project cards (homepage, services). */
+  cardDescription?: string;
   cover: string;
   media: string[];
   body: string;

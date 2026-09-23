@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import type { CaseItem } from "./types";
+import { getCaseCardDescription } from "./card-descriptions";
 import casesEn from "./cases.en";
 import casesRu from "./cases.ru";
 import casesUk from "./cases.uk";
@@ -16,7 +17,12 @@ const HIDDEN_CASE_SLUGS = new Set(["home-hub"]);
 export type { CaseItem } from "./types";
 
 export function getCases(locale: Locale): CaseItem[] {
-  return casesByLocale[locale].filter((item) => !HIDDEN_CASE_SLUGS.has(item.slug));
+  return casesByLocale[locale]
+    .filter((item) => !HIDDEN_CASE_SLUGS.has(item.slug))
+    .map((item) => {
+      const cardDescription = getCaseCardDescription(locale, item.slug);
+      return cardDescription ? { ...item, cardDescription } : item;
+    });
 }
 
 export function getCase(locale: Locale, slug: string): CaseItem | undefined {

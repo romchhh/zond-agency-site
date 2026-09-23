@@ -5,26 +5,26 @@ const m = (file: string) => `/assets/cases/digital-residence/${file}`;
 
 const digitalResidenceMedia = [
   "media/digital-residence/hero.jpg",
-  "media/digital-residence/digital-2.webp",
-  "media/digital-residence/digital-3.jpg",
-  "media/digital-residence/05_4_1.webp",
-  "media/digital-residence/06_5_1.webp",
-  "media/digital-residence/digital-6.jpg",
-  "media/digital-residence/08_7.webp",
-  "media/digital-residence/09_8.webp",
-  "media/digital-residence/digital-9.jpg",
-  "media/digital-residence/digital-10.jpg",
-  "media/digital-residence/digital-11.jpg",
-  "media/digital-residence/digital-12.jpg",
-  "media/digital-residence/digital-13.jpg",
-  "media/digital-residence/digital-14.jpg",
-  "media/digital-residence/digital-15.webp",
-  "media/digital-residence/digital-16.jpg",
-  "media/digital-residence/digital-17.jpg",
-  "media/digital-residence/digital-18.jpg",
-  "media/digital-residence/digital-19.jpg",
-  "media/digital-residence/digital-20.jpg",
-  "media/digital-residence/digital-21.jpg",
+  "media/digital-residence/01.webp",
+  "media/digital-residence/02.jpg",
+  "media/digital-residence/03.webp",
+  "media/digital-residence/04.webp",
+  "media/digital-residence/05.jpg",
+  "media/digital-residence/06.webp",
+  "media/digital-residence/07.webp",
+  "media/digital-residence/08.jpg",
+  "media/digital-residence/09.jpg",
+  "media/digital-residence/10.jpg",
+  "media/digital-residence/11.jpg",
+  "media/digital-residence/12.jpg",
+  "media/digital-residence/13.jpg",
+  "media/digital-residence/14.webp",
+  "media/digital-residence/15.jpg",
+  "media/digital-residence/16.jpg",
+  "media/digital-residence/17.jpg",
+  "media/digital-residence/18.jpg",
+  "media/digital-residence/19.jpg",
+  "media/digital-residence/20.jpg",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -50,8 +50,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("digital-2.webp"), caption: "Архітектура та знак" },
-      { src: m("digital-3.jpg"), caption: "Типографіка бренду" },
+      { src: m("01.webp"), caption: "Архітектура та знак" },
+      { src: m("02.jpg"), caption: "Типографіка бренду" },
     ],
   },
   {
@@ -76,8 +76,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("05_4_1.webp"), caption: "Об’ємний фірмовий брелок" },
-      { src: m("06_5_1.webp"), caption: "Корпоративна футболка" },
+      { src: m("03.webp"), caption: "Об’ємний фірмовий брелок" },
+      { src: m("04.webp"), caption: "Корпоративна футболка" },
     ],
   },
   {
@@ -99,14 +99,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("digital-6.jpg"), caption: "Презентаційний буклет" }],
+    images: [{ src: m("05.jpg"), caption: "Презентаційний буклет" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("08_7.webp"), caption: "Фірмовий шопер" },
-      { src: m("09_8.webp"), caption: "Ділові матеріали" },
+      { src: m("06.webp"), caption: "Фірмовий шопер" },
+      { src: m("07.webp"), caption: "Ділові матеріали" },
     ],
   },
   {
@@ -129,54 +129,54 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("digital-9.jpg"), caption: "Кольорова система" },
-      { src: m("digital-10.jpg"), caption: "Одяг спільноти" },
+      { src: m("08.jpg"), caption: "Кольорова система" },
+      { src: m("09.jpg"), caption: "Одяг спільноти" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("digital-11.jpg"), caption: "Мобільна комунікація" },
-      { src: m("digital-12.jpg"), caption: "Зовнішня реклама" },
+      { src: m("10.jpg"), caption: "Мобільна комунікація" },
+      { src: m("11.jpg"), caption: "Зовнішня реклама" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("digital-13.jpg"), caption: "Персонажі та стікери" },
-      { src: m("digital-14.jpg"), caption: "Оформлення соціальних мереж" },
+      { src: m("12.jpg"), caption: "Персонажі та стікери" },
+      { src: m("13.jpg"), caption: "Оформлення соціальних мереж" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("digital-15.webp"), caption: "Цифрові презентації" },
-      { src: m("digital-16.jpg"), caption: "Фірмові блокноти" },
+      { src: m("14.webp"), caption: "Цифрові презентації" },
+      { src: m("15.jpg"), caption: "Фірмові блокноти" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("digital-17.jpg"), caption: "Графіка та стікери" },
-      { src: m("digital-18.jpg"), caption: "Візитівки" },
+      { src: m("16.jpg"), caption: "Графіка та стікери" },
+      { src: m("17.jpg"), caption: "Візитівки" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("digital-19.jpg"), caption: "Корпоративні матеріали" },
-      { src: m("digital-20.jpg"), caption: "Фірмові носії" },
+      { src: m("18.jpg"), caption: "Корпоративні матеріали" },
+      { src: m("19.jpg"), caption: "Фірмові носії" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("digital-21.jpg"), caption: "Бренд у просторі" }],
+    images: [{ src: m("20.jpg"), caption: "Бренд у просторі" }],
   },
   {
     type: "section",
@@ -215,7 +215,7 @@ export function getDigitalResidenceBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const digitalResidenceShared = {
   slug: "digital-residence",
-  cover: m("01_cover_digital_2.gif"),
+  cover: m("cover.gif"),
   media: digitalResidenceMedia,
   body: `[IMG: media/digital-residence/hero.jpg]`,
 };

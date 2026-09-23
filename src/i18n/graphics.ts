@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import type { ServicePageContent } from "@/i18n/logo";
+import { withServiceProductImages } from "@/i18n/service-products";
 
 const uk: ServicePageContent = {
   eyebrow: "Послуги / Графіка",
@@ -194,6 +195,16 @@ const uk: ServicePageContent = {
       role: "Фірмова графіка",
     },
   ],
+  productTitle: "Графіка на кожному носії.",
+  productNote: "Від поліграфії та мерчу до outdoor і digital.",
+  products: withServiceProductImages([
+    { alt: "Фірмова графіка на носіях", caption: "Брендовані носії" },
+    { alt: "Графіка на мерчі", caption: "Мерч" },
+    { alt: "Графіка в соцмережах", caption: "Соцмережі" },
+    { alt: "Принт на одязі", caption: "Одяг" },
+    { alt: "Графіка на пакуванні", caption: "Пакування" },
+    { alt: "Графіка на зовнішній рекламі", caption: "Outdoor" },
+  ]),
   formTitle: "Потрібна графіка, яка працює на впізнаваність?",
   formDescription:
     "Заповніть форму. Розберемо задачу й запропонуємо рішення під ваші носії та бренд.",
@@ -358,6 +369,16 @@ const en: ServicePageContent = {
     { label: "Sample review 02", quote: "The investor presentation became clearer and more persuasive. Slide structure supports the text instead of distracting from it.", name: "Client name · Company", role: "Presentation design" },
     { label: "Sample review 03", quote: "All materials look like one system. Easy to add new media using the studio guidelines.", name: "Client name · Company", role: "Brand graphics" },
   ],
+  productTitle: "Graphics on every medium.",
+  productNote: "From print and merch to outdoor and digital.",
+  products: withServiceProductImages([
+    { alt: "Corporate graphics on media", caption: "Branded media" },
+    { alt: "Graphics on merch", caption: "Merch" },
+    { alt: "Graphics on social media", caption: "Social" },
+    { alt: "Print on apparel", caption: "Apparel" },
+    { alt: "Graphics on packaging", caption: "Packaging" },
+    { alt: "Graphics on outdoor advertising", caption: "Outdoor" },
+  ]),
   formTitle: "Need graphics that work for recognition?",
   formDescription: "Fill out the form. We will review the task and propose a solution for your media and brand.",
   faqTitle: "FAQ",
@@ -489,6 +510,16 @@ const ru: ServicePageContent = {
     { label: "Пример отзыва 02", quote: "Презентация для инвесторов стала читабельнее и убедительнее. Структура слайдов работает на текст, а не отвлекает от него.", name: "Имя клиента · Компания", role: "Оформление презентаций" },
     { label: "Пример отзыва 03", quote: "Все материалы выглядят как одна система. Легко добавлять новые носители, опираясь на рекомендации студии.", name: "Имя клиента · Компания", role: "Фирменная графика" },
   ],
+  productTitle: "Графика на каждом носителе.",
+  productNote: "От полиграфии и мерча до outdoor и digital.",
+  products: withServiceProductImages([
+    { alt: "Фирменная графика на носителях", caption: "Брендированные носители" },
+    { alt: "Графика на мерче", caption: "Мерч" },
+    { alt: "Графика в соцсетях", caption: "Соцсети" },
+    { alt: "Принт на одежде", caption: "Одежда" },
+    { alt: "Графика на упаковке", caption: "Упаковка" },
+    { alt: "Графика на наружной рекламе", caption: "Outdoor" },
+  ]),
   formTitle: "Нужна графика, которая работает на узнаваемость?",
   formDescription: "Заполните форму. Разберём задачу и предложим решение под ваши носители и бренд.",
   faqTitle: "FAQ",

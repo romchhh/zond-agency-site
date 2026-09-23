@@ -5,22 +5,22 @@ const m = (file: string) => `/assets/cases/kavlora/${file}`;
 
 const kavloraMedia = [
   "media/kavlora/hero.gif",
-  "media/kavlora/kavlora-2.webp",
-  "media/kavlora/kavlora-3.webp",
-  "media/kavlora/kavlora-4.webp",
-  "media/kavlora/kavlora-5.webp",
-  "media/kavlora/kavlora-6.webp",
-  "media/kavlora/kavlora-7.webp",
-  "media/kavlora/kavlora-8.webp",
-  "media/kavlora/kavlora-9.webp",
-  "media/kavlora/kavlora-10.webp",
-  "media/kavlora/kavlora-11.webp",
-  "media/kavlora/kavlora-12.webp",
-  "media/kavlora/kavlora-13.webp",
-  "media/kavlora/kavlora-14.webp",
-  "media/kavlora/kavlora-15.webp",
-  "media/kavlora/kavlora-16.webp",
-  "media/kavlora/kavlora-17.webp",
+  "media/kavlora/01.webp",
+  "media/kavlora/02.webp",
+  "media/kavlora/03.webp",
+  "media/kavlora/04.webp",
+  "media/kavlora/05.webp",
+  "media/kavlora/06.webp",
+  "media/kavlora/07.webp",
+  "media/kavlora/08.webp",
+  "media/kavlora/09.webp",
+  "media/kavlora/10.webp",
+  "media/kavlora/11.webp",
+  "media/kavlora/12.webp",
+  "media/kavlora/13.webp",
+  "media/kavlora/14.webp",
+  "media/kavlora/15.webp",
+  "media/kavlora/16.webp",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -46,8 +46,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-2.webp"), caption: "Знак на фасаді виробництва" },
-      { src: m("kavlora-3.webp"), caption: "Шрифти KAVLORA" },
+      { src: m("01.webp"), caption: "Знак на фасаді виробництва" },
+      { src: m("02.webp"), caption: "Шрифти KAVLORA" },
     ],
   },
   {
@@ -72,8 +72,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-4.webp"), caption: "Графічний знак та фактура дерева" },
-      { src: m("kavlora-5.webp"), caption: "Корпоративна каска" },
+      { src: m("03.webp"), caption: "Графічний знак та фактура дерева" },
+      { src: m("04.webp"), caption: "Корпоративна каска" },
     ],
   },
   {
@@ -96,15 +96,15 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "wide",
     images: [
-      { src: m("kavlora-6.webp"), caption: "Фірмовий одяг" },
+      { src: m("05.webp"), caption: "Фірмовий одяг" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-7.webp"), caption: "Логотип та графічний елемент" },
-      { src: m("kavlora-8.webp"), caption: "Сумка KAVLORA" },
+      { src: m("06.webp"), caption: "Логотип та графічний елемент" },
+      { src: m("07.webp"), caption: "Сумка KAVLORA" },
     ],
   },
   {
@@ -128,39 +128,39 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-9.webp"), caption: "Брендована кепка" },
-      { src: m("kavlora-10.webp"), caption: "Колірна система та фактури" },
+      { src: m("08.webp"), caption: "Брендована кепка" },
+      { src: m("09.webp"), caption: "Колірна система та фактури" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-11.webp"), caption: "Візитівки" },
-      { src: m("kavlora-12.webp"), caption: "Корпоративні футболки" },
+      { src: m("10.webp"), caption: "Візитівки" },
+      { src: m("11.webp"), caption: "Корпоративні футболки" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-13.webp"), caption: "Мобільна реклама" },
-      { src: m("kavlora-14.webp"), caption: "Фірмовий одяг — застосування графіки" },
+      { src: m("12.webp"), caption: "Мобільна реклама" },
+      { src: m("13.webp"), caption: "Фірмовий одяг — застосування графіки" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-15.webp"), caption: "Вебматеріали KAVLORA" },
-      { src: m("kavlora-16.webp"), caption: "Цифрова реклама" },
+      { src: m("14.webp"), caption: "Вебматеріали KAVLORA" },
+      { src: m("15.webp"), caption: "Цифрова реклама" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("kavlora-17.webp"), caption: "Фірмовий бланк" },
+      { src: m("16.webp"), caption: "Фірмовий бланк" },
     ],
   },
   {
@@ -200,7 +200,7 @@ export function getKavloraBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const kavloraShared = {
   slug: "kavlora",
-  cover: m("01_cover_Kavlora1.gif"),
+  cover: m("cover.gif"),
   media: kavloraMedia,
   body: `[IMG: media/kavlora/hero.gif]`,
 };

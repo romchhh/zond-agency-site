@@ -1,6 +1,7 @@
 import ConsultationCta from "@/components/ConsultationCta";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import IncludeGridCtaFill from "@/components/IncludeGridCtaFill";
 import InlineConsultationForm from "@/components/InlineConsultationForm";
 import MediaImage from "@/components/MediaImage";
 import ProjectCard from "@/components/ProjectCard";
@@ -140,6 +141,10 @@ export default function ServiceLandingPage({
                           </div>
                         </article>
                       ))}
+                      <IncludeGridCtaFill
+                        count={copy.includeCards.length}
+                        label={copy.cta}
+                      />
                     </div>
                   </>
                 ) : (
@@ -175,21 +180,68 @@ export default function ServiceLandingPage({
               </div>
             </section>
 
+            <section className="sp-section" id="service-products">
+              <div className="wrap">
+                <div className="sp-section-head sp-reviews-head">
+                  <div>
+                    <h2 className="sp-h2">{copy.productTitle}</h2>
+                  </div>
+                  <p className="sp-note">{copy.productNote}</p>
+                </div>
+                <div className="sp-products">
+                  {copy.products.map((item) => (
+                    <figure key={`${item.src}-${item.caption}`}>
+                      <div className="sp-product-img">
+                        <MediaImage
+                          src={item.src}
+                          alt={item.alt}
+                          sizes="(max-width: 700px) 100vw, 33vw"
+                        />
+                      </div>
+                      <figcaption>{item.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </section>
+
             <section className="sp-section" id="process">
               <div className="wrap">
                 <div className="sp-section-head">
                   <h2 className="sp-h2">{copy.processTitle}</h2>
                 </div>
-                <div className="sp-process sp-process--logo">
-                  {copy.process.map((step) => (
-                    <article className="sp-step" key={step.index}>
-                      <div className="sp-step-num">{step.index}</div>
-                      <h3>{step.title}</h3>
-                      <p>{step.description}</p>
-                      <span className="sp-step-duration">{step.duration}</span>
-                    </article>
-                  ))}
-                </div>
+                {copy.process.every((step) => step.image) ? (
+                  <div className="services-grid services-grid--cols-4">
+                    {copy.process.map((step) => (
+                      <article className="service-card" key={step.index}>
+                        <div className="service-visual">
+                          <MediaImage
+                            src={step.image!}
+                            alt={step.alt ?? step.title}
+                            sizes={imageSizes.service}
+                          />
+                        </div>
+                        <div className="service-index">{step.index}</div>
+                        <div className="service-copy">
+                          <h3>{step.title}</h3>
+                          <p>{step.description}</p>
+                          <span className="sp-step-duration">{step.duration}</span>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="sp-process sp-process--logo">
+                    {copy.process.map((step) => (
+                      <article className="sp-step" key={step.index}>
+                        <div className="sp-step-num">{step.index}</div>
+                        <h3>{step.title}</h3>
+                        <p>{step.description}</p>
+                        <span className="sp-step-duration">{step.duration}</span>
+                      </article>
+                    ))}
+                  </div>
+                )}
               </div>
             </section>
 
@@ -206,29 +258,42 @@ export default function ServiceLandingPage({
                     </article>
                   ))}
                 </div>
-                <div className="sp-section-head logo-compare-head">
-                  <h3 className="logo-compare-title">{copy.compareTitle}</h3>
-                </div>
-                <div className="logo-compare-wrap">
-                  <table className="logo-compare-table">
-                    <thead>
-                      <tr>
-                        {copy.compareColumns.map((column) => (
-                          <th key={column} scope="col">{column}</th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {copy.compareRows.map((row) => (
-                        <tr key={row.criterion}>
-                          <th scope="row">{row.criterion}</th>
-                          <td>{row.zond}</td>
-                          <td>{row.freelance}</td>
-                          <td>{row.generator}</td>
+              </div>
+            </section>
+
+            <section className="sp-section sp-section--compare" aria-labelledby="service-compare-title">
+              <div className="wrap">
+                <div className="logo-compare-card">
+                  <h2 id="service-compare-title" className="logo-compare-title">
+                    {copy.compareTitle}
+                  </h2>
+                  <div className="logo-compare-wrap">
+                    <table className="logo-compare-table">
+                      <thead>
+                        <tr>
+                          {copy.compareColumns.map((column, index) => (
+                            <th
+                              key={column}
+                              scope="col"
+                              className={index === 1 ? "is-accent" : undefined}
+                            >
+                              {column}
+                            </th>
+                          ))}
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                        {copy.compareRows.map((row) => (
+                          <tr key={row.criterion}>
+                            <th scope="row">{row.criterion}</th>
+                            <td className="is-accent">{row.zond}</td>
+                            <td>{row.freelance}</td>
+                            <td>{row.generator}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </section>

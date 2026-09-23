@@ -23,7 +23,6 @@ export default function InfluenceMarketingPage({
       copy={influenceMarketingPage[locale]}
       seo={getInfluenceMarketingSeo(locale)}
       heroImage="/services/web.jpg"
-      casesCount={3}
     />
   );
 }

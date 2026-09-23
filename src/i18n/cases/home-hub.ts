@@ -4,29 +4,29 @@ import type { Locale } from "@/i18n/config";
 const media = (name: string) => `/assets/cases/home-hub/${name}`;
 
 const homeHubMedia = [
-  "media/home-hub/01-hero.webp",
-  "media/home-hub/02-door.webp",
-  "media/home-hub/03-window.webp",
-  "media/home-hub/04-hardware.webp",
-  "media/home-hub/05-showroom.webp",
-  "media/home-hub/06-consultation.webp",
-  "media/home-hub/07-facade.webp",
-  "media/home-hub/08-wayfinding.webp",
-  "media/home-hub/09-van.webp",
-  "media/home-hub/10-uniform.webp",
-  "media/home-hub/12-home.webp",
-  "media/home-hub/13-logo.webp",
-  "media/home-hub/14-stationery.webp",
-  "media/home-hub/15-brandbook-cover.webp",
-  "media/home-hub/16-brandbook-logo.webp",
-  "media/home-hub/17-brandbook-type.webp",
-  "media/home-hub/18-materials.webp",
-  "media/home-hub/19-handle-box.webp",
-  "media/home-hub/20-window-kit.webp",
-  "media/home-hub/21-shopping-bag.webp",
-  "media/home-hub/22-catalog.webp",
-  "media/home-hub/23-poster.webp",
-  "media/home-hub/24-digital.webp",
+  "media/home-hub/cover.webp",
+  "media/home-hub/01.webp",
+  "media/home-hub/02.webp",
+  "media/home-hub/03.webp",
+  "media/home-hub/04.webp",
+  "media/home-hub/05.webp",
+  "media/home-hub/06.webp",
+  "media/home-hub/07.webp",
+  "media/home-hub/08.webp",
+  "media/home-hub/09.webp",
+  "media/home-hub/10.webp",
+  "media/home-hub/11.webp",
+  "media/home-hub/12.webp",
+  "media/home-hub/13.webp",
+  "media/home-hub/14.webp",
+  "media/home-hub/15.webp",
+  "media/home-hub/16.webp",
+  "media/home-hub/17.webp",
+  "media/home-hub/18.webp",
+  "media/home-hub/19.webp",
+  "media/home-hub/20.webp",
+  "media/home-hub/21.webp",
+  "media/home-hub/22.webp",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -52,9 +52,9 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "triple",
     images: [
-      { src: media("02-door.webp"), caption: "Двері. Тепло натуральних матеріалів" },
-      { src: media("03-window.webp"), caption: "Вікна. Простір для світла" },
-      { src: media("04-hardware.webp"), caption: "Фурнітура. Значення кожної деталі" },
+      { src: media("01.webp"), caption: "Двері. Тепло натуральних матеріалів" },
+      { src: media("02.webp"), caption: "Вікна. Простір для світла" },
+      { src: media("03.webp"), caption: "Фурнітура. Значення кожної деталі" },
     ],
   },
   {
@@ -76,8 +76,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: media("05-showroom.webp"), caption: "Простір продуманого вибору" },
-      { src: media("06-consultation.webp"), caption: "Бренд, орієнтований на людину" },
+      { src: media("04.webp"), caption: "Простір продуманого вибору" },
+      { src: media("05.webp"), caption: "Бренд, орієнтований на людину" },
     ],
   },
   {
@@ -100,14 +100,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: media("13-logo.webp"), caption: "Логотип Home Hub" }],
+    images: [{ src: media("11.webp"), caption: "Логотип Home Hub" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: media("14-stationery.webp"), caption: "Ділові матеріали" },
-      { src: media("18-materials.webp"), caption: "Палітра та матеріали" },
+      { src: media("12.webp"), caption: "Ділові матеріали" },
+      { src: media("16.webp"), caption: "Палітра та матеріали" },
     ],
   },
   {
@@ -134,31 +134,31 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: media("15-brandbook-cover.webp"), caption: "Брендбук. Концепція обкладинки" }],
+    images: [{ src: media("13.webp"), caption: "Брендбук. Концепція обкладинки" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: media("16-brandbook-logo.webp"), caption: "Брендбук. Побудова та використання знака" },
-      { src: media("17-brandbook-type.webp"), caption: "Брендбук. Типографічний напрям" },
+      { src: media("14.webp"), caption: "Брендбук. Побудова та використання знака" },
+      { src: media("15.webp"), caption: "Брендбук. Типографічний напрям" },
     ],
   },
   {
     type: "gallery",
     layout: "triple",
     images: [
-      { src: media("19-handle-box.webp"), caption: "Пакування фурнітури" },
-      { src: media("20-window-kit.webp"), caption: "Комплект матеріалів для вікон" },
-      { src: media("21-shopping-bag.webp"), caption: "Фірмовий пакет" },
+      { src: media("17.webp"), caption: "Пакування фурнітури" },
+      { src: media("18.webp"), caption: "Комплект матеріалів для вікон" },
+      { src: media("19.webp"), caption: "Фірмовий пакет" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: media("22-catalog.webp"), caption: "Продуктовий каталог" },
-      { src: media("24-digital.webp"), caption: "Візуальний напрям інтернет-магазину" },
+      { src: media("20.webp"), caption: "Продуктовий каталог" },
+      { src: media("22.webp"), caption: "Візуальний напрям інтернет-магазину" },
     ],
   },
   {
@@ -170,28 +170,28 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: media("07-facade.webp"), caption: "Фасад і вивіска Home Hub" }],
+    images: [{ src: media("06.webp"), caption: "Фасад і вивіска Home Hub" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: media("08-wayfinding.webp"), caption: "Навігація у шоурумі" },
-      { src: media("23-poster.webp"), caption: "Зовнішня комунікація" },
+      { src: media("07.webp"), caption: "Навігація у шоурумі" },
+      { src: media("21.webp"), caption: "Зовнішня комунікація" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: media("09-van.webp"), caption: "Брендування транспорту" },
-      { src: media("10-uniform.webp"), caption: "Одяг команди" },
+      { src: media("08.webp"), caption: "Брендування транспорту" },
+      { src: media("09.webp"), caption: "Одяг команди" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: media("12-home.webp"), caption: "Продукт у житті: світло, тепло, комфорт" }],
+    images: [{ src: media("10.webp"), caption: "Продукт у житті: світло, тепло, комфорт" }],
   },
   {
     type: "section",
@@ -373,11 +373,11 @@ export function getHomeHubBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const homeHubShared = {
   slug: "home-hub",
-  cover: media("01-hero.webp"),
+  cover: media("cover.webp"),
   media: homeHubMedia,
   tagline: "Дім починається\nз деталей.",
   serviceTag: "Брендинг + брендбук",
-  body: `[IMG: media/home-hub/01-hero.webp]`,
+  body: `[IMG: media/home-hub/cover.webp]`,
 };
 
 export const homeHubCopy: Record<

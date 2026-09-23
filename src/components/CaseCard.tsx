@@ -22,7 +22,9 @@ export default function CaseCard({ locale, caseItem, compact = false }: CaseCard
     <Link href={href} className="project-card project-card-link">
       <div className="project-copy">
         <h3>{caseItem.title}</h3>
-        {!compact && caseItem.description ? <p>{caseItem.description}</p> : null}
+        {!compact && (caseItem.cardDescription || caseItem.description) ? (
+          <p>{caseItem.cardDescription ?? caseItem.description}</p>
+        ) : null}
       </div>
       {caseItem.cover ? (
         <div className="project-img">

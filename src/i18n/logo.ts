@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import type { StatItem } from "@/i18n/dictionary";
+import { withServiceProductImages } from "@/i18n/service-products";
 
 export type ServiceIncludeCard = {
   index: string;
@@ -27,7 +28,14 @@ export type ServicePageContent = {
   includeCards?: ServiceIncludeCard[];
   casesTitle: string;
   processTitle: string;
-  process: Array<{ index: string; title: string; description: string; duration: string }>;
+  process: Array<{
+    index: string;
+    title: string;
+    description: string;
+    duration: string;
+    image?: string;
+    alt?: string;
+  }>;
   teamTitle: string;
   whyTitle: string;
   whyItems: Array<{ title: string; description: string }>;
@@ -42,6 +50,9 @@ export type ServicePageContent = {
   reviewsTitle: string;
   reviewsNote: string;
   reviews: Array<{ label: string; quote: string; name: string; role: string }>;
+  productTitle: string;
+  productNote: string;
+  products: Array<{ src: string; alt: string; caption: string }>;
   formTitle: string;
   formDescription: string;
   faqTitle: string;
@@ -83,6 +94,50 @@ const uk: ServicePageContent = {
     "Logobook із правилами використання логотипа",
     "Майнові права на фінальну версію логотипа",
   ],
+  includeCards: [
+    {
+      index: "01",
+      title: "Фінальна версія логотипа",
+      description: "Затверджений знак бренду, готовий до використання на всіх носіях.",
+      image: "/services/logo.jpg",
+      alt: "Фінальна версія логотипа",
+    },
+    {
+      index: "02",
+      title: "Кольорові версії",
+      description: "Кольорова, монохромна та інверсійна версії для друку й digital.",
+      image: "/branding/include-logo.png",
+      alt: "Кольорові версії логотипа",
+    },
+    {
+      index: "03",
+      title: "Фірмова палітра",
+      description: "Палітра кольорів із кодами для коректного відтворення бренду.",
+      image: "/branding/include-identity.jpg",
+      alt: "Фірмова палітра кольорів",
+    },
+    {
+      index: "04",
+      title: "Пакет файлів",
+      description: "Векторні та растрові формати, зручні для команди й підрядників.",
+      image: "/services/graphic.jpg",
+      alt: "Пакет файлів логотипа",
+    },
+    {
+      index: "05",
+      title: "Logobook",
+      description: "Правила використання логотипа, щоб стиль лишався цілісним.",
+      image: "/branding/include-brandbook.jpg",
+      alt: "Logobook із правилами використання",
+    },
+    {
+      index: "06",
+      title: "Майнові права",
+      description: "Права на фінальну версію логотипа передаються вам.",
+      image: "/services/naming.jpg",
+      alt: "Майнові права на логотип",
+    },
+  ],
   casesTitle: "Наші кейси з розробки логотипа",
   processTitle: "Як народжується логотип",
   process: [
@@ -116,6 +171,16 @@ const uk: ServicePageContent = {
     { label: "Приклад відгуку 02", quote: "Важливо було отримати не лише картинку, а повний пакет файлів і правила використання. Усе передали вчасно й у зручному форматі для команди.", name: "Ім'я клієнта · Компанія", role: "Logobook та файли" },
     { label: "Приклад відгуку 03", quote: "Процес був прозорим: від брифу до фінальної версії ми бачили логіку кожного кроку. Результат виглядає професійно на всіх носіях.", name: "Ім'я клієнта · Компанія", role: "Айдентика та носії" },
   ],
+  productTitle: "Логотип на реальних носіях.",
+  productNote: "Як знак виглядає на продуктах, мерчі та в комунікації.",
+  products: withServiceProductImages([
+    { alt: "Брендована кружка з логотипом", caption: "Брендовані носії" },
+    { alt: "Наліпки з логотипом на ноутбуці", caption: "Мерч" },
+    { alt: "Логотип у оформленні соцмереж", caption: "Соцмережі" },
+    { alt: "Кепка з вишитим логотипом", caption: "Одяг" },
+    { alt: "Логотип на пакуванні", caption: "Пакування" },
+    { alt: "Логотип на зовнішній рекламі", caption: "Outdoor" },
+  ]),
   formTitle: "Настав час створити обличчя вашого бренду",
   formDescription: "Заповніть форму нижче, і ми розробимо логотип, який розповість про вашу компанію краще, ніж слова.",
   faqTitle: "FAQ",
@@ -170,6 +235,50 @@ const en: ServicePageContent = {
     "Logobook with logo usage rules",
     "Intellectual property rights to the final logo",
   ],
+  includeCards: [
+    {
+      index: "01",
+      title: "Final logo version",
+      description: "An approved brand mark ready for use across all media.",
+      image: "/services/logo.jpg",
+      alt: "Final logo version",
+    },
+    {
+      index: "02",
+      title: "Color versions",
+      description: "Color, monochrome, and inverse versions for print and digital.",
+      image: "/branding/include-logo.png",
+      alt: "Color logo versions",
+    },
+    {
+      index: "03",
+      title: "Brand palette",
+      description: "A color palette with codes for consistent brand reproduction.",
+      image: "/branding/include-identity.jpg",
+      alt: "Brand color palette",
+    },
+    {
+      index: "04",
+      title: "File package",
+      description: "Vector and raster formats ready for your team and partners.",
+      image: "/services/graphic.jpg",
+      alt: "Logo file package",
+    },
+    {
+      index: "05",
+      title: "Logobook",
+      description: "Logo usage rules that keep the visual system consistent.",
+      image: "/branding/include-brandbook.jpg",
+      alt: "Logobook with usage rules",
+    },
+    {
+      index: "06",
+      title: "Intellectual property",
+      description: "Rights to the final logo version are transferred to you.",
+      image: "/services/naming.jpg",
+      alt: "Intellectual property rights to the logo",
+    },
+  ],
   casesTitle: "Our logo design cases",
   processTitle: "How a logo is born",
   process: [
@@ -203,6 +312,16 @@ const en: ServicePageContent = {
     { label: "Sample review 02", quote: "It was important to get not just an image, but a full file package and usage rules. Everything was delivered on time in a format convenient for the team.", name: "Client name · Company", role: "Logobook and files" },
     { label: "Sample review 03", quote: "The process was transparent: from brief to final version we saw the logic of each step. The result looks professional across all media.", name: "Client name · Company", role: "Identity and media" },
   ],
+  productTitle: "Logo on real media.",
+  productNote: "How the mark looks on products, merch, and communication.",
+  products: withServiceProductImages([
+    { alt: "Branded mug with logo", caption: "Branded media" },
+    { alt: "Logo stickers on a laptop", caption: "Merch" },
+    { alt: "Logo in social media design", caption: "Social" },
+    { alt: "Cap with embroidered logo", caption: "Apparel" },
+    { alt: "Logo on packaging", caption: "Packaging" },
+    { alt: "Logo on outdoor advertising", caption: "Outdoor" },
+  ]),
   formTitle: "It's time to create the face of your brand",
   formDescription: "Fill out the form below and we will develop a logo that tells your company's story better than words.",
   faqTitle: "FAQ",
@@ -257,6 +376,50 @@ const ru: ServicePageContent = {
     "Logobook с правилами использования логотипа",
     "Имущественные права на финальную версию логотипа",
   ],
+  includeCards: [
+    {
+      index: "01",
+      title: "Финальная версия логотипа",
+      description: "Утверждённый знак бренда, готовый к использованию на всех носителях.",
+      image: "/services/logo.jpg",
+      alt: "Финальная версия логотипа",
+    },
+    {
+      index: "02",
+      title: "Цветные версии",
+      description: "Цветная, монохромная и инверсная версии для печати и digital.",
+      image: "/branding/include-logo.png",
+      alt: "Цветные версии логотипа",
+    },
+    {
+      index: "03",
+      title: "Фирменная палитра",
+      description: "Палитра цветов с кодами для корректного воспроизведения бренда.",
+      image: "/branding/include-identity.jpg",
+      alt: "Фирменная палитра цветов",
+    },
+    {
+      index: "04",
+      title: "Пакет файлов",
+      description: "Векторные и растровые форматы, удобные для команды и подрядчиков.",
+      image: "/services/graphic.jpg",
+      alt: "Пакет файлов логотипа",
+    },
+    {
+      index: "05",
+      title: "Logobook",
+      description: "Правила использования логотипа, чтобы стиль оставался целостным.",
+      image: "/branding/include-brandbook.jpg",
+      alt: "Logobook с правилами использования",
+    },
+    {
+      index: "06",
+      title: "Имущественные права",
+      description: "Права на финальную версию логотипа передаются вам.",
+      image: "/services/naming.jpg",
+      alt: "Имущественные права на логотип",
+    },
+  ],
   casesTitle: "Наши кейсы по разработке логотипа",
   processTitle: "Как рождается логотип",
   process: [
@@ -301,6 +464,16 @@ const ru: ServicePageContent = {
     { label: "Пример отзыва 02", quote: "Важно было получить не только картинку, но и полный пакет файлов и правила использования. Всё передали вовремя и в удобном формате для команды.", name: "Имя клиента · Компания", role: "Logobook и файлы" },
     { label: "Пример отзыва 03", quote: "Процесс был прозрачным: от брифа до финальной версии мы видели логику каждого шага. Результат выглядит профессионально на всех носителях.", name: "Имя клиента · Компания", role: "Айдентика и носители" },
   ],
+  productTitle: "Логотип на реальных носителях.",
+  productNote: "Как знак выглядит на продуктах, мерче и в коммуникации.",
+  products: withServiceProductImages([
+    { alt: "Брендированная кружка с логотипом", caption: "Брендированные носители" },
+    { alt: "Наклейки с логотипом на ноутбуке", caption: "Мерч" },
+    { alt: "Логотип в оформлении соцсетей", caption: "Соцсети" },
+    { alt: "Кепка с вышитым логотипом", caption: "Одежда" },
+    { alt: "Логотип на упаковке", caption: "Упаковка" },
+    { alt: "Логотип на наружной рекламе", caption: "Outdoor" },
+  ]),
   formTitle: "Настало время создать лицо вашего бренда",
   formDescription: "Заполните форму ниже, и мы разработаем логотип, который расскажет о вашей компании лучше, чем слова.",
   faqTitle: "FAQ",

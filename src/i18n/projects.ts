@@ -8,7 +8,7 @@ export function getProjects(locale: Locale): ProjectItem[] {
     .slice(0, 6)
     .map((caseItem) => ({
       title: caseItem.title,
-      description: caseItem.description,
+      description: caseItem.cardDescription ?? caseItem.description,
       image: caseItem.cover,
       href: getCaseDetailPath(locale, caseItem.slug),
     }));

@@ -60,6 +60,7 @@ export default function CasePostPage({
     "ahmad-tea": "AHMAD TEA — комунікаційна стратегія",
     "digital-residence": "Digital Residence — технологічна резиденція",
     kavlora: "KAVLORA — айдентика виробника",
+    "bit-school": "BIT School — брендинг школи",
   };
   const heroCaption = heroCaptions[caseItem.slug] ?? caseItem.title;
   const galleryImages = collectCaseVisualImages(hero?.src ?? null, blocks);
@@ -162,7 +163,9 @@ export default function CasePostPage({
                         <h3>{related.title}</h3>
                         <span aria-hidden="true">↗</span>
                       </div>
-                      {related.description ? <p>{related.description}</p> : null}
+                      {related.cardDescription || related.description ? (
+                        <p>{related.cardDescription ?? related.description}</p>
+                      ) : null}
                     </Link>
                   ))}
                 </div>
