@@ -1055,14 +1055,6 @@
 }
 
 @media (max-width: 767px) {
-  .case-visual-page.visual.balanced {
-    --case-gutter: 18px;
-  }
-
-  .case-visual-page.visual.balanced .wrap.container {
-    padding-inline: var(--case-gutter);
-  }
-
   .case-visual-page.visual.balanced .gallery,
   .case-visual-page.visual.balanced .gallery.pair,
   .case-visual-page.visual.balanced .gallery.triple,
