@@ -64,6 +64,9 @@ export default function CasePostPage({
             : caseItem.title;
   const galleryImages = collectCaseVisualImages(hero?.src ?? null, blocks);
   const theme = resolveCaseTheme(caseItem);
+  const taglineLines = splitLines(defaults.tagline);
+  const leadLines = taglineLines.length > 1 ? taglineLines.slice(0, -1) : [];
+  const lastTaglineLine = taglineLines[taglineLines.length - 1] ?? defaults.tagline;
 
   return (
     <>
@@ -88,15 +91,15 @@ export default function CasePostPage({
                   <span className="orange" aria-hidden="true">↗</span>
                 </h1>
                 <div className="hero-intro">
-                  <p>
-                    {splitLines(defaults.tagline).map((line, index, lines) => (
-                      <span key={index}>
-                        {line}
-                        {index < lines.length - 1 ? <br /> : null}
-                      </span>
-                    ))}
-                  </p>
-                  <span className="hero-tag">{defaults.serviceTag}</span>
+                  {leadLines.map((line, index) => (
+                    <span key={index} className="hero-intro-line">
+                      {line}
+                    </span>
+                  ))}
+                  <div className="hero-intro-foot">
+                    <span className="hero-intro-line">{lastTaglineLine}</span>
+                    <span className="hero-tag">{defaults.serviceTag}</span>
+                  </div>
                 </div>
               </div>
 

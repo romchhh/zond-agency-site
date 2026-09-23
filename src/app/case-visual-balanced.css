@@ -67,15 +67,31 @@
 }
 
 .case-visual-page.visual.balanced .hero-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   max-width: 370px;
   padding-bottom: 8px;
 }
 
-.case-visual-page.visual.balanced .hero-intro p {
-  margin: 0 0 17px;
+.case-visual-page.visual.balanced .hero-intro-foot {
+  display: contents;
+}
+
+.case-visual-page.visual.balanced .hero-intro-line {
+  display: block;
+  margin: 0;
   font-size: 30px;
   line-height: 1.12;
   letter-spacing: -0.025em;
+}
+
+.case-visual-page.visual.balanced .hero-intro-foot .hero-intro-line {
+  margin-bottom: 17px;
+}
+
+.case-visual-page.visual.balanced .hero-intro-foot .hero-tag {
+  margin-bottom: 0;
 }
 
 .case-visual-page.visual.balanced .hero-tag {
@@ -805,24 +821,31 @@
   }
 
   .case-visual-page.visual.balanced .hero-intro {
-    display: flex;
     max-width: none;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
+    width: 100%;
     margin-top: 25px;
   }
 
-  .case-visual-page.visual.balanced .hero-intro p {
+  .case-visual-page.visual.balanced .hero-intro-line {
+    font-size: 25px;
+  }
+
+  .case-visual-page.visual.balanced .hero-intro-foot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .case-visual-page.visual.balanced .hero-intro-foot .hero-intro-line {
     flex: 1 1 auto;
     min-width: 0;
     margin: 0;
-    font-size: 25px;
   }
 
   .case-visual-page.visual.balanced .hero-tag {
     flex: 0 0 auto;
-    align-self: flex-end;
     font-size: 13px;
     padding: 7px 12px;
   }
