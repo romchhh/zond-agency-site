@@ -12,6 +12,8 @@ export const serviceSlugs = [
   "naming",
   "positioning",
   "communication",
+  "brand-character",
+  "web-development",
   "logo",
   "brandbook",
   "rebranding",
@@ -43,7 +45,7 @@ export const servicesGridSlugs: Array<ServiceSlug | null> = [
   "identity",
   "brandbook",
   "communication",
-  "branding",
+  "brand-character",
   "packaging",
   "graphics",
   null,
@@ -63,6 +65,8 @@ export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
     naming: "Неймінг",
     positioning: "Позиціонування",
     communication: "Слоган і комунікація",
+    "brand-character": "Персонаж бренду",
+    "web-development": "Веб-розробка",
     logo: "Логотип",
     brandbook: "Брендбук",
     rebranding: "Ребрендинг",
@@ -79,6 +83,8 @@ export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
     naming: "Naming",
     positioning: "Positioning",
     communication: "Slogan & communication",
+    "brand-character": "Brand character",
+    "web-development": "Web development",
     logo: "Logo design",
     brandbook: "Brand book",
     rebranding: "Rebranding",
@@ -95,6 +101,8 @@ export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
     naming: "Нейминг",
     positioning: "Позиционирование",
     communication: "Слоган и коммуникация",
+    "brand-character": "Персонаж бренда",
+    "web-development": "Веб-разработка",
     logo: "Логотип",
     brandbook: "Брендбук",
     rebranding: "Ребрендинг",
@@ -160,6 +168,16 @@ export const serviceMeta: Record<
       title: "Слоган та комунікація бренду — ZOND",
       description:
         "Розробляємо слогани та комунікацію бренду: головна ідея, тон голосу, ключові повідомлення та принципи для різних каналів. Комунікація від ZOND.",
+    },
+    "brand-character": {
+      title: "Персонаж бренду: створення маскота — ZOND",
+      description:
+        "Створюємо персонажів бренду: ідея, характер, силует, емоції, 2D або 3D образ, носії та гайд для команди. Розробка маскота від ZOND.",
+    },
+    "web-development": {
+      title: "Веб-розробка та створення сайтів для бізнесу — ZOND",
+      description:
+        "Створюємо сайти для бізнесу: стратегія, структура, дизайн, адаптивна веб-розробка, тестування та запуск. Веб-розробка від ZOND.",
     },
     logo: {
       title: "Дизайн логотипів — розробка логотипа для компанії — ZOND",
@@ -231,6 +249,16 @@ export const serviceMeta: Record<
       description:
         "We develop slogans and brand communication: core idea, tone of voice, key messages, and principles for different channels.",
     },
+    "brand-character": {
+      title: "Brand character and mascot design — ZOND",
+      description:
+        "We create brand characters: concept, personality, silhouette, emotions, 2D or 3D visuals, applications, and guidelines for your team.",
+    },
+    "web-development": {
+      title: "Web development and business websites — ZOND",
+      description:
+        "We build business websites: strategy, structure, design, responsive development, testing, and launch. Web development by ZOND.",
+    },
     logo: {
       title: "Logo design — business logo development — ZOND",
       description:
@@ -300,6 +328,16 @@ export const serviceMeta: Record<
       title: "Слоган и коммуникация бренда — ZOND",
       description:
         "Разрабатываем слоганы и коммуникацию бренда: главная идея, тон голоса, ключевые сообщения и принципы для разных каналов.",
+    },
+    "brand-character": {
+      title: "Персонаж бренда: создание маскота — ZOND",
+      description:
+        "Создаём персонажей бренда: идея, характер, силуэт, эмоции, 2D или 3D образ, носители и гайд для команды.",
+    },
+    "web-development": {
+      title: "Веб-разработка и создание сайтов для бизнеса — ZOND",
+      description:
+        "Создаём сайты для бизнеса: стратегия, структура, дизайн, адаптивная веб-разработка, тестирование и запуск.",
     },
     logo: {
       title: "Дизайн логотипов — разработка логотипа для компании — ZOND",

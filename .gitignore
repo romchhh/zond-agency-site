@@ -1,4 +1,5 @@
 node_modules
+.venv-sync
 .next
 out
 .DS_Store

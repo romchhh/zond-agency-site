@@ -1,2 +1,0 @@
-lxml>=6.0.0
-cssselect>=1.2.0

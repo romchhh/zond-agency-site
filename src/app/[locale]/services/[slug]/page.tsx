@@ -1,6 +1,8 @@
 import BrandbookPage from "@/components/BrandbookPage";
 import BrandingPage from "@/components/BrandingPage";
+import BrandCharacterPage from "@/components/BrandCharacterPage";
 import CommunicationPage from "@/components/CommunicationPage";
+import WebDevelopmentPage from "@/components/WebDevelopmentPage";
 import GraphicsPage from "@/components/GraphicsPage";
 import IdentityPage from "@/components/IdentityPage";
 import IllustrationPage from "@/components/IllustrationPage";
@@ -155,6 +157,26 @@ export default async function ServicePage({
   if (slug === "communication") {
     return (
       <CommunicationPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "brand-character") {
+    return (
+      <BrandCharacterPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "web-development") {
+    return (
+      <WebDevelopmentPage
         locale={locale}
         dictionary={dictionary}
         projects={getProjects(locale)}

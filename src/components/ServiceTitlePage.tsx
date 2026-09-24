@@ -1,4 +1,5 @@
 import CtaPanel from "@/components/CtaPanel";
+import ServiceCompareSection from "@/components/ServiceCompareSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Dictionary } from "@/i18n/dictionary";
@@ -30,6 +31,8 @@ export default function ServiceTitlePage({
             </h1>
           </div>
         </section>
+
+        <ServiceCompareSection locale={locale} />
 
         <section className="sp-cta">
           <div className="wrap">

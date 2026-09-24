@@ -1,5 +1,7 @@
 import ConsultationCta from "@/components/ConsultationCta";
 import CtaPanel from "@/components/CtaPanel";
+import ServiceCompareSection from "@/components/ServiceCompareSection";
+import ServiceEditorialSection from "@/components/ServiceEditorialSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import IncludeGridCtaFill from "@/components/IncludeGridCtaFill";
@@ -7,31 +9,10 @@ import MediaImage from "@/components/MediaImage";
 import ProjectCard from "@/components/ProjectCard";
 import StatsRow from "@/components/StatsRow";
 import { brandingPage } from "@/i18n/branding";
-import { getBrandingSeo, type BrandingSeoBlock } from "@/i18n/branding-seo";
+import { getBrandingSeo } from "@/i18n/branding-seo";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { imageSizes } from "@/lib/media";
-
-function renderSeoBlock(block: BrandingSeoBlock, index: number) {
-  switch (block.kind) {
-    case "p":
-      return <p key={`p-${index}`}>{block.text}</p>;
-    case "term":
-      return (
-        <p key={`term-${index}`} className="sp-seo-term">
-          <strong>{block.label}</strong> {block.text}
-        </p>
-      );
-    case "ul":
-      return (
-        <ul key={`ul-${index}`} className="sp-seo-list">
-          {block.items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      );
-  }
-}
 
 type BrandingPageProps = {
   locale: Locale;
@@ -219,19 +200,11 @@ export default function BrandingPage({
           </div>
         </section>
 
-        <section className="sp-section">
+        <ServiceCompareSection locale={locale} />
+
+        <section className="sp-section sp-section--editorial">
           <div className="wrap">
-            <details className="sp-seo-spoiler">
-              <summary>{seo.spoilerLabel}</summary>
-              <div className="sp-seo-content sp-body">
-                {seo.sections.map((section) => (
-                  <section key={section.title} className="sp-seo-section">
-                    <h3>{section.title}</h3>
-                    {section.blocks.map((block, index) => renderSeoBlock(block, index))}
-                  </section>
-                ))}
-              </div>
-            </details>
+            <ServiceEditorialSection seo={seo} />
           </div>
         </section>
 

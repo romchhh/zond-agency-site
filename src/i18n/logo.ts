@@ -22,11 +22,26 @@ export type ServicePageContent = {
   metricsTitle: string;
   stats: StatItem[];
   audienceTitle: string;
-  audienceItems: Array<{ index: string; title: string }>;
+  audienceItems: Array<{ index: string; title: string; description?: string }>;
+  /** Dark feature strip from service page prototypes (optional). */
+  featureStrip?: {
+    eyebrow: string;
+    titleLine: string;
+    titleAccent: string;
+    body: string;
+  };
   includesTitle: string;
+  /** Prototype service pages: intro under includes heading */
+  includesSubtitle?: string;
   includes: string[];
   includeCards?: ServiceIncludeCard[];
+  /** Prototype: «09 / РЕЗУЛЬТАТ» — Що ви отримуєте */
+  deliverablesEyebrow?: string;
+  deliverablesTitle?: string;
+  deliverablesNote?: string;
+  deliverables?: string[];
   casesTitle: string;
+  casesSubtitle?: string;
   processTitle: string;
   process: Array<{
     index: string;
@@ -47,6 +62,7 @@ export type ServicePageContent = {
     freelance: string;
     generator: string;
   }>;
+  reviewsEyebrow?: string;
   reviewsTitle: string;
   reviewsNote: string;
   reviews: Array<{ label: string; quote: string; name: string; role: string }>;

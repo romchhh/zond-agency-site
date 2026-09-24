@@ -3,25 +3,9 @@ import type { Locale } from "@/i18n/config";
 
 const m = (file: string) => `/assets/cases/kavlora/${file}`;
 
-const kavloraMedia = [
-  "media/kavlora/hero.gif",
-  "media/kavlora/01.webp",
-  "media/kavlora/02.webp",
-  "media/kavlora/03.webp",
-  "media/kavlora/04.webp",
-  "media/kavlora/05.webp",
-  "media/kavlora/06.webp",
-  "media/kavlora/07.webp",
-  "media/kavlora/08.webp",
-  "media/kavlora/09.webp",
-  "media/kavlora/10.webp",
-  "media/kavlora/11.webp",
-  "media/kavlora/12.webp",
-  "media/kavlora/13.webp",
-  "media/kavlora/14.webp",
-  "media/kavlora/15.webp",
-  "media/kavlora/16.webp",
-];
+const kavloraMedia = Array.from({ length: 17 }, (_, index) =>
+  `media/kavlora/${String(index + 1).padStart(2, "0")}.webp`,
+);
 
 const blocksUk: CaseVisualBlock[] = [
   {
@@ -46,8 +30,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("01.webp"), caption: "Знак на фасаді виробництва" },
-      { src: m("02.webp"), caption: "Шрифти KAVLORA" },
+      { src: m("02.webp"), caption: "Знак на фасаді виробництва" },
+      { src: m("03.webp"), caption: "Шрифт KAVLORA" },
     ],
   },
   {
@@ -70,11 +54,8 @@ const blocksUk: CaseVisualBlock[] = [
   },
   {
     type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("03.webp"), caption: "Графічний знак та фактура дерева" },
-      { src: m("04.webp"), caption: "Корпоративна каска" },
-    ],
+    layout: "wide",
+    images: [{ src: m("04.webp"), caption: "Корпоративна каска" }],
   },
   {
     type: "section",
@@ -95,9 +76,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [
-      { src: m("05.webp"), caption: "Фірмовий одяг" },
-    ],
+    images: [{ src: m("05.webp"), caption: "Фірмовий одяг" }],
   },
   {
     type: "gallery",
@@ -158,10 +137,13 @@ const blocksUk: CaseVisualBlock[] = [
   },
   {
     type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("16.webp"), caption: "Фірмовий бланк" },
-    ],
+    layout: "wide",
+    images: [{ src: m("16.webp"), caption: "Фірмовий бланк" }],
+  },
+  {
+    type: "gallery",
+    layout: "wide",
+    images: [{ src: m("17.webp"), caption: "Айдентика на носіях" }],
   },
   {
     type: "section",
@@ -202,7 +184,7 @@ export const kavloraShared = {
   slug: "kavlora",
   cover: m("cover.gif"),
   media: kavloraMedia,
-  body: `[IMG: media/kavlora/hero.gif]`,
+  body: `[IMG: media/kavlora/01.webp]`,
 };
 
 export const kavloraCopy: Record<

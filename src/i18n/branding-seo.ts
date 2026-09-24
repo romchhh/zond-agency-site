@@ -12,6 +12,10 @@ export type BrandingSeoSection = {
 
 export type BrandingSeoContent = {
   spoilerLabel: string;
+  /** Prototype: e.g. "08 / ДЕТАЛЬНІШЕ" */
+  editorialEyebrow?: string;
+  /** Prototype editorial section heading */
+  editorialTitle?: string;
   sections: BrandingSeoSection[];
 };
 

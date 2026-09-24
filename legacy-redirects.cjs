@@ -10,6 +10,8 @@ const serviceSlugs = [
   "naming",
   "positioning",
   "communication",
+  "brand-character",
+  "web-development",
   "logo",
   "brandbook",
   "rebranding",

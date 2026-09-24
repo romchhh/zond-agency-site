@@ -56,18 +56,14 @@ const uk: BrandingSeoContent = {
         }
       ]
     }
-  ]
+  ],
+  "editorialEyebrow": "08 / ДЕТАЛЬНІШЕ",
+  "editorialTitle": "Позиціонування дає напрям розвитку."
 };
 
-const en: BrandingSeoContent = {
-  ...uk,
-  spoilerLabel: "Learn more",
-};
+const en: BrandingSeoContent = { ...uk, spoilerLabel: "Learn more" };
 
-const ru: BrandingSeoContent = {
-  ...uk,
-  spoilerLabel: "Подробнее",
-};
+const ru: BrandingSeoContent = { ...uk, spoilerLabel: "Подробнее" };
 
 const seo: Record<Locale, BrandingSeoContent> = { uk, en, ru };
 
