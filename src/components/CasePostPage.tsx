@@ -22,6 +22,7 @@ import {
   extractCaseHeroMedia,
   isAnimatedCaseMedia,
 } from "@/lib/case-content";
+import { caseImageDefaultSrc, isCaseGif } from "@/lib/case-image";
 import Link from "next/link";
 
 type CasePostPageProps = {
@@ -71,11 +72,18 @@ export default function CasePostPage({
   const leadLines = taglineLines.length > 1 ? taglineLines.slice(0, -1) : [];
   const lastTaglineLine = taglineLines[taglineLines.length - 1] ?? defaults.tagline;
 
+  const heroPreloadSrc =
+    hero?.kind === "img" && !isCaseGif(hero.src)
+      ? caseImageDefaultSrc(hero.src, 80)
+      : hero?.kind === "img"
+        ? hero.src
+        : null;
+
   return (
     <>
-      {galleryImages.map((src) => (
-        <link key={src} rel="preload" as="image" href={src} />
-      ))}
+      {heroPreloadSrc ? (
+        <link rel="preload" as="image" href={heroPreloadSrc} fetchPriority="high" />
+      ) : null}
       <Header locale={locale} dictionary={dictionary} />
       <main
         className="sp case-visual-page visual balanced"

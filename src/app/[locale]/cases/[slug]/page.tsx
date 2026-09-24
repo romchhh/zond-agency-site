@@ -5,6 +5,9 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { createCaseMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
+/** Pre-rendered case pages; refresh at most once per day on the host. */
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     getCaseSlugs(locale).map((slug) => ({ locale, slug })),

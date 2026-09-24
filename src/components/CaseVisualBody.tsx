@@ -2,6 +2,12 @@
 
 import { useArticleGallery } from "@/components/ArticleGallery";
 import type { CaseVisualBlock, CaseVisualDeliverable, CaseVisualGalleryLayout } from "@/i18n/cases/types";
+import {
+  caseImageDefaultSrc,
+  caseImageSizes,
+  caseImageSrcSet,
+  isCaseGif,
+} from "@/lib/case-image";
 
 type CaseVisualBodyProps = {
   blocks: CaseVisualBlock[];
@@ -119,14 +125,16 @@ function CaseVisualMedia({
         aria-label={caption ? `Збільшити: ${caption}` : "Збільшити зображення"}
         onClick={() => gallery.openAt(imageIndex)}
       >
-        {/* Native img: case CSS needs intrinsic height; Next/Image fill + lazy caused scroll lag and pop-in. */}
+        {/* Native img keeps case layout; srcset routes through Next image optimizer. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={isCaseGif(src) ? src : caseImageDefaultSrc(src)}
+          srcSet={caseImageSrcSet(src)}
+          sizes={caseImageSizes(wide)}
           alt={caption ?? ""}
-          loading="eager"
+          loading="lazy"
           decoding="async"
-          fetchPriority={imageIndex < 3 ? "high" : "auto"}
+          fetchPriority="low"
           draggable={false}
         />
       </button>

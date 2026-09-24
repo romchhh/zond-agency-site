@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start -p 3001",
     "lint": "next lint",
-    "optimize:media": "bash scripts/optimize-media.sh"
+    "optimize:media": "bash scripts/optimize-media.sh",
+    "optimize:cases": "node scripts/optimize-case-images.mjs"
   },
   "dependencies": {
     "next": "16.3.5",
@@ -15,6 +16,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "sharp": "^0.34.5",
     "@types/node": "^20.14.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",

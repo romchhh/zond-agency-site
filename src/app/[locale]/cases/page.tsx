@@ -6,6 +6,8 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { createPathMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
