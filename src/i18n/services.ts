@@ -9,6 +9,9 @@ export const serviceSlugs = [
   "packaging",
   "influence-marketing",
   "identity",
+  "naming",
+  "positioning",
+  "communication",
   "logo",
   "brandbook",
   "rebranding",
@@ -34,12 +37,12 @@ export const heroServiceSlugs: ServiceSlug[] = [
 /** Slugs for the 12 homepage /services grid cards, by index order. */
 export const servicesGridSlugs: Array<ServiceSlug | null> = [
   "branding",
-  "branding",
-  "branding",
+  "positioning",
+  "naming",
   "logo",
   "identity",
   "brandbook",
-  "branding",
+  "communication",
   "branding",
   "packaging",
   "graphics",
@@ -57,6 +60,9 @@ export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
     packaging: "Пакування",
     "influence-marketing": "Інфлюенс маркетинг",
     identity: "Айдентика",
+    naming: "Неймінг",
+    positioning: "Позиціонування",
+    communication: "Слоган і комунікація",
     logo: "Логотип",
     brandbook: "Брендбук",
     rebranding: "Ребрендинг",
@@ -70,6 +76,9 @@ export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
     packaging: "Packaging",
     "influence-marketing": "Influence marketing",
     identity: "Brand identity",
+    naming: "Naming",
+    positioning: "Positioning",
+    communication: "Slogan & communication",
     logo: "Logo design",
     brandbook: "Brand book",
     rebranding: "Rebranding",
@@ -83,6 +92,9 @@ export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
     packaging: "Упаковка",
     "influence-marketing": "Инфлюенс маркетинг",
     identity: "Айдентика",
+    naming: "Нейминг",
+    positioning: "Позиционирование",
+    communication: "Слоган и коммуникация",
     logo: "Логотип",
     brandbook: "Брендбук",
     rebranding: "Ребрендинг",
@@ -130,8 +142,24 @@ export const serviceMeta: Record<
         "Інфлюенс маркетинг: підбір блогерів, кампанії в Instagram, TikTok, YouTube і Telegram, аналітика результатів. Реклама у блогерів під ваш бюджет. Студія ZOND.",
     },
     identity: {
-      title: "Айдентика — ZOND",
-      description: "Розробка айдентики від агенції ZOND.",
+      title: "Айдентика та фірмовий стиль для бізнесу — ZOND",
+      description:
+        "Розробляємо айдентику бренду: логотип, кольори, типографіку, графічну систему, носії та гайдлайн. Створення фірмового стилю від ZOND.",
+    },
+    naming: {
+      title: "Неймінг: створення назви бренду та продукту — ZOND",
+      description:
+        "Розробляємо назви для компаній, продуктів і сервісів. Дослідження, креативні напрями, мовний відбір і рекомендації до запуску. Неймінг від ZOND.",
+    },
+    positioning: {
+      title: "Позиціонування бренду для бізнесу — ZOND",
+      description:
+        "Розробляємо позиціонування бренду: дослідження бізнесу, ринку й аудиторії, ціннісну пропозицію та ключові повідомлення. Позиціонування від ZOND.",
+    },
+    communication: {
+      title: "Слоган та комунікація бренду — ZOND",
+      description:
+        "Розробляємо слогани та комунікацію бренду: головна ідея, тон голосу, ключові повідомлення та принципи для різних каналів. Комунікація від ZOND.",
     },
     logo: {
       title: "Дизайн логотипів — розробка логотипа для компанії — ZOND",
@@ -184,8 +212,24 @@ export const serviceMeta: Record<
         "Influence marketing: influencer selection, campaigns on Instagram, TikTok, YouTube, and Telegram, result analytics. Blogger ads for your budget. ZOND studio.",
     },
     identity: {
-      title: "Brand identity — ZOND",
-      description: "Brand identity design by ZOND Agency.",
+      title: "Brand identity and visual style for business — ZOND",
+      description:
+        "We develop brand identity: logo, colors, typography, graphic system, media, and guidelines. Visual identity by ZOND.",
+    },
+    naming: {
+      title: "Naming: brand and product name development — ZOND",
+      description:
+        "We create names for companies, products, and services: research, creative directions, language review, and launch recommendations.",
+    },
+    positioning: {
+      title: "Brand positioning for business — ZOND",
+      description:
+        "We develop brand positioning: business, market, and audience research, value proposition, and key messages.",
+    },
+    communication: {
+      title: "Slogan and brand communication — ZOND",
+      description:
+        "We develop slogans and brand communication: core idea, tone of voice, key messages, and principles for different channels.",
     },
     logo: {
       title: "Logo design — business logo development — ZOND",
@@ -238,8 +282,24 @@ export const serviceMeta: Record<
         "Инфлюенс маркетинг: подбор блогеров, кампании в Instagram, TikTok, YouTube и Telegram, аналитика результатов. Реклама у блогеров под ваш бюджет. Студия ZOND.",
     },
     identity: {
-      title: "Айдентика — ZOND",
-      description: "Разработка айдентики от агентства ZOND.",
+      title: "Айдентика и фирменный стиль для бизнеса — ZOND",
+      description:
+        "Разрабатываем айдентику бренда: логотип, цвета, типографику, графическую систему, носители и гайдлайн. Фирменный стиль от ZOND.",
+    },
+    naming: {
+      title: "Нейминг: создание названия бренда и продукта — ZOND",
+      description:
+        "Разрабатываем названия для компаний, продуктов и сервисов: исследование, креативные направления, языковой отбор и рекомендации к запуску.",
+    },
+    positioning: {
+      title: "Позиционирование бренда для бизнеса — ZOND",
+      description:
+        "Разрабатываем позиционирование бренда: исследование бизнеса, рынка и аудитории, ценностное предложение и ключевые сообщения.",
+    },
+    communication: {
+      title: "Слоган и коммуникация бренда — ZOND",
+      description:
+        "Разрабатываем слоганы и коммуникацию бренда: главная идея, тон голоса, ключевые сообщения и принципы для разных каналов.",
     },
     logo: {
       title: "Дизайн логотипов — разработка логотипа для компании — ZOND",

@@ -1,10 +1,14 @@
 import BrandbookPage from "@/components/BrandbookPage";
 import BrandingPage from "@/components/BrandingPage";
+import CommunicationPage from "@/components/CommunicationPage";
 import GraphicsPage from "@/components/GraphicsPage";
+import IdentityPage from "@/components/IdentityPage";
 import IllustrationPage from "@/components/IllustrationPage";
 import InfluenceMarketingPage from "@/components/InfluenceMarketingPage";
 import LogoPage from "@/components/LogoPage";
+import NamingPage from "@/components/NamingPage";
 import PackagingPage from "@/components/PackagingPage";
+import PositioningPage from "@/components/PositioningPage";
 import SmmPage from "@/components/SmmPage";
 import ServiceTitlePage from "@/components/ServiceTitlePage";
 import { isLocale, locales } from "@/i18n/config";
@@ -111,6 +115,46 @@ export default async function ServicePage({
   if (slug === "graphics") {
     return (
       <GraphicsPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "identity") {
+    return (
+      <IdentityPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "naming") {
+    return (
+      <NamingPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "positioning") {
+    return (
+      <PositioningPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={getProjects(locale)}
+      />
+    );
+  }
+
+  if (slug === "communication") {
+    return (
+      <CommunicationPage
         locale={locale}
         dictionary={dictionary}
         projects={getProjects(locale)}

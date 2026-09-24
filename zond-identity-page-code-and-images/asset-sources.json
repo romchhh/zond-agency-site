@@ -1,0 +1,17 @@
+{
+  "reference": "https://zond-positioning-service.zond-des.chatgpt.site/",
+  "original_visuals": [
+    "assets/identity-01.png",
+    "assets/identity-02.png",
+    "assets/identity-03.png",
+    "assets/identity-04.png",
+    "assets/identity-05.png",
+    "assets/identity-06.png"
+  ],
+  "case_covers": {
+    "carbit.gif": "https://zond-carbit-case.zond-des.chatgpt.site",
+    "nove.gif": "https://zond-nove-misto-case.zond-des.chatgpt.site",
+    "kyiv.jpg": "https://zond-kyiv-tourism-case.zond-des.chatgpt.site",
+    "digital.gif": "https://zond-digital-residence-case.zond-des.chatgpt.site"
+  }
+}

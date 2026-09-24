@@ -1,4 +1,7 @@
-const CASE_IMAGE_WIDTHS = [640, 1080, 1440, 1920] as const;
+/** Must match `images.deviceSizes` in next.config.js (1440/1600 are rejected by the optimizer). */
+const CASE_IMAGE_WIDTHS = [640, 828, 1080, 1200, 1920] as const;
+
+const CASE_IMAGE_DEFAULT_WIDTH = 1200;
 
 export function isCaseGif(src: string): boolean {
   return /\.gif($|\?)/i.test(src);
@@ -28,7 +31,7 @@ export function caseImageSrcSet(src: string, quality = 75): string | undefined {
 
 export function caseImageDefaultSrc(src: string, quality = 75): string {
   if (isCaseGif(src)) return src;
-  return optimizedCaseImageUrl(src, 1440, quality);
+  return optimizedCaseImageUrl(src, CASE_IMAGE_DEFAULT_WIDTH, quality);
 }
 
 export function caseImageSizes(wide: boolean): string {
