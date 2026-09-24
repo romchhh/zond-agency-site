@@ -43,7 +43,9 @@ export default function CasePostPage({
 }: CasePostPageProps) {
   const copy = dictionary.cases;
   const casesPath = getCaseIndexPath(locale);
-  const preparedBody = ensureCaseBodyMedia(caseItem.body, caseItem.media ?? []);
+  const preparedBody = ensureCaseBodyMedia(caseItem.body, caseItem.media ?? [], {
+    skipMissingAppend: Boolean(caseItem.blocks?.length),
+  });
   const { hero, body } = extractCaseHeroMedia(preparedBody);
   const blocks = buildCaseVisualBlocks(caseItem, body, locale, hero?.src ?? null);
   const defaults = getCaseVisualDefaults(

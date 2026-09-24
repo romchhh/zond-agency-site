@@ -64,8 +64,12 @@ export function isAnimatedCaseMedia(src: string): boolean {
   return src.endsWith(".gif");
 }
 
-export function ensureCaseBodyMedia(body: string, media: string[]): string {
-  if (!media.length) return body;
+export function ensureCaseBodyMedia(
+  body: string,
+  media: string[],
+  options?: { skipMissingAppend?: boolean },
+): string {
+  if (options?.skipMissingAppend || !media.length) return body;
 
   const inBody = new Set(
     [...body.matchAll(MEDIA_TAG_RE)].map((match) => match[2]),

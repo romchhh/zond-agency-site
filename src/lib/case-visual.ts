@@ -277,6 +277,16 @@ function normalizeGalleryLayout(imageCount: number): CaseVisualGalleryLayout {
   return "wide";
 }
 
+function resolveGalleryLayout(
+  imageCount: number,
+  preferred: CaseVisualGalleryLayout,
+): CaseVisualGalleryLayout {
+  if (imageCount === 2 && preferred === "pair") return "pair";
+  if (imageCount === 1 && preferred === "wide") return "wide";
+  if (imageCount === 3 && preferred === "triple") return "triple";
+  return normalizeGalleryLayout(imageCount);
+}
+
 function dedupeCaseVisualBlocks(
   blocks: CaseVisualBlock[],
   excludeSrc: Array<string | null | undefined>,
@@ -295,7 +305,7 @@ function dedupeCaseVisualBlocks(
 
     deduped.push({
       ...block,
-      layout: normalizeGalleryLayout(images.length),
+      layout: resolveGalleryLayout(images.length, block.layout),
       images,
     });
   }

@@ -3,6 +3,7 @@ import type { Locale } from "@/i18n/config";
 
 const m = (file: string) => `/assets/cases/kyiv-tourism-department/${file}`;
 
+/** Hero in body; then gallery rows in display order (wide = 1/row, pair = 2/row). */
 const kyivTourismMedia = [
   "media/kyiv-tourism-department/hero.jpg",
   "media/kyiv-tourism-department/01.webp",
@@ -23,6 +24,71 @@ const kyivTourismMedia = [
   "media/kyiv-tourism-department/16.jpg",
 ];
 
+type KyivGalleryRow = {
+  layout: "wide" | "pair";
+  files: string[];
+  captions: string[];
+};
+
+const kyivGalleryRows: KyivGalleryRow[] = [
+  {
+    layout: "pair",
+    files: ["01.webp", "02.jpg"],
+    captions: ["Листівки з малюнками Києва", "Шрифти кампанії"],
+  },
+  {
+    layout: "pair",
+    files: ["03.webp", "04.webp"],
+    captions: ["Місто у деталях", "Сітілайт у міському просторі"],
+  },
+  {
+    layout: "wide",
+    files: ["05.jpg"],
+    captions: ["Кампанія на білборді"],
+  },
+  {
+    layout: "pair",
+    files: ["06.webp", "07.webp"],
+    captions: ["Комунікація в метро", "Друковані матеріали"],
+  },
+  {
+    layout: "pair",
+    files: ["08.jpg", "09.webp"],
+    captions: ["Вуличні банери", "Листівка кампанії"],
+  },
+  {
+    layout: "pair",
+    files: ["10.webp", "11.jpg"],
+    captions: ["Малюнки, що об’єднують", "Міська реклама"],
+  },
+  {
+    layout: "pair",
+    files: ["12.jpg", "13.webp"],
+    captions: ["Київ із характером", "Вертикальний рекламний носій"],
+  },
+  {
+    layout: "pair",
+    files: ["14.webp", "15.webp"],
+    captions: ["Київ очима дітей", "Вуличний сітілайт"],
+  },
+  {
+    layout: "wide",
+    files: ["16.jpg"],
+    captions: ["Кампанія в міському просторі"],
+  },
+];
+
+function kyivGalleryBlock(row: KyivGalleryRow): CaseVisualBlock {
+  return {
+    type: "gallery",
+    layout: row.layout,
+    images: row.files.map((file, index) => ({
+      src: m(file),
+      caption: row.captions[index],
+    })),
+  };
+}
+
 const blocksUk: CaseVisualBlock[] = [
   {
     type: "section",
@@ -42,14 +108,7 @@ const blocksUk: CaseVisualBlock[] = [
       { label: "Продукт", value: "соціальна кампанія" },
     ],
   },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("01.webp"), caption: "Листівки з малюнками Києва" },
-      { src: m("02.jpg"), caption: "Шрифти кампанії" },
-    ],
-  },
+  kyivGalleryBlock(kyivGalleryRows[0]),
   {
     type: "section",
     index: "02",
@@ -68,14 +127,7 @@ const blocksUk: CaseVisualBlock[] = [
       { title: "Гнучкість", description: "Адаптувати концепцію до вулиць, екранів і друку." },
     ],
   },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("03.webp"), caption: "Місто у деталях" },
-      { src: m("04.webp"), caption: "Сітілайт у міському просторі" },
-    ],
-  },
+  kyivGalleryBlock(kyivGalleryRows[1]),
   {
     type: "section",
     index: "03",
@@ -92,19 +144,8 @@ const blocksUk: CaseVisualBlock[] = [
     text: "Київ —\nмісто кожного.",
     footer: "КИЇВ / СОЦІАЛЬНА КАМПАНІЯ",
   },
-  {
-    type: "gallery",
-    layout: "wide",
-    images: [{ src: m("05.jpg"), caption: "Кампанія на білборді" }],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("06.webp"), caption: "Комунікація в метро" },
-      { src: m("07.webp"), caption: "Друковані матеріали" },
-    ],
-  },
+  kyivGalleryBlock(kyivGalleryRows[2]),
+  kyivGalleryBlock(kyivGalleryRows[3]),
   {
     type: "section",
     index: "",
@@ -121,43 +162,11 @@ const blocksUk: CaseVisualBlock[] = [
       "Мерч і промоматеріали",
     ],
   },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("08.jpg"), caption: "Вуличні банери" },
-      { src: m("09.webp"), caption: "Листівка кампанії" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("10.webp"), caption: "Малюнки, що об’єднують" },
-      { src: m("11.jpg"), caption: "Міська реклама" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("12.jpg"), caption: "Київ із характером" },
-      { src: m("13.webp"), caption: "Вертикальний рекламний носій" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("14.webp"), caption: "Київ очима дітей" },
-      { src: m("15.webp"), caption: "Вуличний сітілайт" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "wide",
-    images: [{ src: m("16.jpg"), caption: "Кампанія в міському просторі" }],
-  },
+  kyivGalleryBlock(kyivGalleryRows[4]),
+  kyivGalleryBlock(kyivGalleryRows[5]),
+  kyivGalleryBlock(kyivGalleryRows[6]),
+  kyivGalleryBlock(kyivGalleryRows[7]),
+  kyivGalleryBlock(kyivGalleryRows[8]),
   {
     type: "section",
     index: "04",
