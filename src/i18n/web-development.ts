@@ -1,5 +1,80 @@
+import { getCases } from "@/i18n/cases";
 import type { Locale } from "@/i18n/config";
+import type { ProjectItem } from "@/i18n/dictionary";
 import type { ServicePageContent } from "@/i18n/logo";
+import { getCaseDetailPath } from "@/i18n/routing";
+
+const webDevelopmentCaseCards: Record<
+  Locale,
+  Array<{ slug: string; category: string; image: string }>
+> = {
+  uk: [
+    {
+      slug: "carbit",
+      category: "Сервіс пошуку авто",
+      image: "/services/web-development/carbit.gif",
+    },
+    {
+      slug: "nove-misto",
+      category: "Девелопмент",
+      image: "/services/web-development/nove.gif",
+    },
+    {
+      slug: "kyiv-tourism-department",
+      category: "Міський бренд",
+      image: "/services/web-development/kyiv.jpg",
+    },
+    {
+      slug: "digital-residence",
+      category: "Нерухомість",
+      image: "/services/web-development/digital.gif",
+    },
+  ],
+  en: [
+    {
+      slug: "carbit",
+      category: "Car search service",
+      image: "/services/web-development/carbit.gif",
+    },
+    {
+      slug: "nove-misto",
+      category: "Real estate development",
+      image: "/services/web-development/nove.gif",
+    },
+    {
+      slug: "kyiv-tourism-department",
+      category: "City brand",
+      image: "/services/web-development/kyiv.jpg",
+    },
+    {
+      slug: "digital-residence",
+      category: "Real estate",
+      image: "/services/web-development/digital.gif",
+    },
+  ],
+  ru: [
+    {
+      slug: "carbit",
+      category: "Сервис поиска авто",
+      image: "/services/web-development/carbit.gif",
+    },
+    {
+      slug: "nove-misto",
+      category: "Девелопмент",
+      image: "/services/web-development/nove.gif",
+    },
+    {
+      slug: "kyiv-tourism-department",
+      category: "Городской бренд",
+      image: "/services/web-development/kyiv.jpg",
+    },
+    {
+      slug: "digital-residence",
+      category: "Недвижимость",
+      image: "/services/web-development/digital.gif",
+    },
+  ],
+};
 
 const uk: ServicePageContent = {
   eyebrow: "Послуги / Веб-розробка",
@@ -349,3 +424,20 @@ const ru: ServicePageContent = {
 };
 
 export const webDevelopmentPage: Record<Locale, ServicePageContent> = { uk, en, ru };
+
+export function getWebDevelopmentProjects(locale: Locale): ProjectItem[] {
+  const cases = getCases(locale);
+  return webDevelopmentCaseCards[locale].flatMap((card) => {
+    const caseItem = cases.find((item) => item.slug === card.slug);
+    if (!caseItem) return [];
+
+    return [
+      {
+        title: caseItem.title,
+        description: card.category,
+        image: card.image,
+        href: getCaseDetailPath(locale, caseItem.slug),
+      },
+    ];
+  });
+}

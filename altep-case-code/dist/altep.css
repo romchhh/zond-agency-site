@@ -1,0 +1,45 @@
+.altep .breadcrumbs{padding-right:0}.altep .hero .media img,.altep .media.wide img,.altep .pair .media img{aspect-ratio:auto;height:auto;object-fit:contain}.altep .gallery{align-items:start}.altep .media{margin-top:22px}.altep .gallery .media{margin-top:0}.altep .manifesto{background:#1d1d1d;color:white}.altep .manifesto em,.altep .orange{color:#efefef}.altep .project-facts .country-fact{background:#efefef;border-color:#efefef}.altep .country-fact dt{color:#342518}.altep .project-facts{grid-template-columns:1fr 1fr 1.35fr}.altep .project-facts dd{font-size:28px}.altep .quote-card{border-left-color:#efefef}.altep .quote-mark{color:#d52f2d}.altep .review-monogram{background:#efefef}.altep .action-tiles article{min-height:215px}.altep .hero-tag{white-space:nowrap}.altep .rule-grid>div{border-left:3px solid #efefef}.altep .manifesto p{font-size:clamp(40px,5vw,72px)}@media(max-width:700px){.altep .project-facts{grid-template-columns:1fr}.altep .project-facts dd{font-size:27px}.altep .manifesto p{font-size:39px}.altep .hero-tag{font-size:12px}.altep .pair{grid-template-columns:1fr 1fr}.altep .hero-intro{gap:10px}.altep .hero-intro p{font-size:23px}.altep .media figcaption{font-size:13px}}.altep .hero h1{font-size:clamp(52px,7.7vw,110px)}.altep .facts-row{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:14px;margin-bottom:32px}.altep .project-facts{margin:0;grid-template-columns:1fr 1fr 1.35fr;gap:14px}.altep .project-facts>div{padding:24px 20px;min-width:0}.altep .project-facts dd{font-size:clamp(20px,1.9vw,27px)}.altep .country-fact{color:#171717}.altep .open-case{display:flex;align-items:center;justify-content:center;gap:12px;padding:24px 18px;background:#ff7100;color:#171717;border-radius:16px;text-decoration:none;font-size:20px;line-height:1.2;transition:background .2s,transform .2s}.altep .open-case svg{width:30px;height:30px;flex:none}.altep .open-case .out-arrow{align-self:flex-start}.altep .open-case:hover{background:#ff8a2c;transform:translateY(-3px)}.altep .open-case:focus-visible{outline:3px solid #171717;outline-offset:4px}.altep .manifesto em{color:#e4d2a6}.altep .hero-tag{font-size:14px}@media(max-width:1050px){.altep .facts-row{grid-template-columns:1fr}.altep .open-case{justify-self:end;min-height:76px;min-width:230px}}@media(max-width:700px){.altep .project-facts{grid-template-columns:1fr}.altep .open-case{justify-self:stretch}.altep .pair{grid-template-columns:1fr}.altep .project-facts dd{font-size:26px}.altep .facts-row{gap:14px}}@media(prefers-reduced-motion:reduce){.altep .open-case{transition:none}}
+/* Compact task cards with readable copy. */
+.altep .action-tiles article {
+  min-height: 112px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  column-gap: 12px;
+  align-content: center;
+}
+.altep .action-tiles .tile-number { grid-column: 1; grid-row: 1; align-self: center; font-size: 14px; }
+.altep .action-tiles h3 { grid-column: 2; margin: 0 0 7px; font-size: 24px; }
+.altep .action-tiles .tile-copy { grid-column: 2; margin: 0; font-size: 16px; line-height: 1.4; }
+/* Mobile: one photograph per row, matching the page gutters and corners. */
+@media (max-width: 767px) {
+  .altep .container { padding-inline: 18px; }
+  .altep .gallery,
+  .altep .case-navigation { grid-template-columns: minmax(0, 1fr); }
+  .altep .gallery { width: 100%; margin-inline: 0; gap: 24px; }
+  .altep .media.wide,
+  .altep .project-image { width: 100%; margin-inline: 0; }
+  .altep .image-button,
+  .altep .project-image { border-radius: 17px; overflow: hidden; }
+  .altep .media img { width: 100%; height: auto; aspect-ratio: auto; }
+  .altep .media figcaption { padding-inline: 0; }
+  .altep .action-tiles { grid-template-columns: 1fr; gap: 12px; }
+  .altep .action-tiles article { min-height: 104px; padding: 14px 18px; }
+  .altep .action-tiles h3 { font-size: 24px; margin: 0 0 6px; }
+}
+
+.altep .manifesto{background:#1d1d1d}.altep .hero h1{font-size:clamp(54px,9vw,130px)}.altep .project-facts dd{font-size:clamp(19px,1.7vw,26px)}.altep .project-facts .country-fact{color:#1d1d1d}@media(max-width:700px){.altep .hero h1{font-size:clamp(52px,14vw,90px)}.altep .project-facts dd{font-size:26px}}
+
+.altep .manifesto{background:#1d1d1d}.altep .project-facts .country-fact{color:#1d1d1d}.altep .country-fact dt{color:#31523a}.altep .hero h1{font-size:clamp(54px,9vw,132px)}.altep .project-facts dd{font-size:clamp(19px,1.75vw,25px)}.altep .rule-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:900px){.altep .rule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.altep .hero h1{font-size:clamp(52px,12vw,85px)}.altep .project-facts dd{font-size:25px}.altep .rule-grid{grid-template-columns:1fr 1fr}}
+
+.altep .manifesto{background:#1d1d1d}.altep .project-facts .country-fact{color:#1d1d1d}.altep .hero h1{font-size:clamp(52px,8vw,125px)}.altep .project-facts dd{font-size:clamp(18px,1.65vw,24px)}.altep .rule-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:900px){.altep .rule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.altep .hero h1{font-size:clamp(48px,11vw,80px)}.altep .project-facts dd{font-size:23px}.altep .rule-grid{grid-template-columns:1fr 1fr}}
+
+.altep .orange{color:#ff7100}.altep .manifesto em{color:#efefef}.altep .hero-tag{background:#1d1d1d;color:white}.altep .project-facts .country-fact{background:#efefef;border-color:#efefef}
+
+.altep .manifesto{background:#1d1d1d}.altep .hero-tag{background:#1d1d1d}.altep .project-facts .country-fact{background:#efefef;border-color:#efefef}.altep .orange{color:#ff7100}.altep .hero h1{font-size:clamp(38px,6.7vw,108px)}@media(max-width:700px){.altep .hero h1{font-size:clamp(36px,8vw,63px)}.altep .pair{grid-template-columns:1fr}}
+
+.altep .manifesto{background:#1d1d1d}.altep .hero-tag{background:#1d1d1d}.altep .project-facts .country-fact{background:#efefef;border-color:#efefef}.altep .manifesto em{color:#efefef}
+
+.altep .manifesto{background:#1d1d1d}.altep .hero-tag{background:#1d1d1d}.altep .project-facts .country-fact{background:#efefef;border-color:#efefef}.altep .orange{color:#ff7100}.altep .hero h1{font-size:clamp(64px,10vw,155px)}@media(max-width:700px){.altep .hero h1{font-size:clamp(56px,13vw,90px)}.altep .pair{grid-template-columns:1fr}}
+
+.altep .manifesto{background:#1d1d1d}.altep .manifesto em{color:#e74436}.altep .hero-tag{background:#1d1d1d}.altep .project-facts .country-fact{background:#efefef;border-color:#efefef}.altep .quote-mark{color:#e74436}.altep .rule-grid>div{border-left-color:#e74436}

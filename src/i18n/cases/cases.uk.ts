@@ -3,6 +3,7 @@ import { ahmadTeaCopy, ahmadTeaShared, getAhmadTeaBlocks } from "./ahmad-tea";
 import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
 import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
+import { altepCopy, altepShared, getAltepBlocks } from "./altep";
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
@@ -127,30 +128,15 @@ const cases: CaseItem[] = [
     "body": "Uaru\n\nUaru\n\n[IMG: media/terminal-borivaje/hero.webp]\n\n### Клієнт\n\nТермінал розташований у смт. Нові Білярі Одеського р-ну Одеської обл. в акваторії Аджалицького лиману порту Южний.\n\n### Задачі\n\nРозробити сучасний і впізнаваний бренд, що відображає цінності Terminal Borivaje як провідного агро-терміналу, акцентуючи його інноваційність, екологічність та надійність у сфері агробізнесу. Розробити новий логотип, що інтуїтивно відображає специфіку та цінності агро-терміналу. Підібрати гармонійну кольорову палітру, яка підкреслить сучасність та екологічність бренду. Створити універсальний набір шрифтів для використання на різних платформах.\n\n### Розробили\n\nБрендинг\n\nРозробка брендингу\n\nСувенірну продукцію\n\nПоліграфічні матеріали\n\nЛоготип\n\n[IMG: media/terminal-borivaje/01.webp]\n\n[IMG: media/terminal-borivaje/02.webp]\n\n[IMG: media/terminal-borivaje/03.webp]\n\n[IMG: media/terminal-borivaje/04.webp]\n\n[IMG: media/terminal-borivaje/05.webp]\n\n[IMG: media/terminal-borivaje/04.webp]\n\n[IMG: media/terminal-borivaje/05.webp]\n\n## Розробка логотипу для агро-терміналу: унікальність та впізнаваність\n\nЛоготип є обличчям бренду, особливо для компаній, що працюють у сфері агробізнесу та логістики. Для Terminal Borivaje ми створили сучасний, інтуїтивно зрозумілий логотип, який передає його надійність, інноваційність та екологічний підхід. Гармонійне поєднання символіки та кольорової гами забезпечує впізнаваність серед конкурентів. Розробка логотипів для агро-терміналів вимагає врахування інфраструктурних особливостей та стратегії розвитку бренду, і ми знаємо, як зробити це ефективно.\n\n[IMG: media/terminal-borivaje/06.webp]\n\n[IMG: media/terminal-borivaje/07.webp]\n\n[IMG: media/terminal-borivaje/08.webp]\n\n[IMG: media/terminal-borivaje/06.webp]\n\n[IMG: media/terminal-borivaje/07.webp]\n\n[IMG: media/terminal-borivaje/08.webp]\n\n[IMG: media/terminal-borivaje/09.webp]\n\nБрендинг агро-терміналу: гармонія сучасності та екологічності\n\nБрендинг для агро-терміналу — це не лише візуальний стиль, а й стратегія позиціонування. Terminal Borivaje отримав комплексний фірмовий стиль, що поєднує екологічні кольори, сучасні шрифти та графічні елементи, які підкреслюють технологічність і надійність компанії. Вдало продуманий брендинг допомагає створити довіру серед партнерів та клієнтів, виділяючи компанію серед конкурентів. Ми допомагаємо агро- та логістичним компаніям будувати сильні бренди, що працюють на довгострокову перспективу.\n\n[IMG: media/terminal-borivaje/10.webp]\n\n[IMG: media/terminal-borivaje/11.webp]\n\n[IMG: media/terminal-borivaje/12.webp]\n\n[IMG: media/terminal-borivaje/13.webp]\n\n[IMG: media/terminal-borivaje/14.webp]\n\n[IMG: media/terminal-borivaje/15.webp]\n\n[IMG: media/terminal-borivaje/15.webp]\n\n[IMG: media/terminal-borivaje/16.webp]\n\n[IMG: media/terminal-borivaje/17.webp]"
   },
   {
-    "slug": "altep",
-    "title": "ALTEP",
-    "description": "Оновили бренд і логотип для «Альтеп-Центру» — виробника опалювального обладнання. Також дизайн сайту, презентації та поліграфія.",
-    "cover": "/assets/cases/altep/cover.gif",
-    "media": [
-      "media/altep/cover.gif",
-      "media/altep/hero.jpeg",
-      "media/altep/01.jpeg",
-      "media/altep/02.jpeg",
-      "media/altep/03.jpeg",
-      "media/altep/04.jpeg",
-      "media/altep/05.jpeg",
-      "media/altep/06.jpeg",
-      "media/altep/07.jpeg",
-      "media/altep/08.jpeg",
-      "media/altep/09.jpeg",
-      "media/altep/10.jpeg",
-      "media/altep/11.jpeg",
-      "media/altep/12.jpeg",
-      "media/altep/13.jpeg",
-      "media/altep/14.jpeg",
-      "media/altep/15.jpeg"
-    ],
-    "body": "[IMG: media/altep/hero.jpeg]\n\n### Клієнт\n\n«Альтеп-Центр» працює в сфері виробництва та реалізації опалювального обладнання з 2008 р. З самого початку роботи компанія зарекомендувала себе як надійного виробника, що несе відповідальність за якість продукції та зобов’язання перед партнерами і покупцями.\n\n### Задачі\n\nКомпанія «Альтеп-Центр» звернулася до нашої брендинг-агенції з метою оновлення бренду, розробки нового логотипу і дизайну. Крім того, ми розробили стилістику для сторінок компанії в соціальних мережах, створили дизайн фірмового мерчу і поліграфічні матеріали для максимальної впізнаваності бренду на ринку.\n\n### Розробили\n\nДизайн систему\n\nПоліграфічні матеріали\n\n3d модель\n\nДизайн поліграфії\n\nДизайн сайта\n\nПрезентації проектів\n\nАйдентика\n\nЕмблема\n\n[IMG: media/altep/01.jpeg]\n\n[IMG: media/altep/02.jpeg]\n\n[IMG: media/altep/03.jpeg]\n\n[IMG: media/altep/04.jpeg]\n\n[IMG: media/altep/03.jpeg]\n\n[IMG: media/altep/04.jpeg]\n\n## Розробка логотипу: впізнаваний стиль для надійного бренду\n\nЛоготип – це візитна картка компанії, яка формує перше враження та допомагає бренду виділятися на ринку. Для «Альтеп-Центр» ми створили оновлений логотип, що відображає професіоналізм, надійність та інноваційний підхід компанії у сфері опалювального обладнання. Розробка логотипу – це не просто графічний символ, а важливий елемент айдентики, який підсилює довіру клієнтів і партнерів. Важливо, щоб логотип був лаконічним, сучасним і добре адаптувався для використання у цифрових і друкованих матеріалах.\n\n[IMG: media/altep/05.jpeg]\n\n[IMG: media/altep/06.jpeg]\n\n[IMG: media/altep/07.jpeg]\n\n[IMG: media/altep/05.jpeg]\n\n[IMG: media/altep/06.jpeg]\n\n[IMG: media/altep/07.jpeg]\n\n[IMG: media/altep/08.jpeg]\n\n[IMG: media/altep/09.jpeg]\n\nДизайн фірмового мерчу та поліграфії: створення цілісного образу бренду\n\nФірмовий мерч і поліграфічні матеріали – це ефективний спосіб підвищити впізнаваність бренду та залишити приємне враження у клієнтів. Для «Альтеп-Центр» ми розробили брендовані аксесуари, друковану продукцію та стилістику для сторінок у соцмережах, щоб створити єдиний візуальний образ компанії. Дизайн поліграфічних матеріалів та фірмового мерчу допомагає бізнесу зміцнити зв’язок із цільовою аудиторією, підвищити лояльність клієнтів і посилити маркетингові комунікації.\n\n[IMG: media/altep/08.jpeg]\n\n[IMG: media/altep/10.jpeg]\n\n[IMG: media/altep/11.jpeg]\n\n[IMG: media/altep/12.jpeg]\n\n[IMG: media/altep/13.jpeg]\n\n[IMG: media/altep/14.jpeg]\n\n[IMG: media/altep/15.jpeg]"
+    slug: altepShared.slug,
+    title: altepCopy.uk.title,
+    description: altepCopy.uk.description,
+    cover: altepShared.cover,
+    media: altepShared.media,
+    tagline: altepCopy.uk.tagline,
+    serviceTag: altepCopy.uk.serviceTag,
+    body: altepShared.body,
+    blocks: getAltepBlocks("uk"),
   },
   {
     "slug": "packaging",

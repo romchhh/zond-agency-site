@@ -1,8 +1,12 @@
 import type { Locale } from "@/i18n/config";
-import { serviceCompareTable } from "@/i18n/service-compare";
+import {
+  type ServiceCompareContent,
+  serviceCompareTable,
+} from "@/i18n/service-compare";
 
 type ServiceCompareSectionProps = {
   locale: Locale;
+  compare?: ServiceCompareContent;
 };
 
 function CompareCheckIcon() {
@@ -20,8 +24,11 @@ function CompareCheckIcon() {
   );
 }
 
-export default function ServiceCompareSection({ locale }: ServiceCompareSectionProps) {
-  const compare = serviceCompareTable[locale];
+export default function ServiceCompareSection({
+  locale,
+  compare: compareOverride,
+}: ServiceCompareSectionProps) {
+  const compare = compareOverride ?? serviceCompareTable[locale];
   const [, zondLabel, freelanceLabel, templateLabel] = compare.compareColumns;
 
   return (

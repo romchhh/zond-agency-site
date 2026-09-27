@@ -48,7 +48,7 @@ export const servicesGridSlugs: Array<ServiceSlug | null> = [
   "brand-character",
   "packaging",
   "graphics",
-  null,
+  "web-development",
   "smm",
 ];
 

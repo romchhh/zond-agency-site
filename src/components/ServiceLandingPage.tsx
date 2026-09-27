@@ -432,7 +432,14 @@ export default function ServiceLandingPage({
               </section>
             ) : null}
 
-            <ServiceCompareSection locale={locale} />
+            <ServiceCompareSection
+              locale={locale}
+              compare={{
+                compareTitle: copy.compareTitle,
+                compareColumns: copy.compareColumns,
+                compareRows: copy.compareRows,
+              }}
+            />
 
             {isPrototypeLayout ? <ServiceDeliverablesSection copy={copy} /> : null}
 

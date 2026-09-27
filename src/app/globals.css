@@ -970,15 +970,15 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
-  height: 40px;
+  min-width: 132px;
+  height: 44px;
 }
 
 .client-logo img {
   width: auto;
   height: auto;
-  max-width: 150px;
-  max-height: 32px;
+  max-width: 168px;
+  max-height: 36px;
   object-fit: contain;
   filter: grayscale(1) brightness(0.75) contrast(0.85);
   opacity: 0.55;

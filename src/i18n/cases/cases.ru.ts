@@ -3,6 +3,7 @@ import { ahmadTeaCopy, ahmadTeaShared, getAhmadTeaBlocks } from "./ahmad-tea";
 import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
 import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
+import { altepCopy, altepShared, getAltepBlocks } from "./altep";
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
@@ -126,30 +127,15 @@ const cases: CaseItem[] = [
     "body": "ruua\n\nruua\n\n### Клиент\n\nТерминал находится в пгт. Новые Беляри Одесского р-на Одесской обл. в акватории Аджалицкого лимана порта Южный.\n\n### Задачи\n\nРазработать современный и узнаваемый бренд, отражающий ценности Terminal Borivaje как ведущего агротерминала, акцентируя его инновационность, экологичность и надежность в сфере агробизнеса. Разработать новый логотип, интуитивно отражающий специфику и ценности агротерминала. Подобрать гармоничную цветовую гамму, которая подчеркнет современность и экологичность бренда. Создать универсальный набор шрифтов для использования на разных платформах.\n\n### Разработали\n\nБрендинг\n\nСувенирная продукция\n\nПолиграфические материалы\n\nК проекту\n\n[IMG: media/terminal-borivaje/01.webp]\n\n[IMG: media/terminal-borivaje/02.webp]\n\n[IMG: media/terminal-borivaje/03.webp]\n\n[IMG: media/terminal-borivaje/04.webp]\n\n[IMG: media/terminal-borivaje/05.webp]\n\n## Разработка логотипа для агро-терминала: уникальность и узнаваемость\n\nЛоготип является лицом бренда, особенно для компаний, работающих в сфере агробизнеса и логистики. Для Terminal Borivaje мы создали современный, интуитивно понятный логотип, передающий его надежность, инновационность и экологический подход. Гармоническое сочетание символики и цветовой гаммы обеспечивает узнаваемость среди конкурентов. Разработка логотипов для агротерминалов требует учета инфраструктурных особенностей и стратегии развития бренда, и мы знаем, как сделать это эффективно.\n\n[IMG: media/terminal-borivaje/06.webp]\n\n[IMG: media/terminal-borivaje/07.webp]\n\n[IMG: media/terminal-borivaje/08.webp]\n\n[IMG: media/terminal-borivaje/10.webp]\n\n## Брендинг агро-терминала: гармония современности и экологичности\n\nБрендинг для агро-терминала – это не только визуальный стиль, но и стратегия позиционирования. Terminal Borivaje получил комплексный фирменный стиль, сочетающий экологические цвета, современные шрифты и графические элементы, подчеркивающие технологичность и надежность компании. Удачно продуманный брендинг помогает создать доверие среди партнеров и клиентов, выделяя компанию среди конкурентов. Мы помогаем агро- и логистическим компаниям строить сильные бренды, работающие на долгосрочную перспективу.\n\n[IMG: media/terminal-borivaje/09.webp]\n\n[IMG: media/terminal-borivaje/13.webp]\n\n[IMG: media/terminal-borivaje/14.webp]\n\n[IMG: media/terminal-borivaje/15.webp]\n\n[IMG: media/terminal-borivaje/16.webp]\n\n[IMG: media/terminal-borivaje/17.webp]\n\n[IMG: media/terminal-borivaje/11.webp]\n\n[IMG: media/terminal-borivaje/12.webp]\n\n[IMG: media/terminal-borivaje/hero.webp]"
   },
   {
-    "slug": "altep",
-    "title": "ALTEP",
-    "description": "Обновили бренд и логотип для «Альтеп-Центра» — производителя отопительного оборудования. Также дизайн сайта, презентации и полиграфия.",
-    "cover": "/assets/cases/altep/cover.gif",
-    "media": [
-      "media/altep/cover.gif",
-      "media/altep/hero.jpeg",
-      "media/altep/01.jpeg",
-      "media/altep/02.jpeg",
-      "media/altep/03.jpeg",
-      "media/altep/04.jpeg",
-      "media/altep/05.jpeg",
-      "media/altep/07.jpeg",
-      "media/altep/06.jpeg",
-      "media/altep/08.jpeg",
-      "media/altep/12.jpeg",
-      "media/altep/13.jpeg",
-      "media/altep/09.jpeg",
-      "media/altep/14.jpeg",
-      "media/altep/15.jpeg",
-      "media/altep/10.jpeg",
-      "media/altep/11.jpeg"
-    ],
-    "body": "[IMG: media/altep/hero.jpeg]\n\n### Клиент\n\n«Альтеп-Центр» работает в сфере производства и реализации отопительного оборудования с 2008 г. С самого начала работы компания зарекомендовала себя как надежного производителя, отвечающего за качество продукции и обязательства перед партнерами и покупателями.\n\n### Задачи\n\nКомпания «Альтеп-Центр» обратилась в наше брендинг-агентство с целью обновления бренда, разработки нового логотипа и дизайна. Кроме того, мы разработали стилистику для страниц компании в социальных сетях, создали дизайн фирменного мерча и полиграфические материалы для максимальной узнаваемости бренда на рынке.\n\n### Разработали\n\nЛоготип\n\nСтилистика для социальных сетей\n\nФирменный мерч\n\nПолиграфические материалы\n\nДизайн систему\n\nБрендинг\n\n[IMG: media/altep/01.jpeg]\n\n[IMG: media/altep/02.jpeg]\n\n[IMG: media/altep/03.jpeg]\n\n[IMG: media/altep/04.jpeg]\n\n## Разработка логотипа: узнаваемый стиль для надежного бренда\n\nЛоготип – это визитная карточка компании, которая формирует первое впечатление и помогает бренду выделяться на рынке. Для «Альтеп-центра» мы создали обновленный логотип, отражающий профессионализм, надежность и инновационный подход компании в сфере отопительного оборудования. Разработка логотипа – это не просто графический символ, а важный элемент айдентики, усиливающий доверие клиентов и партнеров. Важно, чтобы логотип был лаконичным, современным и хорошо адаптировался для использования в цифровых и печатных материалах.\n\n[IMG: media/altep/05.jpeg]\n\n[IMG: media/altep/07.jpeg]\n\n[IMG: media/altep/06.jpeg]\n\n[IMG: media/altep/08.jpeg]\n\n## Дизайн фирменного мерча и полиграфии: создание целостного образа бренда\n\nФирменный мерч и полиграфические материалы – это эффективный способ повысить узнаваемость бренда и оставить приятное впечатление у клиентов. Для «Альтеп-центра» мы разработали брендированные аксессуары, печатную продукцию и стилистику для страниц в соцсетях, чтобы создать единый визуальный образ компании. Дизайн полиграфических материалов и фирменного мерча помогает бизнесу укрепить связь с целевой аудиторией, повысить лояльность клиентов и усилить рекламные коммуникации.\n\n[IMG: media/altep/12.jpeg]\n\n[IMG: media/altep/13.jpeg]\n\n[IMG: media/altep/09.jpeg]\n\n[IMG: media/altep/14.jpeg]\n\n[IMG: media/altep/15.jpeg]\n\n[IMG: media/altep/10.jpeg]\n\n[IMG: media/altep/11.jpeg]"
+    slug: altepShared.slug,
+    title: altepCopy.ru.title,
+    description: altepCopy.ru.description,
+    cover: altepShared.cover,
+    media: altepShared.media,
+    tagline: altepCopy.ru.tagline,
+    serviceTag: altepCopy.ru.serviceTag,
+    body: altepShared.body,
+    blocks: getAltepBlocks("ru"),
   },
   {
     "slug": "packaging",

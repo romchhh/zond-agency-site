@@ -3,6 +3,7 @@ import { bitSchoolCopy, bitSchoolShared, getBitSchoolBlocks } from "./bit-school
 import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
 import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
+import { altepCopy, altepShared, getAltepBlocks } from "./altep";
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
@@ -99,29 +100,15 @@ const cases: CaseItem[] = [
     blocks: getKavloraBlocks("en"),
   },
   {
-    "slug": "altep",
-    "title": "ALTEP",
-    "description": "We updated the brand and logo for Altep Center — a heating equipment manufacturer. Also website design, presentations, and print materials.",
-    "cover": "/assets/cases/altep/cover.gif",
-    "media": [
-      "media/altep/cover.gif",
-      "media/altep/hero.jpeg",
-      "media/altep/01.jpeg",
-      "media/altep/02.jpeg",
-      "media/altep/03.jpeg",
-      "media/altep/04.jpeg",
-      "media/altep/05.jpeg",
-      "media/altep/06.jpeg",
-      "media/altep/07.jpeg",
-      "media/altep/08.jpeg",
-      "media/altep/11.jpeg",
-      "media/altep/10.jpeg",
-      "media/altep/12.jpeg",
-      "media/altep/13.jpeg",
-      "media/altep/14.jpeg",
-      "media/altep/15.jpeg"
-    ],
-    "body": "[IMG: media/altep/hero.jpeg]\n\n### Client\n\n“Altep-Centre” has been working in the sphere of production and sales of heating equipment since 2008. From the very beginning the company recommended itself as a reliable producer which bears responsibility for the quality of the product and carries the obligations to partners and customers.\n\n### Goals\n\nThe company \"Altep-Center\" turned to our branding agency for the purpose of updating the brand, developing a new logo and design. In addition, we developed a style for the company's pages in social networks, created the design of branded merch and printing materials for maximum brand recognition on the market.\n\n### Developed\n\nLogo\n\nStyle for social\n\nBranded merch\n\nDesign concept\n\nPrint production\n\n[IMG: media/altep/01.jpeg]\n\n[IMG: media/altep/02.jpeg]\n\n[IMG: media/altep/03.jpeg]\n\n[IMG: media/altep/04.jpeg]\n\n[IMG: media/altep/03.jpeg]\n\n[IMG: media/altep/04.jpeg]\n\n[IMG: media/altep/05.jpeg]\n\n[IMG: media/altep/06.jpeg]\n\n[IMG: media/altep/07.jpeg]\n\n[IMG: media/altep/08.jpeg]\n\n[IMG: media/altep/05.jpeg]\n\n[IMG: media/altep/06.jpeg]\n\n[IMG: media/altep/07.jpeg]\n\n[IMG: media/altep/08.jpeg]\n\n[IMG: media/altep/11.jpeg]\n\n[IMG: media/altep/10.jpeg]\n\n[IMG: media/altep/12.jpeg]\n\n[IMG: media/altep/13.jpeg]\n\n[IMG: media/altep/14.jpeg]\n\n[IMG: media/altep/15.jpeg]"
+    slug: altepShared.slug,
+    title: altepCopy.en.title,
+    description: altepCopy.en.description,
+    cover: altepShared.cover,
+    media: altepShared.media,
+    tagline: altepCopy.en.tagline,
+    serviceTag: altepCopy.en.serviceTag,
+    body: altepShared.body,
+    blocks: getAltepBlocks("en"),
   },
   {
     "slug": "packaging",
