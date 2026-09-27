@@ -36,21 +36,21 @@ export const heroServiceSlugs: ServiceSlug[] = [
   "logo",
 ];
 
-/** Slugs for the 12 homepage /services grid cards, by index order. */
-export const servicesGridSlugs: Array<ServiceSlug | null> = [
-  "branding",
-  "positioning",
-  "naming",
-  "logo",
-  "identity",
-  "brandbook",
-  "communication",
-  "brand-character",
-  "packaging",
-  "graphics",
-  "web-development",
-  "smm",
-];
+/** Card index (01–12) → service detail slug for the homepage /services grid. */
+export const servicesGridSlugByCardIndex: Record<string, ServiceSlug> = {
+  "01": "branding",
+  "02": "positioning",
+  "03": "naming",
+  "04": "logo",
+  "05": "identity",
+  "06": "brandbook",
+  "07": "communication",
+  "08": "brand-character",
+  "09": "packaging",
+  "10": "graphics",
+  "11": "web-development",
+  "12": "smm",
+};
 
 export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
   uk: {

@@ -2,7 +2,7 @@ import MediaImage from "@/components/MediaImage";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getServiceDetailPath } from "@/i18n/routing";
-import { servicesGridSlugs } from "@/i18n/services";
+import { servicesGridSlugByCardIndex } from "@/i18n/services";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
 
@@ -21,8 +21,8 @@ export default function Services({ locale, dictionary }: ServicesProps) {
           <h2 className="section-title">{services.title}</h2>
         </div>
         <div className="services-grid">
-          {services.items.map((service, index) => {
-            const slug = servicesGridSlugs[index];
+          {services.items.map((service) => {
+            const slug = servicesGridSlugByCardIndex[service.index];
             const content = (
               <>
                 <div className="service-visual">
