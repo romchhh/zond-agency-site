@@ -135,6 +135,8 @@ export type Dictionary = {
     moreCasesTitle: string;
     prevCase: string;
     nextCase: string;
+    openClientSite: string;
+    openClientInstagram: string;
     filterAria: string;
     filters: {
       all: string;

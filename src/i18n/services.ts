@@ -27,10 +27,10 @@ export function isServiceSlug(value: string): value is ServiceSlug {
 
 export const heroServiceSlugs: ServiceSlug[] = [
   "branding",
-  "influence-marketing",
+  "positioning",
   "graphics",
   "smm",
-  "illustration",
+  "web-development",
   "packaging",
   "brandbook",
   "logo",
@@ -337,7 +337,7 @@ export const serviceMeta: Record<
     "web-development": {
       title: "Веб-разработка и создание сайтов для бизнеса — ZOND",
       description:
-        "Создаём сайты для бизнеса: стратегия, структура, дизайн, адаптивная веб-разработка, тестирование и запуск.",
+        "Создаём сайты для бизнеса: стратегия, структура, дизайн, адаптивная веб-разработка, тестирование и запуск. Веб-разработка от ZOND.",
     },
     logo: {
       title: "Дизайн логотипов — разработка логотипа для компании — ZOND",

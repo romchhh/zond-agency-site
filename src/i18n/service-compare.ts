@@ -2,6 +2,8 @@ import type { Locale } from "@/i18n/config";
 
 export type ServiceCompareContent = {
   compareTitle: string;
+  /** Short explainer shown only in the mobile stacked layout */
+  compareMobileIntro?: string;
   compareColumns: [string, string, string, string];
   compareRows: Array<{
     criterion: string;
@@ -13,6 +15,8 @@ export type ServiceCompareContent = {
 
 const uk: ServiceCompareContent = {
   compareTitle: "Чому ZOND, а не шаблон чи разовий макет?",
+  compareMobileIntro:
+    "У кожному блоці — рішення ZOND і дві типові альтернативи: окремий виконавець (фриланс) та готовий шаблон.",
   compareColumns: ["Критерій", "ZOND", "Фриланс", "Шаблон"],
   compareRows: [
     {
@@ -44,6 +48,8 @@ const uk: ServiceCompareContent = {
 
 const en: ServiceCompareContent = {
   compareTitle: "Why ZOND, not a template or one-off layout?",
+  compareMobileIntro:
+    "Each block shows ZOND’s approach next to two common alternatives: a freelancer and an off-the-shelf template.",
   compareColumns: ["Criterion", "ZOND", "Freelance", "Template"],
   compareRows: [
     {
@@ -75,6 +81,8 @@ const en: ServiceCompareContent = {
 
 const ru: ServiceCompareContent = {
   compareTitle: "Почему ZOND, а не шаблон или разовый макет?",
+  compareMobileIntro:
+    "В каждом блоке — решение ZOND и две типичные альтернативы: отдельный исполнитель (фриланс) и готовый шаблон.",
   compareColumns: ["Критерий", "ZOND", "Фриланс", "Шаблон"],
   compareRows: [
     {

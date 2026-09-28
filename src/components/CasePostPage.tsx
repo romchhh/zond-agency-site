@@ -9,6 +9,7 @@ import type { CaseItem } from "@/i18n/cases";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getCaseDetailPath, getCaseIndexPath } from "@/i18n/routing";
+import { getCaseClientUrl, getCaseServiceTag } from "@/i18n/cases/case-meta";
 import {
   buildCaseVisualBlocks,
   collectCaseVisualImages,
@@ -49,12 +50,21 @@ export default function CasePostPage({
   });
   const { hero, body } = extractCaseHeroMedia(preparedBody);
   const blocks = buildCaseVisualBlocks(caseItem, body, locale, hero?.src ?? null);
+  const serviceTag =
+    getCaseServiceTag(caseItem.slug, locale) ?? caseItem.serviceTag;
   const defaults = getCaseVisualDefaults(
     locale,
     caseItem.description,
     caseItem.tagline,
-    caseItem.serviceTag,
+    serviceTag,
   );
+  const clientUrl = getCaseClientUrl(caseItem.slug);
+  const openCaseHref = clientUrl ?? getLiveCaseUrl(caseItem.slug, locale);
+  const openCaseLabel = clientUrl
+    ? clientUrl.includes("instagram.com")
+      ? copy.openClientInstagram
+      : copy.openClientSite
+    : defaults.openCase;
   const heroCaptions: Record<string, string> = {
     "home-hub": "Home Hub — концепція фасаду шоуруму",
     carbit: "Carbit — анімована айдентика",
@@ -127,8 +137,8 @@ export default function CasePostPage({
               imageOffset={hero ? 1 : 0}
               caseTitle={caseItem.title}
               caseSlug={caseItem.slug}
-              openCaseLabel={defaults.openCase}
-              openCaseHref={getLiveCaseUrl(caseItem.slug, locale)}
+              openCaseLabel={openCaseLabel}
+              openCaseHref={openCaseHref}
             />
 
             <div className="case-visual-back">

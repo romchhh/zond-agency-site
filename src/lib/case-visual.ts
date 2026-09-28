@@ -9,6 +9,7 @@ import type {
 import type { Locale } from "@/i18n/config";
 import { getCaseDetailPath } from "@/i18n/routing";
 import { isDeliverablesBlock, normalizeArticleContent } from "@/lib/article-blocks";
+import { getCaseTestimonial } from "@/i18n/cases/case-meta";
 import { caseMediaSrc } from "@/lib/case-content";
 
 type BodyToken =
@@ -849,7 +850,32 @@ export function buildCaseVisualBlocks(
     ...(content?.images.filter(isCoverSrc) ?? []),
   ];
 
-  return dedupeCaseVisualBlocks(blocks, excludeSrc);
+  const deduped = dedupeCaseVisualBlocks(blocks, excludeSrc);
+  return applyCaseTestimonial(deduped, caseItem.slug);
+}
+
+function applyCaseTestimonial(blocks: CaseVisualBlock[], slug: string): CaseVisualBlock[] {
+  const testimonial = getCaseTestimonial(slug);
+  if (!testimonial) return blocks;
+
+  const quoteBlock: CaseVisualBlock = {
+    type: "quote",
+    index: "05",
+    kicker: "ВІДГУК КЛІЄНТА",
+    heading: testimonial.heading,
+    paragraphs: testimonial.paragraphs,
+    author: testimonial.author,
+    role: testimonial.role,
+  };
+
+  const quoteIndex = blocks.findIndex((block) => block.type === "quote");
+  if (quoteIndex === -1) return [...blocks, quoteBlock];
+
+  return [
+    ...blocks.slice(0, quoteIndex),
+    quoteBlock,
+    ...blocks.slice(quoteIndex + 1),
+  ];
 }
 
 export function collectCaseVisualImages(

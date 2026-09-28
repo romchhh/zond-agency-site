@@ -5,14 +5,10 @@ const m = (file: string) => `/assets/cases/altep/${file}`;
 
 const cap = (n: number) => `ALTEP — айдентика та застосування ${n}`;
 
-const altepMedia = [
-  "media/altep/cover.gif",
-  ...Array.from({ length: 17 }, (_, index) => {
-    const n = index + 1;
-    if (n === 11) return null;
-    return `media/altep/${String(n).padStart(2, "0")}.webp`;
-  }).filter(Boolean) as string[],
-];
+const altepMedia = Array.from({ length: 18 }, (_, index) => {
+  const n = index + 1;
+  return `media/altep/${String(n).padStart(2, "0")}.webp`;
+});
 
 const blocksUk: CaseVisualBlock[] = [
   {
@@ -99,10 +95,15 @@ const blocksUk: CaseVisualBlock[] = [
   },
   {
     type: "gallery",
+    layout: "wide",
+    images: [{ src: m("07.webp"), caption: cap(7) }],
+  },
+  {
+    type: "gallery",
     layout: "pair",
     images: [
-      { src: m("07.webp"), caption: cap(7) },
       { src: m("08.webp"), caption: cap(8) },
+      { src: m("09.webp"), caption: cap(9) },
     ],
   },
   {
@@ -127,8 +128,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("09.webp"), caption: cap(9) },
       { src: m("10.webp"), caption: cap(10) },
+      { src: m("11.webp"), caption: cap(11) },
     ],
   },
   {
@@ -149,13 +150,16 @@ const blocksUk: CaseVisualBlock[] = [
   },
   {
     type: "gallery",
-    layout: "wide",
-    images: [{ src: m("16.webp"), caption: cap(16) }],
+    layout: "pair",
+    images: [
+      { src: m("16.webp"), caption: cap(16) },
+      { src: m("17.webp"), caption: cap(17) },
+    ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("17.webp"), caption: cap(17) }],
+    images: [{ src: m("18.webp"), caption: cap(18) }],
   },
   {
     type: "section",
@@ -194,7 +198,7 @@ export function getAltepBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const altepShared = {
   slug: "altep",
-  cover: m("cover.gif"),
+  cover: m("01.webp"),
   media: altepMedia,
   body: `[IMG: media/altep/01.webp]`,
 };

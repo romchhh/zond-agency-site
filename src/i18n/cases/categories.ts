@@ -1,3 +1,5 @@
+import { getCaseMetaCategories } from "./case-meta";
+
 export const CASE_CATEGORY_ORDER = [
   "branding",
   "packaging",
@@ -51,5 +53,7 @@ export const CASE_CATEGORY_SLUGS: Record<string, CaseCategory[]> = {
 };
 
 export function getCaseCategories(slug: string): CaseCategory[] {
+  const fromMeta = getCaseMetaCategories(slug);
+  if (fromMeta?.length) return fromMeta;
   return CASE_CATEGORY_SLUGS[slug] ?? ["branding"];
 }

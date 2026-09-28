@@ -43,10 +43,10 @@ const en: Dictionary = {
   hero: {
     services: [
       "Branding",
-      "Influence marketing",
+      "Positioning",
       "Graphic design",
       "SMM",
-      "Illustration",
+      "Web development",
       "Packaging",
       "Brand book",
       "Logo",
@@ -91,7 +91,7 @@ const en: Dictionary = {
       { index: "08", title: "Brand character", description: "A unique hero when needed.", image: "/services/character.jpg" },
       { index: "09", title: "Packaging", description: "Design that sells.", image: "/services/packaging.jpg" },
       { index: "10", title: "Graphic design", description: "Visual solutions for media.", image: "/services/graphic.jpg" },
-      { index: "11", title: "Web design", description: "Modern websites.", image: "/services/web.jpg" },
+      { index: "11", title: "Web development", description: "Modern websites.", image: "/services/web.jpg" },
       { index: "12", title: "SMM", description: "Content that works.", image: "/services/smm.jpg" },
     ],
   },
@@ -182,6 +182,8 @@ const en: Dictionary = {
     moreCasesTitle: "More character to discover.",
     prevCase: "← Previous case",
     nextCase: "Next case →",
+    openClientSite: "Client website",
+    openClientInstagram: "Client Instagram",
     filterAria: "Filter projects by discipline",
     filters: {
       all: "All",

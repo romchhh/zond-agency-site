@@ -9,19 +9,15 @@ type ServiceCompareSectionProps = {
   compare?: ServiceCompareContent;
 };
 
-function CompareCheckIcon() {
-  return (
-    <svg className="logo-compare-check" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <circle cx="10" cy="10" r="10" fill="currentColor" />
-      <path
-        d="M6 10.2 8.6 12.8 14 7.4"
-        stroke="#111"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+const TAB_GROUP = "service-compare-column";
+
+function mobileTabHint(locale: Locale): string {
+  const byLocale: Record<Locale, string> = {
+    uk: "Оберіть варіант — нижче відповіді по всіх критеріях.",
+    en: "Pick an option — answers for every criterion below.",
+    ru: "Выберите вариант — ниже ответы по всем критериям.",
+  };
+  return byLocale[locale];
 }
 
 export default function ServiceCompareSection({
@@ -38,42 +34,82 @@ export default function ServiceCompareSection({
           <h2 id="service-compare-title" className="logo-compare-title">
             {compare.compareTitle}
           </h2>
-          <div className="logo-compare-stack" aria-label={compare.compareTitle}>
-            <div className="logo-compare-legend" aria-hidden="true">
-              <span className="logo-compare-legend-zond">{zondLabel}</span>
-              <span>{freelanceLabel}</span>
-              <span>{templateLabel}</span>
+
+          <div className="logo-compare-mobile" aria-label={compare.compareTitle}>
+            <p className="logo-compare-mobile-hint">{mobileTabHint(locale)}</p>
+            <div className="logo-compare-mobile-tabs" role="tablist" aria-label={compare.compareTitle}>
+              <input
+                type="radio"
+                name={TAB_GROUP}
+                id={`${TAB_GROUP}-zond`}
+                className="logo-compare-mobile-tab-input"
+                defaultChecked
+              />
+              <input
+                type="radio"
+                name={TAB_GROUP}
+                id={`${TAB_GROUP}-freelance`}
+                className="logo-compare-mobile-tab-input"
+              />
+              <input
+                type="radio"
+                name={TAB_GROUP}
+                id={`${TAB_GROUP}-template`}
+                className="logo-compare-mobile-tab-input"
+              />
+              <label
+                htmlFor={`${TAB_GROUP}-zond`}
+                className="logo-compare-mobile-tab logo-compare-mobile-tab--zond"
+                role="tab"
+                aria-controls="service-compare-mobile-rows"
+              >
+                {zondLabel}
+              </label>
+              <label
+                htmlFor={`${TAB_GROUP}-freelance`}
+                className="logo-compare-mobile-tab"
+                role="tab"
+                aria-controls="service-compare-mobile-rows"
+              >
+                {freelanceLabel}
+              </label>
+              <label
+                htmlFor={`${TAB_GROUP}-template`}
+                className="logo-compare-mobile-tab"
+                role="tab"
+                aria-controls="service-compare-mobile-rows"
+              >
+                {templateLabel}
+              </label>
             </div>
-            <div className="logo-compare-stack-list">
+
+            <ol
+              id="service-compare-mobile-rows"
+              className="logo-compare-mobile-rows"
+              role="tabpanel"
+            >
               {compare.compareRows.map((row, index) => (
-                <article className="logo-compare-stack-item" key={row.criterion}>
-                  <div className="logo-compare-stack-top">
-                    <span className="logo-compare-stack-index">
+                <li className="logo-compare-mobile-row" key={row.criterion}>
+                  <div className="logo-compare-mobile-row-head">
+                    <span className="logo-compare-mobile-row-index">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="logo-compare-stack-criterion">{row.criterion}</h3>
+                    <h3 className="logo-compare-mobile-row-title">{row.criterion}</h3>
                   </div>
-                  <div className="logo-compare-stack-zond">
-                    <div className="logo-compare-stack-zond-label">
-                      <CompareCheckIcon />
-                      <span>{zondLabel}</span>
-                    </div>
-                    <p>{row.zond}</p>
-                  </div>
-                  <div className="logo-compare-stack-vs">
-                    <div className="logo-compare-stack-other">
-                      <span>{freelanceLabel}</span>
-                      <p>{row.freelance}</p>
-                    </div>
-                    <div className="logo-compare-stack-other">
-                      <span>{templateLabel}</span>
-                      <p>{row.generator}</p>
-                    </div>
-                  </div>
-                </article>
+                  <p className="logo-compare-mobile-answer logo-compare-mobile-answer--zond">
+                    {row.zond}
+                  </p>
+                  <p className="logo-compare-mobile-answer logo-compare-mobile-answer--freelance">
+                    {row.freelance}
+                  </p>
+                  <p className="logo-compare-mobile-answer logo-compare-mobile-answer--template">
+                    {row.generator}
+                  </p>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
+
           <div className="logo-compare-wrap">
             <table className="logo-compare-table">
               <thead>
