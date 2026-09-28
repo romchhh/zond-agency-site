@@ -4,6 +4,7 @@ import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
 import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
 import { altepCopy, altepShared, getAltepBlocks } from "./altep";
+import { getPackagingBlocks, packagingCopy, packagingShared } from "../packaging-collection";
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
@@ -139,29 +140,17 @@ const cases: CaseItem[] = [
     blocks: getAltepBlocks("uk"),
   },
   {
-    "slug": "packaging",
-    "title": "Пакування",
-    "description": "Розробляємо дизайн упаковки для харчових товарів, гаджетів, побутової хімії та промислової продукції — від концепту до верстки.",
-    "cover": "/assets/cases/packaging/cover.png",
-    "media": [
-      "media/packaging/cover.png",
-      "media/packaging/hero.png",
-      "media/packaging/01.jpeg",
-      "media/packaging/02.png",
-      "media/packaging/03.jpeg",
-      "media/packaging/04.jpeg",
-      "media/packaging/05.png",
-      "media/packaging/06.png",
-      "media/packaging/07.jpeg",
-      "media/packaging/08.png",
-      "media/packaging/09.png",
-      "media/packaging/10.png",
-      "media/packaging/11.png",
-      "media/packaging/12.jpeg",
-      "media/packaging/13.jpeg"
-    ],
-    "body": "[IMG: media/packaging/hero.png]\n\n### Клієнт\n\n### Задачі\n\nМи створюємо упаковку, яка не просто виглядає красиво, а й працює на вас. Розробляємо дизайн для найрізноманітніших продуктів: від харчових товарів і гаджетів до побутової хімії та промислової продукції. Наша команда враховує всі аспекти: специфіку вашого бренду, цільову аудиторію та умови використання продукту. Ми проєктуємо упаковку, яка вирізняється на полиці, підкреслює ваші конкурентні переваги й відповідає сучасним трендам. У нас ви можете замовити розробку: унікального дизайну етикетки для продуктів харчування, напоїв чи косметики; функціональної й естетичної упаковки для електроніки та гаджетів; стильного пакування для товарів широкого вжитку або преміум-сегменту. Ми переконані, що якісне пакування — це перший крок до успішного контакту з вашим клієнтом.\n\n### Розробили\n\nДизайн\n\nDTP\n\nВерстка\n\n[IMG: media/packaging/01.jpeg]\n\n[IMG: media/packaging/02.png]\n\n[IMG: media/packaging/03.jpeg]\n\n[IMG: media/packaging/04.jpeg]\n\n[IMG: media/packaging/03.jpeg]\n\n[IMG: media/packaging/04.jpeg]\n\n## Яким має бути ідеальний дизайн пакування?\n\nДизайн упаковки повинен поєднувати естетику, функціональність і унікальність бренду. Він має приваблювати погляди, ефективно передавати ключове повідомлення про продукт, бути зручним у використанні та відповідати потребам цільової аудиторії. Крім того, важливо враховувати сучасні екологічні тенденції та матеріали, щоб підкреслити відповідальність бренду.\n\n[IMG: media/packaging/05.png]\n\n[IMG: media/packaging/06.png]\n\n[IMG: media/packaging/07.jpeg]\n\n[IMG: media/packaging/05.png]\n\n[IMG: media/packaging/06.png]\n\n[IMG: media/packaging/07.jpeg]\n\n[IMG: media/packaging/08.png]\n\n[IMG: media/packaging/09.png]\n\n[IMG: media/packaging/10.png]\n\nОсновні види пакування\n\nКартонна упаковка, пластикова упаковка, скляна тара, металева упаковка, гнучка упаковка (пакети, плівка), дерев’яна упаковка, екологічна упаковка (біорозкладні матеріали), текстильна упаковка, композитна упаковка, тубуси та банки.\n\n[IMG: media/packaging/08.png]\n\n[IMG: media/packaging/11.png]\n\n[IMG: media/packaging/12.jpeg]\n\n[IMG: media/packaging/13.jpeg]"
+    slug: packagingShared.slug,
+    title: packagingCopy.uk.title,
+    description: packagingCopy.uk.description,
+    cover: packagingShared.cover,
+    media: packagingShared.media,
+    tagline: packagingCopy.uk.tagline,
+    serviceTag: packagingCopy.uk.serviceTag,
+    body: packagingShared.body,
+    blocks: getPackagingBlocks("uk"),
   },
+
   {
     "slug": "techno-group",
     "title": "Техно Груп",

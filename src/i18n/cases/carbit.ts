@@ -1,5 +1,6 @@
 import type { CaseVisualBlock } from "./types";
 import type { Locale } from "@/i18n/config";
+import { applyGalleryCaptionMap } from "./localize-gallery-captions";
 
 const m = (file: string) => `/assets/cases/carbit/${file}`;
 
@@ -413,9 +414,51 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
   return block;
 });
 
+const carbitGalleryCaptionsRu: Record<string, string> = {
+  [m("01.jpg")]: "Carbit в мобильной среде",
+  [m("02.webp")]: "Логотип и автомобильный характер бренда",
+  [m("03.jpg")]: "Рекламная коммуникация",
+  [m("04.webp")]: "Презентация на планшете",
+  [m("05.webp")]: "Цветовая система и варианты знака",
+  [m("06.jpg")]: "Мобильная коммуникация",
+  [m("07.jpg")]: "Веб-материалы Carbit",
+  [m("08.webp")]: "Презентация бренда в пространстве",
+  [m("09.jpg")]: "Оформление социальных сетей",
+  [m("10.jpg")]: "Наружная реклама",
+  [m("11.webp")]: "Рекламная конструкция",
+  [m("12.webp")]: "Фирменный брелок",
+  [m("13.webp")]: "Фирменная бутылка",
+  [m("14.jpg")]: "Футболка команды",
+  [m("15.webp")]: "Брендированная одежда",
+  [m("16.webp")]: "Кепка со знаком Carbit",
+  [m("17.webp")]: "Фирменное полотенце",
+  [m("18.jpg")]: "Автомобильное объявление",
+};
+
+const carbitGalleryCaptionsEn: Record<string, string> = {
+  [m("01.jpg")]: "Carbit in a mobile context",
+  [m("02.webp")]: "Logo and automotive brand character",
+  [m("03.jpg")]: "Advertising communication",
+  [m("04.webp")]: "Presentation on tablet",
+  [m("05.webp")]: "Color system and mark variants",
+  [m("06.jpg")]: "Mobile communication",
+  [m("07.jpg")]: "Carbit web materials",
+  [m("08.webp")]: "Brand presentation in space",
+  [m("09.jpg")]: "Social media styling",
+  [m("10.jpg")]: "Outdoor advertising",
+  [m("11.webp")]: "Advertising structure",
+  [m("12.webp")]: "Branded keychain",
+  [m("13.webp")]: "Branded bottle",
+  [m("14.jpg")]: "Team T-shirt",
+  [m("15.webp")]: "Branded apparel",
+  [m("16.webp")]: "Cap with the Carbit mark",
+  [m("17.webp")]: "Branded towel",
+  [m("18.jpg")]: "Car listing ad",
+};
+
 export function getCarbitBlocks(locale: Locale): CaseVisualBlock[] {
-  if (locale === "ru") return blocksRu;
-  if (locale === "en") return blocksEn;
+  if (locale === "ru") return applyGalleryCaptionMap(blocksRu, carbitGalleryCaptionsRu);
+  if (locale === "en") return applyGalleryCaptionMap(blocksEn, carbitGalleryCaptionsEn);
   return blocksUk;
 }
 

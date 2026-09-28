@@ -851,17 +851,22 @@ export function buildCaseVisualBlocks(
   ];
 
   const deduped = dedupeCaseVisualBlocks(blocks, excludeSrc);
-  return applyCaseTestimonial(deduped, caseItem.slug);
+  return applyCaseTestimonial(deduped, caseItem.slug, locale);
 }
 
-function applyCaseTestimonial(blocks: CaseVisualBlock[], slug: string): CaseVisualBlock[] {
-  const testimonial = getCaseTestimonial(slug);
+function applyCaseTestimonial(
+  blocks: CaseVisualBlock[],
+  slug: string,
+  locale: Locale,
+): CaseVisualBlock[] {
+  const testimonial = getCaseTestimonial(slug, locale);
   if (!testimonial) return blocks;
 
+  const copy = COPY[locale];
   const quoteBlock: CaseVisualBlock = {
     type: "quote",
     index: "05",
-    kicker: "ВІДГУК КЛІЄНТА",
+    kicker: copy.quoteKicker,
     heading: testimonial.heading,
     paragraphs: testimonial.paragraphs,
     author: testimonial.author,

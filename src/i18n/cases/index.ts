@@ -4,21 +4,43 @@ import { getCaseCardDescription } from "./card-descriptions";
 import casesEn from "./cases.en";
 import casesRu from "./cases.ru";
 import casesUk from "./cases.uk";
+import { mergeCaseCatalog } from "./merge-catalog";
 
 const casesByLocale: Record<Locale, CaseItem[]> = {
   uk: casesUk,
   ru: casesRu,
-  en: casesEn,
+  en: mergeCaseCatalog("en", casesUk, casesEn),
 };
 
-/** Temporarily hidden from listings, homepage, and case routes. */
-const HIDDEN_CASE_SLUGS = new Set(["home-hub"]);
+/**
+ * Published on site (listings, homepage, /projects routes). All other slugs stay in
+ * locale catalogs but are not rendered until added here.
+ */
+const PUBLISHED_CASE_SLUGS: readonly string[] = [
+  "carbit",
+  "kyiv-tourism-department",
+  "digital-residence",
+  "kavlora",
+  "ahmad-tea",
+  "bit-school",
+  "altep",
+  "packaging",
+];
+
+const publishedSlugOrder = new Map(
+  PUBLISHED_CASE_SLUGS.map((slug, index) => [slug, index]),
+);
 
 export type { CaseItem } from "./types";
 
 export function getCases(locale: Locale): CaseItem[] {
   return casesByLocale[locale]
-    .filter((item) => !HIDDEN_CASE_SLUGS.has(item.slug))
+    .filter((item) => publishedSlugOrder.has(item.slug))
+    .sort(
+      (a, b) =>
+        (publishedSlugOrder.get(a.slug) ?? 0) -
+        (publishedSlugOrder.get(b.slug) ?? 0),
+    )
     .map((item) => {
       const cardDescription = getCaseCardDescription(locale, item.slug);
       return cardDescription ? { ...item, cardDescription } : item;

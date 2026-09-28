@@ -3,6 +3,7 @@ import { defaultLocale, isLocale, localeMeta } from "@/i18n/config";
 import { media } from "@/lib/media";
 import "./globals.css";
 import "./case-visual-balanced.css";
+import "./packaging-service.css";
 
 export default async function RootLayout({
   children,

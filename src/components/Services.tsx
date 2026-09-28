@@ -2,7 +2,7 @@ import MediaImage from "@/components/MediaImage";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getServiceDetailPath } from "@/i18n/routing";
-import { servicesGridSlugByCardIndex } from "@/i18n/services";
+import { getServiceGridIconSrc, servicesGridSlugByCardIndex } from "@/i18n/services";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
 
@@ -25,16 +25,19 @@ export default function Services({ locale, dictionary }: ServicesProps) {
             const slug = servicesGridSlugByCardIndex[service.index];
             const content = (
               <>
-                <div className="service-visual">
-                  <MediaImage
-                    src={service.image}
-                    alt={service.title}
-                    sizes={imageSizes.service}
-                  />
-                </div>
                 <div className="service-index">{service.index}</div>
+                <div className="service-icon-slot">
+                  <div className="service-visual service-visual--icon">
+                    <MediaImage
+                      src={getServiceGridIconSrc(service.index)}
+                      alt={service.title}
+                      sizes={imageSizes.service}
+                    />
+                  </div>
+                </div>
                 <div className="service-copy">
                   <h3>{service.title}</h3>
+                  {service.description ? <p>{service.description}</p> : null}
                 </div>
               </>
             );
@@ -42,7 +45,7 @@ export default function Services({ locale, dictionary }: ServicesProps) {
             if (slug) {
               return (
                 <Link
-                  className="service-card"
+                  className="service-card service-card--icon"
                   key={service.index}
                   href={getServiceDetailPath(locale, slug)}
                 >
@@ -52,7 +55,7 @@ export default function Services({ locale, dictionary }: ServicesProps) {
             }
 
             return (
-              <article className="service-card" key={service.index}>
+              <article className="service-card service-card--icon" key={service.index}>
                 {content}
               </article>
             );

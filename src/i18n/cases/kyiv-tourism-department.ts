@@ -1,5 +1,6 @@
 import type { CaseVisualBlock } from "./types";
 import type { Locale } from "@/i18n/config";
+import { applyGalleryCaptionMap } from "./localize-gallery-captions";
 
 const m = (file: string) => `/assets/cases/kyiv-tourism-department/${file}`;
 
@@ -413,9 +414,47 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
   return block;
 });
 
+const kyivGalleryCaptionsRu: Record<string, string> = {
+  [m("01.webp")]: "Открытки с рисунками Киева",
+  [m("02.jpg")]: "Шрифты кампании",
+  [m("03.webp")]: "Город в деталях",
+  [m("04.webp")]: "Ситилайт в городском пространстве",
+  [m("05.jpg")]: "Кампания на билборде",
+  [m("06.webp")]: "Коммуникация в метро",
+  [m("07.webp")]: "Печатные материалы",
+  [m("08.jpg")]: "Уличные баннеры",
+  [m("09.webp")]: "Открытка кампании",
+  [m("10.webp")]: "Рисунки, которые объединяют",
+  [m("11.jpg")]: "Городская реклама",
+  [m("12.jpg")]: "Киев с характером",
+  [m("13.webp")]: "Вертикальный рекламный носитель",
+  [m("14.webp")]: "Киев глазами детей",
+  [m("15.webp")]: "Уличный ситилайт",
+  [m("16.jpg")]: "Кампания в городском пространстве",
+};
+
+const kyivGalleryCaptionsEn: Record<string, string> = {
+  [m("01.webp")]: "Postcards with drawings of Kyiv",
+  [m("02.jpg")]: "Campaign typography",
+  [m("03.webp")]: "The city in detail",
+  [m("04.webp")]: "Citylight in urban space",
+  [m("05.jpg")]: "Billboard campaign",
+  [m("06.webp")]: "Metro communication",
+  [m("07.webp")]: "Print materials",
+  [m("08.jpg")]: "Street banners",
+  [m("09.webp")]: "Campaign postcard",
+  [m("10.webp")]: "Drawings that unite",
+  [m("11.jpg")]: "Urban advertising",
+  [m("12.jpg")]: "Kyiv with character",
+  [m("13.webp")]: "Vertical ad format",
+  [m("14.webp")]: "Kyiv through children's eyes",
+  [m("15.webp")]: "Street citylight",
+  [m("16.jpg")]: "Campaign in the urban environment",
+};
+
 export function getKyivTourismBlocks(locale: Locale): CaseVisualBlock[] {
-  if (locale === "ru") return blocksRu;
-  if (locale === "en") return blocksEn;
+  if (locale === "ru") return applyGalleryCaptionMap(blocksRu, kyivGalleryCaptionsRu);
+  if (locale === "en") return applyGalleryCaptionMap(blocksEn, kyivGalleryCaptionsEn);
   return blocksUk;
 }
 

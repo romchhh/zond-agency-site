@@ -17,7 +17,15 @@ export type CaseVisualFact = {
   label: string;
   value: string;
   accent?: boolean;
+  /** Grey tile styling without a country flag (e.g. format / type). */
+  highlight?: boolean;
   countryCode?: string;
+};
+
+export type CaseVisualCollectionStat = {
+  value: string;
+  label: string;
+  variant?: "default" | "orange" | "dark";
 };
 
 export type CaseVisualDeliverable = {
@@ -34,13 +42,18 @@ export type CaseVisualBlock =
       paragraphs: string[];
       deliverables?: CaseVisualDeliverable[];
       ideaStrip?: string;
-      variant?: "book";
+      variant?: "book" | "concept";
       rules?: string[];
       conceptNote?: string;
     }
   | {
       type: "facts";
       items: CaseVisualFact[];
+    }
+  | {
+      type: "collectionStats";
+      ariaLabel: string;
+      items: CaseVisualCollectionStat[];
     }
   | {
       type: "gallery";

@@ -1,5 +1,6 @@
 import type { CaseVisualBlock } from "./types";
 import type { Locale } from "@/i18n/config";
+import { applyGalleryCaptionMap } from "./localize-gallery-captions";
 
 const m = (file: string) => `/assets/cases/nove-misto/${file}`;
 
@@ -200,7 +201,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
         "Создать целостную идентичность и брендбук, раскрывающие архитектурный характер проекта. Знак, палитра и композиция должны поддерживать одинаковое впечатление во всех точках контакта.",
         "Система должна работать на экране, в городском пространстве и в печати: от компактной визитки до большой рекламной площади. Важны узнаваемость, чёткость и сдержанный тон.",
       ],
-      deliverables: [
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
         { title: "Характер", description: "Выразительный знак с ощущением архитектурной структуры." },
         { title: "Последовательность", description: "Единая логика для коммуникации и фирменных носителей." },
         { title: "Масштаб", description: "Узнаваемость от небольшой детали до пространства." },
@@ -249,6 +255,7 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       label: "ВИЗУАЛЬНЫЙ ПРИНЦИП",
       text: "Чёткая форма.\nТёплый характер.",
+      footer: "НОВОЕ МЕСТО / BRAND IDENTITY",
     };
   }
   if (block.type === "facts") {
@@ -300,7 +307,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
         "Create a cohesive identity and brand book that reveal the architectural character of the project. The mark, palette, and composition must support the same impression across all touchpoints.",
         "The system must work on screen, in urban space, and in print — from a compact business card to a large advertising surface. Recognizability, clarity, and a restrained tone are essential.",
       ],
-      deliverables: [
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
         { title: "Character", description: "A distinctive mark with a sense of architectural structure." },
         { title: "Consistency", description: "A single logic for communication and branded touchpoints." },
         { title: "Scale", description: "Recognizability from a small detail to full space." },
@@ -349,6 +361,7 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       label: "VISUAL PRINCIPLE",
       text: "Clear form.\nWarm character.",
+      footer: "NOVE MISTO / BRAND IDENTITY",
     };
   }
   if (block.type === "facts") {
@@ -379,9 +392,45 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
   return block;
 });
 
+const noveMistoGalleryCaptionsRu: Record<string, string> = {
+  [m("01.jpg")]: "Наружная реклама",
+  [m("02.webp")]: "Логотип в пространстве",
+  [m("03.webp")]: "Фирменный шоппер",
+  [m("04.webp")]: "Брендированная каска",
+  [m("05.webp")]: "Цвета и материалы",
+  [m("06.jpg")]: "Вывеска",
+  [m("07.jpg")]: "Рекламные постеры",
+  [m("08.jpg")]: "Брендбук",
+  [m("09.jpg")]: "Деловая документация",
+  [m("10.webp")]: "Фирменная чашка",
+  [m("11.webp")]: "Фирменная бутылка",
+  [m("12.jpg")]: "Корпоративная одежда",
+  [m("13.jpg")]: "Футболка",
+  [m("14.jpg")]: "Одежда команды",
+  [m("15.jpg")]: "Печатные материалы",
+};
+
+const noveMistoGalleryCaptionsEn: Record<string, string> = {
+  [m("01.jpg")]: "Outdoor advertising",
+  [m("02.webp")]: "Logo in space",
+  [m("03.webp")]: "Branded tote bag",
+  [m("04.webp")]: "Branded hard hat",
+  [m("05.webp")]: "Colors and materials",
+  [m("06.jpg")]: "Signage",
+  [m("07.jpg")]: "Advertising posters",
+  [m("08.jpg")]: "Brand book",
+  [m("09.jpg")]: "Business stationery",
+  [m("10.webp")]: "Branded mug",
+  [m("11.webp")]: "Branded bottle",
+  [m("12.jpg")]: "Corporate apparel",
+  [m("13.jpg")]: "T-shirt",
+  [m("14.jpg")]: "Team apparel",
+  [m("15.jpg")]: "Print materials",
+};
+
 export function getNoveMistoBlocks(locale: Locale): CaseVisualBlock[] {
-  if (locale === "ru") return blocksRu;
-  if (locale === "en") return blocksEn;
+  if (locale === "ru") return applyGalleryCaptionMap(blocksRu, noveMistoGalleryCaptionsRu);
+  if (locale === "en") return applyGalleryCaptionMap(blocksEn, noveMistoGalleryCaptionsEn);
   return blocksUk;
 }
 
@@ -406,7 +455,7 @@ export const noveMistoCopy: Record<
     serviceTag: "Брендинг + брендбук",
   },
   ru: {
-    title: "Нове Місто",
+    title: "Новое Место",
     description:
       "Разработали логотип, визуальную идентичность и брендбук для «Нове Місто» — застройщика в Буче. Также полиграфия, рекламные носители и корпоративная продукция.",
     tagline: "Архитектура бренда.\nХарактер пространства.",

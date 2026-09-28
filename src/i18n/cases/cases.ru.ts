@@ -4,6 +4,7 @@ import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
 import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
 import { altepCopy, altepShared, getAltepBlocks } from "./altep";
+import { getPackagingBlocks, packagingCopy, packagingShared } from "../packaging-collection";
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
@@ -138,28 +139,15 @@ const cases: CaseItem[] = [
     blocks: getAltepBlocks("ru"),
   },
   {
-    "slug": "packaging",
-    "title": "Упаковка",
-    "description": "Разрабатываем дизайн упаковки для продуктов питания, гаджетов, бытовой химии и промышленной продукции — от концепта до вёрстки.",
-    "cover": "/assets/cases/packaging/cover.png",
-    "media": [
-      "media/packaging/cover.png",
-      "media/packaging/14.jpeg",
-      "media/packaging/01.jpeg",
-      "media/packaging/hero.png",
-      "media/packaging/03.jpeg",
-      "media/packaging/04.jpeg",
-      "media/packaging/05.png",
-      "media/packaging/06.png",
-      "media/packaging/07.jpeg",
-      "media/packaging/08.png",
-      "media/packaging/11.png",
-      "media/packaging/02.png",
-      "media/packaging/15.png",
-      "media/packaging/12.jpeg",
-      "media/packaging/13.jpeg"
-    ],
-    "body": "[IMG: media/packaging/14.jpeg]\n\n### Задачи\n\nМы создаем упаковку, которая не просто выглядит красиво, но и работает на вас. Разрабатываем дизайн для самых разных продуктов: от пищевых товаров и гаджетов до бытовой химии и промышленной продукции. Наша команда учитывает все аспекты: специфику вашего бренда, целевую аудиторию и условия использования продукта. Мы проектируем упаковку, которая выделяется на полке, подчеркивает ваши конкурентные преимущества и соответствует современным трендам. У нас вы можете заказать разработку: уникального дизайна этикетки для продуктов питания, напитков или косметики; функциональной и эстетичной упаковки для электроники и гаджетов; стильной упаковки для товаров широкого потребления или премиум-сегмента. Мы уверены, что качественная упаковка — это первый шаг к успешному контакту с вашим клиентом.\n\n### Разработали\n\nДизайн\n\nDTP\n\nВерстка\n\nК проекту\n\n[IMG: media/packaging/01.jpeg]\n\n[IMG: media/packaging/hero.png]\n\n[IMG: media/packaging/03.jpeg]\n\n[IMG: media/packaging/04.jpeg]\n\n## Каким должен быть идеальный дизайн упаковки?\n\nДизайн упаковки должен сочетать эстетику, функциональность и уникальность бренда. Он должен привлекать внимание, эффективно передавать ключевое сообщение о продукте, быть удобным в использовании и соответствовать потребностям целевой аудитории. Кроме того, важно учитывать современные экологические тренды и материалы, чтобы подчеркнуть ответственность бренда.\n\n[IMG: media/packaging/05.png]\n\n[IMG: media/packaging/06.png]\n\n[IMG: media/packaging/07.jpeg]\n\n[IMG: media/packaging/08.png]\n\n[IMG: media/packaging/11.png]\n\n[IMG: media/packaging/02.png]\n\n## Основные виды упаковки\n\nКартонная упаковка, пластиковая упаковка, стеклянная тара, металлическая упаковка, гибкая упаковка (пакеты, плёнка), деревянная упаковка, экологичная упаковка (биоразлагаемые материалы), текстильная упаковка, композитная упаковка, тубусы и банки.\n\n[IMG: media/packaging/15.png]\n\n[IMG: media/packaging/12.jpeg]\n\n[IMG: media/packaging/13.jpeg]"
+    slug: packagingShared.slug,
+    title: packagingCopy.ru.title,
+    description: packagingCopy.ru.description,
+    cover: packagingShared.cover,
+    media: packagingShared.media,
+    tagline: packagingCopy.ru.tagline,
+    serviceTag: packagingCopy.ru.serviceTag,
+    body: packagingShared.body,
+    blocks: getPackagingBlocks("ru"),
   },
   {
     "slug": "techno-group",

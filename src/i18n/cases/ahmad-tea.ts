@@ -194,8 +194,279 @@ const blocksUk: CaseVisualBlock[] = [
   },
 ];
 
-const blocksRu: CaseVisualBlock[] = blocksUk;
-const blocksEn: CaseVisualBlock[] = blocksUk;
+const ahmadTeaGalleryCaptionsRu: Record<string, string> = {
+  [m("01.jpg")]: "Рекламная концепция на городском носителе",
+  [m("02.jpg")]: "Задачи и результаты стратегии",
+  [m("03.jpg")]: "Визуальное направление кампании",
+  [m("04.jpg")]: "Чай с фруктовыми нотами",
+  [m("05.jpg")]: "Продукт в природной среде",
+  [m("06.jpg")]: "Коммуникация для цифровых каналов",
+  [m("07.jpg")]: "Фотоистория для бренда",
+  [m("08.jpg")]: "Чаепитие дома",
+  [m("09.jpg")]: "Коммуникационные сообщения",
+  [m("10.webp")]: "Городской рекламный носитель",
+  [m("11.webp")]: "Фотоистория на фирменном материале",
+  [m("12.jpg")]: "Семейная история в городском пространстве",
+  [m("13.jpg")]: "Серия рекламных материалов",
+  [m("14.jpg")]: "Ситилайт с героями кампании",
+  [m("15.jpg")]: "Креативная концепция на носителях",
+  [m("16.jpg")]: "Сюжет с друзьями",
+  [m("17.jpg")]: "Наружная реклама AHMAD TEA",
+};
+
+const ahmadTeaGalleryCaptionsEn: Record<string, string> = {
+  [m("01.jpg")]: "Campaign concept on urban media",
+  [m("02.jpg")]: "Strategy goals and outcomes",
+  [m("03.jpg")]: "Campaign visual direction",
+  [m("04.jpg")]: "Tea with fruit notes",
+  [m("05.jpg")]: "Product in a natural setting",
+  [m("06.jpg")]: "Communication for digital channels",
+  [m("07.jpg")]: "Photo story for the brand",
+  [m("08.jpg")]: "Tea at home",
+  [m("09.jpg")]: "Communication messages",
+  [m("10.webp")]: "Urban advertising touchpoint",
+  [m("11.webp")]: "Photo story on branded material",
+  [m("12.jpg")]: "Family story in the city",
+  [m("13.jpg")]: "Series of advertising materials",
+  [m("14.jpg")]: "Citylight with campaign heroes",
+  [m("15.jpg")]: "Creative concept on touchpoints",
+  [m("16.jpg")]: "Story with friends",
+  [m("17.jpg")]: "AHMAD TEA outdoor advertising",
+};
+
+const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
+  if (block.type === "section" && block.index === "01") {
+    return {
+      ...block,
+      kicker: "О КЛИЕНТЕ",
+      title: "Традиция, знакомая\nразным поколениям.",
+      paragraphs: [
+        "AHMAD TEA — международный британский бренд премиального чая. Он сочетает традиции английского чаепития с вниманием к качеству, эстетике и эмоциональному опыту потребления.",
+        "Бренд стремится оставаться близким и новой аудитории, и тем, кто знает его много лет. Эта задача касается прежде всего того, как бренд говорит с людьми и какие моменты выбирает для этого разговора.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "02") {
+    return {
+      ...block,
+      kicker: "ЗАДАЧА",
+      title: "Сохранить наследие.\nОбновить разговор.",
+      paragraphs: [
+        "Переосмыслить коммуникацию AHMAD TEA для современного рынка, сохраняя премиальность и узнаваемость. Определить, что ценит лояльная аудитория и какие потребности и барьеры есть у новых сегментов.",
+        "Исследовать конкурентную среду, потребительские привычки, мотивы выбора и каналы коммуникации. На этой основе сформировать стратегию, которая поможет создавать целостные рекламные кампании.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "03") {
+    return {
+      ...block,
+      kicker: "РЕШЕНИЕ",
+      title: "Бренд говорит\nчерез ощущения.",
+      paragraphs: [
+        "Мы выстроили коммуникационную платформу вокруг исследования аудитории и места бренда на рынке. Позиционирование, tone of voice и ключевые сообщения задают последовательный язык для разных сегментов.",
+        "Креативная стратегия и визуальное направление помогают говорить о чае через атмосферу и опыт. Отдельно определён подход к рекламным каналам и сотрудничеству с инфлюенсерами, чтобы новые идеи работали как часть одной системы.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "04") {
+    return {
+      ...block,
+      kicker: "РЕЗУЛЬТАТ",
+      title: "Система коммуникации.\nОснова для новых кампаний.",
+      paragraphs: [
+        "Для AHMAD TEA подготовлены исследование рынка и аудитории, анализ конкурентов и SWOT, позиционирование, tone of voice, коммуникационная и креативная стратегии, визуальное направление и подход к сотрудничеству с инфлюенсерами.",
+        "Полученные материалы помогают планировать сообщения для лояльной и новой аудитории в единой логике. Кейс показывает стратегическую основу для развития рекламы; количественных показателей эффективности после внедрения источник не приводит.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.variant === "book") {
+    return {
+      ...block,
+      kicker: "СОСТАВ РАБОТЫ",
+      title: "Одна стратегия.\nРазные точки контакта.",
+      rules: [
+        "Исследование рынка",
+        "Анализ аудитории",
+        "Позиционирование",
+        "Tone of voice",
+        "Креативная стратегия",
+        "Визуальное направление",
+        "Коммуникационная стратегия",
+        "Инфлюенсеры",
+      ],
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
+        { title: "Наследие", description: "Сохранить характер британского чайного бренда." },
+        { title: "Актуальность", description: "Найти близкий язык для разных поколений." },
+        { title: "Последовательность", description: "Объединить кампании общей стратегией." },
+      ],
+    };
+  }
+  if (block.type === "manifesto") {
+    return {
+      ...block,
+      label: "ВИЗУАЛЬНЫЙ ПРИНЦИП",
+      text: "Традиции чаепития.\nЯзык сегодняшнего дня.",
+    };
+  }
+  if (block.type === "quote") {
+    return {
+      ...block,
+      kicker: "ОТЗЫВ КЛИЕНТА",
+      heading: "Взгляд команды\nAHMAD TEA.",
+      badge: "Текст для согласования с клиентом",
+      paragraphs: [
+        "«Мы стремились сохранить узнаваемый характер AHMAD TEA и одновременно найти способы говорить с новыми поколениями. Для нас было важно начать с понимания аудитории и её ежедневных привычек.",
+        "Стратегическое направление даёт общую основу для сообщений, визуальных идей и будущих кампаний. Оно помогает бренду звучать последовательно в разных каналах».",
+      ],
+      author: "Команда AHMAD TEA",
+      role: "Место для имени и должности представителя",
+      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+    };
+  }
+  if (block.type === "facts") {
+    return {
+      ...block,
+      items: block.items.map((item) =>
+        item.label === "Країна"
+          ? { ...item, label: "Страна", value: "Великобритания", countryCode: "GB" }
+          : item.label === "Ніша"
+            ? { ...item, label: "Ниша", value: "чай / FMCG" }
+            : { ...item, label: "Продукт", value: "премиальный чай" },
+      ),
+    };
+  }
+  if (block.type === "gallery") {
+    return {
+      ...block,
+      images: block.images.map((img) => ({
+        ...img,
+        caption: ahmadTeaGalleryCaptionsRu[img.src] ?? img.caption,
+      })),
+    };
+  }
+  return block;
+});
+
+const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
+  if (block.type === "section" && block.index === "01") {
+    return {
+      ...block,
+      kicker: "ABOUT CLIENT",
+      title: "A tradition familiar\nacross generations.",
+      paragraphs: [
+        "AHMAD TEA is an international British premium tea brand. It combines English tea traditions with attention to quality, aesthetics, and the emotional experience of drinking tea.",
+        "The brand aims to stay close to new audiences and those who have known it for years. That challenge is mainly about how the brand speaks to people and which moments it chooses for that conversation.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "02") {
+    return {
+      ...block,
+      kicker: "TASK",
+      title: "Preserve heritage.\nRefresh the conversation.",
+      paragraphs: [
+        "Rethink AHMAD TEA communication for today’s market while keeping premium quality and recognition. Define what loyal audiences value and what needs and barriers new segments have.",
+        "Research competitors, consumption habits, purchase motives, and communication channels. On that basis, shape a strategy that supports cohesive advertising campaigns.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "03") {
+    return {
+      ...block,
+      kicker: "SOLUTION",
+      title: "The brand speaks\nthrough feeling.",
+      paragraphs: [
+        "We built a communication platform around audience research and the brand’s place in the market. Positioning, tone of voice, and key messages set a consistent language for different segments.",
+        "Creative strategy and visual direction help talk about tea through atmosphere and experience. We also defined approaches to ad channels and influencer partnerships so new ideas work as one system.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "04") {
+    return {
+      ...block,
+      kicker: "RESULT",
+      title: "A communication system.\nA base for new campaigns.",
+      paragraphs: [
+        "For AHMAD TEA we prepared market and audience research, competitor and SWOT analysis, positioning, tone of voice, communication and creative strategies, visual direction, and an influencer approach.",
+        "The deliverables help plan messages for loyal and new audiences within one logic. The case shows the strategic foundation for growing advertising; post-launch performance metrics are not cited in the source.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.variant === "book") {
+    return {
+      ...block,
+      kicker: "SCOPE OF WORK",
+      title: "One strategy.\nMany touchpoints.",
+      rules: [
+        "Market research",
+        "Audience analysis",
+        "Positioning",
+        "Tone of voice",
+        "Creative strategy",
+        "Visual direction",
+        "Communication strategy",
+        "Influencers",
+      ],
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
+        { title: "Heritage", description: "Preserve the character of a British tea brand." },
+        { title: "Relevance", description: "Find a relatable language for different generations." },
+        { title: "Consistency", description: "Unite campaigns with a shared strategy." },
+      ],
+    };
+  }
+  if (block.type === "manifesto") {
+    return {
+      ...block,
+      label: "VISUAL PRINCIPLE",
+      text: "Tea traditions.\nThe language of today.",
+    };
+  }
+  if (block.type === "quote") {
+    return {
+      ...block,
+      kicker: "CLIENT REVIEW",
+      heading: "The AHMAD TEA\nteam’s view.",
+      badge: "Text for client approval",
+      paragraphs: [
+        "“We wanted to keep AHMAD TEA’s recognizable character while finding ways to speak to new generations. It was important for us to start by understanding the audience and their daily habits.",
+        "The strategic direction gives a shared foundation for messages, visual ideas, and future campaigns. It helps the brand sound consistent across channels.”",
+      ],
+      author: "AHMAD TEA team",
+      role: "Placeholder for representative name and role",
+      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+    };
+  }
+  if (block.type === "facts") {
+    return {
+      ...block,
+      items: [
+        { label: "Country", value: "United Kingdom", accent: true, countryCode: "GB" },
+        { label: "Niche", value: "tea / FMCG" },
+        { label: "Product", value: "premium tea" },
+      ],
+    };
+  }
+  if (block.type === "gallery") {
+    return {
+      ...block,
+      images: block.images.map((img) => ({
+        ...img,
+        caption: ahmadTeaGalleryCaptionsEn[img.src] ?? img.caption,
+      })),
+    };
+  }
+  return block;
+});
 
 export function getAhmadTeaBlocks(locale: Locale): CaseVisualBlock[] {
   if (locale === "ru") return blocksRu;

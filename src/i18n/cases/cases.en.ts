@@ -4,6 +4,7 @@ import { carbitCopy, carbitShared, getCarbitBlocks } from "./carbit";
 import { digitalResidenceCopy, digitalResidenceShared, getDigitalResidenceBlocks } from "./digital-residence";
 import { getHomeHubBlocks, homeHubCopy, homeHubShared } from "./home-hub";
 import { altepCopy, altepShared, getAltepBlocks } from "./altep";
+import { getPackagingBlocks, packagingCopy, packagingShared } from "../packaging-collection";
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
@@ -111,25 +112,15 @@ const cases: CaseItem[] = [
     blocks: getAltepBlocks("en"),
   },
   {
-    "slug": "packaging",
-    "title": "Packaging",
-    "description": "We design packaging for food products, gadgets, household chemicals, and industrial goods — from concept to final layout.",
-    "cover": "/assets/cases/packaging/cover-en.jpeg",
-    "media": [
-      "media/packaging/cover-en.jpeg",
-      "media/packaging/14.jpeg",
-      "media/packaging/01.jpeg",
-      "media/packaging/16.jpeg",
-      "media/packaging/03.jpeg",
-      "media/packaging/17.jpeg",
-      "media/packaging/18.jpeg",
-      "media/packaging/19.jpeg",
-      "media/packaging/07.jpeg",
-      "media/packaging/20.jpeg",
-      "media/packaging/13.jpeg",
-      "media/packaging/12.jpeg"
-    ],
-    "body": "[IMG: media/packaging/14.jpeg]\n\n### Client\n\n### Goals\n\nWe create packaging that does not just look beautiful, but works for you. We develop designs for a wide variety of products: from food and gadgets to household chemicals and industrial goods. Our team considers all aspects: your brand's specifics, target audience, and product usage conditions. We design packaging that stands out on the shelf, highlights your competitive advantages, and aligns with modern trends. You can order the development of: a unique label design for food products, beverages, or cosmetics; functional and aesthetic packaging for electronics and gadgets; stylish packaging for fast-moving consumer goods or the premium segment. We are confident that high-quality packaging is the first step toward a successful connection with your client.\n\n### Developed\n\nDesign\n\nDTP\n\nLayout\n\nTo project\n\n[IMG: media/packaging/01.jpeg]\n\n[IMG: media/packaging/16.jpeg]\n\n## What should ideal packaging design be like?\n\nPackaging design must combine aesthetics, functionality, and brand uniqueness. It should attract attention, effectively convey the key message about the product, be convenient to use, and meet the needs of the target audience. Additionally, it is important to consider modern environmental trends and materials to emphasize brand responsibility.\n\n[IMG: media/packaging/03.jpeg]\n\n[IMG: media/packaging/17.jpeg]\n\n[IMG: media/packaging/03.jpeg]\n\n[IMG: media/packaging/17.jpeg]\n\n[IMG: media/packaging/18.jpeg]\n\n[IMG: media/packaging/19.jpeg]\n\n[IMG: media/packaging/07.jpeg]\n\n[IMG: media/packaging/20.jpeg]\n\n## Main types of packaging\n\nCardboard packaging, plastic packaging, glass containers, metal packaging, flexible packaging (bags, film), wooden packaging, eco-friendly packaging (biodegradable materials), textile packaging, composite packaging, tubes, and cans.\n\n[IMG: media/packaging/18.jpeg]\n\n[IMG: media/packaging/19.jpeg]\n\n[IMG: media/packaging/07.jpeg]\n\n[IMG: media/packaging/20.jpeg]\n\n[IMG: media/packaging/13.jpeg]\n\n[IMG: media/packaging/12.jpeg]\n\n[IMG: media/packaging/cover-en.jpeg]"
+    slug: packagingShared.slug,
+    title: packagingCopy.en.title,
+    description: packagingCopy.en.description,
+    cover: packagingShared.cover,
+    media: packagingShared.media,
+    tagline: packagingCopy.en.tagline,
+    serviceTag: packagingCopy.en.serviceTag,
+    body: packagingShared.body,
+    blocks: getPackagingBlocks("en"),
   },
   {
     "slug": "techno-group",

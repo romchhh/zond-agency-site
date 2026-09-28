@@ -177,8 +177,259 @@ const blocksUk: CaseVisualBlock[] = [
   },
 ];
 
-const blocksRu: CaseVisualBlock[] = blocksUk;
-const blocksEn: CaseVisualBlock[] = blocksUk;
+const bitSchoolGalleryCaptionsRu: Record<string, string> = {
+  [m("01.jpg")]: "Айдентика BIT School",
+  [m("02.jpg")]: "Фирменный знак",
+  [m("03.webp")]: "Цветовая система",
+  [m("04.webp")]: "Графика бренда",
+  [m("05.jpg")]: "Бренд в коммуникации",
+  [m("06.webp")]: "Печатные материалы",
+  [m("07.webp")]: "Фирменные носители",
+  [m("08.jpg")]: "Мерч и аксессуары",
+  [m("09.webp")]: "Применение графики",
+  [m("10.jpg")]: "Цифровые материалы",
+  [m("11.webp")]: "Визуальные носители",
+  [m("12.jpg")]: "Среда бренда",
+  [m("13.jpg")]: "Коммуникация школы",
+  [m("14.webp")]: "Фирменный стиль в деталях",
+  [m("15.jpg")]: "Айдентика в действии",
+  [m("16.jpg")]: "BIT School — целостный образ",
+};
+
+const bitSchoolGalleryCaptionsEn: Record<string, string> = {
+  [m("01.jpg")]: "BIT School identity",
+  [m("02.jpg")]: "Brand mark",
+  [m("03.webp")]: "Color system",
+  [m("04.webp")]: "Brand graphics",
+  [m("05.jpg")]: "Brand in communication",
+  [m("06.webp")]: "Print materials",
+  [m("07.webp")]: "Branded touchpoints",
+  [m("08.jpg")]: "Merch and accessories",
+  [m("09.webp")]: "Graphics in use",
+  [m("10.jpg")]: "Digital materials",
+  [m("11.webp")]: "Visual touchpoints",
+  [m("12.jpg")]: "Brand environment",
+  [m("13.jpg")]: "School communication",
+  [m("14.webp")]: "Identity in the details",
+  [m("15.jpg")]: "Identity in action",
+  [m("16.jpg")]: "BIT School — cohesive image",
+};
+
+const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
+  if (block.type === "section" && block.index === "01") {
+    return {
+      ...block,
+      kicker: "О КЛИЕНТЕ",
+      title: "Школа, где технологии\nстановятся игрой.",
+      paragraphs: [
+        "BIT School — школа программирования и конструирования для детей. Здесь технологичность встречается с интересом, а обучение выглядит как открытие нового мира.",
+        "Бренд должен быть понятным и детям, и родителям: дружелюбным по характеру, современным по форме и достаточно сильным, чтобы работать онлайн и офлайн.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "02") {
+    return {
+      ...block,
+      kicker: "ЗАДАЧА",
+      title: "Сочетать технологии\nи детское любопытство.",
+      paragraphs: [
+        "Создать яркий, современный и в то же время дружелюбный бренд для школы программирования и конструирования. Важно было передать ценности развития, игры и образования.",
+        "Айдентика должна была легко адаптироваться к онлайн- и офлайн-форматам — от цифровых материалов до пространства классов.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "03") {
+    return {
+      ...block,
+      kicker: "РЕШЕНИЕ",
+      title: "Игровость.\nС современной точностью.",
+      paragraphs: [
+        "Логотип — первое знакомство со школой. Для BIT School мы искали баланс между игровостью и технологичностью: элементы, напоминающие пиксели и цифровые интерфейсы, в мягкой, доброжелательной форме.",
+        "Брендинг охватывает палитру, шрифты, иллюстративный стиль и тон общения. Он передаёт идею развития и творческого будущего, оставаясь привлекательным для детей и понятным для родителей.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "04") {
+    return {
+      ...block,
+      kicker: "РЕЗУЛЬТАТ",
+      title: "Яркий бренд.\nПонятный системе.",
+      paragraphs: [
+        "BIT School получила логотип, фирменный стиль и визуальную систему, которая поддерживает доверие к образовательному пространству. Бренд звучит одинаково в цифровых и физических точках контакта.",
+        "Комплексный подход помогает школе привлекать учеников и строить узнаваемую образовательную экосистему с чёткой идентичностью.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.variant === "book") {
+    return {
+      ...block,
+      kicker: "СОСТАВ РАБОТЫ",
+      title: "От знака\nк образовательному пространству.",
+      rules: ["Брендинг", "Стратегия", "Фирменный стиль", "Логотип", "Дизайн"],
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
+        { title: "Логотип", description: "Дружелюбный и технологичный знак первого впечатления." },
+        { title: "Айдентика", description: "Система, понятная детям и родителям." },
+        { title: "Носители", description: "Единый язык для экранов и физического пространства." },
+      ],
+    };
+  }
+  if (block.type === "manifesto") {
+    return {
+      ...block,
+      label: "ВИЗУАЛЬНЫЙ ПРИНЦИП",
+      text: "Технологии.\nЧерез игру и любопытство.",
+    };
+  }
+  if (block.type === "quote") {
+    return {
+      ...block,
+      kicker: "ОТЗЫВ КЛИЕНТА",
+      heading: "Взгляд команды\nBIT School.",
+      badge: "Текст для согласования с клиентом",
+      paragraphs: [
+        "«Нам был нужен бренд, который говорит и с детьми, и с родителями. Чтобы технологии выглядели интересно, а обучение — близким и понятным.",
+        "В этом решении нам близки яркость, дружелюбность и чёткая система. Айдентика хорошо работает в разных форматах и помогает школе звучать последовательно».",
+      ],
+      author: "Команда BIT School",
+      role: "Место для имени и должности представителя",
+      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+    };
+  }
+  if (block.type === "facts") {
+    return {
+      ...block,
+      items: block.items.map((item) =>
+        item.label === "Країна"
+          ? { ...item, label: "Страна", value: "Украина", countryCode: "UA" }
+          : item.label === "Ніша"
+            ? { ...item, label: "Ниша", value: "образование / IT" }
+            : { ...item, label: "Продукт", value: "детская школа" },
+      ),
+    };
+  }
+  if (block.type === "gallery") {
+    return {
+      ...block,
+      images: block.images.map((img) => ({
+        ...img,
+        caption: bitSchoolGalleryCaptionsRu[img.src] ?? img.caption,
+      })),
+    };
+  }
+  return block;
+});
+
+const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
+  if (block.type === "section" && block.index === "01") {
+    return {
+      ...block,
+      kicker: "ABOUT CLIENT",
+      title: "A school where tech\nbecomes play.",
+      paragraphs: [
+        "BIT School is a programming and construction school for kids. Technology meets curiosity here, and learning feels like discovering a new world.",
+        "The brand must be clear to children and parents alike: friendly in character, modern in form, and strong enough to work online and offline.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "02") {
+    return {
+      ...block,
+      kicker: "TASK",
+      title: "Combine technology\nand childlike curiosity.",
+      paragraphs: [
+        "Create a bright, modern, yet friendly brand for a programming and construction school. It was important to convey the values of growth, play, and education.",
+        "The identity had to adapt easily to online and offline formats — from digital materials to classroom spaces.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "03") {
+    return {
+      ...block,
+      kicker: "SOLUTION",
+      title: "Playfulness.\nWith modern precision.",
+      paragraphs: [
+        "The logo is the first meeting with the school. For BIT School we sought a balance between play and tech: elements reminiscent of pixels and digital interfaces in a soft, welcoming form.",
+        "Branding covers palette, type, illustration style, and tone of voice. It conveys growth and a creative future while staying appealing to kids and clear to parents.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "04") {
+    return {
+      ...block,
+      kicker: "RESULT",
+      title: "A vibrant brand.\nClear as a system.",
+      paragraphs: [
+        "BIT School received a logo, visual identity, and a system that supports trust in the learning space. The brand sounds the same across digital and physical touchpoints.",
+        "A comprehensive approach helps the school attract students and build a recognizable educational ecosystem with a clear identity.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.variant === "book") {
+    return {
+      ...block,
+      kicker: "SCOPE OF WORK",
+      title: "From the mark\nto the learning space.",
+      rules: ["Branding", "Strategy", "Visual identity", "Logo", "Design"],
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
+        { title: "Logo", description: "A friendly, tech-forward mark for first impressions." },
+        { title: "Identity", description: "A system that makes sense to kids and parents." },
+        { title: "Touchpoints", description: "One language for screens and physical space." },
+      ],
+    };
+  }
+  if (block.type === "manifesto") {
+    return {
+      ...block,
+      label: "VISUAL PRINCIPLE",
+      text: "Technology.\nThrough play and curiosity.",
+    };
+  }
+  if (block.type === "quote") {
+    return {
+      ...block,
+      kicker: "CLIENT REVIEW",
+      heading: "The BIT School\nteam’s view.",
+      badge: "Text for client approval",
+      paragraphs: [
+        "“We needed a brand that speaks to both children and parents. Technology should look exciting, and learning — close and understandable.",
+        "In this solution we value the brightness, friendliness, and clear system. The identity works well across formats and helps the school sound consistent.”",
+      ],
+      author: "BIT School team",
+      role: "Placeholder for representative name and role",
+      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+    };
+  }
+  if (block.type === "facts") {
+    return {
+      ...block,
+      items: [
+        { label: "Country", value: "Ukraine", accent: true, countryCode: "UA" },
+        { label: "Niche", value: "education / IT" },
+        { label: "Product", value: "children’s school" },
+      ],
+    };
+  }
+  if (block.type === "gallery") {
+    return {
+      ...block,
+      images: block.images.map((img) => ({
+        ...img,
+        caption: bitSchoolGalleryCaptionsEn[img.src] ?? img.caption,
+      })),
+    };
+  }
+  return block;
+});
 
 export function getBitSchoolBlocks(locale: Locale): CaseVisualBlock[] {
   if (locale === "ru") return blocksRu;

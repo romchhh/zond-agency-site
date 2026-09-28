@@ -16,6 +16,7 @@ type CaseVisualBodyProps = {
   caseSlug: string;
   openCaseLabel: string;
   openCaseHref: string;
+  showOpenCase?: boolean;
 };
 
 function splitTitle(title: string): string[] {
@@ -266,14 +267,20 @@ function OpenCaseButton({ label, href }: { label: string; href: string }) {
 function renderBlock(
   block: CaseVisualBlock,
   imageOffset: number,
-  context: { caseTitle: string; caseSlug: string; openCaseLabel: string; openCaseHref: string },
+  context: {
+    caseTitle: string;
+    caseSlug: string;
+    openCaseLabel: string;
+    openCaseHref: string;
+    showOpenCase: boolean;
+  },
 ) {
   switch (block.type) {
     case "section":
       return (
         <section
           key={`${block.index}-${block.kicker}`}
-          className={`visual-section${block.variant === "book" ? " book-section" : ""}`}
+          className={`visual-section${block.variant === "book" ? " book-section" : ""}${block.variant === "concept" ? " concept-section" : ""}`}
         >
           {block.variant === "book" ? (
             <div className="book-heading">
@@ -346,12 +353,43 @@ function renderBlock(
         </section>
       );
 
+    case "collectionStats":
+      return (
+        <div
+          key={`collection-stats-${block.items.map((item) => item.value).join("-")}`}
+          className="stat-tiles collection-stats"
+          aria-label={block.ariaLabel}
+        >
+          {block.items.map((item) => (
+            <div
+              key={item.value + item.label}
+              className={
+                item.variant === "orange"
+                  ? "orange-tile"
+                  : item.variant === "dark"
+                    ? "dark-tile"
+                    : undefined
+              }
+            >
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+      );
+
     case "facts":
       return (
-        <div key={`facts-${block.items.map((item) => item.label).join("-")}`} className="facts-row">
+        <div
+          key={`facts-${block.items.map((item) => item.label).join("-")}`}
+          className={`facts-row${context.showOpenCase ? "" : " facts-row--full"}`}
+        >
           <dl className="project-facts">
             {block.items.map((item) => (
-              <div key={item.label} className={item.accent ? "country-fact" : undefined}>
+              <div
+                key={item.label}
+                className={item.accent || item.highlight ? "country-fact" : undefined}
+              >
                 <dt>{item.label}</dt>
                 <dd>
                   {item.accent ? (
@@ -364,7 +402,9 @@ function renderBlock(
               </div>
             ))}
           </dl>
-          <OpenCaseButton label={context.openCaseLabel} href={context.openCaseHref} />
+          {context.showOpenCase ? (
+            <OpenCaseButton label={context.openCaseLabel} href={context.openCaseHref} />
+          ) : null}
         </div>
       );
 
@@ -478,6 +518,7 @@ export default function CaseVisualBody({
   caseSlug,
   openCaseLabel,
   openCaseHref,
+  showOpenCase = true,
 }: CaseVisualBodyProps) {
   let galleryOffset = imageOffset;
 
@@ -489,6 +530,7 @@ export default function CaseVisualBody({
           caseSlug,
           openCaseLabel,
           openCaseHref,
+          showOpenCase,
         });
         if (block.type === "gallery") {
           galleryOffset += block.images.length;

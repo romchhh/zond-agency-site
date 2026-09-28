@@ -36,6 +36,12 @@ export const heroServiceSlugs: ServiceSlug[] = [
   "logo",
 ];
 
+/** Grid card index (01–12) → illustration icon (replaces photo in UI; photos kept in dictionary). */
+export function getServiceGridIconSrc(cardIndex: string): string {
+  const normalized = cardIndex.padStart(2, "0");
+  return `/assets/services/icons/${normalized}.png`;
+}
+
 /** Card index (01–12) → service detail slug for the homepage /services grid. */
 export const servicesGridSlugByCardIndex: Record<string, ServiceSlug> = {
   "01": "branding",

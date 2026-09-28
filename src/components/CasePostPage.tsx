@@ -10,6 +10,7 @@ import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getCaseDetailPath, getCaseIndexPath } from "@/i18n/routing";
 import { getCaseClientUrl, getCaseServiceTag } from "@/i18n/cases/case-meta";
+import { getCaseHeroCaption } from "@/i18n/cases/case-hero-captions";
 import {
   buildCaseVisualBlocks,
   collectCaseVisualImages,
@@ -65,17 +66,7 @@ export default function CasePostPage({
       ? copy.openClientInstagram
       : copy.openClientSite
     : defaults.openCase;
-  const heroCaptions: Record<string, string> = {
-    "home-hub": "Home Hub — концепція фасаду шоуруму",
-    carbit: "Carbit — анімована айдентика",
-    "nove-misto": "Нове місто — айдентика в русі",
-    "kyiv-tourism-department": "Київ — місто кожного / міська кампанія",
-    "ahmad-tea": "AHMAD TEA — комунікаційна стратегія",
-    "digital-residence": "Digital Residence — технологічна резиденція",
-    kavlora: "KAVLORA — айдентика виробника",
-    "bit-school": "BIT School — брендинг школи",
-  };
-  const heroCaption = heroCaptions[caseItem.slug] ?? caseItem.title;
+  const heroCaption = getCaseHeroCaption(caseItem.slug, locale, caseItem.title);
   const galleryImages = collectCaseVisualImages(hero?.src ?? null, blocks);
   const theme = resolveCaseTheme(caseItem);
   const taglineLines = splitLines(defaults.tagline);
@@ -96,7 +87,7 @@ export default function CasePostPage({
       ) : null}
       <Header locale={locale} dictionary={dictionary} />
       <main
-        className="sp case-visual-page visual balanced"
+        className={`sp case-visual-page visual balanced${caseItem.slug === "packaging" ? " packaging" : ""}`}
         data-case={caseItem.slug}
         style={caseThemeStyle(theme)}
       >
@@ -139,6 +130,7 @@ export default function CasePostPage({
               caseSlug={caseItem.slug}
               openCaseLabel={openCaseLabel}
               openCaseHref={openCaseHref}
+              showOpenCase={caseItem.slug !== "packaging"}
             />
 
             <div className="case-visual-back">

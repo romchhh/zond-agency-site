@@ -3,7 +3,9 @@ import type { Locale } from "@/i18n/config";
 
 const m = (file: string) => `/assets/cases/altep/${file}`;
 
-const cap = (n: number) => `ALTEP — айдентика та застосування ${n}`;
+const capUk = (n: number) => `ALTEP — айдентика та застосування ${n}`;
+const capRu = (n: number) => `ALTEP — айдентика и применения ${n}`;
+const capEn = (n: number) => `ALTEP — identity and applications ${n}`;
 
 const altepMedia = Array.from({ length: 18 }, (_, index) => {
   const n = index + 1;
@@ -33,8 +35,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("02.webp"), caption: cap(2) },
-      { src: m("03.webp"), caption: cap(3) },
+      { src: m("02.webp"), caption: capUk(2) },
+      { src: m("03.webp"), caption: capUk(3) },
     ],
   },
   {
@@ -68,8 +70,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("04.webp"), caption: cap(4) },
-      { src: m("05.webp"), caption: cap(5) },
+      { src: m("04.webp"), caption: capUk(4) },
+      { src: m("05.webp"), caption: capUk(5) },
     ],
   },
   {
@@ -91,19 +93,19 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("06.webp"), caption: cap(6) }],
+    images: [{ src: m("06.webp"), caption: capUk(6) }],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("07.webp"), caption: cap(7) }],
+    images: [{ src: m("07.webp"), caption: capUk(7) }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("08.webp"), caption: cap(8) },
-      { src: m("09.webp"), caption: cap(9) },
+      { src: m("08.webp"), caption: capUk(8) },
+      { src: m("09.webp"), caption: capUk(9) },
     ],
   },
   {
@@ -128,38 +130,38 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("10.webp"), caption: cap(10) },
-      { src: m("11.webp"), caption: cap(11) },
+      { src: m("10.webp"), caption: capUk(10) },
+      { src: m("11.webp"), caption: capUk(11) },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("12.webp"), caption: cap(12) },
-      { src: m("13.webp"), caption: cap(13) },
+      { src: m("12.webp"), caption: capUk(12) },
+      { src: m("13.webp"), caption: capUk(13) },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("14.webp"), caption: cap(14) },
-      { src: m("15.webp"), caption: cap(15) },
+      { src: m("14.webp"), caption: capUk(14) },
+      { src: m("15.webp"), caption: capUk(15) },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("16.webp"), caption: cap(16) },
-      { src: m("17.webp"), caption: cap(17) },
+      { src: m("16.webp"), caption: capUk(16) },
+      { src: m("17.webp"), caption: capUk(17) },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("18.webp"), caption: cap(18) }],
+    images: [{ src: m("18.webp"), caption: capUk(18) }],
   },
   {
     type: "section",
@@ -187,8 +189,259 @@ const blocksUk: CaseVisualBlock[] = [
   },
 ];
 
-const blocksRu: CaseVisualBlock[] = blocksUk;
-const blocksEn: CaseVisualBlock[] = blocksUk;
+const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
+  if (block.type === "section" && block.index === "01") {
+    return {
+      ...block,
+      kicker: "О КЛИЕНТЕ",
+      title: "Оборудование,\nкоторому доверяют.",
+      paragraphs: [
+        "«Альтеп-Центр» производит и реализует отопительное оборудование с 2008 года. Компания работает с партнёрами и покупателями, для которых важны качество продукции и выполнение обязательств.",
+        "Обновлённый бренд должен был сохранить ощущение надёжности производителя и показать современный масштаб его работы в цифровых и физических каналах.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "02") {
+    return {
+      ...block,
+      kicker: "ЗАДАЧА",
+      title: "Обновить узнаваемость.\nСохранить доверие.",
+      paragraphs: [
+        "Создать новый логотип и визуальный язык ALTEP, который передаёт профессионализм и современный подход компании к отопительному оборудованию.",
+        "Распространить систему на страницы в соцсетях, сайт, презентации, полиграфические материалы и фирменный мерч, чтобы бренд выглядел целостно на каждом носителе.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "03") {
+    return {
+      ...block,
+      kicker: "РЕШЕНИЕ",
+      title: "Один характер\nв каждой детали.",
+      paragraphs: [
+        "Мы разработали эмблему, айдентику и дизайн-систему. Она задаёт правила для логотипа, типографики, графики и применения на цифровых и печатных носителях.",
+        "Отдельные решения подготовлены для дизайна сайта, презентаций проектов, полиграфии и мерча. Визуальные примеры показывают, как фирменный стиль сохраняет единство в разных форматах.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "04") {
+    return {
+      ...block,
+      kicker: "РЕЗУЛЬТАТ",
+      title: "Обновлённый бренд.\nГотов к применению.",
+      paragraphs: [
+        "ALTEP получил новую эмблему и айдентику, дизайн-систему, материалы для сайта и презентаций, полиграфию и фирменную продукцию. В кейсе видна работа стиля на разных носителях.",
+        "Это основа для последовательного представления компании партнёрам и покупателям. Количественных показателей влияния ребрендинга исходный кейс не приводит.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.variant === "book") {
+    return {
+      ...block,
+      kicker: "СОСТАВ РАБОТЫ",
+      title: "Один бренд.\nРазные форматы.",
+      rules: [
+        "Эмблема",
+        "Дизайн-система",
+        "Айдентика",
+        "3D-модель",
+        "Сайт",
+        "Презентации",
+        "Полиграфия",
+        "Фирменный мерч",
+      ],
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
+        {
+          title: "Надёжность",
+          description: "Подчеркнуть качество и ответственность производителя.",
+        },
+        {
+          title: "Узнаваемость",
+          description: "Создать единый образ во всех каналах.",
+        },
+        {
+          title: "Гибкость",
+          description: "Адаптировать стиль для сайта, печати и мерча.",
+        },
+      ],
+    };
+  }
+  if (block.type === "manifesto") {
+    return {
+      ...block,
+      label: "ВИЗУАЛЬНЫЙ ПРИНЦИП",
+      text: "Тепло в основе.\nСистема в деталях.",
+    };
+  }
+  if (block.type === "quote") {
+    return {
+      ...block,
+      kicker: "ОТЗЫВ КЛИЕНТА",
+      heading: "Взгляд команды\nALTEP.",
+      badge: "Текст для согласования с клиентом",
+      paragraphs: [
+        "«Мы хотели обновить бренд так, чтобы он соответствовал современной компании и оставался узнаваемым для наших партнёров. Для нас было важно сочетать надёжность производителя и целостный вид материалов.",
+        "Новая визуальная система даёт понятные правила для сайта, презентаций, полиграфии и мерча. Так мы можем последовательно представлять ALTEP в разных каналах».",
+      ],
+      author: "Команда ALTEP",
+      role: "Место для имени и должности представителя",
+      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+    };
+  }
+  if (block.type === "facts") {
+    return {
+      ...block,
+      items: block.items.map((item) =>
+        item.label === "Країна"
+          ? { ...item, label: "Страна", value: "Украина", countryCode: "UA" }
+          : item.label === "Ніша"
+            ? { ...item, label: "Ниша", value: "отопительное оборудование" }
+            : { ...item, label: "Продукт", value: "котлы / системы отопления" },
+      ),
+    };
+  }
+  if (block.type === "gallery") {
+    return {
+      ...block,
+      images: block.images.map((img) => {
+        const match = img.src.match(/(\d+)\.webp$/);
+        const n = match ? Number(match[1]) : 0;
+        return { ...img, caption: capRu(n) };
+      }),
+    };
+  }
+  return block;
+});
+
+const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
+  if (block.type === "section" && block.index === "01") {
+    return {
+      ...block,
+      kicker: "ABOUT CLIENT",
+      title: "Equipment\nyou can trust.",
+      paragraphs: [
+        "Altep Center has manufactured and supplied heating equipment since 2008. The company works with partners and customers who value product quality and reliable commitments.",
+        "The refreshed brand had to keep the feel of a dependable manufacturer and show the modern scale of its work across digital and physical channels.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "02") {
+    return {
+      ...block,
+      kicker: "TASK",
+      title: "Refresh recognition.\nKeep trust.",
+      paragraphs: [
+        "Create a new logo and visual language for ALTEP that conveys professionalism and the company’s modern approach to heating equipment.",
+        "Extend the system to social pages, the website, presentations, print materials, and branded merch so the brand looks cohesive on every touchpoint.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "03") {
+    return {
+      ...block,
+      kicker: "SOLUTION",
+      title: "One character\nin every detail.",
+      paragraphs: [
+        "We developed an emblem, identity, and design system. It sets rules for the logo, typography, graphics, and use on digital and print touchpoints.",
+        "Separate solutions were prepared for website design, project presentations, print, and merch. Visual examples show how the brand style stays unified across formats.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.index === "04") {
+    return {
+      ...block,
+      kicker: "RESULT",
+      title: "A refreshed brand.\nReady to apply.",
+      paragraphs: [
+        "ALTEP received a new emblem and identity, a design system, website and presentation materials, print, and branded products. The case shows the style across touchpoints.",
+        "This is a foundation for presenting the company consistently to partners and customers. The source case does not cite quantitative rebranding impact metrics.",
+      ],
+    };
+  }
+  if (block.type === "section" && block.variant === "book") {
+    return {
+      ...block,
+      kicker: "SCOPE OF WORK",
+      title: "One brand.\nMany formats.",
+      rules: [
+        "Emblem",
+        "Design system",
+        "Identity",
+        "3D model",
+        "Website",
+        "Presentations",
+        "Print",
+        "Branded merch",
+      ],
+    };
+  }
+  if (block.type === "deliverables") {
+    return {
+      ...block,
+      items: [
+        {
+          title: "Reliability",
+          description: "Highlight the manufacturer’s quality and accountability.",
+        },
+        {
+          title: "Recognition",
+          description: "Build a single image across all channels.",
+        },
+        {
+          title: "Flexibility",
+          description: "Adapt the style for web, print, and merch.",
+        },
+      ],
+    };
+  }
+  if (block.type === "manifesto") {
+    return {
+      ...block,
+      label: "VISUAL PRINCIPLE",
+      text: "Warmth at the core.\nSystem in the details.",
+    };
+  }
+  if (block.type === "quote") {
+    return {
+      ...block,
+      kicker: "CLIENT REVIEW",
+      heading: "The ALTEP\nteam’s view.",
+      badge: "Text for client approval",
+      paragraphs: [
+        "“We wanted to refresh the brand so it matched a modern company and stayed recognizable to our partners. It was important for us to combine the manufacturer’s reliability with a cohesive look across materials.",
+        "The new visual system gives clear rules for the website, presentations, print, and merch. That lets us represent ALTEP consistently across channels.”",
+      ],
+      author: "ALTEP team",
+      role: "Placeholder for representative name and role",
+      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+    };
+  }
+  if (block.type === "facts") {
+    return {
+      ...block,
+      items: [
+        { label: "Country", value: "Ukraine", accent: true, countryCode: "UA" },
+        { label: "Niche", value: "heating equipment" },
+        { label: "Product", value: "boilers / heating systems" },
+      ],
+    };
+  }
+  if (block.type === "gallery") {
+    return {
+      ...block,
+      images: block.images.map((img) => {
+        const match = img.src.match(/(\d+)\.webp$/);
+        const n = match ? Number(match[1]) : 0;
+        return { ...img, caption: capEn(n) };
+      }),
+    };
+  }
+  return block;
+});
 
 export function getAltepBlocks(locale: Locale): CaseVisualBlock[] {
   if (locale === "ru") return blocksRu;

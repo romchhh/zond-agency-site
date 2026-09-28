@@ -1,0 +1,243 @@
+/* Packaging service collection — overrides on shared case-visual layout */
+.case-visual-page.packaging.visual.balanced .breadcrumbs {
+  padding-right: 0;
+}
+
+.case-visual-page.packaging.visual.balanced .hero .media img,
+.case-visual-page.packaging.visual.balanced .media.wide img,
+.case-visual-page.packaging.visual.balanced .pair .media img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.case-visual-page.packaging.visual.balanced .gallery {
+  align-items: start;
+}
+
+.case-visual-page.packaging.visual.balanced .media {
+  margin-top: 22px;
+}
+
+.case-visual-page.packaging.visual.balanced .gallery .media {
+  margin-top: 0;
+}
+
+.case-visual-page.packaging.visual.balanced .manifesto {
+  background: #232322;
+  color: white;
+}
+
+.case-visual-page.packaging.visual.balanced .manifesto em,
+.case-visual-page.packaging.visual.balanced .orange {
+  color: #efefef;
+}
+
+.case-visual-page.packaging.visual.balanced .project-facts .country-fact {
+  background: #efefef;
+  border-color: #efefef;
+  color: #1d1d1d;
+}
+
+.case-visual-page.packaging.visual.balanced .country-fact dt {
+  color: #342518;
+}
+
+.case-visual-page.packaging.visual.balanced .project-facts {
+  grid-template-columns: 1fr 1fr 1.35fr;
+}
+
+.case-visual-page.packaging.visual.balanced .quote-card {
+  border-left-color: #efefef;
+}
+
+.case-visual-page.packaging.visual.balanced .quote-mark {
+  color: #e74436;
+}
+
+.case-visual-page.packaging.visual.balanced .review-monogram {
+  background: #efefef;
+}
+
+.case-visual-page.packaging.visual.balanced .rule-grid > div {
+  border-left-color: #e74436;
+}
+
+.case-visual-page.packaging.visual.balanced .hero-tag {
+  white-space: nowrap;
+  background: #232322;
+  color: white;
+}
+
+.case-visual-page.packaging.visual.balanced .hero h1 {
+  font-size: clamp(38px, 6.7vw, 108px);
+}
+
+.case-visual-page.packaging.visual.balanced .facts-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.case-visual-page .facts-row--full {
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
+}
+
+.case-visual-page.packaging.visual.balanced .facts-row .project-facts {
+  margin: 0;
+  gap: 14px;
+}
+
+.case-visual-page.packaging.visual.balanced .facts-row .project-facts > div {
+  padding: 24px 20px;
+  min-width: 0;
+}
+
+.case-visual-page.packaging.visual.balanced .facts-row .project-facts dd {
+  font-size: clamp(18px, 1.65vw, 24px);
+}
+
+.case-visual-page.packaging.visual.balanced .concept-section {
+  margin-top: 95px;
+}
+
+.case-visual-page.packaging.visual.balanced .concept-section .section-index {
+  color: #ff7100;
+}
+
+.case-visual-page.packaging.visual.balanced .concept-section + .gallery {
+  margin-top: 12px;
+}
+
+.case-visual-page.packaging.visual.balanced .collection-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 0 30px;
+  gap: 14px;
+}
+
+.case-visual-page.packaging.visual.balanced .collection-stats > div {
+  min-height: 142px;
+  padding: 20px 24px;
+  border-radius: 17px;
+  background: #efefef;
+  color: #171717;
+}
+
+.case-visual-page.packaging.visual.balanced .collection-stats .orange-tile {
+  background: #ff7100;
+  color: #171717;
+}
+
+.case-visual-page.packaging.visual.balanced .collection-stats .dark-tile {
+  background: #1d1d1d;
+  color: #efefef;
+}
+
+.case-visual-page.packaging.visual.balanced .collection-stats strong {
+  display: block;
+  font-size: clamp(54px, 5.7vw, 82px);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.case-visual-page.packaging.visual.balanced .collection-stats span {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.35;
+  max-width: 290px;
+}
+
+.case-visual-page.packaging.visual.balanced .action-tiles article {
+  min-height: 112px;
+  padding: 16px 20px;
+}
+
+.case-visual-page.packaging.visual.balanced .action-tiles h3 {
+  font-size: 24px;
+}
+
+.case-visual-page.packaging.visual.balanced .action-tiles .tile-copy {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1050px) {
+  .case-visual-page.packaging.visual.balanced .facts-row {
+    grid-template-columns: 1fr;
+  }
+
+  .case-visual-page.packaging.visual.balanced .open-case {
+    justify-self: end;
+    min-height: 76px;
+    min-width: 230px;
+  }
+}
+
+@media (max-width: 767px) {
+  .case-visual-page.packaging.visual.balanced .container {
+    padding-inline: 18px;
+  }
+
+  .case-visual-page.packaging.visual.balanced .gallery,
+  .case-visual-page.packaging.visual.balanced .case-navigation {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .case-visual-page.packaging.visual.balanced .gallery {
+    width: 100%;
+    margin-inline: 0;
+    gap: 24px;
+  }
+
+  .case-visual-page.packaging.visual.balanced .media.wide,
+  .case-visual-page.packaging.visual.balanced .project-image {
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .case-visual-page.packaging.visual.balanced .gallery.pair {
+    grid-template-columns: 1fr;
+  }
+
+  .case-visual-page.packaging.visual.balanced .collection-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .case-visual-page.packaging.visual.balanced .collection-stats > div {
+    min-height: 104px;
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .case-visual-page.packaging.visual.balanced .collection-stats strong {
+    font-size: 56px;
+  }
+
+  .case-visual-page.packaging.visual.balanced .project-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .case-visual-page.packaging.visual.balanced .open-case {
+    justify-self: stretch;
+  }
+
+  .case-visual-page.packaging.visual.balanced .hero h1 {
+    font-size: clamp(36px, 8vw, 63px);
+  }
+
+  .case-visual-page.packaging.visual.balanced .concept-section {
+    margin-top: 50px;
+  }
+
+  .case-visual-page.packaging.visual.balanced .hero-tag {
+    font-size: 12px;
+  }
+}
