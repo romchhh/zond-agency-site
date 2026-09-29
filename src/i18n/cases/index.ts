@@ -23,6 +23,8 @@ const PUBLISHED_CASE_SLUGS: readonly string[] = [
   "kavlora",
   "ahmad-tea",
   "bit-school",
+  "terminal-borivaje",
+  "tbiliso",
   "altep",
   "packaging",
 ];

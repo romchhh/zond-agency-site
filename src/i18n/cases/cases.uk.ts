@@ -8,6 +8,8 @@ import { getPackagingBlocks, packagingCopy, packagingShared } from "../packaging
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
+import { getTerminalBorivajeBlocks, terminalBorivajeCopy, terminalBorivajeShared } from "./terminal-borivaje";
+import { getTbilisoBlocks, tbilisoCopy, tbilisoShared } from "./tbiliso";
 import type { CaseItem } from "./types";
 
 
@@ -101,32 +103,15 @@ const cases: CaseItem[] = [
     blocks: getBitSchoolBlocks("uk"),
   },
   {
-    "slug": "terminal-borivaje",
-    "title": "Terminal Borivaje",
-    "description": "Розробили брендинг і логотип для Terminal Borivaje — агротермінала в Одеській області. Також поліграфія та сувенірна продукція.",
-    "cover": "/assets/cases/terminal-borivaje/cover.jpeg",
-    "media": [
-      "media/terminal-borivaje/cover.jpeg",
-      "media/terminal-borivaje/hero.webp",
-      "media/terminal-borivaje/01.webp",
-      "media/terminal-borivaje/02.webp",
-      "media/terminal-borivaje/03.webp",
-      "media/terminal-borivaje/04.webp",
-      "media/terminal-borivaje/05.webp",
-      "media/terminal-borivaje/06.webp",
-      "media/terminal-borivaje/07.webp",
-      "media/terminal-borivaje/08.webp",
-      "media/terminal-borivaje/09.webp",
-      "media/terminal-borivaje/10.webp",
-      "media/terminal-borivaje/11.webp",
-      "media/terminal-borivaje/12.webp",
-      "media/terminal-borivaje/13.webp",
-      "media/terminal-borivaje/14.webp",
-      "media/terminal-borivaje/15.webp",
-      "media/terminal-borivaje/16.webp",
-      "media/terminal-borivaje/17.webp"
-    ],
-    "body": "Uaru\n\nUaru\n\n[IMG: media/terminal-borivaje/hero.webp]\n\n### Клієнт\n\nТермінал розташований у смт. Нові Білярі Одеського р-ну Одеської обл. в акваторії Аджалицького лиману порту Южний.\n\n### Задачі\n\nРозробити сучасний і впізнаваний бренд, що відображає цінності Terminal Borivaje як провідного агро-терміналу, акцентуючи його інноваційність, екологічність та надійність у сфері агробізнесу. Розробити новий логотип, що інтуїтивно відображає специфіку та цінності агро-терміналу. Підібрати гармонійну кольорову палітру, яка підкреслить сучасність та екологічність бренду. Створити універсальний набір шрифтів для використання на різних платформах.\n\n### Розробили\n\nБрендинг\n\nРозробка брендингу\n\nСувенірну продукцію\n\nПоліграфічні матеріали\n\nЛоготип\n\n[IMG: media/terminal-borivaje/01.webp]\n\n[IMG: media/terminal-borivaje/02.webp]\n\n[IMG: media/terminal-borivaje/03.webp]\n\n[IMG: media/terminal-borivaje/04.webp]\n\n[IMG: media/terminal-borivaje/05.webp]\n\n[IMG: media/terminal-borivaje/04.webp]\n\n[IMG: media/terminal-borivaje/05.webp]\n\n## Розробка логотипу для агро-терміналу: унікальність та впізнаваність\n\nЛоготип є обличчям бренду, особливо для компаній, що працюють у сфері агробізнесу та логістики. Для Terminal Borivaje ми створили сучасний, інтуїтивно зрозумілий логотип, який передає його надійність, інноваційність та екологічний підхід. Гармонійне поєднання символіки та кольорової гами забезпечує впізнаваність серед конкурентів. Розробка логотипів для агро-терміналів вимагає врахування інфраструктурних особливостей та стратегії розвитку бренду, і ми знаємо, як зробити це ефективно.\n\n[IMG: media/terminal-borivaje/06.webp]\n\n[IMG: media/terminal-borivaje/07.webp]\n\n[IMG: media/terminal-borivaje/08.webp]\n\n[IMG: media/terminal-borivaje/06.webp]\n\n[IMG: media/terminal-borivaje/07.webp]\n\n[IMG: media/terminal-borivaje/08.webp]\n\n[IMG: media/terminal-borivaje/09.webp]\n\nБрендинг агро-терміналу: гармонія сучасності та екологічності\n\nБрендинг для агро-терміналу — це не лише візуальний стиль, а й стратегія позиціонування. Terminal Borivaje отримав комплексний фірмовий стиль, що поєднує екологічні кольори, сучасні шрифти та графічні елементи, які підкреслюють технологічність і надійність компанії. Вдало продуманий брендинг допомагає створити довіру серед партнерів та клієнтів, виділяючи компанію серед конкурентів. Ми допомагаємо агро- та логістичним компаніям будувати сильні бренди, що працюють на довгострокову перспективу.\n\n[IMG: media/terminal-borivaje/10.webp]\n\n[IMG: media/terminal-borivaje/11.webp]\n\n[IMG: media/terminal-borivaje/12.webp]\n\n[IMG: media/terminal-borivaje/13.webp]\n\n[IMG: media/terminal-borivaje/14.webp]\n\n[IMG: media/terminal-borivaje/15.webp]\n\n[IMG: media/terminal-borivaje/15.webp]\n\n[IMG: media/terminal-borivaje/16.webp]\n\n[IMG: media/terminal-borivaje/17.webp]"
+    slug: terminalBorivajeShared.slug,
+    title: terminalBorivajeCopy.uk.title,
+    description: terminalBorivajeCopy.uk.description,
+    cover: terminalBorivajeShared.cover,
+    media: terminalBorivajeShared.media,
+    tagline: terminalBorivajeCopy.uk.tagline,
+    serviceTag: terminalBorivajeCopy.uk.serviceTag,
+    body: terminalBorivajeShared.body,
+    blocks: getTerminalBorivajeBlocks("uk"),
   },
   {
     slug: altepShared.slug,
@@ -179,31 +164,15 @@ const cases: CaseItem[] = [
     "body": "### Клієнт\n\nТехно Груп, провідна інженерна компанія з багаторічним досвідом у сфері електромонтажних та сантехнічних робіт, звернулася до нас із завданням оновити бренд, щоб відображати сучасний дух компанії, її технічну експертизу та надійність. Основна мета полягала у створенні впізнаваного та довіреного бренду, який би відповідав високому рівню послуг компанії та її інноваційному підходу.\n\n### Задачі\n\nРебрендинг \"Техно Груп\" значно підвищив впізнаваність компанії на ринку. Оновлений бренд відображає сучасний дух компанії, її високий професіоналізм та зобов'язання перед клієнтами. Вебсайт компанії тепер ефективно презентує послуги та проекти, залучаючи більше потенційних клієнтів, а стратегія соціальних медіа активно розвиває спільноту навколо бренду.\n\n### Розробили\n\nАйдентика\n\nПоліграфічні матеріали\n\nСувенірну продукцію\n\nSMM\n\n[IMG: media/techno-group/hero.jpeg]\n\n[IMG: media/techno-group/01.jpeg]\n\n[IMG: media/techno-group/02.jpeg]\n\n[IMG: media/techno-group/03.jpeg]\n\n[IMG: media/techno-group/02.jpeg]\n\n[IMG: media/techno-group/03.jpeg]\n\n## Ребрендинг: оновлення іміджу для сучасного бізнесу\n\nРебрендинг – це ключовий крок для компаній, які прагнуть залишатися актуальними та конкурентоспроможними. \"Техно Груп\" звернулася до нас із завданням оновити візуальний стиль, щоб підкреслити свою технічну експертизу, інноваційність та надійність. У результаті ребрендингу компанія отримала сучасний і впізнаваний образ, який допомагає ефективніше комунікувати з клієнтами та партнерами. Ребрендинг не лише підвищує довіру до бренду, а й створює нові можливості для залучення цільової аудиторії.\n\n[IMG: media/techno-group/04.jpeg]\n\n[IMG: media/techno-group/05.jpeg]\n\n[IMG: media/techno-group/06.jpeg]\n\n[IMG: media/techno-group/04.jpeg]\n\n[IMG: media/techno-group/05.jpeg]\n\n[IMG: media/techno-group/06.jpeg]\n\n[IMG: media/techno-group/07.jpeg]\n\n[IMG: media/techno-group/08.jpeg]\n\nБрендбук: основа єдиного стилю компанії\n\nБрендбук – це важливий інструмент, який забезпечує цілісність візуальної комунікації компанії. Для \"Техно Груп\" ми розробили детальний брендбук, що містить усі ключові елементи айдентики: логотип, кольорову палітру, шрифти та правила використання візуальних матеріалів. Розробка брендбуку допомагає компанії зберігати впізнаваність на всіх носіях – від сайту та соцмереж до друкованої продукції. Це забезпечує послідовність комунікації та зміцнює позиції бренду на ринку.\n\n[IMG: media/techno-group/07.jpeg]\n\n[IMG: media/techno-group/09.jpeg]\n\n[IMG: media/techno-group/10.jpeg]\n\n[IMG: media/techno-group/11.jpeg]\n\n[IMG: media/techno-group/12.jpeg]\n\n[IMG: media/techno-group/13.jpeg]\n\n[IMG: media/techno-group/14.jpeg]\n\n[IMG: media/techno-group/15.jpeg]\n\n[IMG: media/techno-group/16.jpeg]\n\n[IMG: media/techno-group/16.jpeg]"
   },
   {
-    "slug": "tbiliso",
-    "title": "Tbiliso",
-    "description": "Провели ребрендинг Tbiliso — грузинського ресторану в Києві: нова айдентика, упаковка, поліграфія, SMM та фірмовий мерч.",
-    "cover": "/assets/cases/tbiliso/cover.png",
-    "media": [
-      "media/tbiliso/cover.png",
-      "media/tbiliso/hero.png",
-      "media/tbiliso/01.png",
-      "media/tbiliso/02.webp",
-      "media/tbiliso/03.webp",
-      "media/tbiliso/04.webp",
-      "media/tbiliso/05.webp",
-      "media/tbiliso/06.webp",
-      "media/tbiliso/07.webp",
-      "media/tbiliso/08.webp",
-      "media/tbiliso/09.webp",
-      "media/tbiliso/10.webp",
-      "media/tbiliso/11.webp",
-      "media/tbiliso/12.webp",
-      "media/tbiliso/13.webp",
-      "media/tbiliso/14.webp",
-      "media/tbiliso/15.webp",
-      "media/tbiliso/16.webp"
-    ],
-    "body": "Uaru\n\nUaru\n\n[IMG: media/tbiliso/hero.png]\n\n### Клієнт\n\nTbiliso - це не просто ресторан, це частинка Грузії в серці Києва. Нещодавно ми завершили ребрендинг цього закладу, який підкреслює його автентичність та привабливість.\n\n### Задачі\n\nЯкі цілі та завдання ми ставили перед собою? Оновити візуальний образ ресторану: візуал, пакування продуктів та багато інших деталей. Підкреслити особливість - неперевершену грузинську кухню: зробити дизайн, який транслює теплоту та автентичність закладу. Посилити позиціонування ресторану: місце, де можна не лише смачно поїсти, але й відчути атмосферу Грузії. Збільшити впізнаваність бренду: залучити нових клієнтів та посилити лояльність постійних. Ми провели комплексну роботу над брендом \"Tbiliso\". Аналіз ринку та вподобань аудиторії: для того, щоб створити влучний брендинг, необхідно, насамперед, розуміти потреби клієнтів та їх бажання. Розробка ексклюзивного дизайну: після аналізу, команда @zond.agency розробила неповторний дизайн, який, відтепер, служить візитівкою закладу та відрізняє його від конкурентів. Оновлення візуалу: ми використовували теплі кольори, та фотографії страв, щоб передати атмосферу затишку в закладі. Ребрендинг \"Tbiliso\" вже приносить перші позитивні результати. Збільшення впізнаваності бренду: ми спостерігаємо позитивну динаміку зростання зацікавленості рестораном. Збільшення кількості клієнтів: кількість гостей ресторану зросла протягом першого місяця після ребрендингу. Позитивні відгуки клієнтів: люди оцінюють відповідність ребрендингу атмосфері закладу. Ми віримо, що результат нашої плідної співпраці з брендом \"Tbiliso\" допоможе цьому ресторану стати популярнішим та остаточно завоювати серце киян та гостей міста.\n\n### Розробили\n\nБрендинг\n\nУпаковка\n\nДизайн\n\nПоліграфічні матеріали\n\nSMM\n\nФірмовий мерч\n\n[IMG: media/tbiliso/01.png]\n\n[IMG: media/tbiliso/02.webp]\n\n[IMG: media/tbiliso/03.webp]\n\n[IMG: media/tbiliso/04.webp]\n\n[IMG: media/tbiliso/03.webp]\n\n[IMG: media/tbiliso/04.webp]\n\n## Оновлення візуального образу ресторану: як створити атмосферу бренду\n\nВізуальний образ ресторану відіграє ключову роль у залученні відвідувачів та формуванні унікальної атмосфери. Для Tbiliso ми провели комплексне оновлення дизайну, що відображає теплоту грузинської культури. Використання автентичних кольорів, тематичних графічних елементів та якісних фотографій страв дозволило передати затишок закладу. Оновлення візуального стилю допомагає закладам громадського харчування виділятися серед конкурентів, покращує сприйняття бренду та залучає більше відвідувачів.\n\n[IMG: media/tbiliso/05.webp]\n\n[IMG: media/tbiliso/06.webp]\n\n[IMG: media/tbiliso/07.webp]\n\n[IMG: media/tbiliso/05.webp]\n\n[IMG: media/tbiliso/06.webp]\n\n[IMG: media/tbiliso/07.webp]\n\n[IMG: media/tbiliso/08.webp]\n\nСтворення брендингу для ресторану: впізнаваність та унікальність\n\nРебрендинг ресторану — це не лише зміна логотипу, а й глибока робота над формуванням впізнаваного стилю. Для Tbiliso ми розробили комплексний брендинг, який підкреслює його автентичність та гастрономічну унікальність. Важливими етапами стали дослідження ринку, визначення цільової аудиторії та створення візуальної айдентики, що відповідає духу грузинської гостинності. Розробка брендингу для ресторанів допомагає сформувати впізнаваний стиль, залучати нових гостей та зміцнювати лояльність постійних клієнтів.\n\n[IMG: media/tbiliso/08.webp]\n\n[IMG: media/tbiliso/09.webp]\n\n[IMG: media/tbiliso/10.webp]\n\n[IMG: media/tbiliso/11.webp]\n\n[IMG: media/tbiliso/12.webp]\n\n[IMG: media/tbiliso/13.webp]\n\n[IMG: media/tbiliso/12.webp]\n\n[IMG: media/tbiliso/14.webp]\n\n[IMG: media/tbiliso/15.webp]\n\n[IMG: media/tbiliso/16.webp]\n\n[IMG: media/tbiliso/13.webp]"
+    slug: tbilisoShared.slug,
+    title: tbilisoCopy.uk.title,
+    description: tbilisoCopy.uk.description,
+    cover: tbilisoShared.cover,
+    media: tbilisoShared.media,
+    tagline: tbilisoCopy.uk.tagline,
+    serviceTag: tbilisoCopy.uk.serviceTag,
+    body: tbilisoShared.body,
+    blocks: getTbilisoBlocks("uk"),
   },
   {
     "slug": "nadiya-odesa",

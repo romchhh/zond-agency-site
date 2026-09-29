@@ -43,6 +43,11 @@ const HERO_CAPTIONS: HeroCaptions = {
     ru: "BIT School — брендинг школы",
     en: "BIT School — school branding",
   },
+  "terminal-borivaje": {
+    uk: "Terminal Borivaje — айдентика агротерміналу",
+    ru: "Terminal Borivaje — айдентика агротерминала",
+    en: "Terminal Borivaje — agro terminal identity",
+  },
   altep: {
     uk: "ALTEP — оновлена айдентика",
     ru: "ALTEP — обновлённая айдентика",

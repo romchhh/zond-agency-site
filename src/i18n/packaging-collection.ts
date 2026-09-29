@@ -4,17 +4,80 @@ import type { Locale } from "@/i18n/config";
 const ASSET = "/assets/services/packaging";
 const m = (file: string) => `${ASSET}/${file}`;
 
+const packagingCaptionsUk: Record<number, string> = {
+  2: "Етикетка для ковбаси",
+  3: "Пакування масла",
+  4: "Коробка takeaway",
+  5: "Етикетка комбучі",
+  6: "Лінійка сиркових десертів",
+  7: "Пакування сосисок",
+  8: "Банка з вітамінами",
+  9: "Пакування зубної пасти",
+  10: "Пакування деревного вугілля",
+  11: "Гнучке пакування снеку",
+  12: "Лінійка йогуртів",
+  13: "Мішки для кормів",
+  14: "Пакування кави",
+  15: "Лінійка паштетів",
+  16: "Кондитерські коробки",
+  17: "Пакування сметани",
+  18: "Доглядова косметика",
+  19: "Подарункова коробка",
+  20: "Заморожені напівфабрикати",
+};
+
+const packagingCaptionsRu: Record<number, string> = {
+  2: "Этикетка для колбасы",
+  3: "Упаковка масла",
+  4: "Коробка takeaway",
+  5: "Этикетка комбучи",
+  6: "Линейка творожных десертов",
+  7: "Упаковка сосисок",
+  8: "Банка с витаминами",
+  9: "Упаковка зубной пасты",
+  10: "Упаковка древесного угля",
+  11: "Гибкая упаковка снека",
+  12: "Линейка йогуртов",
+  13: "Мешки для кормов",
+  14: "Упаковка кофе",
+  15: "Линейка паштетов",
+  16: "Кондитерские коробки",
+  17: "Упаковка сметаны",
+  18: "Уходовая косметика",
+  19: "Подарочная коробка",
+  20: "Замороженные полуфабрикаты",
+};
+
+const packagingCaptionsEn: Record<number, string> = {
+  2: "Sausage label",
+  3: "Butter packaging",
+  4: "Takeaway box",
+  5: "Kombucha label",
+  6: "Curd dessert line",
+  7: "Sausage packaging",
+  8: "Vitamin jar",
+  9: "Toothpaste packaging",
+  10: "Charcoal packaging",
+  11: "Flexible snack pouch",
+  12: "Yogurt line",
+  13: "Animal feed bags",
+  14: "Coffee packaging",
+  15: "Pâté line",
+  16: "Confectionery boxes",
+  17: "Sour cream packaging",
+  18: "Skincare packaging",
+  19: "Gift box",
+  20: "Frozen convenience foods",
+};
+
 function photoCaption(locale: Locale, index: number): string {
-  const word = locale === "en" ? "Packaging" : locale === "ru" ? "Упаковка" : "Пакування";
-  const suffix =
-    index === 1 && locale === "en"
-      ? " — collection cover"
-      : index === 1 && locale === "ru"
-        ? " — обложка подборки"
-        : index === 1
-          ? " — обкладинка добірки"
-          : "";
-  return `${word} ${String(index).padStart(2, "0")}${suffix}`;
+  const map =
+    locale === "en"
+      ? packagingCaptionsEn
+      : locale === "ru"
+        ? packagingCaptionsRu
+        : packagingCaptionsUk;
+  return map[index] ?? `Packaging ${String(index).padStart(2, "0")}`;
 }
 
 function buildBlocks(locale: Locale): CaseVisualBlock[] {

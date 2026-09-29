@@ -7,8 +7,8 @@ export const siteConfig = {
     "ZOND — агенція брендингу з 2021 року. Стратегія, айдентика, дизайн, SMM, упаковка, брендбук та цифрові рішення для бізнесу в Україні та світі.",
   locale: "uk_UA",
   language: "uk",
-  email: "hello@zond.agency",
-  phone: "+380961234567",
+  email: "ask@zond.agency",
+  phone: "+380997424154",
   telegramBot: "https://t.me/ZOND_Agency_Bot",
   instagram: "https://www.instagram.com/zond.agency/",
   keywords: [
@@ -26,6 +26,13 @@ export const siteConfig = {
     "Україна",
   ],
 };
+
+/** Display format for Ukrainian mobile numbers stored as +380XXXXXXXXX */
+export function formatSitePhone(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length !== 12 || !digits.startsWith("380")) return phone;
+  return `+38 ${digits.slice(2, 5)} ${digits.slice(5, 8)} ${digits.slice(8, 10)} ${digits.slice(10, 12)}`;
+}
 
 function normalizeSiteUrl(raw: string | undefined): string {
   const value = raw?.trim();

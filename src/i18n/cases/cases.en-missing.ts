@@ -3,60 +3,6 @@ import type { CaseItem } from "./types";
 /** English catalog entries merged when missing from cases.en.ts */
 export const casesEnMissing: CaseItem[] = [
   {
-    "slug": "terminal-borivaje",
-    "title": "Terminal Borivaje",
-    "description": "We developed branding and a logo for Terminal Borivaje — an agro terminal in Odesa region. Also print and souvenir products.",
-    "cover": "/assets/cases/terminal-borivaje/hero.webp",
-    "media": [
-      "media/terminal-borivaje/hero.webp",
-      "media/terminal-borivaje/01.webp",
-      "media/terminal-borivaje/02.webp",
-      "media/terminal-borivaje/03.webp",
-      "media/terminal-borivaje/04.webp",
-      "media/terminal-borivaje/05.webp",
-      "media/terminal-borivaje/06.webp",
-      "media/terminal-borivaje/07.webp",
-      "media/terminal-borivaje/08.webp",
-      "media/terminal-borivaje/10.webp",
-      "media/terminal-borivaje/09.webp",
-      "media/terminal-borivaje/13.webp",
-      "media/terminal-borivaje/14.webp",
-      "media/terminal-borivaje/15.webp",
-      "media/terminal-borivaje/16.webp",
-      "media/terminal-borivaje/17.webp",
-      "media/terminal-borivaje/11.webp",
-      "media/terminal-borivaje/12.webp"
-    ],
-    "body": "### Client\n\nThe terminal is located in Novi Bilyari, Odesa region, in the waters of the Adzhalyk estuary of the Port of Pivdennyi.\n\n### Goals\n\nCreate a modern, recognisable brand for a leading agro terminal — emphasising innovation, sustainability, and reliability in agribusiness. Design a new logo, colour palette, and typography that work across print and digital touchpoints.\n\n### Developed\n\nBranding\n\nSouvenirs\n\nPrinted materials\n\n[IMG: media/terminal-borivaje/hero.webp]\n\n[IMG: media/terminal-borivaje/01.webp]\n\n[IMG: media/terminal-borivaje/02.webp]\n\n[IMG: media/terminal-borivaje/03.webp]\n\n[IMG: media/terminal-borivaje/04.webp]\n\n[IMG: media/terminal-borivaje/05.webp]\n\n[IMG: media/terminal-borivaje/06.webp]\n\n[IMG: media/terminal-borivaje/07.webp]\n\n[IMG: media/terminal-borivaje/08.webp]\n\n[IMG: media/terminal-borivaje/10.webp]\n\n[IMG: media/terminal-borivaje/09.webp]\n\n[IMG: media/terminal-borivaje/13.webp]\n\n[IMG: media/terminal-borivaje/14.webp]\n\n[IMG: media/terminal-borivaje/15.webp]\n\n[IMG: media/terminal-borivaje/16.webp]\n\n[IMG: media/terminal-borivaje/17.webp]\n\n[IMG: media/terminal-borivaje/11.webp]\n\n[IMG: media/terminal-borivaje/12.webp]"
-  },
-  {
-    "slug": "tbiliso",
-    "title": "Tbiliso",
-    "description": "We rebranded Tbiliso — a Georgian restaurant in Kyiv: new identity, packaging, print, SMM, and branded merch.",
-    "cover": "/assets/cases/tbiliso/cover.png",
-    "media": [
-      "media/tbiliso/cover.png",
-      "media/tbiliso/hero.png",
-      "media/tbiliso/01.png",
-      "media/tbiliso/02.webp",
-      "media/tbiliso/03.webp",
-      "media/tbiliso/04.webp",
-      "media/tbiliso/05.webp",
-      "media/tbiliso/06.webp",
-      "media/tbiliso/07.webp",
-      "media/tbiliso/08.webp",
-      "media/tbiliso/09.webp",
-      "media/tbiliso/10.webp",
-      "media/tbiliso/11.webp",
-      "media/tbiliso/12.webp",
-      "media/tbiliso/14.webp",
-      "media/tbiliso/15.webp",
-      "media/tbiliso/16.webp",
-      "media/tbiliso/13.webp"
-    ],
-    "body": "### Client\n\nTbiliso is a Georgian restaurant in the heart of Kyiv — a place built around authentic cuisine and hospitality.\n\n### Goals\n\nRefresh the visual identity, packaging, and communication to reflect warmth and authenticity, strengthen positioning, and grow recognition among guests.\n\n### Developed\n\nBranding\n\nDesign\n\nSMM\n\nPrinted materials\n\nIdentity\n\n[IMG: media/tbiliso/hero.png]\n\n[IMG: media/tbiliso/01.png]\n\n[IMG: media/tbiliso/02.webp]\n\n[IMG: media/tbiliso/03.webp]\n\n[IMG: media/tbiliso/04.webp]\n\n[IMG: media/tbiliso/05.webp]\n\n[IMG: media/tbiliso/06.webp]\n\n[IMG: media/tbiliso/07.webp]\n\n[IMG: media/tbiliso/08.webp]\n\n[IMG: media/tbiliso/09.webp]\n\n[IMG: media/tbiliso/10.webp]\n\n[IMG: media/tbiliso/11.webp]\n\n[IMG: media/tbiliso/12.webp]\n\n[IMG: media/tbiliso/14.webp]\n\n[IMG: media/tbiliso/15.webp]\n\n[IMG: media/tbiliso/16.webp]\n\n[IMG: media/tbiliso/13.webp]"
-  },
-  {
     "slug": "nadiya-odesa",
     "title": "Nadiya Odesa",
     "description": "We developed branding and identity for Nadiya Odesa — a reproductive medicine clinic. Also website design, print, and souvenirs.",

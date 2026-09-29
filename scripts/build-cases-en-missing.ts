@@ -3,8 +3,6 @@ import casesRu from "../src/i18n/cases/cases.ru";
 import type { CaseItem } from "../src/i18n/cases/types";
 
 const MISSING = [
-  "terminal-borivaje",
-  "tbiliso",
   "nadiya-odesa",
   "insb",
   "akula-mama",
@@ -23,26 +21,6 @@ type Summary = {
 };
 
 const SUMMARY: Record<(typeof MISSING)[number], Summary> = {
-  "terminal-borivaje": {
-    title: "Terminal Borivaje",
-    description:
-      "We developed branding and a logo for Terminal Borivaje — an agro terminal in Odesa region. Also print and souvenir products.",
-    client:
-      "The terminal is located in Novi Bilyari, Odesa region, in the waters of the Adzhalyk estuary of the Port of Pivdennyi.",
-    goals:
-      "Create a modern, recognisable brand for a leading agro terminal — emphasising innovation, sustainability, and reliability in agribusiness. Design a new logo, colour palette, and typography that work across print and digital touchpoints.",
-    developed: "Branding\n\nSouvenirs\n\nPrinted materials",
-  },
-  tbiliso: {
-    title: "Tbiliso",
-    description:
-      "We rebranded Tbiliso — a Georgian restaurant in Kyiv: new identity, packaging, print, SMM, and branded merch.",
-    client:
-      "Tbiliso is a Georgian restaurant in the heart of Kyiv — a place built around authentic cuisine and hospitality.",
-    goals:
-      "Refresh the visual identity, packaging, and communication to reflect warmth and authenticity, strengthen positioning, and grow recognition among guests.",
-    developed: "Branding\n\nDesign\n\nSMM\n\nPrinted materials\n\nIdentity",
-  },
   "nadiya-odesa": {
     title: "Nadiya Odesa",
     description:

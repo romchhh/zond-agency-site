@@ -1,6 +1,7 @@
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalePath } from "@/i18n/routing";
+import { formatSitePhone, siteConfig } from "@/lib/site";
 
 type FooterProps = {
   dictionary: Dictionary;
@@ -32,12 +33,12 @@ export default function Footer({ dictionary, locale = "uk" }: FooterProps) {
             </div>
 
             <div className="footer-right">
-              <a className="footer-link" href="mailto:hello@zond.agency">
-                hello@zond.agency
+              <a className="footer-link" href={`mailto:${siteConfig.email}`}>
+                {siteConfig.email}
               </a>
               <span className="footer-divider" aria-hidden="true" />
-              <a className="footer-link" href="tel:+380961234567">
-                +38 096 123 45 67
+              <a className="footer-link" href={`tel:${siteConfig.phone}`}>
+                {formatSitePhone(siteConfig.phone)}
               </a>
               <span className="footer-divider" aria-hidden="true" />
               <div className="footer-social">

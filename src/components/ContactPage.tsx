@@ -3,18 +3,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionary";
-import { siteConfig } from "@/lib/site";
+import { formatSitePhone, siteConfig } from "@/lib/site";
 
 type ContactPageProps = {
   locale: Locale;
   dictionary: Dictionary;
 };
-
-function formatPhone(phone: string): string {
-  const digits = phone.replace(/\D/g, "");
-  if (digits.length !== 12 || !digits.startsWith("380")) return phone;
-  return `+38 ${digits.slice(2, 5)} ${digits.slice(5, 8)} ${digits.slice(8, 10)} ${digits.slice(10, 12)}`;
-}
 
 export default function ContactPage({ locale, dictionary }: ContactPageProps) {
   const copy = dictionary.contactPage;
@@ -30,7 +24,7 @@ export default function ContactPage({ locale, dictionary }: ContactPageProps) {
     {
       key: "phone",
       label: copy.phoneLabel,
-      value: formatPhone(siteConfig.phone),
+      value: formatSitePhone(siteConfig.phone),
       href: `tel:${siteConfig.phone}`,
       external: false,
     },

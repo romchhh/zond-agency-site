@@ -8,6 +8,8 @@ import { getPackagingBlocks, packagingCopy, packagingShared } from "../packaging
 import { getKavloraBlocks, kavloraCopy, kavloraShared } from "./kavlora";
 import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv-tourism-department";
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
+import { getTerminalBorivajeBlocks, terminalBorivajeCopy, terminalBorivajeShared } from "./terminal-borivaje";
+import { getTbilisoBlocks, tbilisoCopy, tbilisoShared } from "./tbiliso";
 import type { CaseItem } from "./types";
 
 
@@ -88,6 +90,28 @@ const cases: CaseItem[] = [
     serviceTag: bitSchoolCopy.en.serviceTag,
     body: bitSchoolShared.body,
     blocks: getBitSchoolBlocks("en"),
+  },
+  {
+    slug: terminalBorivajeShared.slug,
+    title: terminalBorivajeCopy.en.title,
+    description: terminalBorivajeCopy.en.description,
+    cover: terminalBorivajeShared.cover,
+    media: terminalBorivajeShared.media,
+    tagline: terminalBorivajeCopy.en.tagline,
+    serviceTag: terminalBorivajeCopy.en.serviceTag,
+    body: terminalBorivajeShared.body,
+    blocks: getTerminalBorivajeBlocks("en"),
+  },
+  {
+    slug: tbilisoShared.slug,
+    title: tbilisoCopy.en.title,
+    description: tbilisoCopy.en.description,
+    cover: tbilisoShared.cover,
+    media: tbilisoShared.media,
+    tagline: tbilisoCopy.en.tagline,
+    serviceTag: tbilisoCopy.en.serviceTag,
+    body: tbilisoShared.body,
+    blocks: getTbilisoBlocks("en"),
   },
   {
     slug: kavloraShared.slug,

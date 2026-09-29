@@ -3,10 +3,6 @@ import type { Locale } from "@/i18n/config";
 
 const m = (file: string) => `/assets/cases/altep/${file}`;
 
-const capUk = (n: number) => `ALTEP — айдентика та застосування ${n}`;
-const capRu = (n: number) => `ALTEP — айдентика и применения ${n}`;
-const capEn = (n: number) => `ALTEP — identity and applications ${n}`;
-
 const altepMedia = Array.from({ length: 18 }, (_, index) => {
   const n = index + 1;
   return `media/altep/${String(n).padStart(2, "0")}.webp`;
@@ -35,8 +31,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("02.webp"), caption: capUk(2) },
-      { src: m("03.webp"), caption: capUk(3) },
+      { src: m("02.webp"), caption: "3D-логотип" },
+      { src: m("03.webp"), caption: "Типографіка бренду" },
     ],
   },
   {
@@ -70,8 +66,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("04.webp"), caption: capUk(4) },
-      { src: m("05.webp"), caption: capUk(5) },
+      { src: m("04.webp"), caption: "Каталог продукції" },
+      { src: m("05.webp"), caption: "Дизайн сайту" },
     ],
   },
   {
@@ -93,19 +89,19 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("06.webp"), caption: capUk(6) }],
+    images: [{ src: m("06.webp"), caption: "Колірна палітра" }],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("07.webp"), caption: capUk(7) }],
+    images: [{ src: m("07.webp"), caption: "Рекламна комунікація" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("08.webp"), caption: capUk(8) },
-      { src: m("09.webp"), caption: capUk(9) },
+      { src: m("08.webp"), caption: "Зовнішня реклама" },
+      { src: m("09.webp"), caption: "Сітілайт" },
     ],
   },
   {
@@ -130,38 +126,38 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("10.webp"), caption: capUk(10) },
-      { src: m("11.webp"), caption: capUk(11) },
+      { src: m("10.webp"), caption: "Брендування смартфона" },
+      { src: m("11.webp"), caption: "Фірмова пакувальна стрічка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("12.webp"), caption: capUk(12) },
-      { src: m("13.webp"), caption: capUk(13) },
+      { src: m("12.webp"), caption: "Розворот каталогу" },
+      { src: m("13.webp"), caption: "Фасадна вивіска" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("14.webp"), caption: capUk(14) },
-      { src: m("15.webp"), caption: capUk(15) },
+      { src: m("14.webp"), caption: "Брендування обладнання" },
+      { src: m("15.webp"), caption: "Оформлення соцмереж" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("16.webp"), caption: capUk(16) },
-      { src: m("17.webp"), caption: capUk(17) },
+      { src: m("16.webp"), caption: "Презентація на планшеті" },
+      { src: m("17.webp"), caption: "Брендована кепка" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("18.webp"), caption: capUk(18) }],
+    images: [{ src: m("18.webp"), caption: "Презентація на ноутбуці" }],
   },
   {
     type: "section",
@@ -188,6 +184,46 @@ const blocksUk: CaseVisualBlock[] = [
     note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
   },
 ];
+
+const altepGalleryCaptionsRu: Record<string, string> = {
+  [m("02.webp")]: "3D-логотип",
+  [m("03.webp")]: "Типографика бренда",
+  [m("04.webp")]: "Каталог продукции",
+  [m("05.webp")]: "Дизайн сайта",
+  [m("06.webp")]: "Цветовая палитра",
+  [m("07.webp")]: "Рекламная коммуникация",
+  [m("08.webp")]: "Наружная реклама",
+  [m("09.webp")]: "Ситилайт",
+  [m("10.webp")]: "Брендирование смартфона",
+  [m("11.webp")]: "Фирменная упаковочная лента",
+  [m("12.webp")]: "Разворот каталога",
+  [m("13.webp")]: "Фасадная вывеска",
+  [m("14.webp")]: "Брендирование оборудования",
+  [m("15.webp")]: "Оформление соцсетей",
+  [m("16.webp")]: "Презентация на планшете",
+  [m("17.webp")]: "Брендированная кепка",
+  [m("18.webp")]: "Презентация на ноутбуке",
+};
+
+const altepGalleryCaptionsEn: Record<string, string> = {
+  [m("02.webp")]: "3D logo",
+  [m("03.webp")]: "Brand typography",
+  [m("04.webp")]: "Product catalog",
+  [m("05.webp")]: "Website design",
+  [m("06.webp")]: "Color palette",
+  [m("07.webp")]: "Advertising communication",
+  [m("08.webp")]: "Outdoor advertising",
+  [m("09.webp")]: "City light",
+  [m("10.webp")]: "Phone branding",
+  [m("11.webp")]: "Branded packing tape",
+  [m("12.webp")]: "Catalog spread",
+  [m("13.webp")]: "Facade signage",
+  [m("14.webp")]: "Equipment branding",
+  [m("15.webp")]: "Social media design",
+  [m("16.webp")]: "Tablet presentation",
+  [m("17.webp")]: "Branded cap",
+  [m("18.webp")]: "Laptop presentation",
+};
 
 const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
   if (block.type === "section" && block.index === "01") {
@@ -307,11 +343,10 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
   if (block.type === "gallery") {
     return {
       ...block,
-      images: block.images.map((img) => {
-        const match = img.src.match(/(\d+)\.webp$/);
-        const n = match ? Number(match[1]) : 0;
-        return { ...img, caption: capRu(n) };
-      }),
+      images: block.images.map((img) => ({
+        ...img,
+        caption: altepGalleryCaptionsRu[img.src] ?? img.caption,
+      })),
     };
   }
   return block;
@@ -433,11 +468,10 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
   if (block.type === "gallery") {
     return {
       ...block,
-      images: block.images.map((img) => {
-        const match = img.src.match(/(\d+)\.webp$/);
-        const n = match ? Number(match[1]) : 0;
-        return { ...img, caption: capEn(n) };
-      }),
+      images: block.images.map((img) => ({
+        ...img,
+        caption: altepGalleryCaptionsEn[img.src] ?? img.caption,
+      })),
     };
   }
   return block;
