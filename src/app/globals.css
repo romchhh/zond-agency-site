@@ -2730,33 +2730,33 @@ a.service-card {
   }
 
   #services .service-card--icon {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
   }
 
   #services .service-card--icon .service-icon-slot {
     flex: 1 1 auto;
-    padding: 16px 8px 4px;
-    min-height: clamp(96px, 38vw, 152px);
+    padding: 12px 6px 2px;
+    min-height: clamp(128px, 48vw, 210px);
   }
 
   #services .service-card--icon .service-visual--icon {
     width: min(100%, 100%);
     max-width: none;
     height: 100%;
-    min-height: clamp(84px, 36vw, 148px);
+    min-height: clamp(116px, 46vw, 200px);
   }
 
   #services .service-card--icon .service-visual--icon img {
     width: 100%;
     height: 100%;
     max-width: 100%;
-    max-height: clamp(84px, 36vw, 148px);
+    max-height: clamp(116px, 46vw, 200px);
     object-fit: contain;
     object-position: center center;
   }
 
   #services .service-card--icon .service-copy {
-    padding: 0 12px 14px;
+    padding: 0 10px 12px;
   }
 
   #services .service-card--icon .service-copy p {
