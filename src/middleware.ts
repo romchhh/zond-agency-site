@@ -2,22 +2,37 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 import { resolveLegacyRewrite } from "@/i18n/routing";
+import { shouldBlockSearchIndexing } from "@/lib/site";
+
+function applyIndexingHeaders(response: NextResponse, host: string) {
+  if (shouldBlockSearchIndexing(host)) {
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
+  return response;
+}
 
 function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) {
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-locale", locale);
+  const host = request.nextUrl.hostname;
 
   if (rewritePath) {
     const rewriteUrl = request.nextUrl.clone();
     rewriteUrl.pathname = rewritePath;
-    return NextResponse.rewrite(rewriteUrl, {
-      request: { headers: requestHeaders },
-    });
+    return applyIndexingHeaders(
+      NextResponse.rewrite(rewriteUrl, {
+        request: { headers: requestHeaders },
+      }),
+      host,
+    );
   }
 
-  return NextResponse.next({
-    request: { headers: requestHeaders },
-  });
+  return applyIndexingHeaders(
+    NextResponse.next({
+      request: { headers: requestHeaders },
+    }),
+    host,
+  );
 }
 
 export function middleware(request: NextRequest) {
@@ -25,7 +40,10 @@ export function middleware(request: NextRequest) {
 
   if (pathname === "/uk" || pathname.startsWith("/uk/")) {
     const nextPath = pathname.replace(/^\/uk/, "") || "/";
-    return NextResponse.redirect(new URL(nextPath, request.url));
+    return applyIndexingHeaders(
+      NextResponse.redirect(new URL(nextPath, request.url)),
+      request.nextUrl.hostname,
+    );
   }
 
   const legacyRewrite = resolveLegacyRewrite(pathname);

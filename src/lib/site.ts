@@ -48,14 +48,58 @@ function normalizeSiteUrl(raw: string | undefined): string {
   }
 }
 
-export function getSiteUrl(): string {
-  const fromEnv = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
-  if (fromEnv !== DEFAULT_SITE_URL) return fromEnv;
+const CANONICAL_HOSTS = new Set(["zond.agency", "www.zond.agency"]);
 
-  const vercelUrl = process.env.VERCEL_URL?.trim();
-  if (vercelUrl) {
-    return normalizeSiteUrl(`https://${vercelUrl}`);
+/** Production canonical origin for metadata, sitemap, and JSON-LD. */
+export function getCanonicalSiteUrl(): string {
+  return normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
+}
+
+export function getSiteUrl(): string {
+  return getCanonicalSiteUrl();
+}
+
+function normalizeHost(host: string | null | undefined): string | null {
+  const value = host?.trim().toLowerCase();
+  if (!value) return null;
+  return value.split(":")[0] ?? null;
+}
+
+/**
+ * Block indexing on Vercel previews, local dev, and non-production hosts (e.g. *.vercel.app).
+ * Set NEXT_PUBLIC_INDEXING_ENABLED=true on the production Vercel project when zond.agency goes live.
+ */
+export function shouldBlockSearchIndexing(host?: string | null): boolean {
+  const normalizedHost = normalizeHost(host);
+
+  if (normalizedHost) {
+    if (normalizedHost === "localhost" || normalizedHost === "127.0.0.1") {
+      return true;
+    }
+    if (CANONICAL_HOSTS.has(normalizedHost)) {
+      return false;
+    }
+    return true;
   }
 
-  return DEFAULT_SITE_URL;
+  if (process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true") {
+    return false;
+  }
+
+  if (
+    process.env.VERCEL_ENV === "preview" ||
+    process.env.VERCEL_ENV === "development"
+  ) {
+    return true;
+  }
+
+  if (process.env.VERCEL === "1") {
+    return true;
+  }
+
+  if (process.env.NODE_ENV !== "production") {
+    return true;
+  }
+
+  return false;
 }

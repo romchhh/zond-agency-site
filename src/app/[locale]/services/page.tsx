@@ -38,7 +38,7 @@ export default async function ServicesIndexPage({
     <>
       <Header locale={locale} dictionary={dictionary} />
       <main className="sp">
-        <Services locale={locale} dictionary={dictionary} />
+        <Services locale={locale} dictionary={dictionary} titleAs="h1" />
         <ServicesAbout locale={locale} />
         <section className="sp-cta">
           <div className="wrap">

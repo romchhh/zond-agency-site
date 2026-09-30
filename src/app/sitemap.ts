@@ -14,10 +14,10 @@ import {
   getServiceDetailPath,
   getServiceIndexPath,
 } from "@/i18n/routing";
-import { getSiteUrl } from "@/lib/site";
+import { getCanonicalSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = getSiteUrl();
+  const siteUrl = getCanonicalSiteUrl();
   const lastModified = new Date();
 
   const localeEntries = locales.map((locale) => ({

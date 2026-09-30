@@ -202,7 +202,7 @@ const uk: ServicePageContent = {
     { alt: "Графіка на мерчі", caption: "Мерч" },
     { alt: "Графіка в соцмережах", caption: "Соцмережі" },
     { alt: "Принт на одязі", caption: "Одяг" },
-    { alt: "Графіка на пакуванні", caption: "Пакування" },
+    { alt: "Графіка на упаковці", caption: "Упаковка" },
     { alt: "Графіка на зовнішній рекламі", caption: "Outdoor" },
   ]),
   formTitle: "Потрібна графіка, яка працює на впізнаваність?",
@@ -254,7 +254,7 @@ const uk: ServicePageContent = {
   relatedTitle: "Суміжні послуги",
   related: [
     { title: "Брендинг", slug: "branding" },
-    { title: "Пакування", slug: "packaging" },
+    { title: "Упаковка", slug: "packaging" },
     { title: "Ілюстрація", slug: "illustration" },
   ],
 };

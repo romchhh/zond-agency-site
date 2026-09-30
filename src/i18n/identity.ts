@@ -267,7 +267,7 @@ const uk: ServicePageContent = {
     {
         "src": "/services/identity/identity-04.png",
         "alt": "Ілюстративне застосування: айдентика на упаковці та пакеті",
-        "caption": "Пакування"
+        "caption": "Упаковка"
     },
     {
         "src": "/services/identity/identity-05.png",

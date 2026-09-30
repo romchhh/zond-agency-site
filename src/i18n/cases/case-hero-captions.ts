@@ -54,7 +54,7 @@ const HERO_CAPTIONS: HeroCaptions = {
     en: "ALTEP — refreshed identity",
   },
   packaging: {
-    uk: "Пакування — обкладинка добірки",
+    uk: "Упаковка — обкладинка добірки",
     ru: "Упаковка — обложка подборки",
     en: "Packaging — collection cover",
   },

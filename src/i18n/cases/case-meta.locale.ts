@@ -39,7 +39,7 @@ export const CASE_SERVICE_TAGS: Record<string, Record<Locale, string>> = {
     "SMM · Graphic design",
   ),
   "akula-mama": ltag(
-    "Пакування · Брендинг · Лого · Брендбук",
+    "Упаковка · Брендинг · Лого · Брендбук",
     "Упаковка · Брендинг · Лого · Брендбук",
     "Packaging · Branding · Logo · Brand book",
   ),
@@ -59,7 +59,7 @@ export const CASE_SERVICE_TAGS: Record<string, Record<Locale, string>> = {
     "Logo · Brand book · Identity",
   ),
   goshchanochka: ltag(
-    "Брендинг · Лого · Пакування",
+    "Брендинг · Лого · Упаковка",
     "Брендинг · Лого · Упаковка",
     "Branding · Logo · Packaging",
   ),
@@ -367,7 +367,7 @@ export const CASE_TESTIMONIALS: Record<string, LocalizedTestimonial> = {
     uk: {
       heading: "Погляд команди\nГощаночка.",
       paragraphs: [
-        "Дякуємо команді ZOND за розробку бренду, логотипа та пакування для «Гощаночки». Для нас було важливо, щоб продукт виділявся на полиці та відповідав характеру виробника.",
+        "Дякуємо команді ZOND за розробку бренду, логотипа та упаковку для «Гощаночки». Для нас було важливо, щоб продукт виділявся на полиці та відповідав характеру виробника.",
         "У роботі приділили увагу тому, як бренд виглядає саме в пакованні — це головний контакт покупця з продуктом. Вдячні за увагу до цих деталей.",
       ],
       author: "Ольга",

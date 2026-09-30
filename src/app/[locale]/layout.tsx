@@ -6,7 +6,11 @@ import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { createPageMetadata } from "@/lib/metadata";
 import { media } from "@/lib/media";
-import { getSiteUrl, siteConfig } from "@/lib/site";
+import {
+  getCanonicalSiteUrl,
+  shouldBlockSearchIndexing,
+  siteConfig,
+} from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -21,7 +25,8 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
 
   const dictionary = await getDictionary(locale);
-  const siteUrl = getSiteUrl();
+  const siteUrl = getCanonicalSiteUrl();
+  const blockIndexing = shouldBlockSearchIndexing();
 
   return {
     metadataBase: new URL(siteUrl),
@@ -31,17 +36,26 @@ export async function generateMetadata({
     creator: siteConfig.name,
     publisher: siteConfig.name,
     category: "Branding",
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-        "max-video-preview": -1,
-      },
-    },
+    robots: blockIndexing
+      ? {
+          index: false,
+          follow: false,
+          googleBot: {
+            index: false,
+            follow: false,
+          },
+        }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+          },
+        },
     icons: {
       icon: media.logo,
       shortcut: media.logo,

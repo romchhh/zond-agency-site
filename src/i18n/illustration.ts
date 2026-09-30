@@ -210,7 +210,7 @@ const uk: ServicePageContent = {
     { alt: "Стікери з персонажем бренду", caption: "Мерч" },
     { alt: "Ілюстрації в соцмережах", caption: "Соцмережі" },
     { alt: "Принт із героєм на одязі", caption: "Одяг" },
-    { alt: "Ілюстрація на пакуванні", caption: "Пакування" },
+    { alt: "Ілюстрація на упаковці", caption: "Упаковка" },
     { alt: "Ілюстрація на зовнішній рекламі", caption: "Outdoor" },
   ]),
   formTitle: "Розкажіть про своє завдання",
@@ -261,7 +261,7 @@ const uk: ServicePageContent = {
   ],
   relatedTitle: "Суміжні послуги",
   related: [
-    { title: "Пакування", slug: "packaging" },
+    { title: "Упаковка", slug: "packaging" },
     { title: "Брендинг", slug: "branding" },
     { title: "Брендбук", slug: "brandbook" },
   ],

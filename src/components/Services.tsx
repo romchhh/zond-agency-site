@@ -9,16 +9,22 @@ import Link from "next/link";
 type ServicesProps = {
   locale: Locale;
   dictionary: Dictionary;
+  titleAs?: "h1" | "h2";
 };
 
-export default function Services({ locale, dictionary }: ServicesProps) {
+export default function Services({
+  locale,
+  dictionary,
+  titleAs = "h2",
+}: ServicesProps) {
   const { services } = dictionary;
+  const TitleTag = titleAs;
 
   return (
     <section className="section" id="services">
       <div className="wrap">
         <div className="section-head">
-          <h2 className="section-title">{services.title}</h2>
+          <TitleTag className="section-title">{services.title}</TitleTag>
         </div>
         <div className="services-grid">
           {services.items.map((service) => {

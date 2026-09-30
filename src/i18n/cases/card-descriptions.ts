@@ -13,7 +13,7 @@ export const caseCardDescriptions: Record<Locale, Record<string, string>> = {
     "home-hub": "Home & living",
     "terminal-borivaje": "Агротермінал",
     altep: "Опалювальне обладнання",
-    packaging: "Дизайн пакування",
+    packaging: "Дизайн упаковки",
     "techno-group": "Інженерна компанія",
     tbiliso: "Грузинський ресторан",
     "nadiya-odesa": "Клініка репродукції",

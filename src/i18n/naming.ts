@@ -265,7 +265,7 @@ const uk: ServicePageContent = {
     {
         "src": "/services/naming/naming-04.png",
         "alt": "Ілюстративний приклад застосування назви: упаковка продукту",
-        "caption": "Пакування"
+        "caption": "Упаковка"
     },
     {
         "src": "/services/naming/naming-05.png",

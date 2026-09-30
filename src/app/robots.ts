@@ -1,8 +1,20 @@
 import type { MetadataRoute } from "next";
-import { getSiteUrl } from "@/lib/site";
+import {
+  getCanonicalSiteUrl,
+  shouldBlockSearchIndexing,
+} from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = getSiteUrl();
+  const siteUrl = getCanonicalSiteUrl();
+
+  if (shouldBlockSearchIndexing()) {
+    return {
+      rules: {
+        userAgent: "*",
+        disallow: "/",
+      },
+    };
+  }
 
   return {
     rules: [

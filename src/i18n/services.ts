@@ -36,10 +36,30 @@ export const heroServiceSlugs: ServiceSlug[] = [
   "logo",
 ];
 
+/**
+ * Grid card index (01–12) → icon file in public/assets/services/icons/.
+ * File numbers describe the artwork batch; cards follow the services grid order.
+ */
+const serviceGridIconFileByCardIndex: Record<string, string> = {
+  "01": "01", // стратегія
+  "02": "02", // позиціонування
+  "03": "03", // неймінг
+  "04": "05", // логотип
+  "05": "04", // айдентика
+  "06": "06", // брендбук
+  "07": "10", // слоган і комунікація
+  "08": "11", // персонаж бренду
+  "09": "07", // упаковка
+  "10": "08", // графічний дизайн
+  "11": "12", // веб-розробка
+  "12": "09", // SMM
+};
+
 /** Grid card index (01–12) → illustration icon (replaces photo in UI; photos kept in dictionary). */
 export function getServiceGridIconSrc(cardIndex: string): string {
   const normalized = cardIndex.padStart(2, "0");
-  return `/assets/services/icons/${normalized}.png`;
+  const file = serviceGridIconFileByCardIndex[normalized] ?? normalized;
+  return `/assets/services/icons/${file}.png`;
 }
 
 /** Card index (01–12) → service detail slug for the homepage /services grid. */
@@ -65,7 +85,7 @@ export const serviceTitles: Record<Locale, Record<ServiceSlug, string>> = {
     graphics: "Графічний дизайн",
     smm: "SMM",
     illustration: "Ілюстрація",
-    packaging: "Пакування",
+    packaging: "Упаковка",
     "influence-marketing": "Інфлюенс маркетинг",
     identity: "Айдентика",
     naming: "Неймінг",
@@ -146,7 +166,7 @@ export const serviceMeta: Record<
         "Стокові картинки забувають одразу. Комерційна ілюстрація на замовлення. Персонажі, комікси й графіка для упаковки, сайту й реклами. Студія ZOND.",
     },
     packaging: {
-      title: "Дизайн пакування та етикетки — ZOND",
+      title: "Дизайн упаковки та етикетки — ZOND",
       description:
         "Дизайн упаковки та етикетки: концепція, 3D-мокапи, адаптації для SKU та макети, готові до друку. Створюємо упаковки, які привертають увагу й продають на полиці.",
     },

@@ -267,7 +267,7 @@ const uk: ServicePageContent = {
     {
         "src": "/services/brand-character/mascot-04.png",
         "alt": "Ілюстративне застосування: персонаж бренду на упаковці",
-        "caption": "Пакування"
+        "caption": "Упаковка"
     },
     {
         "src": "/services/brand-character/mascot-05.png",

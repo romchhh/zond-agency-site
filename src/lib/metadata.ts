@@ -8,13 +8,17 @@ import {
 } from "@/i18n/routing";
 import type { Dictionary } from "@/i18n/dictionary";
 import { media } from "@/lib/media";
-import { getSiteUrl, siteConfig } from "@/lib/site";
+import { getCanonicalSiteUrl, siteConfig } from "@/lib/site";
+
+function siteOrigin() {
+  return getCanonicalSiteUrl();
+}
 
 export function createPageMetadata(
   locale: Locale,
   dictionary: Dictionary,
 ): Metadata {
-  const siteUrl = getSiteUrl();
+  const siteUrl = siteOrigin();
   const pageUrl = getLocalizedUrl(siteUrl, locale);
   const { meta } = dictionary;
   const { ogLocale } = localeMeta[locale];
@@ -75,7 +79,7 @@ export function createPathMetadata(
   meta: { title: string; description: string },
   image?: string,
 ): Metadata {
-  const siteUrl = getSiteUrl();
+  const siteUrl = siteOrigin();
   const pageUrl = getLocalizedUrl(siteUrl, locale, pathname);
   const { ogLocale } = localeMeta[locale];
   const ogImage = image || media.ogImage;
