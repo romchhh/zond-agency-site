@@ -87,7 +87,7 @@ export type CaseVisualBlock =
       heading?: string;
       paragraphs: string[];
       author: string;
-      role: string;
+      role?: string;
       badge?: string;
       note?: string;
     };

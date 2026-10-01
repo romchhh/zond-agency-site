@@ -487,7 +487,6 @@ function renderBlock(
           <figure className="quote-card">
             <div className="quote-intro">
               <span className="quote-mark" aria-hidden="true">“</span>
-              {block.badge ? <span className="quote-badge">{block.badge}</span> : null}
             </div>
             <blockquote>
               {block.paragraphs.map((paragraph, index) => (
@@ -498,10 +497,9 @@ function renderBlock(
               <span className="review-monogram" aria-hidden="true">{caseMonogram(context.caseTitle)}</span>
               <div>
                 <strong>{block.author}</strong>
-                <span>{block.role}</span>
+                {block.role ? <span>{block.role}</span> : null}
               </div>
             </figcaption>
-            {block.note ? <p className="review-note">{block.note}</p> : null}
           </figure>
         </section>
       );

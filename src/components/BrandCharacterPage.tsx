@@ -21,6 +21,7 @@ export default function BrandCharacterPage({
       dictionary={dictionary}
       projects={projects}
       copy={brandCharacterPage[locale]}
+      serviceSlug="brand-character"
       seo={getBrandCharacterSeo(locale)}
       heroImage="/services/brand-character/mascot-01.png"
     />

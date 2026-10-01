@@ -21,6 +21,7 @@ export default function IdentityPage({
       dictionary={dictionary}
       projects={projects}
       copy={identityPage[locale]}
+      serviceSlug="identity"
       seo={getIdentitySeo(locale)}
       heroImage="/services/identity/identity-01.png"
     />

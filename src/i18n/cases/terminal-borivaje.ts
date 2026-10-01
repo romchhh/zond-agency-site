@@ -168,14 +168,12 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nTerminal Borivaje.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Нам був потрібен бренд, який відображає масштаб роботи терміналу й водночас лишається чітким у щоденних матеріалах. Ми хотіли говорити з партнерами сучасною та впізнаваною візуальною мовою.",
       "Нова система допомагає послідовно представляти Terminal Borivaje на різних носіях — від ділових документів до фірмової продукції».",
     ],
     author: "Команда Terminal Borivaje",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
@@ -303,14 +301,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nTerminal Borivaje.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Нам нужен был бренд, который отражает масштаб работы терминала и при этом остаётся чётким в ежедневных материалах. Мы хотели говорить с партнёрами современным узнаваемым визуальным языком.",
         "Новая система помогает последовательно представлять Terminal Borivaje на разных носителях — от деловых документов до фирменной продукции».",
       ],
       author: "Команда Terminal Borivaje",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -421,14 +417,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT FEEDBACK",
       heading: "The Terminal Borivaje\nteam’s view.",
-      badge: "Text for client approval",
       paragraphs: [
         "“We needed a brand that reflects the scale of the terminal’s operations while staying clear in everyday materials. We wanted to speak to partners in a modern, recognisable visual language.",
         "The new system helps us present Terminal Borivaje consistently — from business documents to branded products.”",
       ],
       author: "Terminal Borivaje team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real testimonial. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

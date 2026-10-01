@@ -30,8 +30,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("02.webp"), caption: "Знак на фасаді виробництва" },
-      { src: m("03.webp"), caption: "Шрифт KAVLORA" },
+      { src: m("02.webp"), caption: "Варіанти логотипу" },
+      { src: m("03.webp"), caption: "Типографіка бренду" },
     ],
   },
   {
@@ -55,7 +55,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("04.webp"), caption: "Корпоративна каска" }],
+    images: [{ src: m("04.webp"), caption: "Вивіска на фасаді" }],
   },
   {
     type: "section",
@@ -76,14 +76,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("05.webp"), caption: "Фірмовий одяг" }],
+    images: [{ src: m("05.webp"), caption: "Колірна палітра" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("06.webp"), caption: "Логотип та графічний елемент" },
-      { src: m("07.webp"), caption: "Сумка KAVLORA" },
+      { src: m("06.webp"), caption: "Фірмовий худі" },
+      { src: m("07.webp"), caption: "Корпоративна каска" },
     ],
   },
   {
@@ -107,43 +107,43 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("08.webp"), caption: "Брендована кепка" },
-      { src: m("09.webp"), caption: "Колірна система та фактури" },
+      { src: m("08.webp"), caption: "Візитівка" },
+      { src: m("09.webp"), caption: "Брендована кепка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("10.webp"), caption: "Візитівки" },
-      { src: m("11.webp"), caption: "Корпоративні футболки" },
+      { src: m("10.webp"), caption: "Фірмові підставки" },
+      { src: m("11.webp"), caption: "Презентація на ноутбуці" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("12.webp"), caption: "Мобільна реклама" },
-      { src: m("13.webp"), caption: "Фірмовий одяг — застосування графіки" },
+      { src: m("12.webp"), caption: "Мобільна версія сайту" },
+      { src: m("13.webp"), caption: "Фірмова сумка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("14.webp"), caption: "Вебматеріали KAVLORA" },
-      { src: m("15.webp"), caption: "Цифрова реклама" },
+      { src: m("14.webp"), caption: "Презентація на планшеті" },
+      { src: m("15.webp"), caption: "Фірмова стрічка" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("16.webp"), caption: "Фірмовий бланк" }],
+    images: [{ src: m("16.webp"), caption: "Корпоративні футболки" }],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("17.webp"), caption: "Айдентика на носіях" }],
+    images: [{ src: m("17.webp"), caption: "Візитівки" }],
   },
   {
     type: "section",
@@ -160,53 +160,51 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nKAVLORA.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Нам було важливо показати в бренді те, що ми цінуємо у виробництві: матеріал, точність і відповідальність за результат. Візуальна система мала виглядати сучасно та залишатися практичною.",
       "Запропонований напрям допомагає нам послідовно оформлювати комунікацію — від документації та реклами до корпоративного одягу».",
     ],
     author: "Команда KAVLORA",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
 const kavloraGalleryCaptionsRu: Record<string, string> = {
-  [m("02.webp")]: "Знак на фасаде производства",
-  [m("03.webp")]: "Шрифт KAVLORA",
-  [m("04.webp")]: "Корпоративная каска",
-  [m("05.webp")]: "Фирменная одежда",
-  [m("06.webp")]: "Логотип и графический элемент",
-  [m("07.webp")]: "Сумка KAVLORA",
-  [m("08.webp")]: "Брендированная кепка",
-  [m("09.webp")]: "Цветовая система и фактуры",
-  [m("10.webp")]: "Визитки",
-  [m("11.webp")]: "Корпоративные футболки",
-  [m("12.webp")]: "Мобильная реклама",
-  [m("13.webp")]: "Фирменная одежда — применение графики",
-  [m("14.webp")]: "Веб-материалы KAVLORA",
-  [m("15.webp")]: "Цифровая реклама",
-  [m("16.webp")]: "Фирменный бланк",
-  [m("17.webp")]: "Айдентика на носителях",
+  [m("02.webp")]: "Варианты логотипа",
+  [m("03.webp")]: "Типографика бренда",
+  [m("04.webp")]: "Вывеска на фасаде",
+  [m("05.webp")]: "Цветовая палитра",
+  [m("06.webp")]: "Фирменный худи",
+  [m("07.webp")]: "Корпоративная каска",
+  [m("08.webp")]: "Визитка",
+  [m("09.webp")]: "Брендированная кепка",
+  [m("10.webp")]: "Фирменные подставки",
+  [m("11.webp")]: "Презентация на ноутбуке",
+  [m("12.webp")]: "Мобильная версия сайта",
+  [m("13.webp")]: "Фирменная сумка",
+  [m("14.webp")]: "Презентация на планшете",
+  [m("15.webp")]: "Фирменная лента",
+  [m("16.webp")]: "Корпоративные футболки",
+  [m("17.webp")]: "Визитки",
 };
 
 const kavloraGalleryCaptionsEn: Record<string, string> = {
-  [m("02.webp")]: "Mark on the production facade",
-  [m("03.webp")]: "KAVLORA typeface",
-  [m("04.webp")]: "Corporate hard hat",
-  [m("05.webp")]: "Branded apparel",
-  [m("06.webp")]: "Logo and graphic element",
-  [m("07.webp")]: "KAVLORA bag",
-  [m("08.webp")]: "Branded cap",
-  [m("09.webp")]: "Color system and textures",
-  [m("10.webp")]: "Business cards",
-  [m("11.webp")]: "Corporate T-shirts",
-  [m("12.webp")]: "Mobile advertising",
-  [m("13.webp")]: "Branded apparel — graphics in use",
-  [m("14.webp")]: "KAVLORA web materials",
-  [m("15.webp")]: "Digital advertising",
-  [m("16.webp")]: "Letterhead",
-  [m("17.webp")]: "Identity on touchpoints",
+  [m("02.webp")]: "Logo variants",
+  [m("03.webp")]: "Brand typography",
+  [m("04.webp")]: "Facade signage",
+  [m("05.webp")]: "Color palette",
+  [m("06.webp")]: "Branded hoodie",
+  [m("07.webp")]: "Corporate hard hat",
+  [m("08.webp")]: "Business card",
+  [m("09.webp")]: "Branded cap",
+  [m("10.webp")]: "Branded coasters",
+  [m("11.webp")]: "Presentation on a laptop",
+  [m("12.webp")]: "Mobile website",
+  [m("13.webp")]: "Branded tote bag",
+  [m("14.webp")]: "Presentation on a tablet",
+  [m("15.webp")]: "Branded tape",
+  [m("16.webp")]: "Corporate T-shirts",
+  [m("17.webp")]: "Business cards",
 };
 
 const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
@@ -291,14 +289,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nKAVLORA.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Нам было важно показать в бренде то, что мы ценим в производстве: материал, точность и ответственность за результат. Визуальная система должна была выглядеть современно и оставаться практичной.",
         "Предложенное направление помогает нам последовательно оформлять коммуникацию — от документации и рекламы до корпоративной одежды».",
       ],
       author: "Команда KAVLORA",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -407,14 +403,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT REVIEW",
       heading: "The KAVLORA\nteam’s view.",
-      badge: "Text for client approval",
       paragraphs: [
         "“It was important for us to show in the brand what we value in production: material, precision, and accountability for the result. The visual system had to look modern and stay practical.",
         "The proposed direction helps us shape communication consistently — from documentation and advertising to corporate apparel.”",
       ],
       author: "KAVLORA team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

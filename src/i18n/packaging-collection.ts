@@ -156,14 +156,14 @@ function buildBlocks(locale: Locale): CaseVisualBlock[] {
           ],
           quoteK: "LAYOUT NOTE",
           quoteT: "How packaging\nworks for the brand.",
-          quoteBadge: "Copy pending client approval",
+          quoteBadge: "",
           quoteP: [
             "«It was important that packaging stood out among other products and stayed practical to use. Every decision — from color to information placement — had to support a clear brand image.",
             "In the new design the product looks cohesive on shelf and in communication».",
           ],
           quoteAuthor: "Sample testimonial",
-          quoteRole: "Placeholder for a confirmed client quote",
-          quoteNote: "Editorial sample for the layout, not a real review. Requires client approval.",
+          quoteRole: "",
+          quoteNote: "",
         }
       : locale === "ru"
         ? {
@@ -234,15 +234,14 @@ function buildBlocks(locale: Locale): CaseVisualBlock[] {
             ],
             quoteK: "КОММЕНТАРИЙ К МАКЕТУ",
             quoteT: "Как упаковка\nработает для бренда.",
-            quoteBadge: "Текст для согласования с клиентом",
+            quoteBadge: "",
             quoteP: [
               "«Нам было важно, чтобы упаковка выделялась среди других продуктов и оставалась удобной в использовании. Каждое решение — от цвета до размещения информации — должно было работать на понятный образ бренда.",
               "В новом дизайне продукт выглядит цельно на полке и в коммуникации».",
             ],
             quoteAuthor: "Пример отзыва",
-            quoteRole: "Место для подтверждённого отзыва клиента",
-            quoteNote:
-              "Редакционный пример для макета, не реальный отзыв. Требует согласования с клиентом.",
+            quoteRole: "",
+            quoteNote: "",
           }
         : {
             statsAria: "Склад добірки",
@@ -312,15 +311,14 @@ function buildBlocks(locale: Locale): CaseVisualBlock[] {
             ],
             quoteK: "КОМЕНТАР ДО МАКЕТА",
             quoteT: "Як упаковка\nпрацює для бренду.",
-            quoteBadge: "Текст для погодження з клієнтом",
+            quoteBadge: "",
             quoteP: [
               "«Нам було важливо, щоб упаковка вирізнялася серед інших продуктів і залишалася зручною у використанні. Кожне рішення — від кольору до розміщення інформації — мало працювати на зрозумілий образ бренду.",
               "У новому дизайні продукт виглядає цілісно на полиці та в комунікації».",
             ],
             quoteAuthor: "Приклад відгуку",
-            quoteRole: "Місце для підтвердженого відгуку клієнта",
-            quoteNote:
-              "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+            quoteRole: "",
+            quoteNote: "",
           };
 
   return [
@@ -442,17 +440,6 @@ function buildBlocks(locale: Locale): CaseVisualBlock[] {
       kicker: copy.s04k,
       title: copy.s04t,
       paragraphs: copy.s04p,
-    },
-    {
-      type: "quote",
-      index: "05",
-      kicker: copy.quoteK,
-      heading: copy.quoteT,
-      badge: copy.quoteBadge,
-      paragraphs: copy.quoteP,
-      author: copy.quoteAuthor,
-      role: copy.quoteRole,
-      note: copy.quoteNote,
     },
   ];
 }

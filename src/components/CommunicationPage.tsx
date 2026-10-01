@@ -21,6 +21,7 @@ export default function CommunicationPage({
       dictionary={dictionary}
       projects={projects}
       copy={communicationPage[locale]}
+      serviceSlug="communication"
       seo={getCommunicationSeo(locale)}
       heroImage="/services/communication/communication-01.png"
     />

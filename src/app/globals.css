@@ -3511,6 +3511,30 @@ a.service-card {
   font-size: 12px;
 }
 
+.sp-review-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 18px;
+  color: #171717;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sp-review-case-link:hover {
+  color: var(--accent);
+}
+
+.sp-review-demo.sp-review-case-link {
+  display: inline-flex;
+  margin-bottom: 18px;
+}
+
+.sp-reviews-section--prototype .review > .sp-review-case-link {
+  margin-bottom: 0;
+}
+
 .sp-review blockquote {
   margin: 0;
   font-size: 16px;
@@ -4595,12 +4619,26 @@ a.service-card {
   }
 
   .sp-reviews-section--prototype .reviews-grid {
-    grid-template-columns: 1fr;
+    display: flex;
     gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-inline: calc(-1 * var(--header-bar-pad-left));
+    padding-inline: var(--header-bar-pad-left);
+    grid-template-columns: none;
+  }
+
+  .sp-reviews-section--prototype .reviews-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .sp-reviews-section--prototype .review {
+    flex: 0 0 min(82vw, 300px);
     min-height: 245px;
+    scroll-snap-align: start;
   }
 
   .sp-prototype-section-heading .sp-h2 {

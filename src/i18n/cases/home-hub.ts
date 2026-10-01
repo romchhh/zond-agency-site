@@ -209,10 +209,8 @@ const blocksUk: CaseVisualBlock[] = [
       "«Ми хотіли, щоб Home Hub сприймався як єдиний бренд, а не окремі напрямки з продажу дверей, вікон і фурнітури. Для нас було важливо зберегти простоту, але додати характер і впізнаваність.",
       "У цьому концепті нам близькі логіка порталу, спокійна палітра та увага до матеріалів. На прикладах упаковки, каталогу й шоуруму добре видно, як система працюватиме в різних форматах.»",
     ],
-    badge: "Демонстраційний відгук",
     author: "Представник Home Hub",
-    role: "Місце для імені та посади клієнта",
-    note: "Приклад тексту для макета. Не є реальним відгуком; перед публікацією замініть погодженою цитатою клієнта.",
+    role: "",
   },
 ];
 
@@ -260,10 +258,8 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
   if (block.type === "quote") {
     return {
       ...block,
-      badge: "Демонстрационный отзыв",
       author: "Представитель Home Hub",
-      role: "Место для имени и должности клиента",
-      note: "Пример текста для макета. Не является реальным отзывом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -346,10 +342,8 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
   if (block.type === "quote") {
     return {
       ...block,
-      badge: "Demo testimonial",
       author: "Home Hub representative",
-      role: "Placeholder for client name and role",
-      note: "Sample text for the layout. Replace with an approved client quote before publishing.",
+      role: "",
     };
   }
   if (block.type === "facts") {

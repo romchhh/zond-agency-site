@@ -21,6 +21,7 @@ export default function GraphicsPage({
       dictionary={dictionary}
       projects={projects}
       copy={graphicsPage[locale]}
+      serviceSlug="graphics"
       seo={getGraphicsSeo(locale)}
       heroImage="/services/graphic.jpg"
     />

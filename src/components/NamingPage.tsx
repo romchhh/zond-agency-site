@@ -21,6 +21,7 @@ export default function NamingPage({
       dictionary={dictionary}
       projects={projects}
       copy={namingPage[locale]}
+      serviceSlug="naming"
       seo={getNamingSeo(locale)}
       heroImage="/services/naming/naming-01.png"
     />

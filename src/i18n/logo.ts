@@ -65,7 +65,7 @@ export type ServicePageContent = {
   reviewsEyebrow?: string;
   reviewsTitle: string;
   reviewsNote: string;
-  reviews: Array<{ label: string; quote: string; name: string; role: string }>;
+  reviews: Array<{ label: string; quote: string; name: string; role: string; href?: string }>;
   productTitle: string;
   productNote: string;
   products: Array<{ src: string; alt: string; caption: string }>;

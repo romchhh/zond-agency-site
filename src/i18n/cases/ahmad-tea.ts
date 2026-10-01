@@ -47,8 +47,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("01.jpg"), caption: "Рекламна концепція на міському носії" },
-      { src: m("02.jpg"), caption: "Завдання й результати стратегії" },
+      { src: m("01.jpg"), caption: "Склад роботи над проєктом" },
+      { src: m("02.jpg"), caption: "Результат стратегії" },
     ],
   },
   {
@@ -72,14 +72,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("03.jpg"), caption: "Візуальний напрям кампанії" }],
+    images: [{ src: m("03.jpg"), caption: "Матеріали дослідження" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("04.jpg"), caption: "Чай із фруктовими нотами" },
-      { src: m("05.jpg"), caption: "Продукт у природному середовищі" },
+      { src: m("04.jpg"), caption: "Контент для соцмереж" },
+      { src: m("05.jpg"), caption: "Фотоісторія для бренду" },
     ],
   },
   {
@@ -101,14 +101,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("06.jpg"), caption: "Комунікація для цифрових каналів" }],
+    images: [{ src: m("06.jpg"), caption: "Серія міських носіїв" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("07.jpg"), caption: "Фотоісторія для бренду" },
-      { src: m("08.jpg"), caption: "Чаювання вдома" },
+      { src: m("07.jpg"), caption: "Сітілайт із креативом" },
+      { src: m("08.jpg"), caption: "Фотоісторія — пікнік" },
     ],
   },
   {
@@ -132,41 +132,41 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("09.jpg"), caption: "Комунікаційні повідомлення" }],
+    images: [{ src: m("09.jpg"), caption: "Серія життєвих сюжетів" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("10.webp"), caption: "Міський рекламний носій" },
-      { src: m("11.webp"), caption: "Фотоісторія на фірмовому матеріалі" },
+      { src: m("10.webp"), caption: "Сітілайт у міському просторі" },
+      { src: m("11.webp"), caption: "Lifestyle-зйомка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("12.jpg"), caption: "Сімейна історія у міському просторі" },
-      { src: m("13.jpg"), caption: "Серія рекламних матеріалів" },
-    ],
-  },
-  {
-    type: "gallery",
-    layout: "wide",
-    images: [{ src: m("14.jpg"), caption: "Сітілайт із героями кампанії" }],
-  },
-  {
-    type: "gallery",
-    layout: "pair",
-    images: [
-      { src: m("15.jpg"), caption: "Креативна концепція на носіях" },
-      { src: m("16.jpg"), caption: "Сюжет із друзями" },
+      { src: m("12.jpg"), caption: "Візуальний напрям кампанії" },
+      { src: m("13.jpg"), caption: "Стратегічні матеріали" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("17.jpg"), caption: "Зовнішня реклама AHMAD TEA" }],
+    images: [{ src: m("14.jpg"), caption: "Зовнішня реклама — серія" }],
+  },
+  {
+    type: "gallery",
+    layout: "pair",
+    images: [
+      { src: m("15.jpg"), caption: "Реклама в міському середовищі" },
+      { src: m("16.jpg"), caption: "Чаювання вдома" },
+    ],
+  },
+  {
+    type: "gallery",
+    layout: "wide",
+    images: [{ src: m("17.jpg"), caption: "Білборд у парку" }],
   },
   {
     type: "section",
@@ -183,55 +183,53 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nAHMAD TEA.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Ми прагнули зберегти впізнаваний характер AHMAD TEA й водночас знайти способи говорити з новими поколіннями. Для нас було важливо почати з розуміння аудиторії та її щоденних звичок.",
       "Стратегічний напрям дає спільну основу для повідомлень, візуальних ідей та майбутніх кампаній. Він допомагає бренду звучати послідовно в різних каналах».",
     ],
     author: "Команда AHMAD TEA",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
 const ahmadTeaGalleryCaptionsRu: Record<string, string> = {
-  [m("01.jpg")]: "Рекламная концепция на городском носителе",
-  [m("02.jpg")]: "Задачи и результаты стратегии",
-  [m("03.jpg")]: "Визуальное направление кампании",
-  [m("04.jpg")]: "Чай с фруктовыми нотами",
-  [m("05.jpg")]: "Продукт в природной среде",
-  [m("06.jpg")]: "Коммуникация для цифровых каналов",
-  [m("07.jpg")]: "Фотоистория для бренда",
-  [m("08.jpg")]: "Чаепитие дома",
-  [m("09.jpg")]: "Коммуникационные сообщения",
-  [m("10.webp")]: "Городской рекламный носитель",
-  [m("11.webp")]: "Фотоистория на фирменном материале",
-  [m("12.jpg")]: "Семейная история в городском пространстве",
-  [m("13.jpg")]: "Серия рекламных материалов",
-  [m("14.jpg")]: "Ситилайт с героями кампании",
-  [m("15.jpg")]: "Креативная концепция на носителях",
-  [m("16.jpg")]: "Сюжет с друзьями",
-  [m("17.jpg")]: "Наружная реклама AHMAD TEA",
+  [m("01.jpg")]: "Состав работы над проектом",
+  [m("02.jpg")]: "Результат стратегии",
+  [m("03.jpg")]: "Материалы исследования",
+  [m("04.jpg")]: "Контент для соцсетей",
+  [m("05.jpg")]: "Фотоистория для бренда",
+  [m("06.jpg")]: "Серия городских носителей",
+  [m("07.jpg")]: "Ситилайт с креативом",
+  [m("08.jpg")]: "Фотоистория — пикник",
+  [m("09.jpg")]: "Серия жизненных сюжетов",
+  [m("10.webp")]: "Ситилайт в городском пространстве",
+  [m("11.webp")]: "Lifestyle-съемка",
+  [m("12.jpg")]: "Визуальное направление кампании",
+  [m("13.jpg")]: "Стратегические материалы",
+  [m("14.jpg")]: "Наружная реклама — серия",
+  [m("15.jpg")]: "Реклама в городской среде",
+  [m("16.jpg")]: "Чаепитие дома",
+  [m("17.jpg")]: "Билборд в парке",
 };
 
 const ahmadTeaGalleryCaptionsEn: Record<string, string> = {
-  [m("01.jpg")]: "Campaign concept on urban media",
-  [m("02.jpg")]: "Strategy goals and outcomes",
-  [m("03.jpg")]: "Campaign visual direction",
-  [m("04.jpg")]: "Tea with fruit notes",
-  [m("05.jpg")]: "Product in a natural setting",
-  [m("06.jpg")]: "Communication for digital channels",
-  [m("07.jpg")]: "Photo story for the brand",
-  [m("08.jpg")]: "Tea at home",
-  [m("09.jpg")]: "Communication messages",
-  [m("10.webp")]: "Urban advertising touchpoint",
-  [m("11.webp")]: "Photo story on branded material",
-  [m("12.jpg")]: "Family story in the city",
-  [m("13.jpg")]: "Series of advertising materials",
-  [m("14.jpg")]: "Citylight with campaign heroes",
-  [m("15.jpg")]: "Creative concept on touchpoints",
-  [m("16.jpg")]: "Story with friends",
-  [m("17.jpg")]: "AHMAD TEA outdoor advertising",
+  [m("01.jpg")]: "Project deliverables",
+  [m("02.jpg")]: "Strategy outcome",
+  [m("03.jpg")]: "Research materials",
+  [m("04.jpg")]: "Social media content",
+  [m("05.jpg")]: "Photo story for the brand",
+  [m("06.jpg")]: "Series of urban media",
+  [m("07.jpg")]: "Citylight with creative",
+  [m("08.jpg")]: "Photo story — picnic",
+  [m("09.jpg")]: "Lifestyle story series",
+  [m("10.webp")]: "Citylight in the city",
+  [m("11.webp")]: "Lifestyle shoot",
+  [m("12.jpg")]: "Campaign visual direction",
+  [m("13.jpg")]: "Strategy materials",
+  [m("14.jpg")]: "Outdoor ads — series",
+  [m("15.jpg")]: "Ads in the urban environment",
+  [m("16.jpg")]: "Tea at home",
+  [m("17.jpg")]: "Billboard in the park",
 };
 
 const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
@@ -318,14 +316,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nAHMAD TEA.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Мы стремились сохранить узнаваемый характер AHMAD TEA и одновременно найти способы говорить с новыми поколениями. Для нас было важно начать с понимания аудитории и её ежедневных привычек.",
         "Стратегическое направление даёт общую основу для сообщений, визуальных идей и будущих кампаний. Оно помогает бренду звучать последовательно в разных каналах».",
       ],
       author: "Команда AHMAD TEA",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -436,14 +432,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT REVIEW",
       heading: "The AHMAD TEA\nteam’s view.",
-      badge: "Text for client approval",
       paragraphs: [
         "“We wanted to keep AHMAD TEA’s recognizable character while finding ways to speak to new generations. It was important for us to start by understanding the audience and their daily habits.",
         "The strategic direction gives a shared foundation for messages, visual ideas, and future campaigns. It helps the brand sound consistent across channels.”",
       ],
       author: "AHMAD TEA team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

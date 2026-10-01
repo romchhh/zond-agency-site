@@ -21,6 +21,7 @@ export default function IllustrationPage({
       dictionary={dictionary}
       projects={projects}
       copy={illustrationPage[locale]}
+      serviceSlug="illustration"
       seo={getIllustrationSeo(locale)}
       heroImage="/branding/include-identity.jpg"
     />

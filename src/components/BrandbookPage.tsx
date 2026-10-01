@@ -21,6 +21,7 @@ export default function BrandbookPage({
       dictionary={dictionary}
       projects={projects}
       copy={brandbookPage[locale]}
+      serviceSlug="brandbook"
       seo={getBrandbookSeo(locale)}
       heroImage="/branding/include-brandbook.jpg"
     />

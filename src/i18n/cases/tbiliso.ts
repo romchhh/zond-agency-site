@@ -156,14 +156,12 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nTbiliso.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Ми хотіли, щоб гості відчували атмосферу Грузії ще до першого замовлення. Для нас було важливо зберегти теплий характер ресторану та зробити його помітним у всіх матеріалах.",
       "Оновлений стиль допомагає говорити з гостями однією мовою — від упаковки до соціальних мереж».",
     ],
     author: "Команда Tbiliso",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
@@ -285,14 +283,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nTbiliso.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Мы хотели, чтобы гости чувствовали атмосферу Грузии ещё до первого заказа. Для нас было важно сохранить тёплый характер ресторана и сделать его заметным во всех материалах.",
         "Обновлённый стиль помогает говорить с гостями на одном языке — от упаковки до социальных сетей».",
       ],
       author: "Команда Tbiliso",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -403,14 +399,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT FEEDBACK",
       heading: "The Tbiliso\nteam’s view.",
-      badge: "Text for client approval",
       paragraphs: [
         "“We wanted guests to feel Georgia before the first order. It was important to keep the restaurant’s warm character and make it visible across materials.",
         "The updated style helps us speak to guests in one voice — from packaging to social media.”",
       ],
       author: "Tbiliso team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real testimonial. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

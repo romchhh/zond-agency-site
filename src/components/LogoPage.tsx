@@ -17,6 +17,7 @@ export default function LogoPage({ locale, dictionary, projects }: LogoPageProps
       dictionary={dictionary}
       projects={projects}
       copy={logoPage[locale]}
+      serviceSlug="logo"
       seo={getLogoSeo(locale)}
       heroImage="/branding/include-naming.png"
     />

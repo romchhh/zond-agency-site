@@ -64,7 +64,7 @@
 }
 
 .case-visual-page.packaging.visual.balanced .hero-tag {
-  white-space: nowrap;
+  white-space: normal;
   background: #232322;
   color: white;
 }

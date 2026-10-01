@@ -169,14 +169,12 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nНового міста.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Для нас важливо, щоб бренд передавав якість простору ще до першого знайомства з ним. Ми шукали стриманий, упевнений образ, у якому відчувається архітектура та увага до деталей.",
       "Цей візуальний напрям поєднує характер проєкту й практичність. Знак, матеріали та композиція створюють спільну мову для презентацій, реклами й щоденної комунікації».",
     ],
     author: "Команда «Нове місто»",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
@@ -273,14 +271,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nНового Міста.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Для нас важно, чтобы бренд передавал качество пространства ещё до первого знакомства с ним. Мы искали сдержанный, уверенный образ, в котором чувствуется архитектура и внимание к деталям.",
         "Это визуальное направление сочетает характер проекта и практичность. Знак, материалы и композиция создают общий язык для презентаций, рекламы и ежедневной коммуникации».",
       ],
       author: "Команда «Нове Місто»",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования с клиентом.",
+      role: "",
     };
   }
   return block;
@@ -379,14 +375,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT REVIEW",
       heading: "The Nove Misto\nteam's perspective.",
-      badge: "Text pending client approval",
       paragraphs: [
         "“For us, it is important that the brand conveys the quality of the space before the first encounter with it. We sought a restrained, confident image in which architecture and attention to detail are felt.",
         "This visual direction combines the character of the project with practicality. The mark, materials, and composition create a shared language for presentations, advertising, and everyday communication.”",
       ],
       author: "Nove Misto team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real testimonial. Requires client approval.",
+      role: "",
     };
   }
   return block;

@@ -21,6 +21,7 @@ export default function InfluenceMarketingPage({
       dictionary={dictionary}
       projects={projects}
       copy={influenceMarketingPage[locale]}
+      serviceSlug="influence-marketing"
       seo={getInfluenceMarketingSeo(locale)}
       heroImage="/services/web.jpg"
     />

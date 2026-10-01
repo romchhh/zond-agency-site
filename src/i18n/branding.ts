@@ -22,6 +22,7 @@ export type BrandingPageContent = {
     quote: string;
     name: string;
     role: string;
+    href?: string;
   }>;
   productEyebrow: string;
   productTitle: string;

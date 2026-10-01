@@ -20,6 +20,7 @@ export default function WebDevelopmentPage({
       dictionary={dictionary}
       projects={getWebDevelopmentProjects(locale)}
       copy={webDevelopmentPage[locale]}
+      serviceSlug="web-development"
       seo={getWebDevelopmentSeo(locale)}
       heroImage="/services/web-development/webdev-01.png"
     />

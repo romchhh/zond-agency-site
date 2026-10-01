@@ -21,6 +21,7 @@ export default function PackagingPage({
       dictionary={dictionary}
       projects={projects}
       copy={packagingPage[locale]}
+      serviceSlug="packaging"
       seo={getPackagingSeo(locale)}
       heroImage="/branding/product-packaging.jpg"
     />

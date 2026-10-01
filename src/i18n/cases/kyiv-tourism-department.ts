@@ -183,14 +183,12 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Місто починається\nз людей.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Нам важливо, щоб міська комунікація була близькою та зрозумілою. Щоб у ній мешканці бачили не лише знайомі вулиці, а й власне місце в житті Києва.",
       "Цей напрям поєднує щирість малюнків і ясність повідомлення. Він допомагає говорити про місто тепло, відкрито й послідовно в різних форматах».",
     ],
     author: "Команда проєкту",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
@@ -291,14 +289,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Город начинается\nс людей.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Нам важно, чтобы городская коммуникация была близкой и понятной. Чтобы в ней жители видели не только знакомые улицы, но и собственное место в жизни Киева.",
         "Это направление сочетает искренность рисунков и ясность сообщения. Оно помогает говорить о городе тепло, открыто и последовательно в разных форматах».",
       ],
       author: "Команда проекта",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   return block;
@@ -401,14 +397,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT REVIEW",
       heading: "The city starts\nwith people.",
-      badge: "Text pending client approval",
       paragraphs: [
         "“For us, it is important that urban communication feels close and understandable. That residents see not only familiar streets but also their own place in Kyiv life.",
         "This direction combines the sincerity of the drawings with the clarity of the message. It helps speak about the city warmly, openly, and consistently across different formats.”",
       ],
       author: "Project team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real testimonial. Requires client approval.",
+      role: "",
     };
   }
   return block;

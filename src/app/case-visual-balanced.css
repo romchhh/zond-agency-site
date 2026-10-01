@@ -73,7 +73,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 370px;
+  max-width: 420px;
+  min-width: 0;
   padding-bottom: 8px;
 }
 
@@ -99,15 +100,18 @@
 
 .case-visual-page.visual.balanced .hero-tag {
   display: inline-block;
+  box-sizing: border-box;
   width: fit-content;
   max-width: 100%;
   padding: 8px 14px;
-  border-radius: 30px;
+  border-radius: 20px;
   background: #fff;
   color: #171717;
   font-size: 16px;
   line-height: 1.35;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 .case-visual-page.visual.balanced .media {
@@ -837,20 +841,21 @@
 
   .case-visual-page.visual.balanced .hero-intro-foot {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
     width: 100%;
   }
 
   .case-visual-page.visual.balanced .hero-intro-foot .hero-intro-line {
-    flex: 1 1 auto;
+    flex: none;
     min-width: 0;
     margin: 0;
   }
 
   .case-visual-page.visual.balanced .hero-tag {
-    flex: 0 0 auto;
+    flex: none;
+    max-width: 100%;
     font-size: 13px;
     padding: 7px 12px;
   }

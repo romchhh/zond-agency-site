@@ -21,6 +21,7 @@ export default function PositioningPage({
       dictionary={dictionary}
       projects={projects}
       copy={positioningPage[locale]}
+      serviceSlug="positioning"
       seo={getPositioningSeo(locale)}
       heroImage="/services/positioning/positioning-01.png"
     />

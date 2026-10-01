@@ -46,8 +46,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("01.jpg"), caption: "Айдентика BIT School" },
-      { src: m("02.jpg"), caption: "Фірмовий знак" },
+      { src: m("01.jpg"), caption: "Логотип і персонаж" },
+      { src: m("02.jpg"), caption: "Типографіка бренду" },
     ],
   },
   {
@@ -72,8 +72,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("03.webp"), caption: "Колірна система" },
-      { src: m("04.webp"), caption: "Графіка бренду" },
+      { src: m("03.webp"), caption: "Рекламний флаєр" },
+      { src: m("04.webp"), caption: "Фірмова сумка" },
     ],
   },
   {
@@ -95,14 +95,14 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("05.jpg"), caption: "Бренд у комунікації" }],
+    images: [{ src: m("05.jpg"), caption: "Персонаж бренду" }],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("06.webp"), caption: "Друковані матеріали" },
-      { src: m("07.webp"), caption: "Фірмові носії" },
+      { src: m("06.webp"), caption: "Рекламний флаєр" },
+      { src: m("07.webp"), caption: "Візитівки" },
     ],
   },
   {
@@ -118,38 +118,38 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("08.jpg"), caption: "Мерч і аксесуари" },
-      { src: m("09.webp"), caption: "Застосування графіки" },
+      { src: m("08.jpg"), caption: "Презентація бренду" },
+      { src: m("09.webp"), caption: "Стікерпак" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("10.jpg"), caption: "Цифрові матеріали" },
-      { src: m("11.webp"), caption: "Візуальні носії" },
+      { src: m("10.jpg"), caption: "Фірмовий одяг" },
+      { src: m("11.webp"), caption: "Рекламні флаєри" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("12.jpg"), caption: "Середовище бренду" },
-      { src: m("13.jpg"), caption: "Комунікація школи" },
+      { src: m("12.jpg"), caption: "Бейджі співробітників" },
+      { src: m("13.jpg"), caption: "Фірмовий бланк" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("14.webp"), caption: "Фірмовий стиль у деталях" },
-      { src: m("15.jpg"), caption: "Айдентика в дії" },
+      { src: m("14.webp"), caption: "Брендована клавіша" },
+      { src: m("15.jpg"), caption: "Чохол для телефону" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("16.jpg"), caption: "BIT School — цілісний образ" }],
+    images: [{ src: m("16.jpg"), caption: "Презентація на ноутбуці" }],
   },
   {
     type: "section",
@@ -166,53 +166,51 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nBIT School.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Нам був потрібен бренд, який говорить і з дітьми, і з батьками. Щоб технології виглядали цікаво, а навчання — близьким і зрозумілим.",
       "У цьому рішенні нам близькі яскравість, дружність і чітка система. Айдентика добре працює в різних форматах і допомагає школі звучати послідовно».",
     ],
     author: "Команда BIT School",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
 const bitSchoolGalleryCaptionsRu: Record<string, string> = {
-  [m("01.jpg")]: "Айдентика BIT School",
-  [m("02.jpg")]: "Фирменный знак",
-  [m("03.webp")]: "Цветовая система",
-  [m("04.webp")]: "Графика бренда",
-  [m("05.jpg")]: "Бренд в коммуникации",
-  [m("06.webp")]: "Печатные материалы",
-  [m("07.webp")]: "Фирменные носители",
-  [m("08.jpg")]: "Мерч и аксессуары",
-  [m("09.webp")]: "Применение графики",
-  [m("10.jpg")]: "Цифровые материалы",
-  [m("11.webp")]: "Визуальные носители",
-  [m("12.jpg")]: "Среда бренда",
-  [m("13.jpg")]: "Коммуникация школы",
-  [m("14.webp")]: "Фирменный стиль в деталях",
-  [m("15.jpg")]: "Айдентика в действии",
-  [m("16.jpg")]: "BIT School — целостный образ",
+  [m("01.jpg")]: "Логотип и персонаж",
+  [m("02.jpg")]: "Типографика бренда",
+  [m("03.webp")]: "Рекламный флаер",
+  [m("04.webp")]: "Фирменная сумка",
+  [m("05.jpg")]: "Персонаж бренда",
+  [m("06.webp")]: "Рекламный флаер",
+  [m("07.webp")]: "Визитки",
+  [m("08.jpg")]: "Презентация бренда",
+  [m("09.webp")]: "Стикерпак",
+  [m("10.jpg")]: "Фирменная одежда",
+  [m("11.webp")]: "Рекламные флаеры",
+  [m("12.jpg")]: "Бейджи сотрудников",
+  [m("13.jpg")]: "Фирменный бланк",
+  [m("14.webp")]: "Брендированная клавиша",
+  [m("15.jpg")]: "Чехол для телефона",
+  [m("16.jpg")]: "Презентация на ноутбуке",
 };
 
 const bitSchoolGalleryCaptionsEn: Record<string, string> = {
-  [m("01.jpg")]: "BIT School identity",
-  [m("02.jpg")]: "Brand mark",
-  [m("03.webp")]: "Color system",
-  [m("04.webp")]: "Brand graphics",
-  [m("05.jpg")]: "Brand in communication",
-  [m("06.webp")]: "Print materials",
-  [m("07.webp")]: "Branded touchpoints",
-  [m("08.jpg")]: "Merch and accessories",
-  [m("09.webp")]: "Graphics in use",
-  [m("10.jpg")]: "Digital materials",
-  [m("11.webp")]: "Visual touchpoints",
-  [m("12.jpg")]: "Brand environment",
-  [m("13.jpg")]: "School communication",
-  [m("14.webp")]: "Identity in the details",
-  [m("15.jpg")]: "Identity in action",
-  [m("16.jpg")]: "BIT School — cohesive image",
+  [m("01.jpg")]: "Logo and character",
+  [m("02.jpg")]: "Brand typography",
+  [m("03.webp")]: "Promo flyer",
+  [m("04.webp")]: "Branded tote bag",
+  [m("05.jpg")]: "Brand character",
+  [m("06.webp")]: "Promo flyer",
+  [m("07.webp")]: "Business cards",
+  [m("08.jpg")]: "Brand presentation",
+  [m("09.webp")]: "Sticker pack",
+  [m("10.jpg")]: "Branded apparel",
+  [m("11.webp")]: "Promo flyers",
+  [m("12.jpg")]: "Staff badges",
+  [m("13.jpg")]: "Letterhead",
+  [m("14.webp")]: "Branded keycap",
+  [m("15.jpg")]: "Phone case",
+  [m("16.jpg")]: "Presentation on a laptop",
 };
 
 const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
@@ -290,14 +288,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nBIT School.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Нам был нужен бренд, который говорит и с детьми, и с родителями. Чтобы технологии выглядели интересно, а обучение — близким и понятным.",
         "В этом решении нам близки яркость, дружелюбность и чёткая система. Айдентика хорошо работает в разных форматах и помогает школе звучать последовательно».",
       ],
       author: "Команда BIT School",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -399,14 +395,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT REVIEW",
       heading: "The BIT School\nteam’s view.",
-      badge: "Text for client approval",
       paragraphs: [
         "“We needed a brand that speaks to both children and parents. Technology should look exciting, and learning — close and understandable.",
         "In this solution we value the brightness, friendliness, and clear system. The identity works well across formats and helps the school sound consistent.”",
       ],
       author: "BIT School team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

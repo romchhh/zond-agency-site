@@ -14,6 +14,7 @@ import type { BrandingSeoContent } from "@/i18n/branding-seo";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import type { ServicePageContent } from "@/i18n/logo";
+import { withCaseServiceReviews } from "@/i18n/service-reviews";
 import { getServiceDetailPath } from "@/i18n/routing";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
@@ -26,12 +27,30 @@ type ServiceLandingPageProps = {
   seo: BrandingSeoContent;
   heroImage: string;
   casesCount?: number;
+  serviceSlug?: string;
 };
 
 type ServiceSectionProps = {
   copy: ServicePageContent;
   isPrototypeLayout: boolean;
 };
+
+function ReviewLabel({
+  label,
+  href,
+}: {
+  label: string;
+  href?: string;
+}) {
+  if (!href) return <span className="sp-review-demo">{label}</span>;
+
+  return (
+    <Link className="sp-review-demo sp-review-case-link" href={href}>
+      <span>{label}</span>
+      <span aria-hidden="true">↗</span>
+    </Link>
+  );
+}
 
 function ServiceAudienceSection({ copy, isPrototypeLayout }: ServiceSectionProps) {
   return (
@@ -256,7 +275,14 @@ function ServiceReviewsSection({ copy, isPrototypeLayout }: ServiceSectionProps)
             <div className="reviews-grid">
               {copy.reviews.map((review) => (
                 <blockquote className="review" key={review.label}>
-                  <span>{review.label}</span>
+                  {review.href ? (
+                    <Link className="sp-review-case-link" href={review.href}>
+                      <span>{review.label}</span>
+                      <span aria-hidden="true">↗</span>
+                    </Link>
+                  ) : (
+                    <span>{review.label}</span>
+                  )}
                   <p>{review.quote}</p>
                   <footer>
                     {review.name}
@@ -278,7 +304,7 @@ function ServiceReviewsSection({ copy, isPrototypeLayout }: ServiceSectionProps)
               {copy.reviews.map((review, index) => (
                 <figure className="sp-review" key={review.label}>
                   <div>
-                    <span className="sp-review-demo">{review.label}</span>
+                    <ReviewLabel label={review.label} href={review.href} />
                     <blockquote>{review.quote}</blockquote>
                   </div>
                   <figcaption>
@@ -304,11 +330,13 @@ export default function ServiceLandingPage({
   locale,
   dictionary,
   projects,
-  copy,
+  copy: copyProp,
   seo,
   heroImage,
   casesCount = 4,
+  serviceSlug,
 }: ServiceLandingPageProps) {
+  const copy = withCaseServiceReviews(copyProp, locale, serviceSlug);
   /** Service pages ported from zond-* HTML prototypes (naming, identity, positioning, communication). */
   const isPrototypeLayout = Boolean(copy.featureStrip);
 

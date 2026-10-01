@@ -195,10 +195,8 @@ const blocksUk: CaseVisualBlock[] = [
       "«Нам важливо, щоб Carbit був зрозумілим із першого знайомства. У візуальній мові ми шукали відчуття швидкості, впевненість і простоту, які відповідають самому сервісу.",
       "Цей напрям об’єднує сайт, презентації та рекламні матеріали. Знак і кольори допомагають зберігати характер бренду в різних форматах — від маленької іконки до великої рекламної площини».",
     ],
-    badge: "Текст для погодження з клієнтом",
     author: "Команда Carbit",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
@@ -288,10 +286,8 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
         "«Нам важно, чтобы Carbit был понятным с первого знакомства. В визуальном языке мы искали ощущение скорости, уверенность и простоту, которые соответствуют самому сервису.",
         "Это направление объединяет сайт, презентации и рекламные материалы. Знак и цвета помогают сохранять характер бренда в разных форматах — от маленькой иконки до большой рекламной площади».",
       ],
-      badge: "Текст для согласования с клиентом",
       author: "Команда Carbit",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -395,10 +391,8 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
         "“It’s important to us that Carbit is clear from the first encounter. In the visual language we looked for a sense of speed, confidence, and simplicity that matches the service itself.",
         "This direction unites the website, presentations, and advertising materials. The mark and colors help preserve the brand character across formats — from a small icon to a large ad surface.”",
       ],
-      badge: "Text for client approval",
       author: "Carbit team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

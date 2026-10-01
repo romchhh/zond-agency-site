@@ -17,6 +17,7 @@ export default function SmmPage({ locale, dictionary, projects }: SmmPageProps) 
       dictionary={dictionary}
       projects={projects}
       copy={smmPage[locale]}
+      serviceSlug="smm"
       seo={getSmmSeo(locale)}
       heroImage="/services/smm.jpg"
     />

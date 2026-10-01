@@ -117,10 +117,9 @@ const COPY: Record<Locale, LocaleCopy> = {
     rules: ["Логотип", "Палітра", "Типографіка", "Фотостиль", "Композиція", "Носії"],
     quoteKicker: "ВІДГУК КЛІЄНТА",
     quoteHeading: "Відгук клієнта.",
-    quoteBadge: "Демонстраційний відгук",
-    quoteRole: "Місце для імені та посади клієнта",
-    quoteNote:
-      "Приклад тексту для макета. Не є реальним відгуком; перед публікацією замініть погодженою цитатою клієнта.",
+    quoteBadge: "",
+    quoteRole: "",
+    quoteNote: "",
     factCountry: "Країна",
     factCity: "Місто",
     factIndustry: "Галузь",
@@ -171,10 +170,9 @@ const COPY: Record<Locale, LocaleCopy> = {
     rules: ["Логотип", "Палитра", "Типографика", "Фотостиль", "Композиция", "Носители"],
     quoteKicker: "ОТЗЫВ КЛИЕНТА",
     quoteHeading: "Отзыв клиента.",
-    quoteBadge: "Демонстрационный отзыв",
-    quoteRole: "Место для имени и должности клиента",
-    quoteNote:
-      "Пример текста для макета. Не является реальным отзывом; перед публикацией замените согласованной цитатой клиента.",
+    quoteBadge: "",
+    quoteRole: "",
+    quoteNote: "",
     factCountry: "Страна",
     factCity: "Город",
     factIndustry: "Отрасль",
@@ -225,10 +223,9 @@ const COPY: Record<Locale, LocaleCopy> = {
     rules: ["Logo", "Palette", "Typography", "Photo style", "Composition", "Touchpoints"],
     quoteKicker: "CLIENT FEEDBACK",
     quoteHeading: "Client feedback.",
-    quoteBadge: "Demo testimonial",
-    quoteRole: "Placeholder for client name and role",
-    quoteNote:
-      "Sample text for the layout. Not a real testimonial; replace with an approved client quote before publishing.",
+    quoteBadge: "",
+    quoteRole: "",
+    quoteNote: "",
     factCountry: "Country",
     factCity: "City",
     factIndustry: "Industry",
@@ -819,11 +816,9 @@ function buildHubLayout(caseItem: CaseItem, content: CaseContent, locale: Locale
     index: "05",
     kicker: copy.quoteKicker,
     heading: copy.quoteHeading,
-    badge: copy.quoteBadge,
     paragraphs: copy.quoteParagraphs(caseItem.title),
     author: copy.quoteAuthor(caseItem.title),
-    role: copy.quoteRole,
-    note: copy.quoteNote,
+    role: copy.quoteRole || undefined,
   });
 
   return blocks;
@@ -859,8 +854,9 @@ function applyCaseTestimonial(
   slug: string,
   locale: Locale,
 ): CaseVisualBlock[] {
+  const withoutQuotes = blocks.filter((block) => block.type !== "quote");
   const testimonial = getCaseTestimonial(slug, locale);
-  if (!testimonial) return blocks;
+  if (!testimonial) return withoutQuotes;
 
   const copy = COPY[locale];
   const quoteBlock: CaseVisualBlock = {
@@ -870,17 +866,10 @@ function applyCaseTestimonial(
     heading: testimonial.heading,
     paragraphs: testimonial.paragraphs,
     author: testimonial.author,
-    role: testimonial.role,
+    role: testimonial.role || undefined,
   };
 
-  const quoteIndex = blocks.findIndex((block) => block.type === "quote");
-  if (quoteIndex === -1) return [...blocks, quoteBlock];
-
-  return [
-    ...blocks.slice(0, quoteIndex),
-    quoteBlock,
-    ...blocks.slice(quoteIndex + 1),
-  ];
+  return [...withoutQuotes, quoteBlock];
 }
 
 export function collectCaseVisualImages(

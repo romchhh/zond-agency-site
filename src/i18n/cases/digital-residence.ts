@@ -193,14 +193,12 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nDigital Residence.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Ми шукали візуальну мову, яка передасть технологічність резиденції та збереже відчуття преміального простору. Важливо було поєднати архітектуру, інновації та спосіб життя в одному образі.",
       "Цей напрям допомагає розповідати про проєкт послідовно. Знак, матеріали й об’ємна графіка дають спільний характер презентаціям, рекламі та корпоративним носіям».",
     ],
     author: "Команда Digital Residence",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
@@ -332,14 +330,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nDigital Residence.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Мы искали визуальный язык, который передаст технологичность резиденции и сохранит ощущение премиального пространства. Важно было сочетать архитектуру, инновации и образ жизни в одном образе.",
         "Это направление помогает рассказывать о проекте последовательно. Знак, материалы и объёмная графика дают общий характер презентациям, рекламе и корпоративным носителям».",
       ],
       author: "Команда Digital Residence",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -448,14 +444,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT REVIEW",
       heading: "The Digital Residence\nteam’s view.",
-      badge: "Text for client approval",
       paragraphs: [
         "“We looked for a visual language that would convey the residence’s technology and keep the feel of a premium space. It was important to combine architecture, innovation, and lifestyle in one image.",
         "This direction helps us tell the project story consistently. The mark, materials, and 3D graphics give presentations, advertising, and corporate touchpoints a shared character.”",
       ],
       author: "Digital Residence team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

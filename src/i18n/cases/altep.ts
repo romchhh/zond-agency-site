@@ -174,14 +174,12 @@ const blocksUk: CaseVisualBlock[] = [
     index: "05",
     kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nALTEP.",
-    badge: "Текст для погодження з клієнтом",
     paragraphs: [
       "«Ми хотіли оновити бренд так, щоб він відповідав сучасній компанії й залишався впізнаваним для наших партнерів. Для нас важливо було поєднати надійність виробника та цілісний вигляд матеріалів.",
       "Нова візуальна система дає зрозумілі правила для сайту, презентацій, поліграфії та мерчу. Так ми можемо послідовно представляти ALTEP в різних каналах».",
     ],
     author: "Команда ALTEP",
-    role: "Місце для імені та посади представника",
-    note: "Редакційний приклад для макета, не реальний відгук. Потребує погодження клієнтом.",
+    role: "",
   },
 ];
 
@@ -318,14 +316,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nALTEP.",
-      badge: "Текст для согласования с клиентом",
       paragraphs: [
         "«Мы хотели обновить бренд так, чтобы он соответствовал современной компании и оставался узнаваемым для наших партнёров. Для нас было важно сочетать надёжность производителя и целостный вид материалов.",
         "Новая визуальная система даёт понятные правила для сайта, презентаций, полиграфии и мерча. Так мы можем последовательно представлять ALTEP в разных каналах».",
       ],
       author: "Команда ALTEP",
-      role: "Место для имени и должности представителя",
-      note: "Редакционный пример для макета, не реальный отзыв. Требует согласования клиентом.",
+      role: "",
     };
   }
   if (block.type === "facts") {
@@ -445,14 +441,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       kicker: "CLIENT REVIEW",
       heading: "The ALTEP\nteam’s view.",
-      badge: "Text for client approval",
       paragraphs: [
         "“We wanted to refresh the brand so it matched a modern company and stayed recognizable to our partners. It was important for us to combine the manufacturer’s reliability with a cohesive look across materials.",
         "The new visual system gives clear rules for the website, presentations, print, and merch. That lets us represent ALTEP consistently across channels.”",
       ],
       author: "ALTEP team",
-      role: "Placeholder for representative name and role",
-      note: "Editorial sample for the layout, not a real review. Requires client approval.",
+      role: "",
     };
   }
   if (block.type === "facts") {

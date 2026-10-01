@@ -12,7 +12,9 @@ import { brandingPage } from "@/i18n/branding";
 import { getBrandingSeo } from "@/i18n/branding-seo";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
+import { withCaseServiceReviews } from "@/i18n/service-reviews";
 import { imageSizes } from "@/lib/media";
+import Link from "next/link";
 
 type BrandingPageProps = {
   locale: Locale;
@@ -25,7 +27,7 @@ export default function BrandingPage({
   dictionary,
   projects,
 }: BrandingPageProps) {
-  const copy = brandingPage[locale];
+  const copy = withCaseServiceReviews(brandingPage[locale], locale, "branding");
   const seo = getBrandingSeo(locale);
 
   return (
@@ -145,7 +147,14 @@ export default function BrandingPage({
               {copy.reviews.map((review, index) => (
                 <figure className="sp-review" key={review.label}>
                   <div>
-                    <span className="sp-review-demo">{review.label}</span>
+                    {review.href ? (
+                      <Link className="sp-review-demo sp-review-case-link" href={review.href}>
+                        <span>{review.label}</span>
+                        <span aria-hidden="true">↗</span>
+                      </Link>
+                    ) : (
+                      <span className="sp-review-demo">{review.label}</span>
+                    )}
                     <blockquote>{review.quote}</blockquote>
                   </div>
                   <figcaption>
