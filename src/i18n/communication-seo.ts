@@ -61,9 +61,141 @@ const uk: BrandingSeoContent = {
   "editorialTitle": "Послідовні слова формують впізнаваність."
 };
 
-const en: BrandingSeoContent = { ...uk, spoilerLabel: "Learn more" };
+const en: BrandingSeoContent = {
+  spoilerLabel: "Learn more",
+  sections: [
+    {
+      title: "What is brand communication?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "It is how a brand explains its value, answers questions, and builds relationships with people. It shows up in words, themes, tone, and consistency of messages.",
+        },
+        {
+          kind: "p",
+          text:
+            "Communication is not a single ad line but every contact: a website headline, product description, post, email, or support reply.",
+        },
+      ],
+    },
+    {
+      title: "Why do you need a tagline?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "A tagline conveys the brand idea or promise in a few words. It can make messaging recognizable but must rest on real product value.",
+        },
+        {
+          kind: "p",
+          text:
+            "A strong line stays appropriate in different contexts and does not need a long explanation every time people see the brand.",
+        },
+      ],
+    },
+    {
+      title: "How is tone of voice shaped?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "We define brand character and translate it into concrete language choices: how to address people, which words to use, and what to avoid.",
+        },
+        {
+          kind: "p",
+          text:
+            "Tone can adapt to the situation, but principles stay shared across advertising, the website, social media, and service messages.",
+        },
+      ],
+    },
+    {
+      title: "What does a communication guide provide?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "The guide captures the core idea, key messages, intonation, and text examples. It helps the team and partners write consistently.",
+        },
+        {
+          kind: "p",
+          text:
+            "When the brand enters a new channel or launches a product, the team already has criteria for new wording.",
+        },
+      ],
+    },
+  ],
+  editorialEyebrow: "08 / LEARN MORE",
+  editorialTitle: "Consistent words build recognition.",
+};
 
-const ru: BrandingSeoContent = { ...uk, spoilerLabel: "Подробнее" };
+const ru: BrandingSeoContent = {
+  spoilerLabel: "Подробнее",
+  sections: [
+    {
+      title: "Что такое коммуникация бренда?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "Это способ, которым бренд объясняет свою ценность, отвечает на вопросы и строит отношения с людьми. Он проявляется в словах, темах, тоне и последовательности сообщений.",
+        },
+        {
+          kind: "p",
+          text:
+            "Коммуникация охватывает не один рекламный текст, а каждый контакт: заголовок сайта, описание продукта, пост, письмо или ответ службы поддержки.",
+        },
+      ],
+    },
+    {
+      title: "Зачем нужен слоган?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "Слоган кратко передаёт идею или обещание бренда. Он может сделать сообщение узнаваемым, но должен опираться на реальную ценность продукта.",
+        },
+        {
+          kind: "p",
+          text:
+            "Сильная фраза остаётся уместной в разных контекстах и не требует длинного пояснения каждый раз, когда люди видят бренд.",
+        },
+      ],
+    },
+    {
+      title: "Как формируется тон голоса?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "Мы определяем характер бренда и переводим его в конкретные языковые решения: как обращаться к людям, какие слова выбирать и чего избегать.",
+        },
+        {
+          kind: "p",
+          text:
+            "Тон может адаптироваться к ситуации, но принципы остаются общими для рекламы, сайта, соцсетей и сервисных сообщений.",
+        },
+      ],
+    },
+    {
+      title: "Что даёт коммуникационный гайд?",
+      blocks: [
+        {
+          kind: "p",
+          text:
+            "Гайд фиксирует главную идею, сообщения, интонацию и примеры текстов. Он помогает команде и подрядчикам писать последовательно.",
+        },
+        {
+          kind: "p",
+          text:
+            "Когда бренд выходит в новый канал или запускает продукт, команда уже имеет критерии для новых формулировок.",
+        },
+      ],
+    },
+  ],
+  editorialEyebrow: "08 / ПОДРОБНЕЕ",
+  editorialTitle: "Последовательные слова формируют узнаваемость.",
+};
 
 const seo: Record<Locale, BrandingSeoContent> = { uk, en, ru };
 
