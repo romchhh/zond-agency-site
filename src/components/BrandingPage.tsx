@@ -128,7 +128,7 @@ export default function BrandingPage({
           </div>
           <div className="wrap wrap--flush">
             <div className="projects-grid">
-              {projects.slice(0, 4).map((project) => (
+              {projects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
             </div>

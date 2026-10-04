@@ -26,7 +26,6 @@ type ServiceLandingPageProps = {
   copy: ServicePageContent;
   seo: BrandingSeoContent;
   heroImage: string;
-  casesCount?: number;
   serviceSlug?: string;
 };
 
@@ -333,7 +332,6 @@ export default function ServiceLandingPage({
   copy: copyProp,
   seo,
   heroImage,
-  casesCount = 4,
   serviceSlug,
 }: ServiceLandingPageProps) {
   const copy = withCaseServiceReviews(copyProp, locale, serviceSlug);
@@ -422,7 +420,7 @@ export default function ServiceLandingPage({
               </div>
               <div className="wrap wrap--flush">
                 <div className="projects-grid">
-                  {projects.slice(0, casesCount).map((project) => (
+                  {projects.map((project) => (
                     <ProjectCard key={project.title} project={project} />
                   ))}
                 </div>

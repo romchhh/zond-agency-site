@@ -15,7 +15,7 @@ import SmmPage from "@/components/SmmPage";
 import ServiceTitlePage from "@/components/ServiceTitlePage";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { getProjects } from "@/i18n/projects";
+import { getServiceProjects } from "@/i18n/projects";
 import {
   isServiceSlug,
   serviceMeta,
@@ -53,13 +53,14 @@ export default async function ServicePage({
   const dictionary = await getDictionary(locale);
   const title = serviceTitles[locale][slug];
   const eyebrow = `${dictionary.nav.services} / ${title}`;
+  const projects = getServiceProjects(locale, slug);
 
   if (slug === "branding") {
     return (
       <BrandingPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -69,7 +70,7 @@ export default async function ServicePage({
       <LogoPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -79,7 +80,7 @@ export default async function ServicePage({
       <BrandbookPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -89,7 +90,7 @@ export default async function ServicePage({
       <PackagingPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -99,7 +100,7 @@ export default async function ServicePage({
       <IllustrationPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -109,7 +110,7 @@ export default async function ServicePage({
       <SmmPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -119,7 +120,7 @@ export default async function ServicePage({
       <GraphicsPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -129,7 +130,7 @@ export default async function ServicePage({
       <IdentityPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -139,7 +140,7 @@ export default async function ServicePage({
       <NamingPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -149,7 +150,7 @@ export default async function ServicePage({
       <PositioningPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -159,7 +160,7 @@ export default async function ServicePage({
       <CommunicationPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -169,7 +170,7 @@ export default async function ServicePage({
       <BrandCharacterPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -179,7 +180,7 @@ export default async function ServicePage({
       <WebDevelopmentPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }
@@ -189,7 +190,7 @@ export default async function ServicePage({
       <InfluenceMarketingPage
         locale={locale}
         dictionary={dictionary}
-        projects={getProjects(locale)}
+        projects={projects}
       />
     );
   }

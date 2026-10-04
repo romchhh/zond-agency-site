@@ -1,7 +1,7 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
-import { getWebDevelopmentProjects, webDevelopmentPage } from "@/i18n/web-development";
+import { webDevelopmentPage } from "@/i18n/web-development";
 import { getWebDevelopmentSeo } from "@/i18n/web-development-seo";
 
 type WebDevelopmentPageProps = {
@@ -13,12 +13,13 @@ type WebDevelopmentPageProps = {
 export default function WebDevelopmentPage({
   locale,
   dictionary,
+  projects,
 }: WebDevelopmentPageProps) {
   return (
     <ServiceLandingPage
       locale={locale}
       dictionary={dictionary}
-      projects={getWebDevelopmentProjects(locale)}
+      projects={projects}
       copy={webDevelopmentPage[locale]}
       serviceSlug="web-development"
       seo={getWebDevelopmentSeo(locale)}
