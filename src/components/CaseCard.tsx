@@ -1,3 +1,4 @@
+import LoopedVideo from "@/components/LoopedVideo";
 import MediaImage from "@/components/MediaImage";
 import type { CaseItem } from "@/i18n/cases";
 import type { Locale } from "@/i18n/config";
@@ -15,8 +16,13 @@ function isAnimated(src: string) {
   return src.endsWith(".gif") || src.endsWith(".webp");
 }
 
+function isVideo(src: string) {
+  return src.endsWith(".mp4") || src.endsWith(".webm");
+}
+
 export default function CaseCard({ locale, caseItem, compact = false }: CaseCardProps) {
   const href = getCaseDetailPath(locale, caseItem.slug);
+  const coverSrc = caseItem.listCover ?? caseItem.cover;
 
   return (
     <Link href={href} className="project-card project-card-link">
@@ -26,14 +32,23 @@ export default function CaseCard({ locale, caseItem, compact = false }: CaseCard
           <p>{caseItem.cardDescription ?? caseItem.description}</p>
         ) : null}
       </div>
-      {caseItem.cover ? (
+      {coverSrc ? (
         <div className="project-img">
-          <MediaImage
-            src={caseItem.cover}
-            alt={caseItem.title}
-            sizes={imageSizes.project}
-            unoptimized={isAnimated(caseItem.cover)}
-          />
+          {isVideo(coverSrc) ? (
+            <LoopedVideo
+              className="project-img-video"
+              src={coverSrc}
+              ariaLabel={caseItem.title}
+              poster={caseItem.cover}
+            />
+          ) : (
+            <MediaImage
+              src={coverSrc}
+              alt={caseItem.title}
+              sizes={imageSizes.project}
+              unoptimized={isAnimated(coverSrc)}
+            />
+          )}
         </div>
       ) : null}
     </Link>

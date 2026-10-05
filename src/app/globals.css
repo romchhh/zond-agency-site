@@ -1104,11 +1104,22 @@ a.project-card {
   background: rgba(255, 255, 255, 0.14);
 }
 
-.project-img img {
+.project-img img,
+.project-img .project-img-video {
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-img img {
+.project-img .project-img-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card:hover .project-img img,
+.project-card:hover .project-img .project-img-video {
   transform: scale(1.05);
 }
 

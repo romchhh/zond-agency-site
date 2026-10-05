@@ -99,6 +99,8 @@ export type CaseItem = {
   /** Short niche label for project cards (homepage, services). */
   cardDescription?: string;
   cover: string;
+  /** Optional media for cases index cards only (does not affect case pages). */
+  listCover?: string;
   media: string[];
   body: string;
   tagline?: string;

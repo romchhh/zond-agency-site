@@ -440,6 +440,7 @@ export function getTbilisoBlocks(locale: Locale): CaseVisualBlock[] {
 export const tbilisoShared = {
   slug: "tbiliso",
   cover: m("cover.jpg"),
+  listCover: m("cover.mp4"),
   media: tbilisoMedia,
   body: `[IMG: media/tbiliso/01.jpg]`,
 };

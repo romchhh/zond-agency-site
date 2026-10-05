@@ -458,6 +458,7 @@ export function getTerminalBorivajeBlocks(locale: Locale): CaseVisualBlock[] {
 export const terminalBorivajeShared = {
   slug: "terminal-borivaje",
   cover: m("cover.jpg"),
+  listCover: m("cover.mp4"),
   media: terminalMedia,
   body: `[IMG: media/terminal-borivaje/01.jpg]`,
 };
