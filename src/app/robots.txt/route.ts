@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { PAGE_CACHE_CONTROL } from "@/lib/http-cache";
 import { getCanonicalSiteUrl, getRequestHostname, shouldBlockSearchIndexing } from "@/lib/site";
 
 const BLOCKED_ROBOTS = `User-agent: *
@@ -21,7 +22,7 @@ export function GET(request: Request) {
   return new NextResponse(body, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "private, no-store",
+      "Cache-Control": PAGE_CACHE_CONTROL,
     },
   });
 }

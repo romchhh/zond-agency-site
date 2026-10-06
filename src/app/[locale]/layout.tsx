@@ -8,6 +8,9 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { media } from "@/lib/media";
 import { getCanonicalSiteUrl, siteConfig } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

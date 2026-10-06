@@ -9,11 +9,19 @@ import {
   isApexHost,
   shouldBlockSearchIndexing,
 } from "@/lib/site";
+import { PAGE_CACHE_CONTROL } from "@/lib/http-cache";
 
-function applyIndexingHeaders(response: NextResponse, request: NextRequest) {
+function applyResponseHeaders(response: NextResponse, request: NextRequest) {
   const host = getRequestHostname(request.headers) ?? request.nextUrl.hostname;
   if (shouldBlockSearchIndexing(host)) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
+  }
+
+  if (request.method === "GET" || request.method === "HEAD") {
+    response.headers.set("Cache-Control", PAGE_CACHE_CONTROL);
+    response.headers.set("CDN-Cache-Control", PAGE_CACHE_CONTROL);
+    response.headers.set("Vercel-CDN-Cache-Control", PAGE_CACHE_CONTROL);
   }
   return response;
 }
@@ -33,7 +41,7 @@ function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) 
   if (rewritePath) {
     const rewriteUrl = request.nextUrl.clone();
     rewriteUrl.pathname = rewritePath;
-    return applyIndexingHeaders(
+    return applyResponseHeaders(
       NextResponse.rewrite(rewriteUrl, {
         request: { headers: requestHeaders },
       }),
@@ -41,7 +49,7 @@ function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) 
     );
   }
 
-  return applyIndexingHeaders(
+  return applyResponseHeaders(
     NextResponse.next({
       request: { headers: requestHeaders },
     }),
@@ -69,12 +77,12 @@ export function middleware(request: NextRequest) {
   }
 
   if (pathname === "/robots.txt" || pathname === "/sitemap.xml") {
-    return applyIndexingHeaders(NextResponse.next(), request);
+    return applyResponseHeaders(NextResponse.next(), request);
   }
 
   if (pathname === "/uk" || pathname.startsWith("/uk/")) {
     const nextPath = pathname.replace(/^\/uk/, "") || "/";
-    return applyIndexingHeaders(
+    return applyResponseHeaders(
       NextResponse.redirect(new URL(nextPath, request.url)),
       request,
     );
