@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import History from "@/components/History";
+import HomeSeoBlock from "@/components/HomeSeoBlock";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import TeamAndCta from "@/components/TeamAndCta";
@@ -59,6 +60,7 @@ export default async function HomePage({
         <Projects locale={locale} dictionary={dictionary} projects={projects} />
         <Services locale={locale} dictionary={dictionary} />
         <TeamAndCta dictionary={dictionary} />
+        <HomeSeoBlock dictionary={dictionary} />
       </main>
       <Footer locale={locale} dictionary={dictionary} />
     </>

@@ -28,6 +28,7 @@ export type Dictionary = {
   meta: {
     title: string;
     description: string;
+    h1: string;
     keywords: string[];
     ogImageAlt: string;
   };

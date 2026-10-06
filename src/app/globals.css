@@ -505,6 +505,29 @@ ul {
   background: var(--bg);
 }
 
+.home-seo-block {
+  padding-top: 8px;
+  padding-bottom: 56px;
+}
+
+.home-seo-title {
+  margin: 0 0 16px;
+  max-width: 760px;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.home-seo-copy {
+  margin: 0;
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #535b64;
+}
+
 .section-label {
   color: var(--accent);
   font-size: 13px;
@@ -661,18 +684,6 @@ ul {
   display: block;
   width: 49px;
   height: 20px;
-}
-
-.hero-page-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 .hero-slogan {

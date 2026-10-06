@@ -36,7 +36,6 @@ export default function Hero({ locale, dictionary }: HeroProps) {
                 );
               })}
             </ul>
-            <h1 className="hero-page-title">{dictionary.meta.title}</h1>
             <div className="hero-bottom">
               <div className="hero-more">
                 {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -5,6 +5,7 @@ const en: Dictionary = {
     title: "ZOND — Branding Agency",
     description:
       "ZOND is a branding agency in Kyiv: strategy, naming, logo, identity, brand book, packaging and SMM. Since 2021. Free consultation.",
+    h1: "ZOND branding agency: strategy, identity, design",
     keywords: [
       "branding",
       "identity",
