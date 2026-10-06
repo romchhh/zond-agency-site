@@ -242,17 +242,32 @@ const oldSiteRedirects = [
   ["/strategy", "/our-services/positioning"],
 ];
 
-function toServiceUrlSlug(slug, locale) {
-  if (slug === "marketing-360") {
-    return locale === "uk" ? "marketing360" : "marketing-360";
-  }
+function toServiceUrlSlug(slug) {
+  if (slug === "marketing-360") return "marketing360";
   return slug;
+}
+
+function modernizeDestination(dest) {
+  if (dest === "/ru/blog-ru") return "/ru/blog";
+  if (dest === "/ru/policy-ru") return "/ru/policy";
+  if (dest.startsWith("/ru-blog/")) return `/ru/blog/${dest.slice("/ru-blog/".length)}`;
+  if (dest.startsWith("/ru-projects/")) return `/ru/projects/${dest.slice("/ru-projects/".length)}`;
+  if (dest.startsWith("/projects-eng/")) return `/en/projects/${dest.slice("/projects-eng/".length)}`;
+  if (dest.startsWith("/our-services-eng/")) {
+    const slug = dest.slice("/our-services-eng/".length);
+    return `/en/our-services/${toServiceUrlSlug(slug)}`;
+  }
+  if (dest.startsWith("/ru/services/")) {
+    const slug = dest.slice("/ru/services/".length);
+    return `/ru/our-services/${toServiceUrlSlug(slug)}`;
+  }
+  return dest;
 }
 
 function pushRedirect(redirects, seen, source, destination) {
   if (seen.has(source)) return;
   seen.add(source);
-  redirects.push({ source, destination, permanent: true });
+  redirects.push({ source, destination: modernizeDestination(destination), permanent: true });
 }
 
 function buildLegacyRedirects() {
@@ -263,39 +278,30 @@ function buildLegacyRedirects() {
     pushRedirect(redirects, seen, source, destination);
   }
 
-  pushRedirect(redirects, seen, "/cases/:slug", "/projects/:slug");
-  pushRedirect(redirects, seen, "/en/cases/:slug", "/projects-eng/:slug");
-  pushRedirect(redirects, seen, "/ru/cases/:slug", "/ru-projects/:slug");
-  pushRedirect(redirects, seen, "/ru/blog/:slug", "/ru-blog/:slug");
-  pushRedirect(redirects, seen, "/ru/blog", "/ru/blog-ru");
+  pushRedirect(redirects, seen, "/our-services-eng/marketing-360", "/en/our-services/marketing360");
+  pushRedirect(redirects, seen, "/ru/services/marketing-360", "/ru/our-services/marketing360");
+  pushRedirect(redirects, seen, "/en/our-services/marketing-360", "/en/our-services/marketing360");
+  pushRedirect(redirects, seen, "/ru/our-services/marketing-360", "/ru/our-services/marketing360");
   pushRedirect(redirects, seen, "/our-services/marketing-360", "/our-services/marketing360");
-  pushRedirect(redirects, seen, "/our-services-eng/marketing360", "/our-services-eng/marketing-360");
-  pushRedirect(redirects, seen, "/ru/services/marketing360", "/ru/services/marketing-360");
+
+  pushRedirect(redirects, seen, "/ru-blog/:slug", "/ru/blog/:slug");
+  pushRedirect(redirects, seen, "/ru/blog-ru", "/ru/blog");
+  pushRedirect(redirects, seen, "/ru/policy-ru", "/ru/policy");
+  pushRedirect(redirects, seen, "/ru-projects/:slug", "/ru/projects/:slug");
+  pushRedirect(redirects, seen, "/projects-eng/:slug", "/en/projects/:slug");
+  pushRedirect(redirects, seen, "/our-services-eng/:slug", "/en/our-services/:slug");
+  pushRedirect(redirects, seen, "/ru/services/:slug", "/ru/our-services/:slug");
+  pushRedirect(redirects, seen, "/en/services/:slug", "/en/our-services/:slug");
+  pushRedirect(redirects, seen, "/cases/:slug", "/projects/:slug");
+  pushRedirect(redirects, seen, "/en/cases/:slug", "/en/projects/:slug");
+  pushRedirect(redirects, seen, "/ru/cases/:slug", "/ru/projects/:slug");
 
   for (const slug of serviceSlugs) {
-    const ukUrlSlug = toServiceUrlSlug(slug, "uk");
-    const enUrlSlug = toServiceUrlSlug(slug, "en");
-    const ruUrlSlug = toServiceUrlSlug(slug, "ru");
+    const urlSlug = toServiceUrlSlug(slug);
 
-    pushRedirect(redirects, seen, `/services/${slug}`, `/our-services/${ukUrlSlug}`);
-    pushRedirect(redirects, seen, `/en/services/${slug}`, `/our-services-eng/${enUrlSlug}`);
-
-    if (ukUrlSlug !== slug) {
-      pushRedirect(redirects, seen, `/services/${ukUrlSlug}`, `/our-services/${ukUrlSlug}`);
-    }
-
-    if (enUrlSlug !== slug && enUrlSlug !== ukUrlSlug) {
-      pushRedirect(redirects, seen, `/en/services/${enUrlSlug}`, `/our-services-eng/${enUrlSlug}`);
-      pushRedirect(
-        redirects,
-        seen,
-        `/our-services-eng/${ukUrlSlug}`,
-        `/our-services-eng/${enUrlSlug}`,
-      );
-    }
-
-    if (ruUrlSlug !== slug && ruUrlSlug !== ukUrlSlug) {
-      pushRedirect(redirects, seen, `/ru/services/${slug}`, `/ru/services/${ruUrlSlug}`);
+    pushRedirect(redirects, seen, `/services/${slug}`, `/our-services/${urlSlug}`);
+    if (urlSlug !== slug) {
+      pushRedirect(redirects, seen, `/services/${urlSlug}`, `/our-services/${urlSlug}`);
     }
   }
 

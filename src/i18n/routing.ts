@@ -1,10 +1,8 @@
 import { defaultLocale, type Locale } from "@/i18n/config";
 
-/** Matches zond.agency sitemap: UK uses marketing360, EN/RU use marketing-360. */
-export function toServiceUrlSlug(slug: string, locale: Locale): string {
-  if (slug === "marketing-360") {
-    return locale === "uk" ? "marketing360" : "marketing-360";
-  }
+/** Public service slug. Marketing 360 is `marketing360` in every language. */
+export function toServiceUrlSlug(slug: string, _locale?: Locale): string {
+  if (slug === "marketing-360") return "marketing360";
   return slug;
 }
 
@@ -13,6 +11,11 @@ export function fromServiceUrlSlug(urlSlug: string): string {
     return "marketing-360";
   }
   return urlSlug;
+}
+
+function withLocalePrefix(locale: Locale, path: string): string {
+  if (locale === defaultLocale) return path;
+  return `/${locale}${path}`;
 }
 
 type Route =
@@ -41,14 +44,14 @@ export function parsePublicPath(pathname = "/"): { route: Route; locale: Locale 
     return { route: { type: "case-detail", slug: caseUk[1] }, locale: "uk" };
   }
 
-  const caseEn = path.match(/^\/projects-eng\/([^/]+)$/);
-  if (caseEn) {
-    return { route: { type: "case-detail", slug: caseEn[1] }, locale: "en" };
+  const caseEnLegacy = path.match(/^\/projects-eng\/([^/]+)$/);
+  if (caseEnLegacy) {
+    return { route: { type: "case-detail", slug: caseEnLegacy[1] }, locale: "en" };
   }
 
-  const caseRu = path.match(/^\/ru-projects\/([^/]+)$/);
-  if (caseRu) {
-    return { route: { type: "case-detail", slug: caseRu[1] }, locale: "ru" };
+  const caseRuLegacy = path.match(/^\/ru-projects\/([^/]+)$/);
+  if (caseRuLegacy) {
+    return { route: { type: "case-detail", slug: caseRuLegacy[1] }, locale: "ru" };
   }
 
   const serviceUk = path.match(/^\/our-services\/([^/]+)$/);
@@ -59,17 +62,17 @@ export function parsePublicPath(pathname = "/"): { route: Route; locale: Locale 
     };
   }
 
-  const serviceEn = path.match(/^\/our-services-eng\/([^/]+)$/);
-  if (serviceEn) {
+  const serviceEnLegacy = path.match(/^\/our-services-eng\/([^/]+)$/);
+  if (serviceEnLegacy) {
     return {
-      route: { type: "service-detail", slug: fromServiceUrlSlug(serviceEn[1]) },
+      route: { type: "service-detail", slug: fromServiceUrlSlug(serviceEnLegacy[1]) },
       locale: "en",
     };
   }
 
-  const blogRu = path.match(/^\/ru-blog\/([^/]+)$/);
-  if (blogRu) {
-    return { route: { type: "blog-detail", slug: blogRu[1] }, locale: "ru" };
+  const blogRuLegacy = path.match(/^\/ru-blog\/([^/]+)$/);
+  if (blogRuLegacy) {
+    return { route: { type: "blog-detail", slug: blogRuLegacy[1] }, locale: "ru" };
   }
 
   if (path === "/policy") {
@@ -89,6 +92,9 @@ export function parsePublicPath(pathname = "/"): { route: Route; locale: Locale 
   } else if (path.startsWith("/ru/")) {
     locale = "ru";
     rest = path.slice(3) || "/";
+  } else if (path.startsWith("/uk/")) {
+    locale = "uk";
+    rest = path.slice(3) || "/";
   }
 
   if (rest === "" || rest === "/") {
@@ -103,7 +109,7 @@ export function parsePublicPath(pathname = "/"): { route: Route; locale: Locale 
     return { route: { type: "case-index" }, locale };
   }
 
-  const caseDetail = rest.match(/^\/cases\/([^/]+)$/);
+  const caseDetail = rest.match(/^\/(?:projects|cases)\/([^/]+)$/);
   if (caseDetail) {
     return { route: { type: "case-detail", slug: caseDetail[1] }, locale };
   }
@@ -112,7 +118,7 @@ export function parsePublicPath(pathname = "/"): { route: Route; locale: Locale 
     return { route: { type: "service-index" }, locale };
   }
 
-  const serviceDetail = rest.match(/^\/services\/([^/]+)$/);
+  const serviceDetail = rest.match(/^\/(?:our-services|services)\/([^/]+)$/);
   if (serviceDetail) {
     return {
       route: { type: "service-detail", slug: fromServiceUrlSlug(serviceDetail[1]) },
@@ -145,33 +151,23 @@ export function buildPublicPath(locale: Locale, route: Route): string {
     case "home":
       return locale === defaultLocale ? "/" : `/${locale}`;
     case "home-alias":
-      return locale === defaultLocale ? "/home" : `/${locale}/home`;
+      return withLocalePrefix(locale, "/home");
     case "case-index":
-      return locale === defaultLocale ? "/cases" : `/${locale}/cases`;
+      return withLocalePrefix(locale, "/cases");
     case "case-detail":
-      if (locale === "uk") return `/projects/${route.slug}`;
-      if (locale === "en") return `/projects-eng/${route.slug}`;
-      return `/ru-projects/${route.slug}`;
+      return withLocalePrefix(locale, `/projects/${route.slug}`);
     case "service-index":
-      return locale === defaultLocale ? "/services" : `/${locale}/services`;
-    case "service-detail": {
-      const urlSlug = toServiceUrlSlug(route.slug, locale);
-      if (locale === "uk") return `/our-services/${urlSlug}`;
-      if (locale === "en") return `/our-services-eng/${urlSlug}`;
-      return `/ru/services/${urlSlug}`;
-    }
+      return withLocalePrefix(locale, "/services");
+    case "service-detail":
+      return withLocalePrefix(locale, `/our-services/${toServiceUrlSlug(route.slug)}`);
     case "blog-index":
-      if (locale === "ru") return "/ru/blog-ru";
-      return locale === defaultLocale ? "/blog" : `/${locale}/blog`;
+      return withLocalePrefix(locale, "/blog");
     case "blog-detail":
-      if (locale === "ru") return `/ru-blog/${route.slug}`;
-      return locale === defaultLocale ? `/blog/${route.slug}` : `/${locale}/blog/${route.slug}`;
+      return withLocalePrefix(locale, `/blog/${route.slug}`);
     case "contact":
-      return locale === defaultLocale ? "/contact" : `/${locale}/contact`;
+      return withLocalePrefix(locale, "/contact");
     case "policy":
-      if (locale === "uk") return "/policy";
-      if (locale === "ru") return "/ru/policy-ru";
-      return "/en/policy";
+      return withLocalePrefix(locale, "/policy");
     case "unknown":
       return route.path;
   }
@@ -275,6 +271,7 @@ export function getAlternateLanguages(
   };
 }
 
+/** Map public pretty URLs onto App Router files. Old aliases are 308s in next.config. */
 export function resolveLegacyRewrite(
   pathname: string,
 ): { locale: Locale; internalPath: string } | null {
@@ -283,14 +280,12 @@ export function resolveLegacyRewrite(
     return { locale: "uk", internalPath: `/uk/cases/${caseUk[1]}` };
   }
 
-  const caseEn = pathname.match(/^\/projects-eng\/([^/]+)$/);
-  if (caseEn) {
-    return { locale: "en", internalPath: `/en/cases/${caseEn[1]}` };
-  }
-
-  const caseRu = pathname.match(/^\/ru-projects\/([^/]+)$/);
-  if (caseRu) {
-    return { locale: "ru", internalPath: `/ru/cases/${caseRu[1]}` };
+  const caseLocalized = pathname.match(/^\/(en|ru)\/projects\/([^/]+)$/);
+  if (caseLocalized) {
+    return {
+      locale: caseLocalized[1] as Locale,
+      internalPath: `/${caseLocalized[1]}/cases/${caseLocalized[2]}`,
+    };
   }
 
   const serviceUk = pathname.match(/^\/our-services\/([^/]+)$/);
@@ -299,27 +294,17 @@ export function resolveLegacyRewrite(
     return { locale: "uk", internalPath: `/uk/services/${slug}` };
   }
 
-  const serviceEn = pathname.match(/^\/our-services-eng\/([^/]+)$/);
-  if (serviceEn) {
-    const slug = fromServiceUrlSlug(serviceEn[1]);
-    return { locale: "en", internalPath: `/en/services/${slug}` };
-  }
-
-  const blogRu = pathname.match(/^\/ru-blog\/([^/]+)$/);
-  if (blogRu) {
-    return { locale: "ru", internalPath: `/ru/blog/${blogRu[1]}` };
-  }
-
-  if (pathname === "/ru/blog-ru") {
-    return { locale: "ru", internalPath: "/ru/blog" };
+  const serviceLocalized = pathname.match(/^\/(en|ru)\/our-services\/([^/]+)$/);
+  if (serviceLocalized) {
+    const slug = fromServiceUrlSlug(serviceLocalized[2]);
+    return {
+      locale: serviceLocalized[1] as Locale,
+      internalPath: `/${serviceLocalized[1]}/services/${slug}`,
+    };
   }
 
   if (pathname === "/policy") {
     return { locale: "uk", internalPath: "/uk/policy" };
-  }
-
-  if (pathname === "/ru/policy-ru") {
-    return { locale: "ru", internalPath: "/ru/policy" };
   }
 
   return null;

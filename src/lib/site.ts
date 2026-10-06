@@ -6,7 +6,7 @@ export const siteConfig = {
   name: "ZOND Agency",
   title: "ZOND — Branding Agency",
   description:
-    "ZOND — агенція брендингу з 2021 року. Стратегія, айдентика, дизайн, SMM, упаковка, брендбук та цифрові рішення для бізнесу в Україні та світі.",
+    "Брендингова агенція ZOND у Києві: стратегія, неймінг, логотип, айдентика, брендбук, упаковка і SMM. Працюємо з 2021 року, стратегія до результату.",
   locale: "uk_UA",
   language: "uk",
   email: "ask@zond.agency",

@@ -4,7 +4,7 @@ const en: Dictionary = {
   meta: {
     title: "ZOND — Branding Agency",
     description:
-      "ZOND is a branding agency founded in 2021. Strategy, identity, design, SMM, packaging, brand books, and digital solutions for businesses in Ukraine and worldwide.",
+      "ZOND is a branding agency in Kyiv: strategy, naming, logo, identity, brand book, packaging and SMM. Since 2021. Free consultation.",
     keywords: [
       "branding",
       "identity",

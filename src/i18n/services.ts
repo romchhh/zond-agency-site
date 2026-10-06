@@ -147,7 +147,8 @@ export const serviceMeta: Record<
     },
     "marketing-360": {
       title: "Marketing 360 — ZOND",
-      description: "Комплексний маркетинг для бренду від агенції ZOND.",
+      description:
+        "Маркетинг 360 від ZOND: стратегія, контент, SMM, реклама і дизайн для бренду одним підрядником. Повний цикл просування під ваш ринок і бюджет.",
     },
     graphics: {
       title: "Графічний дизайн для бізнесу — поліграфія та реклама | ZOND",
@@ -229,7 +230,8 @@ export const serviceMeta: Record<
     },
     "marketing-360": {
       title: "Marketing 360 — ZOND",
-      description: "Full-cycle marketing for brands by ZOND Agency.",
+      description:
+        "Marketing 360 by ZOND: strategy, content, SMM, advertising and design for your brand from one team. Full-cycle promotion for your market and budget.",
     },
     graphics: {
       title: "Graphic design for business — print and advertising | ZOND",
@@ -259,7 +261,7 @@ export const serviceMeta: Record<
     identity: {
       title: "Brand identity and corporate style, price | ZOND, Kyiv",
       description:
-        "The company looks smaller than it is. Corporate style and identity bring the logo, palette, type, and media layouts into one recognizable image. ZOND examples, Kyiv.",
+        "The company looks smaller than it is. Corporate style and identity bring the logo, palette, type, and media layouts into one recognizable image. ZOND, Kyiv.",
     },
     naming: {
       title: "Naming: brand and product name development — ZOND",
@@ -310,12 +312,13 @@ export const serviceMeta: Record<
     },
     "marketing-360": {
       title: "Marketing 360 — ZOND",
-      description: "Комплексный маркетинг для бренда от агентства ZOND.",
+      description:
+        "Маркетинг 360 от ZOND: стратегия, контент, SMM, реклама и дизайн для бренда одним подрядчиком. Полный цикл продвижения под ваш рынок и бюджет.",
     },
     graphics: {
       title: "Графический дизайн для бизнеса — полиграфия и реклама | ZOND",
       description:
-        "Графический дизайн: полиграфия, наружная реклама, презентации, технический дизайн и подготовка к печати. Делаем бренд узнаваемым на каждом носителе. Студия ZOND.",
+        "Графический дизайн: полиграфия, наружная реклама, презентации, технический дизайн и подготовка к печати. Бренд узнаваем на каждом носителе. ZOND.",
     },
     smm: {
       title: "SMM-продвижение — социальные сети для бизнеса | ZOND",
