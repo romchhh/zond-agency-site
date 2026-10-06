@@ -36,6 +36,10 @@ export function formatSitePhone(phone: string): string {
   return `+38 ${digits.slice(2, 5)} ${digits.slice(5, 8)} ${digits.slice(8, 10)} ${digits.slice(10, 12)}`;
 }
 
+function isVercelPreviewHost(hostname: string): boolean {
+  return hostname.endsWith(".vercel.app") || hostname === "localhost" || hostname === "127.0.0.1";
+}
+
 function normalizeSiteUrl(raw: string | undefined): string {
   const value = raw?.trim();
   if (!value) return DEFAULT_SITE_URL;
@@ -46,8 +50,15 @@ function normalizeSiteUrl(raw: string | undefined): string {
     const url = new URL(withProtocol);
     if (url.hostname === APEX_HOST) {
       url.hostname = CANONICAL_HOST;
+      return url.origin;
     }
-    return url.origin;
+    if (url.hostname === CANONICAL_HOST) {
+      return url.origin;
+    }
+    if (isVercelPreviewHost(url.hostname)) {
+      return DEFAULT_SITE_URL;
+    }
+    return DEFAULT_SITE_URL;
   } catch {
     return DEFAULT_SITE_URL;
   }
