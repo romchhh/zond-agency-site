@@ -1,5 +1,5 @@
 import type { Locale } from "@/i18n/config";
-import type { ServiceSlug } from "@/i18n/services";
+import { serviceTitles, type ServiceSlug } from "@/i18n/services";
 
 export type ServiceIndexItem = {
   slug: ServiceSlug;
@@ -278,4 +278,9 @@ export const servicesIndex: Record<Locale, ServicesIndexContent> = { uk, en, ru 
 
 export function getServicesIndex(locale: Locale): ServicesIndexContent {
   return servicesIndex[locale];
+}
+
+export function getServiceMenuTitle(locale: Locale, slug: ServiceSlug): string {
+  const item = getServicesIndex(locale).items.find((entry) => entry.slug === slug);
+  return item?.title ?? serviceTitles[locale][slug];
 }

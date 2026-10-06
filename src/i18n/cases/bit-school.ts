@@ -433,7 +433,8 @@ export function getBitSchoolBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const bitSchoolShared = {
   slug: "bit-school",
-  cover: m("cover.gif"),
+  cover: m("cover.webp"),
+  listCover: m("cover.mp4"),
   media: bitSchoolMedia,
   body: `[IMG: media/bit-school/hero.jpg]`,
 };

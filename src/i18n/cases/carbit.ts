@@ -458,7 +458,8 @@ export function getCarbitBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const carbitShared = {
   slug: "carbit",
-  cover: m("cover.gif"),
+  cover: m("cover.webp"),
+  listCover: m("cover.mp4"),
   media: carbitMedia,
   tagline: "Бренд, що рухає\nпошук уперед.",
   serviceTag: "Брендинг + айдентика",

@@ -2,19 +2,33 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 import { resolveLegacyRewrite } from "@/i18n/routing";
-import { shouldBlockSearchIndexing } from "@/lib/site";
+import { getThanksLocale } from "@/lib/lead";
+import {
+  CANONICAL_HOST,
+  getRequestHostname,
+  isApexHost,
+  shouldBlockSearchIndexing,
+} from "@/lib/site";
 
-function applyIndexingHeaders(response: NextResponse, host: string) {
+function applyIndexingHeaders(response: NextResponse, request: NextRequest) {
+  const host = getRequestHostname(request.headers) ?? request.nextUrl.hostname;
   if (shouldBlockSearchIndexing(host)) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
   return response;
 }
 
+function redirectApexToWww(request: NextRequest) {
+  const url = request.nextUrl.clone();
+  url.protocol = "https:";
+  url.hostname = CANONICAL_HOST;
+  url.port = "";
+  return NextResponse.redirect(url, 308);
+}
+
 function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) {
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-locale", locale);
-  const host = request.nextUrl.hostname;
 
   if (rewritePath) {
     const rewriteUrl = request.nextUrl.clone();
@@ -23,7 +37,7 @@ function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) 
       NextResponse.rewrite(rewriteUrl, {
         request: { headers: requestHeaders },
       }),
-      host,
+      request,
     );
   }
 
@@ -31,18 +45,38 @@ function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) 
     NextResponse.next({
       request: { headers: requestHeaders },
     }),
-    host,
+    request,
   );
 }
 
 export function middleware(request: NextRequest) {
+  const host = getRequestHostname(request.headers) ?? request.nextUrl.hostname;
+  if (isApexHost(host)) {
+    return redirectApexToWww(request);
+  }
+
   const { pathname } = request.nextUrl;
+  const thanksLocale = getThanksLocale(pathname);
+
+  if (thanksLocale) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-locale", thanksLocale);
+    const response = NextResponse.next({
+      request: { headers: requestHeaders },
+    });
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
+  }
+
+  if (pathname === "/robots.txt" || pathname === "/sitemap.xml") {
+    return applyIndexingHeaders(NextResponse.next(), request);
+  }
 
   if (pathname === "/uk" || pathname.startsWith("/uk/")) {
     const nextPath = pathname.replace(/^\/uk/, "") || "/";
     return applyIndexingHeaders(
       NextResponse.redirect(new URL(nextPath, request.url)),
-      request.nextUrl.hostname,
+      request,
     );
   }
 
@@ -63,5 +97,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|assets|fonts|.*\\..*).*)"],
+  matcher: [
+    "/((?!api|_next|_vercel|assets|fonts|.*\\..*).*)",
+    "/robots.txt",
+    "/sitemap.xml",
+  ],
 };

@@ -18,25 +18,13 @@ import { getCanonicalSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getCanonicalSiteUrl();
-  const lastModified = new Date();
 
   const localeEntries = locales.map((locale) => ({
     url: getLocalizedUrl(siteUrl, locale),
-    lastModified,
     changeFrequency: "weekly" as const,
     priority: 1,
     alternates: {
       languages: getAlternateLanguages(siteUrl),
-    },
-  }));
-
-  const homeAliases = locales.map((locale) => ({
-    url: getLocalizedUrl(siteUrl, locale, "/home", { keepHomeAlias: true }),
-    lastModified,
-    changeFrequency: "weekly" as const,
-    priority: 1,
-    alternates: {
-      languages: getAlternateLanguages(siteUrl, "/home", { keepHomeAlias: true }),
     },
   }));
 
@@ -45,7 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: getLocalizedUrl(siteUrl, locale, pathname),
-      lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.95,
       alternates: {
@@ -60,7 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       return {
         url: getLocalizedUrl(siteUrl, locale, pathname),
-        lastModified,
         changeFrequency: "monthly" as const,
         priority: slug === "branding" ? 0.9 : 0.7,
         alternates: {
@@ -75,7 +61,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: getLocalizedUrl(siteUrl, locale, pathname),
-      lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.85,
       alternates: {
@@ -90,7 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       return {
         url: getLocalizedUrl(siteUrl, locale, pathname),
-        lastModified,
         changeFrequency: "monthly" as const,
         priority: 0.75,
         alternates: {
@@ -102,7 +86,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const contactEntries = locales.map((locale) => ({
     url: getLocalizedUrl(siteUrl, locale, "/contact"),
-    lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.85,
     alternates: {
@@ -115,7 +98,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: getLocalizedUrl(siteUrl, locale, pathname),
-      lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.9,
       alternates: {
@@ -130,7 +112,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       return {
         url: getLocalizedUrl(siteUrl, locale, pathname),
-        lastModified,
         changeFrequency: "monthly" as const,
         priority: 0.85,
         alternates: {
@@ -140,12 +121,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const policyEntries = (["uk", "ru"] as const).map((locale) => {
+  const policyEntries = locales.map((locale) => {
     const pathname = getPolicyPath(locale);
 
     return {
       url: getLocalizedUrl(siteUrl, locale, pathname),
-      lastModified,
       changeFrequency: "yearly" as const,
       priority: 0.4,
       alternates: {
@@ -154,22 +134,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  const sections = ["projects", "team", "contact"] as const;
-
-  const hashEntries = locales.flatMap((locale) => {
-    const baseUrl = getLocalizedUrl(siteUrl, locale);
-
-    return sections.map((section) => ({
-      url: `${baseUrl}#${section}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: section === "contact" ? 0.8 : 0.9,
-    }));
-  });
-
   return [
     ...localeEntries,
-    ...homeAliases,
     ...serviceIndexEntries,
     ...serviceEntries,
     ...blogIndexEntries,
@@ -178,6 +144,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...casesIndexEntries,
     ...caseEntries,
     ...policyEntries,
-    ...hashEntries,
-  ];
+  ].filter((entry) => !entry.url.includes("#") && !/\/home$/.test(entry.url));
 }

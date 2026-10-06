@@ -8,14 +8,18 @@ import Header from "@/components/Header";
 import IncludeGridCtaFill from "@/components/IncludeGridCtaFill";
 import InlineConsultationForm from "@/components/InlineConsultationForm";
 import MediaImage from "@/components/MediaImage";
+import PageBreadcrumbs from "@/components/PageBreadcrumbs";
 import ProjectCard from "@/components/ProjectCard";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import StatsRow from "@/components/StatsRow";
 import type { BrandingSeoContent } from "@/i18n/branding-seo";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import type { ServicePageContent } from "@/i18n/logo";
 import { withCaseServiceReviews } from "@/i18n/service-reviews";
-import { getServiceDetailPath } from "@/i18n/routing";
+import { getServiceDetailPath, getServiceIndexPath } from "@/i18n/routing";
+import { getServiceMenuTitle } from "@/i18n/services-index";
+import type { ServiceSlug } from "@/i18n/services";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
 
@@ -26,7 +30,7 @@ type ServiceLandingPageProps = {
   copy: ServicePageContent;
   seo: BrandingSeoContent;
   heroImage: string;
-  serviceSlug?: string;
+  serviceSlug: ServiceSlug;
 };
 
 type ServiceSectionProps = {
@@ -337,9 +341,12 @@ export default function ServiceLandingPage({
   const copy = withCaseServiceReviews(copyProp, locale, serviceSlug);
   /** Service pages ported from zond-* HTML prototypes (naming, identity, positioning, communication). */
   const isPrototypeLayout = Boolean(copy.featureStrip);
+  const menuTitle = getServiceMenuTitle(locale, serviceSlug);
+  const servicesPath = getServiceIndexPath(locale);
 
   return (
     <>
+      <ServicePageSchema locale={locale} dictionary={dictionary} slug={serviceSlug} />
       <Header locale={locale} dictionary={dictionary} />
       <main className={isPrototypeLayout ? "sp sp--service-prototype" : "sp"}>
         <div className="sp-stage">
@@ -347,7 +354,12 @@ export default function ServiceLandingPage({
             <div className="wrap wrap--flush">
               <div className="sp-hero-grid">
                 <div className="sp-hero-copy">
-                  <p className="sp-eyebrow">{copy.eyebrow}</p>
+                  <PageBreadcrumbs
+                    items={[
+                      { label: dictionary.nav.services, href: servicesPath },
+                      { label: menuTitle },
+                    ]}
+                  />
                   <h1 className="sp-h1">
                     {copy.title}
                     <br />
@@ -480,7 +492,7 @@ export default function ServiceLandingPage({
                     <h2 className="sp-h2">{copy.formTitle}</h2>
                     <p className="sp-form-lead">{copy.formDescription}</p>
                   </div>
-                  <InlineConsultationForm dictionary={dictionary} />
+                  <InlineConsultationForm locale={locale} dictionary={dictionary} />
                 </div>
               </div>
             </section>

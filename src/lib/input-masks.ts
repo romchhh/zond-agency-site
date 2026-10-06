@@ -1,28 +1,17 @@
 const EMAIL_RE =
   /^[a-z0-9](?:[a-z0-9._+-]*[a-z0-9])?@[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/;
 
-const TELEGRAM_RE = /^@[a-zA-Z0-9_]{4,31}$/;
+const TELEGRAM_HANDLE_RE = /^[a-zA-Z][a-zA-Z0-9_]{4,31}$/;
+const LETTER_RE = /[a-zA-Zа-яА-ЯіІїЇєЄёЁ]/;
 
-function isTelegramInput(value: string): boolean {
+export function isPhoneContact(value: string): boolean {
   const trimmed = value.trim();
-  return (
-    trimmed.startsWith("@") ||
-    (/^[a-zA-Z]/.test(trimmed) && !trimmed.startsWith("+") && !/^\d/.test(trimmed))
-  );
+  if (!trimmed) return false;
+  if (trimmed.startsWith("@") || LETTER_RE.test(trimmed)) return false;
+  return /\d/.test(trimmed);
 }
 
-export function maskContactInput(value: string): string {
-  if (!value) return "";
-
-  if (value.startsWith("@")) {
-    const handle = value.slice(1).replace(/[^a-zA-Z0-9_]/g, "").slice(0, 32);
-    return `@${handle}`;
-  }
-
-  if (/^[a-zA-Z_]/.test(value) && !value.startsWith("+")) {
-    return value.replace(/[^a-zA-Z0-9_]/g, "").slice(0, 32);
-  }
-
+function formatPhoneMask(value: string): string {
   const digits = value.replace(/\D/g, "");
   let local = digits;
 
@@ -47,24 +36,35 @@ export function maskContactInput(value: string): string {
   return formatted;
 }
 
+export function maskContactInput(value: string): string {
+  if (!value) return "";
+  if (!isPhoneContact(value)) return value;
+  return formatPhoneMask(value);
+}
+
 export function maskEmailInput(value: string): string {
   return value.replace(/\s/g, "").toLowerCase().replace(/[^a-z0-9@._+-]/g, "");
+}
+
+export function telegramHandle(value: string): string {
+  const trimmed = value.trim();
+  return trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 }
 
 export function isValidContact(value: string): boolean {
   const trimmed = value.trim();
   if (!trimmed) return false;
 
-  if (isTelegramInput(trimmed)) {
-    const handle = trimmed.startsWith("@") ? trimmed : `@${trimmed.replace(/^@/, "")}`;
-    return TELEGRAM_RE.test(handle);
+  if (isPhoneContact(trimmed)) {
+    const digits = trimmed.replace(/\D/g, "");
+    return digits.length === 12 && digits.startsWith("380");
   }
 
-  const digits = trimmed.replace(/\D/g, "");
-  return digits.length === 12 && digits.startsWith("380");
+  return TELEGRAM_HANDLE_RE.test(telegramHandle(trimmed));
 }
 
 export function isValidEmail(value: string): boolean {
   const trimmed = maskEmailInput(value);
+  if (!trimmed) return true;
   return EMAIL_RE.test(trimmed);
 }

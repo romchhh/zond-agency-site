@@ -1,4 +1,5 @@
 import MediaImage from "@/components/MediaImage";
+import PageBreadcrumbs from "@/components/PageBreadcrumbs";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getServiceDetailPath } from "@/i18n/routing";
@@ -19,11 +20,15 @@ export default function Services({
 }: ServicesProps) {
   const { services } = dictionary;
   const TitleTag = titleAs;
+  const CardTitle = titleAs === "h1" ? "h2" : "h3";
 
   return (
     <section className="section" id="services">
       <div className="wrap">
         <div className="section-head">
+          {titleAs === "h1" ? (
+            <PageBreadcrumbs items={[{ label: dictionary.nav.services }]} />
+          ) : null}
           <TitleTag className="section-title">{services.title}</TitleTag>
         </div>
         <div className="services-grid">
@@ -42,7 +47,7 @@ export default function Services({
                   </div>
                 </div>
                 <div className="service-copy">
-                  <h3>{service.title}</h3>
+                  <CardTitle>{service.title}</CardTitle>
                   {service.description ? <p>{service.description}</p> : null}
                 </div>
               </>

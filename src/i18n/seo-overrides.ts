@@ -1,0 +1,93 @@
+/** Ready meta titles and descriptions from the Мета-теги sheet. Visible page copy stays unchanged. */
+
+export type SeoOverride = {
+  title?: string;
+  description?: string;
+};
+
+export const seoOverrides: Record<string, SeoOverride> = {
+  "/": {"title": "Брендинг-агенція ZOND: розробка бренду, айдентика, дизайн | Київ", "description": "Брендингова агенція ZOND у Києві: стратегія, неймінг, логотип, айдентика, брендбук, упаковка і SMM. Працюємо з 2021 року, стратегія до результату."},
+  "/blog": {"title": "Блог про брендинг, логотипи і брендбуки | ZOND"},
+  "/blog/brand-identity-basics": {"description": "Айдентика бренду: що це, з чого складається і як з нею працювати, щоб компанія вирізнялась серед конкурентів і запам'ятовувалась аудиторії."},
+  "/blog/brandbook-for-real-estate": {"description": "Брендбук для агентства нерухомості: як відобразити стиль компанії і викликати відчуття стабільності й надійності. Особливості й приклади."},
+  "/blog/brandbook-for-restaurants": {"description": "Брендбук для ресторану: не лише логотип і кольори, а стиль закладу, тон спілкування з гостями, подача страв і декор. Що в нього входить."},
+  "/blog/brandbook-to-be-or-not": {"description": "Чи потрібен брендбук: він економить час і ресурси, бо всі правила оформлення бренду прописані, а дизайнери й маркетологи працюють за ними."},
+  "/blog/design-and-marketing": {"description": "Дизайн і маркетинг: дві половини одного механізму, що формує перше враження про бренд і впливає на рішення клієнтів. Як вони працюють разом."},
+  "/blog/emblem-vs-logo": {"description": "Логотип і емблема: чим відрізняються дві ключові складові корпоративної ідентичності і яка з них потрібна вашому бренду для впізнаваності."},
+  "/blog/logo-evolution": {"description": "Еволюція логотипів: як вони змінювались разом із технологіями, культурою і дизайном, і що з цієї історії корисно для сучасного бренду."},
+  "/blog/logos-by-industry": {"description": "Логотип як візуальний код бренду: чому форма, стиль, кольори і шрифти залежать від сфери бізнесу і які правила діють у кожній галузі."},
+  "/blog/ordering-a-logo-tips": {"description": "Як замовити логотип: що він має відображати, на що звернути увагу при виборі виконавця і як не втратити цінності й стиль компанії."},
+  "/blog/packaging-design-trends": {"description": "Тренди дизайну упаковки: упаковка захищає продукт і привертає увагу покупця. Які рішення працюють на полиці сьогодні."},
+  "/blog/role-of-branding-agency": {"description": "Роль брендингової агенції: як позиціонування допомагає компанії вижити і зростати на ринку з дедалі жорсткішою конкуренцією."},
+  "/blog/top-5-reasons-invest-branding": {"description": "5 причин інвестувати в брендинг: це не логотип і не обгортка, а те, як ваш бізнес сприймають, запам'ятовують і взаємодіють з ним."},
+  "/blog/what-is-branding-agency": {"description": "Що таке брендинг-агенція і чим вона допомагає: партнер, який будує сильний упізнаваний бренд там, де вирізнитись дедалі складніше."},
+  "/en": {"title": "ZOND branding agency: strategy, identity, design | Kyiv", "description": "ZOND is a branding agency in Kyiv: strategy, naming, logo, identity, brand book, packaging and SMM. Since 2021. Free consultation."},
+  "/en/blog/logos-by-industry": {"description": "A logo is a brand's visual code: its shape, style, colors and fonts reflect the company and the rules of its industry. Logo examples by sector."},
+  "/our-services-eng/marketing-360": {"description": "Marketing 360 by ZOND: strategy, content, SMM, advertising and design for your brand from one team. Full-cycle promotion for your market and budget."},
+  "/our-services-eng/rebranding": {"description": "Rebranding without losing your customers: brand audit, new positioning, logo and identity update, and a transition plan. ZOND case studies."},
+  "/our-services/marketing360": {"description": "Маркетинг 360 від ZOND: стратегія, контент, SMM, реклама і дизайн для бренду одним підрядником. Повний цикл просування під ваш ринок і бюджет."},
+  "/our-services/rebranding": {"description": "Оновити бренд і не втратити своїх клієнтів реально. Ребрендинг компанії. Аудит, нове позиціонування, логотип і план переходу. Кейси студії ZOND."},
+  "/projects-eng/ahmad-tea": {"title": "AHMAD TEA: communication strategy for a tea brand | ZOND"},
+  "/projects-eng/altep": {"title": "ALTEP: brand update for a heating equipment maker | ZOND"},
+  "/projects-eng/bit-school": {"title": "BIT School: branding and logo for a coding school | ZOND"},
+  "/projects-eng/carbit": {"title": "Carbit: logo and identity for a car search service | ZOND"},
+  "/projects-eng/digital-residence": {"title": "Digital Residence: logo, identity and brand book | ZOND"},
+  "/projects-eng/kavlora": {"title": "KAVLORA: strategy and identity for a furniture brand | ZOND"},
+  "/projects-eng/kyiv-tourism-department": {"title": "Kyiv, everyone's city: campaign for Kyiv Tourism Department | ZOND"},
+  "/projects-eng/packaging": {"title": "Packaging design: ZOND portfolio for food and beverages"},
+  "/projects-eng/tbiliso": {"title": "Tbiliso: rebranding of a Georgian restaurant in Kyiv | ZOND"},
+  "/projects-eng/terminal-borivaje": {"title": "Terminal Borivaje: branding and logo for an agro terminal | ZOND"},
+  "/projects/ahmad-tea": {"title": "AHMAD TEA: комунікаційна стратегія чайного бренду | ZOND"},
+  "/projects/altep": {"title": "ALTEP: оновлення бренду виробника опалення | ZOND"},
+  "/projects/bit-school": {"title": "BIT School: брендинг і логотип школи програмування | ZOND"},
+  "/projects/carbit": {"title": "Carbit: логотип і айдентика сервісу пошуку авто | ZOND"},
+  "/projects/digital-residence": {"title": "Digital Residence: логотип, айдентика і брендбук | ZOND"},
+  "/projects/kavlora": {"title": "KAVLORA: стратегія та айдентика меблевого бренду | ZOND"},
+  "/projects/kyiv-tourism-department": {"title": "Київ, місто кожного: кампанія для Управління туризму | ZOND"},
+  "/projects/packaging": {"title": "Дизайн упаковки: добірка робіт ZOND для продуктів і напоїв"},
+  "/projects/tbiliso": {"title": "Tbiliso: ребрендинг грузинського ресторану в Києві | ZOND"},
+  "/projects/terminal-borivaje": {"title": "Terminal Borivaje: брендинг і логотип агротермінала | ZOND"},
+  "/ru": {"title": "Брендинговое агентство ZOND: разработка бренда, айдентика | Киев", "description": "Брендинговое агентство ZOND в Киеве: стратегия, нейминг, логотип, айдентика, брендбук, упаковка и SMM. Работаем с 2021 года, стратегия до результата."},
+  "/ru-blog/brand-identity-basics": {"description": "Айдентика бренда: что это, из чего состоит и как с ней работать, чтобы компания выделялась среди конкурентов и запоминалась аудитории."},
+  "/ru-blog/brandbook-for-real-estate": {"description": "Брендбук для агентства недвижимости: как отразить стиль компании и вызвать ощущение стабильности и надежности. Особенности и примеры."},
+  "/ru-blog/brandbook-for-restaurants": {"description": "Брендбук для ресторана: не только логотип и цвета, а стиль заведения, тон общения с гостями, подача блюд и декор. Что в него входит."},
+  "/ru-blog/brandbook-to-be-or-not": {"description": "Нужен ли брендбук: он экономит время и ресурсы, ведь правила оформления бренда прописаны, а дизайнеры и маркетологи работают по ним."},
+  "/ru-blog/design-and-marketing": {"description": "Дизайн и маркетинг: две половины одного механизма, который формирует первое впечатление о бренде и влияет на решения клиентов."},
+  "/ru-blog/emblem-vs-logo": {"description": "Логотип и эмблема: чем отличаются два ключевых компонента фирменного стиля и какой из них нужен вашему бренду для узнаваемости."},
+  "/ru-blog/logo-evolution": {"description": "Эволюция логотипов: как они менялись вместе с технологиями, культурой и дизайном, и что из этой истории полезно современному бренду."},
+  "/ru-blog/logo-generator-pros-cons": {"description": "Логотип из генератора: плюсы и минусы. Почему ключевой элемент фирменного стиля редко получается у автоматического сервиса."},
+  "/ru-blog/logos-by-industry": {"description": "Логотип как визуальный код бренда: почему форма, стиль, цвет и шрифт зависят от сферы бизнеса и какие правила действуют в каждой отрасли."},
+  "/ru-blog/ordering-a-logo-tips": {"description": "Как заказать логотип: что он должен отражать, на что смотреть при выборе исполнителя и как сохранить ценности и стиль компании."},
+  "/ru-blog/packaging-design-trends": {"description": "Тренды дизайна упаковки: упаковка защищает продукт и привлекает внимание покупателя. Какие решения работают на полке сегодня."},
+  "/ru-blog/role-of-branding-agency": {"description": "Роль брендингового агентства: как позиционирование помогает компании выжить и расти на рынке с все более жесткой конкуренцией."},
+  "/ru-blog/what-is-a-brandbook": {"description": "Что такое брендбук и зачем он компании: инструмент, который делает бренд последовательным на всех носителях и удерживает внимание клиентов."},
+  "/ru-blog/what-is-a-logo": {"description": "Что такое логотип: первое, что видит человек при знакомстве с брендом. Что остается в памяти, вызывает эмоции и формирует доверие."},
+  "/ru-blog/what-is-branding-agency": {"description": "Что такое брендинговое агентство и чем оно помогает: партнер, который строит сильный узнаваемый бренд там, где выделиться все сложнее."},
+  "/ru-projects/ahmad-tea": {"title": "AHMAD TEA: коммуникационная стратегия чайного бренда | ZOND", "description": "Коммуникационная стратегия для британского чайного бренда: исследование рынка и аудитории, позиционирование, tone of voice и визуальное направление."},
+  "/ru-projects/altep": {"title": "ALTEP: обновление бренда производителя отопления | ZOND"},
+  "/ru-projects/bit-school": {"title": "BIT School: брендинг и логотип школы программирования | ZOND"},
+  "/ru-projects/carbit": {"title": "Carbit: логотип и айдентика сервиса поиска авто | ZOND"},
+  "/ru-projects/digital-residence": {"title": "Digital Residence: логотип, айдентика и брендбук | ZOND"},
+  "/ru-projects/kavlora": {"title": "KAVLORA: стратегия и айдентика мебельного бренда | ZOND"},
+  "/ru-projects/kyiv-tourism-department": {"title": "Киев, город каждого: кампания для Управления туризма | ZOND"},
+  "/ru-projects/packaging": {"title": "Дизайн упаковки: подборка работ ZOND для продуктов и напитков"},
+  "/ru-projects/tbiliso": {"title": "Tbiliso: ребрендинг грузинского ресторана в Киеве | ZOND"},
+  "/ru-projects/terminal-borivaje": {"title": "Terminal Borivaje: брендинг и логотип агротерминала | ZOND"},
+  "/ru/blog-ru": {"title": "Блог о брендинге, логотипах и брендбуках | ZOND"},
+  "/ru/services/graphics": {"description": "Графический дизайн: полиграфия, наружная реклама, презентации, технический дизайн и подготовка к печати. Бренд узнаваем на каждом носителе. ZOND."},
+  "/ru/services/marketing-360": {"description": "Маркетинг 360 от ZOND: стратегия, контент, SMM, реклама и дизайн для бренда одним подрядчиком. Полный цикл продвижения под ваш рынок и бюджет."},
+  "/ru/services/packaging": {"description": "Дизайн упаковки и этикетки: концепция, 3D-мокапы, адаптации для SKU и макеты, готовые к печати. Упаковка, которая привлекает внимание на полке."},
+  "/ru/services/rebranding": {"description": "Обновить бренд и не потерять своих клиентов реально. Ребрендинг компании и редизайн логотипа. Аудит, позиционирование, план перехода. Кейсы ZOND, Киев."},
+};
+
+export function applySeoOverride(
+  pathname: string,
+  meta: { title: string; description: string },
+): { title: string; description: string } {
+  const override = seoOverrides[pathname];
+  if (!override) return meta;
+  return {
+    title: override.title ?? meta.title,
+    description: override.description ?? meta.description,
+  };
+}

@@ -7,6 +7,7 @@ export type ProjectItem = {
   title: string;
   description: string;
   image: string;
+  poster?: string;
   href?: string;
 };
 
@@ -104,6 +105,7 @@ export type Dictionary = {
       name: string;
       contact: string;
       email: string;
+      submit: string;
     };
   };
   footer: {

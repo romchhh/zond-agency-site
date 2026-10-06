@@ -1,3 +1,4 @@
+import PageBreadcrumbs from "@/components/PageBreadcrumbs";
 import CtaPanel from "@/components/CtaPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -51,6 +52,7 @@ export default function ContactPage({ locale, dictionary }: ContactPageProps) {
       <main className="sp contact-page">
         <section className="contact-hero">
           <div className="wrap">
+            <PageBreadcrumbs items={[{ label: dictionary.nav.contact }]} />
             <h1 className="sp-h1 contact-hero-title">
               {copy.title}
               <span className="sp-h1-accent">.</span>

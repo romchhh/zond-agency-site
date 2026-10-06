@@ -15,6 +15,9 @@ import {
   extractBlogHeroMedia,
   isAnimatedBlogMedia,
 } from "@/lib/blog-content";
+import PageJsonLd from "@/components/PageJsonLd";
+import { getBlogPublishDate } from "@/i18n/blog/publish-dates";
+import { resolvePageCopy } from "@/lib/json-ld";
 import Link from "next/link";
 
 type BlogPostPageProps = {
@@ -32,11 +35,34 @@ export default function BlogPostPage({
 }: BlogPostPageProps) {
   const copy = dictionary.blog;
   const blogPath = getBlogIndexPath(locale);
+  const articlePath = getBlogDetailPath(locale, post.slug);
   const { hero, body } = extractBlogHeroMedia(post.cover, post.body);
   const galleryImages = extractArticleImagePaths(body).map((path) => blogMediaSrc(path));
+  const published = getBlogPublishDate(post.slug);
+  const seo = resolvePageCopy(articlePath, {
+    title: `${post.title} — ZOND`,
+    description: post.description,
+  });
 
   return (
     <>
+      <PageJsonLd
+        locale={locale}
+        pathname={articlePath}
+        name={seo.title}
+        description={seo.description}
+        breadcrumbs={[
+          { name: copy.title, path: blogPath },
+          { name: post.title, path: articlePath },
+        ]}
+        article={{
+          headline: post.title,
+          image: post.cover,
+          datePublished: published,
+          dateModified: published,
+          path: articlePath,
+        }}
+      />
       <Header locale={locale} dictionary={dictionary} />
       <main className="sp case-post-page blog-post-page">
         <PostDetailLayout

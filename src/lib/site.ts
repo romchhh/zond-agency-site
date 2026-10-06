@@ -1,4 +1,6 @@
-const DEFAULT_SITE_URL = "https://zond.agency";
+const DEFAULT_SITE_URL = "https://www.zond.agency";
+export const CANONICAL_HOST = "www.zond.agency";
+const APEX_HOST = "zond.agency";
 
 export const siteConfig = {
   name: "ZOND Agency",
@@ -42,13 +44,14 @@ function normalizeSiteUrl(raw: string | undefined): string {
 
   try {
     const url = new URL(withProtocol);
+    if (url.hostname === APEX_HOST) {
+      url.hostname = CANONICAL_HOST;
+    }
     return url.origin;
   } catch {
     return DEFAULT_SITE_URL;
   }
 }
-
-const CANONICAL_HOSTS = new Set(["zond.agency", "www.zond.agency"]);
 
 /** Production canonical origin for metadata, sitemap, and JSON-LD. */
 export function getCanonicalSiteUrl(): string {
@@ -65,41 +68,21 @@ function normalizeHost(host: string | null | undefined): string | null {
   return value.split(":")[0] ?? null;
 }
 
+/** Public request host. Prefer forwarded host so Vercel aliases stay distinct from the live domain. */
+export function getRequestHostname(headersList: Headers): string | null {
+  const forwarded = headersList.get("x-forwarded-host");
+  const raw = forwarded?.split(",")[0]?.trim() || headersList.get("host");
+  return normalizeHost(raw);
+}
+
+export function isApexHost(host?: string | null): boolean {
+  return normalizeHost(host) === APEX_HOST;
+}
+
 /**
- * Block indexing on Vercel previews, local dev, and non-production hosts (e.g. *.vercel.app).
- * Set NEXT_PUBLIC_INDEXING_ENABLED=true on the production Vercel project when zond.agency goes live.
+ * Indexing is allowed only on www.zond.agency. Apex, preview, localhost, and
+ * zond-agency-site.vercel.app stay closed even when VERCEL_ENV is production.
  */
 export function shouldBlockSearchIndexing(host?: string | null): boolean {
-  const normalizedHost = normalizeHost(host);
-
-  if (normalizedHost) {
-    if (normalizedHost === "localhost" || normalizedHost === "127.0.0.1") {
-      return true;
-    }
-    if (CANONICAL_HOSTS.has(normalizedHost)) {
-      return false;
-    }
-    return true;
-  }
-
-  if (process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true") {
-    return false;
-  }
-
-  if (
-    process.env.VERCEL_ENV === "preview" ||
-    process.env.VERCEL_ENV === "development"
-  ) {
-    return true;
-  }
-
-  if (process.env.VERCEL === "1") {
-    return true;
-  }
-
-  if (process.env.NODE_ENV !== "production") {
-    return true;
-  }
-
-  return false;
+  return normalizeHost(host) !== CANONICAL_HOST;
 }

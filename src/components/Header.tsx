@@ -12,9 +12,14 @@ import { createPortal } from "react-dom";
 type HeaderProps = {
   locale: Locale;
   dictionary: Dictionary;
+  hideLanguageSwitcher?: boolean;
 };
 
-export default function Header({ locale, dictionary }: HeaderProps) {
+export default function Header({
+  locale,
+  dictionary,
+  hideLanguageSwitcher = false,
+}: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const homePath = getLocalePath(locale);
@@ -96,11 +101,13 @@ export default function Header({ locale, dictionary }: HeaderProps) {
                 </Link>
               ))}
             </nav>
-            <LanguageSwitcher
-              locale={locale}
-              label={dictionary.a11y.language}
-              languagesLabel={dictionary.a11y.languages}
-            />
+            {hideLanguageSwitcher ? null : (
+              <LanguageSwitcher
+                locale={locale}
+                label={dictionary.a11y.language}
+                languagesLabel={dictionary.a11y.languages}
+              />
+            )}
             <ConsultationCta
               className="cta-top"
               aria-label={dictionary.a11y.consultation}

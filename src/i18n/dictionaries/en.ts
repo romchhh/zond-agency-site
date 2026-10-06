@@ -122,8 +122,8 @@ const en: Dictionary = {
     nameLabel: "Your name",
     namePlaceholder: "Your name",
     contactLabel: "Phone or Telegram",
-    contactPlaceholder: "+380 (__) ___-__-__",
-    emailLabel: "Email",
+    contactPlaceholder: "+380 or username",
+    emailLabel: "Email (optional)",
     emailPlaceholder: "email@example.com",
     submit: "Book a consultation",
     close: "Close",
@@ -134,7 +134,8 @@ const en: Dictionary = {
     errors: {
       name: "Enter your name (at least 2 characters)",
       contact: "Enter a phone number or Telegram (@username)",
-      email: "Enter a valid email",
+      email: "If you add an email, it must be valid",
+      submit: "Could not send the request. Please try again.",
     },
   },
   footer: {

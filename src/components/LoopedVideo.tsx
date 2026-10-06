@@ -117,7 +117,6 @@ export default function LoopedVideo({
     <video
       ref={videoRef}
       className={className}
-      src={src}
       muted
       autoPlay={priority}
       loop
@@ -129,6 +128,8 @@ export default function LoopedVideo({
       preload={priority ? "auto" : "metadata"}
       poster={poster}
       aria-label={ariaLabel}
-    />
+    >
+      <source src={src} type={src.endsWith(".webm") ? "video/webm" : "video/mp4"} />
+    </video>
   );
 }

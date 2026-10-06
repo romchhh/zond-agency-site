@@ -402,7 +402,7 @@ function renderBlock(
               </div>
             ))}
           </dl>
-          {context.showOpenCase ? (
+          {context.showOpenCase && context.openCaseHref ? (
             <OpenCaseButton label={context.openCaseLabel} href={context.openCaseHref} />
           ) : null}
         </div>

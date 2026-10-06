@@ -8,14 +8,16 @@ import MediaImage from "@/components/MediaImage";
 import type { CaseItem } from "@/i18n/cases";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
+import PageBreadcrumbs from "@/components/PageBreadcrumbs";
+import PageJsonLd from "@/components/PageJsonLd";
 import { getCaseDetailPath, getCaseIndexPath } from "@/i18n/routing";
+import { resolvePageCopy } from "@/lib/json-ld";
 import { getCaseClientUrl, getCaseServiceTag } from "@/i18n/cases/case-meta";
 import { getCaseHeroCaption } from "@/i18n/cases/case-hero-captions";
 import {
   buildCaseVisualBlocks,
   collectCaseVisualImages,
   getCaseVisualDefaults,
-  getLiveCaseUrl,
 } from "@/lib/case-visual";
 import { caseThemeStyle, resolveCaseTheme } from "@/lib/case-theme";
 import {
@@ -46,6 +48,7 @@ export default function CasePostPage({
 }: CasePostPageProps) {
   const copy = dictionary.cases;
   const casesPath = getCaseIndexPath(locale);
+  const casePath = getCaseDetailPath(locale, caseItem.slug);
   const preparedBody = ensureCaseBodyMedia(caseItem.body, caseItem.media ?? [], {
     skipMissingAppend: Boolean(caseItem.blocks?.length),
   });
@@ -60,7 +63,7 @@ export default function CasePostPage({
     serviceTag,
   );
   const clientUrl = getCaseClientUrl(caseItem.slug);
-  const openCaseHref = clientUrl ?? getLiveCaseUrl(caseItem.slug, locale);
+  const openCaseHref = clientUrl ?? "";
   const openCaseLabel = clientUrl
     ? clientUrl.includes("instagram.com")
       ? copy.openClientInstagram
@@ -80,8 +83,23 @@ export default function CasePostPage({
         ? hero.src
         : null;
 
+  const seo = resolvePageCopy(casePath, {
+    title: `${caseItem.title} — ZOND`,
+    description: caseItem.description,
+  });
+
   return (
     <>
+      <PageJsonLd
+        locale={locale}
+        pathname={casePath}
+        name={seo.title}
+        description={seo.description}
+        breadcrumbs={[
+          { name: copy.title, path: casesPath },
+          { name: caseItem.title, path: casePath },
+        ]}
+      />
       {heroPreloadSrc ? (
         <link rel="preload" as="image" href={heroPreloadSrc} fetchPriority="high" />
       ) : null}
@@ -94,11 +112,13 @@ export default function CasePostPage({
         <ArticleGalleryProvider images={galleryImages}>
           <div className="wrap container">
             <section className="hero">
-              <nav className="breadcrumbs sp-eyebrow" aria-label="Breadcrumb">
-                <Link href={casesPath}>{copy.title}</Link>
-                <span aria-hidden="true"> / </span>
-                <span>{caseItem.title}</span>
-              </nav>
+              <PageBreadcrumbs
+                className="breadcrumbs post-breadcrumbs sp-eyebrow"
+                items={[
+                  { label: copy.title, href: casesPath },
+                  { label: caseItem.title },
+                ]}
+              />
 
               <div className="hero-heading">
                 <h1>
@@ -130,7 +150,7 @@ export default function CasePostPage({
               caseSlug={caseItem.slug}
               openCaseLabel={openCaseLabel}
               openCaseHref={openCaseHref}
-              showOpenCase={caseItem.slug !== "packaging"}
+              showOpenCase={Boolean(clientUrl)}
             />
 
             <div className="case-visual-back">

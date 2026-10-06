@@ -50,7 +50,13 @@ export default function CasesFilterGrid({ locale, dictionary, cases }: CasesFilt
 
       <div className="projects-grid" id="cases">
         {filteredCases.map((caseItem) => (
-          <CaseCard key={caseItem.slug} locale={locale} caseItem={caseItem} compact />
+          <CaseCard
+            key={caseItem.slug}
+            locale={locale}
+            caseItem={caseItem}
+            compact
+            titleAs="h2"
+          />
         ))}
       </div>
     </>

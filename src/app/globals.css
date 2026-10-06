@@ -769,7 +769,7 @@ ul {
   width: 100%;
 }
 
-.vision-copy-panel .project-copy h3 {
+.vision-copy-panel .project-copy :is(h2, h3) {
   font-size: clamp(30px, 3.2vw, 44px);
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -1049,7 +1049,7 @@ a.project-card {
   background: #fafbfc;
 }
 
-.project-copy h3 {
+.project-copy :is(h2, h3) {
   margin: 0 0 6px;
   font-size: 22px;
   font-weight: 700;
@@ -1065,8 +1065,8 @@ a.project-card {
   transition: color 0.2s ease;
 }
 
-#projects .projects-grid .project-copy h3,
-#cases .projects-grid .project-copy h3 {
+#projects .projects-grid .project-copy :is(h2, h3),
+#cases .projects-grid .project-copy :is(h2, h3) {
   margin-bottom: 10px;
   font-size: clamp(28px, 3vw, 40px);
   line-height: 1.1;
@@ -1318,7 +1318,7 @@ a.service-card {
   bottom: 20px;
 }
 
-.service-copy h3 {
+.service-copy :is(h2, h3) {
   font-size: 22px;
   line-height: 1.1;
   margin: 0 0 6px;
@@ -1407,7 +1407,7 @@ a.service-card {
   bottom: 24px;
 }
 
-#services .service-copy h3 {
+#services .service-copy :is(h2, h3) {
   font-size: 32px;
   margin-bottom: 0;
   color: #111;
@@ -1422,7 +1422,7 @@ a.service-card {
 }
 
 #services .service-card:hover .service-index,
-#services .service-card:hover .service-copy h3 {
+#services .service-card:hover .service-copy :is(h2, h3) {
   color: var(--accent);
 }
 
@@ -1509,9 +1509,9 @@ a.service-card {
   bottom: 20px;
 }
 
-#branding-includes .service-copy h3,
-#service-includes .service-copy h3,
-#process .service-copy h3 {
+#branding-includes .service-copy :is(h2, h3),
+#service-includes .service-copy :is(h2, h3),
+#process .service-copy :is(h2, h3) {
   font-size: clamp(18px, 1.35vw, 22px);
   margin: 0 0 8px;
   line-height: 1.12;
@@ -1531,11 +1531,11 @@ a.service-card {
 }
 
 #branding-includes .service-card:hover .service-index,
-#branding-includes .service-card:hover .service-copy h3,
+#branding-includes .service-card:hover .service-copy :is(h2, h3),
 #service-includes .service-card:hover .service-index,
 #process .service-card:hover .service-index,
-#service-includes .service-card:hover .service-copy h3,
-#process .service-card:hover .service-copy h3 {
+#service-includes .service-card:hover .service-copy :is(h2, h3),
+#process .service-card:hover .service-copy :is(h2, h3) {
   color: #fff;
 }
 
@@ -2508,7 +2508,7 @@ a.service-card {
     border-radius: var(--radius-lg);
   }
 
-  .project-copy h3 {
+  .project-copy :is(h2, h3) {
     font-size: 15px;
   }
 
@@ -2517,8 +2517,8 @@ a.service-card {
     margin-bottom: 10px;
   }
 
-  #projects .projects-grid .project-copy h3,
-  #cases .projects-grid .project-copy h3 {
+  #projects .projects-grid .project-copy :is(h2, h3),
+  #cases .projects-grid .project-copy :is(h2, h3) {
     font-size: 26px;
     margin-bottom: 8px;
   }
@@ -2555,7 +2555,7 @@ a.service-card {
     padding: 22px var(--header-bar-pad-left);
   }
 
-  .vision-copy-panel .project-copy h3 {
+  .vision-copy-panel .project-copy :is(h2, h3) {
     font-size: clamp(22px, 6vw, 28px);
     margin-bottom: 14px;
   }
@@ -2599,9 +2599,9 @@ a.service-card {
     bottom: 16px;
   }
 
-  #branding-includes .service-copy h3,
-  #service-includes .service-copy h3,
-#process .service-copy h3 {
+  #branding-includes .service-copy :is(h2, h3),
+  #service-includes .service-copy :is(h2, h3),
+#process .service-copy :is(h2, h3) {
     font-size: 20px;
   }
 
@@ -2670,7 +2670,7 @@ a.service-card {
     bottom: 12px;
   }
 
-  #services .service-copy h3 {
+  #services .service-copy :is(h2, h3) {
     font-size: 14px;
     margin-bottom: 0;
     line-height: 1.15;
@@ -2786,7 +2786,7 @@ a.service-card {
     display: none;
   }
 
-  .service-copy h3 {
+  .service-copy :is(h2, h3) {
     font-size: 14px;
     margin-bottom: 3px;
     line-height: 1.15;
@@ -2884,7 +2884,7 @@ a.service-card {
     height: 16px;
   }
 
-  #services .service-copy h3 {
+  #services .service-copy :is(h2, h3) {
     font-size: 13px;
   }
 
@@ -4837,7 +4837,7 @@ a.service-card {
   outline-offset: 3px;
 }
 
-.cases-index-page #cases .project-copy h3 {
+.cases-index-page #cases .project-copy :is(h2, h3) {
   margin-bottom: 16px;
 }
 
@@ -4929,8 +4929,8 @@ a.service-card {
   padding-bottom: 56px;
 }
 
-#cases.projects-grid .project-copy h3,
-#blog.projects-grid .project-copy h3 {
+#cases.projects-grid .project-copy :is(h2, h3),
+#blog.projects-grid .project-copy :is(h2, h3) {
   margin-bottom: 10px;
   font-size: clamp(28px, 3vw, 40px);
   line-height: 1.1;
@@ -5236,7 +5236,7 @@ body.lightbox-open .header {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.case-related-grid .project-copy h3 {
+.case-related-grid .project-copy :is(h2, h3) {
   font-size: clamp(20px, 2vw, 28px);
 }
 
@@ -5351,6 +5351,71 @@ body.lightbox-open .header {
 .policy-page-body p {
   margin: 0;
   line-height: 1.65;
+}
+
+.thanks-page {
+  min-height: calc(100svh - var(--footer-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: calc(var(--header-stack-height) + 24px) 32px;
+}
+
+.thanks-wrap {
+  width: 100%;
+}
+
+.thanks-card {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 72px 40px 64px;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  text-align: center;
+}
+
+.thanks-card h1 {
+  margin: 0 0 16px;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.thanks-card p {
+  margin: 0 auto 36px;
+  max-width: 520px;
+  color: #6f6f6c;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.thanks-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 700px) {
+  .thanks-card {
+    padding: 48px 22px 40px;
+  }
+}
+
+.consultation-form {
+  position: relative;
+}
+
+.consultation-honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
 /* ——— Contact page ——— */

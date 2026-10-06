@@ -1,17 +1,34 @@
 import type { Metadata } from "next";
-import { localeMeta, type Locale } from "@/i18n/config";
+import { defaultLocale, localeMeta, type Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionary";
 import {
   getAlternateLanguages,
   getCaseDetailPath,
   getLocalizedUrl,
   getServiceDetailPath,
 } from "@/i18n/routing";
-import type { Dictionary } from "@/i18n/dictionary";
+import { applySeoOverride } from "@/i18n/seo-overrides";
 import { media } from "@/lib/media";
 import { getCanonicalSiteUrl, siteConfig } from "@/lib/site";
 
 function siteOrigin() {
   return getCanonicalSiteUrl();
+}
+
+export function homeSeoPath(locale: Locale): string {
+  return locale === defaultLocale ? "/" : `/${locale}`;
+}
+
+export function createNotFoundMetadata(locale: Locale, dictionary: Dictionary): Metadata {
+  const title = `${dictionary.notFound.title} | ZOND`;
+
+  return {
+    title,
+    robots: {
+      index: false,
+      follow: false,
+    },
+  };
 }
 
 export function createPageMetadata(
@@ -21,11 +38,12 @@ export function createPageMetadata(
   const siteUrl = siteOrigin();
   const pageUrl = getLocalizedUrl(siteUrl, locale);
   const { meta } = dictionary;
+  const resolved = applySeoOverride(homeSeoPath(locale), meta);
   const { ogLocale } = localeMeta[locale];
 
   return {
-    title: meta.title,
-    description: meta.description,
+    title: resolved.title,
+    description: resolved.description,
     keywords: meta.keywords,
     alternates: {
       canonical: pageUrl,
@@ -36,8 +54,8 @@ export function createPageMetadata(
       locale: ogLocale,
       url: pageUrl,
       siteName: siteConfig.name,
-      title: meta.title,
-      description: meta.description,
+      title: resolved.title,
+      description: resolved.description,
       images: [
         {
           url: media.ogImage,
@@ -49,8 +67,8 @@ export function createPageMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: meta.title,
-      description: meta.description,
+      title: resolved.title,
+      description: resolved.description,
       images: [media.ogImage],
     },
   };
@@ -83,10 +101,11 @@ export function createPathMetadata(
   const pageUrl = getLocalizedUrl(siteUrl, locale, pathname);
   const { ogLocale } = localeMeta[locale];
   const ogImage = image || media.ogImage;
+  const resolved = applySeoOverride(pathname, meta);
 
   return {
-    title: meta.title,
-    description: meta.description,
+    title: resolved.title,
+    description: resolved.description,
     alternates: {
       canonical: pageUrl,
       languages: getAlternateLanguages(siteUrl, pathname),
@@ -96,21 +115,21 @@ export function createPathMetadata(
       locale: ogLocale,
       url: pageUrl,
       siteName: siteConfig.name,
-      title: meta.title,
-      description: meta.description,
+      title: resolved.title,
+      description: resolved.description,
       images: [
         {
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: meta.title,
+          alt: resolved.title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: meta.title,
-      description: meta.description,
+      title: resolved.title,
+      description: resolved.description,
       images: [ogImage],
     },
   };

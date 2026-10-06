@@ -1,8 +1,11 @@
 import ContactPage from "@/components/ContactPage";
+import PageJsonLd from "@/components/PageJsonLd";
 import { contactPageMeta } from "@/i18n/contact/meta";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { getLocalePath } from "@/i18n/routing";
 import { createPathMetadata } from "@/lib/metadata";
+import { resolvePageCopy } from "@/lib/json-ld";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -29,6 +32,19 @@ export default async function ContactRoute({
   if (!isLocale(locale)) notFound();
 
   const dictionary = await getDictionary(locale);
+  const contactPath = getLocalePath(locale, "/contact");
+  const seo = resolvePageCopy(contactPath, contactPageMeta[locale]);
 
-  return <ContactPage locale={locale} dictionary={dictionary} />;
+  return (
+    <>
+      <PageJsonLd
+        locale={locale}
+        pathname={contactPath}
+        name={seo.title}
+        description={seo.description}
+        breadcrumbs={[{ name: dictionary.nav.contact, path: contactPath }]}
+      />
+      <ContactPage locale={locale} dictionary={dictionary} />
+    </>
+  );
 }

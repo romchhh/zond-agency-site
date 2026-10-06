@@ -10,6 +10,7 @@ type CaseCardProps = {
   locale: Locale;
   caseItem: CaseItem;
   compact?: boolean;
+  titleAs?: "h2" | "h3";
 };
 
 function isAnimated(src: string) {
@@ -20,14 +21,20 @@ function isVideo(src: string) {
   return src.endsWith(".mp4") || src.endsWith(".webm");
 }
 
-export default function CaseCard({ locale, caseItem, compact = false }: CaseCardProps) {
+export default function CaseCard({
+  locale,
+  caseItem,
+  compact = false,
+  titleAs = "h3",
+}: CaseCardProps) {
   const href = getCaseDetailPath(locale, caseItem.slug);
   const coverSrc = caseItem.listCover ?? caseItem.cover;
+  const TitleTag = titleAs;
 
   return (
     <Link href={href} className="project-card project-card-link">
       <div className="project-copy">
-        <h3>{caseItem.title}</h3>
+        <TitleTag>{caseItem.title}</TitleTag>
         {!compact && (caseItem.cardDescription || caseItem.description) ? (
           <p>{caseItem.cardDescription ?? caseItem.description}</p>
         ) : null}

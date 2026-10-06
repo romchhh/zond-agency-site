@@ -1,6 +1,6 @@
+import PageBreadcrumbs, { type PageCrumb } from "@/components/PageBreadcrumbs";
 import LoopedVideo from "@/components/LoopedVideo";
 import MediaImage from "@/components/MediaImage";
-import Link from "next/link";
 import type { ReactNode } from "react";
 
 export type PostHeroMedia = {
@@ -8,10 +8,7 @@ export type PostHeroMedia = {
   src: string;
 };
 
-export type PostBreadcrumb = {
-  label: string;
-  href?: string;
-};
+export type PostBreadcrumb = PageCrumb;
 
 type PostDetailLayoutProps = {
   breadcrumbs: PostBreadcrumb[];
@@ -64,18 +61,7 @@ export default function PostDetailLayout({
       <div className="sp-after">
         <header className="post-intro">
           <div className="wrap">
-            <nav className="post-breadcrumbs sp-eyebrow" aria-label="Breadcrumb">
-              {breadcrumbs.map((item, index) => (
-                <span key={`${item.label}-${index}`} className="post-breadcrumbs-item">
-                  {index > 0 ? <span className="post-breadcrumbs-sep"> / </span> : null}
-                  {item.href ? (
-                    <Link href={item.href}>{item.label}</Link>
-                  ) : (
-                    <span className="post-breadcrumbs-current">{item.label}</span>
-                  )}
-                </span>
-              ))}
-            </nav>
+            <PageBreadcrumbs items={breadcrumbs} />
             <h1 className="sp-h1">
               {title}
               <span className="sp-h1-accent">.</span>

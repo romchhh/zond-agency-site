@@ -16,11 +16,11 @@ import ServiceTitlePage from "@/components/ServiceTitlePage";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getServiceProjects } from "@/i18n/projects";
+import { getWebDevelopmentProjects } from "@/i18n/web-development";
 import {
   isServiceSlug,
   serviceMeta,
   serviceSlugs,
-  serviceTitles,
 } from "@/i18n/services";
 import { createServiceMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
@@ -30,6 +30,8 @@ export function generateStaticParams() {
     serviceSlugs.map((slug) => ({ locale, slug })),
   );
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -51,8 +53,6 @@ export default async function ServicePage({
   if (!isLocale(locale) || !isServiceSlug(slug)) notFound();
 
   const dictionary = await getDictionary(locale);
-  const title = serviceTitles[locale][slug];
-  const eyebrow = `${dictionary.nav.services} / ${title}`;
   const projects = getServiceProjects(locale, slug);
 
   if (slug === "branding") {
@@ -180,7 +180,7 @@ export default async function ServicePage({
       <WebDevelopmentPage
         locale={locale}
         dictionary={dictionary}
-        projects={projects}
+        projects={getWebDevelopmentProjects(locale)}
       />
     );
   }
@@ -199,8 +199,7 @@ export default async function ServicePage({
     <ServiceTitlePage
       locale={locale}
       dictionary={dictionary}
-      eyebrow={eyebrow}
-      title={title}
+      slug={slug}
     />
   );
 }

@@ -122,8 +122,8 @@ const ru: Dictionary = {
     nameLabel: "Ваше имя",
     namePlaceholder: "Ваше имя",
     contactLabel: "Телефон или Telegram",
-    contactPlaceholder: "+380 (__) ___-__-__",
-    emailLabel: "Email",
+    contactPlaceholder: "+380 или username",
+    emailLabel: "Email (необязательно)",
     emailPlaceholder: "email@example.com",
     submit: "Заказать консультацию",
     close: "Закрыть",
@@ -134,7 +134,8 @@ const ru: Dictionary = {
     errors: {
       name: "Введите имя (минимум 2 символа)",
       contact: "Введите телефон или Telegram (@username)",
-      email: "Введите корректный email",
+      email: "Если указываете email, он должен быть корректным",
+      submit: "Не удалось отправить заявку. Попробуйте ещё раз.",
     },
   },
   footer: {

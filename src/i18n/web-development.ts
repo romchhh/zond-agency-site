@@ -6,13 +6,14 @@ import { getCaseDetailPath } from "@/i18n/routing";
 
 const webDevelopmentCaseCards: Record<
   Locale,
-  Array<{ slug: string; category: string; image: string }>
+  Array<{ slug: string; category: string; image: string; poster?: string }>
 > = {
   uk: [
     {
       slug: "carbit",
       category: "Сервіс пошуку авто",
-      image: "/services/web-development/carbit.gif",
+      image: "/services/web-development/carbit.mp4",
+      poster: "/services/web-development/carbit.webp",
     },
     {
       slug: "nove-misto",
@@ -27,14 +28,16 @@ const webDevelopmentCaseCards: Record<
     {
       slug: "digital-residence",
       category: "Нерухомість",
-      image: "/services/web-development/digital.gif",
+      image: "/services/web-development/digital.mp4",
+      poster: "/services/web-development/digital.webp",
     },
   ],
   en: [
     {
       slug: "carbit",
       category: "Car search service",
-      image: "/services/web-development/carbit.gif",
+      image: "/services/web-development/carbit.mp4",
+      poster: "/services/web-development/carbit.webp",
     },
     {
       slug: "nove-misto",
@@ -49,14 +52,16 @@ const webDevelopmentCaseCards: Record<
     {
       slug: "digital-residence",
       category: "Real estate",
-      image: "/services/web-development/digital.gif",
+      image: "/services/web-development/digital.mp4",
+      poster: "/services/web-development/digital.webp",
     },
   ],
   ru: [
     {
       slug: "carbit",
       category: "Сервис поиска авто",
-      image: "/services/web-development/carbit.gif",
+      image: "/services/web-development/carbit.mp4",
+      poster: "/services/web-development/carbit.webp",
     },
     {
       slug: "nove-misto",
@@ -71,7 +76,8 @@ const webDevelopmentCaseCards: Record<
     {
       slug: "digital-residence",
       category: "Недвижимость",
-      image: "/services/web-development/digital.gif",
+      image: "/services/web-development/digital.mp4",
+      poster: "/services/web-development/digital.webp",
     },
   ],
 };
@@ -1086,6 +1092,7 @@ export function getWebDevelopmentProjects(locale: Locale): ProjectItem[] {
         title: caseItem.title,
         description: card.category,
         image: card.image,
+        poster: card.poster,
         href: getCaseDetailPath(locale, caseItem.slug),
       },
     ];

@@ -8,15 +8,17 @@ import Link from "next/link";
 type BlogCardProps = {
   locale: Locale;
   post: BlogPost;
+  titleAs?: "h2" | "h3";
 };
 
-export default function BlogCard({ locale, post }: BlogCardProps) {
+export default function BlogCard({ locale, post, titleAs = "h3" }: BlogCardProps) {
   const href = getBlogDetailPath(locale, post.slug);
+  const TitleTag = titleAs;
 
   return (
     <Link href={href} className="project-card project-card-link">
       <div className="project-copy">
-        <h3>{post.title}</h3>
+        <TitleTag>{post.title}</TitleTag>
         {post.description ? <p>{post.description}</p> : null}
       </div>
       {post.cover ? (

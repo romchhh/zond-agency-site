@@ -441,7 +441,8 @@ export function getKavloraBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const kavloraShared = {
   slug: "kavlora",
-  cover: m("cover.gif"),
+  cover: m("cover.webp"),
+  listCover: m("cover.mp4"),
   media: kavloraMedia,
   body: `[IMG: media/kavlora/01.webp]`,
 };

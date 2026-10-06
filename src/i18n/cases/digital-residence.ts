@@ -482,7 +482,8 @@ export function getDigitalResidenceBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const digitalResidenceShared = {
   slug: "digital-residence",
-  cover: m("cover.gif"),
+  cover: m("cover.webp"),
+  listCover: m("cover.mp4"),
   media: digitalResidenceMedia,
   body: `[IMG: media/digital-residence/hero.jpg]`,
 };

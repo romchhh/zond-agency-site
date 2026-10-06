@@ -3,8 +3,10 @@ import Header from "@/components/Header";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { policyContent } from "@/i18n/policy";
+import PageJsonLd from "@/components/PageJsonLd";
 import { getPolicyPath } from "@/i18n/routing";
 import { createPathMetadata } from "@/lib/metadata";
+import { resolvePageCopy } from "@/lib/json-ld";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -37,9 +39,20 @@ export default async function PolicyPage({
 
   const dictionary = await getDictionary(locale);
   const content = policyContent[locale];
+  const policyPath = getPolicyPath(locale);
+  const seo = resolvePageCopy(policyPath, {
+    title: `${content.title} — ZOND`,
+    description: content.description,
+  });
 
   return (
     <>
+      <PageJsonLd
+        locale={locale}
+        pathname={policyPath}
+        name={seo.title}
+        description={seo.description}
+      />
       <Header locale={locale} dictionary={dictionary} />
       <main className="policy-page">
         <div className="wrap">

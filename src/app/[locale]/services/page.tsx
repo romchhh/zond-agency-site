@@ -6,6 +6,9 @@ import Services from "@/components/Services";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { servicesIndexMeta } from "@/i18n/services";
+import PageJsonLd from "@/components/PageJsonLd";
+import { getServiceIndexPath } from "@/i18n/routing";
+import { resolvePageCopy } from "@/lib/json-ld";
 import { createPathMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
@@ -33,9 +36,18 @@ export default async function ServicesIndexPage({
   if (!isLocale(locale)) notFound();
 
   const dictionary = await getDictionary(locale);
+  const servicesPath = getServiceIndexPath(locale);
+  const seo = resolvePageCopy(servicesPath, servicesIndexMeta[locale]);
 
   return (
     <>
+      <PageJsonLd
+        locale={locale}
+        pathname={servicesPath}
+        name={seo.title}
+        description={seo.description}
+        breadcrumbs={[{ name: dictionary.nav.services, path: servicesPath }]}
+      />
       <Header locale={locale} dictionary={dictionary} />
       <main className="sp">
         <Services locale={locale} dictionary={dictionary} titleAs="h1" />

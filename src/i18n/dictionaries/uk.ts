@@ -122,8 +122,8 @@ const uk: Dictionary = {
     nameLabel: "Ваше ім’я",
     namePlaceholder: "Ваше ім’я",
     contactLabel: "Телефон або Telegram",
-    contactPlaceholder: "+380 (__) ___-__-__",
-    emailLabel: "Email",
+    contactPlaceholder: "+380 або username",
+    emailLabel: "Email (необов’язково)",
     emailPlaceholder: "email@example.com",
     submit: "Замовити консультацію",
     close: "Закрити",
@@ -134,7 +134,8 @@ const uk: Dictionary = {
     errors: {
       name: "Введіть ім’я (мінімум 2 символи)",
       contact: "Введіть телефон або Telegram (@username)",
-      email: "Введіть коректний email",
+      email: "Якщо вказуєте email, він має бути коректним",
+      submit: "Не вдалося надіслати заявку. Спробуйте ще раз.",
     },
   },
   footer: {

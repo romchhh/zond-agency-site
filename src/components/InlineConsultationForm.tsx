@@ -1,34 +1,39 @@
 "use client";
 
+import ConsultationHiddenFields from "@/components/ConsultationHiddenFields";
 import type { Dictionary } from "@/i18n/dictionary";
+import type { Locale } from "@/i18n/config";
 import {
   isValidContact,
   isValidEmail,
   maskContactInput,
   maskEmailInput,
 } from "@/lib/input-masks";
-import { siteConfig } from "@/lib/site";
+import { submitConsultation } from "@/lib/submit-consultation";
 import { useState, type FormEvent } from "react";
 
 type InlineConsultationFormProps = {
   dictionary: Dictionary;
+  locale: Locale;
 };
 
 export default function InlineConsultationForm({
   dictionary,
+  locale,
 }: InlineConsultationFormProps) {
   const copy = dictionary.consultationForm;
-  const [step, setStep] = useState<"form" | "success">("form");
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [email, setEmail] = useState("");
+  const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState<{
     name?: string;
     contact?: string;
     email?: string;
+    submit?: string;
   }>({});
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const nextErrors: typeof errors = {};
@@ -39,32 +44,26 @@ export default function InlineConsultationForm({
     if (!isValidContact(contact)) {
       nextErrors.contact = copy.errors.contact;
     }
-    if (!isValidEmail(email)) {
+    if (email.trim() && !isValidEmail(email)) {
       nextErrors.email = copy.errors.email;
     }
 
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    setStep("success");
+    setSending(true);
+    try {
+      await submitConsultation(event.currentTarget, {
+        name: name.trim(),
+        contact: contact.trim(),
+        email: email.trim(),
+        locale,
+      });
+    } catch {
+      setSending(false);
+      setErrors({ submit: copy.errors.submit });
+    }
   };
-
-  if (step === "success") {
-    return (
-      <div className="inline-consultation-success">
-        <h3 className="inline-consultation-success-title">{copy.successTitle}</h3>
-        <p className="inline-consultation-success-lead">{copy.successDescription}</p>
-        <a
-          className="consultation-submit consultation-submit--link"
-          href={siteConfig.telegramBot}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {copy.telegramCta}
-        </a>
-      </div>
-    );
-  }
 
   return (
     <form className="consultation-form inline-consultation-form" onSubmit={handleSubmit} noValidate>
@@ -79,9 +78,7 @@ export default function InlineConsultationForm({
             placeholder={copy.namePlaceholder}
             onChange={(event) => setName(event.target.value)}
           />
-          {errors.name ? (
-            <span className="consultation-error">{errors.name}</span>
-          ) : null}
+          {errors.name ? <span className="consultation-error">{errors.name}</span> : null}
         </label>
 
         <label className="consultation-field">
@@ -90,14 +87,12 @@ export default function InlineConsultationForm({
             type="text"
             name="contact"
             value={contact}
-            autoComplete="tel"
+            autoComplete="off"
             inputMode="text"
             placeholder={copy.contactPlaceholder}
             onChange={(event) => setContact(maskContactInput(event.target.value))}
           />
-          {errors.contact ? (
-            <span className="consultation-error">{errors.contact}</span>
-          ) : null}
+          {errors.contact ? <span className="consultation-error">{errors.contact}</span> : null}
         </label>
 
         <label className="consultation-field consultation-field--full">
@@ -111,13 +106,15 @@ export default function InlineConsultationForm({
             placeholder={copy.emailPlaceholder}
             onChange={(event) => setEmail(maskEmailInput(event.target.value))}
           />
-          {errors.email ? (
-            <span className="consultation-error">{errors.email}</span>
-          ) : null}
+          {errors.email ? <span className="consultation-error">{errors.email}</span> : null}
         </label>
       </div>
 
-      <button type="submit" className="consultation-submit">
+      <ConsultationHiddenFields />
+
+      {errors.submit ? <p className="consultation-error">{errors.submit}</p> : null}
+
+      <button type="submit" className="consultation-submit" disabled={sending}>
         {copy.submit}
       </button>
     </form>

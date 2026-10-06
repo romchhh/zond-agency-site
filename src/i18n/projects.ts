@@ -31,10 +31,14 @@ function toProjectItem(
   locale: Locale,
   caseItem: ReturnType<typeof getCases>[number],
 ): ProjectItem {
+  const image = caseItem.listCover ?? caseItem.cover;
+  const isVideo = image.endsWith(".mp4") || image.endsWith(".webm");
+
   return {
     title: caseItem.title,
     description: caseItem.cardDescription ?? caseItem.description,
-    image: caseItem.cover,
+    image,
+    poster: isVideo ? caseItem.cover : undefined,
     href: getCaseDetailPath(locale, caseItem.slug),
   };
 }

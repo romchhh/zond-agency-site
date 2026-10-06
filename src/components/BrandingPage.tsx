@@ -7,12 +7,16 @@ import Header from "@/components/Header";
 import IncludeGridCtaFill from "@/components/IncludeGridCtaFill";
 import MediaImage from "@/components/MediaImage";
 import ProjectCard from "@/components/ProjectCard";
+import PageBreadcrumbs from "@/components/PageBreadcrumbs";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import StatsRow from "@/components/StatsRow";
 import { brandingPage } from "@/i18n/branding";
 import { getBrandingSeo } from "@/i18n/branding-seo";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { withCaseServiceReviews } from "@/i18n/service-reviews";
+import { getServiceIndexPath } from "@/i18n/routing";
+import { getServiceMenuTitle } from "@/i18n/services-index";
 import { imageSizes } from "@/lib/media";
 import Link from "next/link";
 
@@ -29,9 +33,12 @@ export default function BrandingPage({
 }: BrandingPageProps) {
   const copy = withCaseServiceReviews(brandingPage[locale], locale, "branding");
   const seo = getBrandingSeo(locale);
+  const servicesPath = getServiceIndexPath(locale);
+  const menuTitle = getServiceMenuTitle(locale, "branding");
 
   return (
     <>
+      <ServicePageSchema locale={locale} dictionary={dictionary} slug="branding" />
       <Header locale={locale} dictionary={dictionary} />
       <main className="sp">
         <div className="sp-stage">
@@ -39,7 +46,12 @@ export default function BrandingPage({
           <div className="wrap wrap--flush">
             <div className="sp-hero-grid">
               <div className="sp-hero-copy">
-                <p className="sp-eyebrow">{copy.eyebrow}</p>
+                <PageBreadcrumbs
+                  items={[
+                    { label: dictionary.nav.services, href: servicesPath },
+                    { label: menuTitle },
+                  ]}
+                />
                 <h1 className="sp-h1">
                   {copy.title.split("\n").map((line) => (
                     <span key={line}>

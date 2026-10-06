@@ -470,7 +470,8 @@ export function getAhmadTeaBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const ahmadTeaShared = {
   slug: "ahmad-tea",
-  cover: m("cover.gif"),
+  cover: m("cover.webp"),
+  listCover: m("cover.mp4"),
   media: ahmadTeaMedia,
   body: `[IMG: media/ahmad-tea/hero.jpg]`,
 };

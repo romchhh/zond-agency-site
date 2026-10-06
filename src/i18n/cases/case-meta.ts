@@ -14,6 +14,10 @@ type CaseMetaEntry = {
 };
 
 const CASE_META: Record<string, CaseMetaEntry> = {
+  carbit: {
+    clientUrl: "https://carbit.info/",
+    categories: ["branding", "web"],
+  },
   "digital-residence": {
     clientUrl: "https://digitalresidence.az/",
     categories: ["strategy", "branding", "graphic"],

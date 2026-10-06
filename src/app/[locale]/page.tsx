@@ -5,10 +5,30 @@ import History from "@/components/History";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import TeamAndCta from "@/components/TeamAndCta";
-import { isLocale, type Locale } from "@/i18n/config";
+import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getProjects } from "@/i18n/projects";
+import { createPageMetadata, homeSeoPath } from "@/lib/metadata";
+import PageJsonLd from "@/components/PageJsonLd";
+import { applySeoOverride } from "@/i18n/seo-overrides";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+
+  const dictionary = await getDictionary(locale);
+  return createPageMetadata(locale, dictionary);
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function HomePage({
   params,
@@ -20,9 +40,16 @@ export default async function HomePage({
 
   const dictionary = await getDictionary(locale);
   const projects = getProjects(locale);
+  const seo = applySeoOverride(homeSeoPath(locale), dictionary.meta);
 
   return (
     <>
+      <PageJsonLd
+        locale={locale}
+        pathname="/"
+        name={seo.title}
+        description={seo.description}
+      />
       <Header locale={locale} dictionary={dictionary} />
       <main>
         <div className="hero-stage">
