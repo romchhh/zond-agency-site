@@ -65,6 +65,10 @@ const CASE_META: Record<string, CaseMetaEntry> = {
     clientUrl: "https://www.instagram.com/yakomoga.sushi/",
     categories: ["strategy", "branding", "smm"],
   },
+  "techno-group": {
+    clientUrl: "https://www.techno-group.com.ua/",
+    categories: ["branding", "graphic"],
+  },
 };
 
 export function getCaseClientUrl(slug: string): string | undefined {

@@ -1,0 +1,142 @@
+{
+  "tool": "built-in image_gen",
+  "references": [
+    "/workspace/sites/zond-yakomoga-case/dist/assets/yakomoga-original-logo.jpeg",
+    "/workspace/sites/zond-yakomoga-case/dist/assets/yakomoga-09.jpeg"
+  ],
+  "notes": "Promotional -20% and phone prices are design concepts, not real offers. NOVUS restricted to hero. Food-only 11 skipped per root instruction. Architecture pattern removed in targeted edits; carriers retain original pixel ornament.",
+  "assets": [
+    {
+      "name": "01-hero",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-9abd306a-ff4e-4713-8025-589d82fe4bda.png",
+      "prompt": "Precise targeted architectural surface edit. Image1 is edit target, image2 exact original logo source, image3 pattern source for physical packaging only. Preserve camera composition, original abstract red sign and custom ЯКОМОГА wordmark, all photographic detail, staff and physical shop room geometry. REMOVE EVERY pixel ornament PATTERN from shop fascia, walls, counters, pillars, sign panels and architectural fixtures; replace patterned areas with plain matte BLACK surfaces or plain red room walls, tasteful solid color design. Pattern is permitted only on small actual physical packaging boxes/bags. Preserve foreground NOVUS checkout and shoproom directly opposite across public aisle. NOVUS marks only foreground supermarket context. Maintain native 16:9 photoreal high resolution. No new text.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, best resolution approximately 1672x941. Photoreal polished commercial photograph for branding case. Reference 1 is exact logo source, use its ORIGINAL abstract flat red circle black moustache and forelock sign and custom Cyrillic wordmark ЯКОМОГА, not a realistic face nor redesigned icon. Reference 2 is original geometric pixel pattern source; use restrained where requested. Wide sharp establishing photograph inside a Ukrainian NOVUS supermarket. A dedicated enclosed ЯКОМОГА takeaway sushi shop room with black fascia and original white wordmark, red abstract sign is on the far side of a wide public aisle, directly OPPOSITE separate supermarket checkout lanes in foreground. Clear spatial opposition across aisle. Green NOVUS logo appears only as secondary supermarket checkout context. Shop is not a restaurant nor a cashier counter. Ordinary Ukrainian staff no glasses. NOVUS permitted only as described. No invented brands, watermarks, spectacles, glossy CGI. Keep real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/01-hero.png",
+      "dimensions": [
+        1672,
+        940
+      ]
+    },
+    {
+      "name": "02-pickup",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-1d7d66f3-13b7-469e-9461-425d456953b5.png",
+      "prompt": "Precise targeted architectural surface edit. Image1 is edit target, image2 exact original logo source, image3 pattern source for physical packaging only. Preserve camera composition, original abstract red sign and custom ЯКОМОГА wordmark, all photographic detail, staff and physical shop room geometry. REMOVE EVERY pixel ornament PATTERN from shop fascia, walls, counters, pillars, sign panels and architectural fixtures; replace patterned areas with plain matte BLACK surfaces or plain red room walls, tasteful solid color design. Pattern is permitted only on small actual physical packaging boxes/bags. Absolutely NO NOVUS marks or text anywhere. Maintain native 16:9 photoreal high resolution. No new text.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, best resolution approximately 1672x941. Photoreal polished commercial photograph for branding case. Reference 1 is exact logo source, use its ORIGINAL abstract flat red circle black moustache and forelock sign and custom Cyrillic wordmark ЯКОМОГА, not a realistic face nor redesigned icon. Reference 2 is original geometric pixel pattern source; use restrained where requested. Inside dedicated branded takeaway shop room, ordinary Ukrainian staff without glasses hands a CLOSED black branded sushi box to customer. Plain red and black fixtures, original sign and wordmark. Pickup at shop's own service desk; opposite supermarket checkout room beyond visible entrance but NO supermarket names or marks anywhere. Absolutely NO NOVUS logos, names, signage, text anywhere, including blurred backgrounds. No invented brands, watermarks, spectacles, glossy CGI. Keep real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/02-pickup.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "03-packaging",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-0589599f-c9de-4642-8087-a7a4012333f3.png",
+      "prompt": "Create ONE native 16:9 landscape image, best resolution approximately 1672x941. Photoreal polished commercial photograph for branding case. Reference 1 is exact logo source, use its ORIGINAL abstract flat red circle black moustache and forelock sign and custom Cyrillic wordmark ЯКОМОГА, not a realistic face nor redesigned icon. Reference 2 is original geometric pixel pattern source; use restrained where requested. Elegant physical packaging still life: one CLOSED BLACK sushi box and one BLACK paper shopping bag. Restrained small original red sign and white wordmark; subtle original reference geometric Ukrainian pixel pattern in black on black. Real matte paper fibers and folded construction. No food, no open box. Absolutely NO NOVUS logos, names, signage, text anywhere, including blurred backgrounds. No invented brands, watermarks, spectacles, glossy CGI. Keep real material texture and optical realism.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, best resolution approximately 1672x941. Photoreal polished commercial photograph for branding case. Reference 1 is exact logo source, use its ORIGINAL abstract flat red circle black moustache and forelock sign and custom Cyrillic wordmark ЯКОМОГА, not a realistic face nor redesigned icon. Reference 2 is original geometric pixel pattern source; use restrained where requested. Elegant physical packaging still life: one CLOSED BLACK sushi box and one BLACK paper shopping bag. Restrained small original red sign and white wordmark; subtle original reference geometric Ukrainian pixel pattern in black on black. Real matte paper fibers and folded construction. No food, no open box. Absolutely NO NOVUS logos, names, signage, text anywhere, including blurred backgrounds. No invented brands, watermarks, spectacles, glossy CGI. Keep real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/03-packaging.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "04-certificate",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-cfcfd71e-5b05-49ef-9ce4-2ea5d45c2ff2.png",
+      "prompt": "Create ONE native 16:9 landscape image, best resolution approximately 1672x941. Photoreal polished commercial photograph for branding case. Reference 1 is exact logo source, use its ORIGINAL abstract flat red circle black moustache and forelock sign and custom Cyrillic wordmark ЯКОМОГА, not a realistic face nor redesigned icon. Reference 2 is original geometric pixel pattern source; use restrained where requested. Macro polished product photograph of a BLACK rigid plastic gift card on clean warm white table. Original abstract red sign and white custom wordmark, subtle black on black original geometric pattern; clearly legible monetary value '1000 грн'. Real rounded corners and rigid plastic thickness. Absolutely NO NOVUS logos, names, signage, text anywhere, including blurred backgrounds. No invented brands, watermarks, spectacles, glossy CGI. Keep real material texture and optical realism.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, best resolution approximately 1672x941. Photoreal polished commercial photograph for branding case. Reference 1 is exact logo source, use its ORIGINAL abstract flat red circle black moustache and forelock sign and custom Cyrillic wordmark ЯКОМОГА, not a realistic face nor redesigned icon. Reference 2 is original geometric pixel pattern source; use restrained where requested. Macro polished product photograph of a BLACK rigid plastic gift card on clean warm white table. Original abstract red sign and white custom wordmark, subtle black on black original geometric pattern; clearly legible monetary value '1000 грн'. Real rounded corners and rigid plastic thickness. Absolutely NO NOVUS logos, names, signage, text anywhere, including blurred backgrounds. No invented brands, watermarks, spectacles, glossy CGI. Keep real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/04-certificate.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "05-tshirt",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-a4f3f147-04ad-4b54-8717-e7be7eb2904f.png",
+      "prompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. Front view black cotton T shirt worn by ordinary person, head cropped out entirely. Only original red abstract sign and full white custom ЯКОМОГА wordmark plus small slogan 'ДОСТАВКА ЗАДОВОЛЕННЯ' minimally printed on front. No pattern. Real cotton texture, natural folds. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. Front view black cotton T shirt worn by ordinary person, head cropped out entirely. Only original red abstract sign and full white custom ЯКОМОГА wordmark plus small slogan 'ДОСТАВКА ЗАДОВОЛЕННЯ' minimally printed on front. No pattern. Real cotton texture, natural folds. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/05-tshirt.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "06-cap",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-1d5947dc-e996-4342-ace5-6375db2e8c00.png",
+      "prompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. Close three quarter view plain BLACK cap worn by ordinary person. Crop out face and eyes, show cap and part of head from side. ONLY a small red original abstract circle moustache forelock symbol embroidered on front. No lettering, no slogan, NO pattern. Real black cotton and stitching. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. Close three quarter view plain BLACK cap worn by ordinary person. Crop out face and eyes, show cap and part of head from side. ONLY a small red original abstract circle moustache forelock symbol embroidered on front. No lettering, no slogan, NO pattern. Real black cotton and stitching. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/06-cap.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "07-napkins",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-263077e1-8450-4ad1-9d36-57d5762fc9d0.png",
+      "prompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. Real WHITE paper napkins arranged on actual warm white shop counter. Each napkin has ONLY tiny red original abstract sign in ONE corner. No wordmark, no lettering, no slogan, no pattern. Paper texture, realistic folds, restrained studio daylight. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. Real WHITE paper napkins arranged on actual warm white shop counter. Each napkin has ONLY tiny red original abstract sign in ONE corner. No wordmark, no lettering, no slogan, no pattern. Paper texture, realistic folds, restrained studio daylight. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/07-napkins.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "08-stand",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-cae5e17f-bfbc-417f-a708-50dce11fc82a.png",
+      "prompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. BLACK A frame sidewalk promotional stand inside generic neutral modern supermarket. Beautiful actual printed photographic sushi roll picture on stand face, original red sign and white custom wordmark. Ukrainian promotion text precisely 'АКЦІЯ' then large '-20%' and 'на сети з собою'. Real panel construction, supermarket background with no brand signage at all. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "originalPrompt": "Create ONE native 16:9 landscape image, approximately1672x941. Photoreal polished branding photograph. Reference1 exact logo source: ORIGINAL flat red circle black moustache forelock abstract sign, custom Cyrillic ЯКОМОГА wordmark where requested. NEVER realistic face or invented sign. Reference2 original cross stitch pixel ornament pattern, not repeated logos; restrained where requested. BLACK A frame sidewalk promotional stand inside generic neutral modern supermarket. Beautiful actual printed photographic sushi roll picture on stand face, original red sign and white custom wordmark. Ukrainian promotion text precisely 'АКЦІЯ' then large '-20%' and 'на сети з собою'. Real panel construction, supermarket background with no brand signage at all. Absolutely NO NOVUS logos text signage anywhere including background. No other brands, watermarks, eyewear. Real material texture and optical realism.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/08-stand.png",
+      "dimensions": [
+        1672,
+        940
+      ]
+    },
+    {
+      "name": "09-bag",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-de50291b-f533-4cd4-bd71-d82e1279c128.png",
+      "prompt": "Create ONE native16:9 landscape image approximately1672x941. Polished photoreal commercial photograph. Reference1 exact original logo: flat red circle black moustache forelock abstract sign and custom Cyrillic ЯКОМОГА wordmark. Do not replace with realistic face. Reference2 exact cross stitch PIXEL ORNAMENT pattern, NOT repeating logos; use subtle black on black where requested. Black insulated delivery bag carried by ordinary Ukrainian courier without eyewear; crop at neck. Real textile zipper straps insulation volume. Subtle original reference geometric pixel pattern black on black and small red original sign with white wordmark. Neutral urban doorway. Absolutely NO NOVUS logos, words or signage anywhere including blurred background. No unrelated brands, watermarks or eyewear. Crisp optical realism, actual material details.",
+      "originalPrompt": "Create ONE native16:9 landscape image approximately1672x941. Polished photoreal commercial photograph. Reference1 exact original logo: flat red circle black moustache forelock abstract sign and custom Cyrillic ЯКОМОГА wordmark. Do not replace with realistic face. Reference2 exact cross stitch PIXEL ORNAMENT pattern, NOT repeating logos; use subtle black on black where requested. Black insulated delivery bag carried by ordinary Ukrainian courier without eyewear; crop at neck. Real textile zipper straps insulation volume. Subtle original reference geometric pixel pattern black on black and small red original sign with white wordmark. Neutral urban doorway. Absolutely NO NOVUS logos, words or signage anywhere including blurred background. No unrelated brands, watermarks or eyewear. Crisp optical realism, actual material details.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/09-bag.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "10-phone",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-64d4fb77-40ad-4f17-beaf-a435e0b2cb56.png",
+      "prompt": "Create ONE native16:9 landscape image approximately1672x941. Polished photoreal commercial photograph. Reference1 exact original logo: flat red circle black moustache forelock abstract sign and custom Cyrillic ЯКОМОГА wordmark. Do not replace with realistic face. Reference2 exact cross stitch PIXEL ORNAMENT pattern, NOT repeating logos; use subtle black on black where requested. Photoreal modern phone front perspective held in ordinary person's hand. Screen takes much of frame, extremely crisp usable Ukrainian sushi ordering interface on warm white. Exact original abstract red logo sign and custom ЯКОМОГА wordmark at top. Four DISTINCT roll product cards in 2x2 grid, each with different realistic food photograph plus clear Ukrainian name and price: 'Філадельфія' '299 грн'; 'Каліфорнія' '249 грн'; 'Зелений дракон' '329 грн'; 'Червоний дракон' '349 грн'. Large clear red bottom button 'Замовити'. No other logos. Neutral background, no eyewear. Absolutely NO NOVUS logos, words or signage anywhere including blurred background. No unrelated brands, watermarks or eyewear. Crisp optical realism, actual material details.",
+      "originalPrompt": "Create ONE native16:9 landscape image approximately1672x941. Polished photoreal commercial photograph. Reference1 exact original logo: flat red circle black moustache forelock abstract sign and custom Cyrillic ЯКОМОГА wordmark. Do not replace with realistic face. Reference2 exact cross stitch PIXEL ORNAMENT pattern, NOT repeating logos; use subtle black on black where requested. Photoreal modern phone front perspective held in ordinary person's hand. Screen takes much of frame, extremely crisp usable Ukrainian sushi ordering interface on warm white. Exact original abstract red logo sign and custom ЯКОМОГА wordmark at top. Four DISTINCT roll product cards in 2x2 grid, each with different realistic food photograph plus clear Ukrainian name and price: 'Філадельфія' '299 грн'; 'Каліфорнія' '249 грн'; 'Зелений дракон' '329 грн'; 'Червоний дракон' '349 грн'. Large clear red bottom button 'Замовити'. No other logos. Neutral background, no eyewear. Absolutely NO NOVUS logos, words or signage anywhere including blurred background. No unrelated brands, watermarks or eyewear. Crisp optical realism, actual material details.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/10-phone.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "12-signage",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-d8817e91-1c1d-4ecf-b25d-b0f9ca648d8d.png",
+      "prompt": "Precise targeted architectural surface edit. Image1 is edit target, image2 exact original logo source, image3 pattern source for physical packaging only. Preserve camera composition, original abstract red sign and custom ЯКОМОГА wordmark, all photographic detail, staff and physical shop room geometry. REMOVE EVERY pixel ornament PATTERN from shop fascia, walls, counters, pillars, sign panels and architectural fixtures; replace patterned areas with plain matte BLACK surfaces or plain red room walls, tasteful solid color design. Pattern is permitted only on small actual physical packaging boxes/bags. Absolutely NO NOVUS marks or text anywhere. Maintain native 16:9 photoreal high resolution. No new text.",
+      "originalPrompt": "Create ONE native16:9 landscape image approximately1672x941. Polished photoreal commercial photograph. Reference1 exact original logo: flat red circle black moustache forelock abstract sign and custom Cyrillic ЯКОМОГА wordmark. Do not replace with realistic face. Reference2 exact cross stitch PIXEL ORNAMENT pattern, NOT repeating logos; use subtle black on black where requested. Architectural photograph of dedicated takeaway sushi shopfront ROOM inside generic modern supermarket. White original custom ЯКОМОГА wordmark on BLACK fascia with original red abstract sign. Open doorway reveals red black shop fixtures and own pickup service desk. No restaurant dining tables. Neutral supermarket public aisle, NO supermarket logos or text. Absolutely NO NOVUS logos, words or signage anywhere including blurred background. No unrelated brands, watermarks or eyewear. Crisp optical realism, actual material details.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/12-signage.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "13-chopstick",
+      "source": "/workspace/scratch/04c22e8e40c7/generated_images/exec-47cf7601-e450-44ce-9c81-f694e16109be.png",
+      "prompt": "Create ONE native16:9 landscape image approximately1672x941. Polished photoreal commercial photograph. Reference1 exact original logo: flat red circle black moustache forelock abstract sign and custom Cyrillic ЯКОМОГА wordmark. Do not replace with realistic face. Reference2 exact cross stitch PIXEL ORNAMENT pattern, NOT repeating logos; use subtle black on black where requested. Photoreal product still life: realistic CLOSED BLACK paper chopstick sleeve with subtle original reference geometric pixel pattern black on black and small original logo, alongside one CLOSED black sushi box. Sleeve long thin rectangular paper holding a pair of chopsticks entirely inside. No coffee, no envelope, no food. Warm white counter. Absolutely NO NOVUS logos, words or signage anywhere including blurred background. No unrelated brands, watermarks or eyewear. Crisp optical realism, actual material details.",
+      "originalPrompt": "Create ONE native16:9 landscape image approximately1672x941. Polished photoreal commercial photograph. Reference1 exact original logo: flat red circle black moustache forelock abstract sign and custom Cyrillic ЯКОМОГА wordmark. Do not replace with realistic face. Reference2 exact cross stitch PIXEL ORNAMENT pattern, NOT repeating logos; use subtle black on black where requested. Photoreal product still life: realistic CLOSED BLACK paper chopstick sleeve with subtle original reference geometric pixel pattern black on black and small original logo, alongside one CLOSED black sushi box. Sleeve long thin rectangular paper holding a pair of chopsticks entirely inside. No coffee, no envelope, no food. Warm white counter. Absolutely NO NOVUS logos, words or signage anywhere including blurred background. No unrelated brands, watermarks or eyewear. Crisp optical realism, actual material details.",
+      "destination": "/workspace/scratch/04c22e8e40c7/yakomoga-v5-assets/13-chopstick.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    }
+  ]
+}

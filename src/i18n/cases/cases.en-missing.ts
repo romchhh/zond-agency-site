@@ -59,32 +59,6 @@ export const casesEnMissing: CaseItem[] = [
     "body": "### Client\n\nInstitute of National Resilience and Security of Ukraine (INSB).\n\n### Goals\n\nCreate a restrained, professional, and contemporary brand that conveys expertise and public trust while reflecting security, resilience, and strategic thinking.\n\n### Developed\n\nBranding\n\nLogo\n\nDesign\n\nStrategy\n\nIdentity\n\n[IMG: media/insb/hero.webp]\n\n[IMG: media/insb/01.webp]\n\n[IMG: media/insb/02.webp]\n\n[IMG: media/insb/03.webp]\n\n[IMG: media/insb/04.webp]\n\n[IMG: media/insb/05.webp]\n\n[IMG: media/insb/06.webp]\n\n[IMG: media/insb/07.webp]\n\n[IMG: media/insb/08.webp]\n\n[IMG: media/insb/09.webp]\n\n[IMG: media/insb/11.webp]\n\n[IMG: media/insb/12.webp]\n\n[IMG: media/insb/10.webp]\n\n[IMG: media/insb/13.webp]\n\n[IMG: media/insb/14.webp]\n\n[IMG: media/insb/15.webp]\n\n[IMG: media/insb/16.webp]\n\n[IMG: media/insb/17.webp]"
   },
   {
-    "slug": "akula-mama",
-    "title": "Akula Mama",
-    "description": "We developed a logo and bold packaging design for Akula Mama — a fish snacks and delicacies brand from Odesa. Also website design.",
-    "cover": "/assets/cases/akula-mama/cover.webp",
-    "media": [
-      "media/akula-mama/cover.webp",
-      "media/akula-mama/hero.webp",
-      "media/akula-mama/16.webp",
-      "media/akula-mama/02.webp",
-      "media/akula-mama/03.webp",
-      "media/akula-mama/04.webp",
-      "media/akula-mama/05.webp",
-      "media/akula-mama/06.webp",
-      "media/akula-mama/07.webp",
-      "media/akula-mama/08.webp",
-      "media/akula-mama/09.webp",
-      "media/akula-mama/12.webp",
-      "media/akula-mama/13.webp",
-      "media/akula-mama/14.webp",
-      "media/akula-mama/15.webp",
-      "media/akula-mama/10.webp",
-      "media/akula-mama/11.webp"
-    ],
-    "body": "### Client\n\nAkula Mama produces affordable fish snacks and delicacies from Odesa for family audiences.\n\n### Goals\n\nDesign a logo and packaging that feel premium on shelf while staying accessible — highlighting product quality and the brand’s character.\n\n### Developed\n\nBranding\n\nDesign\n\nLogo\n\nWebsite design\n\n[IMG: media/akula-mama/hero.webp]\n\n[IMG: media/akula-mama/16.webp]\n\n[IMG: media/akula-mama/02.webp]\n\n[IMG: media/akula-mama/03.webp]\n\n[IMG: media/akula-mama/04.webp]\n\n[IMG: media/akula-mama/05.webp]\n\n[IMG: media/akula-mama/06.webp]\n\n[IMG: media/akula-mama/07.webp]\n\n[IMG: media/akula-mama/08.webp]\n\n[IMG: media/akula-mama/09.webp]\n\n[IMG: media/akula-mama/12.webp]\n\n[IMG: media/akula-mama/13.webp]\n\n[IMG: media/akula-mama/14.webp]\n\n[IMG: media/akula-mama/15.webp]\n\n[IMG: media/akula-mama/10.webp]\n\n[IMG: media/akula-mama/11.webp]"
-  },
-  {
     "slug": "goshchanochka",
     "title": "Hoshchanochka",
     "description": "We developed branding, strategy, identity, and a logo for Hoshchanochka — a dairy producer in Ukraine.",

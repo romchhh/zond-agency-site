@@ -68,6 +68,11 @@ export const CASE_SERVICE_TAGS: Record<string, Record<Locale, string>> = {
     "Позиционирование · Лого · Брендбук · Персонаж бренда · SMM",
     "Positioning · Logo · Brand book · Brand character · SMM",
   ),
+  "techno-group": ltag(
+    "Ребрендинг · айдентика · брендбук",
+    "Ребрендинг · айдентика · брендбук",
+    "Rebranding · identity · brand book",
+  ),
 };
 
 type LocalizedTestimonial = Record<Locale, CaseTestimonial>;
@@ -419,6 +424,35 @@ export const CASE_TESTIMONIALS: Record<string, LocalizedTestimonial> = {
       ],
       author: "Oleksandr",
       role: "Owner",
+    },
+  },
+  "techno-group": {
+    uk: {
+      heading: "Погляд команди\nТехно Груп.",
+      paragraphs: [
+        "Дякуємо команді ZOND за роботу над оновленою айдентикою, брендбуком, поліграфією та сувенірною продукцією Техно Груп. Нам було важливо, щоб бренд відповідав рівню нашої інженерної роботи — виглядав сучасно, зрозуміло й викликав довіру замовників.",
+        "Команда об’єднала цифрові й фізичні носії в одну систему, а брендбук дав нам спільні правила для щоденної комунікації. Вдячні за системний підхід до візуального образу компанії.",
+      ],
+      author: "Адміністрація Техно Груп",
+      role: "",
+    },
+    ru: {
+      heading: "Взгляд команды\nТехно Груп.",
+      paragraphs: [
+        "Благодарим команду ZOND за работу над обновлённой айдентикой, брендбуком, полиграфией и сувенирной продукцией Техно Груп. Нам было важно, чтобы бренд соответствовал уровню нашей инженерной работы — выглядел современно, понятно и вызывал доверие заказчиков.",
+        "Команда объединила цифровые и физические носители в одну систему, а брендбук дал нам общие правила для ежедневной коммуникации. Благодарны за системный подход к визуальному образу компании.",
+      ],
+      author: "Администрация Техно Груп",
+      role: "",
+    },
+    en: {
+      heading: "The Techno Group\nteam's perspective.",
+      paragraphs: [
+        "Thank you to the ZOND team for the updated identity, brand book, print, and branded merchandise for Techno Group. It was important that the brand match the level of our engineering work — look modern, clear, and inspire client trust.",
+        "The team united digital and physical carriers into one system, and the brand book gave us shared rules for everyday communication. We appreciate the systematic approach to the company's visual image.",
+      ],
+      author: "Techno Group administration",
+      role: "",
     },
   },
 };

@@ -1,0 +1,328 @@
+{
+  "tool": "built-in image_gen__imagegen",
+  "assets": [
+    {
+      "id": "01",
+      "prompt": "Output one polished full-bleed landscape 16:9 image, approximately 1672x941. No borders, gray fields, contact sheets, inset framing or watermarks. Use the supplied original branding faithfully, preserve exact shark silhouette and Ukrainian wordmark and all existing package artwork, product names and weights. Do not invent flavors or labels. Use case: compositing. Create a strong new photorealistic branding case-study hero: ordinary modern Ukrainian supermarket frozen seafood aisle in natural daylight. Camera at counter height, several exact supplied original Akula Mama pouches prominently arranged near a glass chest freezer in foreground with a small faithful original shark wordmark label on freezer. Wide believable store architecture and a few ordinary Ukrainian staff and customers far away in soft focus; candid documentary human details, no model posing, no people eating. Product focus, beautiful light, physically realistic scale, reflections and shadows. No mountains, sea or fake composite scenery.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-10.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-11.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-bb540740-dd67-472d-a515-ee55a9c0ef74.png",
+      "output": "/workspace/scratch/akula-assets/akula-01.png"
+    },
+    {
+      "id": "03",
+      "prompt": "Output one polished full-bleed landscape 16:9 image, approximately 1672x941. No borders, gray fields, contact sheets, inset framing or watermarks. Use the supplied original branding faithfully, preserve exact shark silhouette and Ukrainian wordmark and all existing package artwork, product names and weights. Do not invent flavors or labels. Use case: ads-marketing. Redesign this typography board as an excellent editorial design presentation on clean white paper, with huge expressive practice-font Ukrainian headline \"Море смаку\", geometric custom rounded letterforms matching the original heading font specimen. Smaller Montserrat text \"З Одеси. Зі смаком.\" and \"Просто приготувати. Приємно смакувати.\". Bottom-left compact Ukrainian letter specimen \"Аа Бб Вв Гг Ґґ Дд Ее Єє Жж Зз Ии Іі Її Йй\" with label \"Типографіка\". On right a beautifully photographed deep navy physical poster paper with orange oversized type \"Море смаку\" and smaller white Montserrat body. Layout sophisticated like Swiss editorial brand typography presentation, generously scaled clean hierarchy. NO logo, NO shark, NO signage, no packaging, no food.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-03.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-036b60ec-0b4b-481b-beb1-881016b31e21.png",
+      "output": "/workspace/scratch/akula-assets/akula-03.png"
+    },
+    {
+      "id": "04",
+      "prompt": "Output one polished full-bleed landscape 16:9 image, approximately 1672x941. No borders, gray fields, contact sheets, inset framing or watermarks. Use the supplied original branding faithfully, preserve exact shark silhouette and Ukrainian wordmark and all existing package artwork, product names and weights. Do not invent flavors or labels. Use case: precise-object-edit. Preserve the EXACT supplied dark navy croissant-with-shrimp pouch artwork: КРУАСАН З КРЕВЕТКОЮ and 400 г, exact shark logo. Replace the sand background with a photorealistic bright Ukrainian home kitchen during daytime, pouch standing upright on clean pale natural stone counter near a window. Full landscape scene with enough attractive kitchen visible, subtle natural shadows, satin realistic packaging folds. Minimal props, no other text. Exact original pouch design is the main subject.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-04.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-d0c5f180-ca65-4fa2-a82a-a4660f9ba91d.png",
+      "output": "/workspace/scratch/akula-assets/akula-04.png"
+    },
+    {
+      "id": "05",
+      "prompt": "Output one polished full-bleed landscape 16:9 image, approximately 1672x941. No borders, gray fields, contact sheets, inset framing or watermarks. Use the supplied original branding faithfully, preserve exact shark silhouette and Ukrainian wordmark and all existing package artwork, product names and weights. Do not invent flavors or labels. Use case: precise-object-edit. Keep the original billboard print artwork and all original logo, food imagery, copy and layout intact. Replace the unrealistic mountain surroundings with believable everyday Ukrainian urban roadside scene in daylight, small trees, sidewalks, ordinary cars and distant buildings. Photograph the billboard installed at correct real-world scale, oblique natural camera view showing broad landscape environment, sunlight on metal frame, subtle weathering. Full frame documentary advertising application, no extra text or invented signage.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-05.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-706f678c-384a-4227-9ebc-1ebc63123712.png",
+      "output": "/workspace/scratch/akula-assets/akula-05.png",
+      "selected_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-95a23b45-2490-4b22-a74d-3843dea758f6.png"
+    },
+    {
+      "id": "06",
+      "prompt": "undefinedUse case: precise-object-edit. Preserve the original citylight advertisement print exactly: original woman eating calamari ring, original orange НОВИНКА sticker and navy shark logo lower panel. Put this exact poster inside a realistic slim black citylight in a bright ordinary Ukrainian supermarket aisle near frozen-food section. Wide photorealistic camera scene with correct perspective and natural daylight, glass reflections, shelves and ordinary shoppers far away, modest attractive everyday setting. Preserve ad portrait but no additional models.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-06.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-f8fefe92-54b1-448d-80a5-a8b50ddac691.png",
+      "output": "/workspace/scratch/akula-assets/akula-06.png",
+      "selected_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-bfdc1bca-79de-4ba9-9b4c-58f9e83f5eb3.png"
+    },
+    {
+      "id": "07",
+      "prompt": "undefinedUse case: precise-object-edit. Preserve the original citylight advertisement print exactly: hand dipping golden fish stick into sauce and original navy shark logo lower panel. Put this exact poster in realistic black citylight in an ordinary modern Ukrainian supermarket near frozen-food aisles. Wide photorealistic natural daylight scene, correct perspective, believable poster material and reflections. Show ordinary distant shoppers, no posed models, restrained environment.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-07.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-da24d2e9-ed1a-4a1b-bf72-1da56bf1318f.png",
+      "output": "/workspace/scratch/akula-assets/akula-07.png",
+      "selected_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-705a76f0-5402-4f49-845b-ff2bcdf97bda.png"
+    },
+    {
+      "id": "08",
+      "prompt": "undefinedUse case: precise-object-edit. Preserve the original citylight advertisement print exactly: original young man eating fish stick, НОВИНКА sticker and original navy shark logo lower panel. Put this exact poster in a slim black citylight in a bright believable Ukrainian supermarket lobby beside frozen-food aisle. Wide natural daylight photograph, candid distant customers far from camera, correct perspective, realistic glass reflections, original advertisement remains main subject.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-08.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-78ce573a-70b0-411f-b027-c3cabf994469.png",
+      "output": "/workspace/scratch/akula-assets/akula-08.png",
+      "selected_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-ac4028c4-6718-4c5f-a56e-98e9e6ca3d5c.png"
+    },
+    {
+      "id": "09",
+      "prompt": "undefinedUse case: ads-marketing. Redesign original brand palette board into beautiful premium editorial full-bleed landscape color study. Only four exact brand colors: deep navy HEX #1D2647, vivid orange HEX #FA5B00, white HEX #FFFFFF, black HEX #000000. Physical painted paper swatches, subtly textured uncoated paper and satin material chips, carefully arranged with dramatic oversized navy and orange color blocks plus smaller white and black areas. Sophisticated asymmetrical clean layout, fine typography with these EXACT four HEX labels only, high legibility. No gradient, no extra color, no logos, sharks, signs, packages or other imagery. Natural soft daylight shadows.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-09.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-e326858c-8dc5-4d7b-80b0-07e47c8e0fcb.png",
+      "output": "/workspace/scratch/akula-assets/akula-09.png",
+      "selected_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-c87770c8-a83d-42ba-a12d-a0fa4cd5e4e7.png"
+    },
+    {
+      "id": "10",
+      "prompt": "undefinedUse case: precise-object-edit. Retain the EXACT supplied group of five Akula Mama product pouches, original lineup and package artwork intact. Replace sea and mountain background with a beautiful believable bright home kitchen counter near a daylight window. Products upright grouped naturally on clean light natural stone counter, restrained kitchen details softly behind. Polished commercial photography with realistic packaging folds, natural soft shadows and accurate product scale. No seaside, mountains, food props or extra copy.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-10.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-96d71c2a-94f7-4aeb-81d2-4ad9ee39be5a.png",
+      "output": "/workspace/scratch/akula-assets/akula-10.png"
+    },
+    {
+      "id": "11",
+      "prompt": "undefinedUse case: compositing. Refine this brand display into a realistic full-width Ukrainian supermarket glass chest freezer photograph, stocked neatly with exact Akula Mama packages from supplied product lineup, original shark logo navy label and original orange НОВИНКА sticker affixed physically to front glass. Wide camera view at slight angle, natural bright supermarket daylight, realistic glass reflections and subtle condensation, modern tidy aisle architecture. Readable authentic original label, no giant floating logo.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-11.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-10.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-192c805b-2ce1-4436-902e-b74153449455.png",
+      "output": "/workspace/scratch/akula-assets/akula-11.png"
+    },
+    {
+      "id": "12",
+      "prompt": "undefinedUse case: precise-object-edit. Extend/rephotograph this EXACT original pale-blue and navy РИБНІ ПАЛИЧКИ 400 г product pouch into a beautiful wide bright home kitchen photograph. Original artwork, shark wordmark, typography, transparent product window and package shape remain unchanged and precise. Pouch standing upright on clean pale wood kitchen counter near a daylight window, substantial surrounding kitchen visible, soft natural shadows, no gray field. Minimal ordinary backdrop, no props, no new text.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-12.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-21f77d2c-919a-47da-bed1-c35b06afaf22.png",
+      "output": "/workspace/scratch/akula-assets/akula-12.png",
+      "selected_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-f1f78c35-73bd-4428-b85b-2d5782b70efd.png"
+    },
+    {
+      "id": "13",
+      "prompt": "undefinedUse case: precise-object-edit. Extend/rephotograph this EXACT original yellow and navy СИРНІ ПАЛИЧКИ 400 г product pouch into a beautiful wide bright home kitchen photograph. Preserve exact original artwork, shark wordmark, typography, transparent product window and pouch shape. Standing upright on clean pale wood kitchen counter near daylight window. Kitchen recedes softly with believable ordinary materials. Natural sunny soft shadows, restrained props, full image without blank field, no new text.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-13.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-be008271-00f4-44c0-a23d-136d95b26707.png",
+      "output": "/workspace/scratch/akula-assets/akula-13.png"
+    },
+    {
+      "id": "14",
+      "prompt": "undefinedUse case: precise-object-edit. Recreate original branded fish-counter photograph as candid professional documentary scene in an ordinary Ukrainian supermarket. Move camera farther away so the ordinary Ukrainian middle-aged female employee behind the counter is small within the wide frame, dressed naturally in white work shirt, dark apron and hygienic gloves, working rather than posing. Main subject glass fish display with salmon and fresh fish on ice, physically adhered exact original navy shark wordmark badge and orange НОВИНКА sticker. Bright natural daylight, realistic ordinary store, no beauty models or glamour.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-14.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-c9e40654-8c0b-4db3-b0c1-a808a5a36944.png",
+      "output": "/workspace/scratch/akula-assets/akula-14.png"
+    },
+    {
+      "id": "15",
+      "prompt": "undefinedUse case: precise-object-edit. Outpaint original navy shark-over-shrimp brand composition horizontally to native full-bleed landscape 16:9. Preserve exact original flat navy shark silhouette from input, retain its shape perfectly, elegantly scale/composition it on the right half. Background entirely photorealistic macro texture of beautiful fresh cooked shrimp in soft natural daylight, fine shell and frost details, attractive food texture filling entire frame. No typography, no gray fields, no added motifs.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-15.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-f4b30753-e269-438d-8340-a7673e58d772.png",
+      "output": "/workspace/scratch/akula-assets/akula-15.png"
+    },
+    {
+      "id": "16",
+      "prompt": "undefinedUse case: precise-object-edit. Extend and improve this branded food still-life as native wide 16:9 premium photoreal photograph. Keep EXACT original white Akula Mama shark and Ukrainian wordmark centered above plated golden breaded seafood snacks, preserve logo shape and typography. Appetizing realistic breading detail, wooden serving board, dark ceramic sauce bowl, tiny existing green garnish, naturally lit near window in dark calm kitchen. Background deep charcoal/navy dark real surface, subtle natural light, elegant broad composition; no other text or new food products.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-16.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-2c1a7cac-7fbe-4339-b27f-207adf76e916.png",
+      "output": "/workspace/scratch/akula-assets/akula-16.png"
+    },
+    {
+      "id": "17",
+      "prompt": "undefinedUse case: precise-object-edit. Outpaint original navy shark-over-salmon brand composition horizontally to native full-bleed landscape 16:9. Preserve EXACT original flat navy shark silhouette, elegantly scale/composition it on the right half, shape unchanged. Background entirely photorealistic macro texture of fresh salmon flesh, natural orange and white fat lines, soft daylight and fine moist surface details filling entire frame. Sophisticated original brand motif, no typography, no gray fields or added motifs.",
+      "refs": [
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-17.webp",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp"
+      ],
+      "initial_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-0665cde7-2c64-45d3-8ef4-f4fb3897222f.png",
+      "output": "/workspace/scratch/akula-assets/akula-17.png"
+    }
+  ],
+  "revisions": [
+    {
+      "id": "06",
+      "prompt": "Change canvas to native LANDSCAPE 16:9, 1672 pixels wide x 941 pixels high. EXTEND the supermarket environment horizontally left and right; keep the entire citylight visible at a smaller realistic scale in the wide photo, no cropping, no gray or blank padding. Photorealistic daylight retail advertising application. Preserve the original advertisement portrait/food image inside the citylight. Use image2 original poster as authority to restore its EXACT original lower-panel copy and original shark wordmark, no fabricated claims. Original caption МОРСЬКІ ДЕЛІКАТЕСИ and icons: 2 ХВ. 30 СЕК. І УСЕ ГОТОВО; ІДЕАЛЬНА ЗАКУСКА. Distant candid shoppers in extended environment.",
+      "refs": [
+        "/workspace/scratch/akula-assets/akula-06.png",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-06.webp"
+      ],
+      "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-bfdc1bca-79de-4ba9-9b4c-58f9e83f5eb3.png"
+    },
+    {
+      "id": "07",
+      "prompt": "Change canvas to native LANDSCAPE 16:9, 1672 pixels wide x 941 pixels high. EXTEND the supermarket environment horizontally left and right; keep the entire citylight visible at a smaller realistic scale in the wide photo, no cropping, no gray or blank padding. Photorealistic daylight retail advertising application. Preserve the original advertisement portrait/food image inside the citylight. Use image2 original poster as authority to restore its EXACT original lower-panel copy and original shark wordmark, no fabricated claims. Original caption МОРСЬКІ ДЕЛІКАТЕСИ and icons: 2 ХВ. 30 СЕК. І УСЕ ГОТОВО; ІДЕАЛЬНА ЗАКУСКА. Distant candid shoppers in extended environment.",
+      "refs": [
+        "/workspace/scratch/akula-assets/akula-07.png",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-07.webp"
+      ],
+      "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-705a76f0-5402-4f49-845b-ff2bcdf97bda.png"
+    },
+    {
+      "id": "08",
+      "prompt": "Change canvas to native LANDSCAPE 16:9, 1672 pixels wide x 941 pixels high. EXTEND the supermarket environment horizontally left and right; keep the entire citylight visible at a smaller realistic scale in the wide photo, no cropping, no gray or blank padding. Photorealistic daylight retail advertising application. Preserve the original advertisement portrait/food image inside the citylight. Use image2 original poster as authority to restore its EXACT original lower-panel copy and original shark wordmark, no fabricated claims. Original caption МОРСЬКІ ДЕЛІКАТЕСИ and icons: 2 ХВ. 30 СЕК. І УСЕ ГОТОВО; ІДЕАЛЬНА ЗАКУСКА. Distant candid shoppers in extended environment.",
+      "refs": [
+        "/workspace/scratch/akula-assets/akula-08.png",
+        "/workspace/sites/zond-akula-mama-case/dist/assets/akula-08.webp"
+      ],
+      "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-ac4028c4-6718-4c5f-a56e-98e9e6ca3d5c.png"
+    },
+    {
+      "id": "05",
+      "prompt": "Edit this photograph. Keep native16:9 LANDSCAPE1672x941 and all photorealistic Ukrainian urban street, billboard frame, original exact white Akula Mama sharkwordmark, food photography and general navy/green printed billboard composition unchanged. Fix the unrelated legacy restaurant/cafe text. Replace huge headline with EXACT «Море смаку — вдома». Replace lower left green rectangle text with EXACT «Рибні закуски для всієї родини». Remove lower right delivery label and phone number entirely, leaving a clean original navy shape. No phone number, cafe, restaurant, locations, extra copy or new logo. Clean readable Ukrainian typography faithfully integrated into printed billboard.",
+      "refs": [
+        "/workspace/scratch/akula-assets/akula-05.png"
+      ],
+      "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-95a23b45-2490-4b22-a74d-3843dea758f6.png"
+    },
+    {
+      "id": "09",
+      "prompt": "Edit the supplied palette image into a native 16:9 LANDSCAPE CANVAS at 1672 pixels wide x 941 pixels high. This aspect ratio is essential. Extend the photographed colored-paper material composition vertically so the result is 16:9, with fully painted physical materials continuing to all edges. Preserve beautiful navy/orange/white/black swatches and EXACT four existing HEX labels #1D2647, #FA5B00, #FFFFFF, #000000. Preserve spacing and use clean elegant layout. No logos, no extra text, no added colors, no borders, no padding, no gray fields. Entire image is the full-bleed material palette photograph.",
+      "refs": [
+        "/workspace/scratch/akula-assets/akula-09.png"
+      ],
+      "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-c87770c8-a83d-42ba-a12d-a0fa4cd5e4e7.png"
+    },
+    {
+      "id": "12",
+      "prompt": "Essential: Change image to native LANDSCAPE16:9 canvas at1672 pixelswide x941 pixelshigh by extending bright kitchen counter and kitchen background horizontally. Keep complete EXACT original pale-blue navy РИБНІ ПАЛИЧКИ 400г pouch including sharkwordmark, print colors, typography, product window and detailed artwork untouched. Preserve realistic daytime photography. The pouch comfortably fits fully visible in the central landscape frame. No cropping, padding, gray fields, borders or fake label changes.",
+      "refs": [
+        "/workspace/scratch/akula-assets/akula-12.png"
+      ],
+      "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-f1f78c35-73bd-4428-b85b-2d5782b70efd.png"
+    },
+    {
+      "id": "17",
+      "prompt": "Preserve photorealistic salmon macro backdrop and exact navy shark silhouette; proportionally scale mark down and reposition within right half so all fins and tail fully visible with 8% edge breathing room. Landscape16:9, no text or borders.",
+      "refs": [
+        "dist/assets/akula-v2-17.webp"
+      ],
+      "generated_output": "/workspace/scratch/akula-last-update.png",
+      "tool": "built-in image_gen"
+    },
+    {
+      "tool": "built-in image_gen__imagegen",
+      "jobs": [
+        {
+          "id": "palette",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-09.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-10.webp"
+          ],
+          "prompt": "Use case: precise-object-edit. Edit image1 palette composition, preserve native full-bleed LANDSCAPE16:9 1672x941. Add a fifth SUBSTANTIVE bright green physical painted-paper swatch, matching precisely the vivid green accent used on the food-package ingredient badges in image2. Image2 is ONLY green color authority, do not insert its products. Preserve the current beautiful navy/orange/white/black tactile paper composition and its exact four HEX labels #1D2647, #FA5B00, #FFFFFF, #000000, recompose elegantly enough so all FIVE colors are clearly visible and balanced. New bright green swatch must occupy a meaningful approximately15-20% canvas area, with clean navy label EXACT «Зелений акцент». No invented greenHEX, no logos, shark, wordmarks or food; no borders, padding or grayfields. Natural subtle shadows and paper detail, designer editorial palette presentation.",
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-7101e45b-0eac-4f06-bf25-627a9cab2709.png",
+          "output": "/workspace/scratch/akula-palette-update.png"
+        },
+        {
+          "id": "extra18",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-04.webp"
+          ],
+          "prompt": "Use case: compositing. Create one native LANDSCAPE16:9 full-bleed photorealistic product-and-food photograph approximately1672x941. Use supplied original croissant-with-shrimp pouch as EXACT packaging authority: original dark navy artwork, white shark wordmark, red «КРУАСАН З КРЕВЕТКОЮ», exact400г weight, all printed original details and green ingredient badge retained1:1, no label redesign or invented text. Show this pouch standing slightly off-centre LEFT, beside exactly ONE appetizing small golden shrimp croissant on a simple off-white ceramic plate in RIGHT foreground. Croissant must be the same product visible on the original pack, crisp realistic flaky pastry wrapped around shrimp with little tail visible, natural food proportions. Clean ordinary bright home kitchen close view near window, pale natural countertop, honest soft daylight, realistic pouch creases, soft shadows, restrained shallow depth of field. Minimalprops; no extra croissants, otherpackages, sauces, cutlery, garnish, decorative ingredient piles, floatinglogo, newtext, borders or blankfields. Aim for natural believable commercial photography, not glossy CGI.",
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-51c6d232-076b-40ee-9eab-857b9ae8025e.png",
+          "output": "/workspace/scratch/akula-extra-18.png"
+        }
+      ]
+    },
+    {
+      "tool": "built-in image_gen__imagegen",
+      "jobs": [
+        {
+          "id": "15",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-10.webp"
+          ],
+          "prompt": "Create ONE full-bleed LANDSCAPE16:9 photorealistic photograph, native approximately1672x941. Input1 is ONLY exact original brand-logo authority: reproduce this CUSTOM shark silhouette and lowercase Ukrainian wordmark «акула мама» faithfully, same letter shapes and arrangement, no generic font, no redesign, no other brand. Brand navy #1D2647, orange #FA5B00, ingredient-badge brightgreen from input products. Natural daylight, believable ordinary Ukrainian business environment, accurate materials and real-world scale, no glamor models, no borders, grayfields or watermarks. Use case: compositing. Three-quarter view of a complete practical NAVY PICKUP delivery vehicle parked in a clean ordinary industrial parking yard outside a food-distribution warehouse. Whole pickup including wheels, roof, bumpers and rear cargo bed fully inside frame with generous natural edge space. A practical enclosed refrigerated cargo box mounted on pickup bed. Large white EXACT supplied shark+custom wordmark tastefully applied to door and side cargo box, simple restrained orange stripe and tiny green accent; clean navy livery, no busy wrap, no invented slogans, phone numbers or addresses. Bright overcast daylight, realistic vehicle paint reflections, tires, asphalt and subtle warehouse background. No people needed.",
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-20b193f0-643c-4f76-90b3-691ef710b081.png",
+          "output": "/workspace/scratch/akula-new-ending/15.png"
+        },
+        {
+          "id": "16",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-10.webp"
+          ],
+          "prompt": "Create ONE full-bleed LANDSCAPE16:9 photorealistic photograph, native approximately1672x941. Input1 is ONLY exact original brand-logo authority: reproduce this CUSTOM shark silhouette and lowercase Ukrainian wordmark «акула мама» faithfully, same letter shapes and arrangement, no generic font, no redesign, no other brand. Brand navy #1D2647, orange #FA5B00, ingredient-badge brightgreen from input products. Natural daylight, believable ordinary Ukrainian business environment, accurate materials and real-world scale, no glamor models, no borders, grayfields or watermarks. Use case: compositing. Attractive close-medium warehouse photograph of LARGE brown kraft corrugated shipping cartons neatly stacked on a wooden pallet beside a clean warehouse wall and daylight loading-bay. Primary foreground cartons have bold crisp NAVY exact original shark+custom wordmark printed as single-color flexographic ink. Supporting exact Ukrainian handling/product markings «АКУЛА МАМА» and «РИБНІ ЗАКУСКИ», simple standard fragile glass / keep dry umbrella / up arrows handling icons only. Restrained narrow orange tape accent and small green corner marking. Real corrugated fibre texture, taped seams, soft scuffs, box creases and natural shadows. Clean professional composition showing complete pallet and cartons, no invented certifications, addresses, QR, barcodes or numbers.",
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-b77a249f-1fa8-4584-843e-6a43cc73dfee.png",
+          "output": "/workspace/scratch/akula-new-ending/16.png"
+        },
+        {
+          "id": "17",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-10.webp"
+          ],
+          "prompt": "Create ONE full-bleed LANDSCAPE16:9 photorealistic photograph, native approximately1672x941. Input1 is ONLY exact original brand-logo authority: reproduce this CUSTOM shark silhouette and lowercase Ukrainian wordmark «акула мама» faithfully, same letter shapes and arrangement, no generic font, no redesign, no other brand. Brand navy #1D2647, orange #FA5B00, ingredient-badge brightgreen from input products. Natural daylight, believable ordinary Ukrainian business environment, accurate materials and real-world scale, no glamor models, no borders, grayfields or watermarks. Use case: compositing. Beautiful contemporary Ukrainian supermarket glass freezer cabinet photographed three-quarter straight-on, filling foreground. Entire neatly framed cabinet plus large NAVY HEADER above it with EXACT ORIGINAL WHITE shark+custom lowercase wordmark clearly readable, original wordmark letterforms1:1. Glass doors display tidy multiple shelves of actual Akula Mama product pouches from input2, keep original coherent product designs1:1, original names/artwork/weights, no invented flavors. Products at believable retail scale, tasteful slender orange trim and packaging green ingredient badges only. Minimal tidy softly blurred aisle environment and at most two ordinary small distant shoppers. Natural supermarket daylight, realistic glass reflections, metal finish, subtle frost and truthful documentary quality, no giant floating graphics or other signs.",
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-ceb7cf21-15bd-4ca8-b1bc-bc3c23f62c12.png",
+          "output": "/workspace/scratch/akula-new-ending/17.png"
+        },
+        {
+          "id": "18",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-10.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-14.webp"
+          ],
+          "prompt": "Create ONE full-bleed LANDSCAPE16:9 photorealistic photograph, native approximately1672x941. Input1 is ONLY exact original brand-logo authority: reproduce this CUSTOM shark silhouette and lowercase Ukrainian wordmark «акула мама» faithfully, same letter shapes and arrangement, no generic font, no redesign, no other brand. Brand navy #1D2647, orange #FA5B00, ingredient-badge brightgreen from input products. Natural daylight, believable ordinary Ukrainian business environment, accurate materials and real-world scale, no glamor models, no borders, grayfields or watermarks. Use case: compositing. Candid close-medium professional photo of an ordinary Ukrainian employee preparing a sealed product pouch for packing at a clean stainless food-production packing table. Frame cropped from SHOULDERS TO WAIST, FACE AND HEAD COMPLETELY OUTSIDE THE FRAME. Dark navy durable canvas apron over ordinary pale work shirt, EXACT original white shark+custom lowercase wordmark neatly screen-printed on chest. Hands naturally handling exactly ONE already sealed original Akula Mama product pouch from input2, preserving exact pouch artwork and shapes. No exposed food. Small plain open kraft shipping carton can be nearby to make packing action logical. Soft daylight in modest clean industrial packing-room background, realistic fabric and skin texture, natural folds, no glamour, no costume, no hats, face, fakePPE or unnecessary props. Chestlogo and authentic work activity both clearly visible.",
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-832f98b8-60af-4855-b1ad-f638f003323b.png",
+          "output": "/workspace/scratch/akula-new-ending/18.png"
+        }
+      ]
+    },
+    {
+      "tool": "built-in image_gen__imagegen",
+      "jobs": [
+        {
+          "id": "17",
+          "prompt": "Output ONE native LANDSCAPE16:9 full-bleed1672x941 photorealistic photograph. Reference1 is exact ORIGINAL Akula Mama custom shark and lowercase Ukrainian wordmark authority; reproduce this precise shark silhouette, eye, typography and two-line wordmark «акула мама», no logo redesign or generic lettering. Reference2 is exact product-artwork and vivid packaging-green authority. Brand palette navy#1D2647, orange#FA5B00 with restrained greenaccent. Natural daylight, practical ordinary Ukrainian environment, realistic materials and scale, no borders, grayfields, watermarks, invented phone/address or extra brands. Use case: compositing. Photograph a compact modern standalone FOOD KIOSK selling fish snacks and frozen products in an ordinary Ukrainian residential neighbourhood. Entire kiosk facade and roof fully visible from front slight three-quarter angle, with realistic sidewalk and modest trees/apartment buildings behind. Dark NAVY painted-metal facade with a modest ORANGE awning edge and narrow greenaccent. Main physical shop sign prominently displays EXACT ORIGINAL WHITE shark + custom lowercase wordmark. Small clean service window and compact glass chilled product display show a few genuine original packaged snacks from reference2 at natural scale. Supporting sign text ONLY «РИБНІ ЗАКУСКИ». Modest credible neighbourhood retail kiosk, no glamorous restaurant, giant fakeproduct props, cafe tables, menu inventions, sushi, phone numbers or addresses. Everyday daylight, subtle weathering, glass reflections, grounded architecture and tasteful simple branding.",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-10.webp"
+          ],
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-6feedb4f-3357-4494-9538-bd69b1546899.png",
+          "output": "/workspace/scratch/akula-kiosk-courier/17.png"
+        },
+        {
+          "id": "18",
+          "prompt": "Output ONE native LANDSCAPE16:9 full-bleed1672x941 photorealistic photograph. Reference1 is exact ORIGINAL Akula Mama custom shark and lowercase Ukrainian wordmark authority; reproduce this precise shark silhouette, eye, typography and two-line wordmark «акула мама», no logo redesign or generic lettering. Reference2 is exact product-artwork and vivid packaging-green authority. Brand palette navy#1D2647, orange#FA5B00 with restrained greenaccent. Natural daylight, practical ordinary Ukrainian environment, realistic materials and scale, no borders, grayfields, watermarks, invented phone/address or extra brands. Use case: compositing. Candid medium-distance full-upper-body photograph of an ordinary middle-aged Ukrainian male DELIVERY WORKER outside a simple clean warehouse entrance. Worker dressed in practical DARK NAVY zip work jacket and navy cargo pants, modest orange zipper trim and tiny greenaccent. EXACT ORIGINAL WHITE Akula Mama shark+custom two-line lowercase wordmark faithfully embroidered on visible LEFT CHEST. He carries a practical medium-size navy insulated delivery bag with zipper and handles at his side. Natural three-quarter working posture approaching warehouse door, face unimportant and looking away rather than posing, ordinary appearance and realistic fabric wrinkles/skintexture, no glamorous fashionmodel, suit, helmet or fanciful PPE. Plenty of real doorway and clean industrial surroundings visible. Soft honest daylight, natural documentary commercial photography, restrained composition. No new labels or copy.",
+          "refs": [
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-02.webp",
+            "/workspace/sites/zond-akula-mama-case/dist/assets/akula-v2-10.webp"
+          ],
+          "generated_output": "/workspace/scratch/04c22e8e40c7/generated_images/exec-73d3e1a8-55a3-48cf-bffd-63480ffd44d9.png",
+          "output": "/workspace/scratch/akula-kiosk-courier/18.png"
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,9 @@ import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
 import { getTerminalBorivajeBlocks, terminalBorivajeCopy, terminalBorivajeShared } from "./terminal-borivaje";
 import { getTbilisoBlocks, tbilisoCopy, tbilisoShared } from "./tbiliso";
+import { getTechnoGroupBlocks, technoGroupCopy, technoGroupShared } from "./techno-group";
+import { getYakomogaBlocks, yakomogaCopy, yakomogaShared } from "./yakomoga";
+import { getAkulaMamaBlocks, akulaMamaCopy, akulaMamaShared } from "./akula-mama";
 import type { CaseItem } from "./types";
 
 
@@ -154,30 +157,26 @@ const cases: CaseItem[] = [
     blocks: getPackagingBlocks("en"),
   },
   {
-    "slug": "techno-group",
-    "title": "Techno Group",
-    "description": "We refreshed the brand for Techno Group — an electrical and plumbing engineering company. Identity, print materials, merch, and SMM.",
-    "cover": "/assets/cases/techno-group/cover.jpeg",
-    "media": [
-      "media/techno-group/cover.jpeg",
-      "media/techno-group/hero.jpeg",
-      "media/techno-group/01.jpeg",
-      "media/techno-group/02.jpeg",
-      "media/techno-group/03.jpeg",
-      "media/techno-group/04.jpeg",
-      "media/techno-group/05.jpeg",
-      "media/techno-group/06.jpeg",
-      "media/techno-group/09.jpeg",
-      "media/techno-group/07.jpeg",
-      "media/techno-group/11.jpeg",
-      "media/techno-group/10.jpeg",
-      "media/techno-group/12.jpeg",
-      "media/techno-group/13.jpeg",
-      "media/techno-group/14.jpeg",
-      "media/techno-group/15.jpeg",
-      "media/techno-group/16.jpeg"
-    ],
-    "body": "### Client\n\nTechno Group, a leading engineering company with many years of experience in electrical and plumbing works, approached us with the task of refreshing the brand to reflect the company's modern ethos, technical expertise and reliability. The main objective was to create a recognisable and trusted brand that would match the company's high level of service and innovative approach.\n\n### Goals\n\nThe rebranding of Techno Group has significantly increased the company's recognisability in the market. The updated brand reflects the company's modern spirit, its high professionalism and commitment to its clients. The company's website now effectively presents its services and projects, attracting more potential clients, and the social media strategy actively develops the community around the brand.\n\n### Developed\n\nIdentity\n\nBrand Book\n\nSelection of materials for production\n\nSouvenirs\n\nSMM\n\n[IMG: media/techno-group/hero.jpeg]\n\n[IMG: media/techno-group/01.jpeg]\n\n[IMG: media/techno-group/02.jpeg]\n\n[IMG: media/techno-group/03.jpeg]\n\n[IMG: media/techno-group/02.jpeg]\n\n[IMG: media/techno-group/03.jpeg]\n\n[IMG: media/techno-group/04.jpeg]\n\n[IMG: media/techno-group/05.jpeg]\n\n[IMG: media/techno-group/06.jpeg]\n\n[IMG: media/techno-group/09.jpeg]\n\n[IMG: media/techno-group/07.jpeg]\n\n[IMG: media/techno-group/04.jpeg]\n\n[IMG: media/techno-group/05.jpeg]\n\n[IMG: media/techno-group/06.jpeg]\n\n[IMG: media/techno-group/07.jpeg]\n\n[IMG: media/techno-group/11.jpeg]\n\n[IMG: media/techno-group/10.jpeg]\n\n[IMG: media/techno-group/12.jpeg]\n\n[IMG: media/techno-group/13.jpeg]\n\n[IMG: media/techno-group/14.jpeg]\n\n[IMG: media/techno-group/15.jpeg]\n\n[IMG: media/techno-group/16.jpeg]"
+    slug: technoGroupShared.slug,
+    title: technoGroupCopy.en.title,
+    description: technoGroupCopy.en.description,
+    cover: technoGroupShared.cover,
+    media: technoGroupShared.media,
+    tagline: technoGroupCopy.en.tagline,
+    serviceTag: technoGroupCopy.en.serviceTag,
+    body: technoGroupShared.body,
+    blocks: getTechnoGroupBlocks("en"),
+  },
+  {
+    slug: akulaMamaShared.slug,
+    title: akulaMamaCopy.en.title,
+    description: akulaMamaCopy.en.description,
+    cover: akulaMamaShared.cover,
+    media: akulaMamaShared.media,
+    tagline: akulaMamaCopy.en.tagline,
+    serviceTag: akulaMamaCopy.en.serviceTag,
+    body: akulaMamaShared.body,
+    blocks: getAkulaMamaBlocks("en"),
   },
   {
     "slug": "alesta-corp",
@@ -522,27 +521,16 @@ const cases: CaseItem[] = [
     "body": "[IMG: media/pridniprovsky-zavod/hero.jpeg]\n\n### Client\n\nPrydniprovsk Corrugated Plant is a large industrial company specializing in the production of corrugated cardboard and corrugated packaging. The plant has many years of experience in this field and a reliable reputation on the market.\n\n### Goals\n\nThe goal of the project is to create a strong brand for the Dnipro Corrugated Plant, which will reflect its authority, reliability, technical progress and environmental awareness. The brand should convey the company's values, its innovative approach and commitment to quality. Logo: Create a modern and stylish logo, where the image of corrugated cardboard will be combined with elements of ecology. Color palette: Use a restrained but modern color palette based on green to emphasize environmental aspects and technological progress.\n\n### Developed\n\nBranding\n\nSouvenirs\n\nPrinted products\n\nSite design\n\nBranded merch\n\nRegistration of the enterprise\n\nRegistration of transport\n\n[IMG: media/pridniprovsky-zavod/01.jpeg]\n\n[IMG: media/pridniprovsky-zavod/02.jpeg]\n\n[IMG: media/pridniprovsky-zavod/03.jpeg]\n\n[IMG: media/pridniprovsky-zavod/04.jpeg]\n\n[IMG: media/pridniprovsky-zavod/03.jpeg]\n\n[IMG: media/pridniprovsky-zavod/04.jpeg]\n\n[IMG: media/pridniprovsky-zavod/05.jpeg]\n\n[IMG: media/pridniprovsky-zavod/06.jpeg]\n\n[IMG: media/pridniprovsky-zavod/07.jpeg]\n\n[IMG: media/pridniprovsky-zavod/17.jpeg]\n\n[IMG: media/pridniprovsky-zavod/hero.jpeg]\n\n[IMG: media/pridniprovsky-zavod/05.jpeg]\n\n[IMG: media/pridniprovsky-zavod/06.jpeg]\n\n[IMG: media/pridniprovsky-zavod/07.jpeg]\n\n[IMG: media/pridniprovsky-zavod/hero.jpeg]\n\n[IMG: media/pridniprovsky-zavod/11.jpeg]\n\n[IMG: media/pridniprovsky-zavod/10.jpeg]\n\n[IMG: media/pridniprovsky-zavod/12.jpeg]\n\n[IMG: media/pridniprovsky-zavod/13.jpeg]\n\n[IMG: media/pridniprovsky-zavod/14.jpeg]\n\n[IMG: media/pridniprovsky-zavod/15.jpeg]\n\n[IMG: media/pridniprovsky-zavod/16.jpeg]"
   },
   {
-    "slug": "yakomoga",
-    "title": "YAKOMOGA",
-    "description": "We developed a marketing strategy and identity for YAKOMOGA — blending Cossack character with Japanese culinary traditions.",
-    "cover": "/assets/cases/yakomoga/cover.gif",
-    "media": [
-      "media/yakomoga/cover.gif",
-      "media/yakomoga/hero.jpeg",
-      "media/yakomoga/14.jpeg",
-      "media/yakomoga/02.jpeg",
-      "media/yakomoga/03.jpeg",
-      "media/yakomoga/04.jpeg",
-      "media/yakomoga/05.jpeg",
-      "media/yakomoga/06.jpeg",
-      "media/yakomoga/07.jpeg",
-      "media/yakomoga/08.jpeg",
-      "media/yakomoga/11.jpeg",
-      "media/yakomoga/10.jpeg",
-      "media/yakomoga/12.jpeg",
-      "media/yakomoga/13.jpeg"
-    ],
-    "body": "[IMG: media/yakomoga/hero.jpeg]\n\n### Client\n\n### Goals\n\nDevelop an identity and reflect the Cossack character combined with Japanese traditions\n\n### Developed\n\nStrategy\n\nBrand Book\n\nIdentity\n\nSouvenirs\n\nPrinted products\n\nSMM\n\nContent\n\nPromotion\n\n[IMG: media/yakomoga/14.jpeg]\n\n[IMG: media/yakomoga/02.jpeg]\n\n## Brand Identity Development: A Blend of Culture and Individuality\n\nBrand Identity is a way to convey a brand's unique idea through visual style. In the case of YAKOMOHA, we faced an interesting challenge: integrating the Cossack spirit into Japanese aesthetics to create an unforgettable image. We combined the restraint and minimalism of Japanese graphics with bold elements of Ukrainian fighting spirit. Concise forms, calligraphic elements, and stylized depictions of Cossacks using the Japanese brush technique formed the foundation of this unique identity. The color palette combined traditional Japanese black, red, and white with deep blue and gold shades symbolizing Ukrainian heritage. As a result, the YAKOMOHA brand gained a style that not only sets it apart from competitors, but also triggers an emotional connection with customers.\n\n[IMG: media/yakomoga/03.jpeg]\n\n[IMG: media/yakomoga/04.jpeg]\n\n[IMG: media/yakomoga/03.jpeg]\n\n[IMG: media/yakomoga/04.jpeg]\n\n[IMG: media/yakomoga/05.jpeg]\n\n[IMG: media/yakomoga/06.jpeg]\n\n[IMG: media/yakomoga/07.jpeg]\n\n[IMG: media/yakomoga/08.jpeg]\n\n## Brandbook: The Foundation of Recognition and Unified Visual Communication\n\nA brandbook is a key tool that helps a company maintain the integrity of its visual style. For them, we created a brandbook containing all the essential identity elements: the logo and its variations adapted for packaging and digital platforms, a color palette combining Japanese restraint with Ukrainian expression, and typography blending a calligraphic style with modern graphic design. Special attention was paid to graphic elements and patterns based on traditional Japanese and Ukrainian ornaments. Having a brandbook allows them to maintain recognition across all touchpoints—from marketing materials to restaurant decor. It is not just a set of rules, but the foundation for building strong visual communication that highlights the brand's unique concept and ensures its competitive advantage in the market.\n\n[IMG: media/yakomoga/05.jpeg]\n\n[IMG: media/yakomoga/06.jpeg]\n\n[IMG: media/yakomoga/07.jpeg]\n\n[IMG: media/yakomoga/08.jpeg]\n\n[IMG: media/yakomoga/11.jpeg]\n\n[IMG: media/yakomoga/10.jpeg]\n\n[IMG: media/yakomoga/12.jpeg]\n\n[IMG: media/yakomoga/13.jpeg]"
+    slug: yakomogaShared.slug,
+    title: yakomogaCopy.en.title,
+    description: yakomogaCopy.en.description,
+    cover: yakomogaShared.cover,
+    listCover: yakomogaShared.listCover,
+    media: yakomogaShared.media,
+    tagline: yakomogaCopy.en.tagline,
+    serviceTag: yakomogaCopy.en.serviceTag,
+    body: yakomogaShared.body,
+    blocks: getYakomogaBlocks("en"),
   },
   {
     "slug": "synta",

@@ -1,0 +1,53 @@
+.packaging .breadcrumbs{padding-right:0}.packaging .hero .media img,.packaging .media.wide img,.packaging .pair .media img{aspect-ratio:auto;height:auto;object-fit:contain}.packaging .gallery{align-items:start}.packaging .media{margin-top:22px}.packaging .gallery .media{margin-top:0}.packaging .manifesto{background:#1d1d1d;color:white}.packaging .manifesto em,.packaging .orange{color:#efefef}.packaging .project-facts .country-fact{background:#efefef;border-color:#efefef}.packaging .country-fact dt{color:#342518}.packaging .project-facts{grid-template-columns:1fr 1fr 1.35fr}.packaging .project-facts dd{font-size:28px}.packaging .quote-card{border-left-color:#efefef}.packaging .quote-mark{color:#d52f2d}.packaging .review-monogram{background:#efefef}.packaging .action-tiles article{min-height:215px}.packaging .hero-tag{white-space:nowrap}.packaging .rule-grid>div{border-left:3px solid #efefef}.packaging .manifesto p{font-size:clamp(40px,5vw,72px)}@media(max-width:700px){.packaging .project-facts{grid-template-columns:1fr}.packaging .project-facts dd{font-size:27px}.packaging .manifesto p{font-size:39px}.packaging .hero-tag{font-size:12px}.packaging .pair{grid-template-columns:1fr 1fr}.packaging .hero-intro{gap:10px}.packaging .hero-intro p{font-size:23px}.packaging .media figcaption{font-size:13px}}.packaging .hero h1{font-size:clamp(52px,7.7vw,110px)}.packaging .facts-row{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:14px;margin-bottom:32px}.packaging .project-facts{margin:0;grid-template-columns:1fr 1fr 1.35fr;gap:14px}.packaging .project-facts>div{padding:24px 20px;min-width:0}.packaging .project-facts dd{font-size:clamp(20px,1.9vw,27px)}.packaging .country-fact{color:#171717}.packaging .open-case{display:flex;align-items:center;justify-content:center;gap:12px;padding:24px 18px;background:#ff7100;color:#171717;border-radius:16px;text-decoration:none;font-size:20px;line-height:1.2;transition:background .2s,transform .2s}.packaging .open-case svg{width:30px;height:30px;flex:none}.packaging .open-case .out-arrow{align-self:flex-start}.packaging .open-case:hover{background:#ff8a2c;transform:translateY(-3px)}.packaging .open-case:focus-visible{outline:3px solid #171717;outline-offset:4px}.packaging .manifesto em{color:#e4d2a6}.packaging .hero-tag{font-size:14px}@media(max-width:1050px){.packaging .facts-row{grid-template-columns:1fr}.packaging .open-case{justify-self:end;min-height:76px;min-width:230px}}@media(max-width:700px){.packaging .project-facts{grid-template-columns:1fr}.packaging .open-case{justify-self:stretch}.packaging .pair{grid-template-columns:1fr}.packaging .project-facts dd{font-size:26px}.packaging .facts-row{gap:14px}}@media(prefers-reduced-motion:reduce){.packaging .open-case{transition:none}}
+/* Compact task cards with readable copy. */
+.packaging .action-tiles article {
+  min-height: 112px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  column-gap: 12px;
+  align-content: center;
+}
+.packaging .action-tiles .tile-number { grid-column: 1; grid-row: 1; align-self: center; font-size: 14px; }
+.packaging .action-tiles h3 { grid-column: 2; margin: 0 0 7px; font-size: 24px; }
+.packaging .action-tiles .tile-copy { grid-column: 2; margin: 0; font-size: 16px; line-height: 1.4; }
+/* Mobile: one photograph per row, matching the page gutters and corners. */
+@media (max-width: 767px) {
+  .packaging .container { padding-inline: 18px; }
+  .packaging .gallery,
+  .packaging .case-navigation { grid-template-columns: minmax(0, 1fr); }
+  .packaging .gallery { width: 100%; margin-inline: 0; gap: 24px; }
+  .packaging .media.wide,
+  .packaging .project-image { width: 100%; margin-inline: 0; }
+  .packaging .image-button,
+  .packaging .project-image { border-radius: 17px; overflow: hidden; }
+  .packaging .media img { width: 100%; height: auto; aspect-ratio: auto; }
+  .packaging .media figcaption { padding-inline: 0; }
+  .packaging .action-tiles { grid-template-columns: 1fr; gap: 12px; }
+  .packaging .action-tiles article { min-height: 104px; padding: 14px 18px; }
+  .packaging .action-tiles h3 { font-size: 24px; margin: 0 0 6px; }
+}
+
+.packaging .manifesto{background:#1d1d1d}.packaging .hero h1{font-size:clamp(54px,9vw,130px)}.packaging .project-facts dd{font-size:clamp(19px,1.7vw,26px)}.packaging .project-facts .country-fact{color:#1d1d1d}@media(max-width:700px){.packaging .hero h1{font-size:clamp(52px,14vw,90px)}.packaging .project-facts dd{font-size:26px}}
+
+.packaging .manifesto{background:#1d1d1d}.packaging .project-facts .country-fact{color:#1d1d1d}.packaging .country-fact dt{color:#31523a}.packaging .hero h1{font-size:clamp(54px,9vw,132px)}.packaging .project-facts dd{font-size:clamp(19px,1.75vw,25px)}.packaging .rule-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:900px){.packaging .rule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.packaging .hero h1{font-size:clamp(52px,12vw,85px)}.packaging .project-facts dd{font-size:25px}.packaging .rule-grid{grid-template-columns:1fr 1fr}}
+
+.packaging .manifesto{background:#1d1d1d}.packaging .project-facts .country-fact{color:#1d1d1d}.packaging .hero h1{font-size:clamp(52px,8vw,125px)}.packaging .project-facts dd{font-size:clamp(18px,1.65vw,24px)}.packaging .rule-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:900px){.packaging .rule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.packaging .hero h1{font-size:clamp(48px,11vw,80px)}.packaging .project-facts dd{font-size:23px}.packaging .rule-grid{grid-template-columns:1fr 1fr}}
+
+.packaging .orange{color:#ff7100}.packaging .manifesto em{color:#efefef}.packaging .hero-tag{background:#1d1d1d;color:white}.packaging .project-facts .country-fact{background:#efefef;border-color:#efefef}
+
+.packaging .manifesto{background:#1d1d1d}.packaging .hero-tag{background:#1d1d1d}.packaging .project-facts .country-fact{background:#efefef;border-color:#efefef}.packaging .orange{color:#ff7100}.packaging .hero h1{font-size:clamp(38px,6.7vw,108px)}@media(max-width:700px){.packaging .hero h1{font-size:clamp(36px,8vw,63px)}.packaging .pair{grid-template-columns:1fr}}
+
+.packaging .manifesto{background:#1d1d1d}.packaging .hero-tag{background:#1d1d1d}.packaging .project-facts .country-fact{background:#efefef;border-color:#efefef}.packaging .manifesto em{color:#efefef}
+
+.packaging .manifesto{background:#1d1d1d}.packaging .hero-tag{background:#1d1d1d}.packaging .project-facts .country-fact{background:#efefef;border-color:#efefef}.packaging .orange{color:#ff7100}.packaging .hero h1{font-size:clamp(64px,10vw,155px)}@media(max-width:700px){.packaging .hero h1{font-size:clamp(56px,13vw,90px)}.packaging .pair{grid-template-columns:1fr}}
+
+.packaging .manifesto{background:#1d1d1d}.packaging .manifesto em{color:#e74436}.packaging .hero-tag{background:#1d1d1d}.packaging .project-facts .country-fact{background:#efefef;border-color:#efefef}.packaging .quote-mark{color:#e74436}.packaging .rule-grid>div{border-left-color:#e74436}
+
+.packaging .hero h1{font-size:clamp(60px,10vw,150px)}.packaging .manifesto{background:#232322}.packaging .hero-tag{background:#232322}.packaging .concept-section{margin-top:95px}.packaging .concept-section .section-index{color:#ff7100}.packaging .concept-section+.gallery{margin-top:12px}@media(max-width:700px){.packaging .hero h1{font-size:clamp(48px,12vw,80px)}.packaging .pair{grid-template-columns:1fr}.packaging .concept-section{margin-top:50px}}
+/* Counts describe this presentation, never client performance. */
+.packaging .collection-stats{margin:0 0 30px;gap:14px}
+.packaging .collection-stats>div{min-height:142px;padding:20px 24px;border-radius:17px}
+.packaging .collection-stats strong{font-size:clamp(54px,5.7vw,82px)}
+.packaging .collection-stats span{font-size:16px;line-height:1.35;max-width:290px}
+@media(max-width:767px){.packaging .collection-stats{grid-template-columns:1fr;gap:12px}.packaging .collection-stats>div{min-height:104px;display:grid;grid-template-columns:88px 1fr;align-items:center;gap:12px;padding:16px 20px}.packaging .collection-stats strong{font-size:56px}.packaging .collection-stats span{font-size:16px}}

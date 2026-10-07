@@ -10,6 +10,9 @@ import { getKyivTourismBlocks, kyivTourismCopy, kyivTourismShared } from "./kyiv
 import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto";
 import { getTerminalBorivajeBlocks, terminalBorivajeCopy, terminalBorivajeShared } from "./terminal-borivaje";
 import { getTbilisoBlocks, tbilisoCopy, tbilisoShared } from "./tbiliso";
+import { getYakomogaBlocks, yakomogaCopy, yakomogaShared } from "./yakomoga";
+import { getAkulaMamaBlocks, akulaMamaCopy, akulaMamaShared } from "./akula-mama";
+import { getTechnoGroupBlocks, technoGroupCopy, technoGroupShared } from "./techno-group";
 import type { CaseItem } from "./types";
 
 
@@ -143,31 +146,15 @@ const cases: CaseItem[] = [
   },
 
   {
-    "slug": "techno-group",
-    "title": "Техно Груп",
-    "description": "Оновили бренд для Техно Груп — інженерної компанії з електромонтажу та сантехніки. Айдентика, поліграфія, сувенірка та SMM.",
-    "cover": "/assets/cases/techno-group/cover.jpeg",
-    "media": [
-      "media/techno-group/cover.jpeg",
-      "media/techno-group/hero.jpeg",
-      "media/techno-group/01.jpeg",
-      "media/techno-group/02.jpeg",
-      "media/techno-group/03.jpeg",
-      "media/techno-group/04.jpeg",
-      "media/techno-group/05.jpeg",
-      "media/techno-group/06.jpeg",
-      "media/techno-group/07.jpeg",
-      "media/techno-group/08.jpeg",
-      "media/techno-group/09.jpeg",
-      "media/techno-group/10.jpeg",
-      "media/techno-group/11.jpeg",
-      "media/techno-group/12.jpeg",
-      "media/techno-group/13.jpeg",
-      "media/techno-group/14.jpeg",
-      "media/techno-group/15.jpeg",
-      "media/techno-group/16.jpeg"
-    ],
-    "body": "### Клієнт\n\nТехно Груп, провідна інженерна компанія з багаторічним досвідом у сфері електромонтажних та сантехнічних робіт, звернулася до нас із завданням оновити бренд, щоб відображати сучасний дух компанії, її технічну експертизу та надійність. Основна мета полягала у створенні впізнаваного та довіреного бренду, який би відповідав високому рівню послуг компанії та її інноваційному підходу.\n\n### Задачі\n\nРебрендинг \"Техно Груп\" значно підвищив впізнаваність компанії на ринку. Оновлений бренд відображає сучасний дух компанії, її високий професіоналізм та зобов'язання перед клієнтами. Вебсайт компанії тепер ефективно презентує послуги та проекти, залучаючи більше потенційних клієнтів, а стратегія соціальних медіа активно розвиває спільноту навколо бренду.\n\n### Розробили\n\nАйдентика\n\nПоліграфічні матеріали\n\nСувенірну продукцію\n\nSMM\n\n[IMG: media/techno-group/hero.jpeg]\n\n[IMG: media/techno-group/01.jpeg]\n\n[IMG: media/techno-group/02.jpeg]\n\n[IMG: media/techno-group/03.jpeg]\n\n[IMG: media/techno-group/02.jpeg]\n\n[IMG: media/techno-group/03.jpeg]\n\n## Ребрендинг: оновлення іміджу для сучасного бізнесу\n\nРебрендинг – це ключовий крок для компаній, які прагнуть залишатися актуальними та конкурентоспроможними. \"Техно Груп\" звернулася до нас із завданням оновити візуальний стиль, щоб підкреслити свою технічну експертизу, інноваційність та надійність. У результаті ребрендингу компанія отримала сучасний і впізнаваний образ, який допомагає ефективніше комунікувати з клієнтами та партнерами. Ребрендинг не лише підвищує довіру до бренду, а й створює нові можливості для залучення цільової аудиторії.\n\n[IMG: media/techno-group/04.jpeg]\n\n[IMG: media/techno-group/05.jpeg]\n\n[IMG: media/techno-group/06.jpeg]\n\n[IMG: media/techno-group/04.jpeg]\n\n[IMG: media/techno-group/05.jpeg]\n\n[IMG: media/techno-group/06.jpeg]\n\n[IMG: media/techno-group/07.jpeg]\n\n[IMG: media/techno-group/08.jpeg]\n\nБрендбук: основа єдиного стилю компанії\n\nБрендбук – це важливий інструмент, який забезпечує цілісність візуальної комунікації компанії. Для \"Техно Груп\" ми розробили детальний брендбук, що містить усі ключові елементи айдентики: логотип, кольорову палітру, шрифти та правила використання візуальних матеріалів. Розробка брендбуку допомагає компанії зберігати впізнаваність на всіх носіях – від сайту та соцмереж до друкованої продукції. Це забезпечує послідовність комунікації та зміцнює позиції бренду на ринку.\n\n[IMG: media/techno-group/07.jpeg]\n\n[IMG: media/techno-group/09.jpeg]\n\n[IMG: media/techno-group/10.jpeg]\n\n[IMG: media/techno-group/11.jpeg]\n\n[IMG: media/techno-group/12.jpeg]\n\n[IMG: media/techno-group/13.jpeg]\n\n[IMG: media/techno-group/14.jpeg]\n\n[IMG: media/techno-group/15.jpeg]\n\n[IMG: media/techno-group/16.jpeg]\n\n[IMG: media/techno-group/16.jpeg]"
+    slug: technoGroupShared.slug,
+    title: technoGroupCopy.uk.title,
+    description: technoGroupCopy.uk.description,
+    cover: technoGroupShared.cover,
+    media: technoGroupShared.media,
+    tagline: technoGroupCopy.uk.tagline,
+    serviceTag: technoGroupCopy.uk.serviceTag,
+    body: technoGroupShared.body,
+    blocks: getTechnoGroupBlocks("uk"),
   },
   {
     slug: tbilisoShared.slug,
@@ -345,30 +332,15 @@ const cases: CaseItem[] = [
     "body": "Uaru\n\nUaru\n\n[IMG: media/insb/hero.webp]\n\n### Клієнт\n\n### Задачі\n\nРозробити стриманий, професійний і водночас сучасний бренд для Інституту національної стійкості та безпеки. Завдання полягало в тому, щоб візуально підкреслити експертність і довіру, зберігаючи чіткість і впізнаваність у публічному просторі. Бренд мав відображати теми безпеки, стійкості та стратегічного мислення, залишаючись актуальним для різних аудиторій — від фахівців до широкої громадськості.\n\n### Розробили\n\nБрендинг\n\nСтратегія\n\nФірмовий стиль\n\nЛоготип\n\nДизайн\n\nПовний брендбук\n\n[IMG: media/insb/01.webp]\n\n[IMG: media/insb/02.webp]\n\n[IMG: media/insb/03.webp]\n\n[IMG: media/insb/04.webp]\n\n[IMG: media/insb/03.webp]\n\n[IMG: media/insb/04.webp]\n\n## Розробка логотипу для організації: символ стійкості та довіри\n\nЛоготип для таких структур, як Інститут національної стійкості та безпеки (ІНСБ), відіграє ключову роль у формуванні довіри, авторитетності та впізнаваності. На відміну від комерційних брендів, логотипи для інститутів та громадських організацій потребують особливого балансу між стриманістю, серйозністю та символічністю. Розробка логотипу має спиратися на цінності — національну стійкість, безпеку, силу, відповідальність. Це можна відобразити через геометричні форми, геральдичні мотиви, стриману кольорову палітру (наприклад, синій, графітовий, золотий). Грамотно спроєктований логотип стане не просто знаком, а ємним символом, який легко адаптується для друкованих, цифрових та офіційних носіїв.\n\n[IMG: media/insb/05.webp]\n\n[IMG: media/insb/06.webp]\n\n[IMG: media/insb/07.webp]\n\n[IMG: media/insb/05.webp]\n\n[IMG: media/insb/06.webp]\n\n[IMG: media/insb/07.webp]\n\n[IMG: media/insb/08.webp]\n\nБрендбук для інституту: системний підхід до візуальної ідентичності\n\nДля організацій, що працюють у сфері національної безпеки, наявність брендбуку — це не просто візуальний гайд, а важливий інструмент для уніфікації комунікацій. Брендбук для ІНСБ має охоплювати ключові елементи: логотип і правила його використання, фірмові кольори та шрифти, шаблони ділових документів, а також рекомендації для цифрових і друкованих матеріалів. Такий документ допомагає сформувати системний і професійний образ інституту на всіх рівнях взаємодії — від внутрішньої комунікації до офіційних заяв. Брендбук забезпечує єдиний візуальний стиль, підсилює сприйняття структури як надійної, сучасної та прозорої. Професійно створений брендбук підсилює інституційну довіру та формує візуальне уявлення про місію, цілі та цінності організації.\n\n[IMG: media/insb/08.webp]\n\n[IMG: media/insb/09.webp]\n\n[IMG: media/insb/10.webp]\n\n[IMG: media/insb/11.webp]\n\n[IMG: media/insb/12.webp]\n\n[IMG: media/insb/13.webp]\n\n[IMG: media/insb/14.webp]\n\n[IMG: media/insb/15.webp]\n\n[IMG: media/insb/16.webp]\n\n[IMG: media/insb/17.webp]"
   },
   {
-    "slug": "akula-mama",
-    "title": "Акула Мама",
-    "description": "Розробили логотип і яскравий дизайн упаковки для «Акула Мама» — виробника рибних закусок і делікатесів з Одеси. Також дизайн сайту.",
-    "cover": "/assets/cases/akula-mama/cover.webp",
-    "media": [
-      "media/akula-mama/cover.webp",
-      "media/akula-mama/hero.webp",
-      "media/akula-mama/01.webp",
-      "media/akula-mama/02.webp",
-      "media/akula-mama/03.webp",
-      "media/akula-mama/04.webp",
-      "media/akula-mama/05.webp",
-      "media/akula-mama/06.webp",
-      "media/akula-mama/07.webp",
-      "media/akula-mama/08.webp",
-      "media/akula-mama/09.webp",
-      "media/akula-mama/10.webp",
-      "media/akula-mama/11.webp",
-      "media/akula-mama/12.webp",
-      "media/akula-mama/13.webp",
-      "media/akula-mama/14.webp",
-      "media/akula-mama/15.webp"
-    ],
-    "body": "Uaru\n\nUaru\n\n### Клієнт\n\n### Задачі\n\nАкулі Мамі розробили лого та дизайн упаковки для рибних закусок за доступною ціною. Бренд Акула Мама родом з Одеси, та знає, як приємно здивувати своєю продукцією навіть найприскіпливішого гурмана. Завдяки привабливому, стильному та яскравому стилю упаковки, їх котлети, палички та креветки тепер виглядають преміально, що насправді відображає якість продукції компанії. Завдяки справедливій вартості, Акула Мама просто не залишає клієнтові шансу пройти повз 🦐 Сегмент ца- Середній та середній мінус. Аватар клієнта: сімейні люди 35+\n\n### Розробили\n\nБрендинг\n\nРозробка брендингу\n\nДизайн\n\nЛоготип\n\nДизайн сайта\n\n[IMG: media/akula-mama/hero.webp]\n\n[IMG: media/akula-mama/01.webp]\n\n[IMG: media/akula-mama/02.webp]\n\n[IMG: media/akula-mama/03.webp]\n\n[IMG: media/akula-mama/02.webp]\n\n[IMG: media/akula-mama/03.webp]\n\n## Розробка логотипу для бренду рибної продукції: стиль, що привертає увагу\n\nЛоготип — це перше, що помічає споживач, і він має передавати суть бренду. Для Акула Мама ми створили унікальний логотип, що поєднує одеський колорит, динаміку та преміальність рибної продукції. Розробка логотипу для виробників харчових продуктів передбачає баланс між впізнаваністю та емоційною складовою. Завдяки правильному вибору шрифту, кольорової палітри та графічних елементів, логотип Акула Мама допомагає бренду виділятися серед конкурентів і підкреслює якість його продукції.\n\n[IMG: media/akula-mama/04.webp]\n\n[IMG: media/akula-mama/05.webp]\n\n[IMG: media/akula-mama/06.webp]\n\n[IMG: media/akula-mama/04.webp]\n\n[IMG: media/akula-mama/05.webp]\n\n[IMG: media/akula-mama/06.webp]\n\n[IMG: media/akula-mama/07.webp]\n\nДизайн упаковки для рибної продукції: як створити преміальний вигляд за доступну ціну\n\nОригінальний дизайн упаковки може суттєво впливати на вибір споживачів, особливо у сегменті продуктів харчування. Для Акула Мама ми розробили стильну, яскраву та сучасну упаковку, яка передає преміальність продукції, залишаючись доступною для цільової аудиторії. Дизайн упаковки рибних продуктів повинен бути не лише естетично привабливим, а й інформативним, щоб підкреслити якість товару та викликати довіру покупців. Ми створюємо унікальні упаковки, що допомагають брендам бути впізнаваними на полицях магазинів.\n\n[IMG: media/akula-mama/07.webp]\n\n[IMG: media/akula-mama/08.webp]\n\n[IMG: media/akula-mama/09.webp]\n\n[IMG: media/akula-mama/10.webp]\n\n[IMG: media/akula-mama/11.webp]\n\n[IMG: media/akula-mama/12.webp]\n\n[IMG: media/akula-mama/13.webp]\n\n[IMG: media/akula-mama/14.webp]\n\n[IMG: media/akula-mama/15.webp]\n\n[IMG: media/akula-mama/15.webp]"
+    slug: akulaMamaShared.slug,
+    title: akulaMamaCopy.uk.title,
+    description: akulaMamaCopy.uk.description,
+    cover: akulaMamaShared.cover,
+    media: akulaMamaShared.media,
+    tagline: akulaMamaCopy.uk.tagline,
+    serviceTag: akulaMamaCopy.uk.serviceTag,
+    body: akulaMamaShared.body,
+    blocks: getAkulaMamaBlocks("uk"),
   },
   {
     "slug": "alesta-corp",
@@ -752,28 +724,16 @@ const cases: CaseItem[] = [
     "body": "[IMG: media/stefania/hero.jpeg]\n\n### Клієнт\n\nСучасний спортивний клуб Stefania — ідеальне місце для спортивного та культурного розвитку. Прийшло розуміння, що як хлопчикам, так і дівчаткам потрібний всебічний розвиток. Діти зможуть обрати заняття для себе індивідуально. На дівчаток чекає балет гімнастика або танці, а на хлопчиків – хіп-хоп, вільна боротьба та силові тренування.\n\n### Задачі\n\nРозробити айдентику в якій буде відображено основний вид діяльності та передали українську ДНК бренду. Також розробити стратегію просування центру без використання стандартних каналів комунікації.\n\n### Розробили\n\nСтратегію проекту\n\nАйдентику\n\nГоловна\n\nПоліграфічні матеріали\n\nСувенірну продукцію\n\nSMM\n\n[IMG: media/stefania/01.jpeg]\n\n[IMG: media/stefania/02.jpeg]\n\n[IMG: media/stefania/03.jpeg]\n\n[IMG: media/stefania/04.jpeg]\n\n[IMG: media/stefania/03.jpeg]\n\n[IMG: media/stefania/04.jpeg]\n\n## Розробка айдентики: як візуальний стиль формує унікальний образ бренду\n\nАйдентика — це більше, ніж просто логотип чи кольорова палітра. Це візуальна мова бренду, яка допомагає комунікувати його місію, цінності та емоційне наповнення. Для сучасного спортивного клубу Stefania ми створили айдентику, яка поєднує динаміку руху, спортивний дух та українську культурну спадщину. Використання традиційних українських орнаментів у сучасному графічному стилі допомогло підкреслити унікальність клубу, а кольорові рішення – гармонійно передати баланс між енергією спорту та естетикою мистецтва. Айдентика не лише робить бренд впізнаваним, а й створює цілісний емоційний зв’язок із аудиторією, залучаючи дітей та батьків до спортивного розвитку у комфортному середовищі.\n\n[IMG: media/stefania/05.jpeg]\n\n[IMG: media/stefania/06.jpeg]\n\n[IMG: media/stefania/07.jpeg]\n\n[IMG: media/stefania/05.jpeg]\n\n[IMG: media/stefania/06.jpeg]\n\n[IMG: media/stefania/07.jpeg]\n\n[IMG: media/stefania/08.jpeg]\n\n[IMG: media/stefania/09.jpeg]\n\nБрендбук: єдина система візуальної комунікації\n\nБрендбук — це ключовий документ, що забезпечує послідовність використання візуального стилю компанії. Для Stefania ми розробили детальний брендбук, який містить: логотип та його варіації для різних форматів; кольорову палітру, що поєднує енергію спорту з витонченістю мистецтва; типографіку, яка відображає баланс між динамікою руху та академічною чіткістю; графічні елементи та патерни, натхненні українськими мотивами. Наявність брендбуку дозволяє Stefania зберігати цілісність свого візуального образу в усіх комунікаціях – від друкованих матеріалів до цифрових платформ. Це не просто керівництво з дизайну, а стратегічний інструмент, що допомагає бренду ефективно взаємодіяти з аудиторією та розширювати свою присутність на ринку.\n\n[IMG: media/stefania/08.jpeg]\n\n[IMG: media/stefania/10.jpeg]\n\n[IMG: media/stefania/11.jpeg]\n\n[IMG: media/stefania/12.jpeg]\n\n[IMG: media/stefania/13.jpeg]\n\n[IMG: media/stefania/14.jpeg]\n\n[IMG: media/stefania/14.jpeg]"
   },
   {
-    "slug": "yakomoga",
-    "title": "ЯКОМОГА",
-    "description": "Розробили маркетингову стратегію та айдентику для «ЯКОМОГА» — поєднання козацького характеру з японськими традиціями кухні.",
-    "cover": "/assets/cases/yakomoga/cover.gif",
-    "media": [
-      "media/yakomoga/cover.gif",
-      "media/yakomoga/hero.jpeg",
-      "media/yakomoga/01.jpeg",
-      "media/yakomoga/02.jpeg",
-      "media/yakomoga/03.jpeg",
-      "media/yakomoga/04.jpeg",
-      "media/yakomoga/05.jpeg",
-      "media/yakomoga/06.jpeg",
-      "media/yakomoga/07.jpeg",
-      "media/yakomoga/08.jpeg",
-      "media/yakomoga/09.jpeg",
-      "media/yakomoga/10.jpeg",
-      "media/yakomoga/11.jpeg",
-      "media/yakomoga/12.jpeg",
-      "media/yakomoga/13.jpeg"
-    ],
-    "body": "[IMG: media/yakomoga/hero.jpeg]\n\n### Клієнт\n\n### Задачі\n\nРозробити айдентику та відобразити козацький характер в поєднанні з японськими традиціями\n\n### Розробили\n\nМаркетинг стратегію\n\nАйдентику\n\nГоловна\n\nСувенірну продукцію\n\nПоліграфічні матеріали\n\nSMM\n\nКонтент\n\nПросування бренду\n\n[IMG: media/yakomoga/01.jpeg]\n\n[IMG: media/yakomoga/02.jpeg]\n\n[IMG: media/yakomoga/03.jpeg]\n\n[IMG: media/yakomoga/04.jpeg]\n\n[IMG: media/yakomoga/03.jpeg]\n\n[IMG: media/yakomoga/04.jpeg]\n\n## Розробка айдентики: поєднання культури та індивідуальності\n\nАйдентика — це спосіб донести унікальну ідею бренду через візуальний стиль. У випадку ЯКОМОГА перед нами стояло цікаве завдання: інтегрувати козацький характер у японську естетику, створивши незабутній образ. Ми поєднали стриманість і мінімалізм японської графіки зі сміливими елементами українського бойового духу. Лаконічні форми, каліграфічні елементи, стилізовані зображення козаків у японській техніці пензля – усе це стало основою унікальної айдентики. Колірна гама об'єднала традиційні японські чорний, червоний і білий із глибокими синіми та золотими відтінками, що символізують українську спадщину. Завдяки цьому бренд ЯКОМОГА отримав стиль, який не просто вирізняє його серед конкурентів, а й викликає емоційний відгук у клієнтів.\n\n[IMG: media/yakomoga/05.jpeg]\n\n[IMG: media/yakomoga/06.jpeg]\n\n[IMG: media/yakomoga/07.jpeg]\n\n[IMG: media/yakomoga/05.jpeg]\n\n[IMG: media/yakomoga/06.jpeg]\n\n[IMG: media/yakomoga/07.jpeg]\n\n[IMG: media/yakomoga/08.jpeg]\n\n[IMG: media/yakomoga/09.jpeg]\n\nБрендбук: основа впізнаваності та єдиної візуальної комунікації\n\nБрендбук — це ключовий інструмент, що допомагає компанії зберігати цілісність візуального стилю. Для ЯКОМОГА ми створили брендбук, який містить усі основні елементи айдентики: логотип і його варіації, адаптовані для упаковки та цифрових платформ, колірну палітру, що поєднує японську стриманість і українську експресію, а також типографіку, що поєднує каліграфічний стиль із сучасним графічним дизайном. Окрему увагу приділили графічним елементам та патернам, заснованим на традиційних японських та українських орнаментах. Наявність брендбуку дозволяє ЯКОМОГА зберігати впізнаваність на всіх носіях – від рекламних матеріалів до оформлення ресторану. Це не просто набір правил, а фундамент для побудови сильної візуальної комунікації, яка підкреслює унікальну концепцію бренду та забезпечує його конкурентну перевагу на ринку.\n\n[IMG: media/yakomoga/08.jpeg]\n\n[IMG: media/yakomoga/10.jpeg]\n\n[IMG: media/yakomoga/11.jpeg]\n\n[IMG: media/yakomoga/12.jpeg]\n\n[IMG: media/yakomoga/13.jpeg]"
+    slug: yakomogaShared.slug,
+    title: yakomogaCopy.uk.title,
+    description: yakomogaCopy.uk.description,
+    cover: yakomogaShared.cover,
+    listCover: yakomogaShared.listCover,
+    media: yakomogaShared.media,
+    tagline: yakomogaCopy.uk.tagline,
+    serviceTag: yakomogaCopy.uk.serviceTag,
+    body: yakomogaShared.body,
+    blocks: getYakomogaBlocks("uk"),
   },
   {
     "slug": "synta",

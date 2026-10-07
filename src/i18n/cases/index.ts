@@ -26,6 +26,9 @@ const PUBLISHED_CASE_SLUGS: readonly string[] = [
   "terminal-borivaje",
   "tbiliso",
   "altep",
+  "techno-group",
+  "akula-mama",
+  "yakomoga",
   "packaging",
 ];
 

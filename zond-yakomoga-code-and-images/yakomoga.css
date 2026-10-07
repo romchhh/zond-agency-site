@@ -1,0 +1,44 @@
+
+.yakomoga .hero h1{font-size:clamp(64px,9vw,138px)}
+.yakomoga .hero-heading{align-items:end;gap:28px;padding:36px 0 28px}
+.yakomoga .hero-intro{min-width:270px}.yakomoga .hero-intro p{font-size:29px}
+.yakomoga .hero-tag{background:#202020;color:#fff}.concept-label{display:block;font:13px Arial,sans-serif;color:#646464;margin-top:12px}
+.yakomoga .manifesto{background:#202020}.yakomoga .manifesto em{color:#f02831}
+.yakomoga .manifesto p{font-size:clamp(32px,4.5vw,65px)}
+.yakomoga .project-facts .country-fact{background:#ff7100;border-color:#ff7100}
+.yakomoga .gallery{gap:22px;align-items:start;margin:24px 0}
+.yakomoga .story-wide{grid-template-columns:minmax(0,1fr)}
+.yakomoga .media{margin:0;min-width:0}.yakomoga .hero-visual{margin-top:0}
+.yakomoga .image-button{display:block;width:100%;padding:0;border:0;border-radius:22px;overflow:hidden;background:#e4e4e4;cursor:zoom-in}
+.yakomoga .media img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .65s ease}
+.yakomoga .story-wide .media img,.yakomoga .hero-visual img{aspect-ratio:16/9}
+.yakomoga .image-button:hover img{transform:scale(1.015)}
+.yakomoga .visual-section{padding:60px 0 30px}.yakomoga .case-copy p{color:#505050}
+.yakomoga .quote-card{border-left-color:#ff7100}.yakomoga .quote-mark{color:#ff7100}.yakomoga .review-monogram{background:#ff7100}
+.yakomoga .rule-grid>div{border-left-color:#202020}.yakomoga .header nav a{font-size:14px}
+.yakomoga .visual-credit{display:inline-block;max-width:470px;font-size:12px;line-height:1.5;color:#737373}
+@media(max-width:767px){
+.yakomoga .container{padding-inline:18px}.yakomoga .hero h1{font-size:clamp(42px,10.5vw,78px)}
+.yakomoga .hero-heading{align-items:start;gap:20px}.yakomoga .hero-intro{min-width:0}.yakomoga .hero-tag{white-space:normal}
+.yakomoga .gallery{grid-template-columns:1fr;gap:20px;margin:20px 0}
+.yakomoga .image-button{border-radius:17px}.yakomoga .media{width:100%;margin-inline:0}
+.yakomoga .media img,.yakomoga .story-wide .media img{aspect-ratio:auto;object-fit:contain}.yakomoga .hero-visual img{aspect-ratio:4/3;object-fit:cover}
+.yakomoga .manifesto p{font-size:clamp(26px,6.5vw,42px)}.yakomoga .visual-section{padding:40px 0 25px}
+}
+@media(prefers-reduced-motion:reduce){.yakomoga .media img{transition:none}}
+
+/* Keep every logo and carrier fully visible at its original proportions. */
+.yakomoga .media img{aspect-ratio:var(--photo-ratio,3/2);object-fit:contain}.yakomoga .hero-visual img{aspect-ratio:3/2}.yakomoga .story-wide .media img{aspect-ratio:var(--photo-ratio,3/2)}
+
+.yakomoga .gallery.asymmetric{grid-template-columns:1fr 2fr}
+@media(max-width:767px){.yakomoga .gallery.asymmetric{grid-template-columns:1fr}}
+
+/* NOVUS case: equal-size paired slides; one column on mobile. */
+.yakomoga .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.yakomoga .gallery .media{grid-column:auto;width:100%;height:100%}
+.yakomoga .gallery .image-button{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:#f0f1f3}
+.yakomoga .gallery .media img{width:100%;height:100%;aspect-ratio:auto;object-fit:contain;transform:none}
+.yakomoga .gallery .image-button:hover img{transform:none}
+.yakomoga .hero-visual img{height:auto;aspect-ratio:var(--photo-ratio,16/9);object-fit:contain}
+@media(max-width:767px){.yakomoga .gallery{grid-template-columns:minmax(0,1fr);gap:20px}.yakomoga .gallery .image-button{aspect-ratio:16/9}.yakomoga .gallery .media img{height:100%;aspect-ratio:auto;object-fit:contain}}
+
