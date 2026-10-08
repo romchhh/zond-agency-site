@@ -60,7 +60,7 @@ export default async function HomePage({
         <Projects locale={locale} dictionary={dictionary} projects={projects} />
         <Services locale={locale} dictionary={dictionary} />
         <TeamAndCta dictionary={dictionary} />
-        <HomeSeoBlock dictionary={dictionary} />
+        <HomeSeoBlock locale={locale} dictionary={dictionary} />
       </main>
       <Footer locale={locale} dictionary={dictionary} />
     </>

@@ -13,8 +13,11 @@ export default function NotFoundView({ locale, dictionary }: NotFoundViewProps) 
   const homePath = getLocalePath(locale);
   const { notFound } = dictionary;
 
+  const documentTitle = `${notFound.title} | ZOND`;
+
   return (
     <>
+      <title>{documentTitle}</title>
       <Header locale={locale} dictionary={dictionary} />
       <main className="not-found-page">
         <div className="wrap not-found-wrap">

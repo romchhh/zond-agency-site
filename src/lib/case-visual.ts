@@ -905,5 +905,5 @@ export function getCaseVisualDefaults(
 }
 
 export function getLiveCaseUrl(slug: string, locale: Locale): string {
-  return `https://www.zond.agency${getCaseDetailPath(locale, slug)}`;
+  return `https://zond.agency${getCaseDetailPath(locale, slug)}`;
 }

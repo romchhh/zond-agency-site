@@ -1,204 +1,400 @@
-URL	Тип	Мова	Слів на сторінці	Title	Знаків	Description	Знаків	H1	Проблеми	Що робимо	Title (готовий)	Знаків	Description (готовий)	Знаків	H1 (готовий)	Примітка
-https://zond.agency	Головна	укр	269	ZOND — Branding Agency	22	ZOND — агенція брендингу з 2021 року. Стратегія, айдентика, дизайн, SMM, упаковка, брендбук та цифрові рішення для бізнесу в Україні та світі.	142	ZOND — Branding Agency	дубль title (6 стор.), дубль description, H1 прихований 1x1 px, H1 = title	Замінити title і description; H1 показати на сторінці (п. 6.1)	Брендинг-агенція ZOND: розробка бренду, айдентика, дизайн | Київ	64	Брендингова агенція ZOND у Києві: стратегія, неймінг, логотип, айдентика, брендбук, упаковка і SMM. Працюємо з 2021 року, стратегія до результату.	146	Брендинг-агенція ZOND: розробка бренду, айдентика, дизайн	Під запити, за якими старі головні вже отримували кліки (брендинг агенція, брендинговое агентство, graphic design studio)
-https://zond.agency/blog	Список статей	укр	1003	Блог — ZOND	11	Статті про брендинг, логотипи, брендбуки, дизайн упаковки та маркетинг від агенції ZOND.	88	Блог.	дубль title (2 стор.)	Замінити title (однаковий на українському і російському списку)	Блог про брендинг, логотипи і брендбуки | ZOND	46				Description лишається
-https://zond.agency/blog/brand-identity-basics	Стаття блогу	укр	687	Айдентика бренду: що це та як з нею працювати? — ZOND	53	У світі сучасного бізнесу айдентика бренду відіграє вирішальну роль у формуванні унікального образу компанії, що дозволяє їй виділитися серед конкурентів та встановити міцні стосунки зі своєю цільовою аудиторією.	212	Айдентика бренду: що це та як з нею працювати?.	довгий description	Поставити скорочений description (зараз 212 знаків)			Айдентика бренду: що це, з чого складається і як з нею працювати, щоб компанія вирізнялась серед конкурентів і запам'ятовувалась аудиторії.	139		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/brandbook-business-success	Стаття блогу	укр	439	Чому брендбук — це основа успіху вашого бізнесу — ZOND	54	У сучасному світі, де конкуренція зростає щодня, бізнесу важливо не лише бути помітним, але й створювати міцний зв’язок із клієнтами.	133	Чому брендбук — це основа успіху вашого бізнесу.								
-https://zond.agency/blog/brandbook-checklist	Стаття блогу	укр	571	Що входить у професійний брендбук: чекліст для вашого бізнесу — ZOND	68	Професійний брендбук — це більше, ніж просто набір правил для використання логотипу.	84	Що входить у професійний брендбук: чекліст для вашого бізнесу.								
-https://zond.agency/blog/brandbook-for-ecommerce	Стаття блогу	укр	616	Брендбук для e-commerce: як підвищити впізнаваність інтернет-магазину — ZOND	76	Брендбук — це не просто файл із логотипом і шрифтами. Це повноцінна інструкція з використання твого бренду в будь-яких умовах.	126	Брендбук для e-commerce: як підвищити впізнаваність інтернет-магазину.								
-https://zond.agency/blog/brandbook-for-medical	Стаття блогу	укр	488	Брендбук для медичних закладів: чому він необхідний і які особливості врахувати — ZOND	86	Брендбук для медичних закладів має свої особливості, що відрізняють його від аналогічних документів у сфері комерції, IT або HoReCa.	132	Брендбук для медичних закладів: чому він необхідний і які особливості врахувати.								
-https://zond.agency/blog/brandbook-for-real-estate	Стаття блогу	укр	536	Брендбук для агентств нерухомості — ZOND	40	Брендбук для агентств нерухомості має свої особливості порівняно з іншими сферами бізнесу. Він повинен не лише відображати стиль компанії, а й викликати відчуття стабільності, надійності та успішності.	201	Брендбук для агентств нерухомості.	довгий description	Поставити скорочений description (зараз 201 знаків)			Брендбук для агентства нерухомості: як відобразити стиль компанії і викликати відчуття стабільності й надійності. Особливості й приклади.	137		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/brandbook-for-restaurants	Стаття блогу	укр	423	Брендбук для закладів харчування: ключові особливості та значення — ZOND	72	Брендбук для ресторанів – це не просто набір логотипів і кольорових схем. Він визначає загальний стиль закладу, його тон спілкування з гостями, подачу страв та навіть елементи декору.	183	Брендбук для закладів харчування: ключові особливості та значення.	довгий description	Поставити скорочений description (зараз 183 знаків)			Брендбук для ресторану: не лише логотип і кольори, а стиль закладу, тон спілкування з гостями, подача страв і декор. Що в нього входить.	136		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/brandbook-for-retail	Стаття блогу	укр	398	Брендбук для торговельних компаній: важливість та ключові особливості — ZOND	76	Брендбук для роздрібних магазинів допомагає створити унікальний образ торгової точки.	85	Брендбук для торговельних компаній: важливість та ключові особливості.								
-https://zond.agency/blog/brandbook-for-sports	Стаття блогу	укр	417	Брендбук для спортивних закладів: ключ до впізнаваності та довіри — ZOND	72	Брендбук – це стратегічний документ, який містить усі візуальні та комунікаційні стандарти бренду.	98	Брендбук для спортивних закладів: ключ до впізнаваності та довіри.								
-https://zond.agency/blog/brandbook-for-startup	Стаття блогу	укр	443	Брендбук для стартапу: з чого почати? — ZOND	44	Для молодих компаній, які тільки виходять на ринок, створення впізнаваного бренду — це одна з ключових задач	108	Брендбук для стартапу: з чого почати?.								
-https://zond.agency/blog/brandbook-key-features	Стаття блогу	укр	508	Ключові особливості брендбуку — ZOND	36	Брендбук – це офіційний документ компанії, який визначає правила використання всіх елементів її бренду.	103	Ключові особливості брендбуку.								
-https://zond.agency/blog/brandbook-to-be-or-not	Стаття блогу	укр	497	Брендбук: бути чи не бути? — ZOND	33	Переваги брендбуку очевидні. Він допомагає зекономити час і ресурси, адже всі правила оформлення бренду чітко прописані, що полегшує роботу дизайнерам і маркетологам.	166	Брендбук: бути чи не бути?.	довгий description	Поставити скорочений description (зараз 166 знаків)			Чи потрібен брендбук: він економить час і ресурси, бо всі правила оформлення бренду прописані, а дизайнери й маркетологи працюють за ними.	138		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/branding-key-features	Стаття блогу	укр	504	Брендинг. Ключові особливості для бізнесу — ZOND	48	Брендинг є важливим аспектом для будь-якого бізнесу, оскільки він допомагає створити унікальний образ та ідентичність компанії.	127	Брендинг. Ключові особливості для бізнесу.								
-https://zond.agency/blog/branding-vs-brandbook	Стаття блогу	укр	428	Брендинг і брендбук: чим відрізняються — ZOND	45	Брендинг і брендбук — два поняття, які часто плутають, хоча між ними існує чітка різниця.	89	Брендинг і брендбук: чим відрізняються.								
-https://zond.agency/blog/design-and-marketing	Стаття блогу	укр	446	Дизайн і маркетинг: чому одне без іншого неможливе? — ZOND	58	Дизайн і маркетинг — це не паралельні світи, а дві половини єдиного механізму, що запускає сприйняття бренду, формує перше враження і впливає на рішення клієнтів.	162	Дизайн і маркетинг: чому одне без іншого неможливе?.	довгий description	Поставити скорочений description (зараз 162 знаків)			Дизайн і маркетинг: дві половини одного механізму, що формує перше враження про бренд і впливає на рішення клієнтів. Як вони працюють разом.	140		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/diy-vs-professional-logo	Стаття блогу	укр	699	Зробити логотип власноруч чи замовити у професіоналів? — ZOND	61	Логотип — це не просто зображення чи набір букв. Це символ, який відображає сутність вашого бренду, його цінності та унікальність.	130	Зробити логотип власноруч чи замовити у професіоналів?.								
-https://zond.agency/blog/emblem-vs-logo	Стаття блогу	укр	417	Емблема і логотип: відмінності та схожості — ZOND	49	Логотип та емблема - дві ключові складові корпоративної ідентичності, які використовуються компаніями для визначення свого бренду та створення впізнаваності серед споживачів.	174	Емблема і логотип: відмінності та схожості.	довгий description	Поставити скорочений description (зараз 174 знаків)			Логотип і емблема: чим відрізняються дві ключові складові корпоративної ідентичності і яка з них потрібна вашому бренду для впізнаваності.	138		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/good-vs-bad-logo	Стаття блогу	укр	474	Що відрізняє хороший логотип від поганого — ZOND	48	Логотип є візуальним представленням бренду, який виконує роль ідентифікатора компанії або продукту.	99	Що відрізняє хороший логотип від поганого.								
-https://zond.agency/blog/how-to-order-logo	Стаття блогу	укр	562	Як правильно замовити логотип — ZOND	36	Створення логотипу — це перший і один із найважливіших кроків у побудові бренду.	80	Як правильно замовити логотип.								
-https://zond.agency/blog/improve-logo-without-changes	Стаття блогу	укр	697	Як покращити свій логотип без кардинальних змін — ZOND	54	Логотип — це невід'ємна частина будь-якого бренду, обличчя компанії, яке повинно привертати, викликати довіру і легко запам’ятовуватись.	136	Як покращити свій логотип без кардинальних змін.								
-https://zond.agency/blog/logo-evolution	Стаття блогу	укр	871	Еволюція логотипів: від символів до сучасного дизайну — ZOND	60	Логотипи, як ми їх знаємо сьогодні, не завжди були такими. Вони мають довгу історію, що еволюціонувала разом із розвитком технологій, культурних та дизайнерських впливів.	170	Еволюція логотипів: від символів до сучасного дизайну.	довгий description	Поставити скорочений description (зараз 170 знаків)			Еволюція логотипів: як вони змінювались разом із технологіями, культурою і дизайном, і що з цієї історії корисно для сучасного бренду.	134		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/logo-excess-details	Стаття блогу	укр	438	Що зайвого може бути в логотипі? — ZOND	39	Зайві деталі, градієнти й дрібний текст роблять логотип нечитабельним. Розбираємо, що прибрати, щоб знак працював у будь-якому розмірі.	135	Що зайвого може бути в логотипі?.								
-https://zond.agency/blog/logo-generator-pros-cons	Стаття блогу	укр	380	Генератор логотипів: переваги і недоліки — ZOND	47	Логотип - це не лише зображення, що використовується для ідентифікації бренду, але й ключовий елемент корпоративної ідентичності.	129	Генератор логотипів: переваги і недоліки.								
-https://zond.agency/blog/logos-by-industry	Стаття блогу	укр	606	Чим відрізняються логотипи в різних сферах: особливості дизайну для кожної галузі — ZOND	88	Логотип — це візуальний код бренду. Його форма, стиль, кольори та шрифти не є випадковими — вони відображають не лише суть компанії, а й правила гри в конкретній сфері.	168	Чим відрізняються логотипи в різних сферах: особливості дизайну для кожної галузі.	довгий description	Поставити скорочений description (зараз 168 знаків)			Логотип як візуальний код бренду: чому форма, стиль, кольори і шрифти залежать від сфери бізнесу і які правила діють у кожній галузі.	133		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/long-term-agency-relationship	Стаття блогу	укр	654	Як побудувати довготривалі відносини з брендинговою агенцією — ZOND	67	Успішний бренд не з’являється за ніч. Це результат глибокої роботи, десятків рішень, постійних правок і довіри.	111	Як побудувати довготривалі відносини з брендинговою агенцією.								
-https://zond.agency/blog/marketing-360	Стаття блогу	укр	541	Маркетинг 360 для вашого бізнесу — ZOND	39	У сучасному світі, де конкуренція постійно зростає, важливо мати сильну маркетингову стратегію, яка допоможе виділитися серед інших.	132	Маркетинг 360 для вашого бізнесу.								
-https://zond.agency/blog/naming-guide	Стаття блогу	укр	531	Все про неймінг бізнесу та бренду — ZOND	40	Неймінг є важливим елементом у процесі створення бренду, який відіграє ключову роль у формуванні першого враження про бізнес.	125	Все про неймінг бізнесу та бренду.								
-https://zond.agency/blog/ordering-a-logo-tips	Стаття блогу	укр	420	Як замовити розробку логотипу: поради від професіоналів — ZOND	62	Логотип - це не лише символ, що ідентифікує бренд, але й ключовий елемент корпоративної ідентичності. Він відображає цінності, стиль та особливості компанії, а також допомагає привернути увагу нових клієнтів.	208	Як замовити розробку логотипу: поради від професіоналів.	довгий description	Поставити скорочений description (зараз 208 знаків)			Як замовити логотип: що він має відображати, на що звернути увагу при виборі виконавця і як не втратити цінності й стиль компанії.	130		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/packaging-design-benefits	Стаття блогу	укр	423	Як продуманий дизайн упаковки допомагає продукту і бізнесу — ZOND	65	Дизайн упаковки, або упаковка, відіграє вирішальну роль у сучасному бізнесі. Він не лише забезпечує збереження товару.	118	Як продуманий дизайн упаковки допомагає продукту і бізнесу.								
-https://zond.agency/blog/packaging-design-trends	Стаття блогу	укр	801	Сучасні рішення в дизайні упаковки: інновації та тренди — ZOND	62	Упаковка вже давно стала невід'ємною частиною маркетингової стратегії компаній. Це не лише засіб для захисту продукту, але й потужний інструмент для залучення уваги споживачів.	176	Сучасні рішення в дизайні упаковки: інновації та тренди.	довгий description	Поставити скорочений description (зараз 176 знаків)			Тренди дизайну упаковки: упаковка захищає продукт і привертає увагу покупця. Які рішення працюють на полиці сьогодні.	117		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/role-of-branding-agency	Стаття блогу	укр	639	Роль брендинг агенції у вашому бізнесі — ZOND	45	У сучасному бізнес-середовищі, де конкуренція стає дедалі жорсткішою, успішне позиціонування на ринку є одним із ключових факторів для виживання та зростання компанії.	167	Роль брендинг агенції у вашому бізнесі.	довгий description	Поставити скорочений description (зараз 167 знаків)			Роль брендингової агенції: як позиціонування допомагає компанії вижити і зростати на ринку з дедалі жорсткішою конкуренцією.	124		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/top-5-reasons-invest-branding	Стаття блогу	укр	688	Топ-5 причин не економити на брендингу — ZOND	45	Брендинг — це не логотип і не гарна обгортка. Це про те, як ваш бізнес сприймають, запам’ятовують і з ним взаємодіють.Брендинг — це не логотип і не гарна обгортка. Це про те, як ваш бізнес сприймають, запам’ятовують і з ним взаємодіють.	236	Топ-5 причин не економити на брендингу.	довгий description	Поставити скорочений description (зараз 236 знаків)			5 причин інвестувати в брендинг: це не логотип і не обгортка, а те, як ваш бізнес сприймають, запам'ятовують і взаємодіють з ним.	129		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/blog/what-is-a-brandbook	Стаття блогу	укр	819	Що таке брендбук і для кого він потрібен? — ZOND	48	В сучасному світі, де конкуренція жорстка, а увага споживачів розпорошена, брендбук стає незамінним інструментом для будь-якої компанії, що прагне до успіху.	157	Що таке брендбук і для кого він потрібен?.								
-https://zond.agency/blog/what-is-a-logo	Стаття блогу	укр	546	Логотип: що це, навіщо він потрібен і яким він буває — ZOND	59	Логотип — це більше, ніж просто знак. Це перше, що бачить людина, знайомлячись із брендом. Це те, що залишає слід у памʼяті, викликає емоції, формує довіру.	156	Логотип: що це, навіщо він потрібен і яким він буває.								
-https://zond.agency/blog/what-is-branding-agency	Стаття блогу	укр	553	Брендинг агенція: що це, чим займається і чим може допомогти бізнесу — ZOND	75	У світі жорсткої конкуренції й інформаційного шуму вирізнитися стає дедалі складніше. Саме тому все більше компаній звертаються до брендинг агенцій — професійних партнерів, які допомагають будувати сильний, впізнаваний бренд.	225	Брендинг агенція: що це, чим займається і чим може допомогти бізнесу.	довгий description	Поставити скорочений description (зараз 225 знаків)			Що таке брендинг-агенція і чим вона допомагає: партнер, який будує сильний упізнаваний бренд там, де вирізнитись дедалі складніше.	130		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/cases	Список проєктів	укр	76	Проєкти — ZOND	14	Кейси та реалізовані проєкти дизайн-студії ZOND: брендинг, айдентика, упаковка, SMM та digital.	95	Проєкти.								
-https://zond.agency/contact	Контакти	укр	99	Контакти — ZOND	15	Зв’яжіться з брендинговою агенцією ZOND: email, телефон, Telegram та соцмережі. Обговоримо ваш проєкт.	102	Контакти.								
-https://zond.agency/en	Головна	англ	294	ZOND — Branding Agency	22	ZOND is a branding agency founded in 2021. Strategy, identity, design, SMM, packaging, brand books, and digital solutions for businesses in Ukraine and worldwide.	162	ZOND — Branding Agency	дубль title (6 стор.), дубль description, довгий description, H1 прихований 1x1 px, H1 = title	Замінити title і description; H1 показати на сторінці (п. 6.1)	ZOND branding agency: strategy, identity, design | Kyiv	55	ZOND is a branding agency in Kyiv: strategy, naming, logo, identity, brand book, packaging and SMM. Since 2021. Free consultation.	130	ZOND branding agency: strategy, identity, design	Під запити, за якими старі головні вже отримували кліки (брендинг агенція, брендинговое агентство, graphic design studio)
-https://zond.agency/en/blog	Список статей	англ	994	Blog — ZOND	11	Articles on branding, logos, brand books, packaging design, and marketing from ZOND agency.	91	Blog.								
-https://zond.agency/en/blog/brand-identity-basics	Стаття блогу	англ	829	Brand identity: what it is and how to work with it — ZOND	57	Brand identity is the visual language of your business. Learn what it includes and why it matters.	98	Brand identity: what it is and how to work with it.								
-https://zond.agency/en/blog/brandbook-business-success	Стаття блогу	англ	503	Why a brand book is the foundation of your business success — ZOND	66	A brand book is not bureaucracy — it is a tool that protects your brand and helps it scale.	91	Why a brand book is the foundation of your business success.								
-https://zond.agency/en/blog/brandbook-checklist	Стаття блогу	англ	679	What goes into a professional brand book: a checklist for your business — ZOND	78	A complete brand book includes much more than a logo. Use this checklist to evaluate your brand documentation.	110	What goes into a professional brand book: a checklist for your business.								
-https://zond.agency/en/blog/brandbook-for-ecommerce	Стаття блогу	англ	693	Brand book for e-commerce: how to increase online store recognition — ZOND	74	In e-commerce, competition is fierce and customer attention is limited. A brand book helps create a consistent visual identity.	127	Brand book for e-commerce: how to increase online store recognition.								
-https://zond.agency/en/blog/brandbook-for-medical	Стаття блогу	англ	546	Brand book for medical institutions: why it is needed and what it includes — ZOND	81	Healthcare brands must inspire trust. A brand book defines how that trust is communicated visually.	99	Brand book for medical institutions: why it is needed and what it includes.								
-https://zond.agency/en/blog/brandbook-for-real-estate	Стаття блогу	англ	612	Brand book for real estate agencies — ZOND	42	A brand book helps real estate agencies look professional, trustworthy, and recognizable across all channels.	109	Brand book for real estate agencies.								
-https://zond.agency/en/blog/brandbook-for-restaurants	Стаття блогу	англ	468	Brand book for food businesses: key features and importance — ZOND	66	Restaurants and cafes rely on atmosphere and emotion. A brand book helps translate that feeling into visual identity.	117	Brand book for food businesses: key features and importance.								
-https://zond.agency/en/blog/brandbook-for-retail	Стаття блогу	англ	451	Brand book for retail companies: importance and key features — ZOND	67	Retail brands interact with customers daily. A brand book ensures every touchpoint feels cohesive and professional.	115	Brand book for retail companies: importance and key features.								
-https://zond.agency/en/blog/brandbook-for-sports	Стаття блогу	англ	444	Brand book for sports organizations: the key to recognition and trust — ZOND	76	Sports brands need energy, consistency, and a strong visual system that works across merchandise, events, and media.	116	Brand book for sports organizations: the key to recognition and trust.								
-https://zond.agency/en/blog/brandbook-for-startup	Стаття блогу	англ	511	Brand book for startups: where to begin — ZOND	46	Startups move fast, but visual consistency matters from day one. Here is how to start building a brand book.	108	Brand book for startups: where to begin.								
-https://zond.agency/en/blog/brandbook-key-features	Стаття блогу	англ	576	Key features of a brand book — ZOND	35	What makes a brand book useful and complete? These are the essential elements every business should include.	108	Key features of a brand book.								
-https://zond.agency/en/blog/brandbook-to-be-or-not	Стаття блогу	англ	573	Brand book: to be or not to be? — ZOND	38	Does every business need a brand book? We explain when it is essential and when it can wait.	92	Brand book: to be or not to be?.								
-https://zond.agency/en/blog/branding-key-features	Стаття блогу	англ	554	Branding: key features for business — ZOND	42	Branding is a system, not a one-time project. These are the core elements every business should understand.	107	Branding: key features for business.								
-https://zond.agency/en/blog/branding-vs-brandbook	Стаття блогу	англ	468	Branding and brand book: what is the difference — ZOND	54	Branding and a brand book are related but not the same thing. Understanding the difference helps businesses invest wisely.	122	Branding and brand book: what is the difference.								
-https://zond.agency/en/blog/design-and-marketing	Стаття блогу	англ	506	Design and marketing: why one cannot exist without the other — ZOND	67	Design and marketing are two sides of the same coin. Without design, marketing loses impact; without marketing, design loses purpose.	133	Design and marketing: why one cannot exist without the other.								
-https://zond.agency/en/blog/diy-vs-professional-logo	Стаття блогу	англ	788	DIY logo or hire a professional? — ZOND	39	Should you design a logo yourself or work with professionals? We compare both approaches honestly.	98	DIY logo or hire a professional?.								
-https://zond.agency/en/blog/emblem-vs-logo	Стаття блогу	англ	461	Emblem vs logo: differences and similarities — ZOND	51	Emblems and logos are often confused. We explain how they differ and when to use each format.	93	Emblem vs logo: differences and similarities.								
-https://zond.agency/en/blog/good-vs-bad-logo	Стаття блогу	англ	581	What separates a good logo from a bad one — ZOND	48	Not all logos work equally well. We break down the qualities that make a logo effective.	88	What separates a good logo from a bad one.								
-https://zond.agency/en/blog/how-to-order-logo	Стаття блогу	англ	669	How to order a logo the right way — ZOND	40	Creating a logo is the first and one of the most important steps in building a brand.	85	How to order a logo the right way.								
-https://zond.agency/en/blog/improve-logo-without-changes	Стаття блогу	англ	832	How to improve your logo without radical changes — ZOND	55	Sometimes a logo does not need a full redesign. Small refinements can make a big difference.	92	How to improve your logo without radical changes.								
-https://zond.agency/en/blog/logo-evolution	Стаття блогу	англ	1015	The evolution of logos: from symbols to modern design — ZOND	60	Logos have changed dramatically over time. We trace their evolution and what it means for brands today.	103	The evolution of logos: from symbols to modern design.								
-https://zond.agency/en/blog/logo-excess-details	Стаття блогу	англ	501	What can be excessive in a logo? — ZOND	39	Too many details can ruin a logo. We explain what to remove so your mark stays clear and effective.	99	What can be excessive in a logo?.								
-https://zond.agency/en/blog/logo-generator-pros-cons	Стаття блогу	англ	445	Logo generators: pros and cons — ZOND	37	Logo generators are fast and cheap, but they come with trade-offs. Here is what to consider.	92	Logo generators: pros and cons.								
-https://zond.agency/en/blog/logos-by-industry	Стаття блогу	англ	687	How logos differ across industries: design specifics for every sector — ZOND	76	A logo is a brand's visual code. Its shape, style, colors, and fonts are not random — they reflect not only the essence of the company, but also the rules of the game in a specific industry.	190	How logos differ across industries: design specifics for every sector.	довгий description	Поставити скорочений description (зараз 190 знаків)			A logo is a brand's visual code: its shape, style, colors and fonts reflect the company and the rules of its industry. Logo examples by sector.	143		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/en/blog/long-term-agency-relationship	Стаття блогу	англ	726	How to build a long-term relationship with a branding agency — ZOND	67	A branding agency is not a one-time contractor, but a strategic partner that helps your business grow and stay consistent.	122	How to build a long-term relationship with a branding agency.								
-https://zond.agency/en/blog/marketing-360	Стаття блогу	англ	609	360 marketing for your business — ZOND	38	360 marketing connects all communication channels into one coherent strategy for your brand.	92	360 marketing for your business.								
-https://zond.agency/en/blog/naming-guide	Стаття блогу	англ	600	Everything about business and brand naming — ZOND	49	A strong name is the foundation of a memorable brand. Here is what you need to know about naming.	97	Everything about business and brand naming.								
-https://zond.agency/en/blog/ordering-a-logo-tips	Стаття блогу	англ	477	How to order logo development: tips from professionals — ZOND	61	A logo is not only a symbol that identifies a brand, but also a key element of corporate style.	95	How to order logo development: tips from professionals.								
-https://zond.agency/en/blog/packaging-design-benefits	Стаття блогу	англ	462	How thoughtful packaging design helps your product and business — ZOND	70	Packaging is more than a container. It influences perception, sales, and brand loyalty.	87	How thoughtful packaging design helps your product and business.								
-https://zond.agency/en/blog/packaging-design-trends	Стаття блогу	англ	879	Modern packaging design: innovations and trends — ZOND	54	Packaging design evolves quickly. We explore current trends that help products stand out on the shelf.	102	Modern packaging design: innovations and trends.								
-https://zond.agency/en/blog/role-of-branding-agency	Стаття блогу	англ	691	The role of a branding agency in your business — ZOND	53	A branding agency brings strategy, design, and consistency together to help your business grow.	95	The role of a branding agency in your business.								
-https://zond.agency/en/blog/top-5-reasons-invest-branding	Стаття блогу	англ	747	Top 5 reasons not to cut corners on branding — ZOND	51	Branding is not a logo and not a pretty wrapper. It is about how your business is perceived, remembered, and interacted with.	125	Top 5 reasons not to cut corners on branding.								
-https://zond.agency/en/blog/what-is-a-brandbook	Стаття блогу	англ	894	What is a brand book and who needs one — ZOND	45	A brand book documents how your brand looks and sounds. We explain who needs it and why.	88	What is a brand book and who needs one.								
-https://zond.agency/en/blog/what-is-a-logo	Стаття блогу	англ	662	What is a logo, why do you need one, and what types exist — ZOND	64	A logo is more than just a sign. It is the first thing people see when they encounter a brand. It leaves a mark in memory, evokes emotions, and builds trust.	157	What is a logo, why do you need one, and what types exist.								
-https://zond.agency/en/blog/what-is-branding-agency	Стаття блогу	англ	598	What is a branding agency and how can it help your business — ZOND	66	A branding agency helps businesses build a strong identity, communicate clearly, and stand out in the market.	109	What is a branding agency and how can it help your business.								
-https://zond.agency/en/cases	Список проєктів	англ	79	Projects — ZOND	15	Case studies and completed projects by ZOND design studio: branding, identity, packaging, SMM, and digital.	107	Projects.								
-https://zond.agency/en/contact	Контакти	англ	116	Contact — ZOND	14	Get in touch with ZOND branding agency: email, phone, Telegram, and social media. Let's discuss your project.	109	Contact.								
-https://zond.agency/en/home	Дубль головної	англ	294	ZOND — Branding Agency	22	ZOND is a branding agency founded in 2021. Strategy, identity, design, SMM, packaging, brand books, and digital solutions for businesses in Ukraine and worldwide.	162	ZOND — Branding Agency	дубль title (6 стор.), дубль description, довгий description, H1 прихований 1x1 px, H1 = title, дубль головної	Адреса йде на постійну переадресацію на головну (п. 1.3)						Готових значень не потрібно
-https://zond.agency/en/services	Список послуг	англ	460	Our services | ZOND graphic design studio	41	ZOND design studio services: branding, logo, identity, brand book, rebranding, SMM, packaging, graphics, illustration, and marketing 360.	137	Comprehensive solutions for your brand								
-https://zond.agency/home	Дубль головної	укр	269	ZOND — Branding Agency	22	ZOND — агенція брендингу з 2021 року. Стратегія, айдентика, дизайн, SMM, упаковка, брендбук та цифрові рішення для бізнесу в Україні та світі.	142	ZOND — Branding Agency	дубль title (6 стор.), дубль description, H1 прихований 1x1 px, H1 = title, дубль головної	Адреса йде на постійну переадресацію на головну (п. 1.3)						Готових значень не потрібно
-https://zond.agency/our-services-eng/brand-character	Сторінка послуги	англ	1454	Brand character and mascot design — ZOND	40	We create brand characters: concept, personality, silhouette, emotions, 2D or 3D visuals, applications, and guidelines for your team.	133	Your brand can have a face. And a character.								
-https://zond.agency/our-services-eng/brandbook	Сторінка послуги	англ	1537	Brand book — brand book development — ZOND	42	Brand book development: logo, color, typography, graphics, and media rules. Brand books that preserve consistency at every touchpoint.	134	Brand book Brand book development								
-https://zond.agency/our-services-eng/branding	Сторінка послуги	англ	1673	Brand development and branding for business — ZOND	50	Brand development for business: strategy, positioning, naming, logo, identity, brand book, and communication.	109	Brand development and branding for business.								
-https://zond.agency/our-services-eng/communication	Сторінка послуги	англ	1413	Slogan and brand communication — ZOND	37	We develop slogans and brand communication: core idea, tone of voice, key messages, and principles for different channels.	122	Speak in a way people recognize you.								
-https://zond.agency/our-services-eng/graphics	Сторінка послуги	англ	1373	Graphic design for business — print and advertising | ZOND	58	Graphic design: print, outdoor advertising, presentations, technical design, and print preparation. Make the brand recognizable on every medium. ZOND studio.	157	Graphics Graphic design for business								
-https://zond.agency/our-services-eng/identity	Сторінка послуги	англ	1363	Brand identity and visual style for business — ZOND	51	We develop brand identity: logo, colors, typography, graphic system, media, and guidelines. Visual identity by ZOND.	116	Brand identity that works everywhere—and gets recognized.								
-https://zond.agency/our-services-eng/illustration	Сторінка послуги	англ	1324	Custom commercial illustration - Illustrator price | ZOND	57	Stock images are forgotten instantly. Custom commercial illustration: characters, comics, and graphics for packaging, websites, and ads. ZOND studio.	149	Illustration Custom commercial illustration								
-https://zond.agency/our-services-eng/influence-marketing	Сторінка послуги	англ	1249	Influence marketing — blogger advertising in Ukraine | ZOND	59	Influence marketing: influencer selection, campaigns on Instagram, TikTok, YouTube, and Telegram, result analytics. Blogger ads for your budget. ZOND studio.	157	Influence marketing Blogger ads people trust								
-https://zond.agency/our-services-eng/logo	Сторінка послуги	англ	1532	Logo design — business logo development — ZOND	46	Business logo development: original design, color palette, logobook, and file package. Logos that are easy to recognize and hard to forget.	139	Logo design Logo development for business								
-https://zond.agency/our-services-eng/marketing-360	Сторінка послуги	англ	100	Marketing 360 — ZOND	20	Full-cycle marketing for brands by ZOND Agency.	47	Marketing 360.	дубль title (3 стор.), короткий description	Поставити готовий description (зараз 47 знаків)			Marketing 360 by ZOND: strategy, content, SMM, advertising and design for your brand from one team. Full-cycle promotion for your market and budget.	148		Текст написали ми зараз (у серпневому файлі цієї версії немає)
-https://zond.agency/our-services-eng/naming	Сторінка послуги	англ	1647	Naming: brand and product name development — ZOND	49	We create names for companies, products, and services: research, creative directions, language review, and launch recommendations.	130	A name that speaks for the brand.								
-https://zond.agency/our-services-eng/packaging	Сторінка послуги	англ	1429	Packaging and label design — ZOND	33	Packaging and label design: concept, 3D mockups, SKU adaptations, and print-ready layouts. Packaging that attracts attention and sells on the shelf.	148	Packaging design Packaging and label design								
-https://zond.agency/our-services-eng/positioning	Сторінка послуги	англ	1446	Brand positioning for business — ZOND	37	We develop brand positioning: business, market, and audience research, value proposition, and key messages.	107	Find the place your brand holds in people's minds.								
-https://zond.agency/our-services-eng/rebranding	Сторінка послуги	англ	98	Rebranding — ZOND	17	Rebranding by ZOND Agency.	26	Rebranding.	короткий description	Поставити готовий description (зараз 26 знаків)			Rebranding without losing your customers: brand audit, new positioning, logo and identity update, and a transition plan. ZOND case studies.	139		Текст написали ми зараз (у серпневому файлі цієї версії немає)
-https://zond.agency/our-services-eng/smm	Сторінка послуги	англ	1451	SMM promotion — social media for business | ZOND	48	SMM promotion: strategy, content, Tone of Voice, reputation management, and visual style on Facebook, Instagram, Telegram, and YouTube. ZOND studio.	148	SMM Social media promotion								
-https://zond.agency/our-services-eng/web-development	Сторінка послуги	англ	1421	Web development and business websites — ZOND	44	We build business websites: strategy, structure, design, responsive development, testing, and launch. Web development by ZOND.	126	A website that works for your business.								
-https://zond.agency/our-services/brand-character	Сторінка послуги	укр	1266	Персонаж бренду: створення маскота — ZOND	41	Створюємо персонажів бренду: ідея, характер, силует, емоції, 2D або 3D образ, носії та гайд для команди. Розробка маскота від ZOND.	131	У бренду може бути обличчя. І характер.								
-https://zond.agency/our-services/brandbook	Сторінка послуги	укр	1515	Брендбук — розробка брендбуку — ZOND	36	Розробка брендбуку: правила логотипа, кольорів, шрифтів, графіки та носіїв. Створюємо брендбуки, які зберігають цілісність бренду в кожній точці контакту.	154	Брендбук Розробка брендбуку								
-https://zond.agency/our-services/branding	Сторінка послуги	укр	1479	Розробка бренду та брендинг для бізнесу — ZOND	46	Розробка бренду для бізнесу: стратегія, позиціонування, неймінг, логотип, айдентика, брендбук та комунікація.	109	Розробка бренду та брендинг для бізнесу.								
-https://zond.agency/our-services/communication	Сторінка послуги	укр	1251	Слоган та комунікація бренду — ZOND	35	Розробляємо слогани та комунікацію бренду: головна ідея, тон голосу, ключові повідомлення та принципи для різних каналів. Комунікація від ZOND.	143	Говоріть так, щоб вас впізнавали.								
-https://zond.agency/our-services/graphics	Сторінка послуги	укр	1398	Графічний дизайн для бізнесу — поліграфія та реклама | ZOND	59	Графічний дизайн: поліграфія, зовнішня реклама, презентації, технічний дизайн і підготовка до друку. Робимо бренд впізнаваним на кожному носії. Студія ZOND.	156	Графіка Графічний дизайн для бізнесу								
-https://zond.agency/our-services/identity	Сторінка послуги	укр	1197	Айдентика та фірмовий стиль для бізнесу — ZOND	46	Розробляємо айдентику бренду: логотип, кольори, типографіку, графічну систему, носії та гайдлайн. Створення фірмового стилю від ZOND.	133	Айдентика, яка працює всюди. Її впізнають.								
-https://zond.agency/our-services/illustration	Сторінка послуги	укр	1368	Створити комерційну ілюстрацію на замовлення - Ціна ілюстратора | ZOND	70	Стокові картинки забувають одразу. Комерційна ілюстрація на замовлення. Персонажі, комікси й графіка для упаковки, сайту й реклами. Студія ZOND.	144	Ілюстрація Комерційна ілюстрація на замовлення								
-https://zond.agency/our-services/influence-marketing	Сторінка послуги	укр	1256	Інфлюенс маркетинг — реклама у блогерів в Україні | ZOND	56	Інфлюенс маркетинг: підбір блогерів, кампанії в Instagram, TikTok, YouTube і Telegram, аналітика результатів. Реклама у блогерів під ваш бюджет. Студія ZOND.	157	Інфлюенс маркетинг Реклама у блогерів, якій довіряють								
-https://zond.agency/our-services/logo	Сторінка послуги	укр	1614	Дизайн логотипів — розробка логотипа для компанії — ZOND	56	Розробка логотипа для компанії: авторський дизайн, палітра кольорів, logobook і пакет файлів. Створюємо логотипи, які легко впізнати й складно забути.	150	Дизайн логотипів Розробка логотипа для компанії								
-https://zond.agency/our-services/marketing360	Сторінка послуги	укр	100	Marketing 360 — ZOND	20	Комплексний маркетинг для бренду від агенції ZOND.	50	Marketing 360.	дубль title (3 стор.), короткий description	Поставити готовий description (зараз 50 знаків)			Маркетинг 360 від ZOND: стратегія, контент, SMM, реклама і дизайн для бренду одним підрядником. Повний цикл просування під ваш ринок і бюджет.	142		Текст написали ми зараз (у серпневому файлі цієї версії немає)
-https://zond.agency/our-services/naming	Сторінка послуги	укр	1401	Неймінг: створення назви бренду та продукту — ZOND	50	Розробляємо назви для компаній, продуктів і сервісів. Дослідження, креативні напрями, мовний відбір і рекомендації до запуску. Неймінг від ZOND.	144	Назва, яка говорить за бренд.								
-https://zond.agency/our-services/packaging	Сторінка послуги	укр	1576	Дизайн упаковки та етикетки — ZOND	34	Дизайн упаковки та етикетки: концепція, 3D-мокапи, адаптації для SKU та макети, готові до друку. Створюємо упаковки, які привертають увагу й продають на полиці.	160	Дизайн упаковки Дизайн упаковки та етикетки								
-https://zond.agency/our-services/positioning	Сторінка послуги	укр	1264	Позиціонування бренду для бізнесу — ZOND	40	Розробляємо позиціонування бренду: дослідження бізнесу, ринку й аудиторії, ціннісну пропозицію та ключові повідомлення. Позиціонування від ZOND.	144	Знайдемо місце вашого бренду в головах людей.								
-https://zond.agency/our-services/rebranding	Сторінка послуги	укр	98	Ребрендинг — ZOND	17	Ребрендинг від агенції ZOND.	28	Ребрендинг.	дубль title (2 стор.), короткий description	Поставити готовий description (зараз 28 знаків)			Оновити бренд і не втратити своїх клієнтів реально. Ребрендинг компанії. Аудит, нове позиціонування, логотип і план переходу. Кейси студії ZOND.	144		Узгоджене значення з файлу «Мета-теги сторінок послуг» (серпень); ставимо незалежно від рішення по 5.4, бо нинішній опис 28 знаків
-https://zond.agency/our-services/smm	Сторінка послуги	укр	1510	SMM-просування — соціальні мережі для бізнесу | ZOND	52	SMM-просування: стратегія, контент, Tone of Voice, управління репутацією та візуальний стиль у Facebook, Instagram, Telegram і YouTube. Студія ZOND.	148	SMM Просування у соціальних мережах								
-https://zond.agency/our-services/web-development	Сторінка послуги	укр	1218	Веб-розробка та створення сайтів для бізнесу — ZOND	51	Створюємо сайти для бізнесу: стратегія, структура, дизайн, адаптивна веб-розробка, тестування та запуск. Веб-розробка від ZOND.	127	Сайт, що працює на ваш бізнес.								
-https://zond.agency/policy	Політика	укр	202	Політика конфіденційності — ZOND	32	Політика конфіденційності брендингової агенції ZOND: які дані ми збираємо, як їх використовуємо та захищаємо.	109	Політика конфіденційності								
-https://zond.agency/projects-eng/ahmad-tea	Сторінка проєкту	англ	544	AHMAD TEA — ZOND	16	Communication strategy for a British premium tea brand: market and audience research, positioning, tone of voice, creative strategy, and visual direction.	154	AHMAD TEA ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	AHMAD TEA: communication strategy for a tea brand | ZOND	56				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/altep	Сторінка проєкту	англ	486	ALTEP — ZOND	12	We updated the brand and logo for Altep Center — a heating equipment manufacturer. Also website design, presentations, and print materials.	139	ALTEP ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	ALTEP: brand update for a heating equipment maker | ZOND	56				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/bit-school	Сторінка проєкту	англ	474	BIT School — ZOND	17	We developed branding, strategy, identity, and a logo for BIT School — a programming and construction school for kids.	118	BIT School ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	BIT School: branding and logo for a coding school | ZOND	56				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/carbit	Сторінка проєкту	англ	471	Carbit — ZOND	13	We developed a logo, visual identity, and presentation for Carbit — a car search service. Plus print, web materials, and video.	127	Carbit ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Carbit: logo and identity for a car search service | ZOND	57				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/digital-residence	Сторінка проєкту	англ	556	Digital Residence — ZOND	24	We developed a logo, identity, and brand book for Digital Residence in Azerbaijan. Plus a 3D logo, print, and corporate materials.	130	Digital Residence ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Digital Residence: logo, identity and brand book | ZOND	55				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/kavlora	Сторінка проєкту	англ	519	KAVLORA — ZOND	14	We developed strategy and identity for KAVLORA — a woodworking brand. Logo, visual system, print, and advertising materials.	124	KAVLORA ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	KAVLORA: strategy and identity for a furniture brand | ZOND	59				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/kyiv-tourism-department	Сторінка проєкту	англ	546	Kyiv — everyone's city — ZOND	29	Social campaign for the Kyiv City Tourism Department: visual concept, urban advertising, digital, and promotional materials.	124	Kyiv — everyone's city ↗		Замінити title (однаковий у трьох мовах)	Kyiv, everyone's city: campaign for Kyiv Tourism Department | ZOND	66				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/packaging	Сторінка проєкту	англ	455	Packaging — ZOND	16	ZOND packaging design collection: food, beverages, pet products, and more. 20 images: 14 portfolio works and 5 concept visuals.	127	Packaging ↗		Замінити title (однаковий у трьох мовах)	Packaging design: ZOND portfolio for food and beverages	55				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/tbiliso	Сторінка проєкту	англ	391	Tbiliso — ZOND	14	We rebranded Tbiliso — a Georgian restaurant in Kyiv: new identity, packaging, print, SMM, and branded merch.	109	Tbiliso ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Tbiliso: rebranding of a Georgian restaurant in Kyiv | ZOND	59				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects-eng/terminal-borivaje	Сторінка проєкту	англ	391	Terminal Borivaje — ZOND	24	We developed branding and a logo for Terminal Borivaje — an agro terminal in Odesa region. Also print and souvenir products.	124	Terminal Borivaje ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Terminal Borivaje: branding and logo for an agro terminal | ZOND	64				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/ahmad-tea	Сторінка проєкту	укр	500	AHMAD TEA — ZOND	16	Комунікаційна стратегія для британського чайного бренду: дослідження ринку й аудиторії, позиціонування, tone of voice, креативна стратегія та візуальний напрям.	160	AHMAD TEA ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	AHMAD TEA: комунікаційна стратегія чайного бренду | ZOND	56				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/altep	Сторінка проєкту	укр	430	ALTEP — ZOND	12	Оновили бренд і логотип для «Альтеп-Центру» — виробника опалювального обладнання. Також дизайн сайту, презентації та поліграфія.	128	ALTEP ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	ALTEP: оновлення бренду виробника опалення | ZOND	49				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/bit-school	Сторінка проєкту	укр	422	BIT School — ZOND	17	Розробили брендинг, стратегію, фірмовий стиль і логотип для BIT School — школи програмування та конструювання для дітей.	120	BIT School ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	BIT School: брендинг і логотип школи програмування | ZOND	57				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/carbit	Сторінка проєкту	укр	418	Carbit — ZOND	13	Розробили логотип, візуальну айдентику та презентацію для Carbit — сервісу пошуку автомобілів. Також друкована продукція, вебматеріали й відео.	143	Carbit ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Carbit: логотип і айдентика сервісу пошуку авто | ZOND	54				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/digital-residence	Сторінка проєкту	укр	482	Digital Residence — ZOND	24	Розробили логотип, айдентику та брендбук для Digital Residence в Азербайджані. Також 3D-логотип, поліграфія та корпоративна продукція.	134	Digital Residence ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Digital Residence: логотип, айдентика і брендбук | ZOND	55				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/kavlora	Сторінка проєкту	укр	461	KAVLORA — ZOND	14	Розробили стратегію та айдентику для KAVLORA — бренду виробника дерев’яних виробів. Логотип, фірмовий стиль, поліграфія та рекламні носії.	138	KAVLORA ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	KAVLORA: стратегія та айдентика меблевого бренду | ZOND	55				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/kyiv-tourism-department	Сторінка проєкту	укр	468	Київ — місто кожного — ZOND	27	Соціальна кампанія для Управління туризму КМДА: візуальна концепція, міська реклама, digital та промоматеріали.	111	Київ — місто кожного ↗		Замінити title (однаковий у трьох мовах)	Київ, місто кожного: кампанія для Управління туризму | ZOND	59				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/packaging	Сторінка проєкту	укр	456	Упаковка — ZOND	15	Добірка дизайнів упаковки ZOND: харчові продукти, напої, товари для тварин та інші категорії. 20 зображень: 14 робіт і 5 додаткових концептів.	142	Упаковка ↗	дубль title (2 стор.)	Замінити title (однаковий у трьох мовах)	Дизайн упаковки: добірка робіт ZOND для продуктів і напоїв	58				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/tbiliso	Сторінка проєкту	укр	351	Tbiliso — ZOND	14	Провели ребрендинг Tbiliso — грузинського ресторану в Києві: нова айдентика, упаковка, поліграфія, SMM та фірмовий мерч.	120	Tbiliso ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Tbiliso: ребрендинг грузинського ресторану в Києві | ZOND	57				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/projects/terminal-borivaje	Сторінка проєкту	укр	365	Terminal Borivaje — ZOND	24	Розробили брендинг і логотип для Terminal Borivaje — агротермінала в Одеській області. Також поліграфія та сувенірна продукція.	127	Terminal Borivaje ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Terminal Borivaje: брендинг і логотип агротермінала | ZOND	58				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru	Головна	рос	269	ZOND — Branding Agency	22	ZOND — агентство брендинга с 2021 года. Стратегия, айдентика, дизайн, SMM, упаковка, брендбуки и цифровые решения для бизнеса в Украине и мире.	143	ZOND — Branding Agency	дубль title (6 стор.), дубль description, H1 прихований 1x1 px, H1 = title	Замінити title і description; H1 показати на сторінці (п. 6.1)	Брендинговое агентство ZOND: разработка бренда, айдентика | Киев	64	Брендинговое агентство ZOND в Киеве: стратегия, нейминг, логотип, айдентика, брендбук, упаковка и SMM. Работаем с 2021 года, стратегия до результата.	149	Брендинговое агентство ZOND: разработка бренда, айдентика	Під запити, за якими старі головні вже отримували кліки (брендинг агенція, брендинговое агентство, graphic design studio)
-https://zond.agency/ru-blog/brand-identity-basics	Стаття блогу	рос	688	Айдентика бренда: что это и как с ней работать? — ZOND	54	В мире современного бизнеса айдентика бренда играет решающую роль в формировании уникального образа компании, который позволяет ей выделиться среди конкурентов и установить прочные отношения со своей целевой аудиторией.	219	Айдентика бренда: что это и как с ней работать?.	довгий description	Поставити скорочений description (зараз 219 знаків)			Айдентика бренда: что это, из чего состоит и как с ней работать, чтобы компания выделялась среди конкурентов и запоминалась аудитории.	134		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/brandbook-business-success	Стаття блогу	рос	408	Почему брендбук — это основа успеха вашего бизнеса — ZOND	57	В современном мире, где ежедневно растет конкуренция, бизнесу важно не только быть заметным, но и создавать прочную связь с клиентами.	134	Почему брендбук — это основа успеха вашего бизнеса.								
-https://zond.agency/ru-blog/brandbook-checklist	Стаття блогу	рос	553	Что входит в профессиональный брендбук: чеклист для вашего бизнеса — ZOND	73	Профессиональный брендбук – это больше, чем просто набор правил для использования логотипа.	91	Что входит в профессиональный брендбук: чеклист для вашего бизнеса.								
-https://zond.agency/ru-blog/brandbook-for-ecommerce	Стаття блогу	рос	587	Брендбук для e-commerce: как повысить узнаваемость интернет-магазина — ZOND	75	Брендбук — это не просто файл с логотипом и шрифтами. Это полноценная инструкция по использованию твоего бренда в любых условиях.	129	Брендбук для e-commerce: как повысить узнаваемость интернет-магазина.								
-https://zond.agency/ru-blog/brandbook-for-medical	Стаття блогу	рос	465	Брендбук для медицинских учреждений: почему он необходим и какие особенности учесть — ZOND	90	Брендбук для медицинских учреждений имеет свои особенности, отличающие его от аналогичных документов в сфере коммерции, IT или HoReCa.	134	Брендбук для медицинских учреждений: почему он необходим и какие особенности учесть.								
-https://zond.agency/ru-blog/brandbook-for-real-estate	Стаття блогу	рос	531	Брендбук для агентств недвижимости — ZOND	41	Брендбук для агентств недвижимости имеет свои особенности по сравнению с другими сферами бизнеса. Он должен не только отражать стиль компании, но и вызывать ощущение стабильности, надежности и успеха.	200	Брендбук для агентств недвижимости.	довгий description	Поставити скорочений description (зараз 200 знаків)			Брендбук для агентства недвижимости: как отразить стиль компании и вызвать ощущение стабильности и надежности. Особенности и примеры.	133		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/brandbook-for-restaurants	Стаття блогу	рос	399	Брендбук для заведений питания: ключевые особенности и значение — ZOND	70	Брендбук для ресторанов – не просто набор логотипов и цветовых схем. Он определяет общий стиль заведения, его тон общения с гостями, подачу блюд и элементы декора.	163	Брендбук для заведений питания: ключевые особенности и значение.	довгий description	Поставити скорочений description (зараз 163 знаків)			Брендбук для ресторана: не только логотип и цвета, а стиль заведения, тон общения с гостями, подача блюд и декор. Что в него входит.	132		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/brandbook-for-retail	Стаття блогу	рос	379	Брендбук для торговых компаний: важность и ключевые особенности — ZOND	70	Брендбук для розничных магазинов помогает создать уникальный образ торговой точки.	82	Брендбук для торговых компаний: важность и ключевые особенности.								
-https://zond.agency/ru-blog/brandbook-for-sports	Стаття блогу	рос	394	Брендбук для спортивных заведений: ключ к узнаваемости и доверию — ZOND	71	Брендбук – это стратегический документ, который содержит все визуальные и коммуникационные стандарты бренда.	108	Брендбук для спортивных заведений: ключ к узнаваемости и доверию.								
-https://zond.agency/ru-blog/brandbook-for-startup	Стаття блогу	рос	422	Брендбук для стартапа: с чего начать? — ZOND	44	Для молодых компаний, которые только выходят на рынок, создание узнаваемого бренда – это одна из ключевых задач	111	Брендбук для стартапа: с чего начать?.								
-https://zond.agency/ru-blog/brandbook-key-features	Стаття блогу	рос	493	Ключевые особенности брендбука — ZOND	37	Брендбук — это официальный документ компании, который определяет правила использования всех элементов её бренда.	112	Ключевые особенности брендбука.								
-https://zond.agency/ru-blog/brandbook-to-be-or-not	Стаття блогу	рос	486	Брендбук: быть или не быть? — ZOND	34	Преимущества брендбука очевидны. Он помогает сэкономить время и ресурсы, ведь все правила оформления бренда четко прописаны, что упрощает работу дизайнерам и маркетологам.	171	Брендбук: быть или не быть?.	довгий description	Поставити скорочений description (зараз 171 знаків)			Нужен ли брендбук: он экономит время и ресурсы, ведь правила оформления бренда прописаны, а дизайнеры и маркетологи работают по ним.	132		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/branding-key-features	Стаття блогу	рос	482	Брендинг. Ключевые особенности для бизнеса — ZOND	49	Брендинг является важным аспектом для любого бизнеса, поскольку помогает создать уникальный образ и идентичность компании.	122	Брендинг. Ключевые особенности для бизнеса.								
-https://zond.agency/ru-blog/branding-vs-brandbook	Стаття блогу	рос	421	Брендинг и брендбук: чем отличаются? — ZOND	43	Брендинг и брендбук — два понятия, которые часто путают, хотя между ними существует чёткая разница.	99	Брендинг и брендбук: чем отличаются?.								
-https://zond.agency/ru-blog/design-and-marketing	Стаття блогу	рос	444	Дизайн и маркетинг: почему одно без другого невозможно? — ZOND	62	Дизайн и маркетинг — это не параллельные миры, а две половины единого механизма, который запускает восприятие бренда, формирует первое впечатление и влияет на решения клиентов.	176	Дизайн и маркетинг: почему одно без другого невозможно?.	довгий description	Поставити скорочений description (зараз 176 знаків)			Дизайн и маркетинг: две половины одного механизма, который формирует первое впечатление о бренде и влияет на решения клиентов.	126		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/diy-vs-professional-logo	Стаття блогу	рос	698	Сделать логотип самостоятельно или заказать у профессионалов? — ZOND	68	Логотип — это не просто изображение или набор букв. Это символ, который отражает суть вашего бренда, его ценности и уникальность.	129	Сделать логотип самостоятельно или заказать у профессионалов?.								
-https://zond.agency/ru-blog/emblem-vs-logo	Стаття блогу	рос	416	Эмблема и логотип: отличия и сходства — ZOND	44	Логотип и эмблема — два ключевых компонента фирменного стиля, которые компании используют для определения своего бренда и создания узнаваемости среди потребителей.	163	Эмблема и логотип: отличия и сходства.	довгий description	Поставити скорочений description (зараз 163 знаків)			Логотип и эмблема: чем отличаются два ключевых компонента фирменного стиля и какой из них нужен вашему бренду для узнаваемости.	127		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/good-vs-bad-logo	Стаття блогу	рос	472	Что отличает хороший логотип от плохого — ZOND	46	Логотип является визуальным представлением бренда, который выполняет роль идентификатора компании или продукта.	111	Что отличает хороший логотип от плохого.								
-https://zond.agency/ru-blog/how-to-order-logo	Стаття блогу	рос	559	Как правильно заказать логотип — ZOND	37	Создание логотипа — это первый и один из важнейших шагов в построении бренда.	77	Как правильно заказать логотип.								
-https://zond.agency/ru-blog/improve-logo-without-changes	Стаття блогу	рос	696	Как улучшить свой логотип без кардинальных изменений — ZOND	59	Логотип — это неотъемлемая часть любого бренда, лицо компании, которое должно привлекать, вызывать доверие и легко запоминаться.	128	Как улучшить свой логотип без кардинальных изменений.								
-https://zond.agency/ru-blog/logo-evolution	Стаття блогу	рос	866	Эволюция логотипов: от символов до современного дизайна — ZOND	62	Логотипы, какими мы их знаем сегодня, не всегда были такими. Они имеют долгую историю, эволюционировавшую вместе с развитием технологий, культурных и дизайнерских влияний.	171	Эволюция логотипов: от символов до современного дизайна.	довгий description	Поставити скорочений description (зараз 171 знаків)			Эволюция логотипов: как они менялись вместе с технологиями, культурой и дизайном, и что из этой истории полезно современному бренду.	132		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/logo-excess-details	Стаття блогу	рос	431	Что лишнего может быть в логотипе? — ZOND	41	Логотип — это первое впечатление о вашем бренде, поэтому важно, чтобы он был максимально эффективным и простым	110	Что лишнего может быть в логотипе?.								
-https://zond.agency/ru-blog/logo-generator-pros-cons	Стаття блогу	рос	371	Генератор логотипов: преимущества и недостатки — ZOND	53	Логотип — это не только изображение, используемое для идентификации бренда, но и ключевой элемент фирменного стиля. Это символ, который передает ценности, стиль и характер компании.	181	Генератор логотипов: преимущества и недостатки.	довгий description	Поставити скорочений description (зараз 181 знаків)			Логотип из генератора: плюсы и минусы. Почему ключевой элемент фирменного стиля редко получается у автоматического сервиса.	123		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/logos-by-industry	Стаття блогу	рос	590	Чем отличаются логотипы в разных сферах: особенности дизайна под каждую отрасль — ZOND	86	Логотип — это визуальный код бренда. Его форма, стиль, цвет и шрифт — не случайны. Они отражают не только характер компании, но и правила игры в конкретной сфере.	162	Чем отличаются логотипы в разных сферах: особенности дизайна под каждую отрасль.	довгий description	Поставити скорочений description (зараз 162 знаків)			Логотип как визуальный код бренда: почему форма, стиль, цвет и шрифт зависят от сферы бизнеса и какие правила действуют в каждой отрасли.	137		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/long-term-agency-relationship	Стаття блогу	рос	628	Как построить долгосрочные отношения с брендинговым агентством — ZOND	69	Успешный бренд не появляется за одну ночь. Это результат глубокой работы, десятков решений, постоянных правок и доверия.	120	Как построить долгосрочные отношения с брендинговым агентством.								
-https://zond.agency/ru-blog/marketing-360	Стаття блогу	рос	568	Маркетинг 360 для вашего бизнеса — ZOND	39	В современном мире, где конкуренция постоянно растет, важно иметь сильную маркетинговую стратегию, которая поможет выделиться среди других.	139	Маркетинг 360 для вашего бизнеса.								
-https://zond.agency/ru-blog/naming-guide	Стаття блогу	рос	504	Все про нейминг бизнеса и бренда — ZOND	39	Нейминг является важным элементом в процессе создания бренда, играющего ключевую роль в формировании первого впечатления о бизнесе.	131	Все про нейминг бизнеса и бренда.								
-https://zond.agency/ru-blog/ordering-a-logo-tips	Стаття блогу	рос	394	Как заказать разработку логотипа: советы профессионалов — ZOND	62	Логотип – это не только символ, идентифицирующий бренд, но и ключевой элемент фирменного стиля. Он отражает ценности, стиль и особенности компании, а также помогает привлечь внимание новых клиентов.	198	Как заказать разработку логотипа: советы профессионалов.	довгий description	Поставити скорочений description (зараз 198 знаків)			Как заказать логотип: что он должен отражать, на что смотреть при выборе исполнителя и как сохранить ценности и стиль компании.	127		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/packaging-design-benefits	Стаття блогу	рос	416	Как продуманный дизайн упаковки помогает продукту и бизнесу — ZOND	66	Дизайн упаковки, или упаковка, играет решающую роль в современном бизнесе. Он не только обеспечивает сохранность товара.	120	Как продуманный дизайн упаковки помогает продукту и бизнесу.								
-https://zond.agency/ru-blog/packaging-design-trends	Стаття блогу	рос	788	Современные решения в дизайне упаковки: инновации и тренды — ZOND	65	Упаковка давно стала неотъемлемой частью маркетинговой стратегии компаний. Это не только средство для защиты продукта, но и мощный инструмент для привлечения внимания потребителей.	180	Современные решения в дизайне упаковки: инновации и тренды.	довгий description	Поставити скорочений description (зараз 180 знаків)			Тренды дизайна упаковки: упаковка защищает продукт и привлекает внимание покупателя. Какие решения работают на полке сегодня.	125		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/role-of-branding-agency	Стаття блогу	рос	618	Роль брендингового агентства в вашем бизнесе — ZOND	51	В современном бизнесе, где конкуренция становится всё более жёсткой, успешное позиционирование на рынке является одним из ключевых факторов для выживания и роста компании.	171	Роль брендингового агентства в вашем бизнесе.	довгий description	Поставити скорочений description (зараз 171 знаків)			Роль брендингового агентства: как позиционирование помогает компании выжить и расти на рынке с все более жесткой конкуренцией.	126		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/top-5-reasons-invest-branding	Стаття блогу	рос	655	Топ-5 причин не экономить на брендинге — ZOND	45	Брендинг — это не про логотип и не про красивую обёртку. Это о том, как ваш бизнес воспринимают, запоминают и с ним взаимодействуют.	132	Топ-5 причин не экономить на брендинге.								
-https://zond.agency/ru-blog/what-is-a-brandbook	Стаття блогу	рос	793	Что такое брендбук и кому он нужен? — ZOND	42	В современном мире, где конкуренция жесткая, а внимание потребителей рассредоточено, брендбук становится незаменимым инструментом для любой компании, стремящейся к успеху.	171	Что такое брендбук и кому он нужен?.	довгий description	Поставити скорочений description (зараз 171 знаків)			Что такое брендбук и зачем он компании: инструмент, который делает бренд последовательным на всех носителях и удерживает внимание клиентов.	139		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/what-is-a-logo	Стаття блогу	рос	556	Логотип: что это, зачем он нужен и каким он бывает — ZOND	57	Логотип — это больше, чем просто картинка. Это первое, что видит человек при знакомстве с брендом. Это то, что остаётся в памяти, вызывает эмоции и формирует доверие.	166	Логотип: что это, зачем он нужен и каким он бывает.	довгий description	Поставити скорочений description (зараз 166 знаків)			Что такое логотип: первое, что видит человек при знакомстве с брендом. Что остается в памяти, вызывает эмоции и формирует доверие.	130		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-blog/what-is-branding-agency	Стаття блогу	рос	533	Брендинговое агентство: что это, чем занимается и чем может помочь бизнесу — ZOND	81	В условиях жесткой конкуренции и информационного шума выделиться становится всё сложнее. Именно поэтому всё больше компаний обращаются к брендинговым агентствам — профессиональным партнёрам, которые помогают построить сильный, узнаваемый бренд.	244	Брендинговое агентство: что это, чем занимается и чем может помочь бизнесу.	довгий description	Поставити скорочений description (зараз 244 знаків)			Что такое брендинговое агентство и чем оно помогает: партнер, который строит сильный узнаваемый бренд там, где выделиться все сложнее.	134		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru-projects/ahmad-tea	Сторінка проєкту	рос	500	AHMAD TEA — ZOND	16	Коммуникационная стратегия для британского чайного бренда: исследование рынка и аудитории, позиционирование, tone of voice, креативная стратегия и визуальное направление.	170	AHMAD TEA ↗	дубль title (3 стор.), довгий description	Замінити title (однаковий у трьох мовах) і поставити скорочений description (зараз 170 знаків)	AHMAD TEA: коммуникационная стратегия чайного бренда | ZOND	59	Коммуникационная стратегия для британского чайного бренда: исследование рынка и аудитории, позиционирование, tone of voice и визуальное направление.	148		H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі
-https://zond.agency/ru-projects/altep	Сторінка проєкту	рос	428	ALTEP — ZOND	12	Обновили бренд и логотип для «Альтеп-Центра» — производителя отопительного оборудования. Также дизайн сайта, презентации и полиграфия.	134	ALTEP ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	ALTEP: обновление бренда производителя отопления | ZOND	55				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/bit-school	Сторінка проєкту	рос	423	BIT School — ZOND	17	Разработали брендинг, стратегию, фирменный стиль и логотип для BIT School — школы программирования и конструирования для детей.	127	BIT School ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	BIT School: брендинг и логотип школы программирования | ZOND	60				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/carbit	Сторінка проєкту	рос	416	Carbit — ZOND	13	Разработали логотип, визуальную айдентику и презентацию для Carbit — сервиса поиска автомобилей. Также печатная продукция, веб-материалы и видео.	145	Carbit ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Carbit: логотип и айдентика сервиса поиска авто | ZOND	54				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/digital-residence	Сторінка проєкту	рос	483	Digital Residence — ZOND	24	Разработали логотип, айдентику и брендбук для Digital Residence в Азербайджане. Также 3D-логотип, полиграфия и корпоративная продукция.	135	Digital Residence ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Digital Residence: логотип, айдентика и брендбук | ZOND	55				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/kavlora	Сторінка проєкту	рос	459	KAVLORA — ZOND	14	Разработали стратегию и айдентику для KAVLORA — бренда производителя деревянных изделий. Логотип, фирменный стиль, полиграфия и рекламные носители.	147	KAVLORA ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	KAVLORA: стратегия и айдентика мебельного бренда | ZOND	55				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/kyiv-tourism-department	Сторінка проєкту	рос	469	Киев — город каждого — ZOND	27	Социальная кампания для Управления туризма КГГА: визуальная концепция, городская реклама, digital и промоматериалы.	115	Киев — город каждого ↗		Замінити title (однаковий у трьох мовах)	Киев, город каждого: кампания для Управления туризма | ZOND	59				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/packaging	Сторінка проєкту	рос	448	Упаковка — ZOND	15	Подборка дизайнов упаковки ZOND: продукты питания, напитки, товары для животных и другие категории. 20 изображений: 14 работ и 5 концептов.	139	Упаковка ↗	дубль title (2 стор.)	Замінити title (однаковий у трьох мовах)	Дизайн упаковки: подборка работ ZOND для продуктов и напитков	61				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/tbiliso	Сторінка проєкту	рос	350	Tbiliso — ZOND	14	Провели ребрендинг Tbiliso — грузинского ресторана в Киеве: новая айдентика, упаковка, полиграфия, SMM и фирменный мерч.	120	Tbiliso ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Tbiliso: ребрендинг грузинского ресторана в Киеве | ZOND	56				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru-projects/terminal-borivaje	Сторінка проєкту	рос	358	Terminal Borivaje — ZOND	24	Разработали брендинг и логотип для Terminal Borivaje — агротерминала в Одесской области. Также полиграфия и сувенирная продукция.	129	Terminal Borivaje ↗	дубль title (3 стор.)	Замінити title (однаковий у трьох мовах)	Terminal Borivaje: брендинг и логотип агротерминала | ZOND	58				H1 «назва проєкту» лишається як є, стрілка вже в окремому елементі. Description лишається
-https://zond.agency/ru/blog-ru	Список статей	рос	979	Блог — ZOND	11	Статьи о брендинге, логотипах, брендбуках, дизайне упаковки и маркетинге от агентства ZOND.	91	Блог.	дубль title (2 стор.)	Замінити title (однаковий на українському і російському списку)	Блог о брендинге, логотипах и брендбуках | ZOND	47				Description лишається
-https://zond.agency/ru/cases	Список проєктів	рос	75	Проекты — ZOND	14	Кейсы и реализованные проекты дизайн-студии ZOND: брендинг, айдентика, упаковка, SMM и digital.	95	Проекты.								
-https://zond.agency/ru/contact	Контакти	рос	100	Контакты — ZOND	15	Свяжитесь с брендинговым агентством ZOND: email, телефон, Telegram и соцсети. Обсудим ваш проект.	97	Контакты.								
-https://zond.agency/ru/home	Дубль головної	рос	269	ZOND — Branding Agency	22	ZOND — агентство брендинга с 2021 года. Стратегия, айдентика, дизайн, SMM, упаковка, брендбуки и цифровые решения для бизнеса в Украине и мире.	143	ZOND — Branding Agency	дубль title (6 стор.), дубль description, H1 прихований 1x1 px, H1 = title, дубль головної	Адреса йде на постійну переадресацію на головну (п. 1.3)						Готових значень не потрібно
-https://zond.agency/ru/policy-ru	Політика	рос	176	Политика конфиденциальности — ZOND	34	Политика конфиденциальности брендингового агентства ZOND: какие данные мы собираем, как их используем и защищаем.	113	Политика конфиденциальности								
-https://zond.agency/ru/services	Список послуг	рос	416	Наши услуги | Студия графического дизайна ZOND	46	Услуги дизайн-студии ZOND: брендинг, логотип, айдентика, брендбук, ребрендинг, SMM, упаковка, графика, иллюстрация и маркетинг 360.	131	Комплексные решения для вашего бренда								
-https://zond.agency/ru/services/brand-character	Сторінка послуги	рос	1269	Персонаж бренда: создание маскота — ZOND	40	Создаём персонажей бренда: идея, характер, силуэт, эмоции, 2D или 3D образ, носители и гайд для команды.	104	У бренда может быть лицо. И характер.								
-https://zond.agency/ru/services/brandbook	Сторінка послуги	рос	1315	Брендбук — разработка брендбука — ZOND	38	Разработка брендбука: правила логотипа, цветов, шрифтов, графики и носителей. Создаём брендбуки, сохраняющие целостность бренда в каждой точке контакта.	152	Брендбук Разработка брендбука								
-https://zond.agency/ru/services/branding	Сторінка послуги	рос	1499	Разработка бренда и брендинг для бизнеса — ZOND	47	Разработка бренда для бизнеса: стратегия, позиционирование, нейминг, логотип, айдентика, брендбук и коммуникация.	113	Разработка бренда и брендинг для бизнеса.								
-https://zond.agency/ru/services/communication	Сторінка послуги	рос	1252	Слоган и коммуникация бренда — ZOND	35	Разрабатываем слоганы и коммуникацию бренда: главная идея, тон голоса, ключевые сообщения и принципы для разных каналов.	120	Говорите так, чтобы вас узнавали.								
-https://zond.agency/ru/services/graphics	Сторінка послуги	рос	1276	Графический дизайн для бизнеса — полиграфия и реклама | ZOND	60	Графический дизайн: полиграфия, наружная реклама, презентации, технический дизайн и подготовка к печати. Делаем бренд узнаваемым на каждом носителе. Студия ZOND.	161	Графика Графический дизайн для бизнеса	довгий description	Поставити скорочений description (зараз 161 знаків)			Графический дизайн: полиграфия, наружная реклама, презентации, технический дизайн и подготовка к печати. Бренд узнаваем на каждом носителе. ZOND.	145		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru/services/identity	Сторінка послуги	рос	1192	Айдентика и фирменный стиль для бизнеса — ZOND	46	Разрабатываем айдентику бренда: логотип, цвета, типографику, графическую систему, носители и гайдлайн. Фирменный стиль от ZOND.	127	Айдентика, которая работает везде — её узнают.								
-https://zond.agency/ru/services/illustration	Сторінка послуги	рос	1197	Создать коммерческую иллюстрацию на заказ - Цена иллюстратора | ZOND	68	Стоковые картинки забывают сразу. Коммерческая иллюстрация на заказ. Персонажи, комиксы и графика для упаковки, сайта и рекламы. Студия ZOND.	141	Иллюстрация Коммерческая иллюстрация на заказ								
-https://zond.agency/ru/services/influence-marketing	Сторінка послуги	рос	1183	Инфлюенс маркетинг — реклама у блогеров в Украине | ZOND	56	Инфлюенс маркетинг: подбор блогеров, кампании в Instagram, TikTok, YouTube и Telegram, аналитика результатов. Реклама у блогеров под ваш бюджет. Студия ZOND.	157	Инфлюенс маркетинг Реклама у блогеров, которой доверяют								
-https://zond.agency/ru/services/logo	Сторінка послуги	рос	1325	Дизайн логотипов — разработка логотипа для компании — ZOND	58	Разработка логотипа для компании: авторский дизайн, палитра цветов, logobook и пакет файлов. Создаём логотипы, которые легко узнать и сложно забыть.	148	Дизайн логотипов Разработка логотипа для компании								
-https://zond.agency/ru/services/marketing-360	Сторінка послуги	рос	99	Marketing 360 — ZOND	20	Комплексный маркетинг для бренда от агентства ZOND.	51	Marketing 360.	дубль title (3 стор.), короткий description	Поставити готовий description (зараз 51 знаків)			Маркетинг 360 от ZOND: стратегия, контент, SMM, реклама и дизайн для бренда одним подрядчиком. Полный цикл продвижения под ваш рынок и бюджет.	142		Текст написали ми зараз (у серпневому файлі цієї версії немає)
-https://zond.agency/ru/services/naming	Сторінка послуги	рос	1398	Нейминг: создание названия бренда и продукта — ZOND	51	Разрабатываем названия для компаний, продуктов и сервисов: исследование, креативные направления, языковой отбор и рекомендации к запуску.	137	Название, которое говорит за бренд.								
-https://zond.agency/ru/services/packaging	Сторінка послуги	рос	1256	Дизайн упаковки и этикетки — ZOND	33	Дизайн упаковки и этикетки: концепция, 3D-мокапы, адаптации для SKU и макеты, готовые к печати. Создаём упаковки, которые привлекают внимание и продают на полке.	161	Дизайн упаковки Дизайн упаковки и этикетки	довгий description	Поставити скорочений description (зараз 161 знаків)			Дизайн упаковки и этикетки: концепция, 3D-мокапы, адаптации для SKU и макеты, готовые к печати. Упаковка, которая привлекает внимание на полке.	143		Google показує близько 155-160 знаків і обрізає решту; скорочений варіант написали ми
-https://zond.agency/ru/services/positioning	Сторінка послуги	рос	1266	Позиционирование бренда для бизнеса — ZOND	42	Разрабатываем позиционирование бренда: исследование бизнеса, рынка и аудитории, ценностное предложение и ключевые сообщения.	124	Найдём место вашего бренда в сознании людей.								
-https://zond.agency/ru/services/rebranding	Сторінка послуги	рос	97	Ребрендинг — ZOND	17	Ребрендинг от агентства ZOND.	29	Ребрендинг.	дубль title (2 стор.), короткий description	Поставити готовий description (зараз 29 знаків)			Обновить бренд и не потерять своих клиентов реально. Ребрендинг компании и редизайн логотипа. Аудит, позиционирование, план перехода. Кейсы ZOND, Киев.	151		Узгоджене значення з файлу «Мета-теги сторінок послуг» (серпень); ставимо незалежно від рішення по 5.4, бо нинішній опис 29 знаків
-https://zond.agency/ru/services/smm	Сторінка послуги	рос	1333	SMM-продвижение — социальные сети для бизнеса | ZOND	52	SMM-продвижение: стратегия, контент, Tone of Voice, управление репутацией и визуальный стиль в Facebook, Instagram, Telegram и YouTube. Студия ZOND.	148	SMM Продвижение в социальных сетях								
-https://zond.agency/ru/services/web-development	Сторінка послуги	рос	1220	Веб-разработка и создание сайтов для бизнеса — ZOND	51	Создаём сайты для бизнеса: стратегия, структура, дизайн, адаптивная веб-разработка, тестирование и запуск. Веб-разработка от ZOND.	130	Сайт, который работает на ваш бизнес.								
-https://zond.agency/services	Список послуг	укр	414	Наші послуги | Студія графічного дизайну ZOND	45	Послуги дизайн-студії ZOND: брендинг, логотип, айдентика, брендбук, ребрендинг, SMM, упаковка, графіка, ілюстрація та маркетинг 360.	132	Комплексні рішення для вашого бренду								
+Мета-теги
+Title: Ребрендинг компанії та редизайн бренду, ціна | ZOND, Київ
+Description: Оновити бренд і не втратити своїх клієнтів реально. Ребрендинг
+компанії та редизайн айдентики. Аудит, позиціонування, план переходу. Кейси
+ZOND, Київ.
+1. Перший екран
+Ребрендинг
+
+Ребрендинг компанії та оновлення бренду
+Оновлюємо бренд так, щоб клієнти впізнали вас у новому вигляді й
+лишились з вами.
+2. Цифри компанії
+Цифри студії
+ 6 років на ринку
+ 50+ проєктів бренду
+ 6 людей у команді
+ 30+ ніш ринку
+ 6 країн роботи
+3. Для кого ця послуга
+Кому потрібен ребрендинг
+ Застарілий фірмовий стиль
+ Зміна вектора розвитку
+ Злиття або оновлення
+ Втрата позицій у ніші
+4. Що входить
+Що ви отримаєте
+ Аудит бренду й носіїв
+ Аналіз ринку й конкурентів
+ Оновлене позиціонування
+ Редизайн логотипа
+ Оновлення айдентики
+ Палітра, шрифти, графіка
+ Брендбук і гайдлайни
+ Вихідні файли AI, EPS, PDF, SVG і PNG
+
+5. H2
+Вартість
+Від 45 000 грн, термін 10-20 робочих днів.
+Що входить у роботу
+Аудит бренду
+Редизайн логотипа
+Оновлення айдентики
+Позиціонування
+Стратегія переходу
+Суму рахуємо після брифу, бо обсяг залежить від кількості носіїв.
+6. H2
+Кейси ребрендингу
+Три кейси з назвою проєкту (до 20 символів) та нішею клієнта (до 18 символів).
+Назви проєктів і ніші дає ZOND, зображення й теги тягне CMS.
+7. H2
+Етапи роботи
+01. Аудит та аналітика
+Досліджуємо ринок і сприйняття бренду.
+2-3 дні
+02. Стратегія
+Коригуємо позиціонування та ідею.
+3-5 днів
+03. Концепція
+Редизайн логотипа, шрифти, кольори.
+2-3 дні
+04. Презентація
+Демонстрація на носіях і збірка брендбука.
+2-3 дні
+05. Впровадження
+Адаптація під друк і digital.
+1-2 дні
+8. Хто веде проєкт
+
+Хто веде ваш ребрендинг
+Стратег
+Позиціонування, ринок і аудиторія.
+Арт-директор
+Візуальна ідея і якість макетів.
+Проєктний менеджер
+Терміни, узгодження і зв&#39;язок з вами.
+9. H2
+Чому ZOND
+Глибокий аудит
+Аналізуємо ринок і помилки старого стилю до старту.
+Спадковість
+Зберігаємо впізнавані елементи для вашої аудиторії.
+Безшовний перехід
+Даємо покроковий план впровадження на всі носії.
+Готова система
+Передаємо брендбук із гайдлайнами і шаблони носіїв.
+Чому ZOND, а не фриланс чи генератор?
+Критерій ZOND Фриланс Генератор (AI)
+Що на вході Аудит і дані Бриф клієнта Текстовий запит
+Обсяг роботи Уся система Окремі макети Один знак
+План переходу Входить За домовленістю Немає
+Права За договором За договором За ліцензією
+10. H2
+Відгуки
+Тексти відгуків дає клієнт.
+11. Форма заявки
+Час оновити свій бренд
+Залиште заявку, і ми почнемо з безкоштовної консультації.
+12. H2
+
+Часті питання
+Що таке ребрендинг компанії?
+Ребрендинг це зміна бренду на рівні сенсів. Компанія наново вирішує, для кого
+працює і що обіцяє ринку, а логотип, фірмовий стиль і комунікація змінюються
+слідом за цим рішенням. Косметичне оновлення знака ребрендингом не
+вважається.
+Коли компанії потрібен ребрендинг?
+Образ бренду починає стримувати бізнес, коли компанія виросла, змінила продукт
+чи цільову аудиторію, вийшла в інший ціновий сегмент, а виглядає як раніше.
+Другий привід це злиття, поділ або втрата позицій поруч із конкурентами.
+Навіщо компанії робити ребрендинг?
+Щоб бренд знову працював на продажі. Оновлений образ повертає компанії
+актуальність, відкриває нову аудиторію, дозволяє обґрунтувати вищий чек і зводить
+усі рекламні канали до одного вигляду. Ще він полегшує найм людей.
+Чим ребрендинг відрізняється від редизайну чи рестайлінгу?
+Рестайлінг чистить наявний знак, редизайн перемальовує логотип, і сенси при
+цьому лишаються старими. Ребрендинг починається з позиціонування, тому він
+довший і дорожчий, зате після нього компанію сприймають так, як вона хоче.
+Які є етапи ребрендингу?
+У ZOND їх пʼять. Аудит та аналітика, стратегія, концепція з редизайном логотипа,
+презентація на носіях зі збіркою брендбука, впровадження під друк і digital. Кожен
+етап закривається погодженням, тому наступний крок не переробляє попередній.
+Скільки коштує ребрендинг?
+Ціна залежить від глибини аудиту, кількості носіїв, кількості концептів логотипа і від
+того, чи змінюється назва компанії, а оновлення знака та правил і повний
+ребрендинг зі стратегією коштують по-різному. Розрахунок даємо після брифу.
+Скільки часу займає ребрендинг компанії?
+У середньому від 3 до 6 тижнів залежно від обсягу носіїв. Термін росте від
+польового дослідження аудиторії, від великої кількості носіїв і від того, скільки
+людей з вашого боку погоджують результат. Точний строк ставимо в кошторис до
+старту.
+Чи не втратимо ми клієнтів після зміни бренду?
+Ні. Впізнавані елементи бренду зберігаємо, нові носії вводимо чергами протягом
+кількох тижнів і готуємо текст пояснення для аудиторії. Клієнт має впізнати вас у
+новому вигляді. Найбільше втрачають ті, хто змінює все одразу й мовчки.
+13. Суміжні послуги
+Наскрізний блок, збирається на бекенді. Копірайтер тут нічого не пише.
+
+SEO-текст під спойлером
+Що таке ребрендинг і чим він відрізняється від рестайлінгу
+Ребрендинг це зміна бренду на рівні сенсів, і саме цим він відрізняється від сусідніх
+термінів. Компанія наново відповідає, для кого вона працює, що обіцяє ринку і чим
+відрізняється від конкурентів, а вже під це рішення підбирають знак, стиль і тон
+розмови.
+Рестайлінг чіпає тільки візуальний шар. Знак лишається впізнаваним, а
+позиціонування та назва стоять на місці. Редизайн логотипа ще вужчий, там
+перемальовується один елемент, і решта фірмового стилю лишається як була.
+Плутанина в термінах коштує грошей. Бізнес замовляє знак, хоча його стримує
+застаріле позиціонування. Тому ми починаємо з аудиту й показуємо, який обсяг
+справді потрібен компанії.
+Коли бізнесу потрібен ребрендинг
+Оновлення потрібне тоді, коли образ бренду починає заважати бізнесу. Усередині
+компанія вже інша, а зовні виглядає так, як десять років тому.
+Типові ситуації, у яких приходять за такою роботою.
+ злиття, поділ або зміна структури компанії;
+ вихід у новий сегмент чи на іноземний ринок;
+ зміна продукту, ціни або цільової аудиторії;
+ фірмовий стиль виглядає застаріло поруч з конкурентами;
+ маркетинговий матеріал зібраний із різних макетів.
+Є й зворотний випадок. Продажі впали через ціну, сервіс або сам продукт, і новий
+знак цього не виправить. Аудит на старті відділяє проблему бренду від проблеми
+бізнесу.
+Від чого залежить вартість ребрендингу
+Фіксованої ціни немає, бо обсяг у двох компаній одного розміру може відрізнятися
+вдвічі. На розрахунок впливають кілька речей.
+ глибина аудиту, від кабінетного до опитування клієнтів;
+ зміна назви, бо неймінг це окремий блок робіт;
+ кількість концептів логотипа, які ми показуємо;
+ кількість носіїв, від упаковки до вивіски й соцмереж;
+ глибина брендбука, від базових правил до повного документа;
+ кількість раундів правок і людей, які погоджують результат.
+Через це кошторис збирається під конкретний проєкт. Компанії, якій треба оновити
+знак і правила його використання, немає сенсу платити за дослідження ринку.
+
+Мережі з десятками точок, навпаки, мало самого знака, бо основна робота там у
+носіях.
+На бюджет впливає і стан документів. З готовим брендбуком і вихідниками знака
+робота починається одразу. Якщо макети зібрані по папках різних підрядників,
+роботу відкриває інвентаризація файлів.
+Як пройти перехід на новий бренд і не втратити клієнтів
+Головний страх звучить однаково. Нас перестануть впізнавати. Ризик реальний і
+керований. Перше правило це спадковість. У новому знакові зберігають те, за чим
+компанію запамʼятали, від кольору до характерної деталі.
+Друге правило це черговість. Носії міняють групами. Спершу вивіска, сайт,
+упаковка й соцмережі, далі реклама, потім документація. Одночасна заміна всього
+коштує дорого.
+Третє правило це розмова з аудиторією. Зміну пояснюють простими словами. Що
+змінилось, чому і що це дає клієнту. Мовчазне оновлення сприймається як зміна
+власника, тому тексти ми готуємо разом із планом переходу.
+З якими послугами поєднують ребрендинг
+Ця робота рідко буває окремою задачею. Якщо бренд оновлюється повністю,
+першим кроком іде розробка бренду, бо стратегія задає межі, у яких далі працює
+дизайн. Якщо відстала тільки візуальна частина, потрібна лише розробка логотипу
+з адаптацією носіїв.
+Після затвердження нового стилю правила збирають у брендбук. Підрядники й нові
+співробітники беруть готовий документ замість власних версій знака.
+Далі йде впровадження на носіях і залучення аудиторії. Свіжий імідж без реклами
+побачить лише той, хто й так вас знає, тому план переходу стикують з рекламною
+кампанією, і впізнаваність росте швидше.
+
+РОСІЙСЬКА ВЕРСІЯ СТОРІНКИ, https://www.zond.agency/ru/services/rebranding
+Мета-теги
+Title: Ребрендинг компании и редизайн бренда, цена | ZOND, Киев
+Description: Обновить бренд и не потерять своих клиентов реально. Ребрендинг
+компании и редизайн айдентики. Аудит, позиционирование, план перехода. Кейсы
+ZOND, Киев.
+1. Первый экран
+Ребрендинг
+
+Заказать ребрендинг компании
+Обновляем бренд так, чтобы клиенты узнали вас в новом виде и
+остались с вами.
+2. Цифры компании
+Цифры студии
+ 6 лет на рынке
+ 50+ проектов бренда
+ 6 человек в штате
+ 30+ ниш рынка
+ 6 стран работы
+3. Для кого эта услуга
+Кому нужен ребрендинг
+ Устарел фирменный стиль
+ Смена вектора развития
+ Слияние или обновление
+ Потеря позиций в нише
+4. Что входит
+Что вы получите
+ Аудит бренда и носителей
+ Анализ рынка и конкурентов
+ Обновленное позиционирование
+ Редизайн логотипа
+ Обновление айдентики
+ Палитра, шрифты, графика
+
+ Брендбук и гайдлайны
+ Исходные файлы AI, EPS, PDF, SVG и PNG
+5. H2
+Стоимость ребрендинга
+От 45 000 грн, срок 10-20 рабочих дней.
+Что входит в работу
+Аудит бренда
+Редизайн логотипа
+Обновление айдентики
+Позиционирование
+Стратегия перехода
+Сумму считаем после брифа, потому что объем зависит от числа носителей.
+6. H2
+Кейсы ребрендинга
+Три кейса с названием проекта (до 20 символов) и нишей клиента (до 18
+символов). Названия проектов и ниши дает ZOND, изображения и теги тянет CMS.
+7. H2
+Этапы работы
+01. Аудит и аналитика
+Исследуем рынок и восприятие бренда.
+2-3 дня
+02. Стратегия
+Корректируем позиционирование и идею.
+3-5 дней
+03. Концепция
+Редизайн логотипа, шрифты, цвета.
+2-3 дня
+04. Презентация
+Показ на носителях и сборка брендбука.
+2-3 дня
+05. Внедрение
+Адаптация под печать и digital.
+1-2 дня
+
+8. Кто ведет проект
+Кто ведет ваш ребрендинг
+Стратег
+Позиционирование, рынок и аудитория.
+Арт-директор
+Визуальная идея и качество макетов.
+Проектный менеджер
+Сроки, согласования и связь с вами.
+9. H2
+Почему ZOND
+Глубокий аудит
+Анализируем рынок и ошибки старого стиля до старта.
+Преемственность
+Сохраняем узнаваемые элементы для вашей аудитории.
+Бесшовный переход
+Даем пошаговый план внедрения на все носители.
+Готовая система
+Передаем брендбук с гайдлайнами и шаблоны носителей.
+Почему ZOND, а не фриланс или генератор?
+Критерий ZOND Фриланс Генератор (AI)
+Что на входе Аудит и данные Бриф клиента Текстовый запрос
+Объем работы Вся система Отдельные
+макеты
+
+Один знак
+
+План перехода Входит По
+
+договоренности
+Нет
+Права По договору По договору По лицензии
+10. H2
+Отзывы
+Тексты отзывов дает клиент.
+11. Форма заявки
+
+Пора обновить свой бренд
+Оставьте заявку, и мы начнем с бесплатной консультации.
+12. H2
+Частые вопросы
+Что такое ребрендинг компании?
+Ребрендинг это смена бренда на уровне смыслов. Компания заново решает, для
+кого работает и что обещает рынку, а логотип, фирменный стиль и коммуникация
+меняются следом за этим решением. Косметическое обновление знака сюда не
+относится.
+Когда компании нужен ребрендинг?
+Когда образ бренда начинает сдерживать бизнес. Компания выросла, сменила
+продукт или целевую аудиторию, вышла в другой ценовой сегмент, а выглядит по-
+прежнему. Второй повод это слияние, разделение или потеря позиций рядом с
+конкурентами.
+Чем ребрендинг отличается от редизайна и рестайлинга?
+Рестайлинг чистит существующий знак, редизайн перерисовывает логотип, и
+смыслы при этом остаются старыми. Ребрендинг начинается с позиционирования,
+поэтому он дольше и дороже, зато после него компанию воспринимают так, как она
+хочет.
+Сколько стоит ребрендинг компании?
+Цена зависит от глубины аудита, количества носителей, числа концептов логотипа
+и от того, меняется ли название компании. Обновление знака с правилами и
+полный ребрендинг со стратегией стоят по-разному. Расчет даем после брифа.
+От чего зависит стоимость ребрендинга?
+Основных факторов шесть. Глубина аудита, смена названия, число концептов
+логотипа, количество носителей, объем брендбука и число раундов правок.
+Каждый из них мы показываем в смете отдельной строкой.
+Сколько стоит редизайн логотипа отдельно?
+Отдельный редизайн логотипа обходится дешевле полного ребрендинга, потому
+что стратегия и исследование рынка в него не входят. Такой вариант подходит,
+если позиционирование компанию устраивает и устарел только визуальный образ.
+Сколько времени занимает ребрендинг?
+В среднем от 3 до 6 недель в зависимости от объема носителей. Срок растет от
+полевого исследования аудитории, от большого количества носителей и от того,
+сколько человек с вашей стороны согласуют результат.
+Не потеряем ли мы клиентов после смены бренда?
+
+Нет. Узнаваемые элементы бренда сохраняем, новые носители вводим очередями
+в течение нескольких недель и готовим текст объяснения для аудитории. Клиент
+должен узнать вас в новом виде. Больше всего теряют те, кто меняет все сразу и
+молча.
+13. Смежные услуги
+Сквозной блок, собирается на бэкенде. Копирайтер тут ничего не пишет.
+SEO-текст під спойлером
+От чего зависит стоимость ребрендинга
+Фиксированной цены нет, потому что объем у двух компаний одного размера
+может отличаться вдвое. На расчет влияет несколько вещей.
+ глубина аудита, от кабинетного до опроса клиентов;
+ смена названия, ведь нейминг это отдельный блок;
+ число концептов логотипа, которые мы показываем;
+ количество носителей, от упаковки до вывески;
+ объем брендбука, от базовых правил до полного;
+ число раундов правок и людей на согласовании.
+Поэтому смета собирается под конкретный проект. Компании, которой нужно
+обновить знак и правила, незачем платить за исследование рынка. А сети с
+десятками точек одним знаком не обойтись, там основная работа в носителях.
+Что такое ребрендинг и чем он отличается от рестайлинга
+Ребрендинг это смена бренда на уровне смыслов, и этим он отличается от
+соседних терминов. Компания заново отвечает, кто ее покупатель, какое обещание
+она дает рынку и в чем ее отличие от конкурентов, а знак и тон разговора
+подбирают уже под этот ответ.
+Рестайлинг работает только с визуальным слоем. Название и позиционирование
+при этом не меняются, знак просто приводят в порядок. Редизайн логотипа еще
+уже, там перерисовывается один элемент, а остальной стиль остается прежним.
+Когда бизнесу нужен ребрендинг
+Обновление нужно тогда, когда образ бренда мешает бизнесу. Внутри компания
+уже другая, целевая аудитория сменилась, а снаружи все выглядит так, как десять
+лет назад.
+Типичные ситуации, в которых приходят за такой работой.
+ слияние, разделение или смена структуры компании;
+ выход в новый сегмент или на зарубежный рынок;
+ смена продукта, цены или целевой аудитории;
+ фирменный стиль устарел рядом с конкурентами;
+
+ маркетинговый материал собран из разных макетов.
+Есть и обратный случай. Продажи упали из-за цены или самого продукта, и новый
+знак этого не исправит. Ради этого и нужен аудит в самом начале, он показывает,
+где именно сбой.
+Как перейти на новый бренд и не потерять клиентов
+Заказчики спрашивают об одном и том же. Нас перестанут узнавать. Управляется
+это преемственностью. В новом знаке остается то, по чему компанию запомнили,
+от цвета до характерной детали.
+Дальше работает очередность. Носители меняют группами. Сначала вывеска,
+сайт, упаковка и соцсети, потом реклама и документация.
+Остается объяснение для аудитории. Молчаливое обновление воспринимается как
+смена владельца, поэтому тексты для сайта и рассылки мы готовим вместе с
+планом перехода.
+Заказать ребрендинг в Киеве и по Украине
+Студия ZOND работает в Киеве, а проекты ведет по всей Украине. Услуги
+ребрендинга заказывают и на отдельный блок работ, и на весь объем сразу. Чем
+агентство отличается от одиночного исполнителя, показано в таблице.
+Если бренд обновляется полностью, первым шагом идет разработка бренда, ведь
+стратегия задает границы для дизайна. Если отстала только визуальная часть,
+нужна лишь разработка логотипа, а правила собирают в брендбук.
+Дальше идет внедрение на носителях и привлечение аудитории. Свежий имидж
+без рекламы увидит только тот, кто и так вас знает, поэтому план перехода
+стыкуют с кампанией.

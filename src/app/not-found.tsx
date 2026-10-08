@@ -1,23 +1,25 @@
 import ConsultationProvider from "@/components/ConsultationProvider";
 import DocumentShell from "@/components/DocumentShell";
 import NotFoundView from "@/components/NotFoundView";
-import { defaultLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { createNotFoundMetadata } from "@/lib/metadata";
+import { resolveNotFoundLocale } from "@/lib/not-found-locale";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const dictionary = await getDictionary(defaultLocale);
-  return createNotFoundMetadata(defaultLocale, dictionary);
+  const locale = await resolveNotFoundLocale();
+  const dictionary = await getDictionary(locale);
+  return createNotFoundMetadata(locale, dictionary);
 }
 
 export default async function NotFound() {
-  const dictionary = await getDictionary(defaultLocale);
+  const locale = await resolveNotFoundLocale();
+  const dictionary = await getDictionary(locale);
 
   return (
-    <DocumentShell locale={defaultLocale}>
-      <ConsultationProvider locale={defaultLocale} dictionary={dictionary}>
-        <NotFoundView locale={defaultLocale} dictionary={dictionary} />
+    <DocumentShell locale={locale}>
+      <ConsultationProvider locale={locale} dictionary={dictionary}>
+        <NotFoundView locale={locale} dictionary={dictionary} />
       </ConsultationProvider>
     </DocumentShell>
   );

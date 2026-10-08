@@ -1,6 +1,6 @@
-const DEFAULT_SITE_URL = "https://www.zond.agency";
-export const CANONICAL_HOST = "www.zond.agency";
-const APEX_HOST = "zond.agency";
+const DEFAULT_SITE_URL = "https://zond.agency";
+export const CANONICAL_HOST = "zond.agency";
+const WWW_HOST = "www.zond.agency";
 
 export const siteConfig = {
   name: "ZOND Agency",
@@ -48,7 +48,7 @@ function normalizeSiteUrl(raw: string | undefined): string {
 
   try {
     const url = new URL(withProtocol);
-    if (url.hostname === APEX_HOST) {
+    if (url.hostname === WWW_HOST) {
       url.hostname = CANONICAL_HOST;
       return url.origin;
     }
@@ -64,9 +64,15 @@ function normalizeSiteUrl(raw: string | undefined): string {
   }
 }
 
-/** Production canonical origin for metadata, sitemap, and JSON-LD. */
+/**
+ * Production canonical origin for metadata, sitemap, and JSON-LD.
+ * Server-only: use SITE_URL (not NEXT_PUBLIC_*) so Vercel keeps it private.
+ * NEXT_PUBLIC_SITE_URL is still read as a temporary fallback.
+ */
 export function getCanonicalSiteUrl(): string {
-  return normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
+  return normalizeSiteUrl(
+    process.env.SITE_URL ?? process.env.NEXT_PUBLIC_SITE_URL,
+  );
 }
 
 export function getSiteUrl(): string {
@@ -86,12 +92,13 @@ export function getRequestHostname(headersList: Headers): string | null {
   return normalizeHost(raw);
 }
 
-export function isApexHost(host?: string | null): boolean {
-  return normalizeHost(host) === APEX_HOST;
+/** www alias — redirect permanently to apex (canonical). */
+export function isWwwHost(host?: string | null): boolean {
+  return normalizeHost(host) === WWW_HOST;
 }
 
 /**
- * Indexing is allowed only on www.zond.agency. Apex, preview, localhost, and
+ * Indexing is allowed only on zond.agency. www, preview, localhost, and
  * zond-agency-site.vercel.app stay closed even when VERCEL_ENV is production.
  */
 export function shouldBlockSearchIndexing(host?: string | null): boolean {

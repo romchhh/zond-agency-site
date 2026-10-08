@@ -6,7 +6,7 @@ import { getThanksLocale } from "@/lib/lead";
 import {
   CANONICAL_HOST,
   getRequestHostname,
-  isApexHost,
+  isWwwHost,
   shouldBlockSearchIndexing,
 } from "@/lib/site";
 import { PAGE_CACHE_CONTROL } from "@/lib/http-cache";
@@ -26,7 +26,7 @@ function applyResponseHeaders(response: NextResponse, request: NextRequest) {
   return response;
 }
 
-function redirectApexToWww(request: NextRequest) {
+function redirectWwwToApex(request: NextRequest) {
   const url = request.nextUrl.clone();
   url.protocol = "https:";
   url.hostname = CANONICAL_HOST;
@@ -37,6 +37,7 @@ function redirectApexToWww(request: NextRequest) {
 function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) {
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-locale", locale);
+  requestHeaders.set("x-pathname", request.nextUrl.pathname);
 
   if (rewritePath) {
     const rewriteUrl = request.nextUrl.clone();
@@ -59,8 +60,8 @@ function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) 
 
 export function middleware(request: NextRequest) {
   const host = getRequestHostname(request.headers) ?? request.nextUrl.hostname;
-  if (isApexHost(host)) {
-    return redirectApexToWww(request);
+  if (isWwwHost(host)) {
+    return redirectWwwToApex(request);
   }
 
   const { pathname } = request.nextUrl;
@@ -69,6 +70,7 @@ export function middleware(request: NextRequest) {
   if (thanksLocale) {
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set("x-locale", thanksLocale);
+    requestHeaders.set("x-pathname", pathname);
     const response = NextResponse.next({
       request: { headers: requestHeaders },
     });

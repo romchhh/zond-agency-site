@@ -511,7 +511,7 @@ ul {
 }
 
 .home-seo-title {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   max-width: 760px;
   font-size: 26px;
   line-height: 1.2;
@@ -520,12 +520,40 @@ ul {
   color: var(--text);
 }
 
-.home-seo-copy {
-  margin: 0;
+.home-seo-body {
   max-width: 760px;
+}
+
+.home-seo-copy {
+  margin: 0 0 14px;
   font-size: 16px;
   line-height: 1.55;
   color: #535b64;
+}
+
+.home-seo-copy:last-child {
+  margin-bottom: 0;
+}
+
+.home-seo-subtitle {
+  margin: 28px 0 12px;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.home-seo-list {
+  margin: 0 0 14px;
+  padding-left: 1.2em;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #535b64;
+}
+
+.home-seo-list li + li {
+  margin-top: 4px;
 }
 
 .section-label {
