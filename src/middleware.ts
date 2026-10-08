@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 import { resolveLegacyRewrite } from "@/i18n/routing";
 import { getThanksLocale } from "@/lib/lead";
+import { resolveLegacyDestination } from "@/lib/legacy-destinations.generated";
 import {
   CANONICAL_HOST,
   getRequestHostname,
@@ -26,12 +27,30 @@ function applyResponseHeaders(response: NextResponse, request: NextRequest) {
   return response;
 }
 
-function redirectWwwToApex(request: NextRequest) {
+/** One-hop 308 to https://zond.agency{legacyDest|path}. */
+function redirectToCanonical(
+  request: NextRequest,
+  pathname: string,
+  search: string,
+) {
+  const legacyPath = resolveLegacyDestination(pathname);
   const url = request.nextUrl.clone();
   url.protocol = "https:";
   url.hostname = CANONICAL_HOST;
   url.port = "";
+  url.pathname = legacyPath ?? pathname;
+  url.search = search;
   return NextResponse.redirect(url, 308);
+}
+
+function needsCanonicalHostRedirect(request: NextRequest, host: string): boolean {
+  if (isWwwHost(host)) return true;
+  const forwardedProto = request.headers.get("x-forwarded-proto");
+  if (forwardedProto && forwardedProto.split(",")[0]?.trim() === "http") {
+    return true;
+  }
+  if (request.nextUrl.protocol === "http:") return true;
+  return false;
 }
 
 function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) {
@@ -60,11 +79,13 @@ function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) 
 
 export function middleware(request: NextRequest) {
   const host = getRequestHostname(request.headers) ?? request.nextUrl.hostname;
-  if (isWwwHost(host)) {
-    return redirectWwwToApex(request);
+  const { pathname, search } = request.nextUrl;
+
+  // www and/or http → https://zond.agency + final path in a single hop
+  if (needsCanonicalHostRedirect(request, host)) {
+    return redirectToCanonical(request, pathname, search);
   }
 
-  const { pathname } = request.nextUrl;
   const thanksLocale = getThanksLocale(pathname);
 
   if (thanksLocale) {

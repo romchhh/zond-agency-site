@@ -304,4 +304,49 @@ function buildLegacyRedirects() {
   return redirects;
 }
 
-module.exports = { buildLegacyRedirects, oldSiteRedirects };
+/**
+ * Resolve an old public pathname to its final public destination (one hop).
+ * Supports exact sources and `:slug` patterns from buildLegacyRedirects().
+ */
+function resolveLegacyDestination(pathname) {
+  const path = pathname.split("?")[0] || "/";
+  const redirects = buildLegacyRedirects();
+
+  for (const { source, destination } of redirects) {
+    if (!source.includes(":")) {
+      if (source === path) return destination;
+      continue;
+    }
+
+    const keys = [];
+    const pattern = source.replace(/:([A-Za-z_]+)/g, (_, key) => {
+      keys.push(key);
+      return "([^/]+)";
+    });
+    const match = path.match(new RegExp(`^${pattern}$`));
+    if (!match) continue;
+
+    let dest = destination;
+    keys.forEach((key, index) => {
+      let value = match[index + 1];
+      if (
+        key === "slug" &&
+        (destination.includes("/our-services/") ||
+          destination.includes("/services/"))
+      ) {
+        value = toServiceUrlSlug(value);
+      }
+      dest = dest.replace(`:${key}`, value);
+    });
+    return dest;
+  }
+
+  return null;
+}
+
+module.exports = {
+  buildLegacyRedirects,
+  oldSiteRedirects,
+  resolveLegacyDestination,
+  modernizeDestination,
+};

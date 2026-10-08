@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
+    "prebuild": "node scripts/generate-nginx-legacy-one-hop.mjs",
     "build": "next build",
     "start": "next start -p 3001",
     "lint": "next lint",
+    "generate:legacy-redirects": "node scripts/generate-nginx-legacy-one-hop.mjs",
     "optimize:media": "bash scripts/optimize-media.sh",
     "optimize:cases": "node scripts/optimize-case-images.mjs"
   },
