@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import AppLocaleProvider from "@/components/AppLocaleProvider";
 import ConsultationProvider from "@/components/ConsultationProvider";
 import DocumentShell from "@/components/DocumentShell";
 import JsonLd from "@/components/JsonLd";
@@ -58,12 +57,10 @@ export default async function LocaleLayout({
 
   return (
     <DocumentShell locale={locale}>
-      <AppLocaleProvider locale={locale} dictionary={dictionary}>
-        <ConsultationProvider locale={locale} dictionary={dictionary}>
-          {children}
-          <JsonLd locale={locale} />
-        </ConsultationProvider>
-      </AppLocaleProvider>
+      <ConsultationProvider locale={locale} dictionary={dictionary}>
+        {children}
+        <JsonLd locale={locale} />
+      </ConsultationProvider>
     </DocumentShell>
   );
 }

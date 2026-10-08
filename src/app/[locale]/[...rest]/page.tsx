@@ -2,13 +2,14 @@ import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { createNotFoundMetadata } from "@/lib/metadata";
+import { renderLocalizedNotFound } from "@/lib/render-localized-not-found";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
   return [];
 }
 
-/** Allow unknown paths so we can call notFound() inside the locale segment. */
+/** Unknown URLs resolve here so we can render a localized 404 from route params. */
 export const dynamicParams = true;
 
 export async function generateMetadata({
@@ -22,6 +23,17 @@ export async function generateMetadata({
   return createNotFoundMetadata(raw, dictionary);
 }
 
-export default function CatchAllPage() {
-  notFound();
+/**
+ * Render 404 UI from `params.locale`.
+ * `notFound()` cannot be localized under `force-static`: not-found has no params
+ * and a single default-locale shell is prerendered for every language.
+ */
+export default async function CatchAllPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
+  return renderLocalizedNotFound(raw);
 }

@@ -1,5 +1,4 @@
-"use client";
-
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
@@ -52,6 +51,7 @@ export default function NotFoundView({ locale, dictionary }: NotFoundViewProps) 
           </div>
         </div>
       </main>
+      <Footer locale={locale} dictionary={dictionary} />
     </>
   );
 }

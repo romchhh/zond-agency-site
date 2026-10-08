@@ -43,7 +43,13 @@ function redirectToCanonical(
   return NextResponse.redirect(url, 308);
 }
 
+function isLocalDevHost(host: string): boolean {
+  return host === "localhost" || host === "127.0.0.1" || host === "::1";
+}
+
 function needsCanonicalHostRedirect(request: NextRequest, host: string): boolean {
+  // Keep local `next start` / preview on the request host (do not bounce to zond.agency).
+  if (isLocalDevHost(host)) return false;
   if (isWwwHost(host)) return true;
   const forwardedProto = request.headers.get("x-forwarded-proto");
   if (forwardedProto && forwardedProto.split(",")[0]?.trim() === "http") {
