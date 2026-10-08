@@ -78,7 +78,7 @@ export default function CasePostPage({
 
   const heroPreloadSrc =
     hero?.kind === "img" && !isCaseGif(hero.src)
-      ? caseImageDefaultSrc(hero.src, 80)
+      ? caseImageDefaultSrc(hero.src)
       : hero?.kind === "img"
         ? hero.src
         : null;

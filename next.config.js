@@ -8,7 +8,8 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   images: {
-    formats: ["image/avif", "image/webp"],
+    // WebP only: AVIF encode is too slow on small VPS and caused multi-second waits.
+    formats: ["image/webp"],
     qualities: [75, 80],
     minimumCacheTTL: 60 * 60 * 24 * 365,
     deviceSizes: [384, 640, 750, 828, 1080, 1200, 1920],

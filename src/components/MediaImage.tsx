@@ -23,8 +23,10 @@ export default function MediaImage({
       alt={alt}
       fill
       sizes={sizes}
-      quality={80}
+      quality={75}
       priority={priority}
+      {...(priority ? {} : { loading: "lazy" as const })}
+      decoding="async"
       className={className}
       unoptimized={unoptimized}
     />

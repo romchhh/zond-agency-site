@@ -7,7 +7,9 @@ import {
   caseImageSizes,
   caseImageSrcSet,
   isCaseGif,
+  lightboxCaseImageUrl,
 } from "@/lib/case-image";
+import { preloadImage } from "@/lib/image-preload";
 
 type CaseVisualBodyProps = {
   blocks: CaseVisualBlock[];
@@ -125,6 +127,12 @@ function CaseVisualMedia({
         className="image-button"
         aria-label={caption ? `Збільшити: ${caption}` : "Збільшити зображення"}
         onClick={() => gallery.openAt(imageIndex)}
+        onMouseEnter={() => {
+          if (!isCaseGif(src)) void preloadImage(lightboxCaseImageUrl(src));
+        }}
+        onFocus={() => {
+          if (!isCaseGif(src)) void preloadImage(lightboxCaseImageUrl(src));
+        }}
       >
         {/* Native img keeps case layout; srcset routes through Next image optimizer. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}

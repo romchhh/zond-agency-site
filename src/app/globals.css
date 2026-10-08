@@ -5167,6 +5167,12 @@ body.lightbox-open .header {
   height: auto;
   object-fit: contain;
   border-radius: var(--radius-lg);
+  opacity: 0.55;
+  transition: opacity 0.12s ease;
+}
+
+.media-lightbox-image.is-ready {
+  opacity: 1;
 }
 
 .media-lightbox-close,
