@@ -18,6 +18,7 @@ const casesByLocale: Record<Locale, CaseItem[]> = {
  */
 const PUBLISHED_CASE_SLUGS: readonly string[] = [
   "carbit",
+  "packaging",
   "kyiv-tourism-department",
   "digital-residence",
   "kavlora",
@@ -29,7 +30,6 @@ const PUBLISHED_CASE_SLUGS: readonly string[] = [
   "techno-group",
   "akula-mama",
   "yakomoga",
-  "packaging",
 ];
 
 const publishedSlugOrder = new Map(
