@@ -30,6 +30,7 @@ const PUBLISHED_CASE_SLUGS: readonly string[] = [
   "techno-group",
   "akula-mama",
   "yakomoga",
+  "novo-development",
 ];
 
 const publishedSlugOrder = new Map(

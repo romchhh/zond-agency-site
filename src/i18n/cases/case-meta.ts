@@ -55,8 +55,8 @@ const CASE_META: Record<string, CaseMetaEntry> = {
     categories: ["branding"],
   },
   "novo-development": {
-    clientUrl: "https://novodevelopment.id/",
-    categories: ["branding"],
+    clientUrl: "https://novoubud.com/",
+    categories: ["branding", "web"],
   },
   goshchanochka: {
     categories: ["branding", "packaging"],
