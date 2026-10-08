@@ -4,6 +4,7 @@ import CtaPanel from "@/components/CtaPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import CaseVisualHero from "@/components/CaseVisualHero";
+import LoopedVideo from "@/components/LoopedVideo";
 import MediaImage from "@/components/MediaImage";
 import type { CaseItem } from "@/i18n/cases";
 import type { Dictionary } from "@/i18n/dictionary";
@@ -28,6 +29,10 @@ import {
 } from "@/lib/case-content";
 import { caseImageDefaultSrc, isCaseGif } from "@/lib/case-image";
 import Link from "next/link";
+
+function isVideoCover(src: string) {
+  return src.endsWith(".mp4") || src.endsWith(".webm");
+}
 
 type CasePostPageProps = {
   locale: Locale;
@@ -169,7 +174,9 @@ export default function CasePostPage({
                   <h2>{copy.moreCasesTitle}</h2>
                 </div>
                 <div className="case-navigation">
-                  {relatedCases.slice(0, 2).map((related, index) => (
+                  {relatedCases.slice(0, 2).map((related, index) => {
+                    const coverSrc = related.listCover ?? related.cover;
+                    return (
                     <Link
                       key={related.slug}
                       href={getCaseDetailPath(locale, related.slug)}
@@ -181,14 +188,23 @@ export default function CasePostPage({
                         </span>
                         <span>{String(index + 1).padStart(2, "0")}</span>
                       </div>
-                      {related.cover ? (
+                      {coverSrc ? (
                         <div className="project-image">
-                          <MediaImage
-                            src={related.cover}
-                            alt={related.title}
-                            sizes="(max-width: 700px) 100vw, 50vw"
-                            unoptimized={isAnimatedCaseMedia(related.cover)}
-                          />
+                          {isVideoCover(coverSrc) ? (
+                            <LoopedVideo
+                              className="project-img-video"
+                              src={coverSrc}
+                              ariaLabel={related.title}
+                              poster={related.cover}
+                            />
+                          ) : (
+                            <MediaImage
+                              src={coverSrc}
+                              alt={related.title}
+                              sizes="(max-width: 700px) 100vw, 50vw"
+                              unoptimized={isAnimatedCaseMedia(coverSrc)}
+                            />
+                          )}
                         </div>
                       ) : null}
                       <div className="project-title">
@@ -199,7 +215,8 @@ export default function CasePostPage({
                         <p>{related.cardDescription ?? related.description}</p>
                       ) : null}
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </section>

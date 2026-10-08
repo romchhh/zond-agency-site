@@ -57,7 +57,7 @@ export function getServiceProjects(
     getCaseCategories(item.slug).some((category) => categories.includes(category)),
   );
 
-  return (matched.length > 0 ? matched : cases).map((caseItem) =>
-    toProjectItem(locale, caseItem),
-  );
+  return (matched.length > 0 ? matched : cases)
+    .slice(0, 4)
+    .map((caseItem) => toProjectItem(locale, caseItem));
 }
