@@ -1,13 +1,12 @@
 import { headers } from "next/headers";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 
-/** Resolve 404 locale from route params, then middleware `x-locale`, then path. */
-export async function resolveNotFoundLocale(
-  params?: Promise<{ locale?: string }>,
-): Promise<Locale> {
-  const resolved = params ? await params : undefined;
-  if (resolved?.locale && isLocale(resolved.locale)) return resolved.locale;
-
+/**
+ * Resolve 404 locale for the root `app/not-found` (no locale layout).
+ * Segment `app/[locale]/not-found` reads locale from AppLocaleProvider instead —
+ * `not-found` files do not receive params, and `force-static` blocks headers there.
+ */
+export async function resolveNotFoundLocale(): Promise<Locale> {
   const requestHeaders = await headers();
   const headerLocale = requestHeaders.get("x-locale");
   if (headerLocale && isLocale(headerLocale)) return headerLocale;

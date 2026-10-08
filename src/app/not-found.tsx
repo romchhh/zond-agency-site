@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return createNotFoundMetadata(locale, dictionary);
 }
 
+/** Root fallback when no `[locale]` layout is active. */
 export default async function NotFound() {
   const locale = await resolveNotFoundLocale();
   const dictionary = await getDictionary(locale);
