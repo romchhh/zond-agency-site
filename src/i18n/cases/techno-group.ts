@@ -443,8 +443,8 @@ export function getTechnoGroupBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const technoGroupShared = {
   slug: "techno-group",
-  cover: m("cover.jpeg"),
-  listCover: m("cover.jpeg"),
+  cover: m("hero.webp"),
+  listCover: m("hero.webp"),
   media: technoGroupMedia,
   body: `[IMG: media/techno-group/hero.webp]`,
 };

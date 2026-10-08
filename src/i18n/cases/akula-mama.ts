@@ -440,7 +440,8 @@ export function getAkulaMamaBlocks(locale: Locale): CaseVisualBlock[] {
 
 export const akulaMamaShared = {
   slug: "akula-mama",
-  cover: m("cover.webp"),
+  cover: m("hero.webp"),
+  listCover: m("hero.webp"),
   media: akulaMamaMedia,
   body: `[IMG: media/akula-mama/hero.webp]`,
 };
