@@ -7,7 +7,7 @@ import {
   caseImageDefaultSrc,
   caseImageSizes,
   caseImageSrcSet,
-  isCaseGif,
+  isCasePassthroughMedia,
   lightboxCaseImageUrl,
 } from "@/lib/case-image";
 import { preloadImage } from "@/lib/image-preload";
@@ -29,7 +29,7 @@ export default function CaseVisualHero({ hero, title, caption }: CaseVisualHeroP
         aria-label={`Збільшити: ${caption}`}
         onClick={() => gallery.openAt(0)}
         onMouseEnter={() => {
-          if (hero.kind !== "vid" && !isCaseGif(hero.src)) {
+          if (hero.kind !== "vid" && !isCasePassthroughMedia(hero.src)) {
             void preloadImage(lightboxCaseImageUrl(hero.src));
           }
         }}
@@ -44,7 +44,11 @@ export default function CaseVisualHero({ hero, title, caption }: CaseVisualHeroP
         ) : (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
-            src={isCaseGif(hero.src) ? hero.src : caseImageDefaultSrc(hero.src)}
+            src={
+              isCasePassthroughMedia(hero.src)
+                ? hero.src
+                : caseImageDefaultSrc(hero.src)
+            }
             srcSet={caseImageSrcSet(hero.src)}
             sizes={caseImageSizes(true)}
             alt={caption}

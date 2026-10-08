@@ -58,6 +58,11 @@ const HERO_CAPTIONS: HeroCaptions = {
     ru: "Упаковка — обложка подборки",
     en: "Packaging — collection cover",
   },
+  "novo-development": {
+    uk: "NOVO Spa — деталізований басейн, пальми та айдентика у просторі",
+    ru: "NOVO Spa — детализированный бассейн, пальмы и айдентика в пространстве",
+    en: "NOVO Spa — detailed pool, palms, and identity in the space",
+  },
 };
 
 export function getCaseHeroCaption(

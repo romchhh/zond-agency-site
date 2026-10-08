@@ -723,20 +723,48 @@
   color: #777;
 }
 
+.case-visual-page.visual.balanced .case-navigation-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.case-visual-page.visual.balanced .case-navigation .project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.case-visual-page.visual.balanced .case-navigation .project-img,
 .case-visual-page.visual.balanced .project-image {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
   aspect-ratio: 1.5;
   background: #dedede;
+  order: -1;
 }
 
+.case-visual-page.visual.balanced .case-navigation .project-copy {
+  margin-top: 20px;
+}
+
+.case-visual-page.visual.balanced .case-navigation .project-copy h3,
+.case-visual-page.visual.balanced .project-title h3 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.case-visual-page.visual.balanced .case-navigation .project-img img,
+.case-visual-page.visual.balanced .case-navigation .project-img .project-img-video,
 .case-visual-page.visual.balanced .project-image img,
 .case-visual-page.visual.balanced .project-image .project-img-video {
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
+.case-visual-page.visual.balanced .case-navigation .project-img .project-img-video,
 .case-visual-page.visual.balanced .project-image .project-img-video {
   position: absolute;
   inset: 0;
@@ -745,6 +773,8 @@
   display: block;
 }
 
+.case-visual-page.visual.balanced .project-card:hover .project-img img,
+.case-visual-page.visual.balanced .project-card:hover .project-img .project-img-video,
 .case-visual-page.visual.balanced .project-card:hover .project-image img,
 .case-visual-page.visual.balanced .project-card:hover .project-image .project-img-video {
   transform: scale(1.025);

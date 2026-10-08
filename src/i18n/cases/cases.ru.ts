@@ -11,6 +11,7 @@ import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto
 import { getTerminalBorivajeBlocks, terminalBorivajeCopy, terminalBorivajeShared } from "./terminal-borivaje";
 import { getTbilisoBlocks, tbilisoCopy, tbilisoShared } from "./tbiliso";
 import { getYakomogaBlocks, yakomogaCopy, yakomogaShared } from "./yakomoga";
+import { getNovoDevelopmentBlocks, novoDevelopmentCopy, novoDevelopmentShared } from "./novo-development";
 import { getAkulaMamaBlocks, akulaMamaCopy, akulaMamaShared } from "./akula-mama";
 import { getTechnoGroupBlocks, technoGroupCopy, technoGroupShared } from "./techno-group";
 import type { CaseItem } from "./types";
@@ -483,29 +484,16 @@ const cases: CaseItem[] = [
     "body": "ruua\n\nruua\n\n[IMG: media/cha/hero.webp]\n\n### Клиент\n\nCha – это не просто чайная, а клуб ментального здоровья, сочетающий в своем брендинге символику покоя и культурные традиции.\n\n### Задачи\n\nЛоготип, исполненный в стиле китайского иероглифа, означающего \"чайная\", воплощает идею гармонии и ясности разума. Образ девочки, являющийся частью визуальной айдентики Cha Club, олицетворяет чистоту мыслей, перекликающийся с концепцией ментального здоровья. Девочка одета в традиционный восточный костюм, усиливающий связь с культурными корнями чайной. В рамках проекта был разработан полный пакет брендинга, включая логотип, дизайн сайта и общую визуальную айдентику. Цель – создать успокаивающий и целостный образ для Cha, отражающий его миссию – содействие ментальному благополучию в цифровом и физическом пространстве.\n\n### Разработали\n\nБрендинг\n\nДизайн\n\nЛоготип\n\nДизайн сайта\n\nК проекту\n\n[IMG: media/cha/01.webp]\n\n[IMG: media/cha/02.webp]\n\n[IMG: media/cha/03.webp]\n\n[IMG: media/cha/04.webp]\n\n[IMG: media/cha/05.webp]\n\n## Разработка логотипа для бренда ментального здоровья: сочетание символизма и эстетики\n\nПолный пакет брендинга и визуальная айдентика: как создать узнаваемый стиль\n\n[IMG: media/cha/06.webp]\n\n[IMG: media/cha/07.webp]\n\n[IMG: media/cha/08.webp]\n\n[IMG: media/cha/09.webp]\n\n[IMG: media/cha/10.webp]\n\n[IMG: media/cha/11.webp]\n\n[IMG: media/cha/12.webp]\n\n## Полный пакет брендинга и визуальная айдентика: как создать узнаваемый стиль\n\nДля Cha мы разработали комплексный пакет брендинга, включающий логотип, дизайн сайта и визуальную айдентику. Все элементы были продуманы так, чтобы передать атмосферу покоя и ментального равновесия. Использование традиционных мотивов в сочетании с современным дизайном помогло создать уникальный стиль, усиливающий доверие клиентов. Разработка брендинга и визуальной айдентики является ключевым этапом в формировании узнаваемого образа бренда и наша команда помогает компаниям находить идеальное сочетание формы, цвета и содержания.\n\n[IMG: media/cha/13.webp]\n\n[IMG: media/cha/14.webp]\n\n[IMG: media/cha/15.webp]\n\n[IMG: media/cha/16.webp]"
   },
   {
-    "slug": "novo-development",
-    "title": "NOVO Development",
-    "description": "Разработали брендинг, логотип и полный брендбук для NOVO Development — современного жилого комплекса на Бали. Также сайт и сувенирка.",
-    "cover": "/assets/cases/novo-development/cover.webp",
-    "media": [
-      "media/novo-development/cover.webp",
-      "media/novo-development/16.webp",
-      "media/novo-development/01.webp",
-      "media/novo-development/02.webp",
-      "media/novo-development/03.webp",
-      "media/novo-development/04.webp",
-      "media/novo-development/05.webp",
-      "media/novo-development/06.webp",
-      "media/novo-development/07.webp",
-      "media/novo-development/08.webp",
-      "media/novo-development/09.webp",
-      "media/novo-development/10.webp",
-      "media/novo-development/11.webp",
-      "media/novo-development/12.webp",
-      "media/novo-development/13.webp",
-      "media/novo-development/14.webp"
-    ],
-    "body": "ruua\n\nruua\n\n### Клиент\n\nNOVO – это жилой комплекс, который находится на острове Бали, в городе Убуд. Команда комплекса стремилась создать бренд, сильной стороной которого является мобильность.\n\n### Задачи\n\nНаша задача была не только разработать логотип, но и создать комплексный брендбук, раскрывающий уникальность и изюминку пространства на фоне других конкурентов, работающих на Бали. В этом проекте мы сосредоточились на создании визуальной идентичности, подчеркивающей мобильность, удобство и комфорт.\n\n### Разработали\n\nБрендинг\n\nДизайн\n\nЛоготип\n\n3d модель\n\nДизайн сайта\n\nДизайн полиграфии\n\nСувенирная продукция\n\nК проекту\n\n[IMG: media/novo-development/16.webp]\n\n[IMG: media/novo-development/01.webp]\n\n[IMG: media/novo-development/02.webp]\n\n[IMG: media/novo-development/03.webp]\n\n[IMG: media/novo-development/04.webp]\n\n## Разработка логотипа для жилого комплекса: стиль, отражающий мобильность и комфорт\n\nЛоготип для NOVO Development должен был подчеркнуть мобильность, современность и уникальность жилого комплекса в Убуде. Мы создали графическое решение, гармонично сочетающееся с природой Бали, передавая атмосферу комфорта и удобства. Разработка логотипа для жилых комплексов требует глубочайшего понимания целевой аудитории, архитектуры и стиля пространства. Благодаря продуманному дизайну логотипа NOVO Development выделяется среди конкурентов, формируя узнаваемый и привлекательный бренд.\n\n[IMG: media/novo-development/05.webp]\n\n[IMG: media/novo-development/06.webp]\n\n[IMG: media/novo-development/07.webp]\n\n[IMG: media/novo-development/08.webp]\n\n[IMG: media/novo-development/09.webp]\n\n## Создание брендбука: визуальная идентичность, работающая на имидж\n\nБрендбук – это основа единого стиля компании, которая помогает поддерживать узнаваемость бренда на всех уровнях коммуникации. Для NOVO Development мы разработали подробный брендбук, содержащий логотип, цветовую палитру, типографику и правила использования фирменного стиля. Визуальная идентичность комплекса базируется на сочетании минимализма, природной гармонии и мобильности. Разработка брендбука для жилых комплексов позволяет создать целостный образ компании, привлекающий клиентов и укрепляющий доверие к бренду.\n\n[IMG: media/novo-development/10.webp]\n\n[IMG: media/novo-development/11.webp]\n\n[IMG: media/novo-development/12.webp]\n\n[IMG: media/novo-development/13.webp]\n\n[IMG: media/novo-development/14.webp]"
+    slug: novoDevelopmentShared.slug,
+    title: novoDevelopmentCopy.ru.title,
+    description: novoDevelopmentCopy.ru.description,
+    cover: novoDevelopmentShared.cover,
+    listCover: novoDevelopmentShared.listCover,
+    media: novoDevelopmentShared.media,
+    tagline: novoDevelopmentCopy.ru.tagline,
+    serviceTag: novoDevelopmentCopy.ru.serviceTag,
+    body: novoDevelopmentShared.body,
+    blocks: getNovoDevelopmentBlocks("ru"),
   },
   {
     "slug": "valtex-guma",

@@ -11,6 +11,7 @@ import { getNoveMistoBlocks, noveMistoCopy, noveMistoShared } from "./nove-misto
 import { getTerminalBorivajeBlocks, terminalBorivajeCopy, terminalBorivajeShared } from "./terminal-borivaje";
 import { getTbilisoBlocks, tbilisoCopy, tbilisoShared } from "./tbiliso";
 import { getYakomogaBlocks, yakomogaCopy, yakomogaShared } from "./yakomoga";
+import { getNovoDevelopmentBlocks, novoDevelopmentCopy, novoDevelopmentShared } from "./novo-development";
 import { getAkulaMamaBlocks, akulaMamaCopy, akulaMamaShared } from "./akula-mama";
 import { getTechnoGroupBlocks, technoGroupCopy, technoGroupShared } from "./techno-group";
 import type { CaseItem } from "./types";
@@ -483,30 +484,16 @@ const cases: CaseItem[] = [
     "body": "Uaru\n\nUaru\n\n[IMG: media/cha/hero.webp]\n\n### Клієнт\n\nCha — це не просто чайна, а клуб ментального здоров'я, що поєднує у своєму брендингу символіку спокою та культурні традиції.\n\n### Задачі\n\nЛоготип, виконаний у стилі китайського ієрогліфа, який означає \"чайна\", втілює ідею гармонії та ясності розуму. Образ дівчинки, який є частиною візуальної айдентики Cha Club, уособлює чистоту думок, що перегукується з концепцією ментального здоров’я. Дівчинка одягнена у традиційний східний костюм, що підсилює зв’язок із культурними коренями чайної. У рамках проекту було розроблено повний пакет брендингу, включно з логотипом, дизайном сайту та загальною візуальною айдентикою. Мета — створити заспокійливий і цілісний образ для Cha, що відображає його місію - сприяння ментальному благополуччю в цифровому та фізичному просторі.\n\n### Розробили\n\nБрендинг\n\nРозробка брендингу\n\nДизайн\n\nЛоготип\n\nДизайн сайта\n\n[IMG: media/cha/01.webp]\n\n[IMG: media/cha/02.webp]\n\n[IMG: media/cha/03.webp]\n\n[IMG: media/cha/04.webp]\n\n[IMG: media/cha/05.webp]\n\n[IMG: media/cha/04.webp]\n\n[IMG: media/cha/05.webp]\n\n## Розробка логотипу для бренду ментального здоров'я: поєднання символізму та естетики\n\nРозробка логотипу для Cha ґрунтувалася на глибокій ідеї — гармонії, традицій та ментального здоров’я. Виконаний у стилі китайського ієрогліфа, логотип відображає філософію бренду та його зв’язок із чайною культурою. Візуальна айдентика, зокрема образ дівчинки у традиційному східному костюмі, додає унікальності та асоціативності. Логотипи для клубів ментального здоров’я мають бути не лише стильними, а й передавати ідею спокою та балансу. Саме тому ми створюємо концептуальні та унікальні рішення, що працюють на ідентичність бренду.\n\n[IMG: media/cha/06.webp]\n\n[IMG: media/cha/07.webp]\n\n[IMG: media/cha/08.webp]\n\n[IMG: media/cha/06.webp]\n\n[IMG: media/cha/07.webp]\n\n[IMG: media/cha/08.webp]\n\nПовний пакет брендингу та візуальна айдентика: як створити впізнаваний стиль\n\nДля Cha ми розробили комплексний пакет брендингу, що включав логотип, дизайн сайту та візуальну айдентику. Всі елементи були продумані таким чином, щоб передати атмосферу спокою та ментальної рівноваги. Використання традиційних мотивів у поєднанні з сучасним дизайном допомогло створити унікальний стиль, що підсилює довіру клієнтів. Розробка брендингу та візуальної айдентики є ключовим етапом у формуванні впізнаваного образу бренду, і наша команда допомагає компаніям знаходити ідеальне поєднання форми, кольору та змісту.\n\n[IMG: media/cha/09.webp]\n\n[IMG: media/cha/10.webp]\n\n[IMG: media/cha/11.webp]\n\n[IMG: media/cha/12.webp]\n\n[IMG: media/cha/13.webp]\n\n[IMG: media/cha/14.webp]\n\n[IMG: media/cha/15.webp]\n\n[IMG: media/cha/16.webp]"
   },
   {
-    "slug": "novo-development",
-    "title": "NOVO Development",
-    "description": "Розробили брендинг, логотип і повний брендбук для NOVO Development — сучасного житлового комплексу на Балі. Також сайт і сувенірка.",
-    "cover": "/assets/cases/novo-development/cover.webp",
-    "media": [
-      "media/novo-development/cover.webp",
-      "media/novo-development/hero.webp",
-      "media/novo-development/01.webp",
-      "media/novo-development/02.webp",
-      "media/novo-development/03.webp",
-      "media/novo-development/04.webp",
-      "media/novo-development/05.webp",
-      "media/novo-development/06.webp",
-      "media/novo-development/07.webp",
-      "media/novo-development/08.webp",
-      "media/novo-development/09.webp",
-      "media/novo-development/10.webp",
-      "media/novo-development/11.webp",
-      "media/novo-development/12.webp",
-      "media/novo-development/13.webp",
-      "media/novo-development/14.webp",
-      "media/novo-development/15.webp"
-    ],
-    "body": "Uaru\n\nUaru\n\n### Клієнт\n\nNOVO - це жилий комплекс, який знаходиться на острові Балі, в місті Убуд. Команда комплексу прагнула створити бренд, сильною стороною якого є мобільність.\n\n### Задачі\n\nНаше завдання було не лише розробити логотип, але й створити комплексний брендбук, який розкриває унікальність та «родзинку» простору на фоні інших конкурентів, які працюють на Балі. В цьому проєкті ми зосередились на створенні візуальної ідентичності, яка б підкреслювала мобільність, зручність та комфорт.\n\n### Розробили\n\nБрендинг\n\nРозробка брендингу\n\nДизайн\n\nЛоготип\n\n3d модель\n\nДизайн поліграфії\n\nДизайн сайта\n\nСувенірну продукцію\n\n[IMG: media/novo-development/hero.webp]\n\n[IMG: media/novo-development/01.webp]\n\n[IMG: media/novo-development/02.webp]\n\n[IMG: media/novo-development/03.webp]\n\n[IMG: media/novo-development/04.webp]\n\n[IMG: media/novo-development/03.webp]\n\n[IMG: media/novo-development/04.webp]\n\n## Розробка логотипу для житлового комплексу: стиль, що відображає мобільність та комфорт\n\nЛоготип для NOVO Development мав підкреслити мобільність, сучасність та унікальність житлового комплексу в Убуді. Ми створили графічне рішення, що гармонійно поєднується з природою Балі, передаючи атмосферу комфорту та зручності. Розробка логотипу для житлових комплексів вимагає глибокого розуміння цільової аудиторії, архітектури та стилю простору. Завдяки продуманому дизайну логотипу, NOVO Development виділяється серед конкурентів, формуючи впізнаваний та привабливий бренд.\n\n[IMG: media/novo-development/05.webp]\n\n[IMG: media/novo-development/06.webp]\n\n[IMG: media/novo-development/07.webp]\n\n[IMG: media/novo-development/05.webp]\n\n[IMG: media/novo-development/06.webp]\n\n[IMG: media/novo-development/07.webp]\n\nСтворення брендбуку: візуальна ідентичність, що працює на імідж\n\nБрендбук — це основа єдиного стилю компанії, яка допомагає підтримувати впізнаваність бренду на всіх рівнях комунікації. Для NOVO Development ми розробили детальний брендбук, що містить логотип, кольорову палітру, типографіку та правила використання фірмового стилю. Візуальна ідентичність комплексу базується на поєднанні мінімалізму, природної гармонії та мобільності. Розробка брендбуку для житлових комплексів дозволяє створити цілісний образ компанії, який залучає клієнтів та зміцнює довіру до бренду.\n\n[IMG: media/novo-development/08.webp]\n\n[IMG: media/novo-development/09.webp]\n\n[IMG: media/novo-development/10.webp]\n\n[IMG: media/novo-development/11.webp]\n\n[IMG: media/novo-development/12.webp]\n\n[IMG: media/novo-development/13.webp]\n\n[IMG: media/novo-development/14.webp]\n\n[IMG: media/novo-development/15.webp]"
+    slug: novoDevelopmentShared.slug,
+    title: novoDevelopmentCopy.uk.title,
+    description: novoDevelopmentCopy.uk.description,
+    cover: novoDevelopmentShared.cover,
+    listCover: novoDevelopmentShared.listCover,
+    media: novoDevelopmentShared.media,
+    tagline: novoDevelopmentCopy.uk.tagline,
+    serviceTag: novoDevelopmentCopy.uk.serviceTag,
+    body: novoDevelopmentShared.body,
+    blocks: getNovoDevelopmentBlocks("uk"),
   },
   {
     "slug": "valtex-guma",

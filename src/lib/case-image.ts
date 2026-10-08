@@ -9,13 +9,18 @@ export function isCaseGif(src: string): boolean {
   return /\.gif($|\?)/i.test(src);
 }
 
+/** GIF/SVG skip the optimizer (SVG is already vector; GIF must stay animated). */
+export function isCasePassthroughMedia(src: string): boolean {
+  return /\.(gif|svg)($|\?)/i.test(src);
+}
+
 /** Next.js image optimizer URL for static assets under /public. */
 export function optimizedCaseImageUrl(
   src: string,
   width: number,
   quality = CASE_IMAGE_QUALITY,
 ): string {
-  if (isCaseGif(src)) return src;
+  if (isCasePassthroughMedia(src)) return src;
   const params = new URLSearchParams({
     url: src,
     w: String(width),
@@ -25,20 +30,20 @@ export function optimizedCaseImageUrl(
 }
 
 export function caseImageSrcSet(src: string, quality = CASE_IMAGE_QUALITY): string | undefined {
-  if (isCaseGif(src)) return undefined;
+  if (isCasePassthroughMedia(src)) return undefined;
   return CASE_IMAGE_WIDTHS
     .map((w) => `${optimizedCaseImageUrl(src, w, quality)} ${w}w`)
     .join(", ");
 }
 
 export function caseImageDefaultSrc(src: string, quality = CASE_IMAGE_QUALITY): string {
-  if (isCaseGif(src)) return src;
+  if (isCasePassthroughMedia(src)) return src;
   return optimizedCaseImageUrl(src, CASE_IMAGE_DEFAULT_WIDTH, quality);
 }
 
 /** Full-bleed lightbox URL — same quality as page cache so warm hits reuse. */
 export function lightboxCaseImageUrl(src: string): string {
-  if (isCaseGif(src)) return src;
+  if (isCasePassthroughMedia(src)) return src;
   return optimizedCaseImageUrl(src, LIGHTBOX_IMAGE_WIDTH, CASE_IMAGE_QUALITY);
 }
 

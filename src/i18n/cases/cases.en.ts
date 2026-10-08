@@ -12,6 +12,7 @@ import { getTerminalBorivajeBlocks, terminalBorivajeCopy, terminalBorivajeShared
 import { getTbilisoBlocks, tbilisoCopy, tbilisoShared } from "./tbiliso";
 import { getTechnoGroupBlocks, technoGroupCopy, technoGroupShared } from "./techno-group";
 import { getYakomogaBlocks, yakomogaCopy, yakomogaShared } from "./yakomoga";
+import { getNovoDevelopmentBlocks, novoDevelopmentCopy, novoDevelopmentShared } from "./novo-development";
 import { getAkulaMamaBlocks, akulaMamaCopy, akulaMamaShared } from "./akula-mama";
 import type { CaseItem } from "./types";
 
@@ -533,6 +534,18 @@ const cases: CaseItem[] = [
     serviceTag: yakomogaCopy.en.serviceTag,
     body: yakomogaShared.body,
     blocks: getYakomogaBlocks("en"),
+  },
+  {
+    slug: novoDevelopmentShared.slug,
+    title: novoDevelopmentCopy.en.title,
+    description: novoDevelopmentCopy.en.description,
+    cover: novoDevelopmentShared.cover,
+    listCover: novoDevelopmentShared.listCover,
+    media: novoDevelopmentShared.media,
+    tagline: novoDevelopmentCopy.en.tagline,
+    serviceTag: novoDevelopmentCopy.en.serviceTag,
+    body: novoDevelopmentShared.body,
+    blocks: getNovoDevelopmentBlocks("en"),
   },
   {
     "slug": "synta",

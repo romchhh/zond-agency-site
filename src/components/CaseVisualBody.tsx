@@ -6,7 +6,7 @@ import {
   caseImageDefaultSrc,
   caseImageSizes,
   caseImageSrcSet,
-  isCaseGif,
+  isCasePassthroughMedia,
   lightboxCaseImageUrl,
 } from "@/lib/case-image";
 import { preloadImage } from "@/lib/image-preload";
@@ -128,16 +128,16 @@ function CaseVisualMedia({
         aria-label={caption ? `Збільшити: ${caption}` : "Збільшити зображення"}
         onClick={() => gallery.openAt(imageIndex)}
         onMouseEnter={() => {
-          if (!isCaseGif(src)) void preloadImage(lightboxCaseImageUrl(src));
+          if (!isCasePassthroughMedia(src)) void preloadImage(lightboxCaseImageUrl(src));
         }}
         onFocus={() => {
-          if (!isCaseGif(src)) void preloadImage(lightboxCaseImageUrl(src));
+          if (!isCasePassthroughMedia(src)) void preloadImage(lightboxCaseImageUrl(src));
         }}
       >
         {/* Native img keeps case layout; srcset routes through Next image optimizer. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={isCaseGif(src) ? src : caseImageDefaultSrc(src)}
+          src={isCasePassthroughMedia(src) ? src : caseImageDefaultSrc(src)}
           srcSet={caseImageSrcSet(src)}
           sizes={caseImageSizes(wide)}
           alt={caption ?? ""}

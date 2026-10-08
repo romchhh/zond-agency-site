@@ -140,29 +140,4 @@ export const casesEnMissing: CaseItem[] = [
     ],
     "body": "### Client\n\nCha is a mental health club that blends tea culture with a calm, welcoming space in Kyiv.\n\n### Goals\n\nCreate a soothing, coherent brand — logo, website, and identity — that reflects harmony, clarity, and mental wellbeing.\n\n### Developed\n\nBranding\n\nDesign\n\nLogo\n\nWebsite design\n\n[IMG: media/cha/hero.webp]\n\n[IMG: media/cha/01.webp]\n\n[IMG: media/cha/02.webp]\n\n[IMG: media/cha/03.webp]\n\n[IMG: media/cha/04.webp]\n\n[IMG: media/cha/05.webp]\n\n[IMG: media/cha/06.webp]\n\n[IMG: media/cha/07.webp]\n\n[IMG: media/cha/08.webp]\n\n[IMG: media/cha/09.webp]\n\n[IMG: media/cha/10.webp]\n\n[IMG: media/cha/11.webp]\n\n[IMG: media/cha/12.webp]\n\n[IMG: media/cha/13.webp]\n\n[IMG: media/cha/14.webp]\n\n[IMG: media/cha/15.webp]\n\n[IMG: media/cha/16.webp]"
   },
-  {
-    "slug": "novo-development",
-    "title": "NOVO development",
-    "description": "We developed branding, logo, and a full brand book for NOVO development — a residential project on Bali. Also website and souvenirs.",
-    "cover": "/assets/cases/novo-development/cover.webp",
-    "media": [
-      "media/novo-development/cover.webp",
-      "media/novo-development/16.webp",
-      "media/novo-development/01.webp",
-      "media/novo-development/02.webp",
-      "media/novo-development/03.webp",
-      "media/novo-development/04.webp",
-      "media/novo-development/05.webp",
-      "media/novo-development/06.webp",
-      "media/novo-development/07.webp",
-      "media/novo-development/08.webp",
-      "media/novo-development/09.webp",
-      "media/novo-development/10.webp",
-      "media/novo-development/11.webp",
-      "media/novo-development/12.webp",
-      "media/novo-development/13.webp",
-      "media/novo-development/14.webp"
-    ],
-    "body": "### Client\n\nNOVO development — a modern residential development brand.\n\n### Goals\n\nDeliver a trustworthy real-estate identity with logo, brand book, and materials that work across digital and print channels.\n\n### Developed\n\nBranding\n\nLogo\n\nBrand book\n\nWebsite\n\nSouvenirs\n\n[IMG: media/novo-development/16.webp]\n\n[IMG: media/novo-development/01.webp]\n\n[IMG: media/novo-development/02.webp]\n\n[IMG: media/novo-development/03.webp]\n\n[IMG: media/novo-development/04.webp]\n\n[IMG: media/novo-development/05.webp]\n\n[IMG: media/novo-development/06.webp]\n\n[IMG: media/novo-development/07.webp]\n\n[IMG: media/novo-development/08.webp]\n\n[IMG: media/novo-development/09.webp]\n\n[IMG: media/novo-development/10.webp]\n\n[IMG: media/novo-development/11.webp]\n\n[IMG: media/novo-development/12.webp]\n\n[IMG: media/novo-development/13.webp]\n\n[IMG: media/novo-development/14.webp]"
-  }
 ];
