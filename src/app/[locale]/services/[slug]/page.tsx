@@ -22,8 +22,7 @@ import {
   serviceMeta,
   serviceSlugs,
 } from "@/i18n/services";
-import { createNotFoundMetadata, createServiceMetadata } from "@/lib/metadata";
-import { renderLocalizedNotFound } from "@/lib/render-localized-not-found";
+import { createServiceMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -32,7 +31,7 @@ export function generateStaticParams() {
   );
 }
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -40,11 +39,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  if (!isLocale(locale)) return {};
-  if (!isServiceSlug(slug)) {
-    const dictionary = await getDictionary(locale);
-    return createNotFoundMetadata(locale, dictionary);
-  }
+  if (!isLocale(locale) || !isServiceSlug(slug)) return {};
 
   return createServiceMetadata(locale, slug, serviceMeta[locale][slug]);
 }
@@ -55,8 +50,7 @@ export default async function ServicePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  if (!isLocale(locale)) notFound();
-  if (!isServiceSlug(slug)) return renderLocalizedNotFound(locale);
+  if (!isLocale(locale) || !isServiceSlug(slug)) notFound();
 
   const dictionary = await getDictionary(locale);
   const projects = getServiceProjects(locale, slug);

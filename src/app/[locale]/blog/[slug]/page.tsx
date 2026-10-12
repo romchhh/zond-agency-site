@@ -3,8 +3,7 @@ import { getBlogPost, getBlogSlugs, getRelatedBlogPosts, isBlogSlug } from "@/i1
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getBlogDetailPath } from "@/i18n/routing";
-import { createNotFoundMetadata, createPathMetadata } from "@/lib/metadata";
-import { renderLocalizedNotFound } from "@/lib/render-localized-not-found";
+import { createPathMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -13,7 +12,7 @@ export function generateStaticParams() {
   );
 }
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -21,17 +20,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  if (!isLocale(locale)) return {};
-  if (!isBlogSlug(locale, slug)) {
-    const dictionary = await getDictionary(locale);
-    return createNotFoundMetadata(locale, dictionary);
-  }
+  if (!isLocale(locale) || !isBlogSlug(locale, slug)) return {};
 
   const post = getBlogPost(locale, slug);
-  if (!post) {
-    const dictionary = await getDictionary(locale);
-    return createNotFoundMetadata(locale, dictionary);
-  }
+  if (!post) return {};
 
   return createPathMetadata(
     locale,
@@ -50,11 +42,10 @@ export default async function BlogArticlePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  if (!isLocale(locale)) notFound();
-  if (!isBlogSlug(locale, slug)) return renderLocalizedNotFound(locale);
+  if (!isLocale(locale) || !isBlogSlug(locale, slug)) notFound();
 
   const post = getBlogPost(locale, slug);
-  if (!post) return renderLocalizedNotFound(locale);
+  if (!post) notFound();
 
   const dictionary = await getDictionary(locale);
 
