@@ -19,9 +19,9 @@ const novoMedia = [
   "media/novo-development/11.webp",
   "media/novo-development/12.svg",
   "media/novo-development/13.webp",
-  "media/novo-development/14.svg",
-  "media/novo-development/15.svg",
-  "media/novo-development/16.svg",
+  "media/novo-development/14.webp",
+  "media/novo-development/15.webp",
+  "media/novo-development/16.webp",
 ];
 
 const blocksUk: CaseVisualBlock[] = [
@@ -141,14 +141,14 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("14.svg"), caption: "NOVO — Kharkiv Tone Regular" },
-      { src: m("15.svg"), caption: "NOVO — Kharkiv Tone Regular" },
+      { src: m("14.webp"), caption: "Будівельний банер NOVO Ubud" },
+      { src: m("15.webp"), caption: "Білборд NOVO Ubud" },
     ],
   },
   {
     type: "gallery",
     layout: "wide",
-    images: [{ src: m("16.svg"), caption: "NOVO — Kharkiv Tone Regular" }],
+    images: [{ src: m("16.webp"), caption: "Сітілайт NOVO Ubud" }],
   },
   {
     type: "section",
@@ -188,9 +188,9 @@ const novoGalleryCaptionsRu: Record<string, string> = {
   [m("11.webp")]: "Визитки и фирменная полиграфия",
   [m("12.svg")]: "NOVO — Kharkiv Tone Regular",
   [m("13.webp")]: "Презентация NOVO Ubud на ноутбуке",
-  [m("14.svg")]: "NOVO — Kharkiv Tone Regular",
-  [m("15.svg")]: "NOVO — Kharkiv Tone Regular",
-  [m("16.svg")]: "NOVO — Kharkiv Tone Regular",
+  [m("14.webp")]: "Строительный баннер NOVO Ubud",
+  [m("15.webp")]: "Билборд NOVO Ubud",
+  [m("16.webp")]: "Ситилайт NOVO Ubud",
 };
 
 const novoGalleryCaptionsEn: Record<string, string> = {
@@ -207,9 +207,9 @@ const novoGalleryCaptionsEn: Record<string, string> = {
   [m("11.webp")]: "Business cards and printed materials",
   [m("12.svg")]: "NOVO — Kharkiv Tone Regular",
   [m("13.webp")]: "NOVO Ubud presentation on a laptop",
-  [m("14.svg")]: "NOVO — Kharkiv Tone Regular",
-  [m("15.svg")]: "NOVO — Kharkiv Tone Regular",
-  [m("16.svg")]: "NOVO — Kharkiv Tone Regular",
+  [m("14.webp")]: "NOVO Ubud construction hoarding",
+  [m("15.webp")]: "NOVO Ubud billboard",
+  [m("16.webp")]: "NOVO Ubud citylight",
 };
 
 const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
