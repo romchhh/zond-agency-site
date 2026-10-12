@@ -1177,3 +1177,89 @@
     transition: none;
   }
 }
+
+/* NOVO Development — equal paired frames + cover crop (from prototype novo.css) */
+.case-visual-page.visual.balanced[data-case="novo-development"] .hero h1 {
+  font-size: clamp(64px, 11vw, 160px);
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .gallery {
+  align-items: stretch;
+  gap: 22px;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .gallery .media {
+  width: 100%;
+  min-width: 0;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .gallery .image-button {
+  aspect-ratio: var(--photo-ratio, 16 / 9);
+  border-radius: 22px;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .gallery .media img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: var(--photo-ratio, 16 / 9);
+  object-fit: cover;
+  object-position: center;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .hero .image-button {
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .hero .media img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .open-case {
+  background: #ff7100;
+  color: #171717;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .open-case:hover {
+  background: #ff8a2c;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .project-facts .country-fact {
+  background: #e9e7df;
+  border-color: #e9e7df;
+  color: #30342c;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .rule-grid > div {
+  border-left-color: #8a8b78;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .quote-card {
+  border-left-color: #8a8b78;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .quote-mark {
+  color: #8a8b78;
+}
+
+.case-visual-page.visual.balanced[data-case="novo-development"] .review-monogram {
+  background: #e9e7df;
+}
+
+@media (max-width: 767px) {
+  .case-visual-page.visual.balanced[data-case="novo-development"] .hero h1 {
+    font-size: clamp(52px, 15vw, 92px);
+  }
+
+  .case-visual-page.visual.balanced[data-case="novo-development"] .gallery {
+    gap: 18px;
+  }
+
+  .case-visual-page.visual.balanced[data-case="novo-development"] .gallery .image-button,
+  .case-visual-page.visual.balanced[data-case="novo-development"] .hero .image-button {
+    border-radius: 17px;
+  }
+}

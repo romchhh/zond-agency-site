@@ -59,6 +59,8 @@ export type CaseVisualBlock =
       type: "gallery";
       layout: CaseVisualGalleryLayout;
       images: CaseVisualImage[];
+      /** CSS aspect-ratio for equal frames in a pair (e.g. "16 / 9", "1817 / 2048"). */
+      photoRatio?: string;
     }
   | {
       type: "deliverables";

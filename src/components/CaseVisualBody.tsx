@@ -10,6 +10,7 @@ import {
   lightboxCaseImageUrl,
 } from "@/lib/case-image";
 import { preloadImage } from "@/lib/image-preload";
+import type { CSSProperties } from "react";
 
 type CaseVisualBodyProps = {
   blocks: CaseVisualBlock[];
@@ -185,10 +186,12 @@ function CaseVisualGallery({
   layout,
   images,
   imageOffset,
+  photoRatio,
 }: {
   layout: CaseVisualGalleryLayout;
   images: Array<{ src: string; caption?: string }>;
   imageOffset: number;
+  photoRatio?: string;
 }) {
   if (layout === "wide" && images.length === 1) {
     return (
@@ -204,7 +207,14 @@ function CaseVisualGallery({
   const layoutClass = layout === "triple" ? "triple" : layout === "pair" ? "pair" : "";
 
   return (
-    <div className={`gallery${layoutClass ? ` ${layoutClass}` : ""}`}>
+    <div
+      className={`gallery${layoutClass ? ` ${layoutClass}` : ""}`}
+      style={
+        photoRatio
+          ? ({ ["--photo-ratio"]: photoRatio } as CSSProperties)
+          : undefined
+      }
+    >
       {images.map((image, index) => (
         <CaseVisualMedia
           key={`${image.src}-${index}`}
@@ -423,6 +433,7 @@ function renderBlock(
           layout={block.layout}
           images={block.images}
           imageOffset={imageOffset}
+          photoRatio={block.photoRatio}
         />
       );
 
@@ -489,12 +500,20 @@ function renderBlock(
             <span className="section-index">{block.index ?? "05"}</span>
             <div>
               <span className="kicker">{block.kicker ?? "ВІДГУК"}</span>
-              <h2>{block.heading ?? "Відгук клієнта."}</h2>
+              <h2>
+                {splitTitle(block.heading ?? "Відгук клієнта.").map((line, index, lines) => (
+                  <span key={index}>
+                    {line}
+                    {index < lines.length - 1 ? <br /> : null}
+                  </span>
+                ))}
+              </h2>
             </div>
           </div>
           <figure className="quote-card">
             <div className="quote-intro">
               <span className="quote-mark" aria-hidden="true">“</span>
+              {block.badge ? <span className="quote-badge">{block.badge}</span> : null}
             </div>
             <blockquote>
               {block.paragraphs.map((paragraph, index) => (

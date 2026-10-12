@@ -147,9 +147,11 @@ const CASE_THEMES: Record<string, CaseVisualTheme> = {
     manifestoBg: "#182018",
   },
   "novo-development": {
-    accent: "#c9a06a",
-    accentInk: "#3d2e18",
-    manifestoBg: "#221c16",
+    accent: "#ff7100",
+    accentInk: "#171717",
+    manifestoBg: "#30342c",
+    manifestoFg: "#ffffff",
+    manifestoEm: "#d9d3c5",
   },
   "valtex-guma": {
     accent: "#d14a4a",

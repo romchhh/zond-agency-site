@@ -46,6 +46,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "pair",
+    photoRatio: "16 / 9",
     images: [
       { src: m("01.webp"), caption: "Логотипи NOVO Spa, NOVO Ubud та NOVO Kitchen & Bar" },
       { src: m("02.svg"), caption: "NOVO — Kharkiv Tone Regular" },
@@ -54,6 +55,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "pair",
+    photoRatio: "16 / 9",
     images: [
       { src: m("03.webp"), caption: "Кольорова палітра NOVO" },
       { src: m("04.webp"), caption: "Фірмовий бланк і папка NOVO Ubud" },
@@ -71,6 +73,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "pair",
+    photoRatio: "2048 / 1835",
     images: [
       { src: m("05.webp"), caption: "Вхідна група та зовнішня реклама NOVO Ubud" },
       { src: m("06.webp"), caption: "Фірмова вивіска NOVO Kitchen & Bar" },
@@ -90,11 +93,11 @@ const blocksUk: CaseVisualBlock[] = [
     type: "manifesto",
     label: "NOVO / BRAND EXPERIENCE",
     text: "Від простору.\nДо відчуття.",
-    footer: "NOVO DEVELOPMENT / BRAND IDENTITY",
   },
   {
     type: "gallery",
     layout: "pair",
+    photoRatio: "2048 / 1835",
     images: [
       { src: m("07.webp"), caption: "Айдентика NOVO Spa у зоні відпочинку" },
       { src: m("08.webp"), caption: "Конверт NOVO Ubud із тисненням" },
@@ -119,6 +122,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "pair",
+    photoRatio: "1817 / 2048",
     images: [
       { src: m("09.webp"), caption: "Профіль NOVO Ubud в Instagram" },
       { src: m("10.webp"), caption: "Сторіс NOVO Ubud на смартфонах" },
@@ -127,6 +131,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "gallery",
     layout: "pair",
+    photoRatio: "1817 / 2048",
     images: [
       { src: m("11.webp"), caption: "Візитки та фірмова поліграфія" },
       { src: m("12.svg"), caption: "NOVO — Kharkiv Tone Regular" },
@@ -134,21 +139,21 @@ const blocksUk: CaseVisualBlock[] = [
   },
   {
     type: "gallery",
-    layout: "wide",
-    images: [{ src: m("13.webp"), caption: "Презентація NOVO Ubud на ноутбуці" }],
-  },
-  {
-    type: "gallery",
     layout: "pair",
+    photoRatio: "16 / 9",
     images: [
+      { src: m("13.webp"), caption: "Презентація NOVO Ubud на ноутбуці" },
       { src: m("14.webp"), caption: "Будівельний банер NOVO Ubud" },
-      { src: m("15.webp"), caption: "Білборд NOVO Ubud" },
     ],
   },
   {
     type: "gallery",
-    layout: "wide",
-    images: [{ src: m("16.webp"), caption: "Сітілайт NOVO Ubud" }],
+    layout: "pair",
+    photoRatio: "16 / 9",
+    images: [
+      { src: m("15.webp"), caption: "Білборд NOVO Ubud" },
+      { src: m("16.webp"), caption: "Сітілайт NOVO Ubud" },
+    ],
   },
   {
     type: "section",
@@ -163,7 +168,7 @@ const blocksUk: CaseVisualBlock[] = [
   {
     type: "quote",
     index: "05",
-    kicker: "ВІДГУК",
+    kicker: "ВІДГУК КЛІЄНТА",
     heading: "Погляд команди\nNOVO.",
     paragraphs: [
       "Для нас було важливо, щоб бренд передавав не лише вигляд комплексу, а й відчуття життя в ньому. Зрозуміла візуальна система допомагає послідовно говорити про NOVO — від першого знайомства до деталей у просторі.",
@@ -190,7 +195,7 @@ const novoGalleryCaptionsRu: Record<string, string> = {
   [m("13.webp")]: "Презентация NOVO Ubud на ноутбуке",
   [m("14.webp")]: "Строительный баннер NOVO Ubud",
   [m("15.webp")]: "Билборд NOVO Ubud",
-  [m("16.webp")]: "Ситилайт NOVO Ubud",
+  [m("16.webp")]: "Сити-лайт NOVO Ubud",
 };
 
 const novoGalleryCaptionsEn: Record<string, string> = {
@@ -276,13 +281,12 @@ const blocksRu: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       label: "NOVO / BRAND EXPERIENCE",
       text: "От пространства.\nК ощущению.",
-      footer: "NOVO DEVELOPMENT / BRAND IDENTITY",
     };
   }
   if (block.type === "quote") {
     return {
       ...block,
-      kicker: "ОТЗЫВ",
+      kicker: "ОТЗЫВ КЛИЕНТА",
       heading: "Взгляд команды\nNOVO.",
       paragraphs: [
         "Для нас было важно, чтобы бренд передавал не только облик комплекса, но и ощущение жизни в нём. Понятная визуальная система помогает последовательно говорить о NOVO — от первого знакомства до деталей в пространстве.",
@@ -378,13 +382,12 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
       ...block,
       label: "NOVO / BRAND EXPERIENCE",
       text: "From space.\nTo feeling.",
-      footer: "NOVO DEVELOPMENT / BRAND IDENTITY",
     };
   }
   if (block.type === "quote") {
     return {
       ...block,
-      kicker: "TESTIMONIAL",
+      kicker: "CLIENT REVIEW",
       heading: "From the NOVO\nteam.",
       paragraphs: [
         "It was important that the brand convey not only how the complex looks, but how it feels to live there. A clear visual system helps us speak about NOVO consistently — from the first introduction to details in the space.",
