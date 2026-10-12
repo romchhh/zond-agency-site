@@ -11,6 +11,9 @@ export function generateStaticParams() {
 /** Allow unknown paths so we can call notFound() inside the locale segment. */
 export const dynamicParams = true;
 
+/** Never prerender/cache unknown URLs as soft-200 HTML. */
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {
