@@ -23,7 +23,7 @@ export default function NamingPage({
       copy={namingPage[locale]}
       serviceSlug="naming"
       seo={getNamingSeo(locale)}
-      heroImage="/services/naming/naming-01.png"
+      heroImage="/assets/photography/naming-0.webp"
     />
   );
 }

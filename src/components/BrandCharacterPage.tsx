@@ -23,7 +23,7 @@ export default function BrandCharacterPage({
       copy={brandCharacterPage[locale]}
       serviceSlug="brand-character"
       seo={getBrandCharacterSeo(locale)}
-      heroImage="/services/brand-character/mascot-01.png"
+      heroImage="/assets/photography/brand-character-3.webp"
     />
   );
 }

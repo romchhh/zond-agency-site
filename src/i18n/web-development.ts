@@ -171,56 +171,56 @@ const uk: ServicePageContent = {
         "index": "01",
         "title": "Бриф і цілі",
         "description": "З’ясовуємо, що сайт має допомагати робити: знайомити з брендом, презентувати продукт, збирати звернення або підтримувати продажі.",
-        "image": "/services/web-development/webdev-03.png",
+        "image": "/assets/photography/branding-0.webp",
         "alt": "Ілюстрація етапу веб-розробки: Бриф і цілі"
     },
     {
         "index": "02",
         "title": "Дослідження користувачів",
         "description": "Визначаємо потреби аудиторії та сценарії, за якими люди шукають інформацію й приймають рішення.",
-        "image": "/services/web-development/webdev-02.png",
+        "image": "/assets/photography/positioning-0.webp",
         "alt": "Ілюстрація етапу веб-розробки: Дослідження користувачів"
     },
     {
         "index": "03",
         "title": "Структура й прототип",
         "description": "Будуємо карту сторінок, навігацію та прототипи ключових екранів, щоб потрібний зміст було легко знайти.",
-        "image": "/services/web-development/webdev-02.png",
+        "image": "/assets/photography/web-development-1.webp",
         "alt": "Ілюстрація етапу веб-розробки: Структура й прототип"
     },
     {
         "index": "04",
         "title": "Дизайн інтерфейсу",
         "description": "Перекладаємо характер бренду у зрозумілий інтерфейс: типографіку, композицію, зображення й деталі взаємодії.",
-        "image": "/services/web-development/webdev-01.png",
+        "image": "/assets/real-cases/carbit-07.webp",
         "alt": "Ілюстрація етапу веб-розробки: Дизайн інтерфейсу"
     },
     {
         "index": "05",
         "title": "Адаптивна розробка",
         "description": "Створюємо сторінки для телефона, планшета й комп’ютера з увагою до читабельності та зручності керування.",
-        "image": "/services/web-development/webdev-04.png",
+        "image": "/assets/photography/web-development-2.webp",
         "alt": "Ілюстрація етапу веб-розробки: Адаптивна розробка"
     },
     {
         "index": "06",
         "title": "Контент та інтеграції",
         "description": "Налаштовуємо погоджений спосіб редагування матеріалів і потрібні підключення до форм, аналітики чи інших сервісів.",
-        "image": "/services/web-development/webdev-06.png",
+        "image": "/assets/photography/smm-0.webp",
         "alt": "Ілюстрація етапу веб-розробки: Контент та інтеграції"
     },
     {
         "index": "07",
         "title": "Перевірка якості",
         "description": "Перевіряємо основні сценарії, відображення на різних екранах, базову доступність і технічну якість перед запуском.",
-        "image": "/services/web-development/webdev-05.png",
+        "image": "/assets/photography/smm-3.webp",
         "alt": "Ілюстрація етапу веб-розробки: Перевірка якості"
     },
     {
         "index": "08",
         "title": "Запуск і передача",
         "description": "Публікуємо готовий сайт, передаємо доступи та інструкції для команди. Подальшу підтримку узгоджуємо за потреби.",
-        "image": "/services/web-development/webdev-06.png",
+        "image": "/assets/real-cases/novo-development-13.webp",
         "alt": "Ілюстрація етапу веб-розробки: Запуск і передача"
     }
 ],
@@ -346,17 +346,17 @@ const uk: ServicePageContent = {
   productNote: "Ілюстративні концепти показують адаптивний інтерфейс, процес розробки та цифрові носії. Це не фотографії клієнтських робіт.",
   products: [
     {
-        "src": "/services/web-development/webdev-04.png",
+        "src": "/assets/photography/application-social.webp",
         "alt": "Ілюстративний приклад: адаптивний дизайн на ноутбуці планшеті й телефоні",
         "caption": "Адаптивність"
     },
     {
-        "src": "/services/web-development/webdev-05.png",
+        "src": "/assets/photography/web-development-3.webp",
         "alt": "Ілюстративний приклад: робоче місце розробника",
         "caption": "Розробка"
     },
     {
-        "src": "/services/web-development/webdev-06.png",
+        "src": "/assets/photography/application-team.webp",
         "alt": "Ілюстративний приклад: сайт на ноутбуці й телефоні",
         "caption": "Запуск"
     }
@@ -367,7 +367,7 @@ const uk: ServicePageContent = {
   faq: [
     {
         "question": "Скільки коштує розробка сайту?",
-        "answer": "Вартість залежить від кількості сторінок, обсягу дизайну, функцій та інтеграцій. Після знайомства з задачами й матеріалами ми запропонуємо склад робіт і кошторис."
+        "answer": "Вартість розраховуємо індивідуально після брифу — залежно від обсягу завдання, каналів і складу робіт."
     },
     {
         "question": "Скільки часу займає розробка?",
@@ -500,56 +500,56 @@ const en: ServicePageContent = {
             "index": "01",
             "title": "Brief and goals",
             "description": "We clarify what the site should help with: introduce the brand, present the product, collect inquiries, or support sales.",
-            "image": "/services/web-development/webdev-03.png",
+            "image": "/assets/photography/branding-0.webp",
             "alt": "Web development stage illustration: Brief and goals"
         },
         {
             "index": "02",
             "title": "User research",
             "description": "We define audience needs and the scenarios people follow when they look for information and make decisions.",
-            "image": "/services/web-development/webdev-02.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Web development stage illustration: User research"
         },
         {
             "index": "03",
             "title": "Structure and prototype",
             "description": "We build the sitemap, navigation, and prototypes of key screens so the right content is easy to find.",
-            "image": "/services/web-development/webdev-02.png",
+            "image": "/assets/photography/web-development-1.webp",
             "alt": "Web development stage illustration: Structure and prototype"
         },
         {
             "index": "04",
             "title": "Interface design",
             "description": "We translate brand character into a clear interface: typography, layout, imagery, and interaction details.",
-            "image": "/services/web-development/webdev-01.png",
+            "image": "/assets/real-cases/carbit-07.webp",
             "alt": "Web development stage illustration: Interface design"
         },
         {
             "index": "05",
             "title": "Responsive development",
             "description": "We build pages for phone, tablet, and desktop with attention to readability and ease of use.",
-            "image": "/services/web-development/webdev-04.png",
+            "image": "/assets/photography/web-development-2.webp",
             "alt": "Web development stage illustration: Responsive development"
         },
         {
             "index": "06",
             "title": "Content and integrations",
             "description": "We set up the agreed way to edit materials and the connections to forms, analytics, or other services.",
-            "image": "/services/web-development/webdev-06.png",
+            "image": "/assets/photography/smm-0.webp",
             "alt": "Web development stage illustration: Content and integrations"
         },
         {
             "index": "07",
             "title": "Quality assurance",
             "description": "We check main scenarios, display across screen sizes, basic accessibility, and technical quality before launch.",
-            "image": "/services/web-development/webdev-05.png",
+            "image": "/assets/photography/smm-3.webp",
             "alt": "Web development stage illustration: Quality assurance"
         },
         {
             "index": "08",
             "title": "Launch and handoff",
             "description": "We publish the finished site, hand over access and instructions for the team. Ongoing support is agreed if needed.",
-            "image": "/services/web-development/webdev-06.png",
+            "image": "/assets/real-cases/novo-development-13.webp",
             "alt": "Web development stage illustration: Launch and handoff"
         }
     ],
@@ -680,17 +680,17 @@ const en: ServicePageContent = {
     "productNote": "Illustrative concepts show responsive interface, the development process, and digital touchpoints. These are not photos of client work.",
     "products": [
         {
-            "src": "/services/web-development/webdev-04.png",
+            "src": "/assets/photography/application-social.webp",
             "alt": "Illustrative example: responsive design on laptop, tablet, and phone",
             "caption": "Responsive"
         },
         {
-            "src": "/services/web-development/webdev-05.png",
+            "src": "/assets/photography/web-development-3.webp",
             "alt": "Illustrative example: developer workspace",
             "caption": "Development"
         },
         {
-            "src": "/services/web-development/webdev-06.png",
+            "src": "/assets/photography/application-team.webp",
             "alt": "Illustrative example: site on laptop and phone",
             "caption": "Launch"
         }
@@ -701,7 +701,7 @@ const en: ServicePageContent = {
     "faq": [
         {
             "question": "How much does website development cost?",
-            "answer": "Cost depends on the number of pages, design scope, features, and integrations. After we learn about the task and materials we propose the scope and estimate."
+            "answer": "We calculate the cost individually after the brief — depending on scope, channels, and deliverables."
         },
         {
             "question": "How long does development take?",
@@ -834,56 +834,56 @@ const ru: ServicePageContent = {
             "index": "01",
             "title": "Бриф и цели",
             "description": "Выясняем, чем сайт должен помогать: знакомить с брендом, представлять продукт, собирать обращения или поддерживать продажи.",
-            "image": "/services/web-development/webdev-03.png",
+            "image": "/assets/photography/branding-0.webp",
             "alt": "Иллюстрация этапа веб-разработки: Бриф и цели"
         },
         {
             "index": "02",
             "title": "Исследование пользователей",
             "description": "Определяем потребности аудитории и сценарии, по которым люди ищут информацию и принимают решения.",
-            "image": "/services/web-development/webdev-02.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Иллюстрация этапа веб-разработки: Исследование пользователей"
         },
         {
             "index": "03",
             "title": "Структура и прототип",
             "description": "Строим карту страниц, навигацию и прототипы ключевых экранов, чтобы нужный контент было легко найти.",
-            "image": "/services/web-development/webdev-02.png",
+            "image": "/assets/photography/web-development-1.webp",
             "alt": "Иллюстрация этапа веб-разработки: Структура и прототип"
         },
         {
             "index": "04",
             "title": "Дизайн интерфейса",
             "description": "Переводим характер бренда в понятный интерфейс: типографику, композицию, изображения и детали взаимодействия.",
-            "image": "/services/web-development/webdev-01.png",
+            "image": "/assets/real-cases/carbit-07.webp",
             "alt": "Иллюстрация этапа веб-разработки: Дизайн интерфейса"
         },
         {
             "index": "05",
             "title": "Адаптивная разработка",
             "description": "Создаём страницы для телефона, планшета и компьютера с вниманием к читаемости и удобству управления.",
-            "image": "/services/web-development/webdev-04.png",
+            "image": "/assets/photography/web-development-2.webp",
             "alt": "Иллюстрация этапа веб-разработки: Адаптивная разработка"
         },
         {
             "index": "06",
             "title": "Контент и интеграции",
             "description": "Настраиваем согласованный способ редактирования материалов и нужные подключения к формам, аналитике или другим сервисам.",
-            "image": "/services/web-development/webdev-06.png",
+            "image": "/assets/photography/smm-0.webp",
             "alt": "Иллюстрация этапа веб-разработки: Контент и интеграции"
         },
         {
             "index": "07",
             "title": "Проверка качества",
             "description": "Проверяем основные сценарии, отображение на разных экранах, базовую доступность и техническое качество перед запуском.",
-            "image": "/services/web-development/webdev-05.png",
+            "image": "/assets/photography/smm-3.webp",
             "alt": "Иллюстрация этапа веб-разработки: Проверка качества"
         },
         {
             "index": "08",
             "title": "Запуск и передача",
             "description": "Публикуем готовый сайт, передаём доступы и инструкции для команды. Дальнейшую поддержку согласуем при необходимости.",
-            "image": "/services/web-development/webdev-06.png",
+            "image": "/assets/real-cases/novo-development-13.webp",
             "alt": "Иллюстрация этапа веб-разработки: Запуск и передача"
         }
     ],
@@ -1014,17 +1014,17 @@ const ru: ServicePageContent = {
     "productNote": "Иллюстративные концепты показывают адаптивный интерфейс, процесс разработки и цифровые носители. Это не фотографии клиентских работ.",
     "products": [
         {
-            "src": "/services/web-development/webdev-04.png",
+            "src": "/assets/photography/application-social.webp",
             "alt": "Иллюстративный пример: адаптивный дизайн на ноутбуке, планшете и телефоне",
             "caption": "Адаптивность"
         },
         {
-            "src": "/services/web-development/webdev-05.png",
+            "src": "/assets/photography/web-development-3.webp",
             "alt": "Иллюстративный пример: рабочее место разработчика",
             "caption": "Разработка"
         },
         {
-            "src": "/services/web-development/webdev-06.png",
+            "src": "/assets/photography/application-team.webp",
             "alt": "Иллюстративный пример: сайт на ноутбуке и телефоне",
             "caption": "Запуск"
         }
@@ -1035,7 +1035,7 @@ const ru: ServicePageContent = {
     "faq": [
         {
             "question": "Сколько стоит разработка сайта?",
-            "answer": "Стоимость зависит от количества страниц, объёма дизайна, функций и интеграций. После знакомства с задачами и материалами мы предложим состав работ и смету."
+            "answer": "Стоимость рассчитываем индивидуально после брифа — в зависимости от объёма задачи, каналов и состава работ."
         },
         {
             "question": "Сколько времени занимает разработка?",

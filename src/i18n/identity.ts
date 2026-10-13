@@ -90,56 +90,56 @@ const uk: ServicePageContent = {
         "index": "01",
         "title": "Дослідження та бриф",
         "description": "Знайомимося з бізнесом, продуктом і аудиторією. Визначаємо, що айдентика має передавати та де вона працюватиме.",
-        "image": "/services/identity/identity-03.png",
+        "image": "/assets/photography/branding-0.webp",
         "alt": "Ілюстрація напряму айдентики: Дослідження та бриф"
     },
     {
         "index": "02",
         "title": "Візуальний напрям",
         "description": "Шукаємо образи, прийоми та референси, які підтримують характер бренду. Погоджуємо критерії майбутньої системи.",
-        "image": "/services/identity/identity-01.png",
+        "image": "/assets/photography/identity-0.webp",
         "alt": "Ілюстрація напряму айдентики: Візуальний напрям"
     },
     {
         "index": "03",
         "title": "Логотип",
         "description": "Розробляємо знак і написання бренду з урахуванням різних масштабів, фонів і сценаріїв використання.",
-        "image": "/services/identity/identity-02.png",
+        "image": "/assets/photography/logo-0.webp",
         "alt": "Ілюстрація напряму айдентики: Логотип"
     },
     {
         "index": "04",
         "title": "Кольорова система",
         "description": "Добираємо основні й додаткові кольори та їхні поєднання, щоб бренд залишався впізнаваним у різних середовищах.",
-        "image": "/services/identity/identity-01.png",
+        "image": "/assets/real-cases/digital-residence-05.webp",
         "alt": "Ілюстрація напряму айдентики: Кольорова система"
     },
     {
         "index": "05",
         "title": "Типографіка",
         "description": "Вибудовуємо ієрархію шрифтів для заголовків, текстів і цифрових інтерфейсів. Враховуємо потрібні мови та читабельність.",
-        "image": "/services/identity/identity-06.png",
+        "image": "/assets/real-cases/digital-residence-02.webp",
         "alt": "Ілюстрація напряму айдентики: Типографіка"
     },
     {
         "index": "06",
         "title": "Графічна мова",
         "description": "Створюємо принципи композиції, графічні елементи, патерни або ілюстративний підхід, який підтримує ідею бренду.",
-        "image": "/services/identity/identity-02.png",
+        "image": "/assets/photography/graphics-0.webp",
         "alt": "Ілюстрація напряму айдентики: Графічна мова"
     },
     {
         "index": "07",
         "title": "Бренд-носії",
         "description": "Показуємо, як система працює на сайті, в соцмережах, презентаціях, упаковці, документах або просторі.",
-        "image": "/services/identity/identity-04.png",
+        "image": "/assets/photography/application-stationery.webp",
         "alt": "Ілюстрація напряму айдентики: Бренд-носії"
     },
     {
         "index": "08",
         "title": "Гайдлайн",
         "description": "Фіксуємо правила використання айдентики та передаємо файли, з якими команді зручно працювати після запуску.",
-        "image": "/services/identity/identity-06.png",
+        "image": "/assets/photography/brandbook-1.webp",
         "alt": "Ілюстрація напряму айдентики: Гайдлайн"
     }
 ],
@@ -265,17 +265,17 @@ const uk: ServicePageContent = {
   productNote: "Ілюстративні концепти показують роботу єдиної візуальної системи на упаковці, у просторі та ділових матеріалах. Це не клієнтські роботи.",
   products: [
     {
-        "src": "/services/identity/identity-04.png",
+        "src": "/assets/photography/application-package.webp",
         "alt": "Ілюстративне застосування: айдентика на упаковці та пакеті",
         "caption": "Упаковка"
     },
     {
-        "src": "/services/identity/identity-05.png",
+        "src": "/assets/photography/application-space.webp",
         "alt": "Ілюстративне застосування: айдентика в міському просторі",
         "caption": "Простір"
     },
     {
-        "src": "/services/identity/identity-06.png",
+        "src": "/assets/photography/application-merch.webp",
         "alt": "Ілюстративне застосування: айдентика на ділових матеріалах",
         "caption": "Носії бренду"
     }
@@ -290,7 +290,7 @@ const uk: ServicePageContent = {
     },
     {
         "question": "Скільки коштує айдентика?",
-        "answer": "Вартість залежить від обсягу системи та кількості потрібних носіїв. Після знайомства з проєктом ми запропонуємо склад робіт і кошторис."
+        "answer": "Орієнтовна вартість — 30–80 тис. грн. Остаточний кошторис залежить від обсягу завдання та погодженого складу робіт."
     },
     {
         "question": "Скільки часу займає розробка?",
@@ -419,56 +419,56 @@ const en: ServicePageContent = {
             "index": "01",
             "title": "Research and brief",
             "description": "We learn the business, product, and audience. We define what the identity should convey and where it will live.",
-            "image": "/services/identity/identity-03.png",
+            "image": "/assets/photography/branding-0.webp",
             "alt": "Identity stage illustration: Research and brief"
         },
         {
             "index": "02",
             "title": "Visual direction",
             "description": "We explore images, techniques, and references that support brand character. We align on criteria for the future system.",
-            "image": "/services/identity/identity-01.png",
+            "image": "/assets/photography/identity-0.webp",
             "alt": "Identity stage illustration: Visual direction"
         },
         {
             "index": "03",
             "title": "Logo",
             "description": "We develop the mark and brand lockup for different scales, backgrounds, and use scenarios.",
-            "image": "/services/identity/identity-02.png",
+            "image": "/assets/photography/logo-0.webp",
             "alt": "Identity stage illustration: Logo"
         },
         {
             "index": "04",
             "title": "Color system",
             "description": "We select primary and secondary colors and pairings so the brand stays recognizable across environments.",
-            "image": "/services/identity/identity-01.png",
+            "image": "/assets/real-cases/digital-residence-05.webp",
             "alt": "Identity stage illustration: Color system"
         },
         {
             "index": "05",
             "title": "Typography",
             "description": "We build font hierarchy for headlines, body copy, and digital interfaces. We account for required languages and readability.",
-            "image": "/services/identity/identity-06.png",
+            "image": "/assets/real-cases/digital-residence-02.webp",
             "alt": "Identity stage illustration: Typography"
         },
         {
             "index": "06",
             "title": "Graphic language",
             "description": "We define composition principles, graphic elements, patterns, or an illustrative approach that supports the brand idea.",
-            "image": "/services/identity/identity-02.png",
+            "image": "/assets/photography/graphics-0.webp",
             "alt": "Identity stage illustration: Graphic language"
         },
         {
             "index": "07",
             "title": "Brand touchpoints",
             "description": "We show how the system works on the website, social, presentations, packaging, documents, or in space.",
-            "image": "/services/identity/identity-04.png",
+            "image": "/assets/photography/application-stationery.webp",
             "alt": "Identity stage illustration: Brand touchpoints"
         },
         {
             "index": "08",
             "title": "Guidelines",
             "description": "We document identity usage rules and deliver files the team can work with after launch.",
-            "image": "/services/identity/identity-06.png",
+            "image": "/assets/photography/brandbook-1.webp",
             "alt": "Identity stage illustration: Guidelines"
         }
     ],
@@ -599,17 +599,17 @@ const en: ServicePageContent = {
     "productNote": "Illustrative concepts show one visual system on packaging, in space, and on business materials. These are not client work.",
     "products": [
         {
-            "src": "/services/identity/identity-04.png",
+            "src": "/assets/photography/application-package.webp",
             "alt": "Illustrative identity application: packaging and bag",
             "caption": "Packaging"
         },
         {
-            "src": "/services/identity/identity-05.png",
+            "src": "/assets/photography/application-space.webp",
             "alt": "Illustrative identity application: urban space",
             "caption": "Space"
         },
         {
-            "src": "/services/identity/identity-06.png",
+            "src": "/assets/photography/application-merch.webp",
             "alt": "Illustrative identity application: business materials",
             "caption": "Brand touchpoints"
         }
@@ -624,7 +624,7 @@ const en: ServicePageContent = {
         },
         {
             "question": "How much does brand identity cost?",
-            "answer": "Cost depends on system scope and the number of touchpoints needed. After we learn about the project we propose scope and an estimate."
+            "answer": "Approximate cost — UAH 30–80k. The final estimate depends on the scope of work and the agreed deliverables."
         },
         {
             "question": "How long does development take?",
@@ -753,56 +753,56 @@ const ru: ServicePageContent = {
             "index": "01",
             "title": "Исследование и бриф",
             "description": "Знакомимся с бизнесом, продуктом и аудиторией. Определяем, что айдентика должна передавать и где будет работать.",
-            "image": "/services/identity/identity-03.png",
+            "image": "/assets/photography/branding-0.webp",
             "alt": "Иллюстрация этапа айдентики: Исследование и бриф"
         },
         {
             "index": "02",
             "title": "Визуальное направление",
             "description": "Ищем образы, приёмы и референсы, которые поддерживают характер бренда. Согласуем критерии будущей системы.",
-            "image": "/services/identity/identity-01.png",
+            "image": "/assets/photography/identity-0.webp",
             "alt": "Иллюстрация этапа айдентики: Визуальное направление"
         },
         {
             "index": "03",
             "title": "Логотип",
             "description": "Разрабатываем знак и написание бренда с учётом разных масштабов, фонов и сценариев использования.",
-            "image": "/services/identity/identity-02.png",
+            "image": "/assets/photography/logo-0.webp",
             "alt": "Иллюстрация этапа айдентики: Логотип"
         },
         {
             "index": "04",
             "title": "Цветовая система",
             "description": "Подбираем основные и дополнительные цвета и их сочетания, чтобы бренд оставался узнаваемым в разных средах.",
-            "image": "/services/identity/identity-01.png",
+            "image": "/assets/real-cases/digital-residence-05.webp",
             "alt": "Иллюстрация этапа айдентики: Цветовая система"
         },
         {
             "index": "05",
             "title": "Типографика",
             "description": "Выстраиваем иерархию шрифтов для заголовков, текстов и цифровых интерфейсов. Учитываем нужные языки и читаемость.",
-            "image": "/services/identity/identity-06.png",
+            "image": "/assets/real-cases/digital-residence-02.webp",
             "alt": "Иллюстрация этапа айдентики: Типографика"
         },
         {
             "index": "06",
             "title": "Графический язык",
             "description": "Создаём принципы композиции, графические элементы, паттерны или иллюстративный подход, который поддерживает идею бренда.",
-            "image": "/services/identity/identity-02.png",
+            "image": "/assets/photography/graphics-0.webp",
             "alt": "Иллюстрация этапа айдентики: Графический язык"
         },
         {
             "index": "07",
             "title": "Бренд-носители",
             "description": "Показываем, как система работает на сайте, в соцсетях, презентациях, упаковке, документах или в пространстве.",
-            "image": "/services/identity/identity-04.png",
+            "image": "/assets/photography/application-stationery.webp",
             "alt": "Иллюстрация этапа айдентики: Бренд-носители"
         },
         {
             "index": "08",
             "title": "Гайдлайн",
             "description": "Фиксируем правила использования айдентики и передаём файлы, с которыми команде удобно работать после запуска.",
-            "image": "/services/identity/identity-06.png",
+            "image": "/assets/photography/brandbook-1.webp",
             "alt": "Иллюстрация этапа айдентики: Гайдлайн"
         }
     ],
@@ -933,17 +933,17 @@ const ru: ServicePageContent = {
     "productNote": "Иллюстративные концепты показывают работу единой визуальной системы на упаковке, в пространстве и деловых материалах. Это не клиентские работы.",
     "products": [
         {
-            "src": "/services/identity/identity-04.png",
+            "src": "/assets/photography/application-package.webp",
             "alt": "Иллюстративное применение: айдентика на упаковке и пакете",
             "caption": "Упаковка"
         },
         {
-            "src": "/services/identity/identity-05.png",
+            "src": "/assets/photography/application-space.webp",
             "alt": "Иллюстративное применение: айдентика в городском пространстве",
             "caption": "Пространство"
         },
         {
-            "src": "/services/identity/identity-06.png",
+            "src": "/assets/photography/application-merch.webp",
             "alt": "Иллюстративное применение: айдентика на деловых материалах",
             "caption": "Носители бренда"
         }
@@ -958,7 +958,7 @@ const ru: ServicePageContent = {
         },
         {
             "question": "Сколько стоит айдентика?",
-            "answer": "Стоимость зависит от объёма системы и количества нужных носителей. После знакомства с проектом мы предложим состав работ и смету."
+            "answer": "Ориентировочная стоимость — 30–80 тыс. грн. Итоговая смета зависит от объёма задачи и согласованного состава работ."
         },
         {
             "question": "Сколько времени занимает разработка?",

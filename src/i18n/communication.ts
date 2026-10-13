@@ -90,56 +90,56 @@ const uk: ServicePageContent = {
         "index": "01",
         "title": "Аудит комунікації",
         "description": "Вивчаємо, як бренд говорить зараз: на сайті, у соцмережах, рекламі та презентаціях. Знаходимо сильні сторони й розбіжності.",
-        "image": "/services/communication/communication-02.png",
+        "image": "/assets/photography/communication-0.webp",
         "alt": "Ілюстрація етапу комунікації: Аудит комунікації"
     },
     {
         "index": "02",
         "title": "Аудиторія та контекст",
         "description": "Уточнюємо, до кого звертається бренд, які питання мають люди та які слова використовують для опису своєї потреби.",
-        "image": "/services/communication/communication-03.png",
+        "image": "/assets/photography/positioning-0.webp",
         "alt": "Ілюстрація етапу комунікації: Аудиторія та контекст"
     },
     {
         "index": "03",
         "title": "Комунікаційна ідея",
         "description": "Визначаємо центральну думку, яка пов’язує цінність продукту з потребою аудиторії та залишається впізнаваною в різних каналах.",
-        "image": "/services/communication/communication-01.png",
+        "image": "/assets/photography/branding-2.webp",
         "alt": "Ілюстрація етапу комунікації: Комунікаційна ідея"
     },
     {
         "index": "04",
         "title": "Слоган",
         "description": "Створюємо короткий вислів, який передає характер і головну ідею бренду. Показуємо варіанти з поясненням їхньої логіки.",
-        "image": "/services/communication/communication-01.png",
+        "image": "/assets/real-cases/tbiliso-09.webp",
         "alt": "Ілюстрація етапу комунікації: Слоган"
     },
     {
         "index": "05",
         "title": "Тон голосу",
         "description": "Описуємо, як бренд звертається до людей: вибір слів, інтонацію, рівень формальності та принципи текстів.",
-        "image": "/services/communication/communication-03.png",
+        "image": "/assets/photography/communication-1.webp",
         "alt": "Ілюстрація етапу комунікації: Тон голосу"
     },
     {
         "index": "06",
         "title": "Ключові повідомлення",
         "description": "Формулюємо аргументи для різних аудиторій і ситуацій: від першого знайомства до рішення про покупку.",
-        "image": "/services/communication/communication-06.png",
+        "image": "/assets/real-cases/yakomoga-02.webp",
         "alt": "Ілюстрація етапу комунікації: Ключові повідомлення"
     },
     {
         "index": "07",
         "title": "Приклади застосування",
         "description": "Показуємо, як голос бренду працює у заголовках сайту, рекламі, соцмережах, презентаціях і матеріалах продукту.",
-        "image": "/services/communication/communication-04.png",
+        "image": "/assets/photography/communication-2.webp",
         "alt": "Ілюстрація етапу комунікації: Приклади застосування"
     },
     {
         "index": "08",
         "title": "Комунікаційний гайд",
         "description": "Збираємо правила, приклади та формулювання в документ, яким команда зможе користуватися щодня.",
-        "image": "/services/communication/communication-06.png",
+        "image": "/assets/photography/communication-3.webp",
         "alt": "Ілюстрація етапу комунікації: Комунікаційний гайд"
     }
 ],
@@ -265,17 +265,17 @@ const uk: ServicePageContent = {
   productNote: "Ілюстративні концепти показують, як єдина комунікаційна ідея переходить у кампанію, простір і матеріали команди. Це не клієнтські роботи.",
   products: [
     {
-        "src": "/services/communication/communication-04.png",
+        "src": "/assets/photography/graphics-2.webp",
         "alt": "Ілюстративне застосування: друковані матеріали кампанії",
         "caption": "Кампанія"
     },
     {
-        "src": "/services/communication/communication-05.png",
+        "src": "/assets/photography/application-space.webp",
         "alt": "Ілюстративне застосування: повідомлення у міському просторі",
         "caption": "Простір"
     },
     {
-        "src": "/services/communication/communication-06.png",
+        "src": "/assets/photography/graphics-0.webp",
         "alt": "Ілюстративне застосування: цифрові й друковані матеріали",
         "caption": "Комунікаційні носії"
     }
@@ -294,7 +294,7 @@ const uk: ServicePageContent = {
     },
     {
         "question": "Скільки коштує розробка?",
-        "answer": "Вартість залежить від кількості аудиторій, каналів, мов і складу результату. Після знайомства з проєктом ми підготуємо кошторис."
+        "answer": "Вартість розраховуємо індивідуально після брифу — залежно від обсягу завдання, каналів і складу робіт."
     },
     {
         "question": "Скільки часу займає робота?",
@@ -419,56 +419,56 @@ const en: ServicePageContent = {
             "index": "01",
             "title": "Communication audit",
             "description": "We study how the brand speaks today: on the website, in social, ads, and presentations. We find strengths and inconsistencies.",
-            "image": "/services/communication/communication-02.png",
+            "image": "/assets/photography/communication-0.webp",
             "alt": "Communication stage illustration: Communication audit"
         },
         {
             "index": "02",
             "title": "Audience and context",
             "description": "We clarify who the brand addresses, what questions people have, and the words they use to describe their need.",
-            "image": "/services/communication/communication-03.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Communication stage illustration: Audience and context"
         },
         {
             "index": "03",
             "title": "Communication idea",
             "description": "We define the central thought that links product value to audience need and stays recognizable across channels.",
-            "image": "/services/communication/communication-01.png",
+            "image": "/assets/photography/branding-2.webp",
             "alt": "Communication stage illustration: Communication idea"
         },
         {
             "index": "04",
             "title": "Slogan",
             "description": "We create a short line that conveys character and the main idea. We present options with the logic behind each.",
-            "image": "/services/communication/communication-01.png",
+            "image": "/assets/real-cases/tbiliso-09.webp",
             "alt": "Communication stage illustration: Slogan"
         },
         {
             "index": "05",
             "title": "Tone of voice",
             "description": "We describe how the brand addresses people: word choice, intonation, formality level, and copy principles.",
-            "image": "/services/communication/communication-03.png",
+            "image": "/assets/photography/communication-1.webp",
             "alt": "Communication stage illustration: Tone of voice"
         },
         {
             "index": "06",
             "title": "Key messages",
             "description": "We formulate arguments for different audiences and situations: from first contact to purchase decision.",
-            "image": "/services/communication/communication-06.png",
+            "image": "/assets/real-cases/yakomoga-02.webp",
             "alt": "Communication stage illustration: Key messages"
         },
         {
             "index": "07",
             "title": "Application examples",
             "description": "We show how brand voice works in website headlines, ads, social, presentations, and product materials.",
-            "image": "/services/communication/communication-04.png",
+            "image": "/assets/photography/communication-2.webp",
             "alt": "Communication stage illustration: Application examples"
         },
         {
             "index": "08",
             "title": "Communication guide",
             "description": "We compile rules, examples, and wording into a document the team can use every day.",
-            "image": "/services/communication/communication-06.png",
+            "image": "/assets/photography/communication-3.webp",
             "alt": "Communication stage illustration: Communication guide"
         }
     ],
@@ -599,17 +599,17 @@ const en: ServicePageContent = {
     "productNote": "Illustrative concepts show how one communication idea moves into campaign, space, and team materials. These are not client work.",
     "products": [
         {
-            "src": "/services/communication/communication-04.png",
+            "src": "/assets/photography/graphics-2.webp",
             "alt": "Illustrative application: campaign print materials",
             "caption": "Campaign"
         },
         {
-            "src": "/services/communication/communication-05.png",
+            "src": "/assets/photography/application-space.webp",
             "alt": "Illustrative application: messaging in urban space",
             "caption": "Space"
         },
         {
-            "src": "/services/communication/communication-06.png",
+            "src": "/assets/photography/graphics-0.webp",
             "alt": "Illustrative application: digital and print materials",
             "caption": "Communication channels"
         }
@@ -628,7 +628,7 @@ const en: ServicePageContent = {
         },
         {
             "question": "How much does development cost?",
-            "answer": "Cost depends on the number of audiences, channels, languages, and deliverables. After we learn about the project we prepare an estimate."
+            "answer": "We calculate the cost individually after the brief — depending on scope, channels, and deliverables."
         },
         {
             "question": "How long does the work take?",
@@ -753,56 +753,56 @@ const ru: ServicePageContent = {
             "index": "01",
             "title": "Аудит коммуникации",
             "description": "Изучаем, как бренд говорит сейчас: на сайте, в соцсетях, рекламе и презентациях. Находим сильные стороны и расхождения.",
-            "image": "/services/communication/communication-02.png",
+            "image": "/assets/photography/communication-0.webp",
             "alt": "Иллюстрация этапа коммуникации: Аудит коммуникации"
         },
         {
             "index": "02",
             "title": "Аудитория и контекст",
             "description": "Уточняем, к кому обращается бренд, какие вопросы есть у людей и какие слова они используют, описывая свою потребность.",
-            "image": "/services/communication/communication-03.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Иллюстрация этапа коммуникации: Аудитория и контекст"
         },
         {
             "index": "03",
             "title": "Коммуникационная идея",
             "description": "Определяем центральную мысль, которая связывает ценность продукта с потребностью аудитории и остаётся узнаваемой в разных каналах.",
-            "image": "/services/communication/communication-01.png",
+            "image": "/assets/photography/branding-2.webp",
             "alt": "Иллюстрация этапа коммуникации: Коммуникационная идея"
         },
         {
             "index": "04",
             "title": "Слоган",
             "description": "Создаём короткую фразу, которая передаёт характер и главную идею бренда. Показываем варианты с объяснением их логики.",
-            "image": "/services/communication/communication-01.png",
+            "image": "/assets/real-cases/tbiliso-09.webp",
             "alt": "Иллюстрация этапа коммуникации: Слоган"
         },
         {
             "index": "05",
             "title": "Тон голоса",
             "description": "Описываем, как бренд обращается к людям: выбор слов, интонацию, уровень формальности и принципы текстов.",
-            "image": "/services/communication/communication-03.png",
+            "image": "/assets/photography/communication-1.webp",
             "alt": "Иллюстрация этапа коммуникации: Тон голоса"
         },
         {
             "index": "06",
             "title": "Ключевые сообщения",
             "description": "Формулируем аргументы для разных аудиторий и ситуаций: от первого знакомства до решения о покупке.",
-            "image": "/services/communication/communication-06.png",
+            "image": "/assets/real-cases/yakomoga-02.webp",
             "alt": "Иллюстрация этапа коммуникации: Ключевые сообщения"
         },
         {
             "index": "07",
             "title": "Примеры применения",
             "description": "Показываем, как голос бренда работает в заголовках сайта, рекламе, соцсетях, презентациях и материалах продукта.",
-            "image": "/services/communication/communication-04.png",
+            "image": "/assets/photography/communication-2.webp",
             "alt": "Иллюстрация этапа коммуникации: Примеры применения"
         },
         {
             "index": "08",
             "title": "Коммуникационный гайд",
             "description": "Собираем правила, примеры и формулировки в документ, которым команда сможет пользоваться каждый день.",
-            "image": "/services/communication/communication-06.png",
+            "image": "/assets/photography/communication-3.webp",
             "alt": "Иллюстрация этапа коммуникации: Коммуникационный гайд"
         }
     ],
@@ -933,17 +933,17 @@ const ru: ServicePageContent = {
     "productNote": "Иллюстративные концепты показывают, как единая коммуникационная идея переходит в кампанию, пространство и материалы команды. Это не клиентские работы.",
     "products": [
         {
-            "src": "/services/communication/communication-04.png",
+            "src": "/assets/photography/graphics-2.webp",
             "alt": "Иллюстративное применение: печатные материалы кампании",
             "caption": "Кампания"
         },
         {
-            "src": "/services/communication/communication-05.png",
+            "src": "/assets/photography/application-space.webp",
             "alt": "Иллюстративное применение: сообщения в городском пространстве",
             "caption": "Пространство"
         },
         {
-            "src": "/services/communication/communication-06.png",
+            "src": "/assets/photography/graphics-0.webp",
             "alt": "Иллюстративное применение: цифровые и печатные материалы",
             "caption": "Коммуникационные носители"
         }
@@ -962,7 +962,7 @@ const ru: ServicePageContent = {
         },
         {
             "question": "Сколько стоит разработка?",
-            "answer": "Стоимость зависит от количества аудиторий, каналов, языков и состава результата. После знакомства с проектом мы подготовим смету."
+            "answer": "Стоимость рассчитываем индивидуально после брифа — в зависимости от объёма задачи, каналов и состава работ."
         },
         {
             "question": "Сколько времени занимает работа?",

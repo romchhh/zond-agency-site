@@ -23,7 +23,7 @@ export default function PackagingPage({
       copy={packagingPage[locale]}
       serviceSlug="packaging"
       seo={getPackagingSeo(locale)}
-      heroImage="/branding/product-packaging.jpg"
+      heroImage="/assets/photography/packaging-1.webp"
     />
   );
 }

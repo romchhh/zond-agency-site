@@ -23,7 +23,7 @@ export default function BrandbookPage({
       copy={brandbookPage[locale]}
       serviceSlug="brandbook"
       seo={getBrandbookSeo(locale)}
-      heroImage="/branding/include-brandbook.jpg"
+      heroImage="/assets/photography/brandbook-2.webp"
     />
   );
 }

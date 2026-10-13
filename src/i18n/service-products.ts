@@ -5,12 +5,12 @@ export type ServiceProductItem = {
 };
 
 export const serviceProductImages = [
-  "/branding/product-mug.jpg",
-  "/branding/product-stickers.jpg",
-  "/branding/product-social.jpg",
-  "/branding/product-cap.jpg",
-  "/branding/product-packaging.jpg",
-  "/branding/product-outdoor.jpg",
+  "/assets/photography/application-stationery.webp",
+  "/assets/photography/application-merch.webp",
+  "/assets/photography/application-social.webp",
+  "/assets/photography/application-clothing.webp",
+  "/assets/photography/application-package.webp",
+  "/assets/photography/application-outdoor.webp",
 ] as const;
 
 type ProductLabel = {

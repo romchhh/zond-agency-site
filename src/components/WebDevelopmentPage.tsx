@@ -23,7 +23,7 @@ export default function WebDevelopmentPage({
       copy={webDevelopmentPage[locale]}
       serviceSlug="web-development"
       seo={getWebDevelopmentSeo(locale)}
-      heroImage="/services/web-development/webdev-01.png"
+      heroImage="/assets/photography/web-development-0.webp"
     />
   );
 }

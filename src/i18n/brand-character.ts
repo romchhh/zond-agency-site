@@ -90,56 +90,56 @@ const uk: ServicePageContent = {
         "index": "01",
         "title": "Дослідження бренду",
         "description": "Вивчаємо продукт, аудиторію, характер і середовище бренду. З’ясовуємо, яку роль персонаж має відігравати в комунікації.",
-        "image": "/services/brand-character/mascot-02.png",
+        "image": "/assets/photography/positioning-0.webp",
         "alt": "Ілюстрація етапу: Дослідження бренду"
     },
     {
         "index": "02",
         "title": "Ідея персонажа",
         "description": "Формуємо образ і його зв’язок із брендом: походження, характер, емоцію та головний прийом, за яким його впізнають.",
-        "image": "/services/brand-character/mascot-01.png",
+        "image": "/assets/photography/brand-character-0.webp",
         "alt": "Ілюстрація етапу: Ідея персонажа"
     },
     {
         "index": "03",
         "title": "Силует і форма",
         "description": "Шукаємо виразний силует, який добре працює і в маленькій іконці, і на великому носії. Перевіряємо пропорції та читабельність.",
-        "image": "/services/brand-character/mascot-02.png",
+        "image": "/assets/photography/brand-character-1.webp",
         "alt": "Ілюстрація етапу: Силует і форма"
     },
     {
         "index": "04",
         "title": "Міміка й рух",
         "description": "Розробляємо емоції, пози та жести для різних ситуацій, щоб персонаж залишався собою, коли змінюється повідомлення.",
-        "image": "/services/brand-character/mascot-03.png",
+        "image": "/assets/photography/brand-character-2.webp",
         "alt": "Ілюстрація етапу: Міміка й рух"
     },
     {
         "index": "05",
         "title": "Стиль і колір",
         "description": "Узгоджуємо кольори, матеріали та графічну мову персонажа з айдентикою бренду й потрібними форматами.",
-        "image": "/services/brand-character/mascot-04.png",
+        "image": "/assets/photography/identity-1.webp",
         "alt": "Ілюстрація етапу: Стиль і колір"
     },
     {
         "index": "06",
         "title": "2D або 3D виконання",
         "description": "Готуємо персонажа в погодженому форматі: ілюстраціях, об’ємному вигляді чи комбінованій системі для різних каналів.",
-        "image": "/services/brand-character/mascot-05.png",
+        "image": "/assets/real-cases/bit-school-05.webp",
         "alt": "Ілюстрація етапу: 2D або 3D виконання"
     },
     {
         "index": "07",
         "title": "Набір застосувань",
         "description": "Показуємо героя на сайті, у соцмережах, на упаковці, стікерах, мерчі чи в просторі — залежно від задачі проєкту.",
-        "image": "/services/brand-character/mascot-06.png",
+        "image": "/assets/real-cases/bit-school-09.webp",
         "alt": "Ілюстрація етапу: Набір застосувань"
     },
     {
         "index": "08",
         "title": "Гайд використання",
         "description": "Фіксуємо правила масштабу, кольору, емоцій і композиції, щоб команда могла послідовно працювати з персонажем.",
-        "image": "/services/brand-character/mascot-06.png",
+        "image": "/assets/photography/brandbook-0.webp",
         "alt": "Ілюстрація етапу: Гайд використання"
     }
 ],
@@ -265,17 +265,17 @@ const uk: ServicePageContent = {
   productNote: "Ілюстративна серія показує одного вигаданого персонажа на різних носіях. Ці зображення створені для демонстрації послуги, а не для клієнтського кейсу.",
   products: [
     {
-        "src": "/services/brand-character/mascot-04.png",
+        "src": "/assets/real-cases/packaging-12.webp",
         "alt": "Ілюстративне застосування: персонаж бренду на упаковці",
         "caption": "Упаковка"
     },
     {
-        "src": "/services/brand-character/mascot-05.png",
+        "src": "/assets/real-cases/kyiv-tourism-department-16.webp",
         "alt": "Ілюстративне застосування: персонаж бренду в просторі",
         "caption": "Простір"
     },
     {
-        "src": "/services/brand-character/mascot-06.png",
+        "src": "/assets/real-cases/bit-school-15.webp",
         "alt": "Ілюстративне застосування: персонаж бренду на стікерах і мерчі",
         "caption": "Мерч та носії"
     }
@@ -290,7 +290,7 @@ const uk: ServicePageContent = {
     },
     {
         "question": "Скільки коштує розробка персонажа?",
-        "answer": "Вартість залежить від складності образу, формату 2D чи 3D, кількості поз та матеріалів для запуску. Після знайомства з проєктом підготуємо кошторис."
+        "answer": "Орієнтовна вартість — 12–25 тис. грн. Остаточний кошторис залежить від обсягу завдання та погодженого складу робіт."
     },
     {
         "question": "Скільки часу займає робота?",
@@ -419,56 +419,56 @@ const en: ServicePageContent = {
             "index": "01",
             "title": "Brand research",
             "description": "We study the product, audience, brand character, and context. We define what role the character should play in communication.",
-            "image": "/services/brand-character/mascot-02.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Stage illustration: Brand research"
         },
         {
             "index": "02",
             "title": "Character concept",
             "description": "We shape the look and its tie to the brand: origin, personality, emotion, and the main cue people recognize it by.",
-            "image": "/services/brand-character/mascot-01.png",
+            "image": "/assets/photography/brand-character-0.webp",
             "alt": "Stage illustration: Character concept"
         },
         {
             "index": "03",
             "title": "Silhouette and form",
             "description": "We find a distinctive silhouette that works at icon size and on large touchpoints. We check proportions and legibility.",
-            "image": "/services/brand-character/mascot-02.png",
+            "image": "/assets/photography/brand-character-1.webp",
             "alt": "Stage illustration: Silhouette and form"
         },
         {
             "index": "04",
             "title": "Expression and movement",
             "description": "We develop emotions, poses, and gestures for different situations so the character stays itself when the message changes.",
-            "image": "/services/brand-character/mascot-03.png",
+            "image": "/assets/photography/brand-character-2.webp",
             "alt": "Stage illustration: Expression and movement"
         },
         {
             "index": "05",
             "title": "Style and color",
             "description": "We align the character's colors, materials, and graphic language with brand identity and required formats.",
-            "image": "/services/brand-character/mascot-04.png",
+            "image": "/assets/photography/identity-1.webp",
             "alt": "Stage illustration: Style and color"
         },
         {
             "index": "06",
             "title": "2D or 3D execution",
             "description": "We deliver the character in the agreed format: illustrations, a 3D look, or a combined system for different channels.",
-            "image": "/services/brand-character/mascot-05.png",
+            "image": "/assets/real-cases/bit-school-05.webp",
             "alt": "Stage illustration: 2D or 3D execution"
         },
         {
             "index": "07",
             "title": "Application set",
             "description": "We show the hero on the website, social, packaging, stickers, merch, or in space — depending on the project task.",
-            "image": "/services/brand-character/mascot-06.png",
+            "image": "/assets/real-cases/bit-school-09.webp",
             "alt": "Stage illustration: Application set"
         },
         {
             "index": "08",
             "title": "Usage guide",
             "description": "We document rules for scale, color, emotion, and composition so the team can use the character consistently.",
-            "image": "/services/brand-character/mascot-06.png",
+            "image": "/assets/photography/brandbook-0.webp",
             "alt": "Stage illustration: Usage guide"
         }
     ],
@@ -599,17 +599,17 @@ const en: ServicePageContent = {
     "productNote": "An illustrative series shows one fictional character on different touchpoints. These images demonstrate the service, not a client case.",
     "products": [
         {
-            "src": "/services/brand-character/mascot-04.png",
+            "src": "/assets/real-cases/packaging-12.webp",
             "alt": "Illustrative application: brand character on packaging",
             "caption": "Packaging"
         },
         {
-            "src": "/services/brand-character/mascot-05.png",
+            "src": "/assets/real-cases/kyiv-tourism-department-16.webp",
             "alt": "Illustrative application: brand character in space",
             "caption": "Space"
         },
         {
-            "src": "/services/brand-character/mascot-06.png",
+            "src": "/assets/real-cases/bit-school-15.webp",
             "alt": "Illustrative application: brand character on stickers and merch",
             "caption": "Merch and touchpoints"
         }
@@ -624,7 +624,7 @@ const en: ServicePageContent = {
         },
         {
             "question": "How much does character development cost?",
-            "answer": "Cost depends on look complexity, 2D or 3D format, number of poses, and launch materials. After we learn about the project we prepare an estimate."
+            "answer": "Approximate cost — UAH 12–25k. The final estimate depends on the scope of work and the agreed deliverables."
         },
         {
             "question": "How long does the work take?",
@@ -753,56 +753,56 @@ const ru: ServicePageContent = {
             "index": "01",
             "title": "Исследование бренда",
             "description": "Изучаем продукт, аудиторию, характер и среду бренда. Выясняем, какую роль персонаж должен играть в коммуникации.",
-            "image": "/services/brand-character/mascot-02.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Иллюстрация этапа: Исследование бренда"
         },
         {
             "index": "02",
             "title": "Идея персонажа",
             "description": "Формируем образ и его связь с брендом: происхождение, характер, эмоцию и главный приём, по которому его узнают.",
-            "image": "/services/brand-character/mascot-01.png",
+            "image": "/assets/photography/brand-character-0.webp",
             "alt": "Иллюстрация этапа: Идея персонажа"
         },
         {
             "index": "03",
             "title": "Силуэт и форма",
             "description": "Ищем выразительный силуэт, который хорошо работает и в маленькой иконке, и на большом носителе. Проверяем пропорции и читаемость.",
-            "image": "/services/brand-character/mascot-02.png",
+            "image": "/assets/photography/brand-character-1.webp",
             "alt": "Иллюстрация этапа: Силуэт и форма"
         },
         {
             "index": "04",
             "title": "Мимика и движение",
             "description": "Разрабатываем эмоции, позы и жесты для разных ситуаций, чтобы персонаж оставался собой, когда меняется сообщение.",
-            "image": "/services/brand-character/mascot-03.png",
+            "image": "/assets/photography/brand-character-2.webp",
             "alt": "Иллюстрация этапа: Мимика и движение"
         },
         {
             "index": "05",
             "title": "Стиль и цвет",
             "description": "Согласуем цвета, материалы и графический язык персонажа с айдентикой бренда и нужными форматами.",
-            "image": "/services/brand-character/mascot-04.png",
+            "image": "/assets/photography/identity-1.webp",
             "alt": "Иллюстрация этапа: Стиль и цвет"
         },
         {
             "index": "06",
             "title": "2D или 3D исполнение",
             "description": "Готовим персонажа в согласованном формате: иллюстрации, объёмный вид или комбинированная система для разных каналов.",
-            "image": "/services/brand-character/mascot-05.png",
+            "image": "/assets/real-cases/bit-school-05.webp",
             "alt": "Иллюстрация этапа: 2D или 3D исполнение"
         },
         {
             "index": "07",
             "title": "Набор применений",
             "description": "Показываем героя на сайте, в соцсетях, на упаковке, стикерах, мерче или в пространстве — в зависимости от задачи проекта.",
-            "image": "/services/brand-character/mascot-06.png",
+            "image": "/assets/real-cases/bit-school-09.webp",
             "alt": "Иллюстрация этапа: Набор применений"
         },
         {
             "index": "08",
             "title": "Гайд использования",
             "description": "Фиксируем правила масштаба, цвета, эмоций и композиции, чтобы команда могла последовательно работать с персонажем.",
-            "image": "/services/brand-character/mascot-06.png",
+            "image": "/assets/photography/brandbook-0.webp",
             "alt": "Иллюстрация этапа: Гайд использования"
         }
     ],
@@ -933,17 +933,17 @@ const ru: ServicePageContent = {
     "productNote": "Иллюстративная серия показывает одного вымышленного персонажа на разных носителях. Эти изображения созданы для демонстрации услуги, а не для клиентского кейса.",
     "products": [
         {
-            "src": "/services/brand-character/mascot-04.png",
+            "src": "/assets/real-cases/packaging-12.webp",
             "alt": "Иллюстративное применение: персонаж бренда на упаковке",
             "caption": "Упаковка"
         },
         {
-            "src": "/services/brand-character/mascot-05.png",
+            "src": "/assets/real-cases/kyiv-tourism-department-16.webp",
             "alt": "Иллюстративное применение: персонаж бренда в пространстве",
             "caption": "Пространство"
         },
         {
-            "src": "/services/brand-character/mascot-06.png",
+            "src": "/assets/real-cases/bit-school-15.webp",
             "alt": "Иллюстративное применение: персонаж бренда на стикерах и мерче",
             "caption": "Мерч и носители"
         }
@@ -958,7 +958,7 @@ const ru: ServicePageContent = {
         },
         {
             "question": "Сколько стоит разработка персонажа?",
-            "answer": "Стоимость зависит от сложности образа, формата 2D или 3D, количества поз и материалов для запуска. После знакомства с проектом подготовим смету."
+            "answer": "Ориентировочная стоимость — 12–25 тыс. грн. Итоговая смета зависит от объёма задачи и согласованного состава работ."
         },
         {
             "question": "Сколько времени занимает работа?",

@@ -90,56 +90,56 @@ const uk: ServicePageContent = {
         "index": "01",
         "title": "Аудит бізнесу",
         "description": "Вивчаємо продукт, бізнес-модель, цілі та наявну комунікацію. З’ясовуємо, яку роль бренд має відігравати для компанії й клієнтів.",
-        "image": "/services/positioning/positioning-02.png",
+        "image": "/assets/photography/communication-0.webp",
         "alt": "Ілюстрація етапу: Аудит бізнесу"
     },
     {
         "index": "02",
         "title": "Аналіз ринку",
         "description": "Досліджуємо категорію та конкурентів: як вони себе описують, що обіцяють і де залишається простір для відмінності.",
-        "image": "/services/positioning/positioning-02.png",
+        "image": "/assets/photography/positioning-1.webp",
         "alt": "Ілюстрація етапу: Аналіз ринку"
     },
     {
         "index": "03",
         "title": "Дослідження аудиторії",
         "description": "Визначаємо потреби, бар’єри та мотиви людей, для яких працює бренд. Спираємося на доступні дані й уточнюємо гіпотези з командою.",
-        "image": "/services/positioning/positioning-03.png",
+        "image": "/assets/photography/branding-0.webp",
         "alt": "Ілюстрація етапу: Дослідження аудиторії"
     },
     {
         "index": "04",
         "title": "Ціннісна пропозиція",
         "description": "Формулюємо користь продукту для конкретної аудиторії та причини, через які саме цей бренд варто обрати.",
-        "image": "/services/positioning/positioning-04.png",
+        "image": "/assets/photography/positioning-2.webp",
         "alt": "Ілюстрація етапу: Ціннісна пропозиція"
     },
     {
         "index": "05",
         "title": "Територія бренду",
         "description": "Знаходимо змістовний простір між потребою аудиторії, можливостями бізнесу й тим, що вже зайнято конкурентами.",
-        "image": "/services/positioning/positioning-01.png",
+        "image": "/assets/photography/branding-1.webp",
         "alt": "Ілюстрація етапу: Територія бренду"
     },
     {
         "index": "06",
         "title": "Характер і тон",
         "description": "Описуємо характер бренду та принципи його голосу, щоб візуальні й текстові рішення звучали послідовно.",
-        "image": "/services/positioning/positioning-03.png",
+        "image": "/assets/photography/identity-0.webp",
         "alt": "Ілюстрація етапу: Характер і тон"
     },
     {
         "index": "07",
         "title": "Ключове повідомлення",
         "description": "Перекладаємо стратегічну ідею на зрозуміле формулювання: що ми говоримо людям і чому це має значення.",
-        "image": "/services/positioning/positioning-05.png",
+        "image": "/assets/photography/communication-3.webp",
         "alt": "Ілюстрація етапу: Ключове повідомлення"
     },
     {
         "index": "08",
         "title": "Стратегічна платформа",
         "description": "Збираємо висновки в документ із логікою позиціонування та рекомендаціями для айдентики, сайту й комунікації.",
-        "image": "/services/positioning/positioning-06.png",
+        "image": "/assets/photography/positioning-3.webp",
         "alt": "Ілюстрація етапу: Стратегічна платформа"
     }
 ],
@@ -265,17 +265,17 @@ const uk: ServicePageContent = {
   productNote: "Ілюстративні концепти показують, як ідея бренду може перейти в упаковку, простір і щоденну комунікацію. Це не фотографії клієнтських робіт.",
   products: [
     {
-        "src": "/services/positioning/positioning-04.png",
+        "src": "/assets/photography/packaging-1.webp",
         "alt": "Ілюстративне застосування позиціонування: упаковка",
         "caption": "Продукт"
     },
     {
-        "src": "/services/positioning/positioning-05.png",
+        "src": "/assets/photography/application-space.webp",
         "alt": "Ілюстративне застосування позиціонування: простір і навігація",
         "caption": "Простір"
     },
     {
-        "src": "/services/positioning/positioning-06.png",
+        "src": "/assets/photography/application-campaign.webp",
         "alt": "Ілюстративне застосування позиціонування: брендовані матеріали",
         "caption": "Комунікація"
     }
@@ -290,7 +290,7 @@ const uk: ServicePageContent = {
     },
     {
         "question": "Скільки коштує розробка позиціонування?",
-        "answer": "Вартість залежить від глибини дослідження, кількості ринків, аудиторій і продуктів. Після знайомства з бізнесом ми визначимо потрібний обсяг роботи та підготуємо кошторис."
+        "answer": "Орієнтовна вартість — 25–45 тис. грн. Остаточний кошторис залежить від обсягу завдання та погодженого складу робіт."
     },
     {
         "question": "Скільки часу займає робота?",
@@ -419,56 +419,56 @@ const en: ServicePageContent = {
             "index": "01",
             "title": "Business audit",
             "description": "We study the product, business model, goals, and existing communication. We clarify the role the brand should play for the company and customers.",
-            "image": "/services/positioning/positioning-02.png",
+            "image": "/assets/photography/communication-0.webp",
             "alt": "Stage illustration: Business audit"
         },
         {
             "index": "02",
             "title": "Market analysis",
             "description": "We research the category and competitors: how they describe themselves, what they promise, and where room remains to stand apart.",
-            "image": "/services/positioning/positioning-02.png",
+            "image": "/assets/photography/positioning-1.webp",
             "alt": "Stage illustration: Market analysis"
         },
         {
             "index": "03",
             "title": "Audience research",
             "description": "We define needs, barriers, and motives of the people the brand serves. We rely on available data and refine hypotheses with the team.",
-            "image": "/services/positioning/positioning-03.png",
+            "image": "/assets/photography/branding-0.webp",
             "alt": "Stage illustration: Audience research"
         },
         {
             "index": "04",
             "title": "Value proposition",
             "description": "We articulate product benefit for a specific audience and the reasons to choose this brand.",
-            "image": "/services/positioning/positioning-04.png",
+            "image": "/assets/photography/positioning-2.webp",
             "alt": "Stage illustration: Value proposition"
         },
         {
             "index": "05",
             "title": "Brand territory",
             "description": "We find meaningful space between audience need, business capability, and what competitors already own.",
-            "image": "/services/positioning/positioning-01.png",
+            "image": "/assets/photography/branding-1.webp",
             "alt": "Stage illustration: Brand territory"
         },
         {
             "index": "06",
             "title": "Character and tone",
             "description": "We describe brand character and voice principles so visual and verbal choices stay consistent.",
-            "image": "/services/positioning/positioning-03.png",
+            "image": "/assets/photography/identity-0.webp",
             "alt": "Stage illustration: Character and tone"
         },
         {
             "index": "07",
             "title": "Core message",
             "description": "We turn the strategic idea into clear wording: what we tell people and why it matters.",
-            "image": "/services/positioning/positioning-05.png",
+            "image": "/assets/photography/communication-3.webp",
             "alt": "Stage illustration: Core message"
         },
         {
             "index": "08",
             "title": "Strategic platform",
             "description": "We compile findings into a document with positioning logic and recommendations for identity, website, and communication.",
-            "image": "/services/positioning/positioning-06.png",
+            "image": "/assets/photography/positioning-3.webp",
             "alt": "Stage illustration: Strategic platform"
         }
     ],
@@ -566,17 +566,17 @@ const en: ServicePageContent = {
     "productNote": "Illustrative concepts show how a brand idea can move into packaging, space, and everyday communication. These are not photos of client work.",
     "products": [
         {
-            "src": "/services/positioning/positioning-04.png",
+            "src": "/assets/photography/packaging-1.webp",
             "alt": "Illustrative positioning application: packaging",
             "caption": "Product"
         },
         {
-            "src": "/services/positioning/positioning-05.png",
+            "src": "/assets/photography/application-space.webp",
             "alt": "Illustrative positioning application: space and wayfinding",
             "caption": "Space"
         },
         {
-            "src": "/services/positioning/positioning-06.png",
+            "src": "/assets/photography/application-campaign.webp",
             "alt": "Illustrative positioning application: branded materials",
             "caption": "Communication"
         }
@@ -591,7 +591,7 @@ const en: ServicePageContent = {
         },
         {
             "question": "How much does positioning development cost?",
-            "answer": "Cost depends on research depth, number of markets, audiences, and products. After we learn about the business we define the scope and prepare an estimate."
+            "answer": "Approximate cost — UAH 25–45k. The final estimate depends on the scope of work and the agreed deliverables."
         },
         {
             "question": "How long does the work take?",
@@ -753,56 +753,56 @@ const ru: ServicePageContent = {
             "index": "01",
             "title": "Аудит бизнеса",
             "description": "Изучаем продукт, бизнес-модель, цели и имеющуюся коммуникацию. Выясняем, какую роль бренд должен играть для компании и клиентов.",
-            "image": "/services/positioning/positioning-02.png",
+            "image": "/assets/photography/communication-0.webp",
             "alt": "Иллюстрация этапа: Аудит бизнеса"
         },
         {
             "index": "02",
             "title": "Анализ рынка",
             "description": "Исследуем категорию и конкурентов: как они себя описывают, что обещают и где остаётся пространство для отличия.",
-            "image": "/services/positioning/positioning-02.png",
+            "image": "/assets/photography/positioning-1.webp",
             "alt": "Иллюстрация этапа: Анализ рынка"
         },
         {
             "index": "03",
             "title": "Исследование аудитории",
             "description": "Определяем потребности, барьеры и мотивы людей, для которых работает бренд. Опираемся на доступные данные и уточняем гипотезы с командой.",
-            "image": "/services/positioning/positioning-03.png",
+            "image": "/assets/photography/branding-0.webp",
             "alt": "Иллюстрация этапа: Исследование аудитории"
         },
         {
             "index": "04",
             "title": "Ценностное предложение",
             "description": "Формулируем выгоду продукта для конкретной аудитории и причины, по которым стоит выбрать именно этот бренд.",
-            "image": "/services/positioning/positioning-04.png",
+            "image": "/assets/photography/positioning-2.webp",
             "alt": "Иллюстрация этапа: Ценностное предложение"
         },
         {
             "index": "05",
             "title": "Территория бренда",
             "description": "Находим содержательное пространство между потребностью аудитории, возможностями бизнеса и тем, что уже занято конкурентами.",
-            "image": "/services/positioning/positioning-01.png",
+            "image": "/assets/photography/branding-1.webp",
             "alt": "Иллюстрация этапа: Территория бренда"
         },
         {
             "index": "06",
             "title": "Характер и тон",
             "description": "Описываем характер бренда и принципы его голоса, чтобы визуальные и текстовые решения звучали последовательно.",
-            "image": "/services/positioning/positioning-03.png",
+            "image": "/assets/photography/identity-0.webp",
             "alt": "Иллюстрация этапа: Характер и тон"
         },
         {
             "index": "07",
             "title": "Ключевое сообщение",
             "description": "Переводим стратегическую идею в понятную формулировку: что мы говорим людям и почему это важно.",
-            "image": "/services/positioning/positioning-05.png",
+            "image": "/assets/photography/communication-3.webp",
             "alt": "Иллюстрация этапа: Ключевое сообщение"
         },
         {
             "index": "08",
             "title": "Стратегическая платформа",
             "description": "Собираем выводы в документ с логикой позиционирования и рекомендациями для айдентики, сайта и коммуникации.",
-            "image": "/services/positioning/positioning-06.png",
+            "image": "/assets/photography/positioning-3.webp",
             "alt": "Иллюстрация этапа: Стратегическая платформа"
         }
     ],
@@ -900,17 +900,17 @@ const ru: ServicePageContent = {
     "productNote": "Иллюстративные концепты показывают, как идея бренда может перейти в упаковку, пространство и ежедневную коммуникацию. Это не фотографии клиентских работ.",
     "products": [
         {
-            "src": "/services/positioning/positioning-04.png",
+            "src": "/assets/photography/packaging-1.webp",
             "alt": "Иллюстративное применение позиционирования: упаковка",
             "caption": "Продукт"
         },
         {
-            "src": "/services/positioning/positioning-05.png",
+            "src": "/assets/photography/application-space.webp",
             "alt": "Иллюстративное применение позиционирования: пространство и навигация",
             "caption": "Пространство"
         },
         {
-            "src": "/services/positioning/positioning-06.png",
+            "src": "/assets/photography/application-campaign.webp",
             "alt": "Иллюстративное применение позиционирования: брендированные материалы",
             "caption": "Коммуникация"
         }
@@ -925,7 +925,7 @@ const ru: ServicePageContent = {
         },
         {
             "question": "Сколько стоит разработка позиционирования?",
-            "answer": "Стоимость зависит от глубины исследования, количества рынков, аудиторий и продуктов. После знакомства с бизнесом мы определим нужный объём работы и подготовим смету."
+            "answer": "Ориентировочная стоимость — 25–45 тыс. грн. Итоговая смета зависит от объёма задачи и согласованного состава работ."
         },
         {
             "question": "Сколько времени занимает работа?",

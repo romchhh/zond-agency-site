@@ -23,7 +23,7 @@ export default function PositioningPage({
       copy={positioningPage[locale]}
       serviceSlug="positioning"
       seo={getPositioningSeo(locale)}
-      heroImage="/services/positioning/positioning-01.png"
+      heroImage="/assets/photography/positioning-0.webp"
     />
   );
 }

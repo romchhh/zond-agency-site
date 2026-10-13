@@ -23,7 +23,7 @@ export default function CommunicationPage({
       copy={communicationPage[locale]}
       serviceSlug="communication"
       seo={getCommunicationSeo(locale)}
-      heroImage="/services/communication/communication-01.png"
+      heroImage="/assets/photography/application-campaign.webp"
     />
   );
 }

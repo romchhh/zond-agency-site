@@ -19,7 +19,7 @@ export default function LogoPage({ locale, dictionary, projects }: LogoPageProps
       copy={logoPage[locale]}
       serviceSlug="logo"
       seo={getLogoSeo(locale)}
-      heroImage="/branding/include-naming.png"
+      heroImage="/assets/photography/logo-0.webp"
     />
   );
 }

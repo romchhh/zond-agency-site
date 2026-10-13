@@ -19,7 +19,7 @@ export default function SmmPage({ locale, dictionary, projects }: SmmPageProps) 
       copy={smmPage[locale]}
       serviceSlug="smm"
       seo={getSmmSeo(locale)}
-      heroImage="/services/smm.jpg"
+      heroImage="/assets/photography/smm-0.webp"
     />
   );
 }

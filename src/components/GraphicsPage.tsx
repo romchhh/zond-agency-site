@@ -23,7 +23,7 @@ export default function GraphicsPage({
       copy={graphicsPage[locale]}
       serviceSlug="graphics"
       seo={getGraphicsSeo(locale)}
-      heroImage="/services/graphic.jpg"
+      heroImage="/assets/photography/graphics-0.webp"
     />
   );
 }

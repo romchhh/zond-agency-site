@@ -88,56 +88,56 @@ const uk: ServicePageContent = {
         "index": "01",
         "title": "Дослідження",
         "description": "Занурюємося в продукт, категорію, аудиторію та конкурентне поле. Знаходимо теми, слова й образи, з якими бренд може працювати.",
-        "image": "/services/naming/naming-02.png",
+        "image": "/assets/photography/positioning-0.webp",
         "alt": "Етап неймінгу: Дослідження"
     },
     {
         "index": "02",
         "title": "Платформа назви",
         "description": "Фіксуємо характер бренду й критерії майбутньої назви: що вона має передавати, для кого звучати та як використовуватиметься.",
-        "image": "/services/naming/naming-03.png",
+        "image": "/assets/photography/positioning-3.webp",
         "alt": "Етап неймінгу: Платформа назви"
     },
     {
         "index": "03",
         "title": "Генерація ідей",
         "description": "Шукаємо назви через смислові асоціації, метафори, словотворення й несподівані зв’язки. Розглядаємо кілька напрямів.",
-        "image": "/services/naming/naming-01.png",
+        "image": "/assets/photography/naming-1.webp",
         "alt": "Етап неймінгу: Генерація ідей"
     },
     {
         "index": "04",
         "title": "Короткий список",
         "description": "Відбираємо ідеї за змістом, виразністю, простотою вимови та відповідністю позиціонуванню. Схожі й слабкі варіанти відсіюємо.",
-        "image": "/services/naming/naming-06.png",
+        "image": "/assets/photography/naming-2.webp",
         "alt": "Етап неймінгу: Короткий список"
     },
     {
         "index": "05",
         "title": "Мовна перевірка",
         "description": "Дивимося, як назва читається, пишеться і звучить у потрібних мовах. Перевіряємо небажані асоціації та очевидні ризики плутанини.",
-        "image": "/services/naming/naming-03.png",
+        "image": "/assets/photography/branding-2.webp",
         "alt": "Етап неймінгу: Мовна перевірка"
     },
     {
         "index": "06",
         "title": "Цифровий контекст",
         "description": "Перевіряємо доступні написання для домену й соціальних платформ та оцінюємо, наскільки зручно шукати назву онлайн.",
-        "image": "/services/naming/naming-05.png",
+        "image": "/assets/photography/web-development-2.webp",
         "alt": "Етап неймінгу: Цифровий контекст"
     },
     {
         "index": "07",
         "title": "Подача концепцій",
         "description": "Пояснюємо логіку кожного фінального напряму: його ідею, звучання, характер і приклади використання в комунікації.",
-        "image": "/services/naming/naming-04.png",
+        "image": "/assets/photography/graphics-1.webp",
         "alt": "Етап неймінгу: Подача концепцій"
     },
     {
         "index": "08",
         "title": "Рекомендації до запуску",
         "description": "Готуємо написання, вимову й правила застосування назви, щоб команда могла послідовно використовувати її на різних носіях.",
-        "image": "/services/naming/naming-06.png",
+        "image": "/assets/photography/naming-3.webp",
         "alt": "Етап неймінгу: Рекомендації до запуску"
     }
 ],
@@ -263,17 +263,17 @@ const uk: ServicePageContent = {
   productNote: "Ілюстративні концепти: назва може жити на упаковці, вивісці, у презентації та щоденних матеріалах бренду. Ці фото не є клієнтськими роботами.",
   products: [
     {
-        "src": "/services/naming/naming-04.png",
+        "src": "/assets/photography/application-package.webp",
         "alt": "Ілюстративний приклад застосування назви: упаковка продукту",
         "caption": "Упаковка"
     },
     {
-        "src": "/services/naming/naming-05.png",
+        "src": "/assets/real-cases/tbiliso-01.webp",
         "alt": "Ілюстративний приклад застосування назви: вивіска закладу",
         "caption": "Простір"
     },
     {
-        "src": "/services/naming/naming-06.png",
+        "src": "/assets/photography/application-stationery.webp",
         "alt": "Ілюстративний приклад застосування назви: ділові та цифрові носії",
         "caption": "Брендовані носії"
     }
@@ -284,7 +284,7 @@ const uk: ServicePageContent = {
   faq: [
     {
         "question": "Скільки коштує розробка назви?",
-        "answer": "Вартість залежить від масштабу задачі: одна назва для продукту, новий бренд або система назв для кількох напрямів потребують різного обсягу дослідження та відбору. Після короткого знайомства ми визначимо склад робіт і підготуємо кошторис."
+        "answer": "Орієнтовна вартість — 12–30 тис. грн. Остаточний кошторис залежить від обсягу завдання та погодженого складу робіт."
     },
     {
         "question": "Скільки часу займає неймінг?",
@@ -415,56 +415,56 @@ const en: ServicePageContent = {
             "index": "01",
             "title": "Research",
             "description": "We dive into the product, category, audience, and competitive field. We find themes, words, and images the brand can work with.",
-            "image": "/services/naming/naming-02.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Naming stage: Research"
         },
         {
             "index": "02",
             "title": "Name platform",
             "description": "We define brand character and criteria for the future name: what it should convey, who it should speak to, and how it will be used.",
-            "image": "/services/naming/naming-03.png",
+            "image": "/assets/photography/positioning-3.webp",
             "alt": "Naming stage: Name platform"
         },
         {
             "index": "03",
             "title": "Idea generation",
             "description": "We explore names through semantic associations, metaphors, word-building, and unexpected connections. We consider several directions.",
-            "image": "/services/naming/naming-01.png",
+            "image": "/assets/photography/naming-1.webp",
             "alt": "Naming stage: Idea generation"
         },
         {
             "index": "04",
             "title": "Short list",
             "description": "We select ideas by meaning, expressiveness, ease of pronunciation, and fit with positioning. Similar and weak options are filtered out.",
-            "image": "/services/naming/naming-06.png",
+            "image": "/assets/photography/naming-2.webp",
             "alt": "Naming stage: Short list"
         },
         {
             "index": "05",
             "title": "Language check",
             "description": "We look at how the name reads, writes, and sounds in the required languages. We check for unwanted associations and obvious confusion risks.",
-            "image": "/services/naming/naming-03.png",
+            "image": "/assets/photography/branding-2.webp",
             "alt": "Naming stage: Language check"
         },
         {
             "index": "06",
             "title": "Digital context",
             "description": "We check available spellings for domain and social platforms and assess how easy the name is to find online.",
-            "image": "/services/naming/naming-05.png",
+            "image": "/assets/photography/web-development-2.webp",
             "alt": "Naming stage: Digital context"
         },
         {
             "index": "07",
             "title": "Concept presentation",
             "description": "We explain the logic behind each final direction: its idea, sound, character, and examples of use in communication.",
-            "image": "/services/naming/naming-04.png",
+            "image": "/assets/photography/graphics-1.webp",
             "alt": "Naming stage: Concept presentation"
         },
         {
             "index": "08",
             "title": "Launch recommendations",
             "description": "We prepare spelling, pronunciation, and usage rules so the team can apply the name consistently across touchpoints.",
-            "image": "/services/naming/naming-06.png",
+            "image": "/assets/photography/naming-3.webp",
             "alt": "Naming stage: Launch recommendations"
         }
     ],
@@ -595,17 +595,17 @@ const en: ServicePageContent = {
     "productNote": "Illustrative concepts show how a name can live on packaging, signage, in presentations, and everyday brand materials. These photos are not client work.",
     "products": [
         {
-            "src": "/services/naming/naming-04.png",
+            "src": "/assets/photography/application-package.webp",
             "alt": "Illustrative name application: product packaging",
             "caption": "Packaging"
         },
         {
-            "src": "/services/naming/naming-05.png",
+            "src": "/assets/real-cases/tbiliso-01.webp",
             "alt": "Illustrative name application: storefront signage",
             "caption": "Space"
         },
         {
-            "src": "/services/naming/naming-06.png",
+            "src": "/assets/photography/application-stationery.webp",
             "alt": "Illustrative name application: business and digital touchpoints",
             "caption": "Branded touchpoints"
         }
@@ -616,7 +616,7 @@ const en: ServicePageContent = {
     "faq": [
         {
             "question": "How much does name development cost?",
-            "answer": "Cost depends on scope: a single product name, a new brand, or a naming system for several directions requires different levels of research and selection. After a short introduction we define the scope and prepare an estimate."
+            "answer": "Approximate cost — UAH 12–30k. The final estimate depends on the scope of work and the agreed deliverables."
         },
         {
             "question": "How long does naming take?",
@@ -747,56 +747,56 @@ const ru: ServicePageContent = {
             "index": "01",
             "title": "Исследование",
             "description": "Погружаемся в продукт, категорию, аудиторию и конкурентное поле. Находим темы, слова и образы, с которыми бренд может работать.",
-            "image": "/services/naming/naming-02.png",
+            "image": "/assets/photography/positioning-0.webp",
             "alt": "Этап нейминга: Исследование"
         },
         {
             "index": "02",
             "title": "Платформа названия",
             "description": "Фиксируем характер бренда и критерии будущего названия: что оно должно передавать, для кого звучать и как будет использоваться.",
-            "image": "/services/naming/naming-03.png",
+            "image": "/assets/photography/positioning-3.webp",
             "alt": "Этап нейминга: Платформа названия"
         },
         {
             "index": "03",
             "title": "Генерация идей",
             "description": "Ищем названия через смысловые ассоциации, метафоры, словообразование и неожиданные связи. Рассматриваем несколько направлений.",
-            "image": "/services/naming/naming-01.png",
+            "image": "/assets/photography/naming-1.webp",
             "alt": "Этап нейминга: Генерация идей"
         },
         {
             "index": "04",
             "title": "Короткий список",
             "description": "Отбираем идеи по смыслу, выразительности, простоте произношения и соответствию позиционированию. Похожие и слабые варианты отсеиваем.",
-            "image": "/services/naming/naming-06.png",
+            "image": "/assets/photography/naming-2.webp",
             "alt": "Этап нейминга: Короткий список"
         },
         {
             "index": "05",
             "title": "Языковая проверка",
             "description": "Смотрим, как название читается, пишется и звучит на нужных языках. Проверяем нежелательные ассоциации и очевидные риски путаницы.",
-            "image": "/services/naming/naming-03.png",
+            "image": "/assets/photography/branding-2.webp",
             "alt": "Этап нейминга: Языковая проверка"
         },
         {
             "index": "06",
             "title": "Цифровой контекст",
             "description": "Проверяем доступные написания для домена и социальных платформ и оцениваем, насколько удобно искать название онлайн.",
-            "image": "/services/naming/naming-05.png",
+            "image": "/assets/photography/web-development-2.webp",
             "alt": "Этап нейминга: Цифровой контекст"
         },
         {
             "index": "07",
             "title": "Подача концепций",
             "description": "Объясняем логику каждого финального направления: его идею, звучание, характер и примеры использования в коммуникации.",
-            "image": "/services/naming/naming-04.png",
+            "image": "/assets/photography/graphics-1.webp",
             "alt": "Этап нейминга: Подача концепций"
         },
         {
             "index": "08",
             "title": "Рекомендации к запуску",
             "description": "Готовим написание, произношение и правила применения названия, чтобы команда могла последовательно использовать его на разных носителях.",
-            "image": "/services/naming/naming-06.png",
+            "image": "/assets/photography/naming-3.webp",
             "alt": "Этап нейминга: Рекомендации к запуску"
         }
     ],
@@ -927,17 +927,17 @@ const ru: ServicePageContent = {
     "productNote": "Иллюстративные концепты: название может жить на упаковке, вывеске, в презентации и ежедневных материалах бренда. Эти фото не являются клиентскими работами.",
     "products": [
         {
-            "src": "/services/naming/naming-04.png",
+            "src": "/assets/photography/application-package.webp",
             "alt": "Иллюстративный пример применения названия: упаковка продукта",
             "caption": "Упаковка"
         },
         {
-            "src": "/services/naming/naming-05.png",
+            "src": "/assets/real-cases/tbiliso-01.webp",
             "alt": "Иллюстративный пример применения названия: вывеска заведения",
             "caption": "Пространство"
         },
         {
-            "src": "/services/naming/naming-06.png",
+            "src": "/assets/photography/application-stationery.webp",
             "alt": "Иллюстративный пример применения названия: деловые и цифровые носители",
             "caption": "Брендированные носители"
         }
@@ -948,7 +948,7 @@ const ru: ServicePageContent = {
     "faq": [
         {
             "question": "Сколько стоит разработка названия?",
-            "answer": "Стоимость зависит от масштаба задачи: одно название для продукта, новый бренд или система названий для нескольких направлений требуют разного объёма исследования и отбора. После короткого знакомства мы определим состав работ и подготовим смету."
+            "answer": "Ориентировочная стоимость — 12–30 тыс. грн. Итоговая смета зависит от объёма задачи и согласованного состава работ."
         },
         {
             "question": "Сколько времени занимает нейминг?",

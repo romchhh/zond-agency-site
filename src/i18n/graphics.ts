@@ -1,6 +1,5 @@
 import type { Locale } from "@/i18n/config";
 import type { ServicePageContent } from "@/i18n/logo";
-import { withServiceProductImages } from "@/i18n/service-products";
 
 const uk: ServicePageContent = {
   eyebrow: "Послуги / Графіка",
@@ -43,7 +42,7 @@ const uk: ServicePageContent = {
       title: "Дизайн поліграфії",
       description:
         "Каталоги, буклети, листівки, фірмові бланки — з правильною підготовкою до друку, розмірами та оздобленням.",
-      image: "/branding/hero.png",
+      image: "/assets/photography/application-stationery.webp",
       alt: "Дизайн поліграфії",
     },
     {
@@ -51,7 +50,7 @@ const uk: ServicePageContent = {
       title: "Презентації проєктів",
       description:
         "Комерційні пропозиції, презентації для інвесторів і звіти — структура слайдів працює на переконливість тексту.",
-      image: "/services/communication.jpg",
+      image: "/assets/photography/graphics-1.webp",
       alt: "Презентації проєктів",
     },
     {
@@ -59,7 +58,7 @@ const uk: ServicePageContent = {
       title: "Макети для зовнішньої реклами",
       description:
         "Білборди, сітілайти, вивіски, банери — адаптація під відстань перегляду, шрифт і контраст кольорів.",
-      image: "/services/graphic.jpg",
+      image: "/assets/real-cases/kyiv-tourism-department-05.webp",
       alt: "Макети для зовнішньої реклами",
     },
     {
@@ -67,7 +66,7 @@ const uk: ServicePageContent = {
       title: "Візуальне оформлення",
       description:
         "Єдиний візуальний стиль матеріалів бренду — щоб кожен носій підсилював впізнаваність.",
-      image: "/services/identity.jpg",
+      image: "/assets/photography/identity-3.webp",
       alt: "Візуальне оформлення",
     },
     {
@@ -75,7 +74,7 @@ const uk: ServicePageContent = {
       title: "Технічний дизайн",
       description:
         "Схеми, інфографіка, ілюстрації до інструкцій — складні процеси простою візуальною мовою.",
-      image: "/services/strategy.jpg",
+      image: "/assets/photography/graphics-3.webp",
       alt: "Технічний дизайн",
     },
   ],
@@ -197,19 +196,21 @@ const uk: ServicePageContent = {
   ],
   productTitle: "Графіка на кожному носії.",
   productNote: "Від поліграфії та мерчу до outdoor і digital.",
-  products: withServiceProductImages([
-    { alt: "Фірмова графіка на носіях", caption: "Брендовані носії" },
-    { alt: "Графіка на мерчі", caption: "Мерч" },
-    { alt: "Графіка в соцмережах", caption: "Соцмережі" },
-    { alt: "Принт на одязі", caption: "Одяг" },
-    { alt: "Графіка на упаковці", caption: "Упаковка" },
-    { alt: "Графіка на зовнішній рекламі", caption: "Outdoor" },
-  ]),
+  products: [
+    { src: "/assets/photography/branding-3.webp", alt: "Фірмова графіка на носіях", caption: "Брендовані носії" },
+    { src: "/assets/photography/application-merch.webp", alt: "Графіка на мерчі", caption: "Мерч" },
+    { src: "/assets/photography/application-social.webp", alt: "Графіка в соцмережах", caption: "Соцмережі" },
+    { src: "/assets/photography/application-clothing.webp", alt: "Принт на одязі", caption: "Одяг" },
+    { src: "/assets/photography/application-package.webp", alt: "Графіка на упаковці", caption: "Упаковка" },
+    { src: "/assets/photography/graphics-2.webp", alt: "Графіка на зовнішній рекламі", caption: "Outdoor" }
+  ],
   formTitle: "Потрібна графіка, яка працює на впізнаваність?",
   formDescription:
     "Заповніть форму. Розберемо задачу й запропонуємо рішення під ваші носії та бренд.",
   faqTitle: "FAQ",
   faq: [
+    { question: "Скільки коштує графічний дизайн?", answer: "Орієнтовна вартість — 8–20 тис. грн. Остаточний кошторис залежить від обсягу завдання та погодженого складу робіт." },
+
     {
       question: "Що входить у послугу графічного дизайну?",
       answer:
@@ -301,7 +302,7 @@ const en: ServicePageContent = {
       title: "Print design",
       description:
         "Catalogs, booklets, flyers, letterheads — with correct print preparation, sizes, and finishing.",
-      image: "/branding/hero.png",
+      image: "/assets/photography/application-stationery.webp",
       alt: "Print design",
     },
     {
@@ -309,7 +310,7 @@ const en: ServicePageContent = {
       title: "Project presentations",
       description:
         "Commercial proposals, investor decks, and reports — slide structure supports persuasion.",
-      image: "/services/communication.jpg",
+      image: "/assets/photography/graphics-1.webp",
       alt: "Project presentations",
     },
     {
@@ -317,7 +318,7 @@ const en: ServicePageContent = {
       title: "Outdoor advertising layouts",
       description:
         "Billboards, citylights, signs, banners — adapted for viewing distance, type size, and contrast.",
-      image: "/services/graphic.jpg",
+      image: "/assets/real-cases/kyiv-tourism-department-05.webp",
       alt: "Outdoor advertising layouts",
     },
     {
@@ -325,7 +326,7 @@ const en: ServicePageContent = {
       title: "Visual styling",
       description:
         "A unified visual style for brand materials so every medium strengthens recognition.",
-      image: "/services/identity.jpg",
+      image: "/assets/photography/identity-3.webp",
       alt: "Visual styling",
     },
     {
@@ -333,7 +334,7 @@ const en: ServicePageContent = {
       title: "Technical design",
       description:
         "Diagrams, infographics, instruction illustrations — complex processes in simple visual language.",
-      image: "/services/strategy.jpg",
+      image: "/assets/photography/graphics-3.webp",
       alt: "Technical design",
     },
   ],
@@ -371,18 +372,20 @@ const en: ServicePageContent = {
   ],
   productTitle: "Graphics on every medium.",
   productNote: "From print and merch to outdoor and digital.",
-  products: withServiceProductImages([
-    { alt: "Corporate graphics on media", caption: "Branded media" },
-    { alt: "Graphics on merch", caption: "Merch" },
-    { alt: "Graphics on social media", caption: "Social" },
-    { alt: "Print on apparel", caption: "Apparel" },
-    { alt: "Graphics on packaging", caption: "Packaging" },
-    { alt: "Graphics on outdoor advertising", caption: "Outdoor" },
-  ]),
+  products: [
+    { src: "/assets/photography/branding-3.webp", alt: "Corporate graphics on media", caption: "Branded media" },
+    { src: "/assets/photography/application-merch.webp", alt: "Graphics on merch", caption: "Merch" },
+    { src: "/assets/photography/application-social.webp", alt: "Graphics on social media", caption: "Social" },
+    { src: "/assets/photography/application-clothing.webp", alt: "Print on apparel", caption: "Apparel" },
+    { src: "/assets/photography/application-package.webp", alt: "Graphics on packaging", caption: "Packaging" },
+    { src: "/assets/photography/graphics-2.webp", alt: "Graphics on outdoor advertising", caption: "Outdoor" }
+  ],
   formTitle: "Need graphics that work for recognition?",
   formDescription: "Fill out the form. We will review the task and propose a solution for your media and brand.",
   faqTitle: "FAQ",
   faq: [
+    { question: "How much does graphic design cost?", answer: "Approximate cost — UAH 8–20k. The final estimate depends on the scope of work and the agreed deliverables." },
+
     { question: "What does graphic design service include?", answer: "Print design, outdoor advertising layouts, presentation and project design, technical design, print preparation, and production support if needed." },
     { question: "How is the process structured?", answer: "Briefing and analysis → concept search → development and detailing → production preparation → production support if needed." },
     { question: "Where is brand graphics used?", answer: "On packaging, business documents, advertising media, merch, office or store design, transport and uniforms, website and social media." },
@@ -442,7 +445,7 @@ const ru: ServicePageContent = {
       title: "Дизайн полиграфии",
       description:
         "Каталоги, буклеты, листовки, фирменные бланки — с правильной подготовкой к печати, размерами и отделкой.",
-      image: "/branding/hero.png",
+      image: "/assets/photography/application-stationery.webp",
       alt: "Дизайн полиграфии",
     },
     {
@@ -450,7 +453,7 @@ const ru: ServicePageContent = {
       title: "Презентации проектов",
       description:
         "Коммерческие предложения, презентации для инвесторов и отчёты — структура слайдов работает на убедительность.",
-      image: "/services/communication.jpg",
+      image: "/assets/photography/graphics-1.webp",
       alt: "Презентации проектов",
     },
     {
@@ -458,7 +461,7 @@ const ru: ServicePageContent = {
       title: "Макеты для наружной рекламы",
       description:
         "Билборды, ситилайты, вывески, баннеры — адаптация под расстояние просмотра, шрифт и контраст цветов.",
-      image: "/services/graphic.jpg",
+      image: "/assets/real-cases/kyiv-tourism-department-05.webp",
       alt: "Макеты для наружной рекламы",
     },
     {
@@ -466,7 +469,7 @@ const ru: ServicePageContent = {
       title: "Визуальное оформление",
       description:
         "Единый визуальный стиль материалов бренда — чтобы каждый носитель усиливал узнаваемость.",
-      image: "/services/identity.jpg",
+      image: "/assets/photography/identity-3.webp",
       alt: "Визуальное оформление",
     },
     {
@@ -474,7 +477,7 @@ const ru: ServicePageContent = {
       title: "Технический дизайн",
       description:
         "Схемы, инфографика, иллюстрации к инструкциям — сложные процессы простым визуальным языком.",
-      image: "/services/strategy.jpg",
+      image: "/assets/photography/graphics-3.webp",
       alt: "Технический дизайн",
     },
   ],
@@ -512,18 +515,20 @@ const ru: ServicePageContent = {
   ],
   productTitle: "Графика на каждом носителе.",
   productNote: "От полиграфии и мерча до outdoor и digital.",
-  products: withServiceProductImages([
-    { alt: "Фирменная графика на носителях", caption: "Брендированные носители" },
-    { alt: "Графика на мерче", caption: "Мерч" },
-    { alt: "Графика в соцсетях", caption: "Соцсети" },
-    { alt: "Принт на одежде", caption: "Одежда" },
-    { alt: "Графика на упаковке", caption: "Упаковка" },
-    { alt: "Графика на наружной рекламе", caption: "Outdoor" },
-  ]),
+  products: [
+    { src: "/assets/photography/branding-3.webp", alt: "Фирменная графика на носителях", caption: "Брендированные носители" },
+    { src: "/assets/photography/application-merch.webp", alt: "Графика на мерче", caption: "Мерч" },
+    { src: "/assets/photography/application-social.webp", alt: "Графика в соцсетях", caption: "Соцсети" },
+    { src: "/assets/photography/application-clothing.webp", alt: "Принт на одежде", caption: "Одежда" },
+    { src: "/assets/photography/application-package.webp", alt: "Графика на упаковке", caption: "Упаковка" },
+    { src: "/assets/photography/graphics-2.webp", alt: "Графика на наружной рекламе", caption: "Outdoor" }
+  ],
   formTitle: "Нужна графика, которая работает на узнаваемость?",
   formDescription: "Заполните форму. Разберём задачу и предложим решение под ваши носители и бренд.",
   faqTitle: "FAQ",
   faq: [
+    { question: "Сколько стоит графический дизайн?", answer: "Ориентировочная стоимость — 8–20 тыс. грн. Итоговая смета зависит от объёма задачи и согласованного состава работ." },
+
     { question: "Что входит в услугу графического дизайна?", answer: "Дизайн полиграфии, макеты для наружной рекламы, оформление презентаций и проектов, технический дизайн, подготовка к печати и сопровождение на производстве при необходимости." },
     { question: "Как построен процесс работы?", answer: "Брифинг и анализ → поиск концепции → разработка и детализация → подготовка к производству → сопровождение на производстве при необходимости." },
     { question: "Где применяется фирменная графика?", answer: "На упаковке, в деловой документации, на рекламных носителях, в мерче, в оформлении офиса или торговой точки, на транспорте и униформе, на сайте и в соцсетях." },
