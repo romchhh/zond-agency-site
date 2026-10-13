@@ -13,9 +13,10 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: siteConfig.language,
     icons: [
       {
-        src: "/assets/651683d433d9510e36720e72_logo-black.svg",
+        src: "/favicon.svg",
         sizes: "any",
         type: "image/svg+xml",
+        purpose: "any",
       },
     ],
   };

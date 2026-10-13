@@ -1,5 +1,6 @@
 export const media = {
   logo: "/assets/651683d433d9510e36720e72_logo-black.svg",
+  favicon: "/favicon.svg",
   heroMockup: "/assets/mockup-review.mp4",
   heroMockupPoster: "/assets/mockup-review-poster.jpg",
   moreIcon: "/assets/6502b1be202da9cf0acab684_more_icon.svg",

@@ -33,9 +33,9 @@ export async function generateMetadata({
     publisher: siteConfig.name,
     category: "Branding",
     icons: {
-      icon: media.logo,
-      shortcut: media.logo,
-      apple: media.logo,
+      icon: [{ url: media.favicon, type: "image/svg+xml" }],
+      shortcut: media.favicon,
+      apple: media.favicon,
     },
     other: {
       "llms-txt": `${siteUrl}/llms.txt`,
