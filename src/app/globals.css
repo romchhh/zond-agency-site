@@ -4836,7 +4836,7 @@ a.service-card {
 .cases-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   padding: 0 var(--header-bar-pad-left) 28px;
 }
 
@@ -4846,9 +4846,9 @@ a.service-card {
   background: #fff;
   color: #1a1a1a;
   border-radius: 999px;
-  padding: 11px 20px;
+  padding: 8px 14px;
   font: inherit;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.01em;
@@ -5301,23 +5301,22 @@ body.lightbox-open .header {
   }
 
   .cases-filters {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    overflow: visible;
+    padding-bottom: 18px;
     margin-bottom: 4px;
   }
 
-  .cases-filters::-webkit-scrollbar {
-    display: none;
-  }
-
   .cases-filter {
-    flex: none;
-    padding: 10px 16px;
-    font-size: 14px;
+    width: 100%;
+    min-width: 0;
+    padding: 7px 4px;
+    font-size: 12px;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.15;
   }
 
   .post-intro {
