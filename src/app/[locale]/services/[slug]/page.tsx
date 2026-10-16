@@ -11,6 +11,7 @@ import LogoPage from "@/components/LogoPage";
 import NamingPage from "@/components/NamingPage";
 import PackagingPage from "@/components/PackagingPage";
 import PositioningPage from "@/components/PositioningPage";
+import RebrandingPage from "@/components/RebrandingPage";
 import SmmPage from "@/components/SmmPage";
 import ServiceTitlePage from "@/components/ServiceTitlePage";
 import { isLocale, locales } from "@/i18n/config";
@@ -188,6 +189,16 @@ export default async function ServicePage({
   if (slug === "influence-marketing") {
     return (
       <InfluenceMarketingPage
+        locale={locale}
+        dictionary={dictionary}
+        projects={projects}
+      />
+    );
+  }
+
+  if (slug === "rebranding") {
+    return (
+      <RebrandingPage
         locale={locale}
         dictionary={dictionary}
         projects={projects}

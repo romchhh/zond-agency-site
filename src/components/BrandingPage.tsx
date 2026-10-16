@@ -215,13 +215,30 @@ export default function BrandingPage({
                 <article className="sp-step" key={step.index}>
                   <div className="sp-step-num">{step.index}</div>
                   <h3>{step.title}</h3>
+                  <p>{step.description}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <ServiceCompareSection locale={locale} />
+        <section className="sp-section" id="why">
+          <div className="wrap">
+            <div className="sp-section-head">
+              <h2 className="sp-h2">{copy.whyTitle}</h2>
+            </div>
+            <div className="sp-why">
+              {copy.whyItems.map((item) => (
+                <article className="sp-why-item" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <ServiceCompareSection locale={locale} compare={copy.compare} />
 
         <section className="sp-section sp-section--editorial">
           <div className="wrap">
