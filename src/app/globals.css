@@ -3701,6 +3701,15 @@ a.service-card {
   font-size: 18px;
 }
 
+.sp-faq {
+  border-top: 1px solid rgba(31, 29, 27, 0.1);
+  border-bottom: 1px solid rgba(31, 29, 27, 0.1);
+}
+
+.sp-faq + .sp-faq {
+  border-top: none;
+}
+
 .sp-faq summary {
   display: flex;
   justify-content: space-between;
@@ -3726,6 +3735,70 @@ a.service-card {
 .sp-faq details[open] summary::after {
   content: "−";
   color: var(--accent);
+}
+
+.sp-faq > details > div,
+.sp-faq > details > p,
+.sp-faq > details > ul,
+.sp-faq > details > ol,
+.sp-faq > details > table,
+.sp-faq > details > .sp-answer {
+  margin: 0 0 18px;
+}
+
+.sp-faq .sp-answer {
+  padding: 0 35px 20px 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.case-table-block {
+  margin: 32px 0;
+  overflow-x: auto;
+  border: 1px solid rgba(31, 29, 27, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 40px rgba(15, 12, 10, 0.04);
+}
+
+.case-table-block table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  min-width: 640px;
+}
+
+.case-table-block th,
+.case-table-block td {
+  padding: 16px 18px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(31, 29, 27, 0.08);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.case-table-block thead th {
+  background: rgba(31, 29, 27, 0.04);
+  color: #1f1d1b;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.case-table-block tbody tr:nth-child(even) {
+  background: rgba(31, 29, 27, 0.02);
+}
+
+.case-table-block th + th,
+.case-table-block td + td {
+  border-left: 1px solid rgba(31, 29, 27, 0.08);
+}
+
+.case-table-block p {
+  margin: 0;
 }
 
 .sp-answer {

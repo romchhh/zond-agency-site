@@ -3,211 +3,638 @@ import type { BlogPost } from "./types";
 const posts: BlogPost[] = [
   {
     "slug": "what-is-branding",
-    "title": "What is a brand and branding: elements and stages | ZOND",
-    "description": "A brand is what people think about a company; branding is the work of shaping that image.",
+    "title": "What is a brand and branding: elements and stages",
+    "description": "A brand is what people think about a company. Branding is the work of shaping that perception into a lasting image.",
     "cover": "/assets/photography/branding-0.webp",
     "published": "2025-08-15",
-    "body": `Бренд це те, що людина думає про компанію ще до розмови з нею. Брендинг це робота, якою цей образ будують: позиціювання, назва, знак, фірмовий стиль і правила, за якими все це застосовують.
+    "body": `A brand is what people think about a company before they even speak to it. Branding is the work of shaping that image: positioning, name, symbol, visual identity, and the rules that keep all of it consistent.
 
-Нижче розбираємо, чим бренд відрізняється від брендингу, з чого він складається, які бувають види та етапи і кому ця робота потрібна вже зараз. Наприкінці короткі відповіді на 5 частих питань.
+Below we explain how a brand differs from branding, what it consists of, which types and stages exist, and who actually needs this work right now. At the end, there are short answers to 5 common questions.
 
-### Що таке бренд
+### What is a brand?
 
-Бренд це стійке уявлення про компанію в голові покупця. Воно збирається з усього, що людина побачила і пережила: реклами, упаковки, сайту, розмови з менеджером, швидкості доставки. Жодного з цих вражень не видно в балансі.
+A brand is a stable image of a company in the customer’s mind. It is formed by everything a person sees and experiences: advertising, packaging, website, conversation with a manager, delivery speed, and the quality of service. None of these impressions shows up in a balance sheet, but together they shape how the business is remembered.
 
-Юридично компанія володіє торговою маркою. Але бренд ширший за неї. Він існує в памʼяті аудиторії, і компанія керує ним тільки через те, що показує і робить щодня: як відповідаєте на дзвінок, як пакуєте товар, що пишете в описі.
+Legally, a company owns a trademark. But a brand is broader than that. It lives in the audience’s memory, and a company can only influence it through what it shows and does every day: how it answers the phone, how it packages a product, and what it writes in the description.
 
-Приклад. Людина бачить на полиці дві однакові банки кави і бере ту, чия назва їй знайома. Кава там та сама, ціна теж. Різницю створив бренд, над яким одна компанія попрацювала, а друга ні. Працює це тихо.
+Example. A customer sees two identical coffee cans on the shelf and buys the one whose name feels familiar. The coffee is the same; the price is the same. The difference was created by a brand that one company worked on and the other did not. It works quietly.
 
-### Чим бренд відрізняється від брендингу
+### What is the difference between a brand and branding?
 
-Результат цієї роботи і є бренд, а сама робота називається брендингом. Компанія може мати логотип і не мати бренду, якщо про неї нічого не думають. Буває й навпаки. Майстерня без знака тримає чергу роками.
+The result of this work is the brand. The work itself is called branding. A business can have a logo and still not have a brand if people do not think of it in a meaningful way. The opposite is also possible: a workshop without a logo can still have a strong reputation built on trust and consistent service.
 
-Різниця важлива при постановці задачі. Одне замовляють і приймають роботами, друге перевіряють опитуванням аудиторії через рік. Через цю плутанину й виникає розчарування. Логотип здали, а впізнаваності за перший місяць немає.
+This difference matters when setting a task. One is ordered as a finished asset. The other is assessed through audience perception over time. This is where disappointment often comes from. A logo is delivered, but recognition does not appear in the first month.
 
-Критерій
+Criterion
 
-Бренд
+Brand
 
-Брендинг
+Branding
 
-Що це
+What it is
 
-Образ компанії в голові покупця
+The image of a company in the customer’s mind
 
-Робота зі створення цього образу
+The intentional work of creating that image
 
-Де існує
+Where it exists
 
-У сприйнятті аудиторії
+In audience perception
 
-У макетах і письмових правилах
+In visuals, strategy, and written rules
 
-Хто створює
+Who creates it
 
-Аудиторія з власного досвіду
+The audience through experience
 
-Компанія разом із дизайн-студією
+The company together with a design studio
 
-Як вимірюється
+How it is measured
 
-Впізнаваністю і готовністю переплатити
+By recognition and willingness to pay more
 
-Обсягом робіт і переліком файлів
+By the scope of work and the list of delivered files
 
-### З чого складається бренд
+### What does a brand consist of?
 
-Елементи бренду це 8 позицій. Кожну можна описати словами і передати виконавцю.
+A brand consists of 8 elements. Each one can be described in words and given to an executor.
 
-- Назва
-Слово, яким компанію називають, шукають у пошуку і радять знайомим.
+- Name
+The word people search for, say aloud, and recommend to friends.
 
-- Логотип
-Знак, за яким вас упізнають на вивісці, упаковці та в застосунку.
+- Logo
+The sign that makes the company recognizable on a storefront, package, or app interface.
 
-- Фірмовий стиль
-Система, що тримає всі матеріали бізнесу в одному вигляді.
+- Brand style
+A system that keeps all business materials visually coherent.
 
-- Палітра і шрифти
-Кольори та накреслення, закріплені за брендом у правилах.
+- Palette and fonts
+Colors and typefaces tied to the brand through clear rules.
 
-- Позиціювання
-Місце на ринку і причина обрати саме вас, а не сусіда по полиці.
+- Positioning
+The place a company occupies in the market and the reason customers choose it instead of a competitor.
 
-- Обіцянка
-Те, що ви гарантуєте клієнту в кожному контакті з бізнесом.
+- Promise
+What the company guarantees at every point of contact.
 
-- Манера спілкування
-Як бренд говорить у текстах, листах, рекламі й соцмережах.
+- Tone of communication
+How the brand speaks in texts, emails, ads, and social media.
 
-- Носії
-Візитка, упаковка, вивіска, сайт, документи, форма співробітників.
+- Touchpoints
+The business card, packaging, signage, website, documents, and employee uniform.
 
-Візуальну частину цього набору називають айдентикою, а правила її застосування зводять у брендбук. Докладніше про перше ми писали в статті айдентика бренду, про друге у матеріалі що таке брендбук. Порядок збирання теж має значення. Спершу позиціювання і назва, потім знак і стиль. Навпаки не працює. До набору часто додають слоган і фірмовий колір.
+The visual part of this toolkit is called identity, and the rules for using it are put into a brand book. We have covered the first in the article on brand identity, and the second in the article on what a brand book is. The order also matters. First comes positioning and naming; then the mark and the style. The reverse order does not work. A slogan and signature color are often added later.
 
-### Навіщо бізнесу брендинг
+### Why does business need branding?
 
-Головні завдання брендингу це відрізнити бізнес від сусідів по ринку і зробити вибір на його користь звичним. Нижче 5 із них.
+The main tasks of branding are to distinguish a business from competitors and make the choice in its favor feel natural. Here are 5 of them.
 
-- Впізнаваність
-Компанію помічають і запамʼятовують серед схожих пропозицій.
+- Recognition
+The company is noticed and remembered among similar offers.
 
-- Довіра
-Акуратний вигляд знімає частину сумнівів ще до першої розмови.
+- Trust
+A polished appearance reduces uncertainty before the first conversation.
 
-- Цінність
-За зрозумілий бренд покупець платить охочіше і торгується менше.
+- Value
+Customers are often willing to pay more for a brand they understand and trust.
 
-- Лояльність
-Клієнт повертається сам і рекомендує вас знайомим.
+- Loyalty
+The customer returns on their own and recommends the brand to others.
 
-- Швидкий запуск
-Нові продукти виходять у вже готовому й упізнаваному стилі.
+- Fast launch
+New products are introduced in a recognizable style.
 
-Функції бренду ширші. Він працює й тоді, коли рекламний бюджет закінчився, бо люди вже знають назву і повертаються за нею самі. Для маркетингу це опора. Просування дешевшає, комунікація тримається в одному тоні. Але буває й навпаки. Якщо сервіс не дотягує до того, що обіцяє реклама, упізнаваність лише прискорить погані відгуки, тому за бренд беруться, коли продукт уже тримає рівень.
+A brand does more than this. It works even when the advertising budget is exhausted, because people already know the name and return to it on their own. For marketing, this is a foundation. Promotion becomes cheaper, and communication stays consistent in tone. But there is a downside too. If the service does not match the promise in the ads, recognition only accelerates negative reviews. That is why branding makes the most sense when the product or service already delivers value.
 
-### Види брендингу
+### Types of branding
 
-Нижче 5 видів. Розрізняють їх за тим, що саме отримує образ. Це може бути товар, бізнес цілком, послуга або торгова точка. На практиці напрямки перетинаються, і одна робота часто закриває два з них. Межі тут рухомі.
+Here are 5 common types. They are classified by what is becoming the brand. It can be a product, the whole company, a service, or a retail point. In practice, these directions overlap, and one project often covers two of them at once.
 
-- Товарний
-Робота над окремим продуктом або цілою лінійкою товарів.
+- Product branding
+Work on an individual product or entire product line.
 
-- Корпоративний
-Образ бізнесу загалом, його позиціювання, цінності та стиль.
+- Corporate branding
+The image of the business as a whole: its positioning, values, and style.
 
-- Сервісний
-Образ послуги, яку не можна взяти в руки і показати на полиці.
+- Service branding
+The image of a service that cannot be held in hand or placed on a shelf.
 
-- Ритейл-брендинг
-Оформлення магазину, торгового залу і точки продажу.
+- Retail branding
+The design of the store, sales area, and retail environment.
 
-- Цифровий
-Вигляд бренду в застосунку, на сайті та в соцмережах.
+- Digital branding
+How the brand looks in applications, websites, and social media.
 
-Поруч є ще 3 напрямки: HR-брендинг, робота з образом територій і особистий бренд. Задачі та інструменти там інші, тому тут ми їх не розбираємо.
+There are also 3 other directions: HR branding, territorial branding, and personal branding. Their tasks and tools are different, so we are not covering them here.
 
-### Етапи брендингу
+### Stages of branding
 
-У ZOND робота йде 6 кроками. Кожен наступний спирається на попередній, тому перестрибувати їх не виходить. Без дослідження стратегію ні з чим звіряти, а без затвердженої ідеї немає що втілювати в назві та знаку.
+At ZOND, the process follows 6 steps. Each step relies on the previous one, so skipping them is not possible. Without research, strategy has nothing to compare itself to; without a final idea, there is nothing to translate into a name or symbol.
 
-- Бриф
-Зустріч із замовником і детальне заповнення брифу по задачі.
+- Brief
+A meeting with the client and a detailed brief covering the task.
 
-- Маркетингове дослідження
-Вивчаємо ринок, конкурентів і цільову аудиторію.
+- Market research
+We study the market, competitors, and target audience.
 
-- Позиціонування та ідея
-Формулюємо стратегію на основі особливостей вашого продукту.
+- Positioning and idea
+We build a strategy based on the strengths of your product or service.
 
-- Неймінг
-Добираємо назву, під якою бренд вийде на ринок.
+- Naming
+We choose a name under which the brand will enter the market.
 
-- Логотип
-Малюємо знак і перевіряємо його на реальних носіях.
+- Logo
+We design the sign and test it on real touchpoints.
 
-- Фірмовий імідж
-Збираємо стиль і правила, за якими він застосовується.
+- Brand identity
+We define the style and the rules for how it is used.
 
-Скільки триває кожен крок, залежить від кількості носіїв і від того, скільки людей із боку замовника приймають рішення. Точні дати називають після брифу, коли перелік робіт затверджений. Пропустити крок можна, але наступний тоді доводиться робити навмання.
+Each stage takes as long as it needs, depending on how many touchpoints are involved and how many people on the client side need to approve decisions. Exact deadlines are set after the brief, when the scope of work is confirmed. You can skip a step, but then the next one is built without clear direction.
 
-### Кому і коли потрібен брендинг
+### Who needs branding and when?
 
-4 ситуації, у яких за бренд беруться найчастіше.
+4 situations in which branding is usually needed.
 
-- Новий бізнес
-Образ дешевше зібрати одразу, ніж переробляти його потім.
+- A new business
+It is cheaper to build the image correctly from the start than to redesign it later.
 
-- Компанія виросла
-Бізнес змінився, а виглядає так само, як на старті.
+- A company has grown
+The business has changed, but it still looks like it did at launch.
 
-- Новий напрямок
-Потрібен стиль, у якому вийдуть майбутні продукти.
+- A new direction
+A new style is needed for the next wave of products.
 
-- Тиск конкурентів
-Пропозиції на ринку схожі, і покупець не бачить різниці між ними.
+- Competitive pressure
+The offers on the market look too similar, and customers cannot see the difference.
 
-Якщо ви працюєте за рекомендаціями і черга розписана на місяці вперед, роботу можна відкласти, але вона знадобиться тоді, коли ви захочете вийти за межі цього кола, відкрити другу точку або вивести товар у мережі.
+If your business is growing through referrals and the queue is already booked for months, branding can wait. But it will be necessary when you want to go beyond this circle, open a second location, or launch in retail networks.
 
-### Помилки, через які брендинг не працює
+### Mistakes that make branding ineffective
 
-4 ситуації, які ми бачимо найчастіше. Кожна з них зʼїдає бюджет роботи і не дає того результату, заради якого її замовляли, а помітно це стає вже після здачі.
+4 situations we see most often. Each of them eats the project budget and prevents the business from getting the result it asked for, and the problem becomes visible only after delivery.
 
-- Усю роботу зводять до логотипа.
-- Стиль описали в документі, а команда ним не користується.
-- Образ компанії будують під смак власника, покупця не питають.
-- Обіцянку написали красиво, сервіс лишився тим самим, репутація не змінилась.
-### Часті питання
+- The entire project is reduced to a logo.
+- The style is described in a document but the team does not use it.
+- The company image is built around the owner’s taste instead of the customer’s needs.
+- The promise sounds good, but the service did not change and reputation stays the same.
 
-Що таке брендинг простими словами?
+### Frequently asked questions
 
-Це робота, після якої бізнес упізнають і розуміють, чим він відрізняється від сусідів по ринку. Вона включає позиціювання, назву, логотип, фірмовий стиль і правила, за якими все це застосовують у рекламі, на сайті та в щоденних документах.
+<details>
+  <summary>What is branding in simple words?</summary>
+  <div class="sp-answer">
+    <p>It is the work that makes a business recognizable and understandable, and helps it stand out from competitors. It includes positioning, naming, logo, visual identity, and the rules for applying them in advertising, on the website, and in everyday documents.</p>
+  </div>
+</details>
 
-Чим бренд відрізняється від брендингу?
+<details>
+  <summary>How is a brand different from branding?</summary>
+  <div class="sp-answer">
+    <p>The first is the result. The second is the path to it. A logo and brand style can be ordered in a few weeks. The image in the customer’s mind takes longer to form, through real experience. That is why the work is approved by files, while the result is tested through audience research over time.</p>
+  </div>
+</details>
 
-Перше це результат, друге це шлях до нього. Логотип і фірмовий стиль можна замовити за кілька тижнів. Образ у голові покупця складається довше, з реального досвіду. Тому роботу приймають по файлах, а результат перевіряють опитуванням аудиторії через рік.
+<details>
+  <summary>What does a brand consist of?</summary>
+  <div class="sp-answer">
+    <p>A name, logo, brand style, palette and fonts, positioning, promise, tone of communication, and touchpoints where all of this is shown. Part of it is described in a document; the rest is formed by how the business behaves. The set depends on the niche. Retail needs touchpoints; service businesses rely more on communication.</p>
+  </div>
+</details>
 
-З чого складається бренд?
+<details>
+  <summary>What is the difference between brand style and branding?</summary>
+  <div class="sp-answer">
+    <p>Brand style is the visual part: the logo, colors, fonts, and the rules for using them. Branding is broader. It includes positioning, naming, promise, and communication tone. A style can be ordered separately, but without positioning it becomes just a collection of files.</p>
+  </div>
+</details>
 
-З назви, логотипа, фірмового стилю, палітри та шрифтів, позиціювання, обіцянки, манери спілкування і носіїв, на яких це показують. Частину описують документом, решта складається з поведінки бізнесу. Набір залежить від ніші. Рітейлу потрібні носії, сервісу манера спілкування.
+<details>
+  <summary>Who needs branding and when should it start?</summary>
+  <div class="sp-answer">
+    <p>It is useful for companies entering a competitive market or businesses that have outgrown their current image. It is simplest to start at the beginning, because building the brand properly from the start is cheaper than redesigning it later with all the printed touchpoints already in use. The second convenient moment is the launch of a new direction.</p>
+  </div>
+</details>
 
-Чим фірмовий стиль відрізняється від брендингу?
+### Conclusion
 
-Фірмовий стиль це візуальна частина: логотип, кольори, шрифти і правила їх застосування. Брендинг ширший, у ньому ще позиціювання, назва, обіцянка і манера спілкування, а сам стиль замовляють і окремо, тільки без позиціювання він лишається набором файлів.
+A brand is made of what you show and what you do; branding is a managed process of shaping that image. It can start small, with a clean name, sign, and rules for their use.
 
-Кому потрібен брендинг і коли його починати?
-
-Компаніям, які виходять на конкурентний ринок або переросли свій нинішній вигляд. Починати простіше на старті, бо зібрати бренд одразу дешевше, ніж переробляти його потім разом з усіма надрукованими носіями. Другий зручний момент це запуск нового напрямку.
-
-### Висновок і перехід на послугу
-
-Складається бренд із того, що ви показуєте і робите, а брендинг це керована робота над цим образом. Почати можна з малого, навівши лад у назві, знаку і правилах.
-
-У ZOND розробка бренду починається з брифінгу і закінчується файлами та описом, як ними користуватись. Поруч іде розробка логотипу.`
-  },
+At ZOND, brand development begins with a brief and ends with files and rules for using them. A logo design process runs alongside it.
+` },
   {
     "slug": "what-is-illustration",
-    "title": "What is illustration: types, styles, and why business needs it | ZOND",
+    "title": "What is illustration: types, styles, and why it matters to business",
+    "description": "Illustration is a purposeful visual image that explains a product, sets the mood, and strengthens a brand in a way stock photography usually cannot.",
+    "cover": "/assets/photography/brand-character-0.webp",
+    "published": "2025-08-22",
+    "body": `Illustration is an image created for a specific purpose: to explain an idea, show a product, set the tone of a page or package, or make a message more memorable. It is always tied to a text, a brand, or a product, which is exactly what separates it from an independent drawing or a free artistic work.
+
+Below we explain how it differs from a sketch or photo, why businesses use it, and which types and styles exist.
+
+### What does “illustration” mean?
+
+It is a drawn image that works together with the content and explains it faster than a paragraph of text.
+
+The word comes from Latin: illustrare meant “to illuminate” or “to clarify.” In the beginning, it was about visual explanation. The meaning of “image in the text” became standard in the early 19th century.
+
+The simplest example is familiar to everyone: an instruction for a device shows which part to insert into which slot. The same principle works in business, except the “part” is the customer benefit and the “technical description” is the brand narrative.
+
+### How is it different from a drawing or photo?
+
+A person may say “draw a picture,” but they usually mean three different things, even though the difference is mainly in the task and the context.
+
+Criterion
+
+Illustration
+
+Drawing or photo
+
+What it is for
+
+To explain or sell a specific thing
+
+To express the author’s idea or capture a scene
+
+What it is tied to
+
+A text, product, or brand
+
+It exists on its own
+
+Who sets the task
+
+The client through a brief
+
+The artist or the circumstances of the shoot
+
+Photos are used when the object already exists; illustration is used when there is no real photo or the visual needs to be shaped intentionally.
+
+### Why do businesses need illustration?
+
+Illustration solves tasks that photography cannot handle well, or handles much more expensively. Here are the most common ones.
+
+- Explain something complex
+A process or system can be understood in a second without reading a long paragraph.
+
+- Stand out from competitors
+Stock photos are easy to recognize and often used by several brands at once.
+
+- Show what does not yet exist
+A future product, an internal process, or an abstract benefit.
+
+- Keep a consistent style
+A website and packaging look like the same brand, not separate projects.
+
+- Give the brand a face
+A character becomes a familiar presence that people recognize in packaging, email, and ads even without the company name nearby.
+
+The last point is especially powerful. A corporate hero behaves like a familiar character and stays in memory across different touchpoints.
+
+### Where companies use it
+
+- Website and banners
+The first screen, service cards, empty cart state, 404 page.
+
+- Packaging and labels
+The graphics matter almost as much as the text.
+
+- Presentations
+A slide with a diagram reads faster than a table.
+
+- Social media
+A visual series can be identified in the feed before the brand name appears.
+
+- Advertising layouts
+Outdoor ads, print, and digital banners.
+
+- Identity systems
+Patterns and icons become part of the brand style along with the palette and fonts.
+
+The order matters. First, the style and the rules for its use are fixed together with the brand identity, and only then do designers create visuals for each touchpoint. Otherwise the website, the box, and the presentation start to look like work by different studios.
+
+The format depends on the task. For print, a PDF with bleeds and outlined text is often prepared; for screens, a lighter file is used.
+
+### Types of illustration
+
+Illustrations are divided by the method of creation, and the designer chooses the format based on how the file will be used later.
+
+- Vector
+SVG and PDF, scalable without losing sharpness.
+
+- Raster
+Built from pixels, great for texture but limited in scale.
+
+- Digital
+Drawn on a tablet; this is how most web graphics are created.
+
+- Hand-drawn
+Pencil or watercolor, then scanned.
+
+- 3D
+Useful for showing a product from multiple angles.
+
+Book and scientific graphics are often separated into their own category, because they require precision and technical correctness rather than a distinctive style.
+
+### Styles and techniques
+
+A designer chooses the style based on the task, not on fashion.
+
+- Flat
+Simple shapes without shadows; readable even at 24px.
+
+- Linear
+Thin contours; works well for icons and diagrams.
+
+- Isometric
+Shows a process or system in a complete view from above and from an angle.
+
+- Collage
+Mixes photography and graphic elements.
+
+- Realistic
+Shows the product accurately; often used on packaging.
+
+One style is usually chosen for the whole brand. Mixing flat and realistic styles is possible, but only when the boundary is clearly defined.
+
+### How we work on a brand image
+
+#### Consultation and brief
+The client describes the task, shows references, and points out important details.
+
+#### Brainstorm
+The team develops associative ideas and visual directions.
+
+#### Sketches
+The designer presents several options based on the brief.
+
+#### Refinement
+The chosen direction is approved and worked out in detail.
+
+#### File delivery
+The final layouts are prepared and handed over.
+
+Sketches are shown before the final illustration, because corrections are cheap at that stage. After final approval, reworking means almost the same amount of work as starting from scratch, so the key decisions should be settled early.
+
+### Frequently asked questions
+
+<details>
+  <summary>What is illustration in simple words?</summary>
+  <div class="sp-answer">
+    <p>It is an image created for a specific place and a specific idea. The artist is not choosing the theme freely; the brief defines the task. The same technique can produce both a commercial illustration and a free artwork — the difference is in who defined the purpose.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How is it different from a drawing?</summary>
+  <div class="sp-answer">
+    <p>A drawing can be created for personal expression and does not necessarily belong to a specific place. An illustrator works by a brief and knows where the image will be used: on a website, package, presentation, or ad. The technique may be the same; the difference is in the task and who sets it.</p>
+  </div>
+</details>
+
+<details>
+  <summary>What types are there?</summary>
+  <div class="sp-answer">
+    <p>There are vector, raster, digital, hand-drawn, and 3D illustrations. Vector scales without loss of quality, raster adds texture, 3D shows products from different angles, and the choice depends on where the image is published and whether it needs to be enlarged later.</p>
+  </div>
+</details>
+
+<details>
+  <summary>Why is it useful for a business?</summary>
+  <div class="sp-answer">
+    <p>To explain something quickly, avoid looking like every competitor using stock photography, and keep a consistent style across the website, packaging, and presentations. Illustration is also useful for showing a product or process that cannot be photographed. It can also become the brand’s corporate character that travels through all the touchpoints.</p>
+  </div>
+</details>
+
+### Conclusion
+
+Illustration is not decoration; it is a tool. It explains, differentiates, and maintains the visual consistency of a brand.
+
+Whether it is a character, a website series, or a comic, illustration can become the visible language of a business. When a company needs a complete system with clear usage rules, the next step is brand development.
+` },
+  {
+    "slug": "what-is-rebranding",
+    "title": "What is rebranding: types, stages, and examples",
+    "description": "Rebranding is a strategic update of a brand. It can refresh positioning, name, identity, and communication when the business has changed.",
+    "cover": "/assets/photography/branding-1.webp",
+    "published": "2025-08-29",
+    "body": `Rebranding is a deliberate update of a brand. During the process, a company revisits its positioning, visual identity, and communication style, while keeping the elements that still provide recognition.
+
+Below we explain what rebranding includes, why businesses do it, which types exist, and what stages the process usually goes through. We also compare it with restyling and redesign, and look at examples of successful and unsuccessful rebrands.
+
+### Rebranding in simple words
+
+Rebranding is a way to rebuild a company’s image for a new situation, when part of the system is changed intentionally and part is preserved deliberately to maintain recognition.
+
+The word itself explains the idea: “re” means repetition or revision, and “brand” means the brand. In practice, this often includes positioning, name, logo, visual identity, packaging, slogan, and communication tone. What remains untouched is the part that keeps the brand recognizable — most often a logo shape, a color cue, or a familiar symbol.
+
+A clear example is a customer who has bought the same tea in a green pack for years. The packaging is redesigned, the typography and color change, and the buyer no longer finds it immediately on the shelf. The taste is the same, the shelf is the same, but the hand reaches for another brand.
+
+### What is included in rebranding
+
+At ZOND, the work usually includes five directions, and the result is a brand book with guidelines and templates.
+
+- Brand audit
+We look at how the brand is perceived today, which touchpoints contradict each other, and what still remains recognizable even without the logo next to it.
+
+- Positioning
+We define who the business is for and what makes it different from the competitors. This then influences the logo, texts, ads, and even daily communication with clients.
+
+- Logo redesign
+We refresh the sign and check how it reads on signage, packaging, and in small formats, where only a color block and a few lines remain visible.
+
+- Identity update
+We define the palette, fonts, grid, and rules for use, then document them so that designers and printers can work without extra explanations.
+
+- Transition strategy
+We define the order in which the touchpoints should be changed, what to tell clients and partners, and how to preserve recognition while old and new brand elements coexist temporarily.
+
+### Why companies rebrand
+
+Rebranding is needed when the brand image no longer matches what the company sells today and starts preventing customers from understanding the offer quickly.
+
+- Modernize an outdated look
+Bring the company’s visual language in line with the product so the price stops raising questions in the first conversation or proposal.
+
+- Bring the touchpoints into one system
+Unify the website, ads, and documents so they feel like one company instead of three similar ones with different styles.
+
+- Reach a new audience
+Speak to people who previously ignored the brand, using the language and channels where they actually compare offers.
+
+- Differentiate from competitors
+Give buyers a reason to choose you when the market is crowded and pricing is similar.
+
+- Support a product shift
+Describe a new direction so the brand promise reflects what the company actually sells and delivers today.
+
+### What usually pushes companies toward rebranding
+
+These situations are common on the market, and they are usually visible before the work even begins.
+
+- The style is outdated
+The brand has not been refreshed in years, and in comparison with modern competitors it looks cheaper than it really is.
+
+- A shift in direction or market
+The company is entering a new country or changing its business model, and the old name or symbol is interpreted differently than before.
+
+- Mergers or product changes
+Two businesses become one, or an entire range is updated, and the old image no longer reflects what is now on the market.
+
+- Losing market share
+Younger competitors look more modern, and customers switch before comparing features or price because the first impression was already formed earlier.
+
+- A new target audience
+The buyer has changed over the years, and the brand speaks in a language that no longer feels familiar.
+
+### Types of rebranding
+
+- Full rebranding
+The company updates positioning, name, sign, style, and communication tone at the same time. This is the longest and most comprehensive approach.
+
+- Partial rebranding
+Positioning stays the same, but part of the system is refreshed: most often the logo or palette.
+
+- Restyling
+A cosmetic refresh of the visual layer while the brand promise remains unchanged.
+
+- Product or line rebranding
+A specific product or product line gets a new image while the parent brand stays the same.
+
+The choice depends on what has stopped working. If the main problem is mostly aesthetics, a smaller update may be enough.
+
+### How rebranding differs from restyling, redesign, and renaming
+
+The terms sound similar, but they mean different things.
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>What changes</th>
+      <th>When it makes sense</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rebranding</td>
+      <td>Positioning, name, logo, identity, communication style</td>
+      <td>The business has changed significantly and the old image no longer reflects it</td>
+    </tr>
+    <tr>
+      <td>Restyling</td>
+      <td>Only the visual shell while the brand promise stays the same</td>
+      <td>The positioning works, but the look feels outdated</td>
+    </tr>
+    <tr>
+      <td>Redesign</td>
+      <td>The appearance of one touchpoint, such as a website, package, or catalog</td>
+      <td>One asset needs refreshing while the rest of the system stays intact</td>
+    </tr>
+    <tr>
+      <td>Renaming</td>
+      <td>Only the name used in the market and registration</td>
+      <td>The name is blocking growth or has become confusing</td>
+    </tr>
+  </tbody>
+</table>
+
+### Rebranding stages
+
+1. Audit and analysis
+We gather all current touchpoints and compare what works with what creates confusion. We also examine the market and competitors to identify the old brand’s mistakes.
+
+2. Strategy
+We revisit positioning and the central idea, because until the company understands who it is for and how it differs from competitors, a new logo is meaningless.
+
+3. Concept
+We create several directions for the logo, typography, and palette, then present them to the client.
+
+4. Finalization
+We test the solutions on real touchpoints and prepare a brand book so the final style is documented before delivery.
+
+5. Implementation
+We adapt the files to different formats and create a rollout plan so the update happens in a clear order and avoids unnecessary confusion.
+
+The duration depends on the number of touchpoints. At ZOND, it usually takes around three to six weeks, depending on the scope of the project.
+
+### Examples of successful and unsuccessful rebranding
+
+A rebrand is usually considered successful when customers immediately recognize the company and understand what changed. Here are a few relevant examples.
+
+- Burberry, 2006 — successful
+The brand had over-licensed its check pattern, and the product lost its premium perception. After the company tightened licensing and reduced the pattern’s presence, the brand recovered its luxury image.
+
+- Old Spice, 2010 — successful
+The brand was perceived as something for older customers. A new positioning and communication tone helped it attract a younger audience and become relevant again.
+
+- Gap, 2010 — unsuccessful
+Gap replaced its logo without warning and without explaining the reason. The reaction was negative, and the company quickly returned to the old sign.
+
+- Tropicana, 2009 — unsuccessful
+The packaging was redesigned without the orange with a straw, which had become a key recognition element. Sales dropped, and the company reverted to the previous package.
+
+### When rebranding is not necessary
+
+- The business is growing through recommendations and the visual system is not the main issue.
+- The real problem is in the service or product, and a design update would only make it more visible.
+- The company just changed its identity and the market has not yet adapted.
+- The cause is the owner’s wish for a new look rather than a business need.
+
+In such cases, the right first step is an audit. It reveals what is actually wrong and often shows that the issue is in pricing, service, or product communication rather than brand design.
+
+### Common questions
+
+<details>
+  <summary>What is rebranding in simple terms?</summary>
+  <div class="sp-answer">
+    <p>It is an update to the brand that helps the company redefine who it is for and what makes it different from competitors. It can include the name, logo, style, and communication tone. Some familiar elements are kept so customers do not lose recognition.</p>
+  </div>
+</details>
+
+<details>
+  <summary>Why do companies rebrand?</summary>
+  <div class="sp-answer">
+    <p>To make the brand match what the business sells today and to remain competitive. This is common when the style feels outdated, touchpoints are inconsistent, the company is entering a new market, or it is losing ground to more modern competitors.</p>
+  </div>
+</details>
+
+<details>
+  <summary>What does rebranding include?</summary>
+  <div class="sp-answer">
+    <p>At ZOND, it can include a brand audit, positioning, logo redesign, identity refresh, and a transition strategy. The final output is a brand book with guidelines and templates for digital and offline use.</p>
+  </div>
+</details>
+
+<details>
+  <summary>What types of rebranding exist?</summary>
+  <div class="sp-answer">
+    <p>Full, partial, restyling, and product or line rebranding. The choice depends on what stopped working.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How is rebranding different from redesign and restyling?</summary>
+  <div class="sp-answer">
+    <p>Redesign updates one touchpoint; restyling refreshes the brand’s visual shell; rebranding updates the meaning, positioning, and entire communication system.</p>
+  </div>
+</details>
+
+<details>
+  <summary>When should you avoid rebranding?</summary>
+  <div class="sp-answer">
+    <p>When the business is already moving well and the real issue lies elsewhere, or when the company has just changed its identity and the market is still adapting.</p>
+  </div>
+</details>
+
+### Conclusion
+
+Rebranding is not just a new logo. It is a deeper update of the brand’s meaning and the way it communicates with the market. It starts with an audit and ends with a clear transition plan that protects recognition.
+
+At ZOND, rebranding begins with analysis and ends with a practical rollout strategy. We also work on brand creation for companies that are building their identity from scratch.
+` },
+  {
+    "slug": "what-is-illustration",
+    "title": "What is illustration: types, styles, and why business needs it",
     "description": "What illustration is, how it differs from drawing and photo, and why businesses use it.",
     "cover": "/assets/photography/brand-character-0.webp",
     "published": "2025-08-22",
@@ -396,7 +823,7 @@ const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-rebranding",
-    "title": "What is rebranding: types, stages, and examples | ZOND",
+    "title": "What is rebranding: types, stages, and examples",
     "description": "What rebranding is, how it differs from restyling and redesign, and when a company needs it.",
     "cover": "/assets/photography/branding-1.webp",
     "published": "2025-08-29",

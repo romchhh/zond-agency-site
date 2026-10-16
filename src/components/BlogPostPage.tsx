@@ -40,7 +40,7 @@ export default function BlogPostPage({
   const galleryImages = extractArticleImagePaths(body).map((path) => blogMediaSrc(path));
   const published = getBlogPublishDate(post.slug);
   const seo = resolvePageCopy(articlePath, {
-    title: `${post.title} — ZOND`,
+    title: post.title,
     description: post.description,
   });
 
@@ -71,7 +71,6 @@ export default function BlogPostPage({
             { label: post.title },
           ]}
           title={post.title}
-          description={post.description}
           hero={hero}
           heroAlt={post.title}
           heroUnoptimized={

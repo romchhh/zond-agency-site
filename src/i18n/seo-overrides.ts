@@ -8,6 +8,9 @@ export type SeoOverride = {
 export const seoOverrides: Record<string, SeoOverride> = {
   "/": {"title": "Брендинг-агенція ZOND: розробка бренду, айдентика, дизайн | Київ", "description": "Брендингова агенція ZOND у Києві: стратегія, неймінг, логотип, айдентика, брендбук, упаковка і SMM. Працюємо з 2021 року, стратегія до результату."},
   "/blog": {"title": "Блог про брендинг, логотипи і брендбуки | ZOND"},
+  "/en/blog/what-is-branding": {"title": "What is a brand and branding: elements and stages | ZOND", "description": "A brand is what people think about a company. Branding is the work of shaping that perception into a lasting image."},
+  "/en/blog/what-is-illustration": {"title": "What is illustration: types, styles, and why it matters to business | ZOND", "description": "Illustration is a purposeful visual image that explains a product, sets the mood, and strengthens a brand in a way stock photography usually cannot."},
+  "/en/blog/what-is-rebranding": {"title": "What is rebranding: types, stages, and examples | ZOND", "description": "Rebranding is a strategic update of a brand. It can refresh positioning, name, identity, and communication when the business has changed."},
   "/blog/brand-identity-basics": {"description": "Айдентика бренду: що це, з чого складається і як з нею працювати, щоб компанія вирізнялась серед конкурентів і запам'ятовувалась аудиторії."},
   "/blog/brandbook-for-real-estate": {"description": "Брендбук для агентства нерухомості: як відобразити стиль компанії і викликати відчуття стабільності й надійності. Особливості й приклади."},
   "/blog/brandbook-for-restaurants": {"description": "Брендбук для ресторану: не лише логотип і кольори, а стиль закладу, тон спілкування з гостями, подача страв і декор. Що в нього входить."},

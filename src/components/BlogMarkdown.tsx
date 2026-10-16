@@ -87,6 +87,17 @@ function renderBlock(block: string, index: number) {
     );
   }
 
+  const htmlBlockMatch = trimmed.match(/^<(details|table)\b/i);
+  if (htmlBlockMatch) {
+    return (
+      <div
+        key={index}
+        className={htmlBlockMatch[1].toLowerCase() === "details" ? "sp-faq" : "case-table-block"}
+        dangerouslySetInnerHTML={{ __html: trimmed }}
+      />
+    );
+  }
+
   if (/^(- |\d+\. )/m.test(trimmed)) {
     const items = trimmed.split("\n").filter(Boolean);
     const ordered = /^\d+\./.test(items[0] ?? "");

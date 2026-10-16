@@ -29,7 +29,7 @@ export async function generateMetadata({
     locale,
     getBlogDetailPath(locale, slug),
     {
-      title: `${post.title} — ZOND`,
+      title: post.title,
       description: post.description,
     },
     post.cover || undefined,
