@@ -18,6 +18,12 @@ const nextConfig = {
   async redirects() {
     return buildLegacyRedirects();
   },
+  async rewrites() {
+    return [
+      { source: "/aximod", destination: "/aximod/index.html" },
+      { source: "/aximod/", destination: "/aximod/index.html" },
+    ];
+  },
   async headers() {
     return [
       {
@@ -57,6 +63,14 @@ const nextConfig = {
             value: "public, max-age=86400, stale-while-revalidate=604800",
           },
         ],
+      },
+      {
+        source: "/aximod",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/aximod/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
     ];
   },

@@ -83,6 +83,10 @@ function withLocale(request: NextRequest, locale: Locale, rewritePath?: string) 
   );
 }
 
+function isAximodPath(pathname: string): boolean {
+  return pathname === "/aximod" || pathname.startsWith("/aximod/");
+}
+
 export function middleware(request: NextRequest) {
   const host = getRequestHostname(request.headers) ?? request.nextUrl.hostname;
   const { pathname, search } = request.nextUrl;
@@ -90,6 +94,13 @@ export function middleware(request: NextRequest) {
   // www and/or http → https://zond.agency + final path in a single hop
   if (needsCanonicalHostRedirect(request, host)) {
     return redirectToCanonical(request, pathname, search);
+  }
+
+  // Static private microsite — no locale rewrite, no search indexing.
+  if (isAximodPath(pathname)) {
+    const response = NextResponse.next();
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
   }
 
   const thanksLocale = getThanksLocale(pathname);

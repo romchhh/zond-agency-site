@@ -1,0 +1,28 @@
+/* A fixed photographic close-up. Native scroll chooses the assembly frame. */
+.hero-sequence{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;background:#080b10}
+.hero-sequence[hidden],.hero-scroll-state[hidden]{display:none}
+.hero.has-scroll-sequence{height:340svh;min-height:0;max-height:none;position:relative}
+.hero.has-scroll-sequence .hero-frame{position:sticky;top:12px;height:calc(100svh - 24px)}
+.hero.has-scroll-sequence .hero-art{inset:0;transform:none!important}
+.hero.has-scroll-sequence .hero-top{transform:none!important;opacity:1!important}
+.hero.has-scroll-sequence .hero-fallback{opacity:0}
+.hero.has-scroll-sequence .hero-shade{pointer-events:none;background:linear-gradient(90deg,#05070af0 0%,#05070aa6 37%,#05070a19 65%,transparent 85%),linear-gradient(0deg,#05070af0,transparent 28%)}
+.hero-scroll-state{position:absolute;right:calc(var(--pad) - 12px);top:116px;z-index:2;width:185px;color:#bec5ce;text-shadow:0 1px 6px #000}
+.hero-frame-number{font:10px/1.4 Oxanium,Arial,sans-serif;letter-spacing:.08em;color:var(--orange);display:block}
+.hero-frame-label{font:8px/1.6 Inter,Arial,sans-serif;letter-spacing:.13em;display:block;margin-top:4px}
+.hero-scroll-state>i{display:block;height:1px;background:#62758744;margin-top:12px}
+.hero-scroll-state b{display:block;height:1px;background:var(--orange);transform-origin:left;transform:scaleX(0)}
+@media(max-width:700px){
+ .hero.has-scroll-sequence{height:310svh}
+ .hero.has-scroll-sequence .hero-frame{top:7px;height:calc(100svh - 14px)}
+ .hero-scroll-state{right:18px;top:95px;width:132px;display:flex;align-items:center;gap:9px}
+ .hero-frame-number{font-size:8px;white-space:nowrap}
+ .hero-frame-label{font-size:6px;line-height:1.4;margin:0;letter-spacing:.08em}
+ .hero-scroll-state>i{position:absolute;left:0;right:0;top:15px;margin:0}
+ .hero.has-scroll-sequence .hero-shade{background:linear-gradient(90deg,#05070aba 0%,#05070a33 55%,transparent 88%),linear-gradient(0deg,#05070a 0%,#05070a33 27%,transparent 62%)}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero.has-scroll-sequence{height:100svh;min-height:650px}
+ .hero.has-scroll-sequence .hero-frame{position:relative;top:0;height:100%}
+ .hero-scroll-state{display:none}
+}

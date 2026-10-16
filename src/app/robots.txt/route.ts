@@ -10,6 +10,8 @@ function allowedRobots(): string {
   return `User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /aximod
+Disallow: /aximod/
 
 Sitemap: ${getCanonicalSiteUrl()}/sitemap.xml
 `;
