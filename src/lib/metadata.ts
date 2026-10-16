@@ -7,7 +7,7 @@ import {
   getLocalizedUrl,
   getServiceDetailPath,
 } from "@/i18n/routing";
-import { applySeoOverride } from "@/i18n/seo-overrides";
+import { applySeoOverride, withBrandTitle } from "@/i18n/seo-overrides";
 import { media } from "@/lib/media";
 import { getCanonicalSiteUrl, siteConfig } from "@/lib/site";
 
@@ -20,10 +20,8 @@ export function homeSeoPath(locale: Locale): string {
 }
 
 export function createNotFoundMetadata(locale: Locale, dictionary: Dictionary): Metadata {
-  const title = `${dictionary.notFound.title} | ZOND`;
-
   return {
-    title,
+    title: withBrandTitle(dictionary.notFound.title),
     robots: {
       index: false,
       follow: false,

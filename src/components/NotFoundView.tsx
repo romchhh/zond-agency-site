@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalePath } from "@/i18n/routing";
+import { withBrandTitle } from "@/i18n/seo-overrides";
 import Link from "next/link";
 
 type NotFoundViewProps = {
@@ -14,7 +15,7 @@ export default function NotFoundView({ locale, dictionary }: NotFoundViewProps) 
   const homePath = getLocalePath(locale);
   const { notFound } = dictionary;
 
-  const documentTitle = `${notFound.title} | ZOND`;
+  const documentTitle = withBrandTitle(notFound.title);
 
   return (
     <>

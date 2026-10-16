@@ -95,14 +95,21 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/ru/our-services/rebranding": {"title": "Ребрендинг компании, заказать редизайн логотипа и стиля, цена | ZOND", "description": "Обновить бренд и не потерять своих клиентов реально. Ребрендинг компании и редизайн логотипа. Аудит, позиционирование, план перехода. Кейсы ZOND, Киев."},
 };
 
+/** Append "| ZOND" once — skip if the title already mentions the brand. */
+export function withBrandTitle(title: string): string {
+  if (/\bZOND\b/i.test(title)) return title;
+  return `${title} | ZOND`;
+}
+
 export function applySeoOverride(
   pathname: string,
   meta: { title: string; description: string },
 ): { title: string; description: string } {
   const override = seoOverrides[pathname];
-  if (!override) return meta;
+  const title = override?.title ?? meta.title;
+  const description = override?.description ?? meta.description;
   return {
-    title: override.title ?? meta.title,
-    description: override.description ?? meta.description,
+    title: withBrandTitle(title),
+    description,
   };
 }
