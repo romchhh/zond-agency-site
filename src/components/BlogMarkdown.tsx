@@ -99,13 +99,41 @@ function renderBlock(block: string, index: number) {
   }
 
   if (/^(- |\d+\. )/m.test(trimmed)) {
-    const items = trimmed.split("\n").filter(Boolean);
-    const ordered = /^\d+\./.test(items[0] ?? "");
+    const lines = trimmed.split("\n").filter(Boolean);
+    const ordered = /^\d+\./.test(lines[0] ?? "");
     const ListTag = ordered ? "ol" : "ul";
+    const items: { term: string; detail: string[] }[] = [];
+
+    for (const line of lines) {
+      const itemMatch = line.match(/^(- |\d+\.\s*)(.*)$/);
+      if (itemMatch) {
+        items.push({ term: itemMatch[2], detail: [] });
+        continue;
+      }
+      if (items.length) {
+        items[items.length - 1].detail.push(line);
+      }
+    }
+
+    const isDefinitionList = items.some((item) => item.detail.length > 0);
+
     return (
-      <ListTag key={index}>
+      <ListTag key={index} className={isDefinitionList ? "case-def-list" : undefined}>
         {items.map((item, itemIndex) => (
-          <li key={itemIndex}>{renderInline(item.replace(/^(- |\d+\.\s*)/, ""))}</li>
+          <li key={itemIndex} className={item.detail.length ? "case-def-item" : undefined}>
+            {item.detail.length ? (
+              <>
+                <strong className="case-def-term">{renderInline(item.term)}</strong>
+                {item.detail.map((detail, detailIndex) => (
+                  <span key={detailIndex} className="case-def-detail">
+                    {renderInline(detail)}
+                  </span>
+                ))}
+              </>
+            ) : (
+              renderInline(item.term)
+            )}
+          </li>
         ))}
       </ListTag>
     );

@@ -25,35 +25,37 @@ The result of this work is the brand. The work itself is called branding. A busi
 
 This difference matters when setting a task. One is ordered as a finished asset. The other is assessed through audience perception over time. This is where disappointment often comes from. A logo is delivered, but recognition does not appear in the first month.
 
-Criterion
-
-Brand
-
-Branding
-
-What it is
-
-The image of a company in the customer’s mind
-
-The intentional work of creating that image
-
-Where it exists
-
-In audience perception
-
-In visuals, strategy, and written rules
-
-Who creates it
-
-The audience through experience
-
-The company together with a design studio
-
-How it is measured
-
-By recognition and willingness to pay more
-
-By the scope of work and the list of delivered files
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Brand</th>
+      <th>Branding</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What it is</td>
+      <td>The image of a company in the customer’s mind</td>
+      <td>The intentional work of creating that image</td>
+    </tr>
+    <tr>
+      <td>Where it exists</td>
+      <td>In audience perception</td>
+      <td>In visuals, strategy, and written rules</td>
+    </tr>
+    <tr>
+      <td>Who creates it</td>
+      <td>The audience through experience</td>
+      <td>The company together with a design studio</td>
+    </tr>
+    <tr>
+      <td>How it is measured</td>
+      <td>By recognition and willingness to pay more</td>
+      <td>By the scope of work and the list of delivered files</td>
+    </tr>
+  </tbody>
+</table>
 
 ### What does a brand consist of?
 
@@ -243,29 +245,32 @@ The simplest example is familiar to everyone: an instruction for a device shows 
 
 A person may say “draw a picture,” but they usually mean three different things, even though the difference is mainly in the task and the context.
 
-Criterion
-
-Illustration
-
-Drawing or photo
-
-What it is for
-
-To explain or sell a specific thing
-
-To express the author’s idea or capture a scene
-
-What it is tied to
-
-A text, product, or brand
-
-It exists on its own
-
-Who sets the task
-
-The client through a brief
-
-The artist or the circumstances of the shoot
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Illustration</th>
+      <th>Drawing or photo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What it is for</td>
+      <td>To explain or sell a specific thing</td>
+      <td>To express the author’s idea or capture a scene</td>
+    </tr>
+    <tr>
+      <td>What it is tied to</td>
+      <td>A text, product, or brand</td>
+      <td>It exists on its own</td>
+    </tr>
+    <tr>
+      <td>Who sets the task</td>
+      <td>The client through a brief</td>
+      <td>The artist or the circumstances of the shoot</td>
+    </tr>
+  </tbody>
+</table>
 
 Photos are used when the object already exists; illustration is used when there is no real photo or the visual needs to be shaped intentionally.
 
