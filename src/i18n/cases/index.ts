@@ -18,6 +18,7 @@ const casesByLocale: Record<Locale, CaseItem[]> = {
  */
 const PUBLISHED_CASE_SLUGS: readonly string[] = [
   "carbit",
+  "nove-misto",
   "packaging",
   "kyiv-tourism-department",
   "digital-residence",
