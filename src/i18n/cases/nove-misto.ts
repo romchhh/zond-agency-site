@@ -47,8 +47,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("01.jpg"), caption: "Зовнішня реклама" },
-      { src: m("02.webp"), caption: "Логотип у просторі" },
+      { src: m("01.jpg"), caption: "Білборд" },
+      { src: m("02.webp"), caption: "Вивіска на фасаді" },
     ],
   },
   {
@@ -102,8 +102,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("06.jpg"), caption: "Вивіска" },
-      { src: m("07.jpg"), caption: "Рекламні постери" },
+      { src: m("06.jpg"), caption: "Типографіка" },
+      { src: m("07.jpg"), caption: "Фірмовий бланк" },
     ],
   },
   {
@@ -126,8 +126,8 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("08.jpg"), caption: "Брендбук" },
-      { src: m("09.jpg"), caption: "Ділова документація" },
+      { src: m("08.jpg"), caption: "Навігація в просторі" },
+      { src: m("09.jpg"), caption: "Фірмова упаковка" },
     ],
   },
   {
@@ -142,16 +142,16 @@ const blocksUk: CaseVisualBlock[] = [
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("12.jpg"), caption: "Корпоративний одяг" },
-      { src: m("13.jpg"), caption: "Футболка" },
+      { src: m("12.jpg"), caption: "Брендована кепка" },
+      { src: m("13.jpg"), caption: "Корпоративна куртка" },
     ],
   },
   {
     type: "gallery",
     layout: "pair",
     images: [
-      { src: m("14.jpg"), caption: "Одяг команди" },
-      { src: m("15.jpg"), caption: "Друковані матеріали" },
+      { src: m("14.jpg"), caption: "Візитки" },
+      { src: m("15.jpg"), caption: "Рекламні постери" },
     ],
   },
   {
@@ -387,39 +387,39 @@ const blocksEn: CaseVisualBlock[] = blocksUk.map((block) => {
 });
 
 const noveMistoGalleryCaptionsRu: Record<string, string> = {
-  [m("01.jpg")]: "Наружная реклама",
-  [m("02.webp")]: "Логотип в пространстве",
+  [m("01.jpg")]: "Билборд",
+  [m("02.webp")]: "Вывеска на фасаде",
   [m("03.webp")]: "Фирменный шоппер",
   [m("04.webp")]: "Брендированная каска",
   [m("05.webp")]: "Цвета и материалы",
-  [m("06.jpg")]: "Вывеска",
-  [m("07.jpg")]: "Рекламные постеры",
-  [m("08.jpg")]: "Брендбук",
-  [m("09.jpg")]: "Деловая документация",
+  [m("06.jpg")]: "Типографика",
+  [m("07.jpg")]: "Фирменный бланк",
+  [m("08.jpg")]: "Навигация в пространстве",
+  [m("09.jpg")]: "Фирменная упаковка",
   [m("10.webp")]: "Фирменная чашка",
   [m("11.webp")]: "Фирменная бутылка",
-  [m("12.jpg")]: "Корпоративная одежда",
-  [m("13.jpg")]: "Футболка",
-  [m("14.jpg")]: "Одежда команды",
-  [m("15.jpg")]: "Печатные материалы",
+  [m("12.jpg")]: "Брендированная кепка",
+  [m("13.jpg")]: "Корпоративная куртка",
+  [m("14.jpg")]: "Визитки",
+  [m("15.jpg")]: "Рекламные постеры",
 };
 
 const noveMistoGalleryCaptionsEn: Record<string, string> = {
-  [m("01.jpg")]: "Outdoor advertising",
-  [m("02.webp")]: "Logo in space",
+  [m("01.jpg")]: "Billboard",
+  [m("02.webp")]: "Facade signage",
   [m("03.webp")]: "Branded tote bag",
   [m("04.webp")]: "Branded hard hat",
   [m("05.webp")]: "Colors and materials",
-  [m("06.jpg")]: "Signage",
-  [m("07.jpg")]: "Advertising posters",
-  [m("08.jpg")]: "Brand book",
-  [m("09.jpg")]: "Business stationery",
+  [m("06.jpg")]: "Typography",
+  [m("07.jpg")]: "Letterhead",
+  [m("08.jpg")]: "Wayfinding signage",
+  [m("09.jpg")]: "Branded packaging",
   [m("10.webp")]: "Branded mug",
   [m("11.webp")]: "Branded bottle",
-  [m("12.jpg")]: "Corporate apparel",
-  [m("13.jpg")]: "T-shirt",
-  [m("14.jpg")]: "Team apparel",
-  [m("15.jpg")]: "Print materials",
+  [m("12.jpg")]: "Branded cap",
+  [m("13.jpg")]: "Corporate jacket",
+  [m("14.jpg")]: "Business cards",
+  [m("15.jpg")]: "Advertising posters",
 };
 
 export function getNoveMistoBlocks(locale: Locale): CaseVisualBlock[] {
