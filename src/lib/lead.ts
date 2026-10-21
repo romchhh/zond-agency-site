@@ -44,3 +44,8 @@ export function getThanksLocale(pathname: string): Locale | null {
   if (pathname === "/thanks-ua") return "uk";
   return null;
 }
+
+/** UA-only lead landing — skip locale rewrite in middleware. */
+export function isLeadLandingPath(pathname: string): boolean {
+  return pathname === "/lead" || pathname.startsWith("/lead/");
+}

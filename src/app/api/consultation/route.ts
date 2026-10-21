@@ -7,11 +7,13 @@ import {
   telegramHandle,
 } from "@/lib/input-masks";
 import { isHoneypotTrap, LEAD_SOURCE_FIELDS } from "@/lib/lead";
+import { sendTelegramMessage } from "@/lib/telegram";
 
 type LeadBody = {
   name?: string;
   contact?: string;
   email?: string;
+  interest?: string;
   locale?: string;
   website?: string;
   zond_hp?: string;
@@ -89,6 +91,9 @@ function formatMessage(payload: Record<string, string>): string {
     `<b>Ім'я:</b> ${escapeHtml(payload.name)}`,
     `<b>Контакт (${escapeHtml(contactType)}):</b> ${contactMarkup(payload.contact)}`,
     emailLine,
+    isBlank(payload.interest)
+      ? null
+      : `<b>Що цікавить:</b> ${escapeHtml(payload.interest)}`,
     `<b>Мова:</b> ${escapeHtml(localeLabel(payload.locale))}`,
     `<b>Валідність:</b> ${escapeHtml(validityLine(payload))}`,
     `<b>utm_source:</b> ${escapeHtml(dash(payload.utm_source))}`,
@@ -100,7 +105,7 @@ function formatMessage(payload: Record<string, string>): string {
     isBlank(payload.page_url)
       ? `<b>page_url:</b> -`
       : `<b>page_url:</b> <a href="${escapeHtml(payload.page_url)}">${escapeHtml(payload.page_url)}</a>`,
-  ];
+  ].filter((line): line is string => Boolean(line));
 
   return lines.join("\n");
 }
@@ -142,6 +147,7 @@ export async function POST(request: Request) {
   const name = body.name?.trim() ?? "";
   const contact = body.contact?.trim() ?? "";
   const email = body.email?.trim() ?? "";
+  const interest = body.interest?.trim() ?? "";
   const locale = body.locale;
 
   if (
@@ -166,45 +172,20 @@ export async function POST(request: Request) {
     email,
     locale,
   };
+  if (interest) payload.interest = interest;
   for (const field of LEAD_SOURCE_FIELDS) {
     payload[field] = dash(body[field]);
   }
 
   const text = formatMessage(payload);
-  const telegramToken = process.env.TELEGRAM_BOT_TOKEN?.trim();
-  const telegramChat = process.env.TELEGRAM_CHAT_ID?.trim();
+  const telegram = await sendTelegramMessage({ text });
 
-  if (!telegramToken || !telegramChat) {
-    console.error("consultation: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is missing");
-    return NextResponse.json({ ok: false }, { status: 500 });
-  }
-
-  const chatId = /^-?\d+$/.test(telegramChat) ? Number(telegramChat) : telegramChat;
-
-  try {
-    const telegramResponse = await fetch(
-      `https://api.telegram.org/bot${telegramToken}/sendMessage`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text,
-          parse_mode: "HTML",
-          disable_web_page_preview: true,
-        }),
-      },
-    );
-    const telegramResult = (await telegramResponse.json()) as {
-      ok?: boolean;
-      description?: string;
-    };
-    if (!telegramResponse.ok || !telegramResult.ok) {
-      console.error("consultation: telegram send failed", telegramResult.description);
-      return NextResponse.json({ ok: false }, { status: 502 });
+  if (!telegram.ok) {
+    if (telegram.error.includes("missing")) {
+      console.error("consultation: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is missing");
+      return NextResponse.json({ ok: false }, { status: 500 });
     }
-  } catch (error) {
-    console.error("consultation: telegram request failed", error);
+    console.error("consultation: telegram send failed", telegram.error);
     return NextResponse.json({ ok: false }, { status: 502 });
   }
 

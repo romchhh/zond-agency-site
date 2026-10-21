@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 import { resolveLegacyRewrite } from "@/i18n/routing";
-import { getThanksLocale } from "@/lib/lead";
+import { getThanksLocale, isLeadLandingPath } from "@/lib/lead";
 import { resolveLegacyDestination } from "@/lib/legacy-destinations.generated";
 import {
   CANONICAL_HOST,
@@ -108,6 +108,17 @@ export function middleware(request: NextRequest) {
   if (thanksLocale) {
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set("x-locale", thanksLocale);
+    requestHeaders.set("x-pathname", pathname);
+    const response = NextResponse.next({
+      request: { headers: requestHeaders },
+    });
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
+  }
+
+  if (isLeadLandingPath(pathname)) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-locale", "uk");
     requestHeaders.set("x-pathname", pathname);
     const response = NextResponse.next({
       request: { headers: requestHeaders },

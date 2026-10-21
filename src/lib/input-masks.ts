@@ -57,7 +57,13 @@ export function isValidContact(value: string): boolean {
 
   if (isPhoneContact(trimmed)) {
     const digits = trimmed.replace(/\D/g, "");
-    return digits.length === 12 && digits.startsWith("380");
+    // UA mobile: 380 + 9 digits; operator code cannot start with 0 (blocks +380 (00)…)
+    return (
+      digits.length === 12 &&
+      digits.startsWith("380") &&
+      digits[3] !== undefined &&
+      digits[3] !== "0"
+    );
   }
 
   return TELEGRAM_HANDLE_RE.test(telegramHandle(trimmed));

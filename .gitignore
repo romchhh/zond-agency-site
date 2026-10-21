@@ -11,3 +11,5 @@ out
 *.tsbuildinfo
 :memory:.ses
 *.ses
+data/meta-leads/*
+!data/meta-leads/.gitkeep

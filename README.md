@@ -37,6 +37,10 @@ scripts/
   optimize-media.sh — оптимізація зображень у public/
 ```
 
+## Meta Lead Ads
+
+Webhook `POST/GET /api/meta/leads` передає ліди з Facebook/Instagram у той самий Telegram-чат, що й заявки з сайту. Інструкція: [docs/meta-leads.md](docs/meta-leads.md).
+
 ## Медіа
 
 Контент кейсів і блогу зберігається в `src/i18n/cases/` та `src/i18n/blog/`.
