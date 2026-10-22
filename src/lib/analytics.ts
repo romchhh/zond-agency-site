@@ -1,4 +1,5 @@
 export const GTM_ID = "GTM-MP2VQMBJ";
+export const META_PIXEL_ID = "990041854833416";
 export const RINGOSTAT_SCRIPT_SRC =
   "https://script.ringostat.com/v4/34/340f71755772b153bd3f9fef7282d78bb7db805e.js";
 
@@ -24,3 +25,19 @@ export const ringostatInlineScript = `(function(){${LIVE_HOST_GUARD}
 var pw = function() {if (typeof(ringostatAnalytics) === "undefined") {setTimeout(pw,100);} else {ringostatAnalytics.sendHit('pageview');}};
 pw();
 })();`;
+
+export const metaPixelInlineScript = `(function(){${LIVE_HOST_GUARD}
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','${META_PIXEL_ID}');
+fbq('track','PageView');
+})();`;
+
+export const metaPixelNoscriptSrc = `https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`;
+

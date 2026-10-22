@@ -1,7 +1,14 @@
 import LeadSourceTracker from "@/components/LeadSourceTracker";
+import MetaPixelPageviews from "@/components/MetaPixelPageviews";
 import RingostatPageviews from "@/components/RingostatPageviews";
 import { localeMeta, type Locale } from "@/i18n/config";
-import { GTM_ID, gtmInlineScript, ringostatInlineScript } from "@/lib/analytics";
+import {
+  GTM_ID,
+  gtmInlineScript,
+  metaPixelInlineScript,
+  metaPixelNoscriptSrc,
+  ringostatInlineScript,
+} from "@/lib/analytics";
 import { media } from "@/lib/media";
 import Script from "next/script";
 import type { ReactNode } from "react";
@@ -39,6 +46,7 @@ export default function DocumentShell({ locale, children }: DocumentShellProps) 
         />
         <link rel="preload" href={media.logo} as="image" type="image/svg+xml" />
         <script dangerouslySetInnerHTML={{ __html: gtmInlineScript }} />
+        <script dangerouslySetInnerHTML={{ __html: metaPixelInlineScript }} />
       </head>
       <body>
         <noscript>
@@ -49,8 +57,19 @@ export default function DocumentShell({ locale, children }: DocumentShellProps) 
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={metaPixelNoscriptSrc}
+            alt=""
+          />
+        </noscript>
         <script dangerouslySetInnerHTML={{ __html: ringostatInlineScript }} />
         <RingostatPageviews />
+        <MetaPixelPageviews />
         <LeadSourceTracker />
         {turnstileSiteKey ? (
           <Script
