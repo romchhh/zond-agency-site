@@ -41,3 +41,14 @@ fbq('track','PageView');
 
 export const metaPixelNoscriptSrc = `https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`;
 
+/** Browser Lead event after a confirmed consultation save (no PII in params). */
+export function trackMetaPixelLead(): void {
+  if (typeof window === "undefined") return;
+  if (!isLiveAnalyticsHost(window.location.hostname)) return;
+
+  const fbq = (window as Window & { fbq?: (...args: unknown[]) => void }).fbq;
+  if (!fbq) return;
+
+  fbq("trackSingle", META_PIXEL_ID, "Lead");
+}
+

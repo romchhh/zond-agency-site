@@ -2033,6 +2033,7 @@ a.service-card {
 
 .lead-interest .consultation-submit {
   max-width: 280px;
+  margin-inline: auto;
 }
 
 @media (max-width: 700px) {
