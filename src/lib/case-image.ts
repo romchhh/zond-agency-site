@@ -9,9 +9,18 @@ export function isCaseGif(src: string): boolean {
   return /\.gif($|\?)/i.test(src);
 }
 
-/** GIF/SVG skip the optimizer (SVG is already vector; GIF must stay animated). */
+/**
+ * Skip Next/Vercel image optimizer when:
+ * - GIF/SVG must stay as-is, or
+ * - optimizer returns 402 (OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED) for most sizes.
+ * Serving `/assets/cases/*` directly keeps case galleries visible.
+ */
 export function isCasePassthroughMedia(src: string): boolean {
-  return /\.(gif|svg)($|\?)/i.test(src);
+  return (
+    /\.(gif|svg)($|\?)/i.test(src) ||
+    src.includes("/assets/cases/") ||
+    src.startsWith("media/")
+  );
 }
 
 /** Next.js image optimizer URL for static assets under /public. */
