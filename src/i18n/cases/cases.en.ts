@@ -171,6 +171,7 @@ const cases: CaseItem[] = [
     title: packagingCopy.en.title,
     description: packagingCopy.en.description,
     cover: packagingShared.cover,
+    listCover: packagingShared.listCover,
     media: packagingShared.media,
     tagline: packagingCopy.en.tagline,
     serviceTag: packagingCopy.en.serviceTag,

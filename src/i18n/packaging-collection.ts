@@ -492,6 +492,7 @@ export const packagingCopy: Record<
 export const packagingShared = {
   slug: "packaging",
   cover: m("01.jpg"),
+  listCover: m("cover.mp4"),
   media: [] as string[],
   body: `[IMG: ${m("01.jpg")}]`,
 };
