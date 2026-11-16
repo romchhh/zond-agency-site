@@ -15,6 +15,7 @@ type CaseMetaEntry = {
 
 const CASE_META: Record<string, CaseMetaEntry> = {
   aximod: {
+    clientUrl: "https://zond.agency/aximod",
     categories: ["branding", "graphic"],
   },
   "home-hub": {
