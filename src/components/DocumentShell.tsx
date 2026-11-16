@@ -4,7 +4,6 @@ import RingostatPageviews from "@/components/RingostatPageviews";
 import { localeMeta, type Locale } from "@/i18n/config";
 import {
   GTM_ID,
-  googleAdsInlineScript,
   gtmInlineScript,
   metaPixelInlineScript,
   metaPixelNoscriptSrc,
@@ -47,7 +46,6 @@ export default function DocumentShell({ locale, children }: DocumentShellProps) 
         />
         <link rel="preload" href={media.logo} as="image" type="image/svg+xml" />
         <script dangerouslySetInnerHTML={{ __html: gtmInlineScript }} />
-        <script dangerouslySetInnerHTML={{ __html: googleAdsInlineScript }} />
         <script dangerouslySetInnerHTML={{ __html: metaPixelInlineScript }} />
       </head>
       <body>

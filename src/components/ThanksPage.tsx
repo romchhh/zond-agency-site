@@ -1,6 +1,5 @@
 import ConsultationProvider from "@/components/ConsultationProvider";
 import Footer from "@/components/Footer";
-import GoogleAdsConversion from "@/components/GoogleAdsConversion";
 import Header from "@/components/Header";
 import { thanksCopy } from "@/i18n/thanks";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -32,7 +31,6 @@ export default async function ThanksPage({ locale }: { locale: Locale }) {
 
   return (
     <ConsultationProvider locale={locale} dictionary={dictionary}>
-      <GoogleAdsConversion />
       <Header locale={locale} dictionary={dictionary} hideLanguageSwitcher />
       <main className="thanks-page">
         <div className="wrap thanks-wrap">
