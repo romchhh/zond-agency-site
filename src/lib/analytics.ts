@@ -1,4 +1,10 @@
 export const GTM_ID = "GTM-MP2VQMBJ";
+/** Google tag shared from Google Ads (zond.des@gmail.com). */
+export const GOOGLE_TAG_ID = "GTM-5KCW4RHH";
+/** Google Ads conversion account. */
+export const GOOGLE_ADS_ID = "AW-18539496369";
+/** Lead form thank-you conversion: «Надсилання форми для лідів». */
+export const GOOGLE_ADS_LEAD_SEND_TO = "AW-18539496369/wcm7CMbJ_rYdELGHqYhF";
 export const META_PIXEL_ID = "990041854833416";
 export const RINGOSTAT_SCRIPT_SRC =
   "https://script.ringostat.com/v4/34/340f71755772b153bd3f9fef7282d78bb7db805e.js";
@@ -16,6 +22,20 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${GTM_ID}');
+})();`;
+
+/** gtag.js base tag + Google Ads config on every page. */
+export const googleAdsInlineScript = `(function(){${LIVE_HOST_GUARD}
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+window.gtag=gtag;
+gtag('js',new Date());
+gtag('config','${GOOGLE_TAG_ID}');
+gtag('config','${GOOGLE_ADS_ID}');
+var s=document.createElement('script');
+s.async=true;
+s.src='https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}';
+document.head.appendChild(s);
 })();`;
 
 export const ringostatInlineScript = `(function(){${LIVE_HOST_GUARD}
@@ -50,5 +70,25 @@ export function trackMetaPixelLead(): void {
   if (!fbq) return;
 
   fbq("trackSingle", META_PIXEL_ID, "Lead");
+}
+
+const ADS_LEAD_CONV_KEY = "zond_ads_lead_conv";
+
+/** Google Ads lead conversion — once per session (submit and/or /thanks-*). */
+export function trackGoogleAdsLeadConversion(): void {
+  if (typeof window === "undefined") return;
+  if (!isLiveAnalyticsHost(window.location.hostname)) return;
+
+  try {
+    if (window.sessionStorage.getItem(ADS_LEAD_CONV_KEY)) return;
+    window.sessionStorage.setItem(ADS_LEAD_CONV_KEY, "1");
+  } catch {
+    // private mode / blocked storage — still try to send
+  }
+
+  const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+  if (!gtag) return;
+
+  gtag("event", "conversion", { send_to: GOOGLE_ADS_LEAD_SEND_TO });
 }
 
