@@ -52,6 +52,15 @@ const uk: ServicePageContent = {
       "title": "Мерч, офіс, транспорт і digital"
     }
   ],
+  "exhibition": {
+    "title": "Графічний дизайн для підготовки до виставки",
+    "items": [
+      { "index": "01", "title": "Брошури й каталоги", "description": "Каталог продукції та брошура про компанію, які відвідувач стенду забирає з собою." },
+      { "index": "02", "title": "Візитки", "description": "Візитки для кожного, хто працює на стенді, в одному стилі з рештою матеріалів." },
+      { "index": "03", "title": "Плакати й банери", "description": "Плакати й банери для стенду, які видно з проходу виставки." },
+      { "index": "04", "title": "Сувенірна продукція", "description": "Макети для пакетів, блокнотів, ручок і мерчу з логотипом, щоб компанію пам'ятали після виставки." },
+    ],
+  },
   "includesTitle": "Що входить у послуги графічного дизайну",
   "includes": [
     "Дизайн поліграфії",
@@ -336,6 +345,15 @@ const en: ServicePageContent = {
     { index: "03", title: "Presentations and business documents" },
     { index: "04", title: "Merch, office, transport, and digital" },
   ],
+  exhibition: {
+    title: "Graphic design for trade show preparation",
+    items: [
+      { index: "01", title: "Brochures and catalogs", description: "A product catalog and company brochure that stand visitors take with them." },
+      { index: "02", title: "Business cards", description: "Business cards for everyone working at the stand, in the same style as the other materials." },
+      { index: "03", title: "Posters and banners", description: "Posters and banners for the stand that can be seen from the exhibition aisle." },
+      { index: "04", title: "Promotional merchandise", description: "Designs for bags, notebooks, pens and merch with your logo, so people remember the company after the show." },
+    ],
+  },
   includesTitle: "What graphic design service includes",
   includes: [
     "Print design: catalogs, booklets, flyers, letterheads",
@@ -504,6 +522,15 @@ const ru: ServicePageContent = {
       "title": "Мерч, офис, транспорт и digital"
     }
   ],
+  "exhibition": {
+    "title": "Графический дизайн для подготовки к выставке",
+    "items": [
+      { "index": "01", "title": "Брошюры и каталоги", "description": "Каталог продукции и брошюра о компании, которые посетитель стенда забирает с собой." },
+      { "index": "02", "title": "Визитки", "description": "Визитки для каждого, кто работает на стенде, в одном стиле с остальными материалами." },
+      { "index": "03", "title": "Плакаты и баннеры", "description": "Плакаты и баннеры для стенда, которые видно из прохода выставки." },
+      { "index": "04", "title": "Сувенирная продукция", "description": "Макеты для пакетов, блокнотов, ручек и мерча с логотипом, чтобы компанию помнили после выставки." },
+    ],
+  },
   "includesTitle": "Что входит в услуги графического дизайна",
   "includes": [
     "Дизайн полиграфии",

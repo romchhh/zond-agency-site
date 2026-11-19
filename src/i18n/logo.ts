@@ -23,6 +23,11 @@ export type ServicePageContent = {
   stats: StatItem[];
   audienceTitle: string;
   audienceItems: Array<{ index: string; title: string; description?: string }>;
+  /** Trade show preparation block, same layout as the audience block (optional). */
+  exhibition?: {
+    title: string;
+    items: Array<{ index: string; title: string; description?: string }>;
+  };
   /** Dark feature strip from service page prototypes (optional). */
   featureStrip?: {
     eyebrow: string;

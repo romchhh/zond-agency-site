@@ -91,6 +91,29 @@ function ServiceAudienceSection({ copy, isPrototypeLayout }: ServiceSectionProps
   );
 }
 
+function ServiceExhibitionSection({ copy }: { copy: ServicePageContent }) {
+  if (!copy.exhibition) return null;
+
+  return (
+    <section className="sp-section" id="service-exhibition">
+      <div className="wrap">
+        <div className="sp-section-head">
+          <h2 className="sp-h2">{copy.exhibition.title}</h2>
+        </div>
+        <div className="sp-needs">
+          {copy.exhibition.items.map((item) => (
+            <article className="sp-need" key={item.index}>
+              <div className="sp-need-no">{item.index}</div>
+              <h3>{item.title}</h3>
+              {item.description ? <p>{item.description}</p> : null}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ServiceFeatureSection({ copy }: { copy: ServicePageContent }) {
   if (!copy.featureStrip) return null;
 
@@ -414,6 +437,7 @@ export default function ServiceLandingPage({
                 <ServiceAudienceSection copy={copy} isPrototypeLayout={isPrototypeLayout} />
                 <ServiceFeatureSection copy={copy} />
                 <ServiceIncludesSection copy={copy} isPrototypeLayout={isPrototypeLayout} />
+                <ServiceExhibitionSection copy={copy} />
               </>
             )}
 
