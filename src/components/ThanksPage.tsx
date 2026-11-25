@@ -1,7 +1,7 @@
 import ConsultationProvider from "@/components/ConsultationProvider";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { thanksCopy } from "@/i18n/thanks";
+import { getThanksCopy } from "@/i18n/thanks";
 import { getDictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalePath } from "@/i18n/routing";
@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export function createThanksMetadata(locale: Locale): Metadata {
-  const copy = thanksCopy[locale];
+  const copy = getThanksCopy(locale);
   return {
     title: copy.metaTitle,
     description: copy.description,
@@ -27,7 +27,7 @@ export function createThanksMetadata(locale: Locale): Metadata {
 
 export default async function ThanksPage({ locale }: { locale: Locale }) {
   const dictionary = await getDictionary(locale);
-  const copy = thanksCopy[locale];
+  const copy = getThanksCopy(locale);
 
   return (
     <ConsultationProvider locale={locale} dictionary={dictionary}>

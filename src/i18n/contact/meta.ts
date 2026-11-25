@@ -1,3 +1,4 @@
+import { cmsLocaleContent } from "@/cms/resolve";
 import type { Locale } from "@/i18n/config";
 
 export const contactPageMeta: Record<Locale, { title: string; description: string }> = {
@@ -17,3 +18,7 @@ export const contactPageMeta: Record<Locale, { title: string; description: strin
       "Свяжитесь с брендинговым агентством ZOND: email, телефон, Telegram и соцсети. Обсудим ваш проект.",
   },
 };
+
+export function getContactPageMeta(locale: Locale) {
+  return cmsLocaleContent("contact/meta", contactPageMeta, locale);
+}

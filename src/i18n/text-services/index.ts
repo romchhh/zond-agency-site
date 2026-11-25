@@ -1,3 +1,4 @@
+import { readCmsDocSync } from "@/cms/store";
 import type { BrandingSeoContent } from "@/i18n/branding-seo";
 import { locales, type Locale } from "@/i18n/config";
 import type { ServicePageContent } from "@/i18n/logo";
@@ -30,8 +31,12 @@ export const textServices: Record<string, TextServiceContent> = {
   infographics,
 };
 
+export function getTextService(slug: string): TextServiceContent | undefined {
+  return readCmsDocSync<TextServiceContent>(`text-services/${slug}`) ?? textServices[slug];
+}
+
 export function hasServiceLocale(slug: string, locale: Locale): boolean {
-  const service = textServices[slug];
+  const service = getTextService(slug) ?? textServices[slug];
   return !service || Boolean(service.page[locale]);
 }
 

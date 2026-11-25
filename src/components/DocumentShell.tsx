@@ -1,5 +1,6 @@
 import LeadSourceTracker from "@/components/LeadSourceTracker";
 import MetaPixelPageviews from "@/components/MetaPixelPageviews";
+import PageviewBeacon from "@/components/PageviewBeacon";
 import RingostatPageviews from "@/components/RingostatPageviews";
 import { localeMeta, type Locale } from "@/i18n/config";
 import {
@@ -70,6 +71,7 @@ export default function DocumentShell({ locale, children }: DocumentShellProps) 
         <script dangerouslySetInnerHTML={{ __html: ringostatInlineScript }} />
         <RingostatPageviews />
         <MetaPixelPageviews />
+        <PageviewBeacon />
         <LeadSourceTracker />
         {turnstileSiteKey ? (
           <Script

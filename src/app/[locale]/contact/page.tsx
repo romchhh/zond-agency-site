@@ -1,6 +1,6 @@
 import ContactPage from "@/components/ContactPage";
 import PageJsonLd from "@/components/PageJsonLd";
-import { contactPageMeta } from "@/i18n/contact/meta";
+import { getContactPageMeta } from "@/i18n/contact/meta";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getLocalePath } from "@/i18n/routing";
@@ -20,7 +20,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
 
-  return createPathMetadata(locale, "/contact", contactPageMeta[locale]);
+  return createPathMetadata(locale, "/contact", getContactPageMeta(locale));
 }
 
 export default async function ContactRoute({
@@ -33,7 +33,7 @@ export default async function ContactRoute({
 
   const dictionary = await getDictionary(locale);
   const contactPath = getLocalePath(locale, "/contact");
-  const seo = resolvePageCopy(contactPath, contactPageMeta[locale]);
+  const seo = resolvePageCopy(contactPath, getContactPageMeta(locale));
 
   return (
     <>

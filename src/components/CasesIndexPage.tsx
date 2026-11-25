@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import PageBreadcrumbs from "@/components/PageBreadcrumbs";
 import PageJsonLd from "@/components/PageJsonLd";
 import type { CaseItem } from "@/i18n/cases";
-import { casesIndexMeta } from "@/i18n/cases/meta";
+import { getCasesIndexMeta } from "@/i18n/cases/meta";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getCaseIndexPath } from "@/i18n/routing";
@@ -24,7 +24,7 @@ export default function CasesIndexPage({
 }: CasesIndexPageProps) {
   const copy = dictionary.cases;
   const casesPath = getCaseIndexPath(locale);
-  const seo = resolvePageCopy(casesPath, casesIndexMeta[locale]);
+  const seo = resolvePageCopy(casesPath, getCasesIndexMeta(locale));
 
   return (
     <>

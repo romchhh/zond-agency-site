@@ -20,12 +20,13 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { getServiceProjects } from "@/i18n/projects";
 import { getWebDevelopmentProjects } from "@/i18n/web-development";
 import {
+  getServiceMeta,
   isServiceSlug,
-  serviceMeta,
   serviceSlugs,
 } from "@/i18n/services";
 import {
   hasServiceLocale,
+  getTextService,
   textServices,
   withServiceLanguages,
 } from "@/i18n/text-services";
@@ -52,9 +53,9 @@ export async function generateMetadata({
 
   if (!hasServiceLocale(slug, locale)) return {};
 
-  const metadata = createServiceMetadata(locale, slug, serviceMeta[locale][slug]);
+  const metadata = createServiceMetadata(locale, slug, getServiceMeta(locale, slug));
   const languages = metadata.alternates?.languages as Record<string, string> | undefined;
-  if (languages && textServices[slug]) {
+  if (languages && (getTextService(slug) || textServices[slug])) {
     metadata.alternates = { ...metadata.alternates, languages: withServiceLanguages(languages, slug) };
   }
 
@@ -72,7 +73,7 @@ export default async function ServicePage({
   const dictionary = await getDictionary(locale);
   const projects = getServiceProjects(locale, slug);
 
-  const textService = textServices[slug];
+  const textService = getTextService(slug);
   if (textService) {
     const copy = textService.page[locale];
     const seo = textService.seo[locale];

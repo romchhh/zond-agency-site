@@ -1,10 +1,11 @@
 import { locales, type Locale } from "@/i18n/config";
+import { readCmsDocSync } from "@/cms/store";
 import type { BlogPost } from "./types";
 import postsEn from "./posts.en";
 import postsRu from "./posts.ru";
 import postsUk from "./posts.uk";
 
-const postsByLocale: Record<Locale, BlogPost[]> = {
+const postsByLocaleFallback: Record<Locale, BlogPost[]> = {
   uk: postsUk,
   ru: postsRu,
   en: postsEn,
@@ -13,7 +14,10 @@ const postsByLocale: Record<Locale, BlogPost[]> = {
 export type { BlogPost } from "./types";
 
 export function getBlogPosts(locale: Locale): BlogPost[] {
-  return postsByLocale[locale];
+  return (
+    readCmsDocSync<BlogPost[]>(`blog/posts/${locale}`) ??
+    postsByLocaleFallback[locale]
+  );
 }
 
 export function getBlogPost(locale: Locale, slug: string): BlogPost | undefined {

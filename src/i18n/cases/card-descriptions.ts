@@ -1,3 +1,4 @@
+import { readCmsDocSync } from "@/cms/store";
 import type { Locale } from "@/i18n/config";
 
 /** Short niche label shown under case titles on cards (homepage, services). */
@@ -128,5 +129,6 @@ export const caseCardDescriptions: Record<Locale, Record<string, string>> = {
 };
 
 export function getCaseCardDescription(locale: Locale, slug: string): string | undefined {
-  return caseCardDescriptions[locale][slug];
+  const fromCms = readCmsDocSync<Record<Locale, Record<string, string>>>("cases/card-descriptions");
+  return (fromCms ?? caseCardDescriptions)[locale]?.[slug];
 }

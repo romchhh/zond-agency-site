@@ -1,8 +1,9 @@
+import { readCmsDocSync } from "@/cms/store";
 import type { Locale } from "@/i18n/config";
 
 type HeroCaptions = Record<string, Partial<Record<Locale, string>>>;
 
-const HERO_CAPTIONS: HeroCaptions = {
+export const caseHeroCaptions: HeroCaptions = {
   flups: {
     uk: "FLUPS — для маленьких босів",
     ru: "FLUPS — для маленьких боссов",
@@ -85,5 +86,6 @@ export function getCaseHeroCaption(
   locale: Locale,
   fallbackTitle: string,
 ): string {
-  return HERO_CAPTIONS[slug]?.[locale] ?? fallbackTitle;
+  const fromCms = readCmsDocSync<HeroCaptions>("cases/hero-captions");
+  return (fromCms ?? caseHeroCaptions)[slug]?.[locale] ?? fallbackTitle;
 }

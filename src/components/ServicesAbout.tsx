@@ -1,12 +1,12 @@
 import type { Locale } from "@/i18n/config";
-import { servicesAbout } from "@/i18n/services-about";
+import { getServicesAbout } from "@/i18n/services-about";
 
 type ServicesAboutProps = {
   locale: Locale;
 };
 
 export default function ServicesAbout({ locale }: ServicesAboutProps) {
-  const copy = servicesAbout[locale];
+  const copy = getServicesAbout(locale);
 
   return (
     <div className="services-about">

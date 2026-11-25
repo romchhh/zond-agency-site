@@ -1,3 +1,4 @@
+import { readCmsDocSync } from "@/cms/store";
 import type { Locale } from "@/i18n/config";
 import { CASE_SERVICE_TAGS, CASE_TESTIMONIALS } from "./case-meta.locale";
 
@@ -13,7 +14,7 @@ type CaseMetaEntry = {
   categories: Array<"branding" | "packaging" | "smm" | "strategy" | "web" | "graphic">;
 };
 
-const CASE_META: Record<string, CaseMetaEntry> = {
+export const caseMetaEntries: Record<string, CaseMetaEntry> = {
   aximod: {
     clientUrl: "https://zond.agency/aximod",
     categories: ["branding", "graphic"],
@@ -83,8 +84,14 @@ const CASE_META: Record<string, CaseMetaEntry> = {
   },
 };
 
+function resolvedCaseMeta() {
+  return (
+    readCmsDocSync<Record<string, CaseMetaEntry>>("cases/case-meta") ?? caseMetaEntries
+  );
+}
+
 export function getCaseClientUrl(slug: string): string | undefined {
-  return CASE_META[slug]?.clientUrl;
+  return resolvedCaseMeta()[slug]?.clientUrl;
 }
 
 export function getCaseServiceTag(slug: string, locale: Locale): string | undefined {
@@ -92,7 +99,7 @@ export function getCaseServiceTag(slug: string, locale: Locale): string | undefi
 }
 
 export function getCaseMetaCategories(slug: string) {
-  return CASE_META[slug]?.categories;
+  return resolvedCaseMeta()[slug]?.categories;
 }
 
 export function getCaseTestimonial(

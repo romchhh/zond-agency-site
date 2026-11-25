@@ -1,6 +1,7 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { webDevelopmentPage } from "@/i18n/web-development";
 import { getWebDevelopmentSeo } from "@/i18n/web-development-seo";
 
@@ -20,9 +21,9 @@ export default function WebDevelopmentPage({
       locale={locale}
       dictionary={dictionary}
       projects={projects}
-      copy={webDevelopmentPage[locale]}
+      copy={getServicePageContent("web-development", webDevelopmentPage, locale)}
       serviceSlug="web-development"
-      seo={getWebDevelopmentSeo(locale)}
+      seo={getServiceSeoContent("web-development", getWebDevelopmentSeo, locale)}
       heroImage="/assets/photography/web-development-0.webp"
     />
   );

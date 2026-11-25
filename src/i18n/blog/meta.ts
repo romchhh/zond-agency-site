@@ -1,3 +1,4 @@
+import { cmsLocaleContent } from "@/cms/resolve";
 import type { Locale } from "@/i18n/config";
 
 export const blogIndexMeta: Record<Locale, { title: string; description: string }> = {
@@ -17,3 +18,7 @@ export const blogIndexMeta: Record<Locale, { title: string; description: string 
       "Статьи о брендинге, логотипах, брендбуках, дизайне упаковки и маркетинге от агентства ZOND.",
   },
 };
+
+export function getBlogIndexMeta(locale: Locale) {
+  return cmsLocaleContent("blog/meta", blogIndexMeta, locale);
+}

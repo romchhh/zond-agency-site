@@ -1,4 +1,6 @@
 import type { Locale } from "@/i18n/config";
+import { PUBLISHED_CASE_SLUGS_FOR_CMS } from "@/cms/case-slugs";
+import { readCmsDocSync } from "@/cms/store";
 import type { CaseItem } from "./types";
 import { getCaseCardDescription } from "./card-descriptions";
 import casesEn from "./cases.en";
@@ -6,46 +8,34 @@ import casesRu from "./cases.ru";
 import casesUk from "./cases.uk";
 import { mergeCaseCatalog } from "./merge-catalog";
 
-const casesByLocale: Record<Locale, CaseItem[]> = {
+const casesByLocaleFallback: Record<Locale, CaseItem[]> = {
   uk: casesUk,
   ru: casesRu,
   en: mergeCaseCatalog("en", casesUk, casesEn),
 };
 
-/**
- * Published on site (listings, homepage, /projects routes). All other slugs stay in
- * locale catalogs but are not rendered until added here.
- */
-const PUBLISHED_CASE_SLUGS: readonly string[] = [
-  "aximod",
-  "home-hub",
-  "packaging",
-  "digital-residence",
-  "kyiv-tourism-department",
-  "carbit",
-  "nove-misto",
-  "flups",
-  "goshchanochka",
-  "kavlora",
-  "ahmad-tea",
-  "bit-school",
-  "terminal-borivaje",
-  "tbiliso",
-  "altep",
-  "techno-group",
-  "akula-mama",
-  "yakomoga",
-  "novo-development",
-];
+function casesByLocale(locale: Locale): CaseItem[] {
+  return (
+    readCmsDocSync<CaseItem[]>(`cases/catalog/${locale}`) ??
+    casesByLocaleFallback[locale]
+  );
+}
 
-const publishedSlugOrder = new Map(
-  PUBLISHED_CASE_SLUGS.map((slug, index) => [slug, index]),
-);
+/**
+ * Published on site (listings, homepage, /projects routes).
+ * CMS `cases/published` overrides the built-in list after seed/create.
+ */
+function getPublishedSlugOrder(): Map<string, number> {
+  const fromCms = readCmsDocSync<string[]>("cases/published");
+  const list = fromCms?.length ? fromCms : [...PUBLISHED_CASE_SLUGS_FOR_CMS];
+  return new Map(list.map((slug, index) => [slug, index]));
+}
 
 export type { CaseItem } from "./types";
 
 export function getCases(locale: Locale): CaseItem[] {
-  return casesByLocale[locale]
+  const publishedSlugOrder = getPublishedSlugOrder();
+  return casesByLocale(locale)
     .filter((item) => publishedSlugOrder.has(item.slug))
     .sort(
       (a, b) =>

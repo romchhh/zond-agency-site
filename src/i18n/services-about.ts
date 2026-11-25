@@ -1,3 +1,4 @@
+import { cmsLocaleContent } from "@/cms/resolve";
 import type { Locale } from "@/i18n/config";
 
 export type ServicesAboutContent = {
@@ -183,3 +184,7 @@ export const servicesAbout: Record<Locale, ServicesAboutContent> = {
     ],
   },
 };
+
+export function getServicesAbout(locale: Locale): ServicesAboutContent {
+  return cmsLocaleContent("services/about", servicesAbout, locale);
+}

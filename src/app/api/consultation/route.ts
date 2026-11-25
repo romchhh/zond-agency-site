@@ -7,6 +7,7 @@ import {
   telegramHandle,
 } from "@/lib/input-masks";
 import { isHoneypotTrap, LEAD_SOURCE_FIELDS } from "@/lib/lead";
+import { writeSiteLead } from "@/lib/leads/store";
 import { sendTelegramMessage } from "@/lib/telegram";
 
 type LeadBody = {
@@ -187,6 +188,26 @@ export async function POST(request: Request) {
     }
     console.error("consultation: telegram send failed", telegram.error);
     return NextResponse.json({ ok: false }, { status: 502 });
+  }
+
+  try {
+    await writeSiteLead({
+      name,
+      contact,
+      email,
+      interest: interest || undefined,
+      locale,
+      utm_source: payload.utm_source,
+      utm_medium: payload.utm_medium,
+      utm_campaign: payload.utm_campaign,
+      utm_term: payload.utm_term,
+      utm_content: payload.utm_content,
+      gclid: payload.gclid,
+      page_url: payload.page_url,
+      telegramMessageId: telegram.messageId,
+    });
+  } catch (error) {
+    console.error("consultation: failed to persist lead", error);
   }
 
   return NextResponse.json({ ok: true });

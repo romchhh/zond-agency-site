@@ -1,6 +1,7 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { brandCharacterPage } from "@/i18n/brand-character";
 import { getBrandCharacterSeo } from "@/i18n/brand-character-seo";
 
@@ -20,9 +21,9 @@ export default function BrandCharacterPage({
       locale={locale}
       dictionary={dictionary}
       projects={projects}
-      copy={brandCharacterPage[locale]}
+      copy={getServicePageContent("brand-character", brandCharacterPage, locale)}
       serviceSlug="brand-character"
-      seo={getBrandCharacterSeo(locale)}
+      seo={getServiceSeoContent("brand-character", getBrandCharacterSeo, locale)}
       heroImage="/assets/photography/brand-character-3.webp"
     />
   );

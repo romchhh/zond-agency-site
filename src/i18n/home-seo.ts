@@ -1,3 +1,4 @@
+import { readCmsDocSync } from "@/cms/store";
 import type { Locale } from "@/i18n/config";
 
 export type HomeSeoBlock =
@@ -227,5 +228,7 @@ export const homeSeoContent: Record<Locale, HomeSeoBlock[]> = {
 };
 
 export function getHomeSeoContent(locale: Locale): HomeSeoBlock[] {
+  const fromCms = readCmsDocSync<Record<Locale, HomeSeoBlock[]>>("home-seo");
+  if (fromCms?.[locale]) return fromCms[locale];
   return homeSeoContent[locale];
 }

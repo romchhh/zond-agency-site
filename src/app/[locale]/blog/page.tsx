@@ -1,6 +1,6 @@
 import BlogIndexPage from "@/components/BlogIndexPage";
 import { getBlogPosts } from "@/i18n/blog";
-import { blogIndexMeta } from "@/i18n/blog/meta";
+import { getBlogIndexMeta } from "@/i18n/blog/meta";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getBlogIndexPath } from "@/i18n/routing";
@@ -19,7 +19,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
 
-  return createPathMetadata(locale, getBlogIndexPath(locale), blogIndexMeta[locale]);
+  return createPathMetadata(locale, getBlogIndexPath(locale), getBlogIndexMeta(locale));
 }
 
 export default async function BlogPage({

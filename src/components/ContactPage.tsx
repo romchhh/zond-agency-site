@@ -11,10 +11,35 @@ type ContactPageProps = {
   dictionary: Dictionary;
 };
 
+function TelegramIcon() {
+  return (
+    <svg
+      className="contact-telegram-icon"
+      viewBox="0 0 24 24"
+      width="28"
+      height="28"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        fill="currentColor"
+        d="M21.8 4.2c.3-.9-.5-1.6-1.3-1.3L2.9 9.3c-.9.3-.9 1.6.1 1.9l4.5 1.5 1.7 5.3c.2.7 1.1.9 1.6.4l2.5-2.5 4.6 3.4c.7.5 1.7.1 1.9-.7l2.9-14.4ZM9.3 13.3l-.2 2.9-.9-2.9 9.7-6.1-8.6 6.1Z"
+      />
+    </svg>
+  );
+}
+
 export default function ContactPage({ locale, dictionary }: ContactPageProps) {
   const copy = dictionary.contactPage;
 
-  const channels = [
+  const channels: Array<{
+    key: string;
+    label: string;
+    value: string;
+    href: string;
+    external: boolean;
+    description?: string;
+  }> = [
     {
       key: "email",
       label: copy.emailLabel,
@@ -35,7 +60,6 @@ export default function ContactPage({ locale, dictionary }: ContactPageProps) {
       value: copy.telegramValue,
       href: siteConfig.telegramBot,
       external: true,
-      description: copy.telegramDescription,
     },
     {
       key: "instagram",
@@ -69,24 +93,38 @@ export default function ContactPage({ locale, dictionary }: ContactPageProps) {
             </div>
 
             <div className="contact-grid">
-              {channels.map((channel) => (
-                <a
-                  key={channel.key}
-                  className="contact-card"
-                  href={channel.href}
-                  target={channel.external ? "_blank" : undefined}
-                  rel={channel.external ? "noreferrer" : undefined}
-                >
-                  <span className="contact-card-top">
-                    <span className="contact-card-label">{channel.label}</span>
-                    <span className="contact-card-arrow" aria-hidden="true">↗</span>
-                  </span>
-                  <span className="contact-card-value">{channel.value}</span>
-                  {channel.description ? (
-                    <span className="contact-card-note">{channel.description}</span>
-                  ) : null}
-                </a>
-              ))}
+              {channels.map((channel) => {
+                const isTelegram = channel.key === "telegram";
+                return (
+                  <a
+                    key={channel.key}
+                    className={`contact-card${isTelegram ? " contact-card--telegram" : ""}`}
+                    href={channel.href}
+                    target={channel.external ? "_blank" : undefined}
+                    rel={channel.external ? "noreferrer" : undefined}
+                  >
+                    {isTelegram ? (
+                      <span className="contact-telegram-row">
+                        <TelegramIcon />
+                        <span className="contact-card-value">{channel.value}</span>
+                      </span>
+                    ) : (
+                      <>
+                        <span className="contact-card-top">
+                          <span className="contact-card-label">{channel.label}</span>
+                          <span className="contact-card-arrow" aria-hidden="true">
+                            ↗
+                          </span>
+                        </span>
+                        <span className="contact-card-value">{channel.value}</span>
+                        {channel.description ? (
+                          <span className="contact-card-note">{channel.description}</span>
+                        ) : null}
+                      </>
+                    )}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </section>

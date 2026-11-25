@@ -1,8 +1,9 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { identityPage } from "@/i18n/identity";
-import { getIdentitySeo } from "@/i18n/identity-seo";
+import { identitySeo } from "@/i18n/identity-seo";
 
 type IdentityPageProps = {
   locale: Locale;
@@ -20,9 +21,9 @@ export default function IdentityPage({
       locale={locale}
       dictionary={dictionary}
       projects={projects}
-      copy={identityPage[locale]}
+      copy={getServicePageContent("identity", identityPage, locale)}
       serviceSlug="identity"
-      seo={getIdentitySeo(locale)}
+      seo={getServiceSeoContent("identity", identitySeo, locale)}
       heroImage="/assets/photography/identity-3.webp"
     />
   );

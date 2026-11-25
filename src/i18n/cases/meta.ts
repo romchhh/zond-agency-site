@@ -1,3 +1,4 @@
+import { cmsLocaleContent } from "@/cms/resolve";
 import type { Locale } from "@/i18n/config";
 
 export const casesIndexMeta: Record<Locale, { title: string; description: string }> = {
@@ -17,3 +18,7 @@ export const casesIndexMeta: Record<Locale, { title: string; description: string
       "Кейсы и реализованные проекты дизайн-студии ZOND: брендинг, айдентика, упаковка, SMM и digital.",
   },
 };
+
+export function getCasesIndexMeta(locale: Locale) {
+  return cmsLocaleContent("cases/meta", casesIndexMeta, locale);
+}

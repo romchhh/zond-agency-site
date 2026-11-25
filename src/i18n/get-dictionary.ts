@@ -1,5 +1,6 @@
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
+import { readCmsDocSync } from "@/cms/store";
 
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   uk: () => import("@/i18n/dictionaries/uk").then((module) => module.default),
@@ -8,5 +9,7 @@ const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
 };
 
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
+  const fromCms = readCmsDocSync<Dictionary>(`dictionary/${locale}`);
+  if (fromCms) return fromCms;
   return dictionaries[locale]();
 }

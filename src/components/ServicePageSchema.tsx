@@ -1,7 +1,7 @@
 import PageJsonLd from "@/components/PageJsonLd";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
-import { serviceMeta, type ServiceSlug } from "@/i18n/services";
+import { getServiceMeta, type ServiceSlug } from "@/i18n/services";
 import { getServiceMenuTitle } from "@/i18n/services-index";
 import { getServiceDetailPath, getServiceIndexPath } from "@/i18n/routing";
 import { resolvePageCopy } from "@/lib/json-ld";
@@ -20,7 +20,7 @@ export default function ServicePageSchema({
   const pathname = getServiceDetailPath(locale, slug);
   const servicesPath = getServiceIndexPath(locale);
   const menuTitle = getServiceMenuTitle(locale, slug);
-  const meta = resolvePageCopy(pathname, serviceMeta[locale][slug]);
+  const meta = resolvePageCopy(pathname, getServiceMeta(locale, slug));
 
   return (
     <PageJsonLd

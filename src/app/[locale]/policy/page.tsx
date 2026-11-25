@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { policyContent } from "@/i18n/policy";
+import { getPolicyContent } from "@/i18n/policy";
 import PageJsonLd from "@/components/PageJsonLd";
 import { getPolicyPath } from "@/i18n/routing";
 import { createPathMetadata } from "@/lib/metadata";
@@ -21,7 +21,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
 
-  const content = policyContent[locale];
+  const content = getPolicyContent(locale);
 
   return createPathMetadata(locale, getPolicyPath(locale), {
     title: `${content.title} — ZOND`,
@@ -38,7 +38,7 @@ export default async function PolicyPage({
   if (!isLocale(locale)) notFound();
 
   const dictionary = await getDictionary(locale);
-  const content = policyContent[locale];
+  const content = getPolicyContent(locale);
   const policyPath = getPolicyPath(locale);
   const seo = resolvePageCopy(policyPath, {
     title: `${content.title} — ZOND`,

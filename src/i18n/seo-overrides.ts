@@ -1,5 +1,7 @@
 /** Ready meta titles and descriptions from the Мета-теги sheet. Visible page copy stays unchanged. */
 
+import { readCmsDocSync } from "@/cms/store";
+
 export type SeoOverride = {
   title?: string;
   description?: string;
@@ -122,11 +124,15 @@ export function withBrandTitle(title: string): string {
   return `${title} | ZOND`;
 }
 
+export function getSeoOverrides(): Record<string, SeoOverride> {
+  return readCmsDocSync<Record<string, SeoOverride>>("seo-overrides") ?? seoOverrides;
+}
+
 export function applySeoOverride(
   pathname: string,
   meta: { title: string; description: string },
 ): { title: string; description: string } {
-  const override = seoOverrides[pathname];
+  const override = getSeoOverrides()[pathname];
   const title = override?.title ?? meta.title;
   const description = override?.description ?? meta.description;
   return {

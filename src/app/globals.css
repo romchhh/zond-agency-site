@@ -5905,6 +5905,28 @@ body.lightbox-open .header {
   line-height: 1.35;
 }
 
+.contact-card--telegram {
+  justify-content: center;
+  min-height: 120px;
+}
+
+.contact-telegram-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.contact-telegram-icon {
+  flex: 0 0 auto;
+  color: #229ed9;
+}
+
+.contact-card--telegram .contact-card-value {
+  margin-top: 0;
+}
+
 @media (max-width: 1100px) {
   .contact-intro {
     grid-template-columns: 1fr;

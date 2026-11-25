@@ -1,0 +1,22 @@
+/** Published case slugs mirrored for CMS registry (avoid circular import with cases/index). */
+export const PUBLISHED_CASE_SLUGS_FOR_CMS = [
+  "aximod",
+  "home-hub",
+  "packaging",
+  "digital-residence",
+  "kyiv-tourism-department",
+  "carbit",
+  "nove-misto",
+  "flups",
+  "goshchanochka",
+  "kavlora",
+  "ahmad-tea",
+  "bit-school",
+  "terminal-borivaje",
+  "tbiliso",
+  "altep",
+  "techno-group",
+  "akula-mama",
+  "yakomoga",
+  "novo-development",
+] as const;

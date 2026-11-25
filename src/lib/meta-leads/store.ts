@@ -1,4 +1,4 @@
-import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { MetaLeadRecord } from "./types";
 
@@ -35,6 +35,26 @@ export async function writeLeadRecord(record: MetaLeadRecord): Promise<void> {
   const tmp = `${file}.${process.pid}.${Date.now()}.tmp`;
   await writeFile(tmp, `${JSON.stringify(record, null, 2)}\n`, "utf8");
   await rename(tmp, file);
+}
+
+export async function listMetaLeadRecords(): Promise<MetaLeadRecord[]> {
+  try {
+    await ensureStoreDir();
+    const files = await readdir(storeDir());
+    const records: MetaLeadRecord[] = [];
+    for (const file of files) {
+      if (!file.endsWith(".json")) continue;
+      try {
+        const raw = await readFile(path.join(storeDir(), file), "utf8");
+        records.push(JSON.parse(raw) as MetaLeadRecord);
+      } catch {
+        // skip corrupt
+      }
+    }
+    return records.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  } catch {
+    return [];
+  }
 }
 
 /**

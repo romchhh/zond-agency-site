@@ -52,3 +52,16 @@ export function trackMetaPixelLead(): void {
   fbq("trackSingle", META_PIXEL_ID, "Lead");
 }
 
+/**
+ * GTM custom event after a confirmed consultation save.
+ * OpenAI Pixel Lead tag should fire on this event only (no PII).
+ */
+export function trackGenerateLead(): void {
+  if (typeof window === "undefined") return;
+  if (!isLiveAnalyticsHost(window.location.hostname)) return;
+
+  const w = window as Window & { dataLayer?: Record<string, unknown>[] };
+  w.dataLayer = w.dataLayer || [];
+  w.dataLayer.push({ event: "generate_lead" });
+}
+

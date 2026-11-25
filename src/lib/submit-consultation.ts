@@ -1,5 +1,5 @@
 import type { Locale } from "@/i18n/config";
-import { trackMetaPixelLead } from "@/lib/analytics";
+import { trackGenerateLead, trackMetaPixelLead } from "@/lib/analytics";
 import { LEAD_HONEYPOT_FIELD, getThanksPath } from "@/lib/lead";
 import { readLeadSourceFromForm } from "@/lib/lead-source";
 
@@ -48,6 +48,7 @@ export async function submitConsultation(
   }
 
   trackMetaPixelLead();
+  trackGenerateLead();
 
   if (redirectToThanks) {
     window.location.assign(getThanksPath(values.locale));

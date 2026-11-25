@@ -1,6 +1,7 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { brandbookPage } from "@/i18n/brandbook";
-import { getBrandbookSeo } from "@/i18n/brandbook-seo";
+import { brandbookSeo } from "@/i18n/brandbook-seo";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 
@@ -20,9 +21,9 @@ export default function BrandbookPage({
       locale={locale}
       dictionary={dictionary}
       projects={projects}
-      copy={brandbookPage[locale]}
+      copy={getServicePageContent("brandbook", brandbookPage, locale)}
       serviceSlug="brandbook"
-      seo={getBrandbookSeo(locale)}
+      seo={getServiceSeoContent("brandbook", brandbookSeo, locale)}
       heroImage="/assets/photography/brandbook-2.webp"
     />
   );

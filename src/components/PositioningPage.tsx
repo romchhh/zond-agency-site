@@ -1,6 +1,7 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { positioningPage } from "@/i18n/positioning";
 import { getPositioningSeo } from "@/i18n/positioning-seo";
 
@@ -20,9 +21,9 @@ export default function PositioningPage({
       locale={locale}
       dictionary={dictionary}
       projects={projects}
-      copy={positioningPage[locale]}
+      copy={getServicePageContent("positioning", positioningPage, locale)}
       serviceSlug="positioning"
-      seo={getPositioningSeo(locale)}
+      seo={getServiceSeoContent("positioning", getPositioningSeo, locale)}
       heroImage="/assets/photography/positioning-0.webp"
     />
   );

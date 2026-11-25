@@ -1,3 +1,4 @@
+import { cmsLocaleContent } from "@/cms/resolve";
 import type { Locale } from "@/i18n/config";
 
 export type PolicyContent = {
@@ -120,8 +121,15 @@ const en: PolicyContent = {
   ],
 };
 
-export const policyContent: Record<Locale, PolicyContent> = {
+const policyContentFallback: Record<Locale, PolicyContent> = {
   uk,
   en,
   ru,
 };
+
+export function getPolicyContent(locale: Locale): PolicyContent {
+  return cmsLocaleContent("policy", policyContentFallback, locale);
+}
+
+/** @deprecated Prefer getPolicyContent — kept for seed/export. */
+export const policyContent: Record<Locale, PolicyContent> = policyContentFallback;

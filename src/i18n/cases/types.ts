@@ -104,6 +104,8 @@ export type CaseItem = {
   /** Optional media for cases index cards only (does not affect case pages). */
   listCover?: string;
   media: string[];
+  /** Optional captions keyed by media path — string or { uk, en, ru } (synced into gallery blocks). */
+  mediaCaptions?: Record<string, string | Partial<Record<"uk" | "en" | "ru", string>>>;
   body: string;
   tagline?: string;
   serviceTag?: string;

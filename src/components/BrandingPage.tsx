@@ -10,8 +10,9 @@ import ProjectCard from "@/components/ProjectCard";
 import PageBreadcrumbs from "@/components/PageBreadcrumbs";
 import ServicePageSchema from "@/components/ServicePageSchema";
 import StatsRow from "@/components/StatsRow";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { brandingPage } from "@/i18n/branding";
-import { getBrandingSeo } from "@/i18n/branding-seo";
+import { brandingSeo } from "@/i18n/branding-seo";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { withCaseServiceReviews } from "@/i18n/service-reviews";
@@ -31,8 +32,8 @@ export default function BrandingPage({
   dictionary,
   projects,
 }: BrandingPageProps) {
-  const copy = withCaseServiceReviews(brandingPage[locale], locale, "branding");
-  const seo = getBrandingSeo(locale);
+  const copy = withCaseServiceReviews(getServicePageContent("branding", brandingPage, locale), locale, "branding");
+  const seo = getServiceSeoContent("branding", brandingSeo, locale);
   const servicesPath = getServiceIndexPath(locale);
   const menuTitle = getServiceMenuTitle(locale, "branding");
 

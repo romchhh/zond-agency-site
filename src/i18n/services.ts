@@ -1,3 +1,4 @@
+import { readCmsDocSync } from "@/cms/store";
 import type { Locale } from "@/i18n/config";
 
 export const serviceSlugs = [
@@ -579,3 +580,18 @@ export const servicesIndexMeta: Record<
       "Услуги дизайн-студии ZOND: брендинг, логотип, айдентика, брендбук, ребрендинг, SMM, упаковка, графика, иллюстрация и маркетинг 360.",
   },
 };
+
+export function getServiceTitles(locale: Locale): Record<ServiceSlug, string> {
+  const fromCms = readCmsDocSync<Record<Locale, Record<ServiceSlug, string>>>("services/titles");
+  return fromCms?.[locale] ?? serviceTitles[locale];
+}
+
+export function getServiceMeta(
+  locale: Locale,
+  slug: ServiceSlug,
+): { title: string; description: string } {
+  const fromCms = readCmsDocSync<
+    Record<Locale, Record<ServiceSlug, { title: string; description: string }>>
+  >("services/meta");
+  return fromCms?.[locale]?.[slug] ?? serviceMeta[locale][slug];
+}

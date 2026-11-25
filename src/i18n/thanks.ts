@@ -1,9 +1,15 @@
+import { cmsLocaleContent } from "@/cms/resolve";
 import type { Locale } from "@/i18n/config";
 
-export const thanksCopy: Record<
-  Locale,
-  { title: string; description: string; button: string; home: string; metaTitle: string }
-> = {
+export type ThanksCopy = {
+  title: string;
+  description: string;
+  button: string;
+  home: string;
+  metaTitle: string;
+};
+
+export const thanksCopy: Record<Locale, ThanksCopy> = {
   uk: {
     title: "Дякуємо, заявка у нас",
     description:
@@ -29,3 +35,7 @@ export const thanksCopy: Record<
     metaTitle: "Thank you, we have your request — ZOND",
   },
 };
+
+export function getThanksCopy(locale: Locale): ThanksCopy {
+  return cmsLocaleContent("thanks", thanksCopy, locale);
+}

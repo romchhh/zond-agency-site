@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 import { resolveLegacyRewrite } from "@/i18n/routing";
+import {
+  ADMIN_SESSION_COOKIE,
+  verifySessionTokenEdge,
+} from "@/lib/admin/session-edge";
 import { getThanksLocale, isLeadLandingPath } from "@/lib/lead";
 import { resolveLegacyDestination } from "@/lib/legacy-destinations.generated";
 import {
@@ -92,13 +96,50 @@ function isPrivateMicrositePath(pathname: string): boolean {
   );
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const host = getRequestHostname(request.headers) ?? request.nextUrl.hostname;
   const { pathname, search } = request.nextUrl;
 
   // www and/or http → https://zond.agency + final path in a single hop
   if (needsCanonicalHostRedirect(request, host)) {
     return redirectToCanonical(request, pathname, search);
+  }
+
+  // Admin UI — no locale rewrite; gate everything except /admin/login.
+  if (pathname === "/admin" || pathname.startsWith("/admin/")) {
+    const isLogin = pathname === "/admin/login";
+    const secret = process.env.ADMIN_SESSION_SECRET?.trim() ?? "";
+    const username = process.env.ADMIN_USERNAME?.trim() ?? "";
+    const token = request.cookies.get(ADMIN_SESSION_COOKIE)?.value;
+    const authed =
+      secret.length >= 16 &&
+      Boolean(username) &&
+      (await verifySessionTokenEdge(token, secret, username));
+
+    if (!isLogin && !authed) {
+      const loginUrl = request.nextUrl.clone();
+      loginUrl.pathname = "/admin/login";
+      loginUrl.search = "";
+      const response = NextResponse.redirect(loginUrl);
+      response.headers.set("X-Robots-Tag", "noindex, nofollow");
+      response.headers.set("Cache-Control", "no-store");
+      return response;
+    }
+
+    if (isLogin && authed) {
+      const homeUrl = request.nextUrl.clone();
+      homeUrl.pathname = "/admin";
+      homeUrl.search = "";
+      const response = NextResponse.redirect(homeUrl);
+      response.headers.set("X-Robots-Tag", "noindex, nofollow");
+      response.headers.set("Cache-Control", "no-store");
+      return response;
+    }
+
+    const response = NextResponse.next();
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    response.headers.set("Cache-Control", "no-store");
+    return response;
   }
 
   // Static private microsites — no locale rewrite, no search indexing.

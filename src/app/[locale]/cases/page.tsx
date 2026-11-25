@@ -1,6 +1,6 @@
 import CasesIndexPage from "@/components/CasesIndexPage";
 import { getCases } from "@/i18n/cases";
-import { casesIndexMeta } from "@/i18n/cases/meta";
+import { getCasesIndexMeta } from "@/i18n/cases/meta";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { createPathMetadata } from "@/lib/metadata";
@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
 
-  return createPathMetadata(locale, "/cases", casesIndexMeta[locale]);
+  return createPathMetadata(locale, "/cases", getCasesIndexMeta(locale));
 }
 
 export default async function CasesPage({

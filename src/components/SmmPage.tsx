@@ -1,8 +1,9 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { smmPage } from "@/i18n/smm";
-import { getSmmSeo } from "@/i18n/smm-seo";
+import { smmSeo } from "@/i18n/smm-seo";
 
 type SmmPageProps = {
   locale: Locale;
@@ -16,9 +17,9 @@ export default function SmmPage({ locale, dictionary, projects }: SmmPageProps) 
       locale={locale}
       dictionary={dictionary}
       projects={projects}
-      copy={smmPage[locale]}
+      copy={getServicePageContent("smm", smmPage, locale)}
       serviceSlug="smm"
-      seo={getSmmSeo(locale)}
+      seo={getServiceSeoContent("smm", smmSeo, locale)}
       heroImage="/assets/photography/smm-0.webp"
     />
   );

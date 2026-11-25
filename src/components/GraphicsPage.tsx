@@ -1,8 +1,9 @@
 import ServiceLandingPage from "@/components/ServiceLandingPage";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectItem } from "@/i18n/dictionary";
+import { getServicePageContent, getServiceSeoContent } from "@/cms/service-access";
 import { graphicsPage } from "@/i18n/graphics";
-import { getGraphicsSeo } from "@/i18n/graphics-seo";
+import { graphicsSeo } from "@/i18n/graphics-seo";
 
 type GraphicsPageProps = {
   locale: Locale;
@@ -20,9 +21,9 @@ export default function GraphicsPage({
       locale={locale}
       dictionary={dictionary}
       projects={projects}
-      copy={graphicsPage[locale]}
+      copy={getServicePageContent("graphics", graphicsPage, locale)}
       serviceSlug="graphics"
-      seo={getGraphicsSeo(locale)}
+      seo={getServiceSeoContent("graphics", graphicsSeo, locale)}
       heroImage="/assets/photography/graphics-0.webp"
     />
   );

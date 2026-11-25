@@ -8,7 +8,7 @@ import type { Locale } from "@/i18n/config";
 import PageBreadcrumbs from "@/components/PageBreadcrumbs";
 import PageJsonLd from "@/components/PageJsonLd";
 import { getBlogIndexPath } from "@/i18n/routing";
-import { blogIndexMeta } from "@/i18n/blog/meta";
+import { getBlogIndexMeta } from "@/i18n/blog/meta";
 import { resolvePageCopy } from "@/lib/json-ld";
 
 type BlogIndexPageProps = {
@@ -24,7 +24,7 @@ export default function BlogIndexPage({
 }: BlogIndexPageProps) {
   const copy = dictionary.blog;
   const blogPath = getBlogIndexPath(locale);
-  const seo = resolvePageCopy(blogPath, blogIndexMeta[locale]);
+  const seo = resolvePageCopy(blogPath, getBlogIndexMeta(locale));
 
   return (
     <>

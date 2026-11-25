@@ -7,7 +7,7 @@ import ServicePageSchema from "@/components/ServicePageSchema";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import type { ServiceSlug } from "@/i18n/services";
-import { serviceTitles } from "@/i18n/services";
+import { getServiceTitles } from "@/i18n/services";
 import { getServiceIndexPath } from "@/i18n/routing";
 import { getServiceMenuTitle } from "@/i18n/services-index";
 
@@ -24,7 +24,7 @@ export default function ServiceTitlePage({
 }: ServiceTitlePageProps) {
   const servicesPath = getServiceIndexPath(locale);
   const menuTitle = getServiceMenuTitle(locale, slug);
-  const title = serviceTitles[locale][slug];
+  const title = getServiceTitles(locale)[slug];
 
   return (
     <>

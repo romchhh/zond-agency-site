@@ -1,5 +1,6 @@
+import { readCmsDocSync } from "@/cms/store";
 import type { Locale } from "@/i18n/config";
-import { serviceTitles, type ServiceSlug } from "@/i18n/services";
+import { getServiceTitles, type ServiceSlug } from "@/i18n/services";
 
 export type ServiceIndexItem = {
   slug: ServiceSlug;
@@ -277,10 +278,11 @@ const ru: ServicesIndexContent = {
 export const servicesIndex: Record<Locale, ServicesIndexContent> = { uk, en, ru };
 
 export function getServicesIndex(locale: Locale): ServicesIndexContent {
-  return servicesIndex[locale];
+  const fromCms = readCmsDocSync<Record<Locale, ServicesIndexContent>>("services/index");
+  return fromCms?.[locale] ?? servicesIndex[locale];
 }
 
 export function getServiceMenuTitle(locale: Locale, slug: ServiceSlug): string {
   const item = getServicesIndex(locale).items.find((entry) => entry.slug === slug);
-  return item?.title ?? serviceTitles[locale][slug];
+  return item?.title ?? getServiceTitles(locale)[slug];
 }

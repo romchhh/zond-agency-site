@@ -10,7 +10,9 @@
     "lint": "next lint",
     "generate:legacy-redirects": "node scripts/generate-nginx-legacy-one-hop.mjs",
     "optimize:media": "bash scripts/optimize-media.sh",
-    "optimize:cases": "node scripts/optimize-case-images.mjs"
+    "optimize:cases": "node scripts/optimize-case-images.mjs",
+    "cms:seed": "node scripts/cms-seed.mjs",
+    "admin:hash-password": "node scripts/hash-admin-password.mjs"
   },
   "dependencies": {
     "next": "16.4.0",

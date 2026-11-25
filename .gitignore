@@ -13,3 +13,11 @@ out
 *.ses
 data/meta-leads/*
 !data/meta-leads/.gitkeep
+data/leads/*
+!data/leads/.gitkeep
+data/analytics/*
+!data/analytics/.gitkeep
+data/cms/content/**
+!data/cms/content/.gitkeep
+public/uploads/cms/**
+!public/uploads/cms/.gitkeep
