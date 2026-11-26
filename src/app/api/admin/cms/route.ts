@@ -79,7 +79,7 @@ export async function PUT(request: Request) {
   if (id.startsWith("cases/catalog/")) {
     const locale = id.slice("cases/catalog/".length) as Locale;
     if (locale === "uk" || locale === "en" || locale === "ru") {
-      const { syncCatalogMediaCaptions } = await import("@/lib/admin/media-captions");
+      const { syncCatalogMediaCaptions } = await import("@/lib/admin/sync-media-captions");
       await syncCatalogMediaCaptions(locale, body.data as never);
     }
   }
