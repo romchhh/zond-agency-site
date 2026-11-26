@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import type { Dictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalePath } from "@/i18n/routing";
-import { withBrandTitle } from "@/i18n/seo-overrides";
+import { withBrandTitle } from "@/i18n/brand-title";
 import Link from "next/link";
 
 type NotFoundViewProps = {

@@ -1,6 +1,9 @@
 /** Ready meta titles and descriptions from the Мета-теги sheet. Visible page copy stays unchanged. */
 
 import { readCmsDocSync } from "@/cms/store";
+import { withBrandTitle } from "@/i18n/brand-title";
+
+export { withBrandTitle } from "@/i18n/brand-title";
 
 export type SeoOverride = {
   title?: string;
@@ -117,12 +120,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/ru/our-services/packaging": {"title": "Дизайнер упаковки, заказать разработку дизайна этикетки | ZOND, Киев", "description": "На полке ваш товар просто не замечают. Дизайн упаковки и этикетки в Киеве, которую берут в руки. Макеты под печать и производство. Кейсы студии ZOND."},
   "/ru/our-services/rebranding": {"title": "Ребрендинг компании, заказать редизайн логотипа и стиля, цена | ZOND", "description": "Обновить бренд и не потерять своих клиентов реально. Ребрендинг компании и редизайн логотипа. Аудит, позиционирование, план перехода. Кейсы ZOND, Киев."},
 };
-
-/** Append "| ZOND" once — skip if the title already mentions the brand. */
-export function withBrandTitle(title: string): string {
-  if (/\bZOND\b/i.test(title)) return title;
-  return `${title} | ZOND`;
-}
 
 export function getSeoOverrides(): Record<string, SeoOverride> {
   return readCmsDocSync<Record<string, SeoOverride>>("seo-overrides") ?? seoOverrides;

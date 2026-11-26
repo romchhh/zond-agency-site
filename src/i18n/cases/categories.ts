@@ -1,4 +1,4 @@
-import { getCaseMetaCategories } from "./case-meta";
+import { caseMetaEntries } from "./case-meta-data";
 
 export const CASE_CATEGORY_ORDER = [
   "branding",
@@ -54,7 +54,8 @@ export const CASE_CATEGORY_SLUGS: Record<string, CaseCategory[]> = {
 };
 
 export function getCaseCategories(slug: string): CaseCategory[] {
-  const fromMeta = getCaseMetaCategories(slug);
+  // Use static meta only — keeps this module client-safe (no cms/store / fs).
+  const fromMeta = caseMetaEntries[slug]?.categories;
   if (fromMeta?.length) return fromMeta;
   return CASE_CATEGORY_SLUGS[slug] ?? ["branding"];
 }

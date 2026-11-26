@@ -7,7 +7,8 @@ import {
   getLocalizedUrl,
   getServiceDetailPath,
 } from "@/i18n/routing";
-import { applySeoOverride, withBrandTitle } from "@/i18n/seo-overrides";
+import { withBrandTitle } from "@/i18n/brand-title";
+import { applySeoOverride } from "@/i18n/seo-overrides";
 import { media } from "@/lib/media";
 import { getCanonicalSiteUrl, siteConfig } from "@/lib/site";
 

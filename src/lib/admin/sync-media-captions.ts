@@ -1,5 +1,3 @@
-import "server-only";
-
 import { locales, type Locale } from "@/i18n/config";
 import { readCmsDoc, writeCmsDoc } from "@/cms/store";
 import { syncCaseBodyIntoCatalogs } from "@/cms/sync-case-catalogs";
