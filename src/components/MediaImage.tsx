@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useMediaVersion } from "@/components/MediaVersionProvider";
 import { withMediaVersion } from "@/lib/media-version";

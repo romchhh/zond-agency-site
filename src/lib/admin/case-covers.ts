@@ -1,6 +1,7 @@
 import { readCmsDoc, writeCmsDoc } from "@/cms/store";
 import { syncCaseBodyIntoCatalogs } from "@/cms/sync-case-catalogs";
 import { getCases } from "@/i18n/cases";
+import { applyBodyDocMediaEdits } from "@/lib/admin/media-captions";
 
 export type CaseCoverRow = {
   slug: string;
@@ -53,7 +54,7 @@ export async function updateCaseCovers(
   if (typeof input.cover === "string") shared.cover = input.cover.trim();
   if (typeof input.listCover === "string") shared.listCover = input.listCover.trim();
 
-  const next = { ...body, shared };
+  const next = applyBodyDocMediaEdits(body, { ...body, shared }) as CaseBodyDoc;
   await writeCmsDoc(docId, next);
   await syncCaseBodyIntoCatalogs(slug, next as never);
 

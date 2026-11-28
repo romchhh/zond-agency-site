@@ -2,9 +2,9 @@
 
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { AdminMediaPicker } from "@/components/admin/AdminMediaPicker";
-import { cacheBustMediaUrl } from "@/lib/media-version";
 import {
   applyCaptionToBlocks,
+  applyCaseMediaEdits,
   captionsFromBlocks,
   mediaMatchKey,
   normalizeCaptionEntry,
@@ -43,6 +43,7 @@ const FIELD_LABELS: Record<string, string> = {
   body: "Body",
   blocks: "Блоки",
   slug: "Slug",
+  heroImage: "Головне фото",
 };
 
 function humanize(key: string): string {
@@ -108,7 +109,7 @@ function mediaSrc(value: string): string {
 }
 
 function isVideoSrc(value: string) {
-  return /\.(mp4|webm)$/i.test(value);
+  return /\.(mp4|webm)($|\?|#)/i.test(value);
 }
 
 function cloneTemplate(sample: unknown): unknown {
@@ -145,7 +146,7 @@ async function uploadMediaFile(file: File): Promise<string | null> {
   const response = await fetch("/api/admin/media", { method: "POST", body: form });
   const json = (await response.json()) as { ok?: boolean; item?: { url: string } };
   if (!response.ok || !json.item?.url) return null;
-  return cacheBustMediaUrl(json.item.url);
+  return json.item.url;
 }
 
 function MediaPreview({ value }: { value: string }) {
@@ -273,7 +274,7 @@ function MediaField({
         open={pickerOpen}
         title={`Медіа · ${label || fieldKey}`}
         onClose={() => setPickerOpen(false)}
-        onSelect={(url) => onChange(cacheBustMediaUrl(url))}
+        onSelect={(url) => onChange(url)}
       />
     </div>
   );
@@ -302,14 +303,12 @@ function MediaListEditor({
   onChange,
   captions = {},
   onCaptionChange,
-  onMediaReplace,
 }: {
   label: string;
   value: string[];
   onChange: (next: string[]) => void;
   captions?: Record<string, LocalizedCaption>;
   onCaptionChange?: (src: string, locale: LocaleCode, caption: string) => void;
-  onMediaReplace?: (fromSrc: string, toSrc: string) => void;
 }) {
   const [open, setOpen] = useState(true);
   const [pickerIndex, setPickerIndex] = useState<number | "add" | null>(null);
@@ -349,11 +348,9 @@ function MediaListEditor({
   }
 
   function replaceAt(index: number, url: string) {
-    const prev = value[index];
     const next = [...value];
     next[index] = url;
     onChange(next);
-    if (prev && prev !== url) onMediaReplace?.(prev, url);
   }
 
   return (
@@ -474,9 +471,8 @@ function MediaListEditor({
         title={pickerIndex === "add" ? "Додати медіа" : "Замінити медіа"}
         onClose={() => setPickerIndex(null)}
         onSelect={(url) => {
-          const next = cacheBustMediaUrl(url);
-          if (pickerIndex === "add") onChange([...value, next]);
-          else if (typeof pickerIndex === "number") replaceAt(pickerIndex, next);
+          if (pickerIndex === "add") onChange([...value, url]);
+          else if (typeof pickerIndex === "number") replaceAt(pickerIndex, url);
           setPickerIndex(null);
         }}
       />
@@ -584,21 +580,28 @@ function CaseItemEditor({
     }));
   }
 
-  function onMediaReplace(fromSrc: string, toSrc: string) {
-    const nextCaptions = remapLocalizedCaptionKey(storedCaptions, fromSrc, toSrc, catalogLocale);
-    const moved = normalizeCaptionEntry(
-      storedCaptions[fromSrc] ?? captionMap[fromSrc] ?? captionMap[mediaMatchKey(fromSrc)],
-      catalogLocale,
-    );
-    let nextBlocks = applyCaptionToBlocks(item.blocks, fromSrc, "");
-    if (moved[catalogLocale]) {
-      nextBlocks = applyCaptionToBlocks(nextBlocks, toSrc, moved[catalogLocale] ?? "");
+  function commitMedia(nextMedia: string[]) {
+    const prevMedia = Array.isArray(item.media) ? (item.media as string[]) : [];
+    let captions: MediaCaptionsStore = { ...storedCaptions };
+    const count = Math.max(prevMedia.length, nextMedia.length);
+    for (let index = 0; index < count; index += 1) {
+      const from = prevMedia[index];
+      const to = nextMedia[index];
+      if (typeof from !== "string" || typeof to !== "string") continue;
+      if (mediaMatchKey(from) === mediaMatchKey(to)) continue;
+      captions = remapLocalizedCaptionKey(captions, from, to, catalogLocale);
     }
-    onChange({
-      ...item,
-      mediaCaptions: nextCaptions,
-      blocks: nextBlocks,
-    });
+    onChange(
+      applyCaseMediaEdits(item, {
+        ...item,
+        media: nextMedia,
+        mediaCaptions: captions,
+      }),
+    );
+  }
+
+  function commitCover(field: "cover" | "listCover", next: string) {
+    onChange(applyCaseMediaEdits(item, { ...item, [field]: next }));
   }
 
   return (
@@ -636,13 +639,13 @@ function CaseItemEditor({
               label="List Cover (картка)"
               fieldKey="listCover"
               value={typeof item.listCover === "string" ? item.listCover : ""}
-              onChange={(next) => onChange({ ...item, listCover: next })}
+              onChange={(next) => commitCover("listCover", next)}
             />
             <MediaField
               label="Cover (сторінка)"
               fieldKey="cover"
               value={typeof item.cover === "string" ? item.cover : ""}
-              onChange={(next) => onChange({ ...item, cover: next })}
+              onChange={(next) => commitCover("cover", next)}
             />
           </div>
 
@@ -651,10 +654,9 @@ function CaseItemEditor({
             <MediaListEditor
               label="Галерея медіа"
               value={item.media as string[]}
-              onChange={(next) => onChange({ ...item, media: next })}
+              onChange={commitMedia}
               captions={captionMap}
               onCaptionChange={setMediaCaption}
-              onMediaReplace={onMediaReplace}
             />
           ) : null}
 
@@ -737,12 +739,14 @@ function NodeEditor({
   value,
   depth,
   onChange,
+  hideKeys,
 }: {
   label: string;
   fieldKey: string;
   value: unknown;
   depth: number;
   onChange: (next: unknown) => void;
+  hideKeys?: string[];
 }) {
   const [open, setOpen] = useState(depth < 2);
 
@@ -946,7 +950,9 @@ function NodeEditor({
         ) : null}
         {(open || isRootish) && (
           <div className={`admin-vis-block-body${isRootish ? " is-root-body" : ""}`}>
-            {entries.map(([key, child]) => (
+            {entries.map(([key, child]) => {
+              if (depth === 0 && hideKeys?.includes(key)) return null;
+              return (
               <NodeEditor
                 key={`${fieldKey}.${key}`}
                 label={humanize(key)}
@@ -955,7 +961,8 @@ function NodeEditor({
                 depth={depth + 1}
                 onChange={(nextChild) => onChange({ ...value, [key]: nextChild })}
               />
-            ))}
+              );
+            })}
           </div>
         )}
       </div>
@@ -1043,7 +1050,25 @@ export function CmsVisualEditor({ value, localeMap, docId, onChange }: Props) {
           </p>
         ) : null}
 
-        <NodeEditor label="Контент" fieldKey="root" value={editingValue} depth={0} onChange={commit} />
+        {docId?.startsWith("services/") && docId.endsWith("/page") && isPlainObject(editingValue) ? (
+          <MediaField
+            label="Головне фото"
+            fieldKey="heroImage"
+            value={typeof editingValue.heroImage === "string" ? editingValue.heroImage : ""}
+            onChange={(next) => commit({ ...editingValue, heroImage: next })}
+          />
+        ) : null}
+
+        <NodeEditor
+          label="Контент"
+          fieldKey="root"
+          value={editingValue}
+          depth={0}
+          onChange={commit}
+          hideKeys={
+            docId?.startsWith("services/") && docId.endsWith("/page") ? ["heroImage"] : undefined
+          }
+        />
 
         <details
           className="admin-vis-advanced"

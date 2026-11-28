@@ -4,14 +4,12 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import type { CaseCoverRow } from "@/lib/admin/case-covers";
 import type { MediaItem } from "@/lib/admin/media";
-import { cacheBustMediaUrl } from "@/lib/media-version";
-
 type Props = {
   initialItems: CaseCoverRow[];
 };
 
 function isVideo(src: string) {
-  return /\.(mp4|webm)$/i.test(src);
+  return /\.(mp4|webm)($|\?|#)/i.test(src);
 }
 
 function Preview({ src, label }: { src: string; label: string }) {
@@ -48,8 +46,8 @@ export function AdminCaseCovers({ initialItems }: Props) {
   async function save(slug: string, patch: { cover?: string; listCover?: string }) {
     const nextPatch = {
       ...patch,
-      ...(patch.cover !== undefined ? { cover: cacheBustMediaUrl(patch.cover) } : {}),
-      ...(patch.listCover !== undefined ? { listCover: cacheBustMediaUrl(patch.listCover) } : {}),
+      ...(patch.cover !== undefined ? { cover: patch.cover } : {}),
+      ...(patch.listCover !== undefined ? { listCover: patch.listCover } : {}),
     };
     setBusyKey(`${slug}:${"listCover" in patch ? "listCover" : "cover"}`);
     setMessage(null);
@@ -90,7 +88,7 @@ export function AdminCaseCovers({ initialItems }: Props) {
         setMessage("Upload не вдався");
         return;
       }
-      await save(slug, { [field]: cacheBustMediaUrl(uploaded.item.url) });
+      await save(slug, { [field]: uploaded.item.url });
     } catch {
       setMessage("Помилка upload");
       setBusyKey(null);

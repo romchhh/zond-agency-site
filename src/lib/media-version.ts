@@ -21,21 +21,22 @@ export function cacheBustMediaUrl(src: string): string {
 }
 
 /**
- * Append ?v=… so browsers fetch replaced media.
- * A token already stored on the URL (set when that file was replaced) wins.
+ * Append the current CMS media version so a replaced file is fetched again.
+ * An older ?v= already stored on the URL is replaced, not kept.
  */
 export function withMediaVersion(src: string, version = "0"): string {
-  if (!src || src.startsWith("data:") || /[?&]v=/.test(src)) return src;
-  if (src.startsWith("http") || !version || version === "0") {
-    return src;
-  }
+  if (!src || src.startsWith("data:")) return src;
+  const base = stripMediaVersion(src);
+  if (!version || version === "0") return base;
+  if (base.startsWith("http://") || base.startsWith("https://")) return base;
   const editable =
-    src.includes("/assets/photography/") ||
-    src.includes("/assets/cases/") ||
-    src.includes("/assets/services/") ||
-    src.includes("/services/") ||
-    src.includes("/uploads/");
-  if (!editable) return src;
-  if (/[?&]v=/.test(src)) return src;
-  return `${src}${src.includes("?") ? "&" : "?"}v=${version}`;
+    base.includes("/assets/photography/") ||
+    base.includes("/assets/cases/") ||
+    base.includes("/assets/services/") ||
+    base.includes("/services/") ||
+    base.includes("/uploads/") ||
+    base.startsWith("media/") ||
+    base.startsWith("/media/");
+  if (!editable) return base;
+  return `${base}${base.includes("?") ? "&" : "?"}v=${encodeURIComponent(version)}`;
 }

@@ -2,6 +2,8 @@
 
 import { useArticleGallery } from "@/components/ArticleGallery";
 import LoopedVideo from "@/components/LoopedVideo";
+import { useMediaVersion } from "@/components/MediaVersionProvider";
+import { withMediaVersion } from "@/lib/media-version";
 import type { CaseHeroMedia } from "@/lib/case-content";
 import {
   caseImageDefaultSrc,
@@ -20,6 +22,13 @@ type CaseVisualHeroProps = {
 
 export default function CaseVisualHero({ hero, title, caption }: CaseVisualHeroProps) {
   const gallery = useArticleGallery();
+  const version = useMediaVersion();
+  const shownSrc = withMediaVersion(
+    hero.kind === "vid" || isCasePassthroughMedia(hero.src)
+      ? hero.src
+      : caseImageDefaultSrc(hero.src),
+    version,
+  );
 
   return (
     <figure className="media wide">
@@ -37,7 +46,7 @@ export default function CaseVisualHero({ hero, title, caption }: CaseVisualHeroP
         {hero.kind === "vid" ? (
           <LoopedVideo
             className="case-visual-hero-video"
-            src={hero.src}
+            src={shownSrc}
             ariaLabel={title}
             priority
           />
@@ -45,9 +54,7 @@ export default function CaseVisualHero({ hero, title, caption }: CaseVisualHeroP
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
             src={
-              isCasePassthroughMedia(hero.src)
-                ? hero.src
-                : caseImageDefaultSrc(hero.src)
+              shownSrc
             }
             srcSet={caseImageSrcSet(hero.src)}
             sizes={caseImageSizes(true)}

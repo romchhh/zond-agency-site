@@ -13,12 +13,18 @@ type CaseCardProps = {
   titleAs?: "h2" | "h3";
 };
 
+function mediaPath(src: string) {
+  return src.split(/[?#]/)[0]?.toLowerCase() ?? "";
+}
+
 function isAnimated(src: string) {
-  return src.endsWith(".gif") || src.endsWith(".webp");
+  const path = mediaPath(src);
+  return path.endsWith(".gif") || path.endsWith(".webp");
 }
 
 function isVideo(src: string) {
-  return src.endsWith(".mp4") || src.endsWith(".webm");
+  const path = mediaPath(src);
+  return path.endsWith(".mp4") || path.endsWith(".webm");
 }
 
 export default function CaseCard({

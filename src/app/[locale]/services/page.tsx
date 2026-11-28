@@ -12,6 +12,8 @@ import { resolvePageCopy } from "@/lib/json-ld";
 import { createPathMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

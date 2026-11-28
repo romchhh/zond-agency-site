@@ -5,6 +5,7 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { createCaseMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
 export const dynamicParams = true;
 
 export function generateStaticParams() {

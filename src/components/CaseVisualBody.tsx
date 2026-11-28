@@ -1,6 +1,8 @@
 "use client";
 
 import { useArticleGallery } from "@/components/ArticleGallery";
+import { useMediaVersion } from "@/components/MediaVersionProvider";
+import { withMediaVersion } from "@/lib/media-version";
 import type { CaseVisualBlock, CaseVisualDeliverable, CaseVisualGalleryLayout } from "@/i18n/cases/types";
 import {
   caseImageDefaultSrc,
@@ -120,6 +122,11 @@ function CaseVisualMedia({
   imageIndex: number;
 }) {
   const gallery = useArticleGallery();
+  const version = useMediaVersion();
+  const shownSrc = withMediaVersion(
+    isCasePassthroughMedia(src) ? src : caseImageDefaultSrc(src),
+    version,
+  );
 
   return (
     <figure className={`media${wide ? " wide" : ""}`}>
@@ -138,7 +145,7 @@ function CaseVisualMedia({
         {/* Native img keeps case layout; srcset routes through Next image optimizer. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={isCasePassthroughMedia(src) ? src : caseImageDefaultSrc(src)}
+          src={shownSrc}
           srcSet={caseImageSrcSet(src)}
           sizes={caseImageSizes(wide)}
           alt={caption ?? ""}

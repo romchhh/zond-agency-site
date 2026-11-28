@@ -15,6 +15,8 @@ import { applySeoOverride } from "@/i18n/seo-overrides";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {

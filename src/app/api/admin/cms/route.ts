@@ -6,8 +6,10 @@ import { seedCmsFromCode } from "@/cms/seed";
 import { listCmsDocIds, readCmsDoc, writeCmsDoc } from "@/cms/store";
 import { syncBlogBodyIntoCatalogs } from "@/cms/sync-blog-catalogs";
 import { syncCaseBodyIntoCatalogs } from "@/cms/sync-case-catalogs";
+import { applyBodyDocMediaEdits, applyCaseMediaEdits } from "@/lib/admin/media-captions";
 import { adminJson, requireAdminSession } from "@/lib/admin/http";
 import type { Locale } from "@/i18n/config";
+import type { CaseItem } from "@/i18n/cases/types";
 
 function bustPublicCache() {
   try {
@@ -69,18 +71,35 @@ export async function PUT(request: Request) {
     return adminJson({ ok: false, error: "unknown_doc" }, { status: 404 });
   }
 
-  await writeCmsDoc(id, body.data);
+  let data: unknown = body.data;
+  if (id.startsWith("cases/catalog/") && Array.isArray(data)) {
+    const prev = await readCmsDoc<CaseItem[]>(id);
+    if (Array.isArray(prev)) {
+      const prevBySlug = new Map(prev.map((item) => [item.slug, item]));
+      data = data.map((item) => {
+        if (!item || typeof item !== "object") return item;
+        const slug = "slug" in item && typeof item.slug === "string" ? item.slug : "";
+        return applyCaseMediaEdits(prevBySlug.get(slug), item);
+      });
+    }
+  }
+  if (id.startsWith("cases/body/")) {
+    const prev = await readCmsDoc(id);
+    data = applyBodyDocMediaEdits(prev, data);
+  }
+
+  await writeCmsDoc(id, data);
 
   if (id.startsWith("cases/body/")) {
     const slug = id.slice("cases/body/".length);
-    await syncCaseBodyIntoCatalogs(slug, body.data as never);
+    await syncCaseBodyIntoCatalogs(slug, data as never);
   }
 
   if (id.startsWith("cases/catalog/")) {
     const locale = id.slice("cases/catalog/".length) as Locale;
     if (locale === "uk" || locale === "en" || locale === "ru") {
       const { syncCatalogMediaCaptions } = await import("@/lib/admin/sync-media-captions");
-      await syncCatalogMediaCaptions(locale, body.data as never);
+      await syncCatalogMediaCaptions(locale, data as never);
     }
   }
 

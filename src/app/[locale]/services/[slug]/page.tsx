@@ -41,6 +41,7 @@ export function generateStaticParams() {
   );
 }
 
+export const dynamic = "force-dynamic";
 export const dynamicParams = false;
 
 export async function generateMetadata({
