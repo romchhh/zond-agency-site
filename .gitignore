@@ -19,5 +19,6 @@ data/analytics/*
 !data/analytics/.gitkeep
 data/cms/content/**
 !data/cms/content/.gitkeep
+data/cms/media-version
 public/uploads/cms/**
 !public/uploads/cms/.gitkeep
