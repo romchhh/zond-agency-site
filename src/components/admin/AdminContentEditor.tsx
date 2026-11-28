@@ -90,6 +90,12 @@ export function AdminContentEditor({ meta, initialData, seeded }: Props) {
           синхронізуються в усі мови.
         </div>
       ) : null}
+      {meta.id.match(/^services\/[^/]+\/page$/) ? (
+        <div className="admin-toast">
+          Вкладки UK / EN / RU зверху. Зображення міняйте через Бібліотека або Upload у полях image /
+          photo. Потім Зберегти.
+        </div>
+      ) : null}
       {error ? <p className="admin-error">{error}</p> : null}
       {message ? <p className="admin-toast">{message}</p> : null}
 

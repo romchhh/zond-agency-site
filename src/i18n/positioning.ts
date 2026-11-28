@@ -8,7 +8,7 @@ const uk: ServicePageContent = {
   "lead": "Формуємо позиціонування, яке пояснює цінність бізнесу й виділяє бренд серед конкурентів у вашій ніші.",
   "sub": "Від дослідження аудиторії та ринку до ясної ідеї, характеру й повідомлень, зрозумілих усій вашій команді.",
   "cta": "Обговорити проєкт",
-  "heroAlt": "Стратегічна робота над позиціонуванням бренду: картки, дослідницькі матеріали та графічні форми",
+  "heroAlt": "Презентація позиціонування: команда обговорює дослідження ринку на екрані",
   "heroCaption": "Чітка ідея стає основою кожного рішення.",
   "metricsTitle": "Одна ідея для всіх точок контакту",
   "stats": [
@@ -330,7 +330,7 @@ const en: ServicePageContent = {
     "lead": "We shape positioning that explains your business value and helps you stand out in your category.",
     "sub": "From audience and competitor research to a clear idea, character, and brand messages.",
     "cta": "Discuss the project",
-    "heroAlt": "Strategic brand positioning work: cards, research materials, and graphic forms",
+    "heroAlt": "Positioning presentation: the team reviews market research on screen",
     "heroCaption": "A clear idea becomes the foundation for every decision.",
     "metricsTitle": "One idea. Many touchpoints.",
     "stats": [
@@ -664,7 +664,7 @@ const ru: ServicePageContent = {
   "lead": "Формируем позиционирование, которое объясняет ценность бизнеса и выделяет бренд среди конкурентов в нише.",
   "sub": "От исследования аудитории и рынка до ясной идеи, характера и сообщений, понятных всей вашей команде.",
   "cta": "Обсудить проект",
-  "heroAlt": "Стратегическая работа над позиционированием бренда: карточки, исследовательские материалы и графические формы",
+  "heroAlt": "Презентация позиционирования: команда обсуждает исследование рынка на экране",
   "heroCaption": "Чёткая идея становится основой каждого решения.",
   "metricsTitle": "Одна идея для всех точек контакта",
   "stats": [

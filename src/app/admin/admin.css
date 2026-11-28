@@ -1032,6 +1032,132 @@
   line-height: 1.3;
 }
 
+.admin-section-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.admin-section-tab {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.admin-section-tab:hover {
+  border-color: var(--accent);
+}
+
+.admin-section-tab.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.admin-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.admin-section-title {
+  margin: 0 0 4px;
+  font-size: 1.35rem;
+}
+
+.admin-section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.admin-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.admin-page-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.admin-page-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.admin-page-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+}
+
+.admin-page-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.admin-page-card h3 a:hover {
+  color: var(--accent);
+}
+
+.admin-page-card-top .admin-muted {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+}
+
+.admin-page-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.admin-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.admin-page-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-page-card-actions .admin-btn {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .admin-section-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .admin-create-panel {
   width: 100%;
   margin: 0 0 16px;

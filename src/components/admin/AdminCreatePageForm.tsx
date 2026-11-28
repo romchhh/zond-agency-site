@@ -5,15 +5,26 @@ import { useMemo, useState } from "react";
 import { normalizeSlug, type CreatePageType } from "@/cms/page-types";
 
 const TYPES: Array<{ id: CreatePageType; label: string; hint: string }> = [
-  { id: "page", label: "Кастомна сторінка", hint: "Публічний URL /pages/slug" },
-  { id: "blog", label: "Стаття блогу", hint: "Публічний URL /blog/slug" },
+  { id: "service", label: "Послуга", hint: "Публічний URL /services/slug · UK/EN/RU" },
   { id: "case", label: "Кейс", hint: "Публічний URL /projects/slug" },
+  { id: "blog", label: "Стаття блогу", hint: "Публічний URL /blog/slug" },
+  { id: "page", label: "Кастомна сторінка", hint: "Публічний URL /pages/slug" },
 ];
 
-export function AdminCreatePageForm() {
+type Props = {
+  defaultType?: CreatePageType;
+  buttonLabel?: string;
+  lockType?: boolean;
+};
+
+export function AdminCreatePageForm({
+  defaultType = "case",
+  buttonLabel = "+ Нова сторінка",
+  lockType = false,
+}: Props) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
-  const [type, setType] = useState<CreatePageType>("page");
+  const [type, setType] = useState<CreatePageType>(defaultType);
   const [titleUk, setTitleUk] = useState("");
   const [titleEn, setTitleEn] = useState("");
   const [titleRu, setTitleRu] = useState("");
@@ -26,6 +37,12 @@ export function AdminCreatePageForm() {
     if (slugTouched) return normalizeSlug(slug);
     return normalizeSlug(titleUk || titleEn || titleRu || slug);
   }, [slug, slugTouched, titleUk, titleEn, titleRu]);
+
+  function openForm() {
+    setType(defaultType);
+    setOpen(true);
+    setError(null);
+  }
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -69,81 +86,78 @@ export function AdminCreatePageForm() {
 
   if (!open) {
     return (
-      <button type="button" className="admin-btn" onClick={() => setOpen(true)}>
-        + Нова сторінка
+      <button type="button" className="admin-btn" onClick={openForm}>
+        {buttonLabel}
       </button>
     );
   }
 
+  const visibleTypes = lockType ? TYPES.filter((item) => item.id === type) : TYPES;
+
   return (
     <div className="admin-create-panel">
       <div className="admin-create-head">
-        <h2>Нова сторінка</h2>
+        <h2>{buttonLabel.replace(/^\+\s*/, "") || "Нова сторінка"}</h2>
         <button type="button" className="admin-btn admin-btn-secondary" onClick={() => setOpen(false)}>
           Закрити
         </button>
       </div>
 
       <form className="admin-create-form" onSubmit={submit}>
-        <div className="admin-create-types">
-          {TYPES.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              className={`admin-tab${type === item.id ? " is-active" : ""}`}
-              onClick={() => setType(item.id)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+        {!lockType ? (
+          <div className="admin-create-types">
+            {visibleTypes.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className={`admin-tab${type === item.id ? " is-active" : ""}`}
+                onClick={() => setType(item.id)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        ) : null}
         <p className="admin-muted">{TYPES.find((item) => item.id === type)?.hint}</p>
 
-        <label className="admin-field">
-          <span>Назва UK *</span>
-          <input
-            className="admin-input"
-            value={titleUk}
-            required
-            onChange={(e) => setTitleUk(e.target.value)}
-          />
-        </label>
         <div className="admin-create-grid">
           <label className="admin-field">
-            <span>Назва EN</span>
+            <span>Назва UK</span>
             <input
               className="admin-input"
-              value={titleEn}
-              onChange={(e) => setTitleEn(e.target.value)}
+              value={titleUk}
+              onChange={(e) => setTitleUk(e.target.value)}
+              required
+              autoFocus
             />
+          </label>
+          <label className="admin-field">
+            <span>Назва EN</span>
+            <input className="admin-input" value={titleEn} onChange={(e) => setTitleEn(e.target.value)} />
           </label>
           <label className="admin-field">
             <span>Назва RU</span>
+            <input className="admin-input" value={titleRu} onChange={(e) => setTitleRu(e.target.value)} />
+          </label>
+          <label className="admin-field">
+            <span>Slug</span>
             <input
               className="admin-input"
-              value={titleRu}
-              onChange={(e) => setTitleRu(e.target.value)}
+              value={slugTouched ? slug : previewSlug}
+              onChange={(e) => {
+                setSlugTouched(true);
+                setSlug(e.target.value);
+              }}
+              placeholder="my-page"
             />
           </label>
         </div>
-        <label className="admin-field">
-          <span>Slug</span>
-          <input
-            className="admin-input"
-            value={slugTouched ? slug : previewSlug}
-            onChange={(e) => {
-              setSlugTouched(true);
-              setSlug(e.target.value);
-            }}
-            placeholder="my-new-page"
-          />
-        </label>
 
         {error ? <p className="admin-error">{error}</p> : null}
 
-        <div className="admin-actions" style={{ marginTop: 0 }}>
-          <button type="submit" className="admin-btn" disabled={saving || !titleUk.trim()}>
-            {saving ? "Створення…" : "Створити і редагувати"}
+        <div className="admin-actions">
+          <button type="submit" className="admin-btn" disabled={saving || !previewSlug}>
+            {saving ? "Створення…" : "Створити"}
           </button>
         </div>
       </form>

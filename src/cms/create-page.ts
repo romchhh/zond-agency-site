@@ -29,6 +29,93 @@ export async function createCmsPage(input: CreatePageInput): Promise<CreatePageR
   assertValidSlug(slug);
   const fallbackTitle = titleFor(input.titles, "uk", slug);
 
+  if (input.type === "service") {
+    const docId = `services/${slug}/page`;
+    await ensureUnique(docId);
+
+    const localePage = (title: string) => ({
+      eyebrow: `Послуги / ${title}`,
+      title,
+      titleAccent: "",
+      lead: "",
+      sub: "",
+      cta: "Обговорити проєкт",
+      heroCaption: "",
+      heroAlt: "",
+      metricsTitle: "",
+      includesEyebrow: "Що входить",
+      includesTitle: "Що ви отримаєте",
+      items: [
+        {
+          index: "01",
+          title: "",
+          description: "",
+          alt: "",
+          image: "",
+        },
+      ],
+      casesTitle: "Кейси",
+      reviewsEyebrow: "",
+      reviewsTitle: "",
+      reviewsNote: "",
+      reviews: [],
+      productEyebrow: "",
+      productTitle: "",
+      productNote: "",
+      products: [],
+      processEyebrow: "",
+      processTitle: "",
+      process: [],
+      needEyebrow: "",
+      needTitle: "",
+      needs: [],
+      receiveEyebrow: "",
+      receiveTitle: "",
+      receive: [],
+      whyTitle: "",
+      whyItems: [],
+      compare: {},
+      faqEyebrow: "FAQ",
+      faqTitle: "Питання",
+      faq: [],
+      finalEyebrow: "",
+      finalTitle: "",
+      finalCopy: "",
+    });
+
+    const page = {
+      uk: localePage(titleFor(input.titles, "uk", fallbackTitle)),
+      en: localePage(titleFor(input.titles, "en", fallbackTitle)),
+      ru: localePage(titleFor(input.titles, "ru", fallbackTitle)),
+    };
+    await writeCmsDoc(docId, page);
+
+    const seoId = `services/${slug}/seo`;
+    const seoLocale = (title: string) => ({
+      title: `${title} | ZOND`,
+      description: "",
+    });
+    await writeCmsDoc(seoId, {
+      uk: seoLocale(titleFor(input.titles, "uk", fallbackTitle)),
+      en: seoLocale(titleFor(input.titles, "en", fallbackTitle)),
+      ru: seoLocale(titleFor(input.titles, "ru", fallbackTitle)),
+    });
+
+    // Keep titles map in sync when present.
+    const titles = (await readCmsDoc<Record<Locale, Record<string, string>>>("services/titles")) ?? {
+      uk: {},
+      en: {},
+      ru: {},
+    };
+    await writeCmsDoc("services/titles", {
+      uk: { ...titles.uk, [slug]: titleFor(input.titles, "uk", fallbackTitle) },
+      en: { ...titles.en, [slug]: titleFor(input.titles, "en", fallbackTitle) },
+      ru: { ...titles.ru, [slug]: titleFor(input.titles, "ru", fallbackTitle) },
+    });
+
+    return { docId, previewPath: `/services/${slug}` };
+  }
+
   if (input.type === "blog") {
     const docId = `blog/body/${slug}`;
     await ensureUnique(docId);

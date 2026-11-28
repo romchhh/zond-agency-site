@@ -16,8 +16,8 @@ export default async function AdminContentPage() {
     <>
       <h1 className="admin-page-title">Контент</h1>
       <p className="admin-page-lead">
-        Редагуйте сторінки й блоки нативно: тексти, списки, медіа, кольори. JSON лише в Advanced.
-        Якщо список порожній — натисніть «Засіяти з коду».
+        Головна, послуги, кейси й блог — тексти й фото трьома мовами. Відкрийте картку → редагуйте →
+        збережіть.
       </p>
       <AdminContentList docs={docs} />
     </>

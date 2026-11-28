@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 
-export type CreatePageType = "blog" | "case" | "page";
+export type CreatePageType = "blog" | "case" | "page" | "service";
 
 export type CreatePageInput = {
   type: CreatePageType;

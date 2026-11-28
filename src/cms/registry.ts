@@ -119,7 +119,14 @@ export function getCmsRegistry(): CmsDocMeta[] {
     group: "Послуги",
   });
 
-  for (const slug of HEAVY_SERVICE_SLUGS) {
+  const diskIds = listCmsDocIdsSync();
+
+  const heavySlugs = new Set<string>(HEAVY_SERVICE_SLUGS);
+  for (const id of diskIds) {
+    const match = id.match(/^services\/([^/]+)\/page$/);
+    if (match?.[1]) heavySlugs.add(match[1]);
+  }
+  for (const slug of Array.from(heavySlugs).sort()) {
     docs.push({
       id: `services/${slug}/page`,
       title: `${slug} — page`,
@@ -136,7 +143,12 @@ export function getCmsRegistry(): CmsDocMeta[] {
     });
   }
 
-  for (const slug of TEXT_SERVICE_SLUGS) {
+  const textSlugs = new Set<string>(TEXT_SERVICE_SLUGS);
+  for (const id of diskIds) {
+    if (id.startsWith("text-services/")) textSlugs.add(id.slice("text-services/".length));
+  }
+  for (const slug of Array.from(textSlugs).sort()) {
+    if (heavySlugs.has(slug)) continue;
     docs.push({
       id: `text-services/${slug}`,
       title: `${slug} (text-service)`,
@@ -179,7 +191,6 @@ export function getCmsRegistry(): CmsDocMeta[] {
     group: "Кейси",
   });
 
-  const diskIds = listCmsDocIdsSync();
   const caseSlugs = new Set<string>([
     ...PUBLISHED_CASE_SLUGS_FOR_CMS,
     ...(readCmsDocSync<string[]>("cases/published") ?? []),

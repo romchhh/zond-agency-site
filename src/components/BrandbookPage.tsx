@@ -24,7 +24,7 @@ export default function BrandbookPage({
       copy={getServicePageContent("brandbook", brandbookPage, locale)}
       serviceSlug="brandbook"
       seo={getServiceSeoContent("brandbook", brandbookSeo, locale)}
-      heroImage="/assets/photography/brandbook-2.webp"
+      heroImage="/assets/photography/brandbook-0.webp"
     />
   );
 }
