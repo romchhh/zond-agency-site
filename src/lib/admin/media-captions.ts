@@ -6,6 +6,7 @@ export type MediaCaptionsStore = Record<string, string | LocalizedCaption>;
 export function mediaMatchKey(path: string): string {
   return path
     .trim()
+    .replace(/[?#].*$/, "")
     .replace(/^https?:\/\/[^/]+/i, "")
     .replace(/^\/assets\/cases\//i, "")
     .replace(/^media\//i, "")

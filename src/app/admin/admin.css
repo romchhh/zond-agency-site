@@ -515,6 +515,24 @@
   border-radius: 16px;
   background: var(--surface);
   box-shadow: 0 8px 24px rgba(17, 17, 17, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-save-progress {
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: #ece7e2;
+  overflow: hidden;
+}
+
+.admin-save-progress span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: inherit;
+  transition: width 0.2s ease;
 }
 
 .admin-actions {

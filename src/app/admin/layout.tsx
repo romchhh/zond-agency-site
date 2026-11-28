@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { AdminShell } from "@/components/admin/AdminShell";
+import { MediaVersionProvider } from "@/components/MediaVersionProvider";
+import { readMediaVersion } from "@/cms/store";
 import { isAdminAuthenticated } from "@/lib/admin/http";
 import "../globals.css";
 import "./admin.css";
@@ -27,7 +29,9 @@ export default async function AdminLayout({
         />
       </head>
       <body>
-        <AdminShell authed={authed}>{children}</AdminShell>
+        <MediaVersionProvider version={readMediaVersion()}>
+          <AdminShell authed={authed}>{children}</AdminShell>
+        </MediaVersionProvider>
       </body>
     </html>
   );

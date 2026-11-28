@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useMediaVersion } from "@/components/MediaVersionProvider";
+import { withMediaVersion } from "@/lib/media-version";
 
 type LoopedVideoProps = {
   src: string;
@@ -18,6 +20,9 @@ export default function LoopedVideo({
   priority = false,
 }: LoopedVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const version = useMediaVersion();
+  const mediaSrc = withMediaVersion(src, version);
+  const mediaPoster = poster ? withMediaVersion(poster, version) : undefined;
 
   useEffect(() => {
     const video = videoRef.current;
@@ -111,7 +116,7 @@ export default function LoopedVideo({
       document.removeEventListener("scroll", unlockPlayback);
       document.removeEventListener("click", unlockPlayback);
     };
-  }, [src, priority]);
+  }, [mediaSrc, priority]);
 
   return (
     <video
@@ -126,10 +131,10 @@ export default function LoopedVideo({
       controls={false}
       controlsList="nodownload nofullscreen noremoteplayback"
       preload={priority ? "auto" : "metadata"}
-      poster={poster}
+      poster={mediaPoster}
       aria-label={ariaLabel}
     >
-      <source src={src} type={src.endsWith(".webm") ? "video/webm" : "video/mp4"} />
+      <source src={mediaSrc} type={mediaSrc.includes(".webm") ? "video/webm" : "video/mp4"} />
     </video>
   );
 }

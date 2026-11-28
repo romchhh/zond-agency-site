@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import type { CaseCoverRow } from "@/lib/admin/case-covers";
 import type { MediaItem } from "@/lib/admin/media";
+import { cacheBustMediaUrl } from "@/lib/media-version";
 
 type Props = {
   initialItems: CaseCoverRow[];
@@ -45,13 +46,18 @@ export function AdminCaseCovers({ initialItems }: Props) {
   });
 
   async function save(slug: string, patch: { cover?: string; listCover?: string }) {
+    const nextPatch = {
+      ...patch,
+      ...(patch.cover !== undefined ? { cover: cacheBustMediaUrl(patch.cover) } : {}),
+      ...(patch.listCover !== undefined ? { listCover: cacheBustMediaUrl(patch.listCover) } : {}),
+    };
     setBusyKey(`${slug}:${"listCover" in patch ? "listCover" : "cover"}`);
     setMessage(null);
     try {
       const response = await fetch("/api/admin/covers", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, ...patch }),
+        body: JSON.stringify({ slug, ...nextPatch }),
       });
       const json = (await response.json()) as { ok?: boolean; item?: CaseCoverRow };
       if (!response.ok || !json.ok || !json.item) {
@@ -84,7 +90,7 @@ export function AdminCaseCovers({ initialItems }: Props) {
         setMessage("Upload не вдався");
         return;
       }
-      await save(slug, { [field]: uploaded.item.url });
+      await save(slug, { [field]: cacheBustMediaUrl(uploaded.item.url) });
     } catch {
       setMessage("Помилка upload");
       setBusyKey(null);

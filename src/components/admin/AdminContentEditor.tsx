@@ -17,6 +17,7 @@ export function AdminContentEditor({ meta, initialData, seeded }: Props) {
   const [data, setData] = useState<unknown>(initialData ?? {});
   const [dirty, setDirty] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,29 +33,50 @@ export function AdminContentEditor({ meta, initialData, seeded }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [saving, dirty, data]);
 
-  async function save() {
+  function save() {
     setSaving(true);
+    setProgress(8);
     setMessage(null);
     setError(null);
-    try {
-      const response = await fetch("/api/admin/cms", {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: meta.id, data }),
-      });
-      const json = (await response.json()) as { ok?: boolean; error?: string };
-      if (!response.ok || !json.ok) {
+
+    const body = JSON.stringify({ id: meta.id, data });
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", "/api/admin/cms");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.upload.onprogress = (event) => {
+      if (!event.lengthComputable) return;
+      const ratio = event.loaded / event.total;
+      setProgress(Math.max(12, Math.min(78, Math.round(ratio * 78))));
+    };
+    xhr.onerror = () => {
+      setError("Помилка мережі");
+      setSaving(false);
+      setProgress(0);
+    };
+    xhr.onload = () => {
+      setProgress(92);
+      let json: { ok?: boolean; error?: string } = {};
+      try {
+        json = JSON.parse(xhr.responseText) as { ok?: boolean; error?: string };
+      } catch {
+        json = {};
+      }
+      if (xhr.status < 200 || xhr.status >= 300 || !json.ok) {
         setError(json.error || "Не вдалося зберегти");
+        setSaving(false);
+        setProgress(0);
         return;
       }
+      setProgress(100);
       setDirty(false);
-      setMessage("Збережено. Кеш публічних сторінок оновлено.");
+      setMessage("Збережено. На сайті медіа оновляться після оновлення сторінки.");
       router.refresh();
-    } catch {
-      setError("Помилка мережі");
-    } finally {
-      setSaving(false);
-    }
+      window.setTimeout(() => {
+        setSaving(false);
+        setProgress(0);
+      }, 700);
+    };
+    xhr.send(body);
   }
 
   return (
@@ -115,12 +137,28 @@ export function AdminContentEditor({ meta, initialData, seeded }: Props) {
       <div className="admin-sticky-actions">
         <div className="admin-sticky-actions-inner">
           <span className="admin-muted">
-            {dirty ? "Є незбережені зміни" : "Усе збережено"} · ⌘/Ctrl+S
+            {saving
+              ? `Оновлення ${progress}%`
+              : dirty
+                ? "Є незбережені зміни"
+                : "Усе збережено"}{" "}
+            · ⌘/Ctrl+S
           </span>
           <button type="button" className="admin-btn" disabled={saving || !dirty} onClick={save}>
             {saving ? "Збереження…" : "Зберегти"}
           </button>
         </div>
+        {saving ? (
+          <div
+            className="admin-save-progress"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={progress}
+          >
+            <span style={{ width: `${progress}%` }} />
+          </div>
+        ) : null}
       </div>
     </>
   );

@@ -10,6 +10,7 @@ export type BrandingPageContent = {
   cta: string;
   heroCaption: string;
   heroAlt: string;
+  heroImage?: string;
   metricsTitle: string;
   includesEyebrow: string;
   includesTitle: string;

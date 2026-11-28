@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useMediaVersion } from "@/components/MediaVersionProvider";
+import { withMediaVersion } from "@/lib/media-version";
 
 type MediaImageProps = {
   src: string;
@@ -17,12 +19,21 @@ export default function MediaImage({
   className,
   unoptimized = false,
 }: MediaImageProps) {
-  // Case assets: skip optimizer — Vercel often returns 402 for /_next/image sizes.
-  const skipOptimizer = unoptimized || src.includes("/assets/cases/");
+  const version = useMediaVersion();
+  const resolvedSrc = withMediaVersion(src, version);
+
+  // Skip optimizer for frequently replaced media so file swaps show after refresh
+  // (and avoid stale /_next/image cache / Vercel 402 on case assets).
+  const skipOptimizer =
+    unoptimized ||
+    src.includes("/assets/cases/") ||
+    src.includes("/assets/photography/") ||
+    src.includes("/services/") ||
+    src.includes("/uploads/");
 
   return (
     <Image
-      src={src}
+      src={resolvedSrc}
       alt={alt}
       fill
       sizes={sizes}

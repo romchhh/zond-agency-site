@@ -73,7 +73,7 @@ export default function BrandingPage({
               </div>
               <figure className="sp-hero-photo">
                 <MediaImage
-                  src="/assets/photography/branding-0.webp"
+                  src={copy.heroImage || "/assets/photography/branding-0.webp"}
                   alt={copy.heroAlt}
                   sizes="(max-width: 1100px) 100vw, 50vw"
                   priority

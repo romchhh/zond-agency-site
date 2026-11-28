@@ -1,6 +1,8 @@
 const { buildLegacyRedirects } = require("./legacy-redirects.cjs");
 
 const oneYearImmutable = "public, max-age=31536000, immutable";
+/** Photos/covers are replaced in place — must revalidate after restart/deploy. */
+const mediaRevalidate = "public, max-age=60, must-revalidate";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,7 +13,8 @@ const nextConfig = {
     // WebP only: AVIF encode is too slow on small VPS and caused multi-second waits.
     formats: ["image/webp"],
     qualities: [75, 80, 90],
-    minimumCacheTTL: 60 * 60 * 24 * 365,
+    // Don't keep optimized copies of replaced media for a year.
+    minimumCacheTTL: 60,
     deviceSizes: [384, 640, 750, 828, 1080, 1200, 1920, 2560],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
@@ -32,12 +35,25 @@ const nextConfig = {
         source: "/fonts/:path*",
         headers: [{ key: "Cache-Control", value: oneYearImmutable }],
       },
+      // Editable media first (overrides broad /assets rule below).
       {
-        source: "/assets/:path*",
-        headers: [{ key: "Cache-Control", value: oneYearImmutable }],
+        source: "/assets/photography/:path*",
+        headers: [{ key: "Cache-Control", value: mediaRevalidate }],
       },
       {
-        source: "/services/:path*.:ext(jpg|jpeg|png|webp|gif|avif)",
+        source: "/assets/cases/:path*",
+        headers: [{ key: "Cache-Control", value: mediaRevalidate }],
+      },
+      {
+        source: "/uploads/:path*",
+        headers: [{ key: "Cache-Control", value: mediaRevalidate }],
+      },
+      {
+        source: "/services/:path*.:ext(jpg|jpeg|png|webp|gif|avif|mp4|webm)",
+        headers: [{ key: "Cache-Control", value: mediaRevalidate }],
+      },
+      {
+        source: "/assets/:path*",
         headers: [{ key: "Cache-Control", value: oneYearImmutable }],
       },
       {
@@ -53,7 +69,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, stale-while-revalidate=86400",
+            value: "public, max-age=60, must-revalidate",
           },
         ],
       },

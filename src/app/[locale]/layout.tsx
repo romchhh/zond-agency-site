@@ -3,13 +3,15 @@ import { notFound } from "next/navigation";
 import ConsultationProvider from "@/components/ConsultationProvider";
 import DocumentShell from "@/components/DocumentShell";
 import JsonLd from "@/components/JsonLd";
+import { MediaVersionProvider } from "@/components/MediaVersionProvider";
+import { readMediaVersion } from "@/cms/store";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { media } from "@/lib/media";
 import { getCanonicalSiteUrl, siteConfig } from "@/lib/site";
 
-export const dynamic = "force-static";
-export const revalidate = 3600;
+// CMS edits (texts, photos) must show on the next request, not after a 1h static cache.
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -56,11 +58,13 @@ export default async function LocaleLayout({
   const dictionary = await getDictionary(locale);
 
   return (
-    <DocumentShell locale={locale}>
-      <ConsultationProvider locale={locale} dictionary={dictionary}>
-        {children}
-        <JsonLd locale={locale} />
-      </ConsultationProvider>
-    </DocumentShell>
+    <MediaVersionProvider version={readMediaVersion()}>
+      <DocumentShell locale={locale}>
+        <ConsultationProvider locale={locale} dictionary={dictionary}>
+          {children}
+          <JsonLd locale={locale} />
+        </ConsultationProvider>
+      </DocumentShell>
+    </MediaVersionProvider>
   );
 }

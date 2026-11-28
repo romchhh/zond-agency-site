@@ -399,7 +399,7 @@ export default function ServiceLandingPage({
                 </div>
                 <figure className="sp-hero-photo">
                   <MediaImage
-                    src={heroImage}
+                    src={copy.heroImage || heroImage}
                     alt={copy.heroAlt}
                     sizes="(max-width: 1100px) 100vw, 50vw"
                     priority

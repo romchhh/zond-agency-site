@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { AdminMediaPicker } from "@/components/admin/AdminMediaPicker";
+import { cacheBustMediaUrl } from "@/lib/media-version";
 import {
   applyCaptionToBlocks,
   captionsFromBlocks,
@@ -144,7 +145,7 @@ async function uploadMediaFile(file: File): Promise<string | null> {
   const response = await fetch("/api/admin/media", { method: "POST", body: form });
   const json = (await response.json()) as { ok?: boolean; item?: { url: string } };
   if (!response.ok || !json.item?.url) return null;
-  return json.item.url;
+  return cacheBustMediaUrl(json.item.url);
 }
 
 function MediaPreview({ value }: { value: string }) {
@@ -272,7 +273,7 @@ function MediaField({
         open={pickerOpen}
         title={`Медіа · ${label || fieldKey}`}
         onClose={() => setPickerOpen(false)}
-        onSelect={onChange}
+        onSelect={(url) => onChange(cacheBustMediaUrl(url))}
       />
     </div>
   );
@@ -473,8 +474,9 @@ function MediaListEditor({
         title={pickerIndex === "add" ? "Додати медіа" : "Замінити медіа"}
         onClose={() => setPickerIndex(null)}
         onSelect={(url) => {
-          if (pickerIndex === "add") onChange([...value, url]);
-          else if (typeof pickerIndex === "number") replaceAt(pickerIndex, url);
+          const next = cacheBustMediaUrl(url);
+          if (pickerIndex === "add") onChange([...value, next]);
+          else if (typeof pickerIndex === "number") replaceAt(pickerIndex, next);
           setPickerIndex(null);
         }}
       />

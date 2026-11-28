@@ -19,6 +19,8 @@ export type ServicePageContent = {
   cta: string;
   heroAlt: string;
   heroCaption: string;
+  /** Optional hero photo. Falls back to the page default when empty. */
+  heroImage?: string;
   metricsTitle: string;
   stats: StatItem[];
   audienceTitle: string;

@@ -1,8 +1,10 @@
 import { mkdir, readdir, readFile, rename, writeFile } from "node:fs/promises";
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
-const cache = new Map<string, unknown>();
+type CacheEntry = { mtimeMs: number; data: unknown };
+
+const cache = new Map<string, CacheEntry>();
 
 export function cmsRootDir(): string {
   return (
@@ -16,32 +18,55 @@ function docPath(docId: string): string {
   return path.join(cmsRootDir(), `${safe}.json`);
 }
 
+function mediaVersionPath(): string {
+  return path.join(path.dirname(cmsRootDir()), "media-version");
+}
+
+export function readMediaVersion(): string {
+  try {
+    return readFileSync(mediaVersionPath(), "utf8").trim() || "0";
+  } catch {
+    return "0";
+  }
+}
+
+function bumpMediaVersion(): void {
+  const file = mediaVersionPath();
+  mkdirSync(path.dirname(file), { recursive: true });
+  writeFileSync(file, String(Date.now()));
+}
+
 export function invalidateCmsCache(docId?: string): void {
   if (docId) cache.delete(docId);
   else cache.clear();
 }
 
+function readFresh<T>(docId: string, raw: string, mtimeMs: number): T {
+  const data = JSON.parse(raw) as T;
+  cache.set(docId, { mtimeMs, data });
+  return data;
+}
+
 export function readCmsDocSync<T>(docId: string): T | null {
-  if (cache.has(docId)) return cache.get(docId) as T;
   const file = docPath(docId);
   if (!existsSync(file)) return null;
   try {
-    const raw = readFileSync(file, "utf8");
-    const data = JSON.parse(raw) as T;
-    cache.set(docId, data);
-    return data;
+    const mtimeMs = statSync(file).mtimeMs;
+    const hit = cache.get(docId);
+    if (hit && hit.mtimeMs === mtimeMs) return hit.data as T;
+    return readFresh<T>(docId, readFileSync(file, "utf8"), mtimeMs);
   } catch {
     return null;
   }
 }
 
 export async function readCmsDoc<T>(docId: string): Promise<T | null> {
-  if (cache.has(docId)) return cache.get(docId) as T;
+  const file = docPath(docId);
   try {
-    const raw = await readFile(docPath(docId), "utf8");
-    const data = JSON.parse(raw) as T;
-    cache.set(docId, data);
-    return data;
+    const mtimeMs = statSync(file).mtimeMs;
+    const hit = cache.get(docId);
+    if (hit && hit.mtimeMs === mtimeMs) return hit.data as T;
+    return readFresh<T>(docId, await readFile(file, "utf8"), mtimeMs);
   } catch {
     return null;
   }
@@ -53,7 +78,8 @@ export async function writeCmsDoc(docId: string, data: unknown): Promise<void> {
   const tmp = `${file}.${process.pid}.${Date.now()}.tmp`;
   await writeFile(tmp, `${JSON.stringify(data, null, 2)}\n`, "utf8");
   await rename(tmp, file);
-  cache.set(docId, data);
+  cache.set(docId, { mtimeMs: statSync(file).mtimeMs, data });
+  bumpMediaVersion();
 }
 
 export async function listCmsDocIds(): Promise<string[]> {
